@@ -1,0 +1,25 @@
+cask "phpwebstudy" do
+  version "1.0.30"
+  sha256 "146cc8df2b8eb33f43a9e6b51ab2f0d6108a35e9379653da1b4f885708470a74"
+
+  url "https://ghproxy.com/github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}-universal-mac.zip",
+      verified: "github.com/xpf0000/PhpWebStudy/"
+  name "PhpWebStudy"
+  desc "PHP and Web develop environment manager"
+  homepage "https://www.macphpstudy.com/"
+
+  livecheck do
+    url "https://ghproxy.com/raw.githubusercontent.com/xpf0000/PhpWebStudy/master/latest-mac.yml"
+    strategy :electron_builder
+  end
+
+  auto_updates true
+
+  app "PhpWebStudy.app"
+
+  zap trash: [
+    "~/Library/Application Support/PhpWebStudy",
+    "~/Library/Logs/PhpWebStudy",
+    "~/Library/PhpWebStudy",
+  ]
+end

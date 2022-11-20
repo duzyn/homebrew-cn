@@ -1,0 +1,24 @@
+cask "font-iosevka-ss13" do
+  version "16.3.6"
+  sha256 "f4bb53c908c8d232981327551d286d92981e1163177f4e7c526048ff665d5475"
+
+  url "https://ghproxy.com/github.com/be5invis/Iosevka/releases/download/v#{version}/ttc-iosevka-ss13-#{version}.zip"
+  name "Iosevka SS13"
+  desc "Sans-serif, slab-serif, monospace and quasi‑proportional typeface family"
+  homepage "https://github.com/be5invis/Iosevka/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  font "iosevka-ss13-bold.ttc"
+  font "iosevka-ss13-extrabold.ttc"
+  font "iosevka-ss13-extralight.ttc"
+  font "iosevka-ss13-heavy.ttc"
+  font "iosevka-ss13-light.ttc"
+  font "iosevka-ss13-medium.ttc"
+  font "iosevka-ss13-regular.ttc"
+  font "iosevka-ss13-semibold.ttc"
+  font "iosevka-ss13-thin.ttc"
+end
