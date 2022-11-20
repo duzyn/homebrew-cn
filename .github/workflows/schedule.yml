@@ -35,8 +35,10 @@ jobs:
         path: 'homebrew-cask-fonts'
     - name: Update buckets
       run: |
-        rm -r Formula Casks
-        mkdir -p Formula Casks
+        [[ ! -d Formula ]] | rm -r Formula
+        [[ ! -d Casks ]] | rm -r Casks
+        [[ -d Formula ]] | mkdir -p Formula
+        [[ -d Casks ]] | mkdir -p Casks
         cp -r homebrew-core/Formula/*         ./Formula
         cp -r homebrew-cask/Casks/*           ./Casks
         cp -r homebrew-cask-versions/Casks/*  ./Casks
