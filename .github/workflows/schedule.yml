@@ -1,0 +1,84 @@
+on:
+  push:
+    branches:    
+      - 'main'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-core'
+        fetch-depth: 1
+        path: 'homebrew-core'
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-cask'
+        fetch-depth: 1
+        path: 'homebrew-cask'
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-cask-versions'
+        fetch-depth: 1
+        path: 'homebrew-cask-versions'
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-cask-fonts'
+        fetch-depth: 1
+        path: 'homebrew-cask-fonts'
+    - name: Update buckets
+      run: |
+        rm -r Formula Casks
+        mkdir -p Formula Casks
+        cp -r homebrew-core/Formula/*         ./Formula
+        cp -r homebrew-cask/Casks/*           ./Casks
+        cp -r homebrew-cask-versions/Casks/*  ./Casks
+        cp -r homebrew-cask-fonts/Casks/*     ./Casks
+        rm -r homebrew-core homebrew-cask homebrew-cask-versions homebrew-cask-fonts
+
+        # GitHub Release
+        perl -pi -e 's/github\.com\/(.+)\/releases\/download/ghproxy\.com\/github\.com\/$1\/releases\/download/g' ./{Formula,Casks}/*.rb
+
+        # GitHub Raw
+        perl -pi -e 's/raw\.githubusercontent\.com/ghproxy\.com\/raw\.githubusercontent\.com/g' ./{Formula,Casks}/*.rb
+        perl -pi -e 's/github\.com\/(.+)\/raw/ghproxy\.com\/github\.com\/$1\/raw/g' ./{Formula,Casks}/*.rb
+
+        # 7-Zip
+        perl -pi -e 's/www\.7-zip\.org\/a/experiments-alicdn\.sparanoid\.net\/7z/g' ./Formula/{7-zip,7zip}.rb
+
+        # BasicTeX
+        perl -pi -e 's/mirror\.ctan\.org/mirrors\.aliyun\.com\/CTAN/g' ./Casks/basictex.rb
+
+        # Node
+        perl -pi -e 's/nodejs\.org\/dist/npm\.taobao\.org\/mirrors\/node/g' ./Formula/nodejs*.rb
+
+        # VLC
+        perl -pi -e 's/download\.videolan\.org/mirrors\.ustc\.edu\.cn\/videolan-ftp/g' ./Casks/vlc.rb
+
+        # DBeaver
+        perl -pi -e 's/dbeaver\.io\/files/ghproxy\.com\/github\.com\/dbeaver\/dbeaver\/releases\/download/g' ./Casks/dbeaver-community.rb
+
+        # OBS Studio
+        perl -pi -e 's/cdn-fastly\.obsproject\.com\/downloads\/OBS-Studio-(.+)-macos/ghproxy\.com\/github\.com\/obsproject\/obs-studio\/releases\/download\/$1\/OBS-Studio-$1-macos/g' ./Casks/obs.rb
+
+        # Tor Browser
+        perl -pi -e 's/dist\.torproject\.org\/torbrowser\/(.+)/ghproxy\.com\/github\.com\/TheTorProject\/gettorbrowser\/releases\/download\/osx64-$1/g' ./Casks/tor-browser.rb
+
+        # install.ps1
+        curl https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | perl -pi -e 's/\"https:\/\/github\.com/\"https:\/\/ghproxy\.com\/github\.com/g' > ./install.ps1
+
+        # uninstall.ps1
+        curl https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh | perl -pi -e 's/\"https:\/\/github\.com/\"https:\/\/ghproxy\.com\/github\.com/g' > ./uninstall.ps1
+
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "Updated $(date)"
+        git push
