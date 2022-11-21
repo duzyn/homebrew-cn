@@ -36,7 +36,7 @@ jobs:
     - name: Update buckets
       run: |
         [[ ! -d Formula ]] || rm -r Formula
-        [[ ! -d Casks ]]。 || rm -r Casks
+        [[ ! -d Casks ]]   || rm -r Casks
         [[ ! -d Aliases ]] || rm -r Aliases
 
         [[ -d Formula ]] || mkdir -p Formula
