@@ -280,7 +280,7 @@ if [[ -s "${HOMEBREW_REPOSITORY}/.gitignore" ]]
 then
   gitignore="$(<"${HOMEBREW_REPOSITORY}/.gitignore")"
 else
-  gitignore="$(curl -fsSL https://raw.githubusercontent.com/Homebrew/brew/HEAD/.gitignore)"
+  gitignore="$(curl -fsSL https://ghproxy.com/raw.githubusercontent.com/Homebrew/brew/HEAD/.gitignore)"
 fi
 [[ -n "${gitignore}" ]] || abort "Failed to fetch Homebrew .gitignore!"
 
