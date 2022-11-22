@@ -7,17 +7,17 @@ class ClangFormat < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://ghproxy.com/github.com/llvm/llvm-project/releases/download/llvmorg-15.0.4/llvm-15.0.4.src.tar.xz"
-    sha256 "60aca410cae2b92665c0aa769bcd11ed17030b9ecd76115138c97d94a27a992f"
+    url "https://ghproxy.com/github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/llvm-15.0.5.src.tar.xz"
+    sha256 "4428688b567ab1c9911aa9e13cb44c9bc1b14431713c14de491e10369f2b0370"
 
     resource "clang" do
-      url "https://ghproxy.com/github.com/llvm/llvm-project/releases/download/llvmorg-15.0.4/clang-15.0.4.src.tar.xz"
-      sha256 "701f8ff9b9727d12be456256e2811c5452259282c387728e2bcd95da90c5af45"
+      url "https://ghproxy.com/github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/clang-15.0.5.src.tar.xz"
+      sha256 "3737d1d81253bc7608443661ac616bdc06f8833d313f4c3e22ed0eecc55b1238"
     end
 
     resource "cmake" do
-      url "https://ghproxy.com/github.com/llvm/llvm-project/releases/download/llvmorg-15.0.4/cmake-15.0.4.src.tar.xz"
-      sha256 "9df45bf3a0a46264d5007485592381bbaf50f034b4155290cb0d917539d8facf"
+      url "https://ghproxy.com/github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/cmake-15.0.5.src.tar.xz"
+      sha256 "61a9757f2fb7dd4c992522732531eb58b2bb031a2ca68848ff1cfda1fc07b7b3"
     end
   end
 
@@ -28,14 +28,14 @@ class ClangFormat < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "22ce42d45047a82dbaeb294c988491c8dc41a14db585aba895289b94c98567b5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e6687055a4bbb8c45c534c97593da173020a89464131f8e28d9c51635abdf85e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "635e65e903d7509bc7b66246b33e80c2c6fa7970ae5ae976b8115346298684af"
-    sha256 cellar: :any_skip_relocation, ventura:        "313506ad3a59bdea702b964c76784cb280041960faff6f4ef30327a28e79107b"
-    sha256 cellar: :any_skip_relocation, monterey:       "840020306f475284733e073f7d3d1f4c2f2e14b8e1a89d79bfa2df8d4dee2c53"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9743f1cb8befbaacba5b60e22762fab2db9337fcbddb66ee9fae69ccb54174ab"
-    sha256 cellar: :any_skip_relocation, catalina:       "44458ac88b30b5fddfa0a9679339a6fdca3ad0cd9591f655387d7d12f85ce383"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba30cee4820b592e8ff594fe0174246286ed062c709e058c713d882a073ac388"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8440d45e0d4fc5a8e1a71d8363f730a02877494b4a992b7e7882653bf659dc37"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8d9838547a6eae654e7b9b844ee68ec098ee68a6375256ddd94d1a7417de1f7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e0d832123d1eaec83e9ea215f30583c6507f989a8863f4f53093a431cdb87c75"
+    sha256 cellar: :any_skip_relocation, ventura:        "61a18a2858f21ba7864a29aa91a4d05ea9952af907c8facb6bbc06236e1c0549"
+    sha256 cellar: :any_skip_relocation, monterey:       "836b73c2885e669bc5246a503ee428cac13a48036f9c2bc10d83b4e0a30943c8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "af1b727ec326c353fee089fd0115a5657aec0933ab6a5d37a80cbec833124da9"
+    sha256 cellar: :any_skip_relocation, catalina:       "b09f4a2d5c6b8d1bb5067ae094187c8f162d89b9809405b89a76038a0ceba84d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25cd6402256e3b3dc0dd668fd11cdb73253873d3e5cfd32316069e56aab6d1a9"
   end
 
   depends_on "cmake" => :build

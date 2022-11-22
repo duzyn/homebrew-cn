@@ -9,21 +9,25 @@ class Poetry < Formula
   head "https://github.com/python-poetry/poetry.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a195ab3faff6df6b7675c60752318185cde01cccaa9e5831f520e74bebb1cdeb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a9cefb975681dbda106d50fe805453f2ab5e4a8440d2157dde7122971d94505a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a6b167c88199b2c8bdeaeb95a64f258c116d43ec5a70501bc81e6b680018503d"
-    sha256 cellar: :any_skip_relocation, monterey:       "d1f050b1de44f6b1b691c1bd8e46d8aba4dbaccc41b01d7d92cef6203dcc9cd1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7b2554325938cfd831d2d8c73cc27fadecbeee450c7e140f64df133587adf806"
-    sha256 cellar: :any_skip_relocation, catalina:       "4de13eea29093afd2c2aa00f9856565a86bc350b83bf3775098ab86e4b02a2ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5256e78b4fe281c98621030a23404594eb6e2e14f40e60c6dad0f94c9a94a63"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "78b9051e4f4cc528951e5a86adb53ab4de7df7d080e2342c1449625cfdab48ec"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f28c855cca6e074c421b756005c0b88b504954dc53da61901b41fe8eabd9865b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c5c52de8b2b7e9ff885dfc673c7d137fd060c66ee07005c54de3e65c62210d61"
+    sha256 cellar: :any_skip_relocation, monterey:       "cff9d130f985dc8a01753fdd54f380cc8baf26b1c86266fe22305e3debc3923a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6d31c42ae3e6e2e17b5ee701e04b4a15021ff15be6776be8e431d17910086cf8"
+    sha256 cellar: :any_skip_relocation, catalina:       "71d4c024f7b46c0d01e877104d384d6e9af9bd46fde77852aac7ec7ce35f76db"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46f9f4ad106705772680da09880f284a6a4fb6680ae6a95c025ae292e1fb4e03"
   end
 
-  depends_on "jsonschema"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   # `six` is still used by `html5lib`
   depends_on "six"
   depends_on "virtualenv"
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+  end
 
   resource "CacheControl" do
     url "https://files.pythonhosted.org/packages/06/80/1f8ba1ced5f29514d8621003b2b0fb404ed88996e963dbca7f519ecc82ca/CacheControl-0.12.12.tar.gz"
@@ -88,6 +92,13 @@ class Poetry < Formula
   resource "jaraco.classes" do
     url "https://files.pythonhosted.org/packages/bf/02/a956c9bfd2dfe60b30c065ed8e28df7fcf72b292b861dca97e951c145ef6/jaraco.classes-3.2.3.tar.gz"
     sha256 "89559fa5c1d3c34eff6f631ad80bb21f378dbcbb35dd161fd2c6b93f5be2f98a"
+  end
+
+  # TODO: switch this to `depends_on "jsonschema"`
+  # after the `jsonschema` formula has migrated to `python@3.11`
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/3a/3d/0653047b9b2ed03d3e96012bc90cfc96227221193fbedd4dc0cbf5a0e342/jsonschema-4.17.0.tar.gz"
+    sha256 "5bfcf2bca16a087ade17e02b282d34af7ccd749ef76241e7f9bd7c0cb8a9424d"
   end
 
   resource "keyring" do
@@ -155,6 +166,11 @@ class Poetry < Formula
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/19/fb/845ff3b943ede86c69e62c9b47c0e796838552de38fc93d2048fc65ba161/pyrsistent-0.19.1.tar.gz"
+    sha256 "cfe6d8b293d123255fd3b475b5f4e851eb5cbaee2064c8933aa27344381744ae"
+  end
+
   resource "requests" do
     url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
     sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
@@ -193,8 +209,9 @@ class Poetry < Formula
   def install
     virtualenv_install_with_resources
 
-    site_packages = Language::Python.site_packages("python3.10")
-    %w[jsonschema virtualenv].each do |package_name|
+    site_packages = Language::Python.site_packages("python3.11")
+    # TODO: add `jsonschema` to this list after it has migrated to python@3.11
+    %w[virtualenv].each do |package_name|
       package = Formula[package_name].opt_libexec
       (libexec/site_packages/"homebrew-#{package_name}.pth").write package/site_packages
     end

@@ -14,18 +14,20 @@ class AwscliAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0e4f59da6056936915277a22f69408bc100b08951f0d7ae6ecafc1c6c1372aad"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "72f2c231da50ddd85465fa5c58a43c1b3b356b5d822844e5500fd5324f6442a3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be1b7c9c259da360ea1689a3f1f11774013edb08e8304108e207ed2e6e95018c"
-    sha256 cellar: :any_skip_relocation, ventura:        "313a0d53416fa7c1674852d6f24f5dcb33079f7a1f52865c53929501e48a9dc0"
-    sha256 cellar: :any_skip_relocation, monterey:       "e9ce009c9ed37995bac4238756f97a59123c863d2e94925d4670529af7ba6d7c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4bc725dee1e912c15a1447f78bd51e762f7485628e98816b56bfafc70ec2ff68"
-    sha256 cellar: :any_skip_relocation, catalina:       "0733430863d79f31188fcadc333f5ae8e6d0941517c8123cb1fa0ec23e9747fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dee445be32076ed7aa5b86a9eff5712d7e4c54e63ad2015af661b5dd6738039e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3c0fcfa38d689a8ee6b8c6a8f7261f83eb74d7509db842852840cc48f6fe4461"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0dda6b001edc6efe6550fc46746a3625fe234ccc214229f22ba3961683eb51d1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eee64241f51912f37368315b485fafb8a9a3058e451af0bb6dc6d356340c0959"
+    sha256 cellar: :any_skip_relocation, ventura:        "110a21b1bd00e05d88e4b6c313bea00c0785a81d49e525e57fa9763c72253d4b"
+    sha256 cellar: :any_skip_relocation, monterey:       "301143407960395e8423fb2af3f57cb21d8726692bc244a43363cfe35e1bc429"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cd3bc82a2d5e71aa33363c680f31c9930879c4613c4efef1e2b313b9dbbf6c2d"
+    sha256 cellar: :any_skip_relocation, catalina:       "cc2e70bb320c7f631330ff1ccdbe93b49f91cedab5aa9b09c830411d669d3655"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db5656236ccf4cce729fc1b67139af846c83b2cc13ade14adb4cb49100cb2444"
   end
 
   keg_only :versioned_formula
 
+  depends_on "docutils"
   depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
@@ -44,11 +46,6 @@ class AwscliAT1 < Formula
   resource "colorama" do
     url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
     sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
-  end
-
-  resource "docutils" do
-    url "https://files.pythonhosted.org/packages/2f/e0/3d435b34abd2d62e8206171892f174b180cd37b09d57b924ca5c2ef2219d/docutils-0.16.tar.gz"
-    sha256 "c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
   end
 
   resource "jmespath" do

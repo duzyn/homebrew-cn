@@ -9,18 +9,20 @@ class Awscli < Formula
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "27969875fedfe98f0dbc9db683fc1719809fa14db8bdcbf760811518c4d5dfd2"
-    sha256 cellar: :any,                 arm64_monterey: "daf62d7d6400f0943dba819d78d711a59607cf23c67b83edd36e75415e996bec"
-    sha256 cellar: :any,                 arm64_big_sur:  "14e14b8153336bc243916c9fbc50003dda63920b040e1a10c9f4b67d9d0b1b9b"
-    sha256 cellar: :any,                 ventura:        "1145f0d32efcfb2816615144f8e9807952912ae9b0b97ae1a5de90e87f429e7d"
-    sha256 cellar: :any,                 monterey:       "7987a919fa44e6d8c6a404f7e73600c8ff7402ac9e27dddf67349cf7530d6de6"
-    sha256 cellar: :any,                 big_sur:        "1d27629c82ba6885ab50b31a7850aa7fb93e1254b9a3c3d6e8036fc4b6fc885e"
-    sha256 cellar: :any,                 catalina:       "60fa0d55492be29e6db2b73a908a342f4c01be580f81f367e61392e6aa59205f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a4c21155c91c9b8bc275c9bcc7ddef77c860bffc1be490fe4a0e5d8cbfc6b3f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "a091bfbe1066afcb27d25b28fb78c2b571ac97364d2850234ccc0db4ffaedd50"
+    sha256 cellar: :any,                 arm64_monterey: "2cd4075212c4b5d2ae9c3d0a570ec6aab87788e7b934f51700958385411f01b7"
+    sha256 cellar: :any,                 arm64_big_sur:  "131b324a38669600e6ab232962bd3c4499dafbdf775e72823c846aa6494c5f36"
+    sha256 cellar: :any,                 ventura:        "9300c57d2e174eb6fc5074988c59282cf6caa1a076868af8a863bf2750390a54"
+    sha256 cellar: :any,                 monterey:       "276b0012fa22776d217c685c5c21c5d7ea0ded9a0d330d35ec8f951e486b7ba6"
+    sha256 cellar: :any,                 big_sur:        "c5c65d3a1017c7561d2b7ef7dd7d244be00e776c1edcc7ecfb7b0de2632f86e6"
+    sha256 cellar: :any,                 catalina:       "7b49870481f82fb616e4bcd3f8393dbbe863873e9bc1967ca46c5f8b1f675b67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f53df439826c5998b021b8758a2db6649ce37aba6edd9fe385d5520ac6c6d435"
   end
 
   depends_on "cmake" => :build
   depends_on "rust" => :build # for cryptography
+  depends_on "docutils"
   depends_on "python@3.11"
   depends_on "six"
 
@@ -53,11 +55,6 @@ class Awscli < Formula
   resource "distro" do
     url "https://files.pythonhosted.org/packages/a6/a4/75064c334d8ae433445a20816b788700db1651f21bdb0af33db2aab142fe/distro-1.5.0.tar.gz"
     sha256 "0e58756ae38fbd8fc3020d54badb8eae17c5b9dcbed388b17bb55b8a5928df92"
-  end
-
-  resource "docutils" do
-    url "https://files.pythonhosted.org/packages/93/22/953e071b589b0b1fee420ab06a0d15e5aa0c7470eb9966d60393ce58ad61/docutils-0.15.2.tar.gz"
-    sha256 "a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"
   end
 
   resource "jmespath" do

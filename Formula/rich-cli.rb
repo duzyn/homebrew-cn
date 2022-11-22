@@ -8,16 +8,17 @@ class RichCli < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "703d1aae7fdc6ec3593cad8223558a04c1526159c1634cae40ef7011498327d0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0ca6f2fa0ae4457da0c42959f3f669508b095efe5c7ee244eab9bfa0dcae7bf7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8db38f6ef1c9b1b28a6a464c007b1ae8461daa9ea92a05143923cbf9d335c57b"
-    sha256 cellar: :any_skip_relocation, monterey:       "c250f4678aa911ad9b6229233e2c738783812e3e4af73fb0b164940cc88d3fc8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "175f9a0b5221f37e0593bc4a3a8bf6458c93c0cfa8995183fe1a8f5997d17755"
-    sha256 cellar: :any_skip_relocation, catalina:       "eb6704d9665020f36e51ba81049b52e3fdd531c3231740d97d975825d45f0ae3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99dc90e4c784f42eb8bb90e64f99c4eb3fc262123bb32b8b299d187a65316f06"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f4492d8c928ebda3b6e86cb46e6197d208a72b85faca96758a72de4e29d055e9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "37bf0cd19fa25cbf319c0e4c56e816d5a4c68903ed2d60d064b7ac1f974d83ab"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cf5026209eaaf4d6461189265e3ee44e69dd2c5b9bb368c6c96145ce5fd43f7a"
+    sha256 cellar: :any_skip_relocation, monterey:       "8e2d65735999bfee2e7dd163011fbd3772dc235cbd33ae811eb10e9a0c088a3f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9f522aed4a64c53bd7847489880433e42c4a0bf47623ba004f2993953c56fd4e"
+    sha256 cellar: :any_skip_relocation, catalina:       "daeb78e1a385242712c3dcdc8aaa43437ed2051512d14b70e640005d242bb4f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a6f53185a0a1a31324f185f763bf6cf71a7e67b2fdd5a5515374083daab8735"
   end
 
+  depends_on "docutils"
   depends_on "pygments"
   depends_on "python@3.11"
 
@@ -39,11 +40,6 @@ class RichCli < Formula
   resource "commonmark" do
     url "https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/commonmark-0.9.1.tar.gz"
     sha256 "452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"
-  end
-
-  resource "docutils" do
-    url "https://files.pythonhosted.org/packages/6b/5c/330ea8d383eb2ce973df34d1239b3b21e91cd8c865d21ff82902d952f91f/docutils-0.19.tar.gz"
-    sha256 "33995a6753c30b7f577febfc2c50411fec6aac7f7ffeb7c4cfe5991072dcf9e6"
   end
 
   resource "idna" do
