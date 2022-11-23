@@ -9,18 +9,18 @@ class LinodeCli < Formula
   head "https://github.com/linode/linode-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "727c59546a051a1adcd4493752e84ce19a000e28184b0e1ba880ec07a5420e35"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ccce53d5916c397b6cfdfcdf52adfa987010f1bea07b2bcdc60839df32b73d53"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3ba9b2eadd9c124baf5ef926f96e82c4c19f07e20420d805feaf11a9d6a0d2de"
-    sha256 cellar: :any_skip_relocation, monterey:       "5d10fe799d54e526b2295602ab811e4182a9996551a81e3b4da33fc9a6e105a6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d231167e6b709406355eafcda71c1f7d6bdba6d0cd55ae5a5b73d18807c8b1e2"
-    sha256 cellar: :any_skip_relocation, catalina:       "d9d415d63a5c17ac8720aa026dcc4b1ca33e1af9ae4c7635514df258d46698c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0cebe9b11039e84993bf1d1be880ffcc3c909715458bef375d865b62d5e46d1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5f0e1008e442b0e1423b9025459e47b554934ddf1db6fb21793990cd319adfe0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a33eaf9875268eae90e130740b08f443eeedaf111bf3d055bf6c84704c082ce8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "713d0239be5427c0ba7a3c18afd11236fc5adbfd6838589530c9e77281b979fa"
+    sha256 cellar: :any_skip_relocation, monterey:       "6f1e9a72299a09e94cda5b886095a620da8e5953ca717233897821d52597ef36"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cbd7de9bd2d8ce8f7f16024b1d4a6da9de8f730ae59d0a11c53e6eee8554f037"
+    sha256 cellar: :any_skip_relocation, catalina:       "857c906074523b96cda5360e9b968ef9a24c6d5f4ec5dcb6c002464abe95cca3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "381885a9ee7f6f4f9ba01cd9b849850bad38412ee81fdf5b60b7640468285017"
   end
 
-  depends_on "poetry" => :build # for terminaltables
   depends_on "openssl@1.1"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
 
   resource "linode-api-spec" do
@@ -59,13 +59,16 @@ class LinodeCli < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10", system_site_packages: false)
+    venv = virtualenv_create(libexec, "python3.11", system_site_packages: false)
     non_pip_resources = %w[terminaltables linode-api-spec]
     venv.pip_install resources.reject { |r| non_pip_resources.include? r.name }
 
+    # Switch build-system to poetry-core to avoid rust dependency on Linux.
+    # Remove on next release: https://github.com/matthewdeanmartin/terminaltables/commit/9e3dda0efb54fee6934c744a13a7336d24c6e9e9
     resource("terminaltables").stage do
-      system Formula["poetry"].opt_bin/"poetry", "build", "--format", "wheel", "--verbose", "--no-interaction"
-      venv.pip_install Dir["dist/terminaltables-*.whl"].first
+      inreplace "pyproject.toml", 'requires = ["poetry>=0.12"]', 'requires = ["poetry-core>=1.0"]'
+      inreplace "pyproject.toml", 'build-backend = "poetry.masonry.api"', 'build-backend = "poetry.core.masonry.api"'
+      venv.pip_install_and_link Pathname.pwd
     end
 
     resource("linode-api-spec").stage do
@@ -73,7 +76,7 @@ class LinodeCli < Formula
     end
 
     # The bake command creates a pickled version of the linode-cli OpenAPI spec
-    system "#{libexec}/bin/python3", "-m", "linodecli", "bake", "./openapi.yaml", "--skip-config"
+    system libexec/"bin/python3", "-m", "linodecli", "bake", "./openapi.yaml", "--skip-config"
     # Distribute the pickled spec object with the module
     cp "data-3", "linodecli"
 
@@ -94,7 +97,7 @@ class LinodeCli < Formula
     with_env(
       LINODE_CLI_TOKEN: random_token,
     ) do
-      json_text = shell_output("linode-cli regions view --json us-east")
+      json_text = shell_output("#{bin}/linode-cli regions view --json us-east")
       region = JSON.parse(json_text)[0]
       assert_equal region["id"], "us-east"
       assert_equal region["country"], "us"

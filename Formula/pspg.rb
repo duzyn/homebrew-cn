@@ -1,20 +1,20 @@
 class Pspg < Formula
   desc "Unix pager optimized for psql"
   homepage "https://github.com/okbob/pspg"
-  url "https://github.com/okbob/pspg/archive/5.5.9.tar.gz"
-  sha256 "e517baaf9fdf594d7e231c51bde66fd59f3b74753aad0b46b1f42b9d8b2e029a"
+  url "https://github.com/okbob/pspg/archive/5.5.12.tar.gz"
+  sha256 "8cee0a0cd4aa8a5ce91c11b1d6cb34b87deb71a78a6b25a6993f1af2264957c3"
   license "BSD-2-Clause"
   head "https://github.com/okbob/pspg.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1f766afd9ca820ba987ac3e89496161f5df060540b741980dfd60dc9ec0c9f13"
-    sha256 cellar: :any,                 arm64_monterey: "c54323ab59bb9bbe4671c924c1a646a68b19644e3b70882bbd487dc52941aa12"
-    sha256 cellar: :any,                 arm64_big_sur:  "fae746dcb591bd247afa1b9eb14f3e157ca6131e9c69011250cb618b2fe17042"
-    sha256 cellar: :any,                 ventura:        "f3dda63878c468a2eeb3af3ecbc689d713849e9c59b91100e29e7df2dd445bd7"
-    sha256 cellar: :any,                 monterey:       "282dc7b0f0b6091d9e2d1c8549219111a9588a15ad5867fde89c11d31f04c591"
-    sha256 cellar: :any,                 big_sur:        "73feabf78442b692961e82883b976ae900f9ec16baadbae6807fce550c54f898"
-    sha256 cellar: :any,                 catalina:       "c337e4e6760e5cea96639e38c071daf4b3bd0c24890582ddbcde2c8e24853c42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e31c7349a791d4cf2ee07ba725f1527876dd0019505a2d556562fae5ca340d6"
+    sha256 cellar: :any,                 arm64_ventura:  "dad5957c20e6d2fa172de78f8a17ed68a96344333e871302bc20b366882f6ef1"
+    sha256 cellar: :any,                 arm64_monterey: "03539b714f5c6855e9f56eca72a06e967eca97c19a26f3f89b15d008a76a2cc9"
+    sha256 cellar: :any,                 arm64_big_sur:  "1965c707b8b8466dba4b9df7ba543fdfb2699fc5020fc5b6be5d3fb12416b54d"
+    sha256 cellar: :any,                 ventura:        "efdfb6fa9006e85322ade93db0a7b9e664be5212080e6292c926cca88fa6e9d9"
+    sha256 cellar: :any,                 monterey:       "c36ebec9b72a04a5392ab59082b0de959d20222c9a692b096299c91aecf63db5"
+    sha256 cellar: :any,                 big_sur:        "af2df65f4259244fe51f30e2d0682a7bafb9e6f5548f7ee295a516ba2fa01d75"
+    sha256 cellar: :any,                 catalina:       "09df456842b33c0ecd8123c639393bec1c1d4936a08df505793b7ea9af6af452"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d42b80cd796e846c9eea63dba54ec568def4e7fea4c1c41cd8febd4e1074c2b3"
   end
 
   depends_on "libpq"

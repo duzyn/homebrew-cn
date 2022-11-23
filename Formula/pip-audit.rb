@@ -3,19 +3,18 @@ class PipAudit < Formula
 
   desc "Audits Python environments and dependency trees for known vulnerabilities"
   homepage "https://pypi.org/project/pip-audit/"
-  url "https://files.pythonhosted.org/packages/26/5a/680c0b6c9a203715cf754a2a7d0a158da4ad15162e185bf80d2e50c6fd1c/pip_audit-2.4.5.tar.gz"
-  sha256 "6c7fd7c300559c99963f0b4be4543c55175e1550534228b8d27bce7dcd06ab34"
+  url "https://files.pythonhosted.org/packages/7c/9a/f7e678406cccb5a2d3b3ddbfe039b97044c71cee7a6167f884a5df2fa534/pip_audit-2.4.6.tar.gz"
+  sha256 "00ebef2a52884627f255b879135e28001de4378b8005318b66cc3a802459ee0a"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "33cf0a89012d30e4de6989fceadb5b27a34dd320d4432bcce497d40ed39211f9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d82376a44acdd905aa308c2aa618a3b8ffea2b04088870f73855372ef928787"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f56b9a9f14a4d18f1d22956819ef8b33caee1f02bfe87e6d13fa06668976f9b"
-    sha256 cellar: :any_skip_relocation, monterey:       "b98821d111894bd5ec7d7182305a4f2faef62107d1591e8142ab88ad27e25bcd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f3f4056c665380c17169aba32ffa5045ae231ba8af7b4149a7e4c27301807b18"
-    sha256 cellar: :any_skip_relocation, catalina:       "93dd87ec865c9857b3d7c32b5c85aa57054d55583ce6a95c8b511d8ee058b18d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df28a5394768b48600a045ada19a0ac32a4efe2776f99e2163745ca760bcf4c1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6dfc06917d606ccf99ccb9f01216d25db5479d5015f7667bc5c737aea8633a0c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fcff9d3ad1c4c42e168d05243f4396ebb128faf7206635a0c023907d3d0e4ba5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c9e3ce1f3e6c04867cb4da2acb24aaf821502aaa0c857934321d7c5a6f4c0a30"
+    sha256 cellar: :any_skip_relocation, monterey:       "f4b0b7f7ba3c6dfeebfe80ef4ace55cf1bc7d38d5276c6c29b846f2c5738f5e0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b7a93a231424b8c760fa66a364de37372d2894b4f8e098b4379728a4ec31c596"
+    sha256 cellar: :any_skip_relocation, catalina:       "3785bdad9fbcc6dd8d382618ae9d5e17774830358e1a938bf5b40a644d2110be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7e190c5fa5736b7d655cf13aa990b6518d968a40e6659c6640ed4b51f8f14bc"
   end
 
   depends_on "pygments"
@@ -98,8 +97,8 @@ class PipAudit < Formula
   end
 
   resource "resolvelib" do
-    url "https://files.pythonhosted.org/packages/ac/20/9541749d77aebf66dd92e2b803f38a50e3a5c76e7876f45eb2b37e758d82/resolvelib-0.8.1.tar.gz"
-    sha256 "c6ea56732e9fb6fca1b2acc2ccc68a0b6b8c566d8f3e78e0443310ede61dbd37"
+    url "https://files.pythonhosted.org/packages/73/51/36f96ad70dd8c71274ac77739cda0794fee3ba45640373e7f8c5da7c9455/resolvelib-0.9.0.tar.gz"
+    sha256 "40ab05117c3281b1b160105e10075094c5ab118315003c922b77673a365290e1"
   end
 
   resource "rich" do

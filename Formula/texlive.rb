@@ -34,15 +34,14 @@ class Texlive < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "cc72be1ac9900d1fc989cb0283ba17c1b39bb8c1769a8bc8cb0bb8f03aa3b2d8"
-    sha256 arm64_monterey: "998bbb1328c73fdf3ff24429cccdb389edae22d935ab60a6f48dadfc6c7dc328"
-    sha256 arm64_big_sur:  "69bc27790cc0a45d084b040a2c96976a052a89fa1f333fddcba3758acd150374"
-    sha256 ventura:        "7754208ad5ec94b468f69cafc8d2467d9ea266074d0be43cf62a5cc2d177b72d"
-    sha256 monterey:       "61822f9ebac88866db77aa8649caf69489f46c4bcb0c87d665e4854e5344b397"
-    sha256 big_sur:        "2fbfd5e7ed1df3c69191af48a0b096a7758258095df54053885166d508f870aa"
-    sha256 catalina:       "29be6dbad63f42a359e8782e2ca061e758b304810bfa63f6676bbccdd478bfe3"
-    sha256 x86_64_linux:   "3ee310b82aa952a59f079d9e4dd84ceacbde68bdb79a2db23bd5b1af34d3b1c2"
+    rebuild 2
+    sha256 arm64_ventura:  "7f48fcbd7afbfc58486b65ffe441f4e55b27a57c4977c00fa48726d222817a1e"
+    sha256 arm64_monterey: "f62ce2a3658ff02cee024b78e5517b9afd098590becf93319b90c106f619e55f"
+    sha256 arm64_big_sur:  "2e25e5a7e189187d77541b56e9f9a5980b57441abfe9b3f1e219dde4719efbf6"
+    sha256 monterey:       "aec4cc0ac69e1fbc2dd00d6ba75dacd4bbb4d4719fa30ce5205e32d330efe7ea"
+    sha256 big_sur:        "fb9e9208fd8182259cadfeabbb2813bd1d14e82b92b13735e5ccf473746817df"
+    sha256 catalina:       "612a950c2a0f1cc0b1630ba0a2d546e97b7cc483d02006b4b972715b7e3cc6b0"
+    sha256 x86_64_linux:   "236e365e2c032606bfdf77ce604223236ab6e92fca244de153048164cba80fdb"
   end
 
   depends_on "cairo"
@@ -65,6 +64,7 @@ class Texlive < Formula
   depends_on "pixman"
   depends_on "potrace"
   depends_on "pstoedit"
+  depends_on "pygments"
   depends_on "python@3.10"
 
   uses_from_macos "icu4c"
@@ -108,11 +108,6 @@ class Texlive < Formula
     url "https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-20220321-texmf.tar.xz"
     mirror "https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2022/texlive-20220321-texmf.tar.xz"
     sha256 "372b2b07b1f7d1dd12766cfc7f6656e22c34a5a20d03c1fe80510129361a3f16"
-  end
-
-  resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   resource "Module::Build" do
@@ -348,13 +343,10 @@ class Texlive < Formula
     ENV["OPENSSL_PREFIX"] = Formula["openssl@1.1"].opt_prefix
 
     tex_resources = %w[texlive-extra install-tl texlive-texmf]
-    python_resources = %w[Pygments]
 
     resources.each do |r|
       r.stage do
         next if tex_resources.include? r.name
-
-        next if python_resources.include? r.name
 
         if File.exist? "Makefile.PL"
           system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}",
@@ -368,10 +360,6 @@ class Texlive < Formula
         end
       end
     end
-
-    # Install Python resources
-    venv = virtualenv_create(libexec, python3)
-    venv.pip_install resource("Pygments")
 
     # Install TeXLive resources
     resource("texlive-extra").stage do

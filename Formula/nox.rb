@@ -3,19 +3,19 @@ class Nox < Formula
 
   desc "Flexible test automation for Python"
   homepage "https://nox.thea.codes/"
-  url "https://files.pythonhosted.org/packages/12/f1/a810cf1f56e47b990824ebbb19e789745e4d1ea80ac0f2b6494c50e3f6a5/nox-2022.8.7.tar.gz"
-  sha256 "1b894940551dc5c389f9271d197ca5d655d40bdc6ccf93ed6880e4042760a34b"
+  url "https://files.pythonhosted.org/packages/bb/1b/d5c87d105189bf4e3811f135c8a20c74ae9f81a34d33a1d0d1cd81383dd5/nox-2022.11.21.tar.gz"
+  sha256 "e21c31de0711d1274ca585a2c5fde36b1aa962005ba8e9322bf5eeed16dcd684"
   license "Apache-2.0"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cbfaa983063217367c28254589ef46a151fd3502174b30fdf1165f36ae525dcf"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7fe27d9493e2099a23616c5a2183537ce2325cc56e630f27342ffa2e428b8f10"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2115babee5523ad24dbac2c0868268423195c85809f45c0c26143cf41f04af17"
-    sha256 cellar: :any_skip_relocation, monterey:       "6fc28a3149d6ae0b2e9c4064a4012fe058ae547b77f5cb7bf24d81c9f74e1bbf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6b27d119d5c18c5a5197072ba928716aea0cf077f80d2e04265c0aa374c34a05"
-    sha256 cellar: :any_skip_relocation, catalina:       "63cad15c2596e387b5246606e455ca7231932f30e1ae61f0d3e3cf797b854641"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85779bf03dcc8666dfd5b3e05c25dff6be3c2deb6137fcd74e24f88cde2aa545"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0f0f23c7102f0aa1c3253ff48bf7b3cad48995cf8179c2ea8c2d7ccdc2b69fe6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c50a6446b385e6918e50f722e7b4fbda7f3367cd7de5b3b225f0dc743648e91"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "202346d07ff46eb88d0db0607168e43b978606255fe7ac29383504b3be9b389e"
+    sha256 cellar: :any_skip_relocation, ventura:        "75f8cda188f16e991a41547021a68424b8c5a76a159ce5011dd3801e3bfaff60"
+    sha256 cellar: :any_skip_relocation, monterey:       "cf8c1e4cef9105a72680fa84ba6899e07ea8739921d15c65a55a5c6c7c994ced"
+    sha256 cellar: :any_skip_relocation, big_sur:        "76c96bfaaba66c385002caf4e9b18581c1876c928652733ffc87c5c61baeda81"
+    sha256 cellar: :any_skip_relocation, catalina:       "f7215557be4811a34b35042f7f6ba5f0eecb5d3e8e0160e7a55ccc535252721a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96ea5be4ebdaff105fc68e902a912f199b6fe2383b2cc9969ee49b35f7f0589e"
   end
 
   depends_on "python@3.11"
@@ -28,33 +28,13 @@ class Nox < Formula
   end
 
   resource "colorlog" do
-    url "https://files.pythonhosted.org/packages/8e/8f/1537ebed273d43edd3bb21f1e5861549b7cfcb1d47523d7277cab988cec2/colorlog-6.6.0.tar.gz"
-    sha256 "344f73204009e4c83c5b6beb00b3c45dc70fcdae3c80db919e0a4171d006fde8"
-  end
-
-  resource "distlib" do
-    url "https://files.pythonhosted.org/packages/31/d5/e2aa0aa3918c8d88c4c8e4ebbc50a840e101474b98cd83d3c1712ffe5bb4/distlib-0.3.5.tar.gz"
-    sha256 "a7f75737c70be3b25e2bee06288cec4e4c221de18455b2dd037fe2a795cab2fe"
-  end
-
-  resource "filelock" do
-    url "https://files.pythonhosted.org/packages/f3/c7/5c1aef87f1197d2134a096c0264890969213c9cbfb8a4102087e8d758b5c/filelock-3.7.1.tar.gz"
-    sha256 "3a0fd85166ad9dbab54c9aec96737b744106dc5f15c0b09a6744a445299fcf04"
+    url "https://files.pythonhosted.org/packages/78/6b/4e5481ddcdb9c255b2715f54c863629f1543e97bc8c309d1c5c131ad14f2/colorlog-6.7.0.tar.gz"
+    sha256 "bd94bd21c1e13fac7bd3153f4bc3a7dc0eb0974b8bc2fdf1a989e474f6e582e5"
   end
 
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
     sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
-  end
-
-  resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/ff/7b/3613df51e6afbf2306fc2465671c03390229b55e3ef3ab9dd3f846a53be6/platformdirs-2.5.2.tar.gz"
-    sha256 "58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"
-  end
-
-  resource "py" do
-    url "https://files.pythonhosted.org/packages/98/ff/fec109ceb715d2a6b4c4a85a61af3b40c723a961e8828319fbcb15b868dc/py-1.11.0.tar.gz"
-    sha256 "51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"
   end
 
   resource "pyparsing" do

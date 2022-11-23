@@ -1,19 +1,19 @@
 class Libtensorflow < Formula
   desc "C interface for Google's OS library for Machine Intelligence"
   homepage "https://www.tensorflow.org/"
-  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.10.1.tar.gz"
-  sha256 "622a92e22e6f3f4300ea43b3025a0b6122f1cc0e2d9233235e4c628c331a94a3"
+  url "https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.11.0.tar.gz"
+  sha256 "99c732b92b1b37fc243a559e02f9aef5671771e272758aa4aec7f34dc92dac48"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "62eca0ff2a425d025fe342aa3ba166203f3d60e138dd3b49145b282bd4f2849d"
-    sha256 cellar: :any,                 arm64_monterey: "62eca0ff2a425d025fe342aa3ba166203f3d60e138dd3b49145b282bd4f2849d"
-    sha256 cellar: :any,                 arm64_big_sur:  "61631b447424eb0a2b7382e02e096d9afe1e1060ce30cb51e451d78ec215ffd4"
-    sha256 cellar: :any,                 ventura:        "be0c3ba93dcfc9ae0075e7d417d1c624770ca34193c0ac91cbcc6a9ea48a24ff"
-    sha256 cellar: :any,                 monterey:       "be0c3ba93dcfc9ae0075e7d417d1c624770ca34193c0ac91cbcc6a9ea48a24ff"
-    sha256 cellar: :any,                 big_sur:        "6922d297d0535f752c2a0fa5bcbe4f00f8f1c47a8a467079c40a9383ca56a3e0"
-    sha256 cellar: :any,                 catalina:       "8d575c934aa2a7087f4979eb7578fd1f3f802a1b9780dbcf4c5207afe3db24af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b1dd91384a0647ed06d67de0f4d82f48dcdee229d2677ff41227662a4cce913"
+    sha256 cellar: :any,                 arm64_ventura:  "6338d2b8b3783529d2b88bc1dd2952b7be6eeb47a4fb92046773538ddb42a52f"
+    sha256 cellar: :any,                 arm64_monterey: "6338d2b8b3783529d2b88bc1dd2952b7be6eeb47a4fb92046773538ddb42a52f"
+    sha256 cellar: :any,                 arm64_big_sur:  "f7bf9ae6bbb912322dbf159a429cf8d2c02a69499def33e0d50e5fc67a103a06"
+    sha256 cellar: :any,                 ventura:        "bda2efd536cf339b515c30bc2358087cdb0ec01b79c258e7287086f6013b060b"
+    sha256 cellar: :any,                 monterey:       "bda2efd536cf339b515c30bc2358087cdb0ec01b79c258e7287086f6013b060b"
+    sha256 cellar: :any,                 big_sur:        "8cbf67ceeaf31bafcd5f567ad4476b98ba7c2b13bb16ca4856a7e46f3e0a496b"
+    sha256 cellar: :any,                 catalina:       "0e659810b7c74403b61217c99c52a95e7e812f81d9395b916f2260e7b24586ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9388c60f0faab1e4cff146b63b8a7870250aa2109c6cef7c218cbf3e4ed08b67"
   end
 
   depends_on "bazelisk" => :build
