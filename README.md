@@ -12,7 +12,7 @@
 
 ## 添加应用库
 
-    brew tap duzyn/cn https://ghproxy.com/github.com/duzyn/homebrew-cn
+    brew tap duzyn/homebrew-cn https://ghproxy.com/github.com/duzyn/homebrew-cn
 
 ## 安装应用
 
