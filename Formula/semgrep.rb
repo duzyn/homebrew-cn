@@ -15,14 +15,15 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "f68efe27a78114684f3f5f690c6bf36d530134f93be951a4a38ad9e4786ca26e"
-    sha256 cellar: :any, arm64_monterey: "89e4d69c43a3874cceecd100a9668117d102661c1942acceb6b98e4f72cb8100"
-    sha256 cellar: :any, arm64_big_sur:  "718e109314bb81fce6e5c8ca6fb656596cf74b56e7e62806f5236e12e51d9b2c"
-    sha256 cellar: :any, ventura:        "063eafa19923aff0c7982ceeedb2f59e11b2b470b43f98a4b1ee1d7cba82811a"
-    sha256 cellar: :any, monterey:       "74772834439ae1bcd2b481dff758083f4058825322757ba8b0ec2c64bb5e64a6"
-    sha256 cellar: :any, big_sur:        "065783694ebfa868a84bbda67c3b80a68bf6fed6f210317f319fce8aa55bc6ac"
-    sha256 cellar: :any, catalina:       "6bb714397e9d0e2efe6353af39f354da920049ccb674203dbc352d02695c4508"
-    sha256               x86_64_linux:   "d6a63ed7c3353922439195cc99465c40ec677b64aca67d8afa5ac5348854c4c4"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "794dde61440af1fc1ca7ccdbdd572a50db67694ad4e48ad4efd3f8968c61fc1e"
+    sha256 cellar: :any, arm64_monterey: "4fa7bfe6c30ae34e5e02599caeeaefd10c952268e93d67d6c09149836e29bc43"
+    sha256 cellar: :any, arm64_big_sur:  "f33d6777437b3fd208794abef60da51e82a458424f6bd83aa3944260f01d4870"
+    sha256 cellar: :any, ventura:        "907cfa8d4b3a07154c8d5ec6930476243beae8a01e69cadce8528475f5f7da3b"
+    sha256 cellar: :any, monterey:       "5c4736c4c383bed21a91f4b117289981024492f1ca221f75bbb6ecd278c8a165"
+    sha256 cellar: :any, big_sur:        "69ad191aa3293238f4c1a0a5ba5706513c7824781141f69909aab297840006ae"
+    sha256 cellar: :any, catalina:       "d48574415bd57ff5d9d651140c4a2f4085650ffb590fbf796c6b687f7d60dcff"
+    sha256               x86_64_linux:   "9ef6e758b8b97a3275f81bcedfa8df85bfac3df49d46961b9a4a3f2234bee01a"
   end
 
   depends_on "cmake" => :build
@@ -32,15 +33,19 @@ class Semgrep < Formula
   depends_on "opam" => :build
   depends_on "pipenv" => :build
   depends_on "pkg-config" => :build
-  depends_on "jsonschema"
   depends_on "pcre"
   depends_on "python-typing-extensions"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "tree-sitter"
 
   uses_from_macos "rsync" => :build
 
   fails_with gcc: "5"
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+  end
 
   resource "boltons" do
     url "https://files.pythonhosted.org/packages/ad/1f/6c0608d86e0fc77c982a2923ece80eef85f091f2332fc13cbce41d70d502/boltons-21.0.0.tar.gz"
@@ -97,6 +102,11 @@ class Semgrep < Formula
     sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
   end
 
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/65/9a/1951e3ed40115622dedc8b28949d636ee1ec69e210a52547a126cd4724e6/jsonschema-4.17.1.tar.gz"
+    sha256 "05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3"
+  end
+
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
     sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
@@ -110,6 +120,11 @@ class Semgrep < Formula
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
+    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
   end
 
   resource "python-lsp-jsonrpc" do
@@ -194,15 +209,10 @@ class Semgrep < Formula
     ENV["SEMGREP_SKIP_BIN"] = "1"
     python_path = "cli"
     cd python_path do
-      venv = virtualenv_create(libexec, Formula["python@3.10"].bin/"python3.10")
+      venv = virtualenv_create(libexec, Formula["python@3.11"].bin/"python3.11")
       venv.pip_install resources.reject { |r| r.name == "ocaml-tree-sitter" }
       venv.pip_install_and_link buildpath/python_path
     end
-
-    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.10")
-    jsonschema = Formula["jsonschema"].opt_libexec
-    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   test do

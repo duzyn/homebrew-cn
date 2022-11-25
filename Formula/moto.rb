@@ -8,20 +8,25 @@ class Moto < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "912d7e1862a7b3bc1885feb27b6398c9b136280d49918feee2e9ba3841829633"
-    sha256 cellar: :any,                 arm64_monterey: "0cba3a07aa22e0ca3298ba5b50d298c7612a39f35a0266c02a81aa8f146804c8"
-    sha256 cellar: :any,                 arm64_big_sur:  "39ff549f74fba5629204fd2766caa86d0c37a8d2ee4906f3cfb4ad7d89852cc3"
-    sha256 cellar: :any,                 monterey:       "e66e54397f17aac036ed12859b31c0a6e4f306fcc496ef29459cf90e5c1f75c2"
-    sha256 cellar: :any,                 big_sur:        "d96dec5d0f4c17c187b3a91ffaf7b0a31ef04dc6a210653c3c0723838bdb11a8"
-    sha256 cellar: :any,                 catalina:       "e2ca2c97bfc9e700189a40d5056a0045f0431d13dac7a491c4f7255b586ffa62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afc1e920b94ddf7aa1feb75c36518335128fe8e2e7dcde64bf005113f5a3c7e3"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "2fd64d5bc99240dca23f60c9a85bc08b78d7185e71079b9b028c8e9b0f5e368e"
+    sha256 cellar: :any,                 arm64_monterey: "fcdc516a71ed4bccec764cbcdba43729287e8fa4724f5d25497a01d7fbd822c4"
+    sha256 cellar: :any,                 arm64_big_sur:  "f3f2c9b83472649e3e3cc74f41cec86a7ec2396914fc77da5b9259c8997bd6d5"
+    sha256 cellar: :any,                 monterey:       "38db46752e314272f62a5232b741bdeace4be905bca8320a5aca86a45f8fec07"
+    sha256 cellar: :any,                 big_sur:        "1490d97a2cfa624fa000dd7263b9b6615b626622d72e16d9ec71a0148b349556"
+    sha256 cellar: :any,                 catalina:       "1c9b9964653a21a712cd7731d1f3eee537060a288f3258975e285dd4885f42ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b29f718cb240361101b680772fa29d5d5e8130b630cb368fda693f5a7974808f"
   end
 
   depends_on "rust" => :build # for cryptography
-  depends_on "jsonschema"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+  end
 
   resource "aws-sam-translator" do
     url "https://files.pythonhosted.org/packages/d3/47/c7b4eb84fb294f294df45fc75cf8e1fb987535f5adbda5d2e53c47e0a2de/aws-sam-translator-1.54.0.tar.gz"
@@ -143,6 +148,11 @@ class Moto < Formula
     sha256 "97cba51526c829282218feb99dab1b1e6bdf8efd1c43dc9d57be093c0d69c99a"
   end
 
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/65/9a/1951e3ed40115622dedc8b28949d636ee1ec69e210a52547a126cd4724e6/jsonschema-4.17.1.tar.gz"
+    sha256 "05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3"
+  end
+
   resource "junit-xml-2" do
     url "https://files.pythonhosted.org/packages/4d/f2/a99adf9deb57949b81ff8e113edf971da1840251794a6f4184d61faa5a65/junit-xml-2-1.9.tar.gz"
     sha256 "3b8d9635c5215f754c7807104f6493e3ea3bc9481e2d33db294560da3a1b00f7"
@@ -191,6 +201,11 @@ class Moto < Formula
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
+    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
   end
 
   resource "python-dateutil" do
@@ -275,10 +290,6 @@ class Moto < Formula
 
   def install
     virtualenv_install_with_resources
-    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.10")
-    jsonschema = Formula["jsonschema"].opt_libexec
-    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   service do

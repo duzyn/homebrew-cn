@@ -8,17 +8,22 @@ class Borgmatic < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b168fe1cd3d5238d45412b84e68ad3db33b459fb7d01f7dbd5956dd3752d627a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e21a307f3639f4875222a848664810d2cdf49f82f55c52421e5d4792dffd751a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8afb204fc44b64572327a06b9a47a526676ba8248dac484dbf2226152eb09709"
-    sha256 cellar: :any_skip_relocation, monterey:       "9a956b54656b34375be6e0e737ba4695a188682996f94b93fc8511b803d625d9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4b06ccf79d5e92a42baaca245b62d672175651d796af648a79e26b269a17d1a3"
-    sha256 cellar: :any_skip_relocation, catalina:       "406c0860868d2661472a970010febf1d62ad25745d88eb70fa89667bba779376"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c57fad50a243b203a6116ce6e2a413f1ba6bb433aa3e9b6bbef73b4c6e602bd"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "16bcd4891083cc41ded92d07141ac56a231b885bb484160183937cd5f2360bea"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "519355fd42c87addf6b5749c25f5918d410dee31d973d69b64920bb616eddbf0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d8a67afe44dc2b59ff3efb754bbe670a7bc530cb1c37607e7c8148cf31cd1e9e"
+    sha256 cellar: :any_skip_relocation, monterey:       "796a43261f07c224ee9fcea36032c7df379e1c19b9297725f5217f5e684b5a9d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5949cf08995b52d94f5f7461a37d974b60b2a34e4da03d4b7d6ca07fa756f162"
+    sha256 cellar: :any_skip_relocation, catalina:       "e0130f22becee542b612bc004ec0282063c02e0f9e2d25e5cddcdc1da4fa3dee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ffe1de21c272458b76ed9877c2ddbff08d4b454fd55884eace5e6784c4e7be7"
   end
 
-  depends_on "jsonschema"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+  end
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
@@ -31,13 +36,23 @@ class Borgmatic < Formula
   end
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/2b/65/24d033a9325ce42ccbfa3ca2d0866c7e89cc68e5b9d92ecaba9feef631df/colorama-0.4.5.tar.gz"
-    sha256 "e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"
+    url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
+    sha256 "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
   end
 
   resource "idna" do
     url "https://files.pythonhosted.org/packages/8b/e1/43beb3d38dba6cb420cefa297822eac205a277ab43e5ba5d5c46faf96438/idna-3.4.tar.gz"
     sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
+  end
+
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/65/9a/1951e3ed40115622dedc8b28949d636ee1ec69e210a52547a126cd4724e6/jsonschema-4.17.1.tar.gz"
+    sha256 "05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
+    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
   end
 
   resource "requests" do
@@ -50,11 +65,6 @@ class Borgmatic < Formula
     sha256 "8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"
   end
 
-  resource "ruamel.yaml.clib" do
-    url "https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz"
-    sha256 "4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"
-  end
-
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
     sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
@@ -62,11 +72,6 @@ class Borgmatic < Formula
 
   def install
     virtualenv_install_with_resources
-
-    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.10")
-    jsonschema = Formula["jsonschema"].opt_libexec
-    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   test do

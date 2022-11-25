@@ -3,19 +3,18 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/e3/6c/5730e87413070a1e5ccba87fc150d5749953ca953101a135dace34d26fb6/dxpy-0.332.0.tar.gz"
-  sha256 "1f1589340d14ca86999052b4e7707baff0b259255cfb64f6a5c67ab9817e9880"
+  url "https://files.pythonhosted.org/packages/a7/d5/05aa30e543c91e1769c8d1d82898ffac173f0549fe6af47ae6fc087406ee/dxpy-0.333.0.tar.gz"
+  sha256 "0f261c930dbb8ca13370167acc9d89637d0dbddfdb215ee9bac1771475be160e"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "f6798277444a026962adbf8c0e72a33bbe8dc303be97b31012275088585152ad"
-    sha256 cellar: :any,                 arm64_monterey: "03eaf832840f34cd83f23079028049d227eeb067963ed6d3f643640b444db9f8"
-    sha256 cellar: :any,                 arm64_big_sur:  "1dbbfc38bcbff618df6b594436f75b725db002fe27b9f790a48f4b52df33de1b"
-    sha256 cellar: :any,                 monterey:       "2c5e28af34db78d5272ddf5969c352ce06c3763c2ca040197451b90692873220"
-    sha256 cellar: :any,                 big_sur:        "f826e02d9ef8852abe3d24c01622a93a887e23bae731a5d6551c4b0dc4427c19"
-    sha256 cellar: :any,                 catalina:       "5b2c445f77e1a93302eb12cafa1cfa8d72db6955000a065001585d2981d7be70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2bd7462fce3803ec28159002902067a4880c571ec691e42c5de3a452f58aec71"
+    sha256 cellar: :any,                 arm64_ventura:  "1317698a96b7e9ed17d2d736fa4eb02ecf1900d715aec32cab368acfaf1331db"
+    sha256 cellar: :any,                 arm64_monterey: "75c8c49791c9e66772e004581bb9a4d5ffdfc71603dc4baa768a6429b89d03f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "a970f4e0a070bccc86dae718d4afe96e454ae8eee631fc9cb3cbe2dd5a99b081"
+    sha256 cellar: :any,                 monterey:       "de1271bbb03d83ad46c155b9cd2d0f6636b761c343663b29591346e40020c7f7"
+    sha256 cellar: :any,                 big_sur:        "28a43f810e3a1fbf109f7231734531b0f55e2f81d37865f1643586d926287934"
+    sha256 cellar: :any,                 catalina:       "9323d2faee6a82d431118f0184f5e64d6af4d9c29dc49999f5b1180c1df1218c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4ddb61483da02adbe1d32fb0a0730116dd73cef2284252a515a630ac2c48628"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -83,8 +82,8 @@ class Dxpy < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "websocket-client" do

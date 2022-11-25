@@ -3,19 +3,18 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/c1/4f/aef6377e19a41bbc6e927b999d5da73a37df76affee5c17b9722830f042b/esphome-2022.11.2.tar.gz"
-  sha256 "f17f0a771562866192f6cfeb432629d89c3a2e95839b51f966960990c56b47e0"
+  url "https://files.pythonhosted.org/packages/30/36/56ca271d94cc0f93618ff131f25a62ce0af0fb0a9b0d8088e84fbefe6177/esphome-2022.11.3.tar.gz"
+  sha256 "2f5be87e46030e7e0ff49978708e585d7ce200027a696967c7392b3202960eea"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "bc108dc4a814974ccd633165cebb9eb1274a37000f7d206a03492c707d8d17f3"
-    sha256 cellar: :any,                 arm64_monterey: "3c363532894392458996bd4069cd8e43f3b08dfc2226b30f2e82404a1f652b40"
-    sha256 cellar: :any,                 arm64_big_sur:  "c06a16e94e837626e7281d12d89ac53ef638b746c451f7cea8f9534bb7cc31de"
-    sha256 cellar: :any,                 ventura:        "500fff69ce702992bc435839a55a9d41bb79a821291d4fcbba3010cf5643894b"
-    sha256 cellar: :any,                 monterey:       "a6964197f826d3e4a9c6289e37b562841c3678e35362df08df337f93ca6a8341"
-    sha256 cellar: :any,                 big_sur:        "a19adf103d14746f2cd18f1b6a2751ff0d69202073448b1ca1b75e94b0685e6a"
-    sha256 cellar: :any,                 catalina:       "69b061b59bc07367c25188fd9880f95cbb910e7cace69d7d9c96f53788b8b962"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2976d38e0e23d06088095c75c4f1e81f11b4f20175d069d817bd5b9bfe594a5b"
+    sha256 cellar: :any,                 arm64_ventura:  "99698e89820a6ddf84ee277ec940e6e7eaa971f78096854a1d3f75bd15de6608"
+    sha256 cellar: :any,                 arm64_monterey: "d4057f24d22b25fe3fec1e66daf43e612c39395c5b3f7f4b45589efb080746cb"
+    sha256 cellar: :any,                 arm64_big_sur:  "d21985e841c7533f5050d1e1713c18a60ba2ce1e969169438841dcda750fcb04"
+    sha256 cellar: :any,                 monterey:       "4a41ad38c86b937e4475e6c3920705f182a9fe57c92539a70aeb15d8360f9a2c"
+    sha256 cellar: :any,                 big_sur:        "1f9b6fb12f2212a886929fc788e8c0110d42ad3f7076a17b2e44cfbdf40b17ff"
+    sha256 cellar: :any,                 catalina:       "e5e7c9fece6bc8868d70fa64f653434ae9b207b470124186018d6c68a72d9459"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3dca1d067c361098e129a47cce5cfd2d53199f241690dca9e17bcba882beeb99"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -216,8 +215,8 @@ class Esphome < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "uvicorn" do
