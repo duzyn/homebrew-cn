@@ -3,10 +3,9 @@ class Gradle < Formula
   homepage "https://www.gradle.org/"
   # TODO: switch dependency to `openjdk` on 7.6.
   # Ref: https://github.com/gradle/gradle/issues/20372
-  url "https://services.gradle.org/distributions/gradle-7.5.1-all.zip"
-  sha256 "db9c8211ed63f61f60292c69e80d89196f9eb36665e369e7f00ac4cc841c2219"
+  url "https://services.gradle.org/distributions/gradle-7.6-all.zip"
+  sha256 "312eb12875e1747e05c2f81a4789902d7e4ec5defbd1eefeaccc08acf096505d"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url "https://gradle.org/install/"
@@ -14,7 +13,13 @@ class Gradle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b8a590221ce177514ddff10c925b892ee856b9a23cc28dc623124b12991a90c5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4ba00f5fb6200ba402ef737e47cd3c3c079d77466299c7ef49ed28de3b1c4dc5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ba00f5fb6200ba402ef737e47cd3c3c079d77466299c7ef49ed28de3b1c4dc5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ba00f5fb6200ba402ef737e47cd3c3c079d77466299c7ef49ed28de3b1c4dc5"
+    sha256 cellar: :any_skip_relocation, monterey:       "4ba00f5fb6200ba402ef737e47cd3c3c079d77466299c7ef49ed28de3b1c4dc5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4be64b296fb7a3b5c16d7807dd278dbcb2fbc21a6209e65786e0548f48cffc44"
+    sha256 cellar: :any_skip_relocation, catalina:       "4be64b296fb7a3b5c16d7807dd278dbcb2fbc21a6209e65786e0548f48cffc44"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ba00f5fb6200ba402ef737e47cd3c3c079d77466299c7ef49ed28de3b1c4dc5"
   end
 
   depends_on "openjdk@17"
