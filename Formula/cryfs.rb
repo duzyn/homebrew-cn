@@ -6,9 +6,10 @@ class Cryfs < Formula
   url "https://ghproxy.com/github.com/cryfs/cryfs/releases/download/0.11.3/cryfs-0.11.3.tar.gz"
   sha256 "cffef7669b8cbec3e7420088faac492390b9e1f3d3d0dc2a245b87f8df05f190"
   license "LGPL-3.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9a02ad52ed41a82f185b9cca7f740c3077cfe0a16c06761babac3a499f5fbdf4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5cf540a20c6bba381ab58a3b2c4b09abe03d0807b972bc323cd11d4ea63e835b"
   end
 
   head do

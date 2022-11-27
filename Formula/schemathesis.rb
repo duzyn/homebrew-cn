@@ -8,25 +8,30 @@ class Schemathesis < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a382762fb88a05b73ae3408d01bdc8c17fe45afb411aac562a7ced2efd80a451"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f5ea7e6c0f355e601d180f97c504ef1c7d593ddd0f1d758503a3cd01d3adb9d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3a7bd1b90b6761cb08b331f31c7045db71f692c6ca8171f2f7aef879c3c167a4"
-    sha256 cellar: :any_skip_relocation, ventura:        "200211b4418d2faa87f273e6374f7e5b6c94ce7bcae0c7ed16a3df2593690462"
-    sha256 cellar: :any_skip_relocation, monterey:       "45100e60309ea7cc3644311e736fcfb86956061a86886b393f914edf4d99c59a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "25fd42cfbfd0b354783e7b37bf3d598a7abf6838170d9793ac4edbc6e19eece3"
-    sha256 cellar: :any_skip_relocation, catalina:       "6e7a6cb7217e843bcfeb5093931ebe606cc475890d9b7daf1e626a75a7861862"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7702c1af6184bb6881b2ac8e721ae408e58032d9dfd59959d1d947c8602c0284"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "caafd55ccc3ec95891d9264b72639dd43eb31b83fb14581a2c124895ff9693e0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "930902c9aefc426d51f12a1a656214c8269d8afaa33b4aea26b8c6b7fbceeee4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b52591bf0d246e3d5cc1dcc9834ada22eadc14bee1c2602c84a0adfd1a545114"
+    sha256 cellar: :any_skip_relocation, ventura:        "a1c69bef13156a2e2e13b1ba72b1e3f0d28a95fb24016a5e63b47c0bc17f4f0e"
+    sha256 cellar: :any_skip_relocation, monterey:       "c19323e76cc2de091a259a1d0d38b900da3256a4f8480ad8e059a11e2d819bf7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4d5f715c5670557e34632a9ce5db246542c2264eb4ab164fdaa4eebcb7badfc3"
+    sha256 cellar: :any_skip_relocation, catalina:       "d5fa4a0e69e9792207b463ee50b7aa0b3908615c89f1d170750c02417ddff0d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c703566bcb7eea0a2a24ca8a0fa82bfd57b47984a7c2d86685c960a69f1800ad"
   end
 
-  depends_on "jsonschema"
   depends_on "python-typing-extensions"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
 
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/8b/94/6928d4345f2bc1beecbff03325cad43d320717f51ab74ab5a571324f4f5a/anyio-3.6.2.tar.gz"
     sha256 "25ea0d673ae30af41a0c442f81cf3b38c7e79fdc7b60335a4c14e05eb0947421"
+  end
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
   end
 
   resource "backoff" do
@@ -109,6 +114,11 @@ class Schemathesis < Formula
     sha256 "bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"
   end
 
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/65/9a/1951e3ed40115622dedc8b28949d636ee1ec69e210a52547a126cd4724e6/jsonschema-4.17.1.tar.gz"
+    sha256 "05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3"
+  end
+
   # only doing this because junit-xml source is not available in PyPI for v1.9
   resource "junit-xml" do
     url "https://github.com/kyrus/python-junit-xml.git",
@@ -138,6 +148,11 @@ class Schemathesis < Formula
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
+    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
   end
 
   resource "pytest" do
@@ -202,11 +217,6 @@ class Schemathesis < Formula
 
   def install
     virtualenv_install_with_resources
-
-    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.10")
-    jsonschema = Formula["jsonschema"].opt_libexec
-    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   test do
