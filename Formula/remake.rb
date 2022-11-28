@@ -21,6 +21,7 @@ class Remake < Formula
     sha256 arm64_ventura:  "d7df7bd4d65ad45cfdcbdc938a69df3ebbdbf328cc74380b3f281a044afc028d"
     sha256 arm64_monterey: "5c2479d3270cb34d5515d80136186d003e9eb96c7750b137d6f526a46b4003f7"
     sha256 arm64_big_sur:  "b4370edfc5a075b5feb54686ba20b01dd2b2da18666b708ea5154af3b7df2c9b"
+    sha256 ventura:        "507f2808ffbdd7048607b5a8cde20cefa2241a88e3e35a68c8312f9795b17cb5"
     sha256 monterey:       "609d23982a7c58ec3dc547e06dfc2f461b36ca622de3314490975a282117b9d4"
     sha256 big_sur:        "bc482278bbce34be601363a34689176e611eacc0461984892bdee53cc5965936"
     sha256 catalina:       "dc5e00c02c1def048f5d678e91349d8f8da951e8ada948d9f7538cc962d8feea"

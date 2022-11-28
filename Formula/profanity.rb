@@ -10,6 +10,7 @@ class Profanity < Formula
     sha256 arm64_ventura:  "ed139220e7ccbc28492b21a36b46938ca0a0eb9726d12a5b5a5ec2732a70b2e9"
     sha256 arm64_monterey: "0445e9095f46d2feb9d4885addcbe3776d0582eebbf69a1ed6159323c31a46b7"
     sha256 arm64_big_sur:  "fbc2566e1def33062a2d48435900ac0ee347ae5e3b9083a5840afdedbfff6c3f"
+    sha256 ventura:        "53a9218eb2090e6b70d7b14ad9b8aab6f503ac2e4e18e92a655e02eea5f5608c"
     sha256 monterey:       "dba2f230257a1bac9b5a3667f8a339bcc4bd1eaa6ebd22afe798bf078dbe0e77"
     sha256 big_sur:        "8b7edbbab26d273e2acb2ce927c796e3cd25b90c0d9c49a4f9788eed6049688d"
     sha256 catalina:       "234b9a17bc5bcb40fa28093cb430f613c3e4b6dea64ab58abfe18fc2840afa7e"

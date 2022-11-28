@@ -10,6 +10,7 @@ class Libsquish < Formula
     sha256 cellar: :any,                 arm64_ventura:  "7bd2ea5005e2f7df26fa4e2a4e3cfee9ed35632abc8df40134ec09b23a58a466"
     sha256 cellar: :any,                 arm64_monterey: "a63fe0fd24c9446e06649595928249487026ed7b2c3b48131bfe31bc0cae0d9e"
     sha256 cellar: :any,                 arm64_big_sur:  "7ef2623fe17562ebea99fd2ebed7e15d70e29a54071d3f573dee0880c206fb01"
+    sha256 cellar: :any,                 ventura:        "81f54cd573ed8d41a76319d89d4a4576ac3ce1f2acb7749daed4df249dc4bf9d"
     sha256 cellar: :any,                 monterey:       "8ac755fd247f50e6c82c3463a33fcab97ca76d0ee5935ce2277820f93074a694"
     sha256 cellar: :any,                 big_sur:        "592d8697fad360a07cd1492666f93eaf4542cc78454d57a9748290ed634a91c0"
     sha256 cellar: :any,                 catalina:       "44cffe8e418149d4e95af569edbe291e8f9ac85acb3458ac2ca78a8fe89fcffe"

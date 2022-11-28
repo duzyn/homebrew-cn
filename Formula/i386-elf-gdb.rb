@@ -16,6 +16,7 @@ class I386ElfGdb < Formula
     sha256 arm64_ventura:  "f5ccc087f76eace4b1544afe60d987f05c8052b23524040ad527ceb6ea445a3f"
     sha256 arm64_monterey: "f520ed3c18a712eed4b571785a1f192321f623590a6b8c36edd005c43ec1f053"
     sha256 arm64_big_sur:  "daebe979b8bee0deb6aa8fdbd68e7a43fe44fcac2f28bfcf6e959623111eb7ec"
+    sha256 ventura:        "7a80a16a9bcb0db04abe2e62d6e6b63e1c2e8cca731c071213698678d4a5a34c"
     sha256 monterey:       "b72a57b8324ee31030aed88b6c05ab5581fec70d2ed297c170a780fc047ba109"
     sha256 big_sur:        "cea0b666233da65d7eecfaf9c7cdcaa59f16800270e2601fb9127169744097f6"
     sha256 catalina:       "a1cfbe75ae76a7e7580334e945d59a4a29bfbc3a1f4f9d9af791527cd34ed902"

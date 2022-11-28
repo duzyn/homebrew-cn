@@ -3,19 +3,18 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/7c/d3/7db216a07eb36b322f485c0a40d5b1b1533e6907a843610010ede5bfef05/dvc-2.35.1.tar.gz"
-  sha256 "99bfdde5f348f5717e7fcf84cecf22cc6010bc6530eac0777f926698a10bba2a"
+  url "https://files.pythonhosted.org/packages/e4/24/8acd8bfb4d343cd9c6e60aa5a74ba99e37dcfd9648138a82b3c16bcc8066/dvc-2.35.2.tar.gz"
+  sha256 "e74a7fafb3ac57d07fc7ccb74385eb467f7615a9d59f46b3f2a044ee61e67805"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "796fd7b0f94f2b1ca6fd2554aa897765cf16bc21135ef24b82999f3f4f6b5ec6"
-    sha256 cellar: :any,                 arm64_monterey: "f827f514e6af0a73061ee0a192503a1f9a342c2820bd56bd94f9703e96d2d3f7"
-    sha256 cellar: :any,                 arm64_big_sur:  "caff0992af0db144d3fd653c6958eea10f1d6f8441f7b5a897f19f2b61b5c7c6"
-    sha256 cellar: :any,                 ventura:        "b9ee8ed915b11b2444c6e3b7c3d80b89082c047e33e8a5156cf4d023754f8c08"
-    sha256 cellar: :any,                 monterey:       "c02cf74c85cb78d5af3b1cda36b89507bd384347491b3582d0f4dc4446c4eff1"
-    sha256 cellar: :any,                 big_sur:        "763999caa0c65cf3b60cf8437e15c88542c836f746df410cca09b14b1f4fb61d"
-    sha256 cellar: :any,                 catalina:       "9633b0a5533b17e3028ada8af7e73dbaf75721c553f94216b230f63f62472e2d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f109242a9f3ccda4e0ce80602dc74a614159ec261f4d58967b404d162081cc0"
+    sha256 cellar: :any,                 arm64_ventura:  "f7d7468e8dfdcd7b1836780608a6cecd482df71b8d94645a4a69a4a4b5520b95"
+    sha256 cellar: :any,                 arm64_monterey: "7e603ff783094ff5384febcdd214f38d23b8a9bb8fb24ca5fd11bac38ce5f79e"
+    sha256 cellar: :any,                 arm64_big_sur:  "862a7120a3ddba71c568401a5240f5ad32e583eb190d20bf34eddb646eedcdf1"
+    sha256 cellar: :any,                 monterey:       "f5704ebbe07d79ae237b6cbf788357f2027a34e4b5e844098c2e314dc40bb5ef"
+    sha256 cellar: :any,                 big_sur:        "fc39f343e09965242a5798b39cb16bc6d4f5a9fafbfd28ea04a44c5e04007e64"
+    sha256 cellar: :any,                 catalina:       "a3841feed21fc5529e9f8e8dbb8de80189694b56fb7f42d2c9af18a67f4f7f86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "007bc7c19d94403338e785c1207448a5556649a550c8954a08cd04bef5861eae"
   end
 
   depends_on "openjdk" => :build # for hydra-core
@@ -37,9 +36,14 @@ class Dvc < Formula
   # correctly reflects the following extra packages in setup.py:
   # gs, s3, azure, oss, ssh, gdrive, webdav (hdfs is provided by apache-arrow)
 
+  resource "adal" do
+    url "https://files.pythonhosted.org/packages/90/d7/a829bc5e8ff28f82f9e2dc9b363f3b7b9c1194766d5a75105e3885bfa9a8/adal-1.2.7.tar.gz"
+    sha256 "d74f45b81317454d96e982fd1c50e6fb5c99ac2223728aea8764433a39f566f1"
+  end
+
   resource "adlfs" do
-    url "https://files.pythonhosted.org/packages/2d/5a/90fcb46d2a1d1ecd1396b20f9cf51bbf6f826a2568410db8c75a07d350dc/adlfs-2022.11.1.tar.gz"
-    sha256 "ef2200244f7c4dd694bdb7e9ef346082250edb230dc2e43ebd00d3888b7ddf30"
+    url "https://files.pythonhosted.org/packages/f0/93/97eb038bdf3e68277c2015106a1e29363aa6ec375b6c7e2e4b2a7aebf1b1/adlfs-2022.11.2.tar.gz"
+    sha256 "920dba10468f186037ca394dcabcba113532d80f52b315211c8e771be40475ea"
   end
 
   resource "aiobotocore" do
@@ -125,6 +129,11 @@ class Dvc < Formula
   resource "azure-core" do
     url "https://files.pythonhosted.org/packages/4f/ec/3ba46ff4deebe738b7213997fc856553282e971a767b6291e05aca9d9566/azure-core-1.26.1.zip"
     sha256 "223b0e90cbdd1f03c41b195b03239899843f20d00964dbb85e64386873414a2d"
+  end
+
+  resource "azure-datalake-store" do
+    url "https://files.pythonhosted.org/packages/13/8b/2c151c9f4c3f5345d9a32889e15a471d98e426851b9fcf13dc9f134f5b93/azure-datalake-store-0.0.52.tar.gz"
+    sha256 "4198ddb32614d16d4502b43d5c9739f81432b7e0e4d75d30e05149fe6007fea2"
   end
 
   resource "azure-identity" do
@@ -373,8 +382,8 @@ class Dvc < Formula
   end
 
   resource "gitdb" do
-    url "https://files.pythonhosted.org/packages/fc/44/64e02ef96f20b347385f0e9c03098659cb5a1285d36c3d17c56e534d80cf/gitdb-4.0.9.tar.gz"
-    sha256 "bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"
+    url "https://files.pythonhosted.org/packages/4b/47/dc98f3d5d48aa815770e31490893b92c5f1cd6c6cf28dd3a8ae0efffac14/gitdb-4.0.10.tar.gz"
+    sha256 "6eb990b69df4e15bad899ea868dc46572c3f75339735663b81de79b06f17eb9a"
   end
 
   resource "GitPython" do
@@ -443,8 +452,8 @@ class Dvc < Formula
   end
 
   resource "httpcore" do
-    url "https://files.pythonhosted.org/packages/f9/1a/a2652d94e901308c33b9f17c329b0d327da73b30678a6618d4256a3ac2ae/httpcore-0.16.1.tar.gz"
-    sha256 "3d3143ff5e1656a5740ea2f0c167e8e9d48c5a9bbd7f00ad1f8cff5711b08543"
+    url "https://files.pythonhosted.org/packages/9b/20/26f6cc4fd00391f8f1c57b0020f5c6eec23904723db04b6f7608e222d815/httpcore-0.16.2.tar.gz"
+    sha256 "c35c5176dc82db732acfd90b581a3062c999a72305df30c0fc8fafd8e4aca068"
   end
 
   resource "httplib2" do
@@ -589,8 +598,8 @@ class Dvc < Formula
   end
 
   resource "pycryptodome" do
-    url "https://files.pythonhosted.org/packages/11/e4/a8e8056a59c39f8c9ddd11d3bc3e1a67493abe746df727e531f66ecede9e/pycryptodome-3.15.0.tar.gz"
-    sha256 "9135dddad504592bcc18b0d2d95ce86c3a5ea87ec6447ef25cfedea12d6018b8"
+    url "https://files.pythonhosted.org/packages/0d/66/5e4a14e91ffeac819e6888037771286bc1b86869f25d74d60bc4a61d2c1e/pycryptodome-3.16.0.tar.gz"
+    sha256 "0e45d2d852a66ecfb904f090c3f87dc0dfb89a499570abad8590f10d9cffb350"
   end
 
   resource "pydot" do

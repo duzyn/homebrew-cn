@@ -19,6 +19,7 @@ class Minipro < Formula
     sha256 arm64_ventura:  "c3fb5f07a52ff36e6a477c432a3f6519ebaa1648a8370843c6e873b3bfa8ee38"
     sha256 arm64_monterey: "5ca7bf6b78312ce94a7ce84a1f2e846f76b4932ad18b3e9f2c5549b8a45cd684"
     sha256 arm64_big_sur:  "2494b2555acb90436d868b9d1487a0fc53ad8db168be6fd3a4699e04aa0e7165"
+    sha256 ventura:        "5c6f3e4eaf2ea7492e319ff09dc6b47a7f0849723eee2372fd3d33a31feb747f"
     sha256 monterey:       "7d955b7ea2350118bdd03baee5e366648ff5aa43ed14aa6b8f4d09e794a46870"
     sha256 big_sur:        "8661941fc4441e0a8dc145030f60cf20c171159612ec2b1135a3c5aa9aff698e"
     sha256 catalina:       "568b6057efc9388716d4ade043f0483d1a62bd510fb4dc9be0c0d95bfd4e78eb"

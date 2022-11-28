@@ -4,18 +4,17 @@ class Osmcoastline < Formula
   url "https://github.com/osmcode/osmcoastline/archive/v2.3.1.tar.gz"
   sha256 "ab4a94b9bc5a5ab37b14ac4e9cbdf113d5fcf2d5a040a4eed958ffbc6cc1aa63"
   license "GPL-3.0-or-later"
-  revision 5
+  revision 6
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "dee7428e8242ab7e6028d63fd15f3319c2edfa6c6774b489a74e589d285865c0"
-    sha256 cellar: :any,                 arm64_monterey: "8cf2013bade4dab5cfac258a2dc3f8f45d81a5426b7e3d43ffea2f23a6cc88b2"
-    sha256 cellar: :any,                 arm64_big_sur:  "2d66f5eb8a2c12d2e05874d877ecdf65f01a850b8539c2374cf49398d21414bf"
-    sha256 cellar: :any,                 ventura:        "115dc6aba6fb4be6528ffbd80c5f157be6dc37ebbc04ad510c7d20e1fc917e50"
-    sha256 cellar: :any,                 monterey:       "532b6f87af7c10219e791e5fb1ee6be1fb3b4cdb3e72ae0bb7e9aa82c246c8e4"
-    sha256 cellar: :any,                 big_sur:        "91fb5971b1f93694ceea006794ad55cd56be046355e0bae1b7f4200d508b8585"
-    sha256 cellar: :any,                 catalina:       "126abf7580ab4ae6aae425218176ddd9b0b44a6554d7ab06c6a0f47fd8c752d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fd71a1becdab054689376a0d5c7c14bcfc557d1346818afe51fe76753171163"
+    sha256 cellar: :any,                 arm64_ventura:  "2f0c753f2e7cd3a17ae026ecf3142a32569a59688443060ece97724351b5ff37"
+    sha256 cellar: :any,                 arm64_monterey: "919661bc941352bb6f746bc3367ef76e040606476343b3e42dc64f26731af86c"
+    sha256 cellar: :any,                 arm64_big_sur:  "047dfe40dfdafad2bad1efc9ba381fb84d32ece1bffe06d6aa80b43afa59bdbf"
+    sha256 cellar: :any,                 ventura:        "105fd62c6c4fb5d00c86126c832157ca3b7b003399fb97fa7de78640d3da8460"
+    sha256 cellar: :any,                 monterey:       "dfa1ccb730b7f016ea605649215ec81e60f3be9c45ae9b7f89d95e67a7620e3a"
+    sha256 cellar: :any,                 big_sur:        "de5039e0d2887b441a1a8dc4f624369af8e1d4123fe60c961a7fec14bff631ef"
+    sha256 cellar: :any,                 catalina:       "5e0de9d461e7c3ea17ebb01e1fe7b058c5a828b2eca77bb2a8ab4fdb304f8da0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e0534e32f3ebf397989838e836178ec1cb067b1447c37326ca1c04fd8e06c2c"
   end
 
   depends_on "cmake" => :build

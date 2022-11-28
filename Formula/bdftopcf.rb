@@ -9,6 +9,7 @@ class Bdftopcf < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "8c383fdd1ab5a895939a59cbbc84c5269cc4237030ce62f51fd8cb56884bf78e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "96b1cad7bbf70e54ecf15c419f721b4844af29f8dfa346167dd4fd765402d411"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "402d436d944450817e8e8f86491c544739cea6377e994fd69a8d25eb05fea076"
+    sha256 cellar: :any_skip_relocation, ventura:        "fbd303098b55994e4d01063d13c0245bc0c4246ba8d5db235e759509fcf870bf"
     sha256 cellar: :any_skip_relocation, monterey:       "58dec51b6b84908ca02b8f62939079bacc1a2fdba84e1d15c41afcbe51a12b0f"
     sha256 cellar: :any_skip_relocation, big_sur:        "3a3f6991ea766faf9a04c289b4be77eb41ed3821819328375184738f5629afa0"
     sha256 cellar: :any_skip_relocation, catalina:       "d48cfa639a005786a4bed6f517729c932d80fa53d8a12b3e5c4301f7fa3506a2"

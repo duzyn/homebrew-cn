@@ -9,6 +9,7 @@ class Cloudprober < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "292ce7fe9921d8f34ec4dbb2993d84324a82c985a60c1309516f3b38f643ce31"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b86897730eb5df03386b0c539e92240867873897f941ae60b20e79641489ec3c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a99b8ca4065742e0c5e7bf4a55ade2343cc8d38add5b47d27cc411f1bd0b69e"
+    sha256 cellar: :any_skip_relocation, ventura:        "4cf90d162a95e00f3780bd0c2b03ff3aff25e9ddcc19211e549f946589d9a73e"
     sha256 cellar: :any_skip_relocation, monterey:       "89bb5c5c525218aa7012cdf30e39e3bf172c8c3c875cd304332e1d08e763397d"
     sha256 cellar: :any_skip_relocation, big_sur:        "8cc16bc15c83be7275e7027814b6db79aaa1500d3ba5cb7612c0b1fb41516af0"
     sha256 cellar: :any_skip_relocation, catalina:       "74706e60d06d0d195939939d13f3b287e4758cb49284c167e842b3fe8867ffce"

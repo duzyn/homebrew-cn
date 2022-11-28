@@ -15,6 +15,7 @@ class Sic < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "6c210a33d10989dd50a31cabeee9e2a560befb330f79e13a0a561a7be515cbae"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "fe8b5bc082f2ee0489f175edb22dd2c8e3128f584f9f6ee7777f852d90340644"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d028cc40c4c63b26365753fbdb90d0d8880fa5114b88af26fbdb4570faacf019"
+    sha256 cellar: :any_skip_relocation, ventura:        "c82a6f606d883c125acc102b457fa5e38d1475665f5c99e1715840cd6f00edd5"
     sha256 cellar: :any_skip_relocation, monterey:       "996dcadfff9c9eb20d7a45ef0a796ab28420d2d90aecb81a69566de271798967"
     sha256 cellar: :any_skip_relocation, big_sur:        "d2b8f0304692bb2bc7442affab89105413028b7ebcb0a2b7e6504518ef0bc5ed"
     sha256 cellar: :any_skip_relocation, catalina:       "f61b9190993e7ba1f4d4e5b98f751db0965a7bb72db8023e5f8ebf272568540a"

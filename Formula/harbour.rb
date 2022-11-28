@@ -21,6 +21,7 @@ class Harbour < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 ventura:      "13fe75a5b0b0a3608f7b096525179800dda87cfb391642cd786b59e01220f2e3"
     sha256 cellar: :any,                 monterey:     "1bf87ebc6134674eb11edfe42cdfc03b06c21ea915b038a6a2a8add2126ad4f4"
     sha256 cellar: :any,                 big_sur:      "47f824bb06b67e53dddff036c7d193680a9ab3ce54fb3c887edf37baee3000ba"
     sha256 cellar: :any,                 catalina:     "a36cdb7043bb20f9aafac0ee9a5a88843b93e585fde0a8556ac5ba44821b89da"

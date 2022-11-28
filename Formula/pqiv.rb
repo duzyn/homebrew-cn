@@ -11,6 +11,7 @@ class Pqiv < Formula
     sha256 cellar: :any,                 arm64_ventura:  "ea25aebb4644c982eb777eb2458da0eb686ad996a2be1f5a9de62e5f929f8eb8"
     sha256 cellar: :any,                 arm64_monterey: "8782a71f1737e6809e0bf8e03c1dbacd3822de5bb2b19857ca03c6df7d8a5c1a"
     sha256 cellar: :any,                 arm64_big_sur:  "0c81274c8d13c19d95d69fdad59ed8fd94e3860f90b0eb2ca83a45435b214769"
+    sha256 cellar: :any,                 ventura:        "ae097f09c899852bd6926dd99c45d73a738b62074e71a4a56ec4b2044600c133"
     sha256 cellar: :any,                 monterey:       "dba41e09a3ead21456f9d727eb6bede873098b7d0499629264900b618e7eace2"
     sha256 cellar: :any,                 big_sur:        "6ef9f48897bb6fe32ed7cc51666c35415e7d1c77a1e5d10701c64a69402cdd84"
     sha256 cellar: :any,                 catalina:       "9983a52d1c8b71c44f2bd435f4336a69c98aa1adf029b0fe72aebc6da23d10b8"

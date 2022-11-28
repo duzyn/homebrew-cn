@@ -11,6 +11,7 @@ class LibjsonRpcCpp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c8bcae7683868e7ec575bcffd0040b2a349e38edb08351fea9338f7ee91fe7dc"
     sha256 cellar: :any,                 arm64_monterey: "9cb86e8039e8e571b73ed1638c793f9b28592f892db42ce7279fbea76b729cc2"
     sha256 cellar: :any,                 arm64_big_sur:  "0328e51375b19212c2a10d4d350f6a4cd70a4e971fdfc692917f49de8fed4ad2"
+    sha256 cellar: :any,                 ventura:        "ee599c61bbb42880d8312eadddf3ac23d2d4a0bd6b3db320c054b13e4158e7b4"
     sha256 cellar: :any,                 monterey:       "8a4a0c85641f6bb3cb1f0a94f8848bfd91c96974afd90f37005e58b718677551"
     sha256 cellar: :any,                 big_sur:        "ee8fe30830a557f91d0802ca338fa0d0953965ce09c6c3a61cceb05c053ec727"
     sha256 cellar: :any,                 catalina:       "a7df384528a1aa939fc7292e6baf3229ce1fd4bde42def2bdd4ae7692f3792f4"

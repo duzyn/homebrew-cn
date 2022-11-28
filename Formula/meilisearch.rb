@@ -2,7 +2,7 @@ class Meilisearch < Formula
   desc "Ultra relevant, instant and typo-tolerant full-text search API"
   homepage "https://docs.meilisearch.com/"
   url "https://github.com/meilisearch/meilisearch/archive/v0.29.2.tar.gz"
-  sha256 "27ecbc1d81a7a1206519e9221c1ed14f48d6cb68e011fc9fb59d54170e987aa6"
+  sha256 "18d0d64d4e8ce4bce7172746f980bd4b20d7db85f423c0d7be5bd7a0cf9b866a"
   license "MIT"
 
   livecheck do
@@ -11,13 +11,14 @@ class Meilisearch < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7fc0cfcd5d27a861b3981ef85149616ec8bd0afd92c26b1513f44316ccc64d4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f04af13271a9ffe065a3f6bc60e26a9471b86ac1d271bdca4488ef89a254a677"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "90d4214dcdd6d01340ac9feae4744bb8cc9962d0f0e3026cabfe862e81e4d385"
-    sha256 cellar: :any_skip_relocation, monterey:       "604724a5d0af43b397b5d35781c9d704ef46244a9ab21e1ccfd6e5d7f24b095b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3aa09d5bd6b57170319e032b30f39c0f5a164e1adcf9836f5a9ffef72b085558"
-    sha256 cellar: :any_skip_relocation, catalina:       "00526b1037aa97965f4fc41ff8a7a9a65fe8dde7386d0af66a9ef8f937201d72"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58966285f29fe8e7231ba5ff058236230f3e6bf9ef1991be0d8641a95bede826"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "27d835c526a57dbe28df9108c5c5e314ac13e3285fe3390b8bcbcf8a421d2214"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "132948429e430d6fae5e880f4ba2d4afbe70c8148533dd2dd76a2b16681963e2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7665b6e9df5072e43fad3af0fd978ca7ba91bd54126c6d58c25fff04535f61f3"
+    sha256 cellar: :any_skip_relocation, monterey:       "0023717cbb27fe0048911f3d0af88d7058020f234bf90705f113182143c1de68"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8e389da8dbdfd6158068b3c0d8020b8d08eef3f3e1473aa1fa97dc27fca12f18"
+    sha256 cellar: :any_skip_relocation, catalina:       "4c5a6e20d880c14061c4914a5f42773f858eb28e496cdfe007ae3411df866031"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2ca76dca6da84c3cedf8a285bc9198f7977bc66d73d80c9f716910875f666e3"
   end
 
   depends_on "rust" => :build

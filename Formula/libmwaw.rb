@@ -10,6 +10,7 @@ class Libmwaw < Formula
     sha256 cellar: :any,                 arm64_ventura:  "e65d2c7d972499befc8ffddd4640604a0205ab0a87ce0184e3407269a133347b"
     sha256 cellar: :any,                 arm64_monterey: "6ffaa69023d1fb57fea42045e747e6df08336b1f00277fd1697c4480523533df"
     sha256 cellar: :any,                 arm64_big_sur:  "a4c331f83eb77f6bd74a828f984c376be9a916e7671946e299f7aeb347562d02"
+    sha256 cellar: :any,                 ventura:        "fac6e29537af45eb097a6d18a263a0f4285661383cc8a82101d01c6b7ab287ae"
     sha256 cellar: :any,                 monterey:       "d20dccf2c767fceea530bc66a1c0c1631a8961245d627ef806b060781bc7f4b4"
     sha256 cellar: :any,                 big_sur:        "75d8edfd8ec17fdb6ca028ef30d183200539d8a47165fe0debfe27827eb4d081"
     sha256 cellar: :any,                 catalina:       "4966ab87822fed4a14a231116d3c4f84e17b40b1e632e353d0161976e4b151cd"

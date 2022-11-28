@@ -5,16 +5,17 @@ class Dronedb < Formula
        tag:      "v1.0.11",
        revision: "f9f7d50c1f2b49072e4046cb2bd2d9fd67066252"
   license "MPL-2.0"
+  revision 1
   head "https://github.com/DroneDB/DroneDB.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a4683e7c33d3805e09e288c3f87c045c823655c171e461714e8d38958555d6e5"
-    sha256 cellar: :any,                 arm64_monterey: "1e8b02c5d87c54efc48a250e6206341f19d85c31cc760a0f4b0635bc26785942"
-    sha256 cellar: :any,                 arm64_big_sur:  "d1ae7059f738fc74a2ccc6bb33ede385d5a67f538a8c7a992c671b4143087cba"
-    sha256 cellar: :any,                 monterey:       "5e895e4d10ce1689ebb5ab6b03176b7cf0e071b2fe69ba40e10517f8a086fab1"
-    sha256 cellar: :any,                 big_sur:        "7956e91ce02c028410cdcd6fdcc19641dedb0beb951bccd54c27444fc24f0e7c"
-    sha256 cellar: :any,                 catalina:       "4f45c646c818ab8120482929b9a9acebb6701895098b4f5e5fcdf08679ea02ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dec3c51925ff58c523efa4dae502c2cf2d14011d0c627c814c73d453ca7c1976"
+    sha256 cellar: :any, arm64_ventura:  "4ec051353b74298355daaba90ebe577f57ea963bf5bf4c23444ed1a6f42d10d5"
+    sha256 cellar: :any, arm64_monterey: "e12baf23f98b6f518075e9e5fdf9b1a4a77b9034810ec1287ac61a92505460c0"
+    sha256 cellar: :any, arm64_big_sur:  "0c10bba6db56714575a9ff6bb1bf4d0468df253f6359ae9b5eb55b46651c4383"
+    sha256 cellar: :any, ventura:        "ef4fc0c0d8497376e8fdb7334d13f17517b08c04b69d14cfd58907254a3c9fdb"
+    sha256 cellar: :any, monterey:       "928b227318b74ca87b0f9fe93955f2743b1c755d61b6e8ac9047a26cf466caf6"
+    sha256 cellar: :any, big_sur:        "8f8090e74b88110494e6e1bea2483822bd0c030d55d0251e431f529172570fcf"
+    sha256 cellar: :any, catalina:       "690e1e2686f39e82a64d7a1a7b33c599fde943ef86e99123b8aa90e8ad8c3f3f"
   end
 
   depends_on "cmake" => :build
@@ -24,9 +25,11 @@ class Dronedb < Formula
   depends_on "pdal"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    # Avoid installing conflicting vendored libraries into Homebrew's prefix.
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args(install_prefix: libexec)
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+    bin.install_symlink libexec/"bin/ddb"
   end
 
   test do

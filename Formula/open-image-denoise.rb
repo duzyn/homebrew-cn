@@ -6,16 +6,20 @@ class OpenImageDenoise < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "abcfb384ec75c0be7933f21fb5b20a5f82cd5d8f45b5f64754c5b46071d71a56"
-    sha256 cellar: :any,                 arm64_big_sur:  "763b04f83cdb7ebcc7cf21c57f52b67bd5e231cd33a6d7388647bd33df1c691f"
-    sha256 cellar: :any,                 monterey:       "c19c4706250613ffb8832e3256f238c2c1745136bd629b13fc69052f3235783b"
-    sha256 cellar: :any,                 big_sur:        "ef4e28b6d261098552eb6b295e4d1cd9a7ea55536fca0aa6d80a67ac7d3adc1b"
-    sha256 cellar: :any,                 catalina:       "1fb2669f02c65527f8be5e6ce33dea156e13a2bd4127286e818da13de9708b6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "472e35a8971652911ae333378ebe84333a8867ebd473cb17bd2e48552b7f6462"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "d0131bc6bd64a1c13e10af8a80e0008344a0f10030bef4899191e1ec9646946b"
+    sha256 cellar: :any,                 arm64_monterey: "ddb1741686eb6421fa5b2785128da5af3efc0a347e16b6d9c86015e5dee81031"
+    sha256 cellar: :any,                 arm64_big_sur:  "e75b39c2ab3bdeb3511f0b7083d1dbcc7f281bf0ca4efaaea2e1a66c531a3c01"
+    sha256 cellar: :any,                 ventura:        "5ba9cb7d13b7f585fd3281d4edb3786aaea7562fe02b0f7b787bc324e0d039f7"
+    sha256 cellar: :any,                 monterey:       "e0f79e47ac06fab83a2ce96fcc1b6ef2a53745d8282913dc3534d1d45b5075e3"
+    sha256 cellar: :any,                 big_sur:        "b59c85df5b1ab15a55c5ee191d34642cc9cba1d45786b6131198c81668c32d30"
+    sha256 cellar: :any,                 catalina:       "0a7596cd0a60f3032acf4ad6e289f4d0dd492dbedf0f16f911d72b51b1c4ba3a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71e1c6caa0c6811d8aa321588f26f14fb6c5ea2fb72d7ff9c1ef820fd5aab166"
   end
 
   depends_on "cmake" => :build
   depends_on "ispc" => :build
+  depends_on "python@3.11" => :build
   # clang: error: unknown argument: '-fopenmp-simd'
   # https://github.com/OpenImageDenoise/oidn/issues/35
   depends_on macos: :high_sierra

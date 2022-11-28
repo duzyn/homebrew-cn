@@ -8,6 +8,7 @@ class PandocPlot < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ba31f72c88a32380b31d31e0f2fc8fbffd5596c06ae02e23eff0c09ee4e08d72"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7aeae2a6127242160d8bf858b4a4356d542b7b2f5d1a56e22b5e1a32f82c2115"
+    sha256 cellar: :any_skip_relocation, ventura:        "32dc6c3fa4bdf9c92b385288163fb27fb596d3bb096759a7ee0d875af9023d12"
     sha256 cellar: :any_skip_relocation, monterey:       "7b8d2bad7d579179cb76c1f08372fdbb941f3594a6e4f26060705ef9d5f3ed46"
     sha256 cellar: :any_skip_relocation, big_sur:        "f945ced817ed3eacdcada2613de7807d5eb1a6a21d19c69b41d75e5817f672aa"
     sha256 cellar: :any_skip_relocation, catalina:       "d96f2c26d6aae4af843f9b0dbc4078f4cfff5f1582d94a6ec293fe8a5f84bac3"
