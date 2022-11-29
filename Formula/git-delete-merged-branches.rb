@@ -3,18 +3,19 @@ class GitDeleteMergedBranches < Formula
 
   desc "Command-line tool to delete merged Git branches"
   homepage "https://github.com/hartwork/git-delete-merged-branches"
-  url "https://files.pythonhosted.org/packages/63/41/6a7023cd87a7c811d1e7be6b31173c8f825c58b033c378d435d445f42f3f/git-delete-merged-branches-7.2.1.tar.gz"
-  sha256 "6a17bf96e88fadf395fa0a079e9ff621f9aeb07c45ada16c61611353a1c2b90a"
+  url "https://files.pythonhosted.org/packages/bd/ed/7bbaf651cd46c184c44b4885b1b8d4030b5c56576f481a05e577085d937a/git-delete-merged-branches-7.2.2.tar.gz"
+  sha256 "d3111e745ef0c1db037ce8de5bc074b366641e30fa5454e7eaf551a08662241d"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8f7297e41261d0277fe131337dfb943737651634767253814d48e8d9f31e5c0d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0bfee7bf18c43589beb85d07f13a0bc481cb665bdf3ebb8f7dba1c629efc621"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "32fe2070aeb49c6bbddd0e17da3a44c552c9aaa526e22fd326b24359a8fb9155"
-    sha256 cellar: :any_skip_relocation, monterey:       "86173fe4af11267554c59941f0dd5fbb5d9c2968b405b887a8ba7e7d89ef5bc1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "86193e2e60eff2f70b5d51476769699092c8812f700758e848ffddc324c9313d"
-    sha256 cellar: :any_skip_relocation, catalina:       "60acb23601308e0d273439a030fcfa1901b5fb06d7207bd68fe0959b77243848"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a10ac453d5b9afd54ae3dcc33188d25c3858014c2d12e6a08e1fdbcb40a64a5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f085406ade421796ea438f07cef7b923557b5795e860228febbdca50aa734a9d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3370a41dedece6620672ec30c5fe81d62e4458d21f9652fcd56759fec1a6b99c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "72e1080b9dc267df0214abfb2a96c9cacb0516cb41434621ccbdc9657dfe8273"
+    sha256 cellar: :any_skip_relocation, ventura:        "5f87c155899fbd9f257afa0f72d57275bf2e1d5491b32251ff2b10ebfc653f2e"
+    sha256 cellar: :any_skip_relocation, monterey:       "785b91e16293929ba5e4cc5453bdf17ee8a40ede01e1bfe4cf875541cb4328c6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d58bd1000d84446017e93d826c6363f84633544b561eb79e3ced119732898857"
+    sha256 cellar: :any_skip_relocation, catalina:       "a0e74a5a2d472033e7c4a1d81f5f767f52b5bedc72e48e36cf5b417a4bbd2d40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dee940c4771ea39c7fc9e6c658449c4167484e80ea713e3fe05e8ada32c4e2b6"
   end
 
   depends_on "python@3.11"

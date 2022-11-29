@@ -6,23 +6,23 @@ class Pgcli < Formula
   url "https://files.pythonhosted.org/packages/a7/2c/5ec926b4ef08c23126875e29923bb803f2aee56d597aa248d429385d2887/pgcli-3.5.0.tar.gz"
   sha256 "cc448d95159fc0903d36182992778a096eda5752d660d47671383c8e2bf633f1"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dcb2607b7f3d4992d3cd9693537d5fdc1a2c9c5cfe3da327a684551336c55a41"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "06dbf43feba0d7398bf820f6d445da8c671b6a86e161624eea2da3ab6cf6a919"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "771ff01da170b62f43e117ebc4b5ae73dc56fb158ba5be4170621528c2f9e7b2"
-    sha256 cellar: :any_skip_relocation, ventura:        "d81633f0b1e4f10c935ec7341e182b8a974bf0f70c658d55b3d4733bdafec243"
-    sha256 cellar: :any_skip_relocation, monterey:       "f7725128ae72afce69654c4a301b6e2d786455c35026ace0ba559c85444367e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90b7cf28ae61181f2d727a8c4c509408b6c2898eab97ea653b0cc1f34f9fcbf8"
-    sha256 cellar: :any_skip_relocation, catalina:       "3fa9b93c191b8486c3e6506ac1750c5d76aaff71aa9de285ab4a32930b1df887"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a84b00fadf2e28623912fd80fafc2a0719eb5b66298843fd45a8fe1a1e3ebc6c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9ab2fb1bea21bef796157cf05da42a278404a67f394c592e4d3695ac0bb7fef3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "232fd7532980b69acfa8996dfd499b6df7e767a34bd4885b02aaa3deb54e3ea3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fa9af36a0b43650bf8d5ffc161fb999cd47b542495ba5e21b9f1eba4a45563fb"
+    sha256 cellar: :any_skip_relocation, ventura:        "6d812a343973793dd97dc51c6bbe6b8434df4f95791be8cd6cdd1e2318462068"
+    sha256 cellar: :any_skip_relocation, monterey:       "fce0f635384198b96b8f62d8110e8af32e60473d4bded167cfe7a1ea8e90c5bc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bef5879324721cd250addf4be68c996c4563a94d38a44ff7bb59e45491111f60"
+    sha256 cellar: :any_skip_relocation, catalina:       "6555ad57744f60f52e7dd6fb5887aed28a40a8acf03371b7613d924ac80a2c56"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91fb5d0a6e079cd9e4ee1f7ddfedf00ca5c5b6d46fde2ff26d83dde8552794de"
   end
 
   depends_on "libpq"
-  depends_on "libpython-tabulate"
   depends_on "openssl@1.1"
   depends_on "pygments"
+  depends_on "python-tabulate"
   depends_on "python-typing-extensions"
   depends_on "python@3.11"
   depends_on "six"

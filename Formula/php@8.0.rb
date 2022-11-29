@@ -2,9 +2,9 @@ class PhpAT80 < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-  url "https://www.php.net/distributions/php-8.0.25.tar.xz"
-  mirror "https://fossies.org/linux/www/php-8.0.25.tar.xz"
-  sha256 "a291b71d0498707fc5514eb5b9513e88f0f1d4890bcdefd67282ded8a2bfb941"
+  url "https://www.php.net/distributions/php-8.0.26.tar.xz"
+  mirror "https://fossies.org/linux/www/php-8.0.26.tar.xz"
+  sha256 "0765bfbe640dba37ccc36d2bc7c7b7ba3d2c3381c9cd4305f66eca83e82a40b3"
   license "PHP-3.01"
 
   livecheck do
@@ -13,14 +13,14 @@ class PhpAT80 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "1fe4d868294bb445da6d46a9290e19d3e9963825aba499d0c80e33f0fd4ed7f0"
-    sha256 arm64_monterey: "b2e4f2a890732f393ac95f6687ce8fab2cd057bf15323820530cbd65ff88e38f"
-    sha256 arm64_big_sur:  "1dcd2e9ddce0fff69a0a0eeda9757daa3794e7fe592792df43fe3deef4f8319a"
-    sha256 ventura:        "33ffdebb425a4de68caf6ee30ea316286ec6c6aac882fd25f67621b8d9d49fcf"
-    sha256 monterey:       "c1c2c9d83ebc8ae8f5fe5895ef384702c7fa672e98e6dc4268e05eb8880c7e03"
-    sha256 big_sur:        "a3511f79a6865a19143342a3941d5e07b9c995a6b02665c2fbc8c5bd8dc03099"
-    sha256 catalina:       "152d2bb984f9dbc0b49cfa00a8b6784946adefbf1adb565c31c958cfad685111"
-    sha256 x86_64_linux:   "d61b74350439c1f90619fe4ed07d45f02c5dde79216a8ba5cd037ab4270b0187"
+    sha256 arm64_ventura:  "c199d7d93ecce56bc52f05c06d8c01d362bdc9989177687c8274c6f25cdf64be"
+    sha256 arm64_monterey: "3211fdc214983eb1eadb57f237e9095e87c85e74ce5f9e79f1c9230148edeb8c"
+    sha256 arm64_big_sur:  "0db5bc644a6ffd9451e9aca4098167e0018714a01ee89cc2db3dee6f4d6ef188"
+    sha256 ventura:        "85457a49595add83643ccd8ef09c551578143cc80aee47d9fbc7e202947e37fe"
+    sha256 monterey:       "29395f23a26f925787fcf3be98f51266f8ae4e454c7567d31779a8dab783f50a"
+    sha256 big_sur:        "768bf7dc8937c9da628a67d80fb0c47e301456e61bf9d644c214f9f0b860c0ee"
+    sha256 catalina:       "d5f058e987041d8de8489a2ebf91aa185dcc10e1ef9e69887812a5d89254e45f"
+    sha256 x86_64_linux:   "7e6c2fd497afd30108d4dd62e23f1b5f60485bf03b50c67251c3c2a0c91c531c"
   end
 
   keg_only :versioned_formula

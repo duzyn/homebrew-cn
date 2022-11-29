@@ -14,6 +14,7 @@ class Brev < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "37b056468fb5d2bc8a9e59f5d123f5d185d3944fea51f8a89cc02fbcf450fc02"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "12aa9fb8647e4473b563f78387c8791bb9e1d10e0a7dcb2d3fdbdd5137b3b11a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c70563d00ebba3b1d7f5d2b3ad36f180beba353d8bf357f9ee4ec94c5e90cd3"
+    sha256 cellar: :any_skip_relocation, ventura:        "c382ec663b30b9edda11f8fa5b11b78d01cca5ad968c3f22ea2d7fb5e5124452"
     sha256 cellar: :any_skip_relocation, monterey:       "8d10b74b382b43f6051af1852afa03288635ac54d845f89e54bc5b7ca0dea4e2"
     sha256 cellar: :any_skip_relocation, big_sur:        "0a492361e3328959c1b625654e72fb36f9d6bbe7fbc6b1e59e886528fb6fcc6a"
     sha256 cellar: :any_skip_relocation, catalina:       "7f484de20e02d5277ae1515b6e0e470df20aa1eaf2715f540db84f7e8ac4d544"

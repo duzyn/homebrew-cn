@@ -13,6 +13,7 @@ class Liquidctl < Formula
     sha256 cellar: :any,                 arm64_ventura:  "08e91b45f02230e2f68085948d0347885928a201dd76eaefa8a45c6cf585024b"
     sha256 cellar: :any,                 arm64_monterey: "2e4d32355b850474b22f0ae10650aa4b0c7f30d67f1c7e19650e3b1cb84289ed"
     sha256 cellar: :any,                 arm64_big_sur:  "01ecf2c0c0e1e7188ad1575b4c23a8f8ee8a451962e03aca6933bcd2b920670c"
+    sha256 cellar: :any,                 ventura:        "61b662d85adfb9ec71b3316f9ee46d7990aaf2d1d6f9137888f9ea1823316578"
     sha256 cellar: :any,                 monterey:       "b4ae93e1d49e54faf34dc20d1996ab7c7c3eb7a29a727b369efc19b5e337082b"
     sha256 cellar: :any,                 big_sur:        "da2240aac8bc91eecf49a7f720292b40c040e5ac1fc934d91894ea084314d537"
     sha256 cellar: :any,                 catalina:       "4484eba32f98ce6545461d1739bd0d62df0c93c9425ba6a2229e00c5f8598b53"

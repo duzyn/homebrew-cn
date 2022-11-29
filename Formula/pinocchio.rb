@@ -11,6 +11,7 @@ class Pinocchio < Formula
     sha256 cellar: :any,                 arm64_ventura:  "8db5fb9ad64c7c9f52b6d58a92c873c7f3a73803696858a4c38628f21ffb6f4a"
     sha256 cellar: :any,                 arm64_monterey: "13c90fddb707a9b0ac1dfc3e61fffc9bcb19cac60d2cb48daa0acab63ca7c61c"
     sha256 cellar: :any,                 arm64_big_sur:  "7a406174b3b93bdebf9d73ec89deaabb73fa744d8f23e4feeed9b1f27f82e86c"
+    sha256 cellar: :any,                 ventura:        "65389451277e7418b672a422dc22c59c7a899c352275786a2ec38fff48890d36"
     sha256 cellar: :any,                 monterey:       "ded3e15c0928e4ccdcf8e2544b6f5c2bfefe258a43668964b0518ca67bcf324c"
     sha256 cellar: :any,                 big_sur:        "8ec4cebae4c9884ca03494090e2e0ce4ce65b1dbb381858e4c8bae7da81e337c"
     sha256 cellar: :any,                 catalina:       "179af5d6985f8d5c1ec88c7ffb5a2d987f358fcc63a28f71d2fda89cbb40f06e"

@@ -6,21 +6,21 @@ class Platformio < Formula
   url "https://files.pythonhosted.org/packages/fd/e8/ed228e1bac31da9201c0fbb5f96683a370c961a67ca17a8af35a3213734a/platformio-6.1.5.tar.gz"
   sha256 "e111d7a86f676668e54c06cc9ebe986439b9d67692841c1792387cc6cb96513f"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/platformio/platformio-core.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0edbd9aa7eb6876a8c215772e8c235742ebc861e01fb67013377d1c13f5050e9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "48cf603245315095bd15cd139a629e815a71454e26fbb52f73c93c82f935ef1e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0ceb4620e0f73b88fd1682d6544f2c53f685a3dd1ba77fd296198df8c05f77d0"
-    sha256 cellar: :any_skip_relocation, ventura:        "96837ab3a799ee77183b77cd238727ccb4e1603b12ced411081994a48b8ce69a"
-    sha256 cellar: :any_skip_relocation, monterey:       "647e613e1d718387d4b543ae0bab4f17b62e7bd362f83ce34c6e3af18d6ae1de"
-    sha256 cellar: :any_skip_relocation, big_sur:        "31a3729765b40d41390320ed52e2f2d9358cc18783313718227407beafb75dd1"
-    sha256 cellar: :any_skip_relocation, catalina:       "5721be97250a3be84875ff8792a8aaace71d9b95b4d069eca83e4b32b6752382"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4565000534f6636173c693df7aac1768cc43647888345f91b5f048a2765a12b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7e83b78fe185f3a29ea2a7b986cd92da6c816c9560b0a56cc185623f5abac650"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5bb4219a7f01399639edfc79aee73f71150a9be4820bfc88ee90a058788098f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a33359e7ef26c1e57181ebe69e57551d9bcb764c775644cc8889f6c858bf3e3f"
+    sha256 cellar: :any_skip_relocation, ventura:        "86b3aae281c5ce090caa754629b99bbf34bdb76f846a3a564a291dd7c162006f"
+    sha256 cellar: :any_skip_relocation, monterey:       "00f0bd6c2515e198a6889ac2600a81fa3e03fdbb4b06ea88c12e285d1d60c8ca"
+    sha256 cellar: :any_skip_relocation, big_sur:        "372389abf12e2fb7f731ec56d764d789460adea8dfc9d3eed1ff3d8cd2c1c975"
+    sha256 cellar: :any_skip_relocation, catalina:       "d888197010fd1d25d36e78281925562d0311960ce15054450af55906b7d50686"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b913d2ec6cc00d7cfc89735bb8a16a8106b72c96915f942c1e8a0d9ac26366f"
   end
 
-  depends_on "libpython-tabulate"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
 
   resource "aiofiles" do

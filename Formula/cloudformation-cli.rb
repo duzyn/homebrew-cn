@@ -11,6 +11,7 @@ class CloudformationCli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ce5e550ef7feeb0f05c6cf879788d6a223acf4cbdd38968fcc32d9f2982f26e8"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bf15df2d97dd539809a07e0aaffe9770bbb775644ffb816b174c8ba16daa1c0b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01803d3de2644947ffef75c0a9248984538a60fdbdbd29b6ebc9447db6918a70"
+    sha256 cellar: :any_skip_relocation, ventura:        "ff098ed5386cf817d3cc5616416e9361f43cb3bf5c269975aefcc4f76a748c26"
     sha256 cellar: :any_skip_relocation, monterey:       "fc009f204c2414eabcb12d634de45dde53d7135ba2883a51633853462521ac5d"
     sha256 cellar: :any_skip_relocation, big_sur:        "d03a239f0fa3e5bc88bdf514a961c91c075e7d2c07d409d885c5739dbcaaecf7"
     sha256 cellar: :any_skip_relocation, catalina:       "8363ae2c6c57c496c7f2e8798b534c186cd2a5273fc2f2476306938ca9e00ff9"

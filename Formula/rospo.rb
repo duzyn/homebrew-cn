@@ -11,6 +11,7 @@ class Rospo < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "066fdcc114912b39154648543f094d1986a48201723ef5a74977672ba3d32304"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "4bb0c5154ee5a58bf157a4e77db24481c146744da8582a7ce46c2bffe97dcbcf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4154b7c201fc4fd918699ee1c6b503383ea76263869e377976b1f60c5efc03c6"
+    sha256 cellar: :any_skip_relocation, ventura:        "ebb39acc9e6f18cddabace4614d6f8a1b22a46d83282d1130be747a5daba49bb"
     sha256 cellar: :any_skip_relocation, monterey:       "37912d30d64d25b750e6538e307f22c90b263f9680df6648337a5f1e7b53a9f1"
     sha256 cellar: :any_skip_relocation, big_sur:        "8f4ba0676ea61b26cc34aca44abd939b87cc77818b28c47037b0e6559dafa15c"
     sha256 cellar: :any_skip_relocation, catalina:       "dcc71e0a9bdda3add8c1c46d0adb2f364fd43c9f94c64a85d3a7f490170408eb"

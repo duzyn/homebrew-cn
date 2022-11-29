@@ -10,6 +10,7 @@ class Jaq < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f94ffc500014b4e9acca81f7f0d5b3ad88204b2796aa7234ddfab071929c457a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "398e5b6a24e16aabc2dfc8b5a92c7362dd62fc400108493d4e29118514af6003"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f921bf6c5248698ffdc8a3a23ded3e0dd28c27762ecaa228f7c0a3c220544f06"
+    sha256 cellar: :any_skip_relocation, ventura:        "adad458e7ddf9e3c7e3a99acb14cf30a38fa8a3c2a446a45a5e88076222effe6"
     sha256 cellar: :any_skip_relocation, monterey:       "576365ce92bddc5a1d66bdd558735e1a8ae47e2b319e87d01b81c7af42cae696"
     sha256 cellar: :any_skip_relocation, big_sur:        "28213fa222287b94a2cb34fd77427a146c9168272fdbfe1e2bcd143f47730ffe"
     sha256 cellar: :any_skip_relocation, catalina:       "6c8bc87a10447f79523fccb342fdeb17ff7baf84816cc535ad8a07faf1f7ce5c"

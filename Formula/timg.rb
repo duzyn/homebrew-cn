@@ -10,6 +10,7 @@ class Timg < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a2aa49e177be79d8150d6d58b5564915299707ae1adb47231c9b58ec8528a904"
     sha256 cellar: :any,                 arm64_monterey: "ef795a7c82472824ae61684368e12b7a0eb58df7ce0c136aa2613f3e7c32e138"
     sha256 cellar: :any,                 arm64_big_sur:  "f44efd3cbe12f48d032d503b2e0c345e197c02cd456f8aacad74948ffac5d2f8"
+    sha256 cellar: :any,                 ventura:        "7582f2ee424e6c4be9266cd07f78c714b9d4e87d1026a97ef804d7d2583fd24a"
     sha256 cellar: :any,                 monterey:       "f6ea386ca6e7628af83126a6fd0ca086253f45bab54eee778db82205511e3822"
     sha256 cellar: :any,                 big_sur:        "1bc9709aa7fe5ce23a8914cb145d0c86f5d72ae41778e966ac834300b894bde1"
     sha256 cellar: :any,                 catalina:       "c980eec1ad0955196bb6d11450dbe6122b7ac6123a5c455f05e74786901b3cf0"

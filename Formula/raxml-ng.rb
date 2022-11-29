@@ -11,6 +11,7 @@ class RaxmlNg < Formula
     sha256 cellar: :any,                 arm64_ventura:  "6e3db16bc310a565d8af3c0ca2b9775bf760f9e07f89ef776ef198b6ab6404a5"
     sha256 cellar: :any,                 arm64_monterey: "2229ebeb6fa282a4e3f97896ef02ba2d32671d497bc65188dc118d13239693d8"
     sha256 cellar: :any,                 arm64_big_sur:  "0236a1f00a663905ad3f3a8eb0cff275900f7f0b29a4ff65616b82384bb01467"
+    sha256 cellar: :any,                 ventura:        "d4b7f0b7df9d8c4179a237e9317561e7a6e3904d62a16231be25d6eff815440c"
     sha256 cellar: :any,                 monterey:       "ffce4563023dbcd2e0eea0f6c06a0f33157561f412557cab49ed4c412c32562e"
     sha256 cellar: :any,                 big_sur:        "c6cb8ca0d17b1d5a2c074e236c63d0fcd848db96d026393566e1c4fec4d82f9d"
     sha256 cellar: :any,                 catalina:       "e62985fdf3fc153cb53c87a4ab230b4e33b9b55a0c990cabd774c27a1ab7d6d9"

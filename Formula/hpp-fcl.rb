@@ -16,6 +16,7 @@ class HppFcl < Formula
     sha256 cellar: :any,                 arm64_ventura:  "166ac2aeef198f5ecd89c840f9110eeeef1cdaf5f77aab5c088dd7f052894450"
     sha256 cellar: :any,                 arm64_monterey: "31709a9fe99cec28ad6fd9568f54c2a4727a1028e7fad6e622e03315302c377b"
     sha256 cellar: :any,                 arm64_big_sur:  "2d7a742daf3bf436562daa8f2e3e051e5e529070dbcd33613ae8ad730ee86880"
+    sha256 cellar: :any,                 ventura:        "23eadfbb6eb1936e062aa53a9636337333ed587ce171ebad9760731e54799a92"
     sha256 cellar: :any,                 monterey:       "fd60746bf97abf46da4b61666c75b486ddfe92c5158a16785485f785a3549766"
     sha256 cellar: :any,                 big_sur:        "082caaecc1571aaafbdcb63aa13aa8814eefe1cd991a34e42aff4357c98a6bc7"
     sha256 cellar: :any,                 catalina:       "99f67017a177a7766c95db47d1b58bbee407dfd82b7df911f2c6989d7a4a631a"

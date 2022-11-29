@@ -10,6 +10,7 @@ class Vivid < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "50c1e057b6269dfa785c658b12faed016d7f77e8634a26a3c7bc68953c87f9a8"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ed34ea3eb374ee4f4d24ef56761e598bdf08ffb70d1e1dee4b8c0859c96fa664"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d9b12d072fd632baff141e138d9d91dcf4fe99af3821cdc49959f771d1ecfad8"
+    sha256 cellar: :any_skip_relocation, ventura:        "ab2336dd739011912de5a898f87b8d7fa481001aacb8f51909d65e411c1cba16"
     sha256 cellar: :any_skip_relocation, monterey:       "51a780f70653818789135dd3f2ba35d39e037dae65657c8934a2d33a010e7cfb"
     sha256 cellar: :any_skip_relocation, big_sur:        "5f65cf4cd1d603725e5b9028bea928568f4055d7d0dba023a7d1ea306ca97468"
     sha256 cellar: :any_skip_relocation, catalina:       "8c356bf673d2ceeab52948d1435e16bd9d4975078e73a6a9571a71ef471274e0"

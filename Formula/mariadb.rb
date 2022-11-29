@@ -1,8 +1,8 @@
 class Mariadb < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://downloads.mariadb.com/MariaDB/mariadb-10.9.4/source/mariadb-10.9.4.tar.gz"
-  sha256 "1dff08a0f37ea5cf8f00cbd12d40e80759fae7d73184ccf56b5b51acfdcfc054"
+  url "https://downloads.mariadb.com/MariaDB/mariadb-10.10.2/source/mariadb-10.10.2.tar.gz"
+  sha256 "57cbd0112b22b592f657cd4eb82e2f36ad901351317bf8e17849578e803f3cb2"
   license "GPL-2.0-only"
 
   # This uses a placeholder regex to satisfy the `PageMatch` strategy
@@ -20,14 +20,14 @@ class Mariadb < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "ceb1ff52945f6972e1d32486b6484f50a76641f2e2c7fcb87009e253a3a500bc"
-    sha256 arm64_monterey: "961162dab8a2111b3224d19036fd92004a19a5940c22187982ce47cddff9be0a"
-    sha256 arm64_big_sur:  "f61ada9d36b7cbdbd63d6a2313154866a886dc57d43515f7903669290906f03a"
-    sha256 ventura:        "984157335fa081f4d92509e9b30f9a795de4cdecf7c136266fb1439951d7bc88"
-    sha256 monterey:       "c4ae9de159b5e5a9f12bfd40b5496276af1a5da24b0bf5b1960b50200896b694"
-    sha256 big_sur:        "4f290f6c668e33c47798972d3878b23f9bb963c67eb1d680eb125399776d260e"
-    sha256 catalina:       "2bc0e72bbcabb4da63899737418499229e5cf69e6222d9f49fa24963300c7783"
-    sha256 x86_64_linux:   "8d624ffa4da204385944bd9983a4d29571319c553931e8d1dfc54e77c774c0cd"
+    sha256 arm64_ventura:  "8bf8565ff3cfd8d9cb69ec38450dcc87802c9b8ae9f569a452926a9e8707642f"
+    sha256 arm64_monterey: "af53faa5484f46c67f0711aef9c2dbc0df1907e619dc616f576a00ce9c5ea994"
+    sha256 arm64_big_sur:  "18dbcf86270148e068d85eb4f9d3e0939a2edc1f6465199d5be2f7583185fe15"
+    sha256 ventura:        "aef7acbcdecd5b1e14f5a4815849c21799c6dedb99b190a669b52b803bd33c34"
+    sha256 monterey:       "9382abb29378ccebb7e11ecdcbd107d93299cf104611cc60d695d694bb139555"
+    sha256 big_sur:        "746b9c8f0971ea2f3d18043f5bbcb6b93ffc92d58a56a26fb7843b0be8b3006f"
+    sha256 catalina:       "b7134d5eb53aa6503405dda3e75a148f3077426f30c99eae76d97eececc4b948"
+    sha256 x86_64_linux:   "df7ad5f9b108da21ec963f40340f06a2abfa42c4b228c9f40ad9c18ff6fec2e4"
   end
 
   depends_on "bison" => :build
@@ -57,7 +57,7 @@ class Mariadb < Formula
 
   fails_with gcc: "5"
 
-  # fix compilation, remove in 10.9.5
+  # fix compilation, remove in 10.10.3
   patch do
     url "https://github.com/mariadb-corporation/mariadb-connector-c/commit/44383e3df4896f2d04d9141f640934d3e74e04d7.patch?full_index=1"
     sha256 "3641e17e29dc7c9bf24bc23e4d68da81f0d9f33b0568f8ff201c4ebc0487d26a"

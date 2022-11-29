@@ -9,22 +9,20 @@ class Circleci < Formula
   head "https://github.com/CircleCI-Public/circleci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fc1742080a066d682062de183e7499d1cfc806a417ca841716cc74a0b20c5c79"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b05742b5c284592055bd0a90d88a5974dbf7a2e5563b73891cf37a61aae9c04"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73a6b9ff2a2deaf601068a681e7c39c83ebdc065a0256f46711797f48b264ac9"
-    sha256 cellar: :any_skip_relocation, ventura:        "2b851bbdf3d4e8d1e60762bde3bef0a57fa8c9757f88efc1096492b80383aa1c"
-    sha256 cellar: :any_skip_relocation, monterey:       "fc9482cfa384bcc5c0fa55b0391fbb95f583f4d0ad600a40b99c772de34adbff"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b4351ec7a8d41b08af7ec6237ed17f2a672bda225d273798ade98e155271f9d4"
-    sha256 cellar: :any_skip_relocation, catalina:       "0c92c077a6fc0bc80eb1e89e490b34a29d096cab13cf4a3f8f5e31ad116053ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de14e6ec81e1eb24afc5889838c3e1b93e8c5c3a35a6dd968e75cde8d0194489"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "da32c0bf17ab27d2520abbb4be4eaa4ec61440b927745ab67da15296ad15952e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3471acc92c16b62ef59ca647b2eb56b93be9c8c91cb8825206d1e0a47ce162c2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "373617f8f81dd1a8d2d7ea0cefdb594280a8b01684bba9681aa7c03d68a4fae0"
+    sha256 cellar: :any_skip_relocation, ventura:        "f89d4cd7500cea3abecf1631646191a6e1b9e9e2511e0a28a6fce95b749c901e"
+    sha256 cellar: :any_skip_relocation, monterey:       "adbe006c7207c37e5ff09113c2825967f5150c0efbfd0476a66d51d1748522c4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9cb6f4078b02c6d9ea87c699d317732e102511f7ed8abc3ceb76ce57da18e116"
+    sha256 cellar: :any_skip_relocation, catalina:       "69688fe88a7acd94323c9f22e970b41012a78f4573e1c372dea1f6312f06df8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44e03629e7c9153fe541016753e0e0f5eb8449ed3503f61e0a6b13b2794ec0f5"
   end
 
   depends_on "go" => :build
-  depends_on "packr" => :build
 
   def install
-    system "packr2", "--ignore-imports", "-v"
-
     ldflags = %W[
       -s -w
       -X github.com/CircleCI-Public/circleci-cli/version.packageManager=homebrew

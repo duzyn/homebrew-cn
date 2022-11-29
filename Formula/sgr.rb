@@ -6,22 +6,22 @@ class Sgr < Formula
   url "https://github.com/splitgraph/sgr/archive/refs/tags/v0.3.12.tar.gz"
   sha256 "e5153944383a0160efe4d56a2c4a6d11f74bb1a04d097df95806ddcbc1ab5618"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_monterey: "522d2fd67ee0502bd014b1fe7d8df28dac91cb236c14cd4eab9e552f81195039"
-    sha256 cellar: :any,                 arm64_big_sur:  "743c9462b5032817be4d633a0932029e4a3d04a771367ae27f840ccf7988f967"
-    sha256 cellar: :any,                 monterey:       "a88b516d4970000b007d69a8850699d6a414a84d16ebb99ecb77acb87e35796b"
-    sha256 cellar: :any,                 big_sur:        "c18cff46b464337df1dbece26d82d08525a85e28472cc63188ff44b3c6a95732"
-    sha256 cellar: :any,                 catalina:       "c8db28d0661cfd4aa9b27f360de9d47cfb5a6b51d541f4b6849fc6c771588a8d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df6df3e3cb72fb8d7f91aea11964d65c012bacc3d10f219461445b8e3e7a26d2"
+    sha256 cellar: :any,                 arm64_monterey: "1de1d02bf6bc27c2d1697c7d4e5ad9dd9c7785148d59bb21998d55c6f5c9acfc"
+    sha256 cellar: :any,                 arm64_big_sur:  "ee30fdf8f659da70498c116eda59a27b5696c2c8251b22f5e253058fb951ee65"
+    sha256 cellar: :any,                 monterey:       "26f8987ae0e80865d5db865f5f6d503287988e3e84ff5c7c94a1fefdd053cebb"
+    sha256 cellar: :any,                 big_sur:        "80c39910a011201d61a3f50de6f6b53ee696af9c75155d04ace80d3fbd284ee8"
+    sha256 cellar: :any,                 catalina:       "be74b99de044555b07ade08e36943e0c5fa432aad9b0f732c66a3338e37d89ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9fe1825ebd65955b70fa8ad1853c722fe43f3c55d85ba4deab0a9294594ab261"
   end
 
-  depends_on "libpython-tabulate" => :build
   depends_on "poetry" => :build
   depends_on "rust" => :build # for cryptography
   depends_on "jsonschema"
   depends_on "libpq" # for psycopg2-binary
+  depends_on "python-tabulate"
   depends_on "python-typing-extensions"
   depends_on "python@3.10"
 

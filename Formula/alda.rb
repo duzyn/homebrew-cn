@@ -9,6 +9,7 @@ class Alda < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "be7f749d13dc8d775578b52ca4d13b06bd9cae16b947dcf2424cc8172c2b2c77"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "85514be019f5897dceb40189f3c91e79520c49fcf0504d9051611d6f1091dde4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "366276ac1b97d1fbbed3ae072636035776905b454caeecc5ca90f118b5fbe3c4"
+    sha256 cellar: :any_skip_relocation, ventura:        "ac43f1e4040e8f6a8063909c46dbbee35821ee7649170cc0a9a79c57df0a927b"
     sha256 cellar: :any_skip_relocation, monterey:       "d1844d8b733cdae6a2981e336b5c92db1ba78926220ed03e94a2953e44a7c0ea"
     sha256 cellar: :any_skip_relocation, big_sur:        "67a0da8bd2aa9cc90efed984b66fe2c17e007c90a09ae80323b21783e9046a19"
     sha256 cellar: :any_skip_relocation, catalina:       "1af8e33fc2f0e120ccbfc98dd821507917ab66751243b9ef52b07e56f0cc194d"

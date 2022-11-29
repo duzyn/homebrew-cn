@@ -11,6 +11,7 @@ class Ejdb < Formula
     sha256 cellar: :any,                 arm64_ventura:  "4d04af75587bace755ce51b52efbb350f21fe9ff68e627e46ba6df5c0b3d802d"
     sha256 cellar: :any,                 arm64_monterey: "651db63cf52361e30d51e00be5d21d0312a987ecf6fb13ca4db0aaa6e36419fc"
     sha256 cellar: :any,                 arm64_big_sur:  "a8c53e49e903e393a00c1f8f252f24427aa3d597621b0a60aa625fed023e47f6"
+    sha256 cellar: :any,                 ventura:        "d1ea43ae8a72ba4c3fd46ea22cc0959a6db9ef46d99dad2443ed1896b6f745ca"
     sha256 cellar: :any,                 monterey:       "be42fe4d45f8c3ee1e9780df885e2a9176685f741ba936cc7969e7a1dffb881a"
     sha256 cellar: :any,                 big_sur:        "d015a8db5f02bc71e50daf8dfc76ac9224815abab9637bdb19bbb1adf814ad4d"
     sha256 cellar: :any,                 catalina:       "70fd430780b4d69ff1f6c63984f7f8ef01e0a478e9cf9753c6ec4b2eabed4bd6"

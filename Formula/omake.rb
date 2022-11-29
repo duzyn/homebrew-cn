@@ -15,6 +15,7 @@ class Omake < Formula
     sha256 arm64_ventura:  "ccb4ab08ba88836f3179967c0c118e1681adf9a408812c40f38e244ce6f4f0f5"
     sha256 arm64_monterey: "468982988c821b3a65bc02a244398c2e1a6c4a2bcdd5115af05a98e4da52e804"
     sha256 arm64_big_sur:  "544ac68e5eea28f84324223b827050c5fb96e5e9bb86e0ec15d25ca6e9e8af4c"
+    sha256 ventura:        "8e84c6f018f584e61b83b0a503b4205ae84c407bec34cdca890d469a030e5839"
     sha256 monterey:       "cc8b8e8275e34b5f718ab0bd17a14da3064da00c467abe27c3718a8ed8abbebc"
     sha256 big_sur:        "9d7cd18e5d23347cd547221021d2f613e001dc7ecd27d8cfce3714c5b77526b6"
     sha256 catalina:       "a3420c41c140cdbf160ae44233dec2edf971f8b0177ff2f4d03a2e58f22cc0fe"

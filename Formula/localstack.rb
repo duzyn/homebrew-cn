@@ -6,23 +6,23 @@ class Localstack < Formula
   url "https://files.pythonhosted.org/packages/58/dc/b6cb5992d54d637abb83e8e32cf6c9f89c69b1759da81a58c821e18775c1/localstack-1.2.0.tar.gz"
   sha256 "cbcc0b79526256e5d113e307e0f91263616a035600d891e5bb22d8a4c035da53"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "c5efaffd30a47b9a7d94329c2d03762972cfd91b92460c59bb3c0024ba1c1986"
-    sha256 cellar: :any,                 arm64_monterey: "9be8dc3e607dfdbb2144a279c9146308e9551c60f61e45ef1e178366fffdfe16"
-    sha256 cellar: :any,                 arm64_big_sur:  "f1005e9401c8b2d438fd68af7413e02107bc445a705e3ebd072e08f10e380599"
-    sha256 cellar: :any,                 ventura:        "f3ae2b5b276dde0895eb25c8e67635f622b1f817ce8f91ab51ce23d123b0745b"
-    sha256 cellar: :any,                 monterey:       "e6c28d94b998e2cdfb5e3390837432c2654770aaf912480be1bff93c9cdf8fc5"
-    sha256 cellar: :any,                 big_sur:        "0afe3d2ef7857feedde853de61b1f67e2d0efde54cbd5da8efca1ba69c39e5bb"
-    sha256 cellar: :any,                 catalina:       "b08010740d30104742ded01c09034a8b6a6252afd2c8f2a2269a15b2f8a888f5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "470112985a120442699f120be47a2a52e74893ce4a6db4de63eaf57eca87b812"
+    sha256 cellar: :any,                 arm64_ventura:  "e9a2df48f5ca23dc7c8fac54c792a6a960df223d5c0e2782279b061250f01f74"
+    sha256 cellar: :any,                 arm64_monterey: "473e08001caa16e100a173d9250046c58a69713319e1091c6a969dcaf5f92db9"
+    sha256 cellar: :any,                 arm64_big_sur:  "2b41bafcff1413e2fe7afb0bc52fb64180565811d88c21c92db218f3f3e147d2"
+    sha256 cellar: :any,                 ventura:        "2bdeaf7a354b6d8888b537f4930764423359cc5b7461fbb3b5f53a723c143535"
+    sha256 cellar: :any,                 monterey:       "632aec69c86bc956c6fd8491d0018ca76298aedf41e6d2acf1a7ffcead216097"
+    sha256 cellar: :any,                 big_sur:        "863fff53633a2c229e7c3452e4d363b88c0c8f32919253843f163ae8c4924cb6"
+    sha256 cellar: :any,                 catalina:       "a5b1b02aa59506246a5aaaaaaa76acacbf10de919a09eef631b5df07081a65ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5d0d4d5e7107eb0e294519b0541bbe094014adbe10fbcf0cf24cc9a1543cfcb"
   end
 
   depends_on "rust" => :build # for cryptography
   depends_on "docker" => :test
-  depends_on "libpython-tabulate"
   depends_on "pygments"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"

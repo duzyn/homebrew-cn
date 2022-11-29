@@ -12,6 +12,7 @@ class Commitlint < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "538e8f5fe80de3d505512730e86d34d9d14085f6d9547d3bda0eaba66f25b936"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "538e8f5fe80de3d505512730e86d34d9d14085f6d9547d3bda0eaba66f25b936"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "538e8f5fe80de3d505512730e86d34d9d14085f6d9547d3bda0eaba66f25b936"
+    sha256 cellar: :any_skip_relocation, ventura:        "cb35ed4534d4f33f632d3a2def192949c1de75740af3f757040554274f19539a"
     sha256 cellar: :any_skip_relocation, monterey:       "cb35ed4534d4f33f632d3a2def192949c1de75740af3f757040554274f19539a"
     sha256 cellar: :any_skip_relocation, big_sur:        "cb35ed4534d4f33f632d3a2def192949c1de75740af3f757040554274f19539a"
     sha256 cellar: :any_skip_relocation, catalina:       "cb35ed4534d4f33f632d3a2def192949c1de75740af3f757040554274f19539a"

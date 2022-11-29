@@ -12,13 +12,13 @@ class Hdf5Mpi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "83c5436383689bcf4f3e63a33fa7d9eedb9de273f992a1a53e031317b6290982"
-    sha256 cellar: :any,                 arm64_monterey: "7492722a2de0bac658f71662bdc21d4c75b0cf7bcfa0ef1d2e1080ab2e86ab79"
-    sha256 cellar: :any,                 arm64_big_sur:  "8a85b45df3b571bd8e8865406b0cdd1d81f3a695417f84a7882ba5b3afe21579"
-    sha256 cellar: :any,                 monterey:       "4300aaa8fef5bef03ec58b3f0e9f9be6fa355636e7c2ea934330f824e51494e7"
-    sha256 cellar: :any,                 big_sur:        "7ff6f72a8617a7a1636e8fd44c58aff342a88d4a00a6c072d3a4701670ae79fd"
-    sha256 cellar: :any,                 catalina:       "d4ce608c4e4034085c5d5de409cd8d4ad429d6926c4d85680876dcab7c06f0e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be5a8ef9dec6f0c7cec54e0b809b2a5a09f0e2707e2ba2bb62680b42668bf6e5"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "bf95d9b6d60d42e207485b164894d2fbd0a46bfbec3a7fb8a98a682b627d7b2c"
+    sha256 cellar: :any,                 arm64_monterey: "eedbdbfa8bc9a676568608959c58b869f54357442e11b4a1a3c2db874886c37e"
+    sha256 cellar: :any,                 arm64_big_sur:  "0476498c73b37cb11e5aa210de3e2af561e5107bf25757b38bf9a38a0cd08104"
+    sha256 cellar: :any,                 monterey:       "235763dc893a23b56caa69c5c61b0322d31ff57584830c095ffc8b886c27f482"
+    sha256 cellar: :any,                 big_sur:        "8c355fe37ff6a3ede90114ccbda7b60f4028a800d5bb0cd75515ecf02cc21800"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6cff00a383bfba4e85fcb40f00e3942a6de4c90b45fa9f51a7e6487dc454e5b"
   end
 
   depends_on "autoconf" => :build

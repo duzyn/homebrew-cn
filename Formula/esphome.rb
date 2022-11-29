@@ -6,21 +6,22 @@ class Esphome < Formula
   url "https://files.pythonhosted.org/packages/30/36/56ca271d94cc0f93618ff131f25a62ce0af0fb0a9b0d8088e84fbefe6177/esphome-2022.11.3.tar.gz"
   sha256 "2f5be87e46030e7e0ff49978708e585d7ce200027a696967c7392b3202960eea"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "99698e89820a6ddf84ee277ec940e6e7eaa971f78096854a1d3f75bd15de6608"
-    sha256 cellar: :any,                 arm64_monterey: "d4057f24d22b25fe3fec1e66daf43e612c39395c5b3f7f4b45589efb080746cb"
-    sha256 cellar: :any,                 arm64_big_sur:  "d21985e841c7533f5050d1e1713c18a60ba2ce1e969169438841dcda750fcb04"
-    sha256 cellar: :any,                 ventura:        "64a5a1bcfe5863397c316b7e402c848af845348150dc228a77379f7ce4ec743d"
-    sha256 cellar: :any,                 monterey:       "4a41ad38c86b937e4475e6c3920705f182a9fe57c92539a70aeb15d8360f9a2c"
-    sha256 cellar: :any,                 big_sur:        "1f9b6fb12f2212a886929fc788e8c0110d42ad3f7076a17b2e44cfbdf40b17ff"
-    sha256 cellar: :any,                 catalina:       "e5e7c9fece6bc8868d70fa64f653434ae9b207b470124186018d6c68a72d9459"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3dca1d067c361098e129a47cce5cfd2d53199f241690dca9e17bcba882beeb99"
+    sha256 cellar: :any,                 arm64_ventura:  "94d4ae6edbf269842efebab1968ce07a8465a60ca1eedc6a44d489f84ca7232a"
+    sha256 cellar: :any,                 arm64_monterey: "b2359bb657bc80287966c94ba8f3cf8f215d6f8032cc366a4a5b0707d39e0348"
+    sha256 cellar: :any,                 arm64_big_sur:  "346a26c622e5b4cd472dd2f6be04c70f104d0513e5885dbba4bce2e512d8c78c"
+    sha256 cellar: :any,                 ventura:        "6bf3addf92ea0e197138753ebd429e279367b022e3b1bea1ecca4bde37e60175"
+    sha256 cellar: :any,                 monterey:       "f862600393430d3b4dae4381aca5ad803c214533d6ef949fbfaaf964a4fed05f"
+    sha256 cellar: :any,                 big_sur:        "69633c39d2fcb388e1976f932e158a9db1e8d9384c453a3bcc40abb82cdb7321"
+    sha256 cellar: :any,                 catalina:       "e5b890c08c7a1e8e8e719a63ac1e9490af7e426b905ce2b5a7aef9663ab55ed4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21e96e5baf345778ebd2ee3bd2989e322e5a5f8fd0b481a22fc2c66f88e31670"
   end
 
   depends_on "rust" => :build # for cryptography
-  depends_on "libpython-tabulate"
   depends_on "protobuf"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"

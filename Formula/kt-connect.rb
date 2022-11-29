@@ -1,20 +1,20 @@
 class KtConnect < Formula
   desc "Toolkit for integrating with kubernetes dev environment more efficiently"
   homepage "https://alibaba.github.io/kt-connect"
-  url "https://github.com/alibaba/kt-connect/archive/refs/tags/v0.3.6.tar.gz"
-  sha256 "c29d4d9a18defdd8485adfe3a75b2887b42544fedd404073844629666bb28c9f"
+  url "https://github.com/alibaba/kt-connect/archive/refs/tags/v0.3.7.tar.gz"
+  sha256 "f32a9eebb65bd6c43caaf7219a0424dcf9e70389c9a471dad7dc6c64260f3194"
   license "GPL-3.0-or-later"
   head "https://github.com/alibaba/kt-connect.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "362298aae0856a0ea10cf766d3ad97ea78c890137e71f98201ad0529df3141fe"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "201a9bc8a61ee90706957c3fccf6ae1623639bda3820fb50ff1a80648935bedf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8c5c2566756210068ffbd9de28df50a18509e9139089626d739a31a16ea01b9"
-    sha256 cellar: :any_skip_relocation, ventura:        "d4918a79d6ace9040f470a0fee07ec771640b434126573c75876f1b7a349c582"
-    sha256 cellar: :any_skip_relocation, monterey:       "5121833c6caae40c1feab413ca5ee4df9d8148ec4bc4135eb94d2beeadf3dff2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f34314cfc0ea7d23bb903b074d55b1694c8ec001b037051c5622cbc2e8262654"
-    sha256 cellar: :any_skip_relocation, catalina:       "0de5ef15714fffa9cbddf23e60afd497e2fbf3a39f29b0f8f062f92aa26fb031"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42feffd67e8c7bad19c91931a73802e3f65321ddbde2b405fa225221d00cdc31"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "258847384264aa305e719b37c11785a5eee499b573dc49c6575f85d0967c098b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b8a229e1d302e406d135f343c9fe5715a23ca8bcd38b9667a760a85e1f99c5e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2f8575133862185735f1026bf8378544e307f84f6d15edadea2a15ae1242064d"
+    sha256 cellar: :any_skip_relocation, ventura:        "7817e46c79b666b37b30c2ed07ac2a9753a4c6affc0f49d1e16caf7a0b817066"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b7c950096ae80e9126b9868e528b98162e9ad42b93b6243f974a4b46a63025b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f9a56194f87cee8113b94578482620c1f152882e49fde3e5121069a702601a1c"
+    sha256 cellar: :any_skip_relocation, catalina:       "83983ce5fca4ef6597ae46664d7494ac2727d7de1c25483d5c4dd036dc2960cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea73a5753cf517434033739d0055511adc1fa8786e1d247da71aa7837e72f14d"
   end
 
   depends_on "go" => :build

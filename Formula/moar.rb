@@ -1,19 +1,19 @@
 class Moar < Formula
   desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moar"
-  url "https://github.com/walles/moar/archive/refs/tags/v1.11.0.tar.gz"
-  sha256 "d85617fe10eb5228ee1fdddf92e1df3ae554b0b7e6f93c0ef03f77e0daec86f2"
+  url "https://github.com/walles/moar/archive/refs/tags/v1.11.1.tar.gz"
+  sha256 "e7f391eff362a94d82b1f57bb6ca9dd78a9c1ae126a3bb4aa385a7607e7dbe5b"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "96e9647fa1c9772e6208afcc775b3a6f6ef99816cfe52b50ab15a16fbce6446c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96e9647fa1c9772e6208afcc775b3a6f6ef99816cfe52b50ab15a16fbce6446c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "96e9647fa1c9772e6208afcc775b3a6f6ef99816cfe52b50ab15a16fbce6446c"
-    sha256 cellar: :any_skip_relocation, ventura:        "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, monterey:       "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, big_sur:        "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, catalina:       "176aab0919d0f81555b62bd56af3ffbd854d03ac2f7ccaf71a51b367e42e4202"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86a28b1299d9994988b575160773d0536e4b3611478568b18b4abbdbea860fcb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "54b3030ae99d1dbaeb40ad07c393e365ad41dc3503bdf34481d40ef3f802c887"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "54b3030ae99d1dbaeb40ad07c393e365ad41dc3503bdf34481d40ef3f802c887"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54b3030ae99d1dbaeb40ad07c393e365ad41dc3503bdf34481d40ef3f802c887"
+    sha256 cellar: :any_skip_relocation, ventura:        "a1ea32537b5be165318065acec126463764061a71ca7a6c41da55a5b79cb9a86"
+    sha256 cellar: :any_skip_relocation, monterey:       "a1ea32537b5be165318065acec126463764061a71ca7a6c41da55a5b79cb9a86"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a1ea32537b5be165318065acec126463764061a71ca7a6c41da55a5b79cb9a86"
+    sha256 cellar: :any_skip_relocation, catalina:       "a1ea32537b5be165318065acec126463764061a71ca7a6c41da55a5b79cb9a86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2d07448f00b653f19e64d55d2aceef8be2efb11eef2a8a5af19abad17b2456dc"
   end
 
   depends_on "go" => :build

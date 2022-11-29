@@ -11,6 +11,7 @@ class Fdroidserver < Formula
     sha256 cellar: :any,                 arm64_ventura:  "0b379d897e3aef060bb365fde3252793849b8aa18d167ea49a96d2a50b60d890"
     sha256 cellar: :any,                 arm64_monterey: "7394bcccd88504b7c6caa7df811299b40b776d62b96f2095f7aef63f095b478d"
     sha256 cellar: :any,                 arm64_big_sur:  "63fb14aa4991927ae142646672798414d574b5d8e422b8d8dfffc3c03f8f7e4d"
+    sha256 cellar: :any,                 ventura:        "12017fc567d4207acb81a391a6c7cb082e4d641a968a6a6ac0b53a9be6cc0dd9"
     sha256 cellar: :any,                 monterey:       "88745ae0cfcf92903566e57e21f3a2c9d9b4dcb51abed6666c23b3086b9deb9a"
     sha256 cellar: :any,                 big_sur:        "9078b026b42bd3d327d7f39e12e4bd778816b37e22168b48af27249a07a01e19"
     sha256 cellar: :any,                 catalina:       "6ac7690e433971be661e15bdab1c03f840647be08f87d0c2574992f08606aff9"

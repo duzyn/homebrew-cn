@@ -16,6 +16,7 @@ class Dumpling < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b920a5297696fb4cf768394848aff6e0265da2623e89931cc39e2f69a58a59b5"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "af8b802f84d8b3a642d09ec6f172f42a3bd821b34c0f60e097cc27f918c0b945"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "81401f162ccbaf33706eedc9f457e17be0b42cd337369359f56200392aa111a1"
+    sha256 cellar: :any_skip_relocation, ventura:        "77f0ce479d4b75a232c81d85baba43071ea5d55ad2a13b9495551c71534740e0"
     sha256 cellar: :any_skip_relocation, monterey:       "7b8b771d507809b933a0ed80dac9da4fe0d3c6b1007ce21e20e02e10c111ce7e"
     sha256 cellar: :any_skip_relocation, big_sur:        "7da20f08bf1e5e41a71f66322cba0f815bf03cb1dde9abfd31f51660c46f8767"
     sha256 cellar: :any_skip_relocation, catalina:       "7ca896dd636f45fdf3ffc1c99da9e757ab6441204b6001ab7a684b20538ee9a3"

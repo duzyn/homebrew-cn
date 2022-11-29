@@ -11,6 +11,7 @@ class ArgocdVaultPlugin < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "5f419400a13677fc8be88f39c059db0733ec9b0950ce9e54db302dd1da150f29"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9478524ce1977ec65883d3e5d86303b14f5ce5005f7e98a31d3707bce8fdb6cc"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9478524ce1977ec65883d3e5d86303b14f5ce5005f7e98a31d3707bce8fdb6cc"
+    sha256 cellar: :any_skip_relocation, ventura:        "93010d7f690803b6ec9cf7e37e9c90251fbf9e8319ce24f1ef971e18f4d87f13"
     sha256 cellar: :any_skip_relocation, monterey:       "940328ea5f655489e46ffbd5bb3a277e9a02fe0b09d2230395405a6460ae9b15"
     sha256 cellar: :any_skip_relocation, big_sur:        "940328ea5f655489e46ffbd5bb3a277e9a02fe0b09d2230395405a6460ae9b15"
     sha256 cellar: :any_skip_relocation, catalina:       "940328ea5f655489e46ffbd5bb3a277e9a02fe0b09d2230395405a6460ae9b15"

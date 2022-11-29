@@ -6,20 +6,25 @@ class Packr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3b2e2e3e54b5ba71634f3451d94c6586b239d1da7507bdb246a7f4865be0d8ad"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "78402bd55fe8a3c1c2e354e1d0a394bfc62b2c223016f93ce671876cee786b9e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d33f607b95795245e701beae7c7518065a20eff0123cf589a5492623f073f804"
-    sha256 cellar: :any_skip_relocation, ventura:        "6c901a3b2f07a446fedc61726296eba463fd6837006a609f5cdb5ac48bb683a6"
-    sha256 cellar: :any_skip_relocation, monterey:       "95d3bb5b313625de9988d49459df4f7937fc4b6b95c1edde704b6df3e4e76c80"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9f8dfe789d79d2db26072577c7d304d12b65a88a36af73e8d188388487bf4ea6"
-    sha256 cellar: :any_skip_relocation, catalina:       "1c9b6831e7d16b51c3489216c96a10200fc08fbfaff22f39e0d4a70ca12e7555"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76c1441bae5ded86a2f6f032b5d69030bdddd94d1a9f10ae4d7a28050612c683"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "012421ccb6766aa56682433e05e85b8c8b6afc1c2681edbc856a02c2fecc74d7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7cf08f5bbb1612452c67526c02f0f9d48ca9837962c89ba6a60886280c61dc5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "da232cec4e97f9565bd16bb0e3e4d64abbd4699883a4c1b380217312674ad5a7"
+    sha256 cellar: :any_skip_relocation, ventura:        "375adfa65193c1923987f2edabe0e145c98514eecabdf4b9868836ee1362e104"
+    sha256 cellar: :any_skip_relocation, monterey:       "035174493dcdafadae9f1c38c8e651f9d2511f37df2eeb9e9634e02dc5791f9c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3ced81e9a80049d9f1c878cb7b5850c7d1fe61b93b9f1847e659180f9ed0c215"
+    sha256 cellar: :any_skip_relocation, catalina:       "526c8d9706b0b3c7d9538fc85db542cc5fe1041ebc5a5d2df7f3e2c2fd93d67a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71f763effa24fad2ae09028ea1d87f351cf0425ca40f1c25b5ef974839088f62"
   end
+
+  deprecate! date: "2022-11-27", because: :repo_archived
 
   depends_on "go" => [:build, :test]
 
   def install
     system "go", "build", *std_go_args, "-o", bin/"packr2", "./packr2"
+
+    generate_completions_from_executable(bin/"packr2", "completion", base_name: "packr2")
   end
 
   test do

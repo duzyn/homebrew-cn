@@ -13,14 +13,13 @@ class Hdf5AT18 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e517eb98fcec2a7559e3aded59dae0d41dc3a852bc6a8ab49c97ab0c24fe0c4e"
-    sha256 cellar: :any,                 arm64_monterey: "21575ec969a79e88eef424a823ebb9f7fe85c96f982faf46a5043f4ad55defb9"
-    sha256 cellar: :any,                 arm64_big_sur:  "a67e86e9a05c5a5d39137d11a4621162181815c20e9c27c7f48c7f129be65db2"
-    sha256 cellar: :any,                 ventura:        "1ce461e26ffbc12b08bdd550fdc033f459601bca17d44af84f7b9ce6430f9529"
-    sha256 cellar: :any,                 monterey:       "8d88ab9a75698dff01d2e2de7a0eb130c2e82a576661b693dc4396c59e7c63a6"
-    sha256 cellar: :any,                 big_sur:        "4b788d8b77a6f2cd98c6d32e6952142a31dd1c092a5a369133bd905b0483cd05"
-    sha256 cellar: :any,                 catalina:       "d4e81cfc7df31d2395daba3432682484cd90a5cefe20778ecfefccddda52d2ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e1d82d3c1b0acce553621ac430d55722faf3fa72665beb43c6381966d5fa814"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "256b29e21285299abcf39b3c30245b7eeec4e35acfd20cbbd41f58f4dccb8f69"
+    sha256 cellar: :any,                 arm64_monterey: "18d3be813aa10a16e33d3d54553480280874c96d94232b7ec348f0382f682267"
+    sha256 cellar: :any,                 arm64_big_sur:  "a8c32359ab98af7cfc8b718c028f051c6002cb01163843f33acf95e1d61a5753"
+    sha256 cellar: :any,                 monterey:       "454854d48dc24328a5c8b1447412c5e0395d135989790e2e14cb8426586080e8"
+    sha256 cellar: :any,                 big_sur:        "8e4c4ec541b7cc9ac9211bc8517d4ba7ff6c1bf782ef5a25fd4a0188e118fc12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64281b1ce5dafd2828f11ace0bff36ee9005aa2e95393e8e1ffe6f4bb9f10c1f"
   end
 
   keg_only :versioned_formula

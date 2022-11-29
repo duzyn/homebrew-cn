@@ -10,6 +10,7 @@ class Pgbadger < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "6bcd3b8f62218ce246438b4db5cc1de58e1a867ee686ed9c3eed58dd5adbf385"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6bcd3b8f62218ce246438b4db5cc1de58e1a867ee686ed9c3eed58dd5adbf385"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2be5e5aef3f6d2e8e857bc51dfa13bd6fe17298230f331f8f12c0dabae5e0072"
+    sha256 cellar: :any_skip_relocation, ventura:        "b327496a367e2b1052aea29d39331a2eebbdc5da9fc50dbefc5816ce108fdd7d"
     sha256 cellar: :any_skip_relocation, monterey:       "b327496a367e2b1052aea29d39331a2eebbdc5da9fc50dbefc5816ce108fdd7d"
     sha256 cellar: :any_skip_relocation, big_sur:        "d3c2cf996a8c2d629aa0007a9e28fe1eea673718dab9da7f2a14d88f751064c3"
     sha256 cellar: :any_skip_relocation, catalina:       "bc4167d80d7d0f517ebda656f587b73eeb8e7bbe7ea134c06f4e3e9f521cd1e8"

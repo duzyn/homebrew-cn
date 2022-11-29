@@ -6,24 +6,23 @@ class AnimeDownloader < Formula
   url "https://files.pythonhosted.org/packages/00/8b/2f354c0c2e56f1fe45e805698bd6a81c472473a48b814c44aaed2d41016d/anime-downloader-5.0.9.tar.gz"
   sha256 "40eaded9508a30f35993b2fc0f436c357d9939d58625a10bd595bfc11816ead4"
   license "Unlicense"
-  revision 2
+  revision 3
   head "https://github.com/anime-dl/anime-downloader.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "af6aefac7fd2d26f0f0712544d6214e292f6c0b3df0d46af8a4ffe24623098ee"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3aada71979ba35b08c9241fb9473e8d59fc8dfbd798d5243edb68a009be422ca"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67054ab49350a67b144621caf72b5bbc0df2218cc1cbd9986d9e4ca7dff062e0"
-    sha256 cellar: :any_skip_relocation, ventura:        "187f677a3c1222e5158d2a4920c4ebaa44187d24adb191c684737b93854d7c71"
-    sha256 cellar: :any_skip_relocation, monterey:       "df4e94952b8fb14b91611e0b512da1a44a75f9032bdf0c5598ad70a22c362521"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc25d3a02ad10ea6156707f818ae3d0a8eb4a117999fa0a70f4593214f3c21cf"
-    sha256 cellar: :any_skip_relocation, catalina:       "2df98ab6e5a8f81c488d6958652394325482abfc4e5df1a44919222649dafd85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75f11f974bff7f7da6b7fa87617d8eea00e0ebdbe36fbc521cc4b181bff135f0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3e390f26846d6749c4cdc6a40ffb39bf25a302afa14a714caa940423b2f08624"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f21a305c94e195e2b72ac5ae205f1c21ae3b20ab2bc5d6318551dfb4f5696032"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67c4ca45e0e95a3bc87154948e6ddf4c43d87d4b5e530d8801550db431f630ae"
+    sha256 cellar: :any_skip_relocation, ventura:        "28fd307282bb93b5e6d72e543cfc60c5dcaa59177273c1af75912880f07f1d5b"
+    sha256 cellar: :any_skip_relocation, monterey:       "af19db669c5b6fa89d6325d6379d0bf5456d3078bd0eb249a78865a0153d0127"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bef75ad9d6fea8ae7653f1bab947ed54b2893c658182a2ec6bace4bd4e5e6e10"
+    sha256 cellar: :any_skip_relocation, catalina:       "f5c32fd6103a2841a2137e128233b8ced960d5de18a4ebfd68fa009b360d74ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b202c394ec2ca23cbe1a2e720f4833b49b0288b2f884d474e2c0629b48968c1"
   end
 
   depends_on "aria2"
-  depends_on "libpython-tabulate"
   depends_on "node"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "six"
 

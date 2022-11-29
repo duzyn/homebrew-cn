@@ -11,6 +11,7 @@ class Shellinabox < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0d00dfd6b119c7d8555081e4ad821d67ecf0da641c5630435e67c3c9eadedd1a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9b29df2258a90e8cfef9e54cf0569c1e556f07911d0dbb934e6760487416a3f4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ceb68ab288df2b997e3c7361cd6e8c0fb389ee9fa187503f14e2bd5f00393f03"
+    sha256 cellar: :any_skip_relocation, ventura:        "d303f6e2a79b3022f4659934635aa4c7fb4abeb18384bfafb1c012064a03018c"
     sha256 cellar: :any_skip_relocation, monterey:       "17b6552900a2b8eb5297e6db21d07479821a95cbcc3d34d0c553e47ebd2595ed"
     sha256 cellar: :any_skip_relocation, big_sur:        "920301191fb40b3f036e5d08175f829e512f9e6df63760cdc389a12a7c01429f"
     sha256 cellar: :any_skip_relocation, catalina:       "a0d28e1679ea480a87fa8deeae9f3378f18322d6f3062d4a0f0dd71dbe5c6469"

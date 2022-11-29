@@ -11,6 +11,7 @@ class Openrct2 < Formula
     sha256 cellar: :any, arm64_ventura:  "bf7ccc0e3db2c746a0f70390decac3c231d212777e519eec65381488ad05b97f"
     sha256 cellar: :any, arm64_monterey: "6ad2c1ef2e5f49fe73ae0d918fc3f6941299e79f56f21d1fba242e8f0a3d4a48"
     sha256 cellar: :any, arm64_big_sur:  "03d952b355b1db4e398b23b7e5668cbdf7f1b458e51389b3528e6538ea4ba1c5"
+    sha256 cellar: :any, ventura:        "255d09939cc1d355ef0c97291532077da7de26d01f4996846dc3608762448842"
     sha256 cellar: :any, monterey:       "b372100620c71a46d88dc9fe17e777bf7ab0af7eadd59d6c948a957e77101892"
     sha256 cellar: :any, big_sur:        "f6ed0d0a300fca742fdbd80273246b701802941581c522b47942cef5f8de7b0b"
     sha256 cellar: :any, catalina:       "af6dcce43bee1412dd9c832111fbdca9fcd2236f1be5710e3733a3d58760a2ee"

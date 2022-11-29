@@ -14,6 +14,7 @@ class Bazarr < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "928ad62574c24713c62cd86f7a6020bfa12c4ecf61f77e9fb516ffea220cc272"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ebe32b1145358d2cad23ac28811e0790dc5685f058bc9015ace97e060a1e74c8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "10ac64976c6e9b76370d2c374ccee845644cc741e19c3aca639accccc381db52"
+    sha256 cellar: :any_skip_relocation, ventura:        "e35c604060938b923994154ba8b8ba9f8f8d7d97c4319d8b5eec7165827a616c"
     sha256 cellar: :any_skip_relocation, monterey:       "3adcf5f5cc03b9bd69671babd4ca01d03ba963c12073af3b1f7ef3c80c6891e3"
     sha256 cellar: :any_skip_relocation, big_sur:        "8995962b478ed84f0bd4685df9f144f9e90720e180733a9970dc99f3e6a01573"
     sha256 cellar: :any_skip_relocation, catalina:       "f915c272ba2ef71cc56f08bb0c5f30477bcb364e663a5286b6835ed6c3368bb8"

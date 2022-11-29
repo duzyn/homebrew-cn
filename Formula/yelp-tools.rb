@@ -13,6 +13,7 @@ class YelpTools < Formula
     sha256 cellar: :any,                 arm64_ventura:  "e7cc6e200f40714f724c9404263bea7fac8c755009bd1c746fe8276030964fc7"
     sha256 cellar: :any,                 arm64_monterey: "affcfae3eb27ae13708420d35449ebe13697fda1beb688ecbfffd3761c7b330b"
     sha256 cellar: :any,                 arm64_big_sur:  "a79aa15319cb78c0fedc81fe45863c59cad4734950943a0ae5bc6461ac6fbcd5"
+    sha256 cellar: :any,                 ventura:        "cdcf7bd0cb3ed98cf17066b36ec67556046bc766c529f7a3d8728a9d41ec9710"
     sha256 cellar: :any,                 monterey:       "6745f5e8df7512be08e32ecaa78a9dedcfbaa5be651217c6a943dee9c96bec83"
     sha256 cellar: :any,                 big_sur:        "ec25c2e18a31003a341426372ce29f6e40cbd4fea755d576a6973db900b0e6bb"
     sha256 cellar: :any,                 catalina:       "22baf7a21bf5e4555b78d0662c93078c8d51e5eb5c0b7c651c15118f8f28c6d7"

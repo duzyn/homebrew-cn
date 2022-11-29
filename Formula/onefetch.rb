@@ -1,18 +1,19 @@
 class Onefetch < Formula
   desc "Command-line Git information tool"
   homepage "https://github.com/o2sh/onefetch"
-  url "https://github.com/o2sh/onefetch/archive/2.14.1.tar.gz"
-  sha256 "ec462ec86d1fc61d019c1595eb061b4ec9bd08a5f322362f99f84a3ac65faefc"
+  url "https://github.com/o2sh/onefetch/archive/2.14.2.tar.gz"
+  sha256 "df5e10aac076369bbbdeb94eef286dbde8d10859fd8f47af7e2748fadef0622c"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f2816a754cf2972ae244ace2110ebbcbbb044bcefceb21674a25020bbb7827ec"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8725bfcf273d01f0dca5430b9c50c87e16059e21f921de7a9dda6c6bed085095"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8da859e5948af25a63870f814ce442278abd64909df537e896a65a467ebcfe9e"
-    sha256 cellar: :any_skip_relocation, monterey:       "a21243206b37e9be931d274fb01a9c9630bb46f6d1071c5fa22bd4ebdbbce4fe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6608a892fedb45f40169ba0ccbfba1bfd8ff75171b2bea6567fabc001cb55ec5"
-    sha256 cellar: :any_skip_relocation, catalina:       "ad015341f3431b6a6e66c62595ca2a3623a7e4a2a359cc22dbbd66f77e92b26a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c9ce5ac73e355a5ca1d709871a8fbec4068ccccec67a3cc89deb6655fce362f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9f1a30918f552243064de48d676cad0b42353b8900442c4767aaf8169e6f72f8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7a53e763435559e4d49a7c151b873f8ecdbc01745d0234e19c4b4203d4d194a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe975449c82a21ec7e4ff5331656fb437861c1c78c186fd7a6842fb86b562c42"
+    sha256 cellar: :any_skip_relocation, ventura:        "2118047958912a722ad2b05b41a0e9e4041d0dc973f02042d7cbf3bf5a18cfc1"
+    sha256 cellar: :any_skip_relocation, monterey:       "ffc838300aa4c52191823aeff02ca82b9da9aa502e8534160208b6a4173d9a00"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d8c266f7035e51370267d6d807636f9974b198bbb93d8411fd6f0bfbd84de7e5"
+    sha256 cellar: :any_skip_relocation, catalina:       "6110c913a91bf796f2fa31e22078250a6a2babdd90e14ba434ee102b5f94d085"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9e1b803fb49c420337bc81479eae56a954d6b98c22aa3f5b6f0d3b9ab6c886a2"
   end
 
   depends_on "cmake" => :build

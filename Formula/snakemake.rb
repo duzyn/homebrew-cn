@@ -6,23 +6,23 @@ class Snakemake < Formula
   url "https://files.pythonhosted.org/packages/0b/8d/d3344b72156f0073a88386879d6155ed1d233c73d6057cdb5a68c533c163/snakemake-7.18.2.tar.gz"
   sha256 "23f52b9a0c86da3b974a3cfc097fa82b41c49dab05543c0d18377c854852f771"
   license "MIT"
+  revision 1
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2c48181e3b2356c52d67e3208f4b80bbc4255fe984e232a87d0eefefa01fbb45"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a6e882d8337bd5dbca1ad9ab5f935cac60f8cb44163028bdd0c9227cb3a57718"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b0780ddeddc99ee516a972d1a47100e514098077543ca8feedbc0f8160748d8f"
-    sha256 cellar: :any_skip_relocation, ventura:        "360710db23a913ed524ae71396e93a3b4916620cd5a1ca1e76cfb6ee66461a30"
-    sha256 cellar: :any_skip_relocation, monterey:       "6b58a30cc5885209154e6edf7c2559592db22c2b1c8d828697d1b184d2e835ec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "88ce10f11d7e51f4c97923736fced94ce6fa06852661c95f2d7ce4dd58007bf4"
-    sha256 cellar: :any_skip_relocation, catalina:       "138446da920f545dbccdfe2e5b9de412a9501f25e05229c91a29a1bca7f10c26"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6f7690d099eb8f3179c5ef04006e156478f77a5bb91afad332b4bb8e46a6fbd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "59c149b184a6be142ab887ff08558ae449307ad2f365d419615e6d25bd0774a9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae32fb28ee9d8ffd4aadec54a91ee13966aac49f834f7bc0a81988810815b5da"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85319e57478b30ef89ee15235750b65cb6f2a7e4b19ce009a566328cc27e27da"
+    sha256 cellar: :any_skip_relocation, monterey:       "9d80625f381c998beab029e9fcbec35ebe5bd77f9a2bc8c7133fe4721e31fb87"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f4ca138e55748c5a097167e0aa4521149478a9f3a432e785db10a2202c119abd"
+    sha256 cellar: :any_skip_relocation, catalina:       "f6d6ade863fa4504247f5c30cd6363c45ca8778431432ca3b1c55d63d05f91a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f14281b5c5a3ae7f8d75adf2b182e8e6a37f8279f7db3a953fcb6f5b544dd2c1"
   end
 
   depends_on "cbc"
   depends_on "docutils"
   depends_on "jsonschema"
-  depends_on "libpython-tabulate"
+  depends_on "python-tabulate"
   depends_on "python@3.10"
   depends_on "pyyaml"
 

@@ -6,21 +6,20 @@ class Litecli < Formula
   url "https://files.pythonhosted.org/packages/c1/92/b2eb5f098446a05b9a92e548bd83442f2169f87f3e1b37ffed7a5315c264/litecli-1.9.0.tar.gz"
   sha256 "21af2cfa083dd4df1e3ccaa2a2117129b5f17212756f596ea090e296776c27a1"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "429c30b08f938e2db4a6189a78d4f1b2600541a45de1bcf1e0ce9253387ddf03"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d5809a8214e2439ce26b403a46b3998d109873b19c12aed2c60a324cf296994"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9412e15cffb196b3b4b153d87b5d23df120e4d4e58fd8e2ec7975faec7886ec2"
-    sha256 cellar: :any_skip_relocation, ventura:        "5b16982809cd0e8c5ce1f143bdef1c5096973de27d42e04d0cfd925b7f02c306"
-    sha256 cellar: :any_skip_relocation, monterey:       "3a970c3ff26e6245b3f2461ccc8497f995162cf1af7017c624fe22592ad4267f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a4693a6a35f28ee88ac78b55283f1dfeaeeba9386f1c61d8dac742af0dd6efa8"
-    sha256 cellar: :any_skip_relocation, catalina:       "7b1bb41c2056be8801674c673f0b7149a891714431d765dc9cbf6c4f31c3b705"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d086d289d846f6891a8f565be0b958ee1ef554680af0c63f095383ea84c1554"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5da1f7dea09d44b2ff9affbb2775f0df78e3db5bcbcfb540ff4f2d5994fd1e1e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "39e05aef55a4bef5cedb2392bd231bac77248ef16ddb9868512b2bcdf4d9dba7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "24f74a7040bf91fe5de379c5d6e884281d50e6f5948955fd7299e2b35ed945d4"
+    sha256 cellar: :any_skip_relocation, ventura:        "d4a559e3d03bd4baf95b33cd915d0e6aff3ae2af7f0ff78029a5697ab075080b"
+    sha256 cellar: :any_skip_relocation, monterey:       "0e56976717e0a01cd33f6e575f52087476035d90cefe7b1cefe0feacc41905d4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d6cd645d981824e518484b523d67ec2ccd2b590f642a1f13e7a1e6edc5282e8d"
+    sha256 cellar: :any_skip_relocation, catalina:       "05a5004d955ef6fef211ecdfce7c8bdc16ae78fad89caffdb78c15c01692b1fd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b01d5f27e46df045d675b99812fd38741e4b603b8c31e031b4817c1e66a4c8b"
   end
 
-  depends_on "libpython-tabulate"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "six"
 

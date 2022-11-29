@@ -6,21 +6,21 @@ class Regipy < Formula
   url "https://files.pythonhosted.org/packages/cd/bd/1c168ee5bd3cb11f157befe9e498ff8d70013d0c239f918a1e8cbd345d12/regipy-3.1.0.tar.gz"
   sha256 "7d65ed76eb0232fd37537751e5ae54264afdeae5678807eee6b6006387ee0377"
   license "MIT"
+  revision 1
   head "https://github.com/mkorman90/regipy.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e0a23b1665de57c21946555689bf1d54beca057e4761bcc491eb6efc7bb63139"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1435e2b6d69c30d34e25b62e1e1530017c1655821d393da29846af0b279ceb9d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "44834732b64c9d3ddbdf4b7f4b6bed289161645e41e27b51ee752b66b5c448c3"
-    sha256 cellar: :any_skip_relocation, ventura:        "139ce6714e25457748c7d4168415ab04da1f3a91cc4ea10a2493d1fc944c606b"
-    sha256 cellar: :any_skip_relocation, monterey:       "b0d7189258e5c502939ec66cac162f66d4bd5a8a3bdaaff13df53a1233385d12"
-    sha256 cellar: :any_skip_relocation, big_sur:        "39193ad4eee626742cdad34b036598b9d3b0e495cf88faeda171f9de50543c58"
-    sha256 cellar: :any_skip_relocation, catalina:       "f34b1b2fe3944788fba0dc528a95cead26911a9dd593722bda54356132abff7b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7d3776813d6e0a006b904a8413ce2447ef4da280d6e9bf18c7156617c480c1b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cbfb8724d5721d1bb81bdb1e297dcee1f6a603720646eb99ebd83da12224c873"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7de87cf658e974f95c945be83d4e1219124bbd2f0f2e4579a5342ec8874a260"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "56cd72cec9d0b3b5f420578100ebcafb525d8104ae79306697a2f5198a34e992"
+    sha256 cellar: :any_skip_relocation, ventura:        "a3c3d28ded44cdf7be27c61398be44bbd4c408a9b71b5c572cb23a759b9ccaaf"
+    sha256 cellar: :any_skip_relocation, monterey:       "939220ac2c3ee667d2140f3afa3cf36d747be731262d408b1329cc96f554fe49"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a6e4b6f208fd5d87db01c91d3793a444f5bf681e3b1ad4bfb8bf6ef11a3e7e7b"
+    sha256 cellar: :any_skip_relocation, catalina:       "89826d2878c0d9096d3f426aec0e6a117581e43ae7857cc8d7199adb9dff3e6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da777e062e07a686bd6fb0ba1cafbb19b88881b3cb762bcc0a7abf63c8154232"
   end
 
-  depends_on "libpython-tabulate"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
 
   resource "attrs" do

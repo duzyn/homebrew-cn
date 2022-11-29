@@ -3,19 +3,19 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/c3/01/7b9a005bef9977f80f9ee296e804c7ab74f764ccb95417c5b8818dca4bb8/cfn-lint-0.72.0.tar.gz"
-  sha256 "7050182c083ee8eb386c60ca7073c72ea067d39238af116b0fb282b130bb39f0"
+  url "https://files.pythonhosted.org/packages/0c/34/d28a7e7637bb1b6c58ea19a36c214f476fa0ff8590b73e98443e26b43d3e/cfn-lint-0.72.1.tar.gz"
+  sha256 "c133d626b9b168881f5e0938ebd11759752e5aaa49865dae0af878b29e098aba"
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "921e0677728281b762a454a8a76ce7e83f04b129d207a7ef71c2e924f781dff6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b6fb0687ec21b3d541e2069c23d396c7f290bdb5424cfc5a476239b530da73e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6805df1b83a856e38558fd4befcde5dc6931bd6432bbf316531908b3f14f2cae"
-    sha256 cellar: :any_skip_relocation, ventura:        "3666f3dd245b26d6b63a511f26e88f86cb03f44397c48c7a45e3993b2cf1ccdd"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f4c2f515a669192118e4dfcce040884dcca12c915db2afc7a0b0f4a64a63bf5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "54de55fcbb0f6c5b516dcf26335ff6697c4f8d1f21dbc0ed09964e601538e8a7"
-    sha256 cellar: :any_skip_relocation, catalina:       "31d2c158f6237788e2d1f6f01d5200a6c55f39c63f155393211e45a2c3e8b522"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ae1298f50e5800cfff61e77df9b10c0b67ac50ac275b1a6f501c5e5fa328ebe"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "50b24c5f2c9b2eeee318d37a210944e49e0c69a58363e63b8dbc07e1057ac11f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "21526c3665d70c12a856741e504e23225bdd48b0bcf1eb2ef0c4d0a29df28886"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17b1ae4caed1a2c733eaa7bbf33be04532dc1f78b082659c661de4c7dd9447c3"
+    sha256 cellar: :any_skip_relocation, ventura:        "8afe3a76abb967c2d5823b61ddbcb4a912f98c7fe5582857db3d91e41f3019b4"
+    sha256 cellar: :any_skip_relocation, monterey:       "27fb719330d00f1d2ca88fbf58f0b8dd17e4a27f4fbd56e98d8fc92b6dde4025"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cb3eb3fad16a4983c146dc0cf52a2951c9f8d793e5b6adb356c85672282d51ee"
+    sha256 cellar: :any_skip_relocation, catalina:       "da049460e563681b7637e1f8f9486ff4786647f94177ccfabc7912e4bb1d1036"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf738ad9a5cbb7414fd4b0e580e87cd27c4651b5430b94d6238701b7da75d3d9"
   end
 
   depends_on "python@3.11"
@@ -33,13 +33,13 @@ class CfnLint < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/79/3b/e5ac869eddae93234e95f780ce11c3daa8e5b1b61a88af38242e2e4dc2b8/boto3-1.26.15.tar.gz"
-    sha256 "e2bfc955fb70053951589d01919c9233c6ef091ae1404bb5249a0f27e05b6b36"
+    url "https://files.pythonhosted.org/packages/7f/76/ce989f204b3e7e0875aea5dff4365de774877c2ba42332fb192cfd4ef17b/boto3-1.26.17.tar.gz"
+    sha256 "bb40a9788dd2234851cdd1110eec0e3f6b3af6b98280924fa44c25199ced5737"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/31/82/1122906f8f8f24b5431855b2a43de385cdcb72fad8b5ca21fd8bdb59e50f/botocore-1.29.15.tar.gz"
-    sha256 "7d4e148870c98bbaab04b0c85b4d3565fc00fec6148cab9da96ab4419dbfb941"
+    url "https://files.pythonhosted.org/packages/69/e9/a68478453f743df3a532ff617b2d5a35140ab79930b6a83462407bfa8c73/botocore-1.29.17.tar.gz"
+    sha256 "4be7ca8c581dbc6e8584876c4347dcc4f4bc6aa6e6e8131901fc11816fc8151b"
   end
 
   resource "jmespath" do
@@ -109,8 +109,8 @@ class CfnLint < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install

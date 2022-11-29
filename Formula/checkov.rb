@@ -7,19 +7,20 @@ class Checkov < Formula
   url "https://files.pythonhosted.org/packages/f4/e0/eadb8ee105c84b42d209ebc67644c5841ad8409d355f68d6dde2dbc91973/checkov-2.2.90.tar.gz"
   sha256 "ead8efef95de5e27f7292978107d8a2f20e4a4b6032d5e5959f330331e710282"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0a1aac33791ac47692f25b0bd48a53d4184f8d397a71d8b83cd0e11ea524dca5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d3ef47e7b9e375c05d77b7aff0a95398ab7c6edbbe3e3a3db87c3eac2268d7be"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "677d34f77c7f678740c4e710840e4ec556af1531705007130664d6af93806602"
-    sha256 cellar: :any_skip_relocation, ventura:        "e59d39d86d607af30881e6ae63ef2c3325ac48e02e42068c74de69618a2d4f76"
-    sha256 cellar: :any_skip_relocation, monterey:       "aa2e0786c8c90557907ee37fcd9be6bcd5b4eedcef66abfca5bcd9f6286d4f9c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "441a6e11f246175703c8347749ab817dda70988e4070dac1d7641c05324ca3ff"
-    sha256 cellar: :any_skip_relocation, catalina:       "c425da3df255ad06ed4eaf08a386e3544f234feec8bf704099da1ee8802beeb1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a6f46799b68d93fa9afca7a36b65aa6d00f4e2c14500889934cd31493379ce8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e42b4d09ac67475fcb47ca21315c08ecd4ae8995fc9b3d6d5bf1fc513718868c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8f90958802c45825dee714c8ab9efbd2a1a982223b3861e5faddcfcb788d5147"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c53cfaaad253b997e9151b26ff9618c71a3f29ec9637d6ed4d74d8b2bb20b9f6"
+    sha256 cellar: :any_skip_relocation, ventura:        "a923d3ea3af1a2a1d86a9ea113fcd543e647983b49fd543ef8ffa24532c3c7c1"
+    sha256 cellar: :any_skip_relocation, monterey:       "61514e5ef6d0027e9da0d703d63aab5215cb4fe9a7db7c222533d0a303408ecc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7af414c1a1e2c94051222b111431f5981d19d4f21a1da950cf49331b34556e52"
+    sha256 cellar: :any_skip_relocation, catalina:       "edad721fa1fe89fdf383f6a2e99be33b6facad02f36dda00d521090b3e943f4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa3cb3c06bae108786e35ab26db65003dfce953195b233b296e18978646bc6bb"
   end
 
-  depends_on "libpython-tabulate"
+  depends_on "python-tabulate"
   depends_on "python-typing-extensions"
   depends_on "python@3.11"
   depends_on "pyyaml"

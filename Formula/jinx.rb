@@ -11,6 +11,7 @@ class Jinx < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b2d93c00b2d144ef99c24429b26dea72b62f3cda448c6a926cba1e5b72a4d004"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6d860754de69cd9d21e3c09e17e95de5f6e788280d821604a665f0caac7b44e9"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a0bbf1aabba2dc324df0900386ad1e3c75f8ec10a61374e23a3ccf16d442a80"
+    sha256 cellar: :any_skip_relocation, ventura:        "35cb2597f82ccc66ea698f96a73cb08c77b2428fb0c783633570c6eb0ab13c4e"
     sha256 cellar: :any_skip_relocation, monterey:       "07ab4faca2d623a0184edefa4025b099241cb59d257d4c9f1abff32e0aadb1f6"
     sha256 cellar: :any_skip_relocation, big_sur:        "fb9b426b226f2fc1388a52d97acfc55780baf6c7e4f148ce8e114b3a50f453ec"
     sha256 cellar: :any_skip_relocation, catalina:       "3de90aa148fad5638d83f7214e30aa8a51c7b8c216ed8ce6cce5998be1fd71ee"

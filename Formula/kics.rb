@@ -15,6 +15,7 @@ class Kics < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "3c8bf57d396ff5eb26975be7a5a21f743401ef604ba0691de1c94cb496c649d7"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e38abd58868ecddac95f646e4865ed00db3e28610f6993ce938eba89fbf422ec"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9d4ab1301b0a5d2ee3d3c83502451a2f0190754446cd8b22675a05729d76cd5"
+    sha256 cellar: :any_skip_relocation, ventura:        "27a211d423817fc42c7f04f72ca9a2f81a54c59bc7f7e3ab9c4eb0f3be8394a6"
     sha256 cellar: :any_skip_relocation, monterey:       "4aadc4397523e48c90e43b6b179be7f8cf976e5e5406759964e5e5aeff8e333f"
     sha256 cellar: :any_skip_relocation, big_sur:        "05a8de6ceee502bafeef3aee2a4c8774ce8a3d0d39bdae75e8eac4993c38c681"
     sha256 cellar: :any_skip_relocation, catalina:       "363fa052b0d3db597918df47fd7a655a80771808987f387286c6406af531801a"

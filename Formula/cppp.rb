@@ -14,6 +14,7 @@ class Cppp < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "86f812c4083a5ef978178a692f617081b97377aaf2f8fb063cc49abecc65538f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d1926109416735a823a7ab9a534be30f4c5a64f9cc72d36b52e125c70f8d28d3"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "32559caedf75a13cad737826acd6d83b2d7e8cc69c5ecc18bdaecb37856d5a26"
+    sha256 cellar: :any_skip_relocation, ventura:        "dcc13b4d0b56a0b9b880254b8c0771b9734f6c41804fe9da6b51d5e5cfaa647f"
     sha256 cellar: :any_skip_relocation, monterey:       "f815f392d7b8ec92a327c2d543bf962a70cae5f1f6991e1e4d695ee25c1fecb8"
     sha256 cellar: :any_skip_relocation, big_sur:        "549a5a56c7173307a1fe50415ac029d31ffa80d4aba09bca2c387dff8b6fd71e"
     sha256 cellar: :any_skip_relocation, catalina:       "539d3f0e5376e354018c7d91eb458194fc2654785af7075bb646584618493f9d"

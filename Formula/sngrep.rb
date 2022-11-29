@@ -9,6 +9,7 @@ class Sngrep < Formula
     sha256 cellar: :any,                 arm64_ventura:  "0b7aa728a1094a767d83ce9e21be2cbe9815485d86d9aa0ceca8f5eeabe8ba77"
     sha256 cellar: :any,                 arm64_monterey: "2bbb0e2441c8192002e427ba0b5a3e8673cee8689fd5befebd0f3ba0532e3cb2"
     sha256 cellar: :any,                 arm64_big_sur:  "69a7368edfbff2b60ed13cf1dbd9891ca8346bc4764108441c48e28a27ff08cc"
+    sha256                               ventura:        "8be2f7a825986f7d7819b0d3aaa0881a5c636e7bb50ad1dff87bd6ea2cf39941"
     sha256                               monterey:       "c0d3b02aa03ce6c44e7d0a14e06d34bea256934504fce358c0ad94308b4e410f"
     sha256                               big_sur:        "d02e2bb89ebe085ba45d1bf9ccd3da89b4bb2b79dd69942bf56a1b3e70acfad4"
     sha256                               catalina:       "f66d29b77e3a75b7824eccba63ee8e7c4d97e684afbb7cb1dccf79ce5ca8a273"

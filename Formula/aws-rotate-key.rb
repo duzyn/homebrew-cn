@@ -10,6 +10,7 @@ class AwsRotateKey < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1175ec7d188d859e9437ae512355db889044f4f11d25b8901ca9a8da950c17bc"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a8803eb6dd3cc04a1ff658fe15a7a4a209a16e67ffa7e64124c83bb06ff2bb6a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "139378379b2bf12f02aa6e4efb483206dffbdddba1046c8fbead4e7c4d3d83fc"
+    sha256 cellar: :any_skip_relocation, ventura:        "858cffaede72abefb85e01f11127f13a2f843f1f27d792d5a7b9f1c20b28830d"
     sha256 cellar: :any_skip_relocation, monterey:       "190541bbff030ea97a0e974126ede294dca660806ff3b8a07d7a5709813676f6"
     sha256 cellar: :any_skip_relocation, big_sur:        "220153a7b95de73d476982bdae9dfff35e4d4e98160736dd0c5a8ef20d233bc5"
     sha256 cellar: :any_skip_relocation, catalina:       "b56158ccb02c1a7e0b1277f30768daaaf73601717e412761d19abf44102e00a2"

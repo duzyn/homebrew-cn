@@ -12,6 +12,7 @@ class Cppman < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "dfb24326a3701f41e0615a6e25ad66a45d37d8babc5c1fc4726bfce1e20cc5e2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0252327b9af79af317995a3c5009ec6597e176249aa9936896938d0f00d6a10c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a01c8d3c53feda1e33ebaa0158e94d773fa684b72f9ef0a327a7f7c5853d2fd"
+    sha256 cellar: :any_skip_relocation, ventura:        "cdd0f413dc14de31ba9f0eb5cebd10067793a79df64b9b701d7ffe0383b20731"
     sha256 cellar: :any_skip_relocation, monterey:       "069e7ddf142eb7e099a33a270f29bd43ff236ea31ee2ae35dcd091050a4f5998"
     sha256 cellar: :any_skip_relocation, big_sur:        "8e7ae00951377abc373d6b7ebd0a5b56ad2f8e61d44dcb1259de72efff15efe3"
     sha256 cellar: :any_skip_relocation, catalina:       "8956831dfe6267c97db370432672985bfce0f1d72de05c545834d5274fab55bc"

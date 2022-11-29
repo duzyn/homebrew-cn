@@ -6,23 +6,23 @@ class Mycli < Formula
   url "https://files.pythonhosted.org/packages/d6/e9/e3555839dec9ddbb94e20e5f5b7b633efc603986cffe1113f99048306887/mycli-1.26.1.tar.gz"
   sha256 "8c03035c9b4526dbfa0b0859654e2974a0e77592a9e9b27f40f5a8daae83beb1"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "0ad11cdacb177f1d15dac00af01d5fee33e8c8a3952674687e9d09c5952c7dea"
-    sha256 cellar: :any,                 arm64_monterey: "4b27d2b1c17f60dc8c2693cee52b559527ca16130afac4d5fde94efca5f97b54"
-    sha256 cellar: :any,                 arm64_big_sur:  "152e5cf011ecd571d53fe0989eb2331603f155e2d808f6e36451373c0a34bcde"
-    sha256 cellar: :any,                 ventura:        "d7accca5f933686cc3fa897f7fb433d4db0c1555cebee43d97e9e66ea961d484"
-    sha256 cellar: :any,                 monterey:       "aed11940ef67d65760d282c91a78e43db6e5edc9593a89ddf1768b302bd9752e"
-    sha256 cellar: :any,                 big_sur:        "c03d93fcac398f235f596174a0420e242098675227f77cbfb286733cc875daab"
-    sha256 cellar: :any,                 catalina:       "799795ed362cb7e2b0ba8c5867d56e7037114a94eb3fee5773eb2a941cc0f0c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c47b5b3a74a55e052ff7e54d5226c65134938e90308d6972ee6e7270d8af546"
+    sha256 cellar: :any,                 arm64_ventura:  "61bd1d18980412f8c01e2d0ee98d58d8b3c7919cbbb40360f24ac0661dde931e"
+    sha256 cellar: :any,                 arm64_monterey: "b086553855be88d9a2a07a299845e4568f374a5c5ade11a22840354232096684"
+    sha256 cellar: :any,                 arm64_big_sur:  "3a3f6b6c3da98f9e2c6384cb545d8cb6acac58c07d00fa4c90d3ca8829a33421"
+    sha256 cellar: :any,                 ventura:        "35cd852e0d8a4ca0c5bfbc874c863b5f5e2f26617d48f6b45cc1d5ca8e3ab5f3"
+    sha256 cellar: :any,                 monterey:       "e94b4351bbca2d2ee0009e259e7e700d9caa2ec79cbcbc666efe87b577e16384"
+    sha256 cellar: :any,                 big_sur:        "a81609f114f59537d8cec8ef030484e36da3cf87e5d373b77ae959fa816cb847"
+    sha256 cellar: :any,                 catalina:       "69ecddae7517bca0b4673c9d79ad0a5ae228dedb71556fcb25ae0ae6d7699244"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "150a888229e2fea1bfadd0cc9ea299447982304af3c461edc74fec774d28638c"
   end
 
   depends_on "rust" => :build
-  depends_on "libpython-tabulate"
   depends_on "openssl@1.1"
   depends_on "pygments"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "six"
 

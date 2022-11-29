@@ -11,6 +11,7 @@ class Rune < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "12b623175e597bdcd6bdfa40e47daaa6d30ed47615a5cf10ac4caf21ecade611"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ead15808a4e9a028f9f0c792a8da3472b9dca5c28caa815db11b870967f71fc6"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "37c8cf2ca8475684362479cb7e1287463c339eb42367948908f7c1b3951ee783"
+    sha256 cellar: :any_skip_relocation, ventura:        "a4c5cc43f33fa4dea256125b925c69714fe0a420b10a5f8ab6f590574f226e41"
     sha256 cellar: :any_skip_relocation, monterey:       "5b0474ec5f77af2c8677593c89200a6e55dfbbc11c8aeb6e2c9bd244ea313803"
     sha256 cellar: :any_skip_relocation, big_sur:        "1b39b0c60660ac9923edcbb136c622262f8580242e4f290892a6e563bfbe599c"
     sha256 cellar: :any_skip_relocation, catalina:       "1a95713c44fb24066a265f7bc6bd423fbddef1448675e0121214e1fb02779ff4"

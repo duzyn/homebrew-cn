@@ -10,6 +10,7 @@ class Hut < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e0b83a057b73ed2e83faf0532aca951b428765492920ab6056ac70839bd9ef4e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bfc5ed449fd04f519a390e2dc26410bbfd2c7e3f6c126a3e7de1a0441deaab59"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b1341ff46e755f2dd33ec3125d5c0ba89162a9b0414ef13548936be1c836fec2"
+    sha256 cellar: :any_skip_relocation, ventura:        "cdd363c7a75446d51bbb7b8436ac60cee73d0be1c8086cbe58f8338d3fe48e81"
     sha256 cellar: :any_skip_relocation, monterey:       "442565002fba9b989f0a3f3b5de14259acfd8f6bcbb1ddcf196b7eb21769cf05"
     sha256 cellar: :any_skip_relocation, big_sur:        "229565a85bb337f627ec70c9984b675e0c54c1c2e8b7cd81ebf9a3a7d3f82f37"
     sha256 cellar: :any_skip_relocation, catalina:       "e1a84a343f7961cffefaa7107bcdc40a9a85ea13b99743e8ffcf7ef7aaf70cb3"

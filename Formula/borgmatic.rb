@@ -3,19 +3,18 @@ class Borgmatic < Formula
 
   desc "Simple wrapper script for the Borg backup software"
   homepage "https://torsion.org/borgmatic/"
-  url "https://files.pythonhosted.org/packages/ff/6a/436b4b3a3f38f62261bf4a7e106c01096f36092a968880ee91686206b60e/borgmatic-1.7.4.tar.gz"
-  sha256 "b1b1e46252e12f42c17a0984c40ace10fc22d52806f0d687f2d0a1a99869a007"
+  url "https://files.pythonhosted.org/packages/ed/94/a2c04e1318b0a2648548a9e47af3f8eb063e3c6a4a3921d3688ddec33b1b/borgmatic-1.7.5.tar.gz"
+  sha256 "914c547028d3d6d94001e256082b8a4d8eb38db0c2d9948483b3b9712fce4b77"
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "16bcd4891083cc41ded92d07141ac56a231b885bb484160183937cd5f2360bea"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "519355fd42c87addf6b5749c25f5918d410dee31d973d69b64920bb616eddbf0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d8a67afe44dc2b59ff3efb754bbe670a7bc530cb1c37607e7c8148cf31cd1e9e"
-    sha256 cellar: :any_skip_relocation, monterey:       "796a43261f07c224ee9fcea36032c7df379e1c19b9297725f5217f5e684b5a9d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5949cf08995b52d94f5f7461a37d974b60b2a34e4da03d4b7d6ca07fa756f162"
-    sha256 cellar: :any_skip_relocation, catalina:       "e0130f22becee542b612bc004ec0282063c02e0f9e2d25e5cddcdc1da4fa3dee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ffe1de21c272458b76ed9877c2ddbff08d4b454fd55884eace5e6784c4e7be7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "72b69f482f40d65e9af725ee078a09d38885d6928dec85800283e16231265ece"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7a17facc23d595296c99c42370a61d1b4af0858386c07edeb1746d19a047aab3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23779eece70d8322592bc87f4e38e0c76afe2ca6290b44ca638e89e06cfc7ad5"
+    sha256 cellar: :any_skip_relocation, monterey:       "e1d62285d920f5c52e87ac0cac21cb21b0836b49fd3e869824073a7666ee48a3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f5d7c96eccab1cb86a708cf0c0303ffeda4da964eb003c3c015a13838c870423"
+    sha256 cellar: :any_skip_relocation, catalina:       "8783dbcb88e8b52a9ec2ca19384982caa1a22e1d323b3dedfeae7ad4d4c5da6e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3927d54d8a7162eec26688e17db94c498b66a309e5c067d315a5af649e3c6b07"
   end
 
   depends_on "python@3.11"
@@ -66,8 +65,8 @@ class Borgmatic < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install

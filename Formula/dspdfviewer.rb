@@ -11,6 +11,7 @@ class Dspdfviewer < Formula
     sha256 cellar: :any,                 arm64_ventura:  "07998857ede66fe92b0600f4371f7055e39bcf53ccefe2f422d8bf5ff7dde603"
     sha256 cellar: :any,                 arm64_monterey: "5608e07059285b8fa01a4ef9da50bfabc88d45daa892440ca1d6964034005c54"
     sha256 cellar: :any,                 arm64_big_sur:  "4b1da827d7fd1b37568563024d6de2cec601a61273870c07caab6e198f4d1275"
+    sha256 cellar: :any,                 ventura:        "bd880bedff37f19dac5ac5b1969cac0c4f5218ebbc00d43236be54b9dbc5bb17"
     sha256 cellar: :any,                 monterey:       "e5cfd303e5e674878ccc916255b2badb33fb5affa3144df5e0f340afa27b77fb"
     sha256 cellar: :any,                 big_sur:        "049556ce9aba7d17efc8c11ca533a171efedadcf534b03303ada5ed8c76ef66a"
     sha256 cellar: :any,                 catalina:       "a1ca2f5a517c2a798990ef0f19671c9714e932afd2066c9b11a0ee39f577c072"

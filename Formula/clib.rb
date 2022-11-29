@@ -15,6 +15,7 @@ class Clib < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1ffd1861f4f095a27e4129f870d526029dec92ff3c4f131eb4f7530fdd4bc8ae"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "781296e2090865f203899e8696fe7f8be436d096f385bc248284f206d1b678be"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2df177e67efa93d00d574848f26710b3161712112e8b8849d32ced7d7bd586ac"
+    sha256 cellar: :any_skip_relocation, ventura:        "66b5451cd450fe8c350a2c9e7b316222e9b6e88d8d815c3f309e62e09e865a87"
     sha256 cellar: :any_skip_relocation, monterey:       "6ad03eacc8657c26d995a63e12d5dcb6ea00f03764af90a14278dabbe70d6799"
     sha256 cellar: :any_skip_relocation, big_sur:        "9c1c5c80c9f86d16d76e54c072bba3cc6da95f15cadade9a19a82b7bfabaa4fb"
     sha256 cellar: :any_skip_relocation, catalina:       "db7a9e4163296cdd137e2a5d4529794fb49171faf423767413dd71244b461460"

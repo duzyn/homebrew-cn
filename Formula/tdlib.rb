@@ -10,6 +10,7 @@ class Tdlib < Formula
     sha256 cellar: :any,                 arm64_ventura:  "90ee842a87597f9d18d7459e89a71ec41ff1ff2bbb815ae33941a81a9842c7cb"
     sha256 cellar: :any,                 arm64_monterey: "00e02b03043acd904f3a6422f32e1cef717262c802b1a26bafd392384c392feb"
     sha256 cellar: :any,                 arm64_big_sur:  "8be24a3d5ff903fb42d8a50e1cdf74d15222cecd602f1b94fdf1ca1767ed0937"
+    sha256 cellar: :any,                 ventura:        "3b034d9e53b98e7848b1567fe9c3fd3d91f6954bafe22be51ded94e191f36392"
     sha256 cellar: :any,                 monterey:       "a2c1f2879ca86f6fc3621b097ebead6145a87d9c4404ceaa52a4506fc8e6d8b5"
     sha256 cellar: :any,                 big_sur:        "7de0871fcfc2f560f2737a017d4466ac9924a275b8b1f812328e23a590eea183"
     sha256 cellar: :any,                 catalina:       "4f83585dd6cc3635b37e93e89db0c939ab0d0e47dff327d2ad5a5357a038777f"

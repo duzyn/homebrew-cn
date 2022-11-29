@@ -1,19 +1,19 @@
 class OpentelemetryCpp < Formula
   desc "OpenTelemetry C++ Client"
   homepage "https://opentelemetry.io/"
-  url "https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "2ad0911cdc94fe84a93334773bef4789a38bd1f01e39560cabd4a5c267e823c3"
+  url "https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.8.0.tar.gz"
+  sha256 "8eddcbeae191a58d2d2a19305ed0a60776e43999eb29b64536566ba24506a6c1"
   license "Apache-2.0"
   head "https://github.com/open-telemetry/opentelemetry-cpp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5faaebd07083a0f13d538596dcee302039489d3677bc837958fd0f21a450a17f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cfabdc1e29b3b0e943d45ad93d160707c35fc6398ad62836f261e6cdfbf236d8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6653fd2894604d8cdbc0de8f25b57a6a08627ea279877896996ec3d86f41ff71"
-    sha256 cellar: :any_skip_relocation, monterey:       "2aef87fe3a98aea435ce8f0c1d27e4c50ce6183be352a8775185ac95eacf062f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "48c8302a7a0477e03bb130eee6d41cc03885b7b0fbfe03e9f106db12b266e6d9"
-    sha256 cellar: :any_skip_relocation, catalina:       "44fff805e39b53f35575bd530213d20850ed5b48838da778899c7a0aa8b31797"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d547b94f44390455338331435e6deca5f81bedc4473de9b65e63e8618ef7e69"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b98c9e00d2ffeeba947d348c8a54e91eb24f7a8dde5ba2fad68e0b7140630b26"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d46860b60e02d5a5713da2c5d0dae9d59d102c425890b8da8d6f3fca2200d4d7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a9b28601f0f3ab9d8305a1d6b52519fd19e4bfcb763583a1b0d01e8dc0f5e5a"
+    sha256 cellar: :any_skip_relocation, monterey:       "372f3e6122a52d8df5556dd44f5fb6306b8d04f035310501c0d6733f119310ef"
+    sha256 cellar: :any_skip_relocation, big_sur:        "faf0f34c5992a03ea7d7136bc48bae31ac3b829ae240d35cbd9c87c094d59dcf"
+    sha256 cellar: :any_skip_relocation, catalina:       "6dcac4098af40ddb983e2243cfe6fd430d023c99fc0004c383d6e609c5755e3e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6086e5d1710fe73fb8652f73fd191b934877962c52f30345d3c0c54c9c6ad10f"
   end
 
   depends_on "cmake" => :build

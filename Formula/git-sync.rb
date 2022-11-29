@@ -9,6 +9,7 @@ class GitSync < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "17fb3fb347d77a4b35fc1b804a0355b359543f03f4e81426b4ca6e1a48ba2b95"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "17fb3fb347d77a4b35fc1b804a0355b359543f03f4e81426b4ca6e1a48ba2b95"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17fb3fb347d77a4b35fc1b804a0355b359543f03f4e81426b4ca6e1a48ba2b95"
+    sha256 cellar: :any_skip_relocation, ventura:        "f0ec289a440fd4c5057d43bb786049fc203618f6c847450bf378c28a062facf3"
     sha256 cellar: :any_skip_relocation, monterey:       "f0ec289a440fd4c5057d43bb786049fc203618f6c847450bf378c28a062facf3"
     sha256 cellar: :any_skip_relocation, big_sur:        "f0ec289a440fd4c5057d43bb786049fc203618f6c847450bf378c28a062facf3"
     sha256 cellar: :any_skip_relocation, catalina:       "f0ec289a440fd4c5057d43bb786049fc203618f6c847450bf378c28a062facf3"

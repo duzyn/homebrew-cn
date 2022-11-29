@@ -15,6 +15,7 @@ class Cproto < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "eb7dd61aa183b319b81fca2e4153647ff1805f20b3a5b35603fd90fc9d841946"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c2907353ffb14ed7b6972aaa876f5012417fd17b6274b5d5ecf496bc40450794"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad283dcee4c414e2e395f42dafb30c2fabe2e1bf59c564273c93f82aa10cae3a"
+    sha256 cellar: :any_skip_relocation, ventura:        "368fbe200ff2a41d814ed0587a2c60c377fa91721cc66eb7c4e325b36fd9a957"
     sha256 cellar: :any_skip_relocation, monterey:       "29f7fc4efd440cb4672468744eeb43e4d952c6f75a8da271b4a807d0e767ecc2"
     sha256 cellar: :any_skip_relocation, big_sur:        "c2a613fe2f6321208ffc402856d463b072e975b85be728cca1fe3ec47863e9e8"
     sha256 cellar: :any_skip_relocation, catalina:       "83cedf6fa84b3d01c5bd5883d5e52291b8e63861cf493b6492bf2250b09e02da"

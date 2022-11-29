@@ -6,23 +6,22 @@ class AwsGoogleAuth < Formula
   url "https://files.pythonhosted.org/packages/32/4c/3a1dd1781c9d3bb4a85921b3d3e6e32fc0f0bad61ace6a8e1bd1a59c5ba0/aws-google-auth-0.0.38.tar.gz"
   sha256 "7a044636df2f0ce6ceb01f8f57aba0b6a79ae58a91bef788b0ccc6474914e8ee"
   license "MIT"
-  revision 2
+  revision 3
   head "https://github.com/cevoaustralia/aws-google-auth.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ef217182592b40c25d277dd16ef528bcba98f56e716db1ef6b58575dad5b517d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "05a8e68250bfa2a11bbf3b6e0f446aa2ed4968bbbd7a154b95010b2bca26a48d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41d74690e0e9180f8eb60aa13ee8d811d0ab745cb3481997fdffc8067f682e54"
-    sha256 cellar: :any_skip_relocation, ventura:        "81c73507d32f796aae601b903f9f39dba0c8473e7a41e249579a7f34d3e377f1"
-    sha256 cellar: :any_skip_relocation, monterey:       "41126d6d2b988563d1d438153bcc73a2ca9601b1833cbdafbe7728f065a0d014"
-    sha256 cellar: :any_skip_relocation, big_sur:        "52781c082bcb75ded45d01d7375c9746fdaadf0a6cd5961e437a0a87149e9a47"
-    sha256 cellar: :any_skip_relocation, catalina:       "8cfa689166934486ee9c233fd44cb2d0be1448d3bb5cde485c6b092edc9c37e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3587dc573cf3ef4d47534376b6896d3b211945e386aba8a962638f4693d8d73"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "799829315c71753d67eb9d92650da7cb68c7e6d20e61aa9b8e240c016924c4c2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f258e73f9cbb4abe057479be9eb1765e611e15a5710ecc5153932a8f2c305007"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "de22101e3a0c9c24d5a0e50fc9f43530cfbe97c6bd25ec22d3d9218079bccc66"
+    sha256 cellar: :any_skip_relocation, ventura:        "a267b7c8886e0a76c6300401f3d5d6c494b2416b23559121d9549e1bf574a9d3"
+    sha256 cellar: :any_skip_relocation, monterey:       "8e96617684541aaec30cafe198c7add06d7d7c309f14f705fa2b4a179c8783cf"
+    sha256 cellar: :any_skip_relocation, big_sur:        "118d86ec1b2ea50f34cfde2d83914386c4e4bf265cc90013eade023522f21bcc"
+    sha256 cellar: :any_skip_relocation, catalina:       "85f36f110ca30bc18ccfaabf6896fa81d135ecb304afb02e1f4ad9ffffbe6a8d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e69b2622dd0080f485b527efc697cf6a28699b9e15f57a788afc8bcfe2ab4810"
   end
 
-  depends_on "libpython-tabulate"
   depends_on "pillow"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "six"
 

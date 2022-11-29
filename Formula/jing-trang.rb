@@ -11,6 +11,7 @@ class JingTrang < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "5dcb20d5192ca4d965c42beae8adab82fc8b919ee96a11d2d315a06e7aa214d6"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ee7b261bf84183f59e0c0b8d37c8fe8802297eaf894a5d132cf58a15b66c57ba"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a22bf4effa32d1b17b54a975e7b8dc7ca08b9991696fee7e9d95d649d6a021ec"
+    sha256 cellar: :any_skip_relocation, ventura:        "fe895e7b7d28c66cf7853b53658c4d972756a33072d98039f306f70ea537f3d6"
     sha256 cellar: :any_skip_relocation, monterey:       "6e5d22a93244e1234b68ff9aec22c9f757def6cdfd127f00ecf9c426071f321c"
     sha256 cellar: :any_skip_relocation, big_sur:        "c44cb54e793d544152dd0cb28564d52a731da574aa704e4197f21c04097875a1"
     sha256 cellar: :any_skip_relocation, catalina:       "7dcf958640d82be13d25eaebd84af8f1db6f151ada7c942609a58a14dedb5c5b"

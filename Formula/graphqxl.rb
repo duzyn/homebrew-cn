@@ -10,6 +10,7 @@ class Graphqxl < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "93d6f8d6ad4026241875b01a7631ed0ce8793ad92d216b06d3ced52793ac26e4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3c542b56c5e57979446ae3feeb9a7bf9108c2d8225b37d3407eec13b31ef12b9"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3f440a7b0ca5121fe2c789be2eb4870b834945f0fc4a3ed406f9114b92899fef"
+    sha256 cellar: :any_skip_relocation, ventura:        "e99b5fd25c412d09dd6629471a653542168d9f881ea3c41cd3adf2126859bba3"
     sha256 cellar: :any_skip_relocation, monterey:       "ac92d1c6d96c69e15af0a891b181822bad206a16e0d4ee696db7712655f74167"
     sha256 cellar: :any_skip_relocation, big_sur:        "3e80301fb8981e95e0d8fd5e287ee59b54081b6e84475fdd4a23b1035661743e"
     sha256 cellar: :any_skip_relocation, catalina:       "0a8154dd5df892706a318e38b74fb0e9a8222f81e6d19e0cee8a0ef4a6546336"

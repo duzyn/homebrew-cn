@@ -6,22 +6,21 @@ class HomeassistantCli < Formula
   url "https://files.pythonhosted.org/packages/f0/f5/a90000b810751a6094761ed5fed3a6cb746c3c8be3bd1c5ed525e77be69a/homeassistant-cli-0.9.3.tar.gz"
   sha256 "daf9c2a256cd2e63fc173c7c96b3462211f045a66639778302eb4f9d125b06a2"
   license "Apache-2.0"
-  revision 3
+  revision 4
   head "https://github.com/home-assistant-ecosystem/home-assistant-cli.git", branch: "dev"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "810f0e18395b3cc1314392674cc79e388bc317d0cdd487989d87d8e5e3df4054"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e33afa6eb97e1300e6d3390d35f79da3442779ada73869341f0192429ee6c591"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "340c26e1a54b6711a119ef7b9129a3f078853d3dbf4bd90f14727f9604f60256"
-    sha256 cellar: :any_skip_relocation, ventura:        "03014795a707b5f412290c5441ca6e2000cb3c0c92d1b4fba769eba36ce9149c"
-    sha256 cellar: :any_skip_relocation, monterey:       "a4abf669476f84337093f0582a225898a2daad2abbf5b14765e9374baef97de0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7077a474c18672a9d7c06a628ac2dbef8886e3b4a7574002147931d1e0e98869"
-    sha256 cellar: :any_skip_relocation, catalina:       "f1ce6f4de433fecb0719b9939c8702ea12eee4d65a422b0635323f036155f756"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d18847a4f8742019ac605a8d5b721373eb80f6b1bfdb39569b4f4f8ca1082ef"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cf6165a9a90f7b13a489bf3c98d689dee07d8cb2cb984509992044bba592154c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c632f4da7ad76fe9de8141967020fae08aa66f868c044946fc1b4fd8657402c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7afbfb7d53d12290ded09a7ea7cbb5186968593126e55f8840330465b5ed99a7"
+    sha256 cellar: :any_skip_relocation, ventura:        "f141bdaf32616d816fa56c7449d5232c40a5ba2d219023c5eb7b72ceb88249e5"
+    sha256 cellar: :any_skip_relocation, monterey:       "a1b88b06b115fa7d65b76ba030a38bd1c12a27dfaf08fb4af74a7e68e4f4d574"
+    sha256 cellar: :any_skip_relocation, big_sur:        "370e4e57e5acfcdce31cfc8f5b2eb6a71b348541b4cd69393a47b9754f9ffd67"
+    sha256 cellar: :any_skip_relocation, catalina:       "9b04e38925cb9c654ce73893a183830aac138969747bf658a4375c7ef3ed73a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cac8c5d26f7cff4d14b92ca885de3a3dbf18a9da3d1487cfb8a265c77ab3d847"
   end
 
-  depends_on "libpython-tabulate"
+  depends_on "python-tabulate"
   depends_on "python@3.11"
   depends_on "six"
 

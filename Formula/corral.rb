@@ -7,13 +7,14 @@ class Corral < Formula
   head "https://github.com/ponylang/corral.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "86955dcf9e40194f90690c48d20a7b140e0470f832a04b1411bef8d42eeb92eb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b1b65d56f0f4bb6014f7b678b7ef5fecef1ed93bf5dea0bb1a7b377fae853e9b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d39b4d07553e5341bd076d55e94f01dbb7ae0ad96a898124841ea6144e369e1a"
-    sha256 cellar: :any_skip_relocation, ventura:        "c504e9ceadfd7974a536ba2eb3dd9ecc9a0fa9bbe78a77acbc175de1334d4edf"
-    sha256 cellar: :any_skip_relocation, monterey:       "42c47daa92162fbe3b478ed8ea365a9e4a4733edc49becc3ba2eadafe98c5313"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c33c460ce05fc30ffca5c35b03192c7a7aa52f09586aba73f38feb065ed6110f"
-    sha256 cellar: :any_skip_relocation, catalina:       "472862d6c81ffeef5d98d176e31137fd14f56737ed4b60ca2d874300d7d60b01"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5d4aed854a842fa9b90d3432977bfbc2c0dab679aa47bc5fbd06e008c5b0e79b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "29bb85039ca61a8285288ea2164804f5080606be32c2f2e565087b0264bb5b39"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ead180d0fa14eb339b66d21561881e062da053735adc81103cb6fdbe0065fca2"
+    sha256 cellar: :any_skip_relocation, ventura:        "ecab557f3ed4061172220098f752dcf19df7850c7c92c93c4662b4f30345854e"
+    sha256 cellar: :any_skip_relocation, monterey:       "0bf6fe6f11477af16eb18a8ace2c03631226b114fd789d509a4a72d1e41e1075"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a44be086d20d74c119d1cd236a51f7e905b9960acafcda6ccc92d865a26e832b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "861421158f38aa60bc7cefa4b6cc2303805c93040a58a44fb1fa15acd0416c73"
   end
 
   depends_on "ponyc"

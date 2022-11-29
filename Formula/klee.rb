@@ -4,7 +4,7 @@ class Klee < Formula
   desc "Symbolic Execution Engine"
   homepage "https://klee.github.io/"
   license "NCSA"
-  revision 2
+  revision 3
   head "https://github.com/klee/klee.git", branch: "master"
 
   stable do
@@ -26,20 +26,20 @@ class Klee < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "8e49f018dc471ff60837f551a84d0c36464f8a5640feeff688735dc943515551"
-    sha256 arm64_monterey: "318ec7a58f3fd976b910640c295056c97317515bba76562032e054aa8d578b03"
-    sha256 arm64_big_sur:  "4a6fb2dc1015463aacee3532ede846d084564098ef9edfbfe0cafe67b20c3785"
-    sha256 monterey:       "311198ac0aa74278253af9f652fdc65855b740e9cfc9abcdf2c7db2ec3a76ff7"
-    sha256 big_sur:        "011735579f79613242672d9bf29af2260af5ee1eb5508c780bf1d57d8949f4eb"
-    sha256 catalina:       "06f5ad2254003bf38732f0b67c4712d7da1c599b4ae7198b2d4eca93af4dc208"
-    sha256 x86_64_linux:   "0f9d3cdc8fd55a17224231d7525e525893c672835610302cc32ce2db81bbf5a5"
+    sha256 arm64_ventura:  "638d60b7eef46f041ffffeae39a0e7f07757c421fca64f0e96ec377bf2dd3c45"
+    sha256 arm64_monterey: "72652c1a38180b7968574e054df3b358008efce1ea52122b3ddb570a8e763ad5"
+    sha256 arm64_big_sur:  "bf8d6948e59af26ca6da46ca3d0ed7d3def25a566d03130fd975e67c7de7a884"
+    sha256 monterey:       "4cafb0953113c315d8192e8ac828b90f178d401fcf47c697524e9db90898dc04"
+    sha256 big_sur:        "055cc3545d7dc5affe40a69e998e33e1b0981ce8aacc5c1ab692665e37b0aed2"
+    sha256 catalina:       "6251ed9651c7109d3c09f136176b30df7bd99e6992db38788fa648bfe4399413"
+    sha256 x86_64_linux:   "38a68b9001974655d9d995bb06a464b4c5be5f27995668dbfc1618e6d9a7ec8b"
   end
 
   depends_on "cmake" => :build
   depends_on "gperftools"
-  depends_on "libpython-tabulate"
   # LLVM 14 support in progress at https://github.com/klee/klee/pull/1477
   depends_on "llvm@13"
+  depends_on "python-tabulate"
   depends_on "python@3.10"
   depends_on "sqlite"
   depends_on "stp"

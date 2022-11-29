@@ -10,6 +10,7 @@ class Freeling < Formula
     sha256 cellar: :any,                 arm64_ventura:  "051517f926b0161becac7bd8dbc3f3964839e044de99cefb272e014bf932864a"
     sha256 cellar: :any,                 arm64_monterey: "526c63df3912ae9541f86bbb1e89a14c23cbc3c2233fb1b24aff9811e7994e23"
     sha256 cellar: :any,                 arm64_big_sur:  "c6a82a3e57695acc5fa7842cc01035954ae342ad4edaee63c2ec1f58aaf4d7e7"
+    sha256 cellar: :any,                 ventura:        "e506f3d52f1f785bdfd63462f9301268a4447b1edec4f7a9816877dbd3eef909"
     sha256 cellar: :any,                 monterey:       "dfab507ba6f80dc5985a0d976e66b8780456aa9b39c10d4ac15161e194036ca3"
     sha256 cellar: :any,                 big_sur:        "7a9a3cc243d0617f4aec9a7b4c756a5b61e252b638200112c211cd66b9b5f3b5"
     sha256 cellar: :any,                 catalina:       "15c7ddf25814b4a40358824aa3502a7f2f0d8fc4513963ba42e14a9db73e58b4"

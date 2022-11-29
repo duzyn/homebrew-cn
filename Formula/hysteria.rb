@@ -11,6 +11,7 @@ class Hysteria < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "496488fc9dd0f0b5578d151cdb0a5b2df051bcfaf07b8bcd01bdda526b3d3a20"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "223f765d16c52c6e35835a1e48e6ae9956f8b5d8a52de1c223da114f346a5a5a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "285a7c5aaaaafced643689d1fc07f1b25f7ce3ac7d5d8a09690e5e85d90a352b"
+    sha256 cellar: :any_skip_relocation, ventura:        "5fc3e1e72740bd258548a2bb2f156e6e5a0da3f3f99a979e07fd120ca79ccba3"
     sha256 cellar: :any_skip_relocation, monterey:       "8fc8f7f2a22c1a07b65b14264eddadb17a95e4251d3ad486c368542ee7491e5c"
     sha256 cellar: :any_skip_relocation, big_sur:        "beba1ffb750637d6eb00941a1e7c236e41796197a38b117d955577bfc177c1e4"
     sha256 cellar: :any_skip_relocation, catalina:       "31ff35aed85c899efd3ff5b3bd48e32f0828296d4c8a0934bf7f970c538c2a88"

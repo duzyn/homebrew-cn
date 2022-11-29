@@ -12,6 +12,7 @@ class BrewPip < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "6d3524a3e54dfbedbf7cb89078d07ce62131c7d01ad413b9a299c21f68325642"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6d3524a3e54dfbedbf7cb89078d07ce62131c7d01ad413b9a299c21f68325642"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6d3524a3e54dfbedbf7cb89078d07ce62131c7d01ad413b9a299c21f68325642"
+    sha256 cellar: :any_skip_relocation, ventura:        "d06a7bf79cd911d10bb3dc6679a7e47fb61b0beaa3ab86eb75dd6ef6d1c67823"
     sha256 cellar: :any_skip_relocation, monterey:       "d06a7bf79cd911d10bb3dc6679a7e47fb61b0beaa3ab86eb75dd6ef6d1c67823"
     sha256 cellar: :any_skip_relocation, big_sur:        "d06a7bf79cd911d10bb3dc6679a7e47fb61b0beaa3ab86eb75dd6ef6d1c67823"
     sha256 cellar: :any_skip_relocation, catalina:       "d06a7bf79cd911d10bb3dc6679a7e47fb61b0beaa3ab86eb75dd6ef6d1c67823"

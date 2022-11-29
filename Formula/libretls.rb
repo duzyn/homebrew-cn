@@ -14,6 +14,7 @@ class Libretls < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c336174cbb71ee26c7c5450c914134c2f2dac6c8c33a9dcc3fa2f5b40bba83ab"
     sha256 cellar: :any,                 arm64_monterey: "00e8653e8a3e9cb237756b540dfc0bcc94b1f27067b4b9d02112e4ca1e8c57e2"
     sha256 cellar: :any,                 arm64_big_sur:  "bb69e5195aeefd21ec4dd827b714f9e0285f9efdc623c39fa83bf18a17e17d02"
+    sha256 cellar: :any,                 ventura:        "688e6640956b954439169a7a210065520648bb1d034d2906ea19f2627c2b620d"
     sha256 cellar: :any,                 monterey:       "489fb71ab2c232d4733f4bff4c55dc2c9e0673aaf63f75ca749b443d06e744eb"
     sha256 cellar: :any,                 big_sur:        "d499ae8fb0216c9ae2bcacb9a06878c43fca49d085a8bd7a9a72beeda189f34e"
     sha256 cellar: :any,                 catalina:       "5a9c93883b7e683bd6508a7851055cd46f8129ae77979a96105792a13753e54d"
