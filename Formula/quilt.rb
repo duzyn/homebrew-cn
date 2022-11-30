@@ -4,6 +4,7 @@ class Quilt < Formula
   url "https://download.savannah.gnu.org/releases/quilt/quilt-0.67.tar.gz"
   sha256 "3be3be0987e72a6c364678bb827e3e1fcc10322b56bc5f02b576698f55013cc2"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://git.savannah.gnu.org/git/quilt.git", branch: "master"
 
   livecheck do
@@ -12,16 +13,22 @@ class Quilt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec75101f4f4ad66c663993386e2f73d5ddb9537fd081117662123d2d7e7f25db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "484b4b704012510ac4a5a87c8d4ee1084198a0c281bad54f8589d1c916e54450"
-    sha256 cellar: :any_skip_relocation, monterey:       "ec75101f4f4ad66c663993386e2f73d5ddb9537fd081117662123d2d7e7f25db"
-    sha256 cellar: :any_skip_relocation, big_sur:        "484b4b704012510ac4a5a87c8d4ee1084198a0c281bad54f8589d1c916e54450"
-    sha256 cellar: :any_skip_relocation, catalina:       "7b77455170ea9df640510f0ca82de752659b94e26b3c73b6aaa6ba56bac2a309"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2b00e285ecc519ad6d6a340c3cccab0c85d02a36a02df29eb002b7dff4e1fa4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7dc018071ad510cf518a434ab4111cbe7c9818ce7e128cb0db45c9b070f28999"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc016251e7f6e00724b265762408f2f71c3414690f8c7e3e9b680af3f78240ef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a0dd81f8d4dadfd624bd4cdaf6521e7530c722938856ed515b25ee43d48c70b"
+    sha256 cellar: :any_skip_relocation, monterey:       "fc016251e7f6e00724b265762408f2f71c3414690f8c7e3e9b680af3f78240ef"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0a0dd81f8d4dadfd624bd4cdaf6521e7530c722938856ed515b25ee43d48c70b"
+    sha256 cellar: :any_skip_relocation, catalina:       "d8bd4472f644e650e62b719bbae716c2f2c40c159dd6155e2d6fe74cbb02448e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a674930a170db7d564dea2f5a6cfa90efbb59dbf3d6d801f7554c6306a5905c8"
   end
 
   depends_on "coreutils"
   depends_on "gnu-sed"
+
+  on_ventura :or_newer do
+    depends_on "diffutils"
+    depends_on "gpatch"
+  end
 
   def install
     args = [
@@ -29,10 +36,14 @@ class Quilt < Formula
       "--without-getopt",
     ]
     if OS.mac?
-      args << "--with-sed=#{HOMEBREW_PREFIX}/bin/gsed"
+      args << "--with-sed=#{Formula["gnu-sed"].opt_bin}/gsed"
       args << "--with-stat=/usr/bin/stat" # on macOS, quilt expects BSD stat
+      if MacOS.version >= :ventura
+        args << "--with-diff=#{Formula["diffutils"].opt_bin}/diff"
+        args << "--with-patch=#{Formula["gpatch"].opt_bin}/patch"
+      end
     else
-      args << "--with-sed=#{HOMEBREW_PREFIX}/bin/sed"
+      args << "--with-sed=#{Formula["gnu-sed"].opt_bin}/sed"
     end
     system "./configure", *args
 

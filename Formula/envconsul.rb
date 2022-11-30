@@ -10,6 +10,7 @@ class Envconsul < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b4da4f61b039ec8ff4cd8eb37166a9b337b4bb68d194da5897257a005f2a1dcd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c4c1b48f0ee4bf5ae510177ce3a9e5c785b7c515a21efc1383d93b03525634ac"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f75ee73c50f5050be219e82e9b00e7db5021e0a842cdaf3fbb97f558b9cbb6bc"
+    sha256 cellar: :any_skip_relocation, ventura:        "9a11bddb7fef6952f459fc3cc7aa20288b2d5371c00a68a5f51cc3f476308ce6"
     sha256 cellar: :any_skip_relocation, monterey:       "bab521f33f53f6e438ffb6ec0242b000cb77afdc6f2aa169db4f96522b6b84ad"
     sha256 cellar: :any_skip_relocation, big_sur:        "8bf147b061f72477077fed4278be1ae0a95db5ad7422f96536925e0256e343e0"
     sha256 cellar: :any_skip_relocation, catalina:       "b7fe23483d90a0556e10fd933b663ed17290672a878ead5b772dbadc1fed01fc"

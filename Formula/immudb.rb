@@ -14,6 +14,7 @@ class Immudb < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0b7307129ab0d59d3d59552982302f7f216c61400fc1dcbbf4517d41667a59ad"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "75140b5233891e8de7b28ca9c1c619e947c6929bb296f54545e1b9348447bec2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "627415c161d24643b62527b7d0c61e8a7da4ac9cc8d8baadf8a6c152f0bd0ea7"
+    sha256 cellar: :any_skip_relocation, ventura:        "59c47db568fae530b2a98df9a641615157a655baf3439f130247f0129e77ba8c"
     sha256 cellar: :any_skip_relocation, monterey:       "fa19bdc637ec2e47fcea01014edd89d42e6c50fd160d68d5031377c94200beec"
     sha256 cellar: :any_skip_relocation, big_sur:        "d93eeb424e0fe7f26ef6c6628e07f2bc5f5f111caff169a67b7beb01227788a1"
     sha256 cellar: :any_skip_relocation, catalina:       "5bcae81f2c054c1c4a334720cbe62a4de9653f0d010915e2a40e8a77ab6db04c"

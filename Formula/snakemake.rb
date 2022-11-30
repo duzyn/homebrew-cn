@@ -13,6 +13,7 @@ class Snakemake < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "59c149b184a6be142ab887ff08558ae449307ad2f365d419615e6d25bd0774a9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ae32fb28ee9d8ffd4aadec54a91ee13966aac49f834f7bc0a81988810815b5da"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85319e57478b30ef89ee15235750b65cb6f2a7e4b19ce009a566328cc27e27da"
+    sha256 cellar: :any_skip_relocation, ventura:        "9243de1a9b8ec62ee7feb0a91525dcb052559e9eac167e8489cc841be093d127"
     sha256 cellar: :any_skip_relocation, monterey:       "9d80625f381c998beab029e9fcbec35ebe5bd77f9a2bc8c7133fe4721e31fb87"
     sha256 cellar: :any_skip_relocation, big_sur:        "f4ca138e55748c5a097167e0aa4521149478a9f3a432e785db10a2202c119abd"
     sha256 cellar: :any_skip_relocation, catalina:       "f6d6ade863fa4504247f5c30cd6363c45ca8778431432ca3b1c55d63d05f91a7"

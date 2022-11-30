@@ -11,6 +11,7 @@ class Jj < Formula
     sha256 cellar: :any,                 arm64_ventura:  "dbc2425af53f76825a156ea37eb1dc07b91f6b3c7b42a387c68cebc3a1abf3ce"
     sha256 cellar: :any,                 arm64_monterey: "3f2be89fa77a5e3b95d111728f7ecf0e112d1c42a757e11ab2dfec3f67c9240d"
     sha256 cellar: :any,                 arm64_big_sur:  "e84e321994ba5567a14bf20e0faafcffbf47a9c11ee80f84734915561944b414"
+    sha256 cellar: :any,                 ventura:        "ace5f912e2bef127bdd8a12c47342298ee28aa2d3ec5a1cc724cfd46e4b2c0f5"
     sha256 cellar: :any,                 monterey:       "19afd506a426d68190ccd3ced98804fbafcbbec02c293688717c32b5fdeceb77"
     sha256 cellar: :any,                 big_sur:        "77d471140cacda3819826b17dec0a451c5328141b04f324cfba458b2f1067ccc"
     sha256 cellar: :any,                 catalina:       "588a26d6a31f505f7e413924b34cfebcd679b4f3b44856b70046e36e3aaaf5db"

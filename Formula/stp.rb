@@ -16,6 +16,7 @@ class Stp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d84ab24b1b85d8eb28d0723b906fc994c4c08cd38a79ad55d112f0375d44b468"
     sha256 cellar: :any,                 arm64_monterey: "b9188be36cf6e66a2deb2323a203992512aedde79b0678902ec2b2b3ee6aaf36"
     sha256 cellar: :any,                 arm64_big_sur:  "4e97d6014677de6823fd686b367cf48a25ecb596f4923c7b03c840301dd8910f"
+    sha256 cellar: :any,                 ventura:        "8276beff4ac3e87a588f4dbf4c93dca441b657b60d02a9d39cbcc22b7a1f8f5e"
     sha256 cellar: :any,                 monterey:       "a631db1136e1f15dbda721c94613a4fd8bf1b379936b786c8c2c0cfe05ab3904"
     sha256 cellar: :any,                 big_sur:        "94e8b59b141f1d5ecf46f2f83613dcc5ad9387757bba424f9e952ee3d057757a"
     sha256 cellar: :any,                 catalina:       "4307faad5886b37273c1ecb89b4986953fe5d9bb8bd17474a64f9c3c31fb2cb2"

@@ -10,15 +10,18 @@ class Stormssh < Formula
   head "https://github.com/emre/storm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c267f4305110b8eb8f3e7e0a93f16b5feaccf6d41f73e5d793cbe80d5554f3f0"
-    sha256 cellar: :any,                 arm64_monterey: "2961d1ba883aa6a9a43337427b9fc5590f5cc6c625e08e9223b65733a0e95df3"
-    sha256 cellar: :any,                 arm64_big_sur:  "b9d2e0c8e4771c2500c0c982555ea67c1f9d03fc549406f9c835a7f17b5770d2"
-    sha256 cellar: :any,                 ventura:        "e374d767202975744a1bfa65fc910330cda18c37084944b9a13da3abed969dc1"
-    sha256 cellar: :any,                 monterey:       "d73117173a785c2e8bfab9119f68446116dac5c69f12f227b728ccfd2673c7e1"
-    sha256 cellar: :any,                 big_sur:        "abbdbd2ff5f5e353ae35da2d3c04241af98b0146930208d5b690ba34aae2d670"
-    sha256 cellar: :any,                 catalina:       "f6cea5e481037a02594f2e36915649d066af92bf72591464392c6082e9fe2da1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed657cf01ff5c89b852554f5dcc5fc1043d79ca472c199ca83f5a306f4fe883f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "1a52f812dc26af292eb286347a38a1b2d1530ff6dba1b87bdfcfc6fd5ed00576"
+    sha256 cellar: :any,                 arm64_monterey: "b946e40a8b373e97d11f4f9f71e07bc4a9d550e2c44372eb8b5f44b4bec6cb02"
+    sha256 cellar: :any,                 arm64_big_sur:  "730ee4ca3a5f5b6c31f8f13da068b1a930688a5b59b05aeeeb7ca3cb7f3bac9f"
+    sha256 cellar: :any,                 ventura:        "66600c88a01a9afb40233fad01f83852cfb195c94b20834ffd4b4756efc9c589"
+    sha256 cellar: :any,                 monterey:       "026e5179db5a2dfab9c92106cc06965503ca796aef68030390df4599f1b25037"
+    sha256 cellar: :any,                 big_sur:        "1a7c8cffd920f3f01fea0b079e55c4fc40a1841b4367812f0c555e08954091ee"
+    sha256 cellar: :any,                 catalina:       "bab62435b3dfac2c01663a99e632bd0c04ff3c299676d40fe94d27508c748466"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df73798729fb9dd5d28e815344850f973d9d469dc270192f8b8d8070a0d3e186"
   end
+
+  deprecate! date: "2022-11-28", because: :unmaintained
 
   depends_on "rust" => :build
   depends_on "python@3.10"

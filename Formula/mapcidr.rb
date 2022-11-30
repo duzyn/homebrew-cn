@@ -10,6 +10,7 @@ class Mapcidr < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "27374dea5d813a0bbfb9c25ef009919bbd293d8168e395566bfc7fe3ab2e45b0"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1ff28ec5763c3775ce995656912276d872d2d50caf2d25810712972186732ed8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb00622c03508f1a01d7e9591483f92a6dd763726ea6b6a79fca3ad04a2a34e2"
+    sha256 cellar: :any_skip_relocation, ventura:        "e967d1b3fd005003968fe2205ef93948910df6aec4db2ee2faa741c185b39084"
     sha256 cellar: :any_skip_relocation, monterey:       "eb84da9690127dff01884a5b734afff978a0e24b2e6492c34cf5d60adb9e64ac"
     sha256 cellar: :any_skip_relocation, big_sur:        "fe88f9c586c7e959824039c2de3c79a631907fe66d30f588abc317608877bbb2"
     sha256 cellar: :any_skip_relocation, catalina:       "74c349a227e82a179b4d16278c2238b7a3b9989e69bd1aee28e182d5cbe072fd"

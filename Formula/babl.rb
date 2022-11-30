@@ -16,6 +16,7 @@ class Babl < Formula
     sha256                               arm64_ventura:  "c7b588991b318ecfcfd1faf12273caf43f675f6dc2a82c30a162c352309dce60"
     sha256                               arm64_monterey: "64c8b2c66d553f2b0de3e8daf1a42ca9801b3ee25a07a1c19a9fc27f6c28b913"
     sha256                               arm64_big_sur:  "4a7ffd11316c9c16c594a10bda037db29c5dedb9b5bb6110a05fe4f95e4c89fe"
+    sha256                               ventura:        "d7d9bf80d56ca5d2ffc43350c6debebfff67d0b1eece68529c180b6c6a9c10ec"
     sha256                               monterey:       "75a5d52d2d35b7cbf9d64d1265c423dcc067cd64943b1f6f7228c6bf8e005770"
     sha256                               big_sur:        "968dcf8b7dc248ddf031bf18e6df7f4c0928415ce9ab80bfa64dac476b1005cd"
     sha256                               catalina:       "271e7ae1cac571441212d26cf2e0f7498e9dfb6990a5f22da569ba7d74835bdb"

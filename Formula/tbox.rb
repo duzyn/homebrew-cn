@@ -10,6 +10,7 @@ class Tbox < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4f6199a1bbd5145dd09b54e94329d4366660fbed36c2b172e7de8ef49589b0e"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d6f13d78f3d4ca21e19ccf13c2d4ee958dc81e89c59c6642e5950edafd9adc6c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df134d4fba56d98b0d7246031d4f50079b9b4f407123d060a0e57de0145f5de1"
+    sha256 cellar: :any_skip_relocation, ventura:        "748d0048b8bb7143001051d9ee8d9c74c3b1496611d9c7db6928f39761b1640f"
     sha256 cellar: :any_skip_relocation, monterey:       "9f862757ce2b77da94a44963b4b5c09bfb70f21b4e2e9b97a507918cbf5f8b0d"
     sha256 cellar: :any_skip_relocation, big_sur:        "45dbbde8befcd4cd820cc20c8d858336f88df268634d103df1439150fb0dd2b4"
     sha256 cellar: :any_skip_relocation, catalina:       "8ee1efa1e17a67719e5293e019099f05663e7dd8c6a60a35353e066ec691950f"

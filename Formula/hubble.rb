@@ -9,6 +9,7 @@ class Hubble < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b17475745a6c2fcfdabccc46ae09d3cac8b00460899d687bfe9119d744a96fa4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "9951a81a642354bd455e52e373e05357721b2bf88c83f143163d84c337fd3688"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f1a4a5f613c7a9e5b08d9d973a1123abce1d00f9c4a9488b3eea1b4af9147eb"
+    sha256 cellar: :any_skip_relocation, ventura:        "859d65ea6c4f6d738b867fef5e8eb6448984cd447fc76ffb5cc9e93d67e3e6d0"
     sha256 cellar: :any_skip_relocation, monterey:       "af33f9f06d83688c492f4d39ddab38fd62804d571591c41a7b9f42d04fc238ee"
     sha256 cellar: :any_skip_relocation, big_sur:        "88c9ec5cd0ae74188b81265bc7aa0280a591485f83633ee347ea3a21293ef36a"
     sha256 cellar: :any_skip_relocation, catalina:       "c080bc80f4b0054623252480a8432d146ae065bf12b57e96323d1ca9c15eb41c"

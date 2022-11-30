@@ -1,8 +1,8 @@
 class Suricata < Formula
   desc "Network IDS, IPS, and security monitoring engine"
   homepage "https://suricata.io"
-  url "https://www.openinfosecfoundation.org/download/suricata-6.0.8.tar.gz"
-  sha256 "253ce3cc0df967ad9371d6ea8d4eed91ec593df3ed04e08229c7cf85780c91a3"
+  url "https://www.openinfosecfoundation.org/download/suricata-6.0.9.tar.gz"
+  sha256 "3225edcbd0277545b7128df7b71652e6816f3b4978347d2f4fe297d55ed070e8"
   license "GPL-2.0-only"
 
   livecheck do
@@ -11,15 +11,14 @@ class Suricata < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "88cf5e70008cc0f00b5975c1437b83ae45a253fd3502d51fcb145da96e900037"
-    sha256 arm64_monterey: "cc96f61071efacc85c0894570a130e5b57f93d607e62acc22124f6250aa72d76"
-    sha256 arm64_big_sur:  "d8e453f0545abcf3a7e90ac387d5a7f2972e2df2f9319bf54d85f2b4f8a1dac1"
-    sha256 ventura:        "8ae986df6288cbb5c988b26eb8791c77745f7c335dc3077f9da6b4d059d7e21b"
-    sha256 monterey:       "2d3f4b2920eabaf94c14808ad9274b70f0c04a130b5f9fcf0e285f07f0995f7e"
-    sha256 big_sur:        "b2672724d70122aef267cfaa8f05d824768456f0353df3c27c328d28136298a3"
-    sha256 catalina:       "0c38cb017da08ad33efdfbd1c107a39d33b0fe4fa156c913b497b2bf84fdd906"
-    sha256 x86_64_linux:   "19a0170cf8b26d9745856450c76f24c4a56e2d4bce8ae57de84a1a90174ee685"
+    sha256 arm64_ventura:  "0e132e5120dab6747abdab31c098d14afe7fb4372e8639a2d0c9e9b71033f19b"
+    sha256 arm64_monterey: "f6bba507bece50bc56d8995bc00369c4e30d85156bbf5cbb7fe95af7f5105126"
+    sha256 arm64_big_sur:  "32d9efc6fb46f897b9fa19909faa2fa57bc41fd821413ea7de7fcfa82622f6bb"
+    sha256 ventura:        "01f4f4eb7ea55be7c66ea4c45f30be5d7d5aa52434c9e45a820b4f4bfdb0bfcb"
+    sha256 monterey:       "8600dfa9367fa03e9a6fafeeb308e1e231fb5e3be79add2aa8cf40e3ce367b5c"
+    sha256 big_sur:        "e1b683285578bce6e93bbdfc0ff7943f3be2d12295af4974becfdee77d004fe6"
+    sha256 catalina:       "ced864e6364efecb07fe97dce1f5cb4efcf17db57c97d6c141df7a95aa71d513"
+    sha256 x86_64_linux:   "487ca07ddbfae1e396ff9353b6ba2b4803f54a1d549d57349aa81b8b3364d9df"
   end
 
   depends_on "pkg-config" => :build

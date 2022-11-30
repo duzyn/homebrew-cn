@@ -9,6 +9,7 @@ class Feroxbuster < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "75413f2b6007586d3548576911d6c9f75297afea281674b68c38b5802e3db6dd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6185753deae31bfaae583c6dbd3a09da3fb37c74a90d8e1a94f9210e655b5d3f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "348b083efe36a8c33b511f2f75691f9b1c6575bfa0570f7eaaaf6a9debb8ae8b"
+    sha256 cellar: :any_skip_relocation, ventura:        "92bd21eb7244f8287614b593d8268eba1bed6ecaf64fcc95505133828b782b86"
     sha256 cellar: :any_skip_relocation, monterey:       "ffc384ae8e6cf8bd81bb212d8bcbfc666ab9b1d22f7978f24f69ac357473d348"
     sha256 cellar: :any_skip_relocation, big_sur:        "ae08149471b593dc9f40aaf912ebcc041a3dd2adecc315fe46830fd578f031a8"
     sha256 cellar: :any_skip_relocation, catalina:       "f6e54973a62462e24f92b8f9301bc2c1f752f7fd747fb4b4c66265afd4a0fa0b"

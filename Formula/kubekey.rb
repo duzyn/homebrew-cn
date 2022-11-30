@@ -11,6 +11,7 @@ class Kubekey < Formula
     sha256 cellar: :any,                 arm64_ventura:  "e9aab02083be551a1e3a651026d9ca65a74749708a83879674d57a4beebefa18"
     sha256 cellar: :any,                 arm64_monterey: "b596534e704a537b3691e198e24e72204e760f68d6d3cabc4e109c8466ca05f7"
     sha256 cellar: :any,                 arm64_big_sur:  "006df9a8b7f73fc9cb0124f809ff3f4e7e759934c42e800d418f6532ada78554"
+    sha256 cellar: :any,                 ventura:        "47ab08c39d0e8158a320173ec3dd5acaaf20be02d4e4dddd15071c793611916d"
     sha256 cellar: :any,                 monterey:       "43dd5a6599da606ded060e2b2c4165f09a614564ea69979e11549351828eb5c0"
     sha256 cellar: :any,                 big_sur:        "8d36c52bdfed60aca59d1ef4ee93be7f653cc16e54c73d8dc83c4955151b08ad"
     sha256 cellar: :any,                 catalina:       "ab01358b00d84373f70943af071c4d2a609f6540363ea9a331c8634953869770"

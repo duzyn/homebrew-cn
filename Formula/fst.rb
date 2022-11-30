@@ -16,6 +16,7 @@ class Fst < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b63e88f373219dbffc9152126a3ad5b6e7622042e57afc01de260ed300217f5f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "a7647c09e81d45d06eff18ddda7ea3aee56873baacd88cea01845d6d233a06a9"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ed10e637357437f215e55b1070d78a55eb76736ecd26f283a5097a0a547856b"
+    sha256 cellar: :any_skip_relocation, ventura:        "602a84846847f4f4b0b1462b655c4bd79fe9e994c7e8837e58502cc20406fadb"
     sha256 cellar: :any_skip_relocation, monterey:       "17cc8d03046d553a7ccf5d1ca49788edad2ef996e6ed3b16185d1f0bb3627599"
     sha256 cellar: :any_skip_relocation, big_sur:        "7160bf5eea7f95abb9045e0c6f2539325ba106863834aa105c29f754aa6489f9"
     sha256 cellar: :any_skip_relocation, catalina:       "38de7bf2581e11b619d8aa68e7d0b8d1a6969ec134d576efb2496267f1aef896"

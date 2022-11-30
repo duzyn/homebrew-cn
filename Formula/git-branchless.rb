@@ -10,6 +10,7 @@ class GitBranchless < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d925d16450b292ccdc395d14ada3fb7b31e0e68371167ff39dabb1bc6b85750c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "203a2d9ea729f13e90154956c084168da301e57813deeceb8af67c6f6957e929"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "95f06b8290faadf47b19c6fb823dffc00d4cae17847ae15e129c4d6765c5644e"
+    sha256 cellar: :any_skip_relocation, ventura:        "3dc4ec0cc5b1a56de840b66e7e5e7c4e4bd8e271605f32479a91921561694830"
     sha256 cellar: :any_skip_relocation, monterey:       "380046b597b6f6313165086ab3293083903cc475d9a07580acedba80ce165110"
     sha256 cellar: :any_skip_relocation, big_sur:        "156407961ac7e41675997cabc01abd6f580ebda82141d08686a78c12d675adc3"
     sha256 cellar: :any_skip_relocation, catalina:       "9b5b0bb9f8f8d381e77ef99a88ae388779c419c85faaf6eb575a860bcec2707f"

@@ -9,6 +9,7 @@ class Kubesess < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "102b3783dffc32f1ae32ff296fa747a9a3791ffa68da015bc97f6ed06fe70117"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cfe54d6c5a403ded88ec74fce5435a563718a4a9efe2e9b6be0ab9f03f9976ab"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdc0d53125d359f25ff2abcbddc9b2dadfd5b0e3cac5d04ddf5659287308d740"
+    sha256 cellar: :any_skip_relocation, ventura:        "7974c4eab708d15e5835ca19a7015217122c2b217ef81dbc327c93572c78da97"
     sha256 cellar: :any_skip_relocation, monterey:       "a9c686e355b4424d3a2805b271e07058bbe4df56f1a71917fbed29df938fe9bc"
     sha256 cellar: :any_skip_relocation, big_sur:        "05bcac093b7eb91c4e02a3306098279991756567b60a0354eee09aa880ecd173"
     sha256 cellar: :any_skip_relocation, catalina:       "225b6d010e1bc8c1b796dd0a24ed6a3c30bd359979f145584490e1f959b1fc4f"

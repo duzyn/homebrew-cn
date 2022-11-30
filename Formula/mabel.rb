@@ -11,6 +11,7 @@ class Mabel < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a3961c11fa3bf9435fe1b26b243660ef2121384387672d13ebf16c8aaae7f112"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "97cfdf838faaed2ac42530932354e9be4b7c5d4e6abec6168f11bf14aa302f1a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "db387b01505c1d28d97aa8551b66a23655a8b21e3ffd553f830ecbdba74ab1ed"
+    sha256 cellar: :any_skip_relocation, ventura:        "5788303936ab4cabcba24c2fa02afc733e4d7b71be327b830499fd90909c356d"
     sha256 cellar: :any_skip_relocation, monterey:       "17588697f1cb530ff498aaa1060e79a3474215b2be8653e611c18deaed3d16e9"
     sha256 cellar: :any_skip_relocation, big_sur:        "deb9adc1cb8f5ad3d6655e3e16fff9c5be3f5527b03224a192ba35d9339040f9"
     sha256 cellar: :any_skip_relocation, catalina:       "79283f76f6003ed4814d791de60b4689b1e51a1cbbd0efa12220d90ce3c80756"

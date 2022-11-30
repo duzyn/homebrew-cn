@@ -11,6 +11,7 @@ class SafeRm < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0934761b2d4741420d698f2ef02e25fd76040a2500d749a1c6d80a7f9e0a09cd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6a5b094b23fbfca81cae6a07b707f3ca0dca9ddaf742568e425323d37a69995b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ff1f149a5e8968fd7ac345231c38250aa3f980ed26f37c375b5f700d2206464"
+    sha256 cellar: :any_skip_relocation, ventura:        "f74882c3fa9424387c06d431f2b05eaa69f160955a7bffe441957fbd30017b10"
     sha256 cellar: :any_skip_relocation, monterey:       "cb53a3912e9e93ae9286a694466e97f3e38834034c2fafe06866a1a5b04d0532"
     sha256 cellar: :any_skip_relocation, big_sur:        "e13cda860afbd1897715240f11f06dbd0c2ca6c6834a5ff1a505b31c66ca63fa"
     sha256 cellar: :any_skip_relocation, catalina:       "e9f3f483c1cd132ac44afd0890d93296507f8438d2c7921ff73e4cb7d4cc54c2"

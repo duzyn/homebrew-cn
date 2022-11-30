@@ -10,6 +10,7 @@ class Selene < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a4e34f86568cacba67b8c6a4ca03fa1a53df467bff680c1aca2040db56560375"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1392ed26b8b19295776c18bcf009efb1fc8f41a12688c93dfbe1e034b2ebd801"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3f1b2ca8986d16dd9d81f7f9ae981e78f8d6f9e974306640bb0777d17ce4cbb"
+    sha256 cellar: :any_skip_relocation, ventura:        "a6ab958b72acdf1bd96b8f5ebe8e36b63ba8e83faeba3bfe0a58342ed2e60738"
     sha256 cellar: :any_skip_relocation, monterey:       "3cc0d4c9c717c4f6a89d400cefbec2a6a7cd5a1ef0af26aff052cdacdaa0451a"
     sha256 cellar: :any_skip_relocation, big_sur:        "506987d36f558afa039aa21b7e4187b6d147c33e7a2cd0365f3f66a9043f618f"
     sha256 cellar: :any_skip_relocation, catalina:       "8a6659c962779f1e63bbcc51ac28c8fd6338baaf3a266f659946805ba82d9fdb"

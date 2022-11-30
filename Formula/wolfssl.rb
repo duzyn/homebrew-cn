@@ -17,6 +17,7 @@ class Wolfssl < Formula
     sha256 cellar: :any,                 arm64_ventura:  "ba3020092405373dabe0e02b6a748aead33b12e19f43473a1f82e777450fa2e4"
     sha256 cellar: :any,                 arm64_monterey: "0b36a7a8da2a383088fa5552191abd47b1caec800fa740222df6e8fd660b0cd9"
     sha256 cellar: :any,                 arm64_big_sur:  "850aadd52ef6807c11adb97a186a5e08c0e8db460ccbf04bd0677be0bfa7f780"
+    sha256 cellar: :any,                 ventura:        "3916e96cc70eff91a9e703a0989829e5938a27a002c5b26837bf5e87416ecbec"
     sha256 cellar: :any,                 monterey:       "af54e8129748ce0283106f427b9b4e03a9ab496e2304d16b4829fc467b3e3024"
     sha256 cellar: :any,                 big_sur:        "bd3dcbc75f9adaea69c9854861d982510f06d99a6cdc0a08770204bf7fba941a"
     sha256 cellar: :any,                 catalina:       "ec99a22963c3a3a290574a84e5af87a2a2f634ec23fe21c393b761dac41bed62"

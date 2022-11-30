@@ -9,6 +9,7 @@ class Dtm < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "af3f91e28a8344c7b9bf2eac8bd858d94538dd6d80f9ab5e3bfeb0851e56cc00"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "27b4666fd34d6a552f359045f39c3ae6511e4a196333cb7a7080e9a294878326"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d14a5f62ea4f2f51352635d626b15e3a19ce5faafd768349be3a88c4f650df5e"
+    sha256 cellar: :any_skip_relocation, ventura:        "944aaa181a4f0cde65f9bfd5ee70fe343a0bd1bf7109a483dbc3e61b262524fe"
     sha256 cellar: :any_skip_relocation, monterey:       "c23fcbf0fe2f22f25940b8a773a33e41b015e2e2664275544233f4fa690e449b"
     sha256 cellar: :any_skip_relocation, big_sur:        "b5375a92a34d64d21589921ac057edb45da4364380416cf210eda785646e5cbf"
     sha256 cellar: :any_skip_relocation, catalina:       "af03a87c69ed3a24c15f2cd67c1fbb264da538f31b8400bb6f1a2fa441a3d284"

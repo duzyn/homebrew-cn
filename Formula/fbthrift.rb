@@ -10,6 +10,7 @@ class Fbthrift < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1c6c888a5f51934b1413812a263c0ef229f13e7efabad3370b02e970987ba8e1"
     sha256 cellar: :any,                 arm64_monterey: "05a0efa2432772b3a782253536511b34834bd5d20a64161cdea8132554b6e479"
     sha256 cellar: :any,                 arm64_big_sur:  "9cfa97f03ebd4551477ade5c9b750d6d7c9d7f7fd5d171f52be8336f89e2cfc0"
+    sha256 cellar: :any,                 ventura:        "2afc20fb4036acb0555e91ca659e164d6350bf5ba043a816415d957e97efe7c3"
     sha256 cellar: :any,                 monterey:       "ab33c8e9750de470f4c7039d0f23de3497c47831fd0444c140248ae3561609d6"
     sha256 cellar: :any,                 big_sur:        "9ae006c82d4d58f40d5eb8d832ff7d12ced1bb0523de1c37c0921e1854569c96"
     sha256 cellar: :any,                 catalina:       "41117f78015090e4add9e6666367d2de7cb4b6f30c3d49172f705edf8db610cc"

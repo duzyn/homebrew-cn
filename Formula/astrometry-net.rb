@@ -3,8 +3,8 @@ class AstrometryNet < Formula
 
   desc "Automatic identification of astronomical images"
   homepage "https://github.com/dstndstn/astrometry.net"
-  url "https://ghproxy.com/github.com/dstndstn/astrometry.net/releases/download/0.91/astrometry.net-0.91.tar.gz"
-  sha256 "832b7613a2a2974be0fb85b055b395707d10c172846e5cf83573a4e759a83b8e"
+  url "https://ghproxy.com/github.com/dstndstn/astrometry.net/releases/download/0.92/astrometry.net-0.92.tar.gz"
+  sha256 "d6eec262bb8979028d64ea05322f80eec275d7aaeed5efd537e2a79410c678a5"
   license "BSD-3-Clause"
 
   livecheck do
@@ -13,15 +13,13 @@ class AstrometryNet < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "2795bf3051d69183e78b113cae0f28b6a9aeef3e10cfc99a55431752855d0316"
-    sha256 cellar: :any,                 arm64_monterey: "4b755547bc79987424b4c1884255ce6a6c1392daa620af7e93d5383d302e6417"
-    sha256 cellar: :any,                 arm64_big_sur:  "e56085d3e606485d735b1ab2bbfc0d47af9c88e5c605bac81e98b7f8f4f7689b"
-    sha256 cellar: :any,                 ventura:        "417e693593c133223392d1fb56fd371b1aa2ff420f2fabd48d3fbf44c0e2299f"
-    sha256 cellar: :any,                 monterey:       "1eb20742e13efb8eb4f64fff0e926033e651e3c93b69de0a88864caecda5b5a7"
-    sha256 cellar: :any,                 big_sur:        "e4e096f8d3681134d7a8c08ff3e6bdeb598d95855cd27894a868d220eb7cdf0d"
-    sha256 cellar: :any,                 catalina:       "f7c7c6cf9a3bb5c7b7308db32ee7400f4f925f4b78599c2e60846b663511a4c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b6d26f3c27a40dcbfd0ecac008cffc7ed27349f9168e7fd60261969600d2b56"
+    sha256 cellar: :any,                 arm64_ventura:  "c084a215df96193428b5be2c4e9bf63377692d5312834981c19a24a83c3825ce"
+    sha256 cellar: :any,                 arm64_monterey: "b938a76bf2321eb975bfcf90ad94e5ca256f0f2b71c3259dc486b1f0dd729a7a"
+    sha256 cellar: :any,                 arm64_big_sur:  "76c407270dfa0aa73910e98c49b5c69209092d35306efda91a25ef85823255b3"
+    sha256 cellar: :any,                 monterey:       "f7fe5bdcc8207f971de1689f4b1abb49a3753c5eb82ed242cb976c2ecceff98e"
+    sha256 cellar: :any,                 big_sur:        "13da4e8722df5de2582a008a489c559131116d343481ee2a2c8372932152e696"
+    sha256 cellar: :any,                 catalina:       "b9d61e42e7674021e031380a174f9e66ebcd541ae85c089760888ecb1151e7f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96dc3f32a449fa1d8eff381afcb83f7a9f6bad4b651c92809399c7da60255102"
   end
 
   depends_on "pkg-config" => :build

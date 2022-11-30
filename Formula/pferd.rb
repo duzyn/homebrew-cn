@@ -3,20 +3,19 @@ class Pferd < Formula
 
   desc "Programm zum Flotten Einfachen Runterladen von Dateien"
   homepage "https://github.com/Garmelon/PFERD"
-  url "https://files.pythonhosted.org/packages/89/24/6fe39754dbe18741de502558c0d1981baf66477a1c81d7b6545e0b427d05/pferd-3.4.2.tar.gz"
-  sha256 "671938ee35819e124750ec65775ec9f45d7a5ea2e5d3d6db78c5e528a23bc3f2"
+  url "https://files.pythonhosted.org/packages/f4/67/72c34ac306296b5aee22f8894d1e45be95b88174398b01c1b19961d5acc8/pferd-3.4.3.tar.gz"
+  sha256 "ca5b26f45edff90a2dd4ef384599775ceb7caf35c4cb2e17da1fbe1f46bf5eca"
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1680f23fe4521abf49223b533084a2851de3a20b95f22850ffeb17ad37d56e7f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "31b091728686a81cd66ec4a60308c595b705176dba49a49992168f5ee949911d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "158a3014ada9399af6f95f323e4e6e246e80e21863225f44789d84ed1177bd4e"
-    sha256 cellar: :any_skip_relocation, ventura:        "094c3390b1ed23725ee1435e354b776ca5d48a7a22fd94a57fb0eb74d426a9a9"
-    sha256 cellar: :any_skip_relocation, monterey:       "851dabb3a2951a4d55474ab932c49918716116839d5b4613d9c947772be42f0c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ed0c6306f961a1fe8f2a0e459c842738302eb0596407b60aee2bb9e7427fce38"
-    sha256 cellar: :any_skip_relocation, catalina:       "2e0e2ee4edf633aa2c0085b4162b17f7e6a0f006b4dd41abb2420d89d626a4da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ad1253a1a8557ae819763b9f4da1498183c8c6bb6f4c175e35a094f3e45c65f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ad0e48fcfe3f20c7a5d598e45b5f3d0c1593d2273baf2ce87a67c1133d2b42a0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "91b3677725348a95a3138bfde9f1b780f43850fbbacaa611558649bb8f391462"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "87fade3f6ca8ddf7739f91ebb516701e72387aed0f4e354f98aa0fb881f60d1d"
+    sha256 cellar: :any_skip_relocation, ventura:        "2e2cd59c072fb5b2d9ae20083c7fe4d63794d4d026ee8d585dd3d41c57cb122a"
+    sha256 cellar: :any_skip_relocation, monterey:       "b803237164bc4c56f729ee2e169022f5e63c609a278acd4b024e1ffe5f35877f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2222cc6708bbf77d20bd07a5c50d8f6a59998c005e22eda8f60a75c8e5d5a548"
+    sha256 cellar: :any_skip_relocation, catalina:       "bb634719e12de6e602558bb4e0eaea9f9489311f9979943e779d743704309fb6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a9fb51f04e0ebc4b175c2817917875eb93f6b039ea089e8a5abda163edbbf92"
   end
 
   depends_on "python@3.11"
@@ -27,8 +26,8 @@ class Pferd < Formula
   end
 
   resource "aiosignal" do
-    url "https://files.pythonhosted.org/packages/27/6b/a89fbcfae70cf53f066ec22591938296889d3cc58fec1e1c393b10e8d71d/aiosignal-1.2.0.tar.gz"
-    sha256 "78ed67db6c7b7ced4f98e495e572106d5c432a93e1ddd1bf475e1dc05f5b7df2"
+    url "https://files.pythonhosted.org/packages/ae/67/0952ed97a9793b4958e5736f6d2b346b414a2cd63e82d05940032f45b32f/aiosignal-1.3.1.tar.gz"
+    sha256 "54cd96e15e1649b75d6c87526a6ff0b6c1b0dd3459f43d9ca11d48c339b68cfc"
   end
 
   resource "async-timeout" do
@@ -62,8 +61,8 @@ class Pferd < Formula
   end
 
   resource "frozenlist" do
-    url "https://files.pythonhosted.org/packages/8a/95/229aacfe85daa28e2792481a98c336bc30d3729533e6a44db537880aca21/frozenlist-1.3.1.tar.gz"
-    sha256 "3a735e4211a04ccfa3f4833547acdf5d2f863bfeb01cfd3edaffbc251f15cec8"
+    url "https://files.pythonhosted.org/packages/e9/10/d629476346112b85c912527b9080944fd2c39a816c2225413dbc0bb6fcc0/frozenlist-1.3.3.tar.gz"
+    sha256 "58bcc55721e8a90b88332d6cd441261ebb22342e238296bb330968952fbb3a6a"
   end
 
   resource "idna" do
@@ -72,8 +71,8 @@ class Pferd < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/7e/ec/97f2ce958b62961fddd7258e0ceede844953606ad09b672fa03b86c453d3/importlib_metadata-5.0.0.tar.gz"
-    sha256 "da31db32b304314d044d3c12c79bd59e307889b287ad12ff387b3500835fc2ab"
+    url "https://files.pythonhosted.org/packages/32/5a/e0d75c8010295ae6746f379f5324bc726076dfc426548bfa6f0763fce870/importlib_metadata-5.1.0.tar.gz"
+    sha256 "d5059f9f1e8e41f80e9c56c2ee58811450c31984dfa625329ffd7c0dad88a73b"
   end
 
   resource "jaraco.classes" do
@@ -117,8 +116,8 @@ class Pferd < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/8d/d7/1bd1e0a5bc95a27a6f5c4ee8066ddfc5b69a9ec8d39ab11a41a804ec8f0d/zipp-3.10.0.tar.gz"
-    sha256 "7a7262fd930bd3e36c50b9a64897aec3fafff3dfdeec9623ae22b40e93f99bb8"
+    url "https://files.pythonhosted.org/packages/8e/b3/8b16a007184714f71157b1a71bbe632c5d66dd43bc8152b3c799b13881e1/zipp-3.11.0.tar.gz"
+    sha256 "a7a22e05929290a67401440b39690ae6563279bced5f314609d9d03798f56766"
   end
 
   def install

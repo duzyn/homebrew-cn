@@ -16,6 +16,7 @@ class Simgrid < Formula
     sha256 arm64_ventura:  "b74f6093252d75c5a740206d86304fd1fdbd469195bb721633b06728fdf7a1de"
     sha256 arm64_monterey: "33cd6310a7561485629e64827eadb35ddcbbb0183a82fa26fb2a0afaf3aac42a"
     sha256 arm64_big_sur:  "8cdde2925ecc32a83433b1b077cc114471c3cbf1d5046022872719c0bc34a8cb"
+    sha256 ventura:        "8dc7954e386e31c0f63987aaabb41d6e53549a63ab91f423c9fa8f56df3e5032"
     sha256 monterey:       "f2af0a304c585be6c96ce0ad91d1a42f8064788575076945ab5158b43242b1cf"
     sha256 big_sur:        "b01a3a6c1282a3cec1c34bbe413906b4035ff240d77728f6b2b9d29d4b1c1cb1"
     sha256 catalina:       "63276e960125d3e3a7ad3f505c86fbce9c867a9ee7661fa5c4e7374f71af7838"

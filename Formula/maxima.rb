@@ -4,7 +4,7 @@ class Maxima < Formula
   url "https://downloads.sourceforge.net/project/maxima/Maxima-source/5.46.0-source/maxima-5.46.0.tar.gz"
   sha256 "7390f06b48da65c9033e8b2f629b978b90056454a54022db7de70e2225aa8b07"
   license "GPL-2.0-only"
-  revision 6
+  revision 7
 
   livecheck do
     url :stable
@@ -12,14 +12,14 @@ class Maxima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd2cc1fc06b7b54fc6ab6c00282325c4f2054bf162b293a6c18c738777c5f0d0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dfff923877c52890ab0cc5a9a8b671199b61f2bad95126b4deb3925c8bde93ba"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "515133eb2083d64852b96f1075e0fc4a12928909dc8c0c1ea98c31d63b7eae02"
-    sha256 cellar: :any_skip_relocation, ventura:        "d1d8319da8b8c3906b957cfb80e7b0ae8caf041cc75b74628eb6b9a30f76868c"
-    sha256 cellar: :any_skip_relocation, monterey:       "70f9a4804b4d67b83849a5bb1284e5520f3771edc511f0198aa7de84d3ee3b98"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5addc9d9906d13dfe758033f85ccc9b14d72a937db5bcf5628591382e0cf86e2"
-    sha256 cellar: :any_skip_relocation, catalina:       "8ae459a232b9c3adeedef61a04e94be8503d3aec3cfff1f6505284f6613831af"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f57d9749569cc08a8abcd8efc1d7dc9b7180eb74aacdf0029448d2ea5b2a07f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "61ba66f0e484b4aaa1115bd28188c64e2eab6827530b0927aeaf47bff1e31a6c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b56557a4d3a27cceb548fa4341885fb15c28c9df21987a2e8ae8b81495309720"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85b39fa1a991853758490bbbe500b94a243145bd14e87a8aaac64e73f45272e1"
+    sha256 cellar: :any_skip_relocation, ventura:        "483fbe0a31d79ee37da05e597a5c97d177b377f5d6fa1e304b089b2277f69f93"
+    sha256 cellar: :any_skip_relocation, monterey:       "e8112c54d0f612c0a406b15e32a25e6bb14aa5fa209383822cc69da24b9e722b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c800d29837cf469187752ddfa92c1bd4c5309c5b135c2a07d0283c0e46f47767"
+    sha256 cellar: :any_skip_relocation, catalina:       "140e327eb5177416f846bd132435e5b294f75879cfed65acd7fa005b42312fa7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61246ba5d9498c1fab9f06b71c1b6ccc0d8ad2a13b6a3408053190f1e7b768b9"
   end
 
   depends_on "gawk" => :build

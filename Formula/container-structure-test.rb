@@ -10,6 +10,7 @@ class ContainerStructureTest < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "09425ba24a07cc526904d8a9a71a0591809ed0d2120eb8c836b18a0a277f2f28"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ac67b4fa0a58c25ee63f9b664ccee63a8c410ad6d095bb13ea5fe1200a8f2877"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f02284416cfd39331c161d5b0fc409c42229956cd588a081e5b178bc89685ae"
+    sha256 cellar: :any_skip_relocation, ventura:        "2c9f71f01d66ed727bd4531ed13ca33965b49927b1f22bc34bbd76ad25131116"
     sha256 cellar: :any_skip_relocation, monterey:       "924b7cf12f63b5ee248046c9f68f2d9de2c91838acf32da68b29bd7864c09afc"
     sha256 cellar: :any_skip_relocation, big_sur:        "4007f283f958fb44985d867500617ec0fecfcb0e70c8943d0e1c79ce235bd2a7"
     sha256 cellar: :any_skip_relocation, catalina:       "77e2b6d61f00faf44a948d6416591c1b643906208ce11be87c226c1dd93e320f"

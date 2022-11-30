@@ -9,6 +9,7 @@ class Bombadillo < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "5b792d8b1afcc6cb894aec708268f8099e8b70a3f8a629db32d0290a535a6800"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d78dae1cc03b2b801036ba0dfd19dbb9d47e491acac9ad1ea141a40eb6b4961b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "02c4423c500ab7e3fb19df4e68708cb9ded9197986aae6e1783cb3a79d592fd7"
+    sha256 cellar: :any_skip_relocation, ventura:        "e50be305e669ce2f6d47976b6515480d9ac9b88227e614d46f1da296bbbc2d63"
     sha256 cellar: :any_skip_relocation, monterey:       "ae21a5cc0383684f7080eb62468d91db698f901c3ce4332e933b5a72edce3041"
     sha256 cellar: :any_skip_relocation, big_sur:        "cb6a7684e76b5d8eebc23776181cbf6a3e798b3c6a1156772c2fff010fd6fc12"
     sha256 cellar: :any_skip_relocation, catalina:       "3b9db819279bf4f5453b702fb4947564b69b57e237ba7fdc11e56431ada415ad"

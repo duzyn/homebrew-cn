@@ -10,6 +10,7 @@ class Librest < Formula
     sha256                               arm64_ventura:  "5b9577e9c171c879a9fe98ed60239ac2997732b0d3d23be936ec4c8b51e660d7"
     sha256                               arm64_monterey: "b82cb89cd5181ce20e2bce9f9255bd7878a13d9badb6c0c8fe633be3c1fe748a"
     sha256                               arm64_big_sur:  "ce82e6e380a02285f90307b8609e63cba7dfa52a3d1fae7092296f49e67f624f"
+    sha256                               ventura:        "0d09e17ff17368fce86679192c085e87cb17d48dc71e95cc27caa653b5ea614f"
     sha256                               monterey:       "fc839b0cce9619c5489fe51408792ada7ab2a5569419cd38569ca13fa6ef356b"
     sha256                               big_sur:        "83313f7234d69f6801104ba55c1b60933d8db57d8b8f818b336b8a498043b067"
     sha256                               catalina:       "7616a630b4f286a28c6520917353196f29e5ddbc488bf6880d14cb518271ff26"

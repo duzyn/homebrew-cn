@@ -12,6 +12,7 @@ class Sail < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "f6e9a659f09618f2535f22cf44029baff8652bec0ed090b701f6257c30d33a96"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5b33a2bfe41061d2fd8234d6ae4f3a217ec648fd6218d7b8494b59ae1dab1053"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0c138bd71de3bd6eb49602bc765e743c282fa6bc18dac74ed8f4dadd5fcebcb2"
+    sha256 cellar: :any_skip_relocation, ventura:        "1d954ef1db8c2c445662048923c3394f1d25b9cd688fbdfc31eb5b61e2b516e9"
     sha256 cellar: :any_skip_relocation, monterey:       "e9a94b7de2702591bf018ed4d53856d168f5e4dcb3877fcf7665090096493991"
     sha256 cellar: :any_skip_relocation, big_sur:        "2e245cc16f8a40a9ee13bf6c8db4884d1398c0d940b242ab29575c170998ba0d"
     sha256 cellar: :any_skip_relocation, catalina:       "ee2038dfa0d9e0803fa1e1a722ee6d0d3c3a7fd85e81f60e5f0526fc8e53a225"

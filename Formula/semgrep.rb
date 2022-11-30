@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v0.122.0",
-      revision: "349ee7f98ecfe61fa515cf2bfdd3d4c6e7268e11"
+      tag:      "v0.123.0",
+      revision: "084ff5f16866ab66337655dbc06672e05d3089dc"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,15 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura:  "794dde61440af1fc1ca7ccdbdd572a50db67694ad4e48ad4efd3f8968c61fc1e"
-    sha256 cellar: :any, arm64_monterey: "4fa7bfe6c30ae34e5e02599caeeaefd10c952268e93d67d6c09149836e29bc43"
-    sha256 cellar: :any, arm64_big_sur:  "f33d6777437b3fd208794abef60da51e82a458424f6bd83aa3944260f01d4870"
-    sha256 cellar: :any, ventura:        "907cfa8d4b3a07154c8d5ec6930476243beae8a01e69cadce8528475f5f7da3b"
-    sha256 cellar: :any, monterey:       "5c4736c4c383bed21a91f4b117289981024492f1ca221f75bbb6ecd278c8a165"
-    sha256 cellar: :any, big_sur:        "69ad191aa3293238f4c1a0a5ba5706513c7824781141f69909aab297840006ae"
-    sha256 cellar: :any, catalina:       "d48574415bd57ff5d9d651140c4a2f4085650ffb590fbf796c6b687f7d60dcff"
-    sha256               x86_64_linux:   "9ef6e758b8b97a3275f81bcedfa8df85bfac3df49d46961b9a4a3f2234bee01a"
+    sha256 cellar: :any, arm64_ventura:  "4b76b7fe37aa6e7ef08cc0219f2393c459cb27ddfd0d7bf6e0d1d4e5de2efad7"
+    sha256 cellar: :any, arm64_monterey: "2cabe0e228504e3e13836b03ae042250dd0fa2eaf3076902904a6cb1154306e3"
+    sha256 cellar: :any, arm64_big_sur:  "4e072339ee0ea257f5b2d7e9d797f0d0034f8a39cc187c1841a69708fb3fa425"
+    sha256 cellar: :any, monterey:       "d6d007c39b825348dded641dc2b17e0fe404a391fc03a24f30c15f79ddf8bfb6"
+    sha256 cellar: :any, big_sur:        "65ec2d329d2eca7d00b0cc0a86038eae54bac91cde0b5733d1076a081e2e2ada"
+    sha256 cellar: :any, catalina:       "25f54d6098d5db48fb9b785d29e38dd077e318d0f666ccee23ff0a901aea70d1"
+    sha256               x86_64_linux:   "65e0096ed494c42640f54aa675b65aa27ba5751e5bad66067bd60cdebe1cd299"
   end
 
   depends_on "cmake" => :build

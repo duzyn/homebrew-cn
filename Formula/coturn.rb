@@ -15,6 +15,7 @@ class Coturn < Formula
     sha256 arm64_ventura:  "eb2f2f7510a4b50df4e3e7428a8daca052b6450a872eb1f62293e9aedea65b8b"
     sha256 arm64_monterey: "05ed1d26deb23be08ef663b1fe3f6b12d3c2b12446b602bf32da22bd35cbbcc9"
     sha256 arm64_big_sur:  "8442d032bb086f804d0ecf9af43b35514406560b37f87f66a233452daf304ca5"
+    sha256 ventura:        "92637a06bb7803555d99cb13d30f411873faf9a8e5e14a6aeb078b4a8f1059f6"
     sha256 monterey:       "1dcb943114d883f153c817085c806fdb4310fe83df506fd0f9f439b524463d1a"
     sha256 big_sur:        "42a300446b36f922639fcd7a767257fcf77db52bdd3d20869174ee8ecc456654"
     sha256 catalina:       "07d0a45f2a2c9561bae382d6febaedf79d230d10006d4c98e9cc5d85d1b236bb"

@@ -11,6 +11,7 @@ class Stella < Formula
     sha256 cellar: :any,                 arm64_ventura:  "721b36a943aab796fa12d945104c016ee7412a78ccc66a8f693481cdad1b5290"
     sha256 cellar: :any,                 arm64_monterey: "3e2b5920f695962de76de82cb7e26b5b5a6581d3f7452833ba6eb14f512cb616"
     sha256 cellar: :any,                 arm64_big_sur:  "cd289fabad0d7e63675f87b16648ae9c7ff2273705a7549a7563229f5306846e"
+    sha256 cellar: :any,                 ventura:        "4410a18f444c6c5806d8f3c2ce237a1ba31a8eaf2a230761f3ce2256f395ed8f"
     sha256 cellar: :any,                 monterey:       "cd227d90fa8fdd64d31f0400f611bd5a5de5b5a95222b6f5cdf5ed478f987621"
     sha256 cellar: :any,                 big_sur:        "b1e5009fce0af66109809b65cd3d9d2fc313e588180a42f93a430618189e0f36"
     sha256 cellar: :any,                 catalina:       "142b80858ea794a2fc57b420b1a1a7ee4254bfbbab9eda09706978cd8a2cea6c"

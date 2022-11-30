@@ -9,6 +9,7 @@ class Sonobuoy < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d08df0e55fcc88ed437ce6984a10b379d9623be7b16c38a13aea29a29265ecf3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "56c1907194cc55fb13076301ce76a6d64eae68a84fce6cb3195d2c2eb380bd3e"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00bde29adcfc21151c2424374027f5fa8e659deabaae96fac2893b317a48322a"
+    sha256 cellar: :any_skip_relocation, ventura:        "dade2caaf992178bd2f4108e46c5fe16b23cd2e06f1a7f406253fa9a9754c7a7"
     sha256 cellar: :any_skip_relocation, monterey:       "909e55c0ac2c65eb5daaf3806bd0643379ed093e2811b95ffb4a7ed1a8397bee"
     sha256 cellar: :any_skip_relocation, big_sur:        "a5ced62a636e877be78b28ed7eaaf081e93b88f0a24e908614f8e824e03a0b43"
     sha256 cellar: :any_skip_relocation, catalina:       "ad6ca3e70a9b6d183972bdfc45d1612e1969e34c38dabcf3237eaefe33ebcf96"

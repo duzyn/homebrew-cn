@@ -10,6 +10,7 @@ class CrispyDoom < Formula
     sha256 cellar: :any,                 arm64_ventura:  "dc49cbdf599b9a66241668330d8c140720bf244f21a1993eb638afb832bf8817"
     sha256 cellar: :any,                 arm64_monterey: "8ef0f5533d93c92ad13fdb41baa49de8bb847d908b52ee7be13ab5ed5f4dbb1e"
     sha256 cellar: :any,                 arm64_big_sur:  "de4ceb6cb891d1938bc8dc2c0af97067891a5712a00105ee7a79a165f1982df2"
+    sha256 cellar: :any,                 ventura:        "88d2dc63b9ef8918ba035caeac1d7e7c1a6a96228bb5c6693910006992ad12a1"
     sha256 cellar: :any,                 monterey:       "b0f2f38a431779e26c8ffda0fdee8b179a95268995cfefb78313a289062bdac8"
     sha256 cellar: :any,                 big_sur:        "80edc55a3986279b94dc13247bd3a7d3786cc5b81190ab6415accd842cd42873"
     sha256 cellar: :any,                 catalina:       "47f9599408b8f7bdfc0e4cb8083617c8a6f8aacd1d74287fca3d3d991148b5ce"

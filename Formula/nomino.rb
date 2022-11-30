@@ -11,6 +11,7 @@ class Nomino < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "230f30bff155bb8d4d8696fc67f2bb5ab2669612214622b9b9ef19548a3b2624"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "debc9347e26e32f96227f71b2379e576d51515b63dc0020bd1890c4d178701ed"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "565d6e8393273664dbaf36ad49d9376954d081e8d56e4feeea041dd909ead770"
+    sha256 cellar: :any_skip_relocation, ventura:        "14f552d1bb14e06b0d88290aa4375b355826843fa20b46da7035415c1a2ffd09"
     sha256 cellar: :any_skip_relocation, monterey:       "b84565e1060c964ab085242ed73bfaf1534c80c571d6e504c500c14adf92d23a"
     sha256 cellar: :any_skip_relocation, big_sur:        "6fc73e4690081a635905b8765408ff3fc2f3e028b324f15bdec334793d4f074c"
     sha256 cellar: :any_skip_relocation, catalina:       "16c673e69cc0d967c4bdf8874ac225af6aa015900746bf9f33c0ac184b0f3f4c"

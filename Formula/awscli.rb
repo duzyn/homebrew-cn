@@ -3,20 +3,20 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/2.9.1.tar.gz"
-  sha256 "9e45d98f2bcf774b43971f09bb965beeb21b6703f99b16b1388f599e0181bbf9"
+  url "https://github.com/aws/aws-cli/archive/2.9.2.tar.gz"
+  sha256 "5f669ea054c9fa5bb05d96c46f657099234e4c4460ef0a5464ffebd233a8213c"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "31dad4ceec7a32098b1dedc3ab7a2e5b2a74aa5693aa347db4204e02259bbce0"
-    sha256 cellar: :any,                 arm64_monterey: "d9ecdd236f899304972bdba19ea6ec4a33baf1b2341c6617c499887c00d3184b"
-    sha256 cellar: :any,                 arm64_big_sur:  "fd82fa8403dbbe29d2cd86a6ab0583764fbcd4396e6aff0f0dfb686b6475c7fa"
-    sha256 cellar: :any,                 ventura:        "43af4bde89d9fdfb4cd998a8165604cf6da4cb7ecee106ae9b1d4c9babb1af36"
-    sha256 cellar: :any,                 monterey:       "8d216ee68ca6a0da53d938e0be149bf94d41dae08603c868ce286bcde94c1308"
-    sha256 cellar: :any,                 big_sur:        "4548d8a73a7807366028168a41564e7139cd6ec649cda576feb3112892db3d24"
-    sha256 cellar: :any,                 catalina:       "a02d82559796ad98d06534e342368e071027b598a600b88d936f40feb9f8f918"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5151bdac87e941a7b2b3540dcdb52ed5f07e4d1d14ebd880a36178e329dbed78"
+    sha256 cellar: :any,                 arm64_ventura:  "d8f17b056df569ee85f029f7a62fd7f6e13bf4adef446ba79518be834afb174c"
+    sha256 cellar: :any,                 arm64_monterey: "f9910d3034eaadb167a1815fec981b6be75fc9c0638b8f6112cf681b756a47f0"
+    sha256 cellar: :any,                 arm64_big_sur:  "062626f2d0e92a858b952d96b276ee715941a65a29e0d453d830c843076a1eb1"
+    sha256 cellar: :any,                 ventura:        "367fc08f5757b36ee05c898dd34b1d24e4831d65f3144ef992554acd57125acb"
+    sha256 cellar: :any,                 monterey:       "65f599dfa570a260ec1986ebda0a680eb5680d41925fbaad2ed3100e3640772b"
+    sha256 cellar: :any,                 big_sur:        "e696b1ecc64cd18899d1b8ca2e3174c3401782dedfd20cf3208557f3df82f402"
+    sha256 cellar: :any,                 catalina:       "c520b439628ae7ba6b9f345e62133b3bb3d613bb620d85c957c4432c04145498"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f39e201ccd62223c6aa046a4b70adbaf93dccecbacf5f9ee78773163cd484fa9"
   end
 
   depends_on "cmake" => :build

@@ -14,6 +14,7 @@ class Chrony < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7389868d80c6347b733de4a862b3c86d07346f5a4c3e77e43363054d2375f873"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0a963bb5d33481aa76625c12d7459dcda5aa8383c9c291accbda8107ecf43958"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "976fc7759e22bd69d623525a286a01551dc2d1651a305c053275f41edaa8d3e7"
+    sha256 cellar: :any_skip_relocation, ventura:        "199619c582ec05bdc58cf02fb4104a2d68083572a31731ad6f66f4cb69829003"
     sha256 cellar: :any_skip_relocation, monterey:       "a324dd4e43662d3c8b4a362695af02b519838a85273b4fd97b607b22e6e41c9e"
     sha256 cellar: :any_skip_relocation, big_sur:        "71fc7b46b1c4c313b70e72760b8091792fd1670a5a5122020588e6eea2b5244c"
     sha256 cellar: :any_skip_relocation, catalina:       "db8262f30b2074e9e12cc7391de384f4a209dd2cfdbf18f5ac4f189cae61e4fd"

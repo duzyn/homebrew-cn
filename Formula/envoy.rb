@@ -15,6 +15,7 @@ class Envoy < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a9d32dadfa5ea47cc5691685ff41675d8d3a196bc609c6696643789dc768867a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "760f8e5fdc6f9331689a4c1159d92a89b3474a40c2fea2cadf113f1409b3962b"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "29f1920e697f3e17bd42d11ca99e1f1bf1086b0488f06cbd6c45eadb0b635e0d"
+    sha256 cellar: :any_skip_relocation, ventura:        "5534cda034b4de1019808cec3e5a190de8741531d5ad847325ab4c6b9ed9ac15"
     sha256 cellar: :any_skip_relocation, monterey:       "ab84476a2ae6bbd1b47f64fe1a1d93aed5ef003775a50b8bbaf9b6b28c018e45"
     sha256 cellar: :any_skip_relocation, big_sur:        "f85ffd2b5e8761e379cddf3f1aa960b06cd6b6f6397610e5ed74a29007d4fa83"
     sha256 cellar: :any_skip_relocation, catalina:       "f2b1f7a4598d8721a08da713e59723ca0f26b520d534656c47f3ffd1e3516038"

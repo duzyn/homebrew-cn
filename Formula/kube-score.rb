@@ -11,6 +11,7 @@ class KubeScore < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a0a649b918556cdfcc540d547e5dc69ee0b7e25e134e29f6fff7a12edd8b33f5"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "28d65ca4f637272e9c26f9488c34f06ae1f97f09207899f6afe38cb0db4eaf91"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9263d0aeab0f5ee03f541dd149669a3d227e92305735c37f89322d8ccfbcbd82"
+    sha256 cellar: :any_skip_relocation, ventura:        "07684a84ef98a4a4cac935078fe823c78ee5795d33791ea17fcab0347f2ab064"
     sha256 cellar: :any_skip_relocation, monterey:       "db28c4baa1d32c6688288f002c735c64f39433a6ab010d5c05ec3036b919417f"
     sha256 cellar: :any_skip_relocation, big_sur:        "9a2c2f4a974e02af3a7bbbf2ec80931860d8581f3fe2c74ea79b9706664785fe"
     sha256 cellar: :any_skip_relocation, catalina:       "051dd60d5d5e40cdf7cf9a1d26e3ea8d735bff0faa1a300dd373e92c73a26494"

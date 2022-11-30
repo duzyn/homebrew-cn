@@ -1,8 +1,8 @@
 class NodeExporter < Formula
   desc "Prometheus exporter for machine metrics"
   homepage "https://prometheus.io/"
-  url "https://github.com/prometheus/node_exporter/archive/v1.4.0.tar.gz"
-  sha256 "96f749928e3d6c952221aaca852d4c38545eaae03adc6bb925745bc3f2f827ca"
+  url "https://github.com/prometheus/node_exporter/archive/v1.5.0.tar.gz"
+  sha256 "67c6d59359d8c484e1e28d0a52a971eebe687f083c5fbb35c5e651543e5d0ea4"
   license "Apache-2.0"
   head "https://github.com/prometheus/node_exporter.git", branch: "master"
 
@@ -12,14 +12,13 @@ class NodeExporter < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "525a708f82964d00ecd477759323164f025b8b312ae5efda7fcf9add78a3feca"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "32b46a6ed45b8ee93d3cdf0f4ca9e516beb6747b54e54f5232789961760a3d9b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "217f1bb2d38c3e052eeb6499da88a64eae85b30b06da5ed57218701c06d4bb63"
-    sha256 cellar: :any_skip_relocation, ventura:        "7b0316bc6f749e530325b93fdf49eba820e0be7a3fd9b0f7b8da61a15acce0e9"
-    sha256 cellar: :any_skip_relocation, monterey:       "c09790655a6c6a7be2e4854d6568d7a10e78f40737c5be3a3e3a638185f98231"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a66d6ee73ea9a507d9a9b53cfc00e704aea5ab25afbdc54a122bf427ce6205ee"
-    sha256 cellar: :any_skip_relocation, catalina:       "144b9ac75c49b768320604dd8ebdb0434b69f3dd3d449b905090ea03fbb4e2c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9bf38fa04f9aa42cf1bdc7010cf41a64553f94d4b228356a94f54b5958a8b2e8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1b186c09bf34900911bb0bc4940707d6a38b1c7a0e61fb86a5415f49ff5c4cc3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f2e08c7b6c4f46771d29e41d348eb620849952059b5e4c136aa905f2af9190a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01294c514574959a1b0f61cf5531f6cccab03735def7e29e870b7f3d274c6f94"
+    sha256 cellar: :any_skip_relocation, monterey:       "08b62862b6ff824d79fec85055012836edd688b80cde6c496cc6f2277775ddde"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7af3cb9e5fc4191af71c794708751e3c245e61235f9895b8c2c09f3fee819a25"
+    sha256 cellar: :any_skip_relocation, catalina:       "7f8660b470247bc23fcb352ef896bc44d8b7662aa1bc033fbee74630471dcd24"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5197ff118cb8674acf45da1357c73a81a1659de45f9acb9fcd5e070900614588"
   end
 
   depends_on "go" => :build

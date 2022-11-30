@@ -11,6 +11,7 @@ class Kepubify < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "254db72d4558093188d4b9e164494549590e7edfa6ec59923db9f73722d1d972"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "190fcf71bfa7069608000948821b08e64ebf230bef805c6285d365bf3bc22a04"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "813a2a57f898d3146f374a6c77e15eeba052d434e78d881602d88e5cb8162d1c"
+    sha256 cellar: :any_skip_relocation, ventura:        "44e8ad81f4b4a79af66a6a342a61d2cc35f6fb7266ac7d31eb789761035c95c2"
     sha256 cellar: :any_skip_relocation, monterey:       "b9944734812a60b9fff0895d49385d3ce15321da417a292e23760ab31ac54135"
     sha256 cellar: :any_skip_relocation, big_sur:        "07e78d188d1c64ac4ab876f6afb18458419ac056c791c1e2227788136639c3d2"
     sha256 cellar: :any_skip_relocation, catalina:       "420b866883a73bc7fd2dff37105f09805b4d9f983aee5aec4583dd14a68e609f"

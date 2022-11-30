@@ -3,19 +3,19 @@ class Mathlibtools < Formula
 
   desc "Lean prover mathlib supporting tools"
   homepage "https://pypi.org/project/mathlibtools"
-  url "https://files.pythonhosted.org/packages/72/42/9631b9379c7fe5b6c6fb5c45d11910d58bfe28b5c7cfbe9e9e62de5546b0/mathlibtools-1.3.0.tar.gz"
-  sha256 "88161287963c318ab38de36def479446be344922a1d31e35a657a679a68e7f2f"
+  url "https://files.pythonhosted.org/packages/29/e4/3b36dc61c23a72d52d9f406a9891c50acd8dec68c22ccc084ece6d5998a5/mathlibtools-1.3.1.tar.gz"
+  sha256 "1f0b66ac31889c22391e5faa865fbb84e049dd4c7483c223a0055ae2201c725f"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a797bd3200b10e37c73fa8fd0cb021185deed87ba8f45d2a6902dc7d3a6e7aaa"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "19ce453b66d0d8e8428ddfd2f4b976b05f8516800a794ea6a0b690c56f409c95"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e81e5813036af22b1e81198268924b4a977614cdc427700906312f684199a0bf"
-    sha256 cellar: :any_skip_relocation, ventura:        "cbab3196ff69fd42c4e9dcd9e1156262996b1c6075470c51b5ac2dc322f41fd9"
-    sha256 cellar: :any_skip_relocation, monterey:       "df14818088786e7c06e9209a2d3e4f8a832bdab9f39ed7a5d1397852c338b3a4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "769ee87daf4f1076b01e4eb0cfcceb392b2b5226643d702b1e16c721d407e04b"
-    sha256 cellar: :any_skip_relocation, catalina:       "e25e751b4cb1250616311e974b19157ff8c69183a2e63ab3137c625f2b510620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "550412db6e15ee8571e33f895b69bd2b82d0858fdcdfb420cce5d6507d580c8d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1aededa5ca543dae36463c5437ede1f02fe44e30a414a6eb0d4cfb95592d25a7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1a875bf4a3a15143424a2ad3c55875cb65f60d44d558c46f54dcf0081a7bb54"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00d3873e35b1cc7690536bce377587d2f5148f0f63aa772632228fbe05308db6"
+    sha256 cellar: :any_skip_relocation, ventura:        "9631a855c8c3f3bb800ea79161e898c024c29a083e0e7b8e7b9153aa10dcb9f9"
+    sha256 cellar: :any_skip_relocation, monterey:       "63cafdaa61781439aacb656f8d76c505d463791ea074fa4f1b77f2194c22ecfd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7e29ee785c2f2522619ac5c1006e88d37ffac4f187d3d8256496000675260d97"
+    sha256 cellar: :any_skip_relocation, catalina:       "7a4dda02e9537110e91a5df5b9ae9a66a8f596e9225371e8da314d35944245ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c0251441baf8cd9a669d5443ebb7b4a80143e2f7a8de77340d65a710d7619aa"
   end
 
   depends_on "lean" => :test
@@ -54,8 +54,8 @@ class Mathlibtools < Formula
   end
 
   resource "gitdb" do
-    url "https://files.pythonhosted.org/packages/fc/44/64e02ef96f20b347385f0e9c03098659cb5a1285d36c3d17c56e534d80cf/gitdb-4.0.9.tar.gz"
-    sha256 "bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"
+    url "https://files.pythonhosted.org/packages/4b/47/dc98f3d5d48aa815770e31490893b92c5f1cd6c6cf28dd3a8ae0efffac14/gitdb-4.0.10.tar.gz"
+    sha256 "6eb990b69df4e15bad899ea868dc46572c3f75339735663b81de79b06f17eb9a"
   end
 
   resource "GitPython" do
@@ -124,8 +124,8 @@ class Mathlibtools < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "wrapt" do

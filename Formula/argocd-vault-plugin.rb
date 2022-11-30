@@ -2,20 +2,18 @@ class ArgocdVaultPlugin < Formula
   desc "Argo CD plugin to retrieve secrets from Secret Management tools"
   homepage "https://argocd-vault-plugin.readthedocs.io"
   url "https://github.com/argoproj-labs/argocd-vault-plugin.git",
-      tag:      "v1.13.0",
-      revision: "6866b7206719e9b5b2ea4d7cb870e18f76534637"
+      tag:      "v1.13.1",
+      revision: "9eabb455a194a3f3c4d235c16cdc84e707f948a6"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5f419400a13677fc8be88f39c059db0733ec9b0950ce9e54db302dd1da150f29"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9478524ce1977ec65883d3e5d86303b14f5ce5005f7e98a31d3707bce8fdb6cc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9478524ce1977ec65883d3e5d86303b14f5ce5005f7e98a31d3707bce8fdb6cc"
-    sha256 cellar: :any_skip_relocation, ventura:        "93010d7f690803b6ec9cf7e37e9c90251fbf9e8319ce24f1ef971e18f4d87f13"
-    sha256 cellar: :any_skip_relocation, monterey:       "940328ea5f655489e46ffbd5bb3a277e9a02fe0b09d2230395405a6460ae9b15"
-    sha256 cellar: :any_skip_relocation, big_sur:        "940328ea5f655489e46ffbd5bb3a277e9a02fe0b09d2230395405a6460ae9b15"
-    sha256 cellar: :any_skip_relocation, catalina:       "940328ea5f655489e46ffbd5bb3a277e9a02fe0b09d2230395405a6460ae9b15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "28226c5bfded825148d0f9fd59242b324fdcbfa447d46edd439911b5e95de0ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7d5bbe6e17f74c44075b01a0dc7719b3fb73e718b5389699fd995fe678d30769"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d5bbe6e17f74c44075b01a0dc7719b3fb73e718b5389699fd995fe678d30769"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d5bbe6e17f74c44075b01a0dc7719b3fb73e718b5389699fd995fe678d30769"
+    sha256 cellar: :any_skip_relocation, monterey:       "b71cb1ba8d4561176ed6fdd7f15a1567eef841c60059415bbefb321c62a28d52"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b71cb1ba8d4561176ed6fdd7f15a1567eef841c60059415bbefb321c62a28d52"
+    sha256 cellar: :any_skip_relocation, catalina:       "b71cb1ba8d4561176ed6fdd7f15a1567eef841c60059415bbefb321c62a28d52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5b6c5b6d0abbe6f6aabe29579bfd1af7f56f7ace4a1f1b79c20b9c79467b183"
   end
 
   depends_on "go" => :build

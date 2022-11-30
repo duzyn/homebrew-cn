@@ -9,6 +9,7 @@ class ManifestTool < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "6d2178faa38e32f4196989c16681e6b24c6d616c3133709a8a6ea0cc60ba6f2a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "42b358798b4ec2c454b00f750147bf47d7e801708f8ba84308d302041cfe47ff"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8b682e89f12fa2f61e70bcb71636d5a945439411c7e58a332540e8e83589ad8"
+    sha256 cellar: :any_skip_relocation, ventura:        "e6528630238b55e1f2193afcd3b935771777a58a65dd0f9459ee85d91ab00d2e"
     sha256 cellar: :any_skip_relocation, monterey:       "f9dc01750d364f7124e2ffc0c64a0c9ee065256e5eaf997af5daf70c8568448e"
     sha256 cellar: :any_skip_relocation, big_sur:        "c3c0e5b02efc40a188b6d6e7c288ee91c74bbb18697688ca6152d0f758b65fe3"
     sha256 cellar: :any_skip_relocation, catalina:       "30e368dfaf1a9363506c56dba4e2e3f90fd8807b7389be70a75270fb2f97b67f"

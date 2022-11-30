@@ -17,6 +17,7 @@ class GnomeAutoar < Formula
     sha256 cellar: :any, arm64_ventura:  "c2d46eb77c19eb1f599cf23a093d81c91e8d66b857d2df834d05200cd52383b5"
     sha256 cellar: :any, arm64_monterey: "0df6603337a1cff502ba253b8801db07224f32598eb347f94fb5785378520fbc"
     sha256 cellar: :any, arm64_big_sur:  "cb7cbf77725dfb8c63132595f9328165d05c88ff06bb354c0439b619046ea089"
+    sha256 cellar: :any, ventura:        "9690e11452b96f60b9b9076826a9c65f32909b89ea0deb267d7e0aab16d701c2"
     sha256 cellar: :any, monterey:       "eb9b26d88d0999f3eda261336868815893a94680dfb59041093ca108a38a278c"
     sha256 cellar: :any, big_sur:        "a6b34eb24dbdc52a7e616dc1fda7bd10b37428d97a182006da2f6b18b34bbdfb"
     sha256 cellar: :any, catalina:       "ac757f0f9b548f9a993d6f4f80bcb2b48abbed49189b7c7ebad0b13e9a75ec0d"

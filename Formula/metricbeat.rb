@@ -12,6 +12,7 @@ class Metricbeat < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ce73b5dc6631cccb8e4d2c488303a2d7d4cfecb2901741f66144b9852229bfd9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "887c5aef33e10348cce0806bb5235cc061903ab7b8594af96d449866d52bb3dc"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9f43caa1ad9d5fa197de7b27b5a0bce5f1d53321efd3740ee5609ab8dcd07a76"
+    sha256 cellar: :any_skip_relocation, ventura:        "5f8a8d079ae08d3b6a1a9b2a623e0ae2f1b8c29f77daaa9d6debc9a0b25c566f"
     sha256 cellar: :any_skip_relocation, monterey:       "fbabea32556bfddfd4eae7d789c4314a76b2b2040e718260b79e3d2fd70c72b2"
     sha256 cellar: :any_skip_relocation, big_sur:        "81146f6b6d4fb17b8a138f50c4a24f10ca4bb51c95bd8cec438cf65da42ef2f9"
     sha256 cellar: :any_skip_relocation, catalina:       "0e21f86c1a6e6efca82b456703080eabd3eee94a26382a6fb97de823f28d7a56"

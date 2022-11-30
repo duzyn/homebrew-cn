@@ -16,6 +16,7 @@ class Hdf5Mpi < Formula
     sha256 cellar: :any,                 arm64_ventura:  "bf95d9b6d60d42e207485b164894d2fbd0a46bfbec3a7fb8a98a682b627d7b2c"
     sha256 cellar: :any,                 arm64_monterey: "eedbdbfa8bc9a676568608959c58b869f54357442e11b4a1a3c2db874886c37e"
     sha256 cellar: :any,                 arm64_big_sur:  "0476498c73b37cb11e5aa210de3e2af561e5107bf25757b38bf9a38a0cd08104"
+    sha256 cellar: :any,                 ventura:        "2d340092cdd0005126d5a4b3c38b7a2bb4946de3175ba2fff674f280da775e11"
     sha256 cellar: :any,                 monterey:       "235763dc893a23b56caa69c5c61b0322d31ff57584830c095ffc8b886c27f482"
     sha256 cellar: :any,                 big_sur:        "8c355fe37ff6a3ede90114ccbda7b60f4028a800d5bb0cd75515ecf02cc21800"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6cff00a383bfba4e85fcb40f00e3942a6de4c90b45fa9f51a7e6487dc454e5b"

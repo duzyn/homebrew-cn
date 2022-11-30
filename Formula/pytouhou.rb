@@ -10,6 +10,7 @@ class Pytouhou < Formula
     sha256 cellar: :any,                 arm64_ventura:  "eb665fc9191b06afba5629a7e1e9a7fbc4a30e1ddaf1d3b5f93ce0f58e77ebc8"
     sha256 cellar: :any,                 arm64_monterey: "5b7880e24a56f914a2eba61055a67aeb2e3f4ad0ecd311c1b6e27295b748c926"
     sha256 cellar: :any,                 arm64_big_sur:  "0911d15863c316fc09f7bf623932220fcce67ad4e16dbdb614a72f11d73df227"
+    sha256 cellar: :any,                 ventura:        "25b24da743ff5b61b271ad1a98f9a49326814c4bd8cd4e51875ee1bd8b5c1936"
     sha256 cellar: :any,                 monterey:       "b973c7a742e8838a3f5bfd0ba94193c39bd81543d7a8d19f98f07713d30e4b4f"
     sha256 cellar: :any,                 big_sur:        "d3e12e01e5b18f44435ae49ad65726fd71d72c0f9bdb0b54169dc2f1d894b2e0"
     sha256 cellar: :any,                 catalina:       "d1b56e807242ae33bb7a577c2359daa5e233ad73e1e81dc4b642546eb93545a1"

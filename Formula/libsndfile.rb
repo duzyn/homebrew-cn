@@ -12,14 +12,15 @@ class Libsndfile < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b4515a2527c8a9c0221f95566fbd7739f83e04f1c9fbe23a7815deff16cfea78"
-    sha256 cellar: :any,                 arm64_monterey: "9ed727cc18747f0a6d3719fb2d9eaee6b1ac6f0f246e25af94148f38d64474f6"
-    sha256 cellar: :any,                 arm64_big_sur:  "dc8a056668adb95bd8cb09d8b26f9ba934e3a636161ab1858ec2c00bd29a30e5"
-    sha256 cellar: :any,                 ventura:        "f6c982d9c6f5987d8dc7172d7be8ceccc584d41b9cd7a28b12701b3719a6a98c"
-    sha256 cellar: :any,                 monterey:       "46ef23309fcd5a9719b32ac664a2311e3de8bbfae8f0b576a7910f7bcc1dbb75"
-    sha256 cellar: :any,                 big_sur:        "9ae6459378ff5eb03da93314b33d88d1b3bb32fb920db887c049fbbe40edc016"
-    sha256 cellar: :any,                 catalina:       "0c62f981692a252ee7d4b6403423437f084076139ec09c717ba0e73ace14148a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f1ccedcb7ec0d71a45cc48a73112bc45b400c6d6c27a455709a3beb955d5266"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "7cdb108767e5974753eaf68d0b709d309d46c4aa4dfe997ca9b7d88f7c8d4f87"
+    sha256 cellar: :any,                 arm64_monterey: "6355d1153204ae329ffdd4573a5585acf3658ef37d25dc28583c6451d7b014e0"
+    sha256 cellar: :any,                 arm64_big_sur:  "0f7cbb29a5fe0c69ce74965ed33ac66455b7e849954c102e58566d9101144491"
+    sha256 cellar: :any,                 ventura:        "1db3fa5ec99cc7d615bf8e3345ad05442ee469915830999a603e82cfa81560b9"
+    sha256 cellar: :any,                 monterey:       "39def1916e1e36ea8ed47dbcaf57bd858f57e5ac2153a3304a2785f666a25d64"
+    sha256 cellar: :any,                 big_sur:        "90d04f9535380ce27d3bd064fceaaa246c6ecc5d31d0885a4dda1c8da6335ddf"
+    sha256 cellar: :any,                 catalina:       "d0e19056bec6f6cf698996f4909d8e5bb61114498c51b36cf23a1d87414a6967"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc1b43c72b5fd140d1d4292918d2e3ba5e4d8b911e094473d6f3739d18a1b97f"
   end
 
   depends_on "autoconf" => :build
@@ -27,8 +28,10 @@ class Libsndfile < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "flac"
+  depends_on "lame"
   depends_on "libogg"
   depends_on "libvorbis"
+  depends_on "mpg123"
   depends_on "opus"
 
   uses_from_macos "python" => :build
