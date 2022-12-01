@@ -14,6 +14,7 @@ class GstEditingServices < Formula
     sha256 cellar: :any, arm64_ventura:  "2e7910c06f1ce585fbba11277db82b0924091b0a79f80fa49a7f4d55ba824ff5"
     sha256 cellar: :any, arm64_monterey: "0e0782fb99977a997dc512e68c6753bd5b348462679d6beb0185975a9ad2d822"
     sha256 cellar: :any, arm64_big_sur:  "6a0a76f1c9601665bda8ffbac2fc37eef71acfebf8884a58454ede33cf3020a0"
+    sha256 cellar: :any, ventura:        "b496f3fcb34a530a78be136fe48ea157dd0ff45f85cba716c3abc8487ea33eac"
     sha256 cellar: :any, monterey:       "f6d89657b9c533f08d9ab00273b54957c266e592d857e3eecbf408123b33bd88"
     sha256 cellar: :any, big_sur:        "be1b326db4a4a5da6845c2c32917fd151c26a1dfe61ef2d929233b745aa86e5f"
     sha256 cellar: :any, catalina:       "e9804be1d11e5b1c271a063ef339ce1fb4945bbed123202e4d972c1021437bf8"

@@ -12,6 +12,7 @@ class CharmTools < Formula
     sha256 cellar: :any,                 arm64_ventura:  "9bc473685a0cf4bb6d1ac191baa117eaf4024242267881301622486d2a6241fd"
     sha256 cellar: :any,                 arm64_monterey: "32adfcd00dc5f1dbb6568f4e7fb382eb0f0ea7c4fb8c8bba1a5c946a844153d2"
     sha256 cellar: :any,                 arm64_big_sur:  "8af18361d19f12242f1f9a61488200f87c33d9e8bece301a14cd43c5263ea827"
+    sha256 cellar: :any,                 ventura:        "3a32c847ae12531af273ff890710455d5379f76102da939d80d5ae3b81b3576f"
     sha256 cellar: :any,                 monterey:       "86b5e32b33f41ea6a047b4eb5e63fd306edb87e9f0eef00a7c964caf81a6d133"
     sha256 cellar: :any,                 big_sur:        "440db7a7c937943cc5dadc59fe9e835f46aa6a0b822273138a5768fcec435695"
     sha256 cellar: :any,                 catalina:       "b4bf7b6d4f27c60a025d66e499391ec44e44f76ebcbe61b7f5f5b0e94fb94dd2"

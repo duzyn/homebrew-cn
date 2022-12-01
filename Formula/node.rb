@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v19.1.0/node-v19.1.0.tar.xz"
-  sha256 "4ea9ba1f992815fb823b022a62b61f536121f970fe88c6395c7e3af4e9cf46a0"
+  url "https://nodejs.org/dist/v19.2.0/node-v19.2.0.tar.xz"
+  sha256 "0956b0ff01f2f6383827e916a6048159ce2bdb05217f654a8fff54e8116dc17e"
   license "MIT"
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -12,14 +12,14 @@ class Node < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2662544d78dddd15250be51a9dc82342b79c7a6033875e45cdd31f81f1637063"
-    sha256 cellar: :any,                 arm64_monterey: "35f9741a5d35bf9c779e915d445870c7c3835a29e1ee942d0bc20b516e2c1a83"
-    sha256 cellar: :any,                 arm64_big_sur:  "7f7174d37afbd621a682b9102b821448197bd978f558ad3d664792b7264079fe"
-    sha256 cellar: :any,                 ventura:        "a90cad2387bcdbd4ece6d527f7f10a8f8240f85099ee25b7101da4d73c5c84a5"
-    sha256 cellar: :any,                 monterey:       "dfec28c0a23b138aabf1a298be3ca31d764859809332f0c429c7ada463fcb586"
-    sha256 cellar: :any,                 big_sur:        "c07f6acfe98a43b1ce4fda563f98bba1c2520c50ea7d0314b13a97b4704040d1"
-    sha256 cellar: :any,                 catalina:       "247beb40fdb32924b1f4609f81e05a57d238ab969b77717b866cb408f734ef11"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a75b5d9666e8de6954a2f2044d6749d0c5c64ab715145ec0d944d2ba157d70ad"
+    sha256 cellar: :any,                 arm64_ventura:  "4a8987fe7696ab3226d83ac7ff7a1021736f053f4f2a12866c7e328d6ce927ed"
+    sha256 cellar: :any,                 arm64_monterey: "1688808aba40654d65e17770b1327acd69e566f0e56c04e7fbc27edb24cbbf0f"
+    sha256 cellar: :any,                 arm64_big_sur:  "047efdc50a9f934e89d865b152c2b54d17f05b2da2dbaadbfe7deacea1956b37"
+    sha256 cellar: :any,                 ventura:        "d1551f2933d6290e0420ccc372fb40b5008e1d33b0809ba066e370972ae95275"
+    sha256 cellar: :any,                 monterey:       "d4dcb22958f6d086b37b8552dc6d6f65187dd9013fb95df00e4289112805374d"
+    sha256 cellar: :any,                 big_sur:        "cbb0a18f7a9a1cb272a83947d790b4fdf427f39afec9f89048814c4aaf3e17ba"
+    sha256 cellar: :any,                 catalina:       "832532bfd6b4860d12830b28a3307e1bb21a6e94d5b9cb2781c4c26f4f44fbda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f164501057711e2f8fb9ee69c4f4d4ba5f771ac727aee748aae657d01eb28355"
   end
 
   depends_on "pkg-config" => :build

@@ -18,8 +18,10 @@ class Mu < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "f210c524269fcb702f413eb3f25354dfa7e5bf1fce30754de058a92f58f04212"
     sha256 arm64_monterey: "bbc266238e8061043ccf69e82dcd90880d8c0d9d55025fc081740dfea0d6a040"
     sha256 arm64_big_sur:  "9cf3b1c22ca2f4e4b535a32f8a30984d9152a8c9326fd53eb313c6877eafe8d3"
+    sha256 ventura:        "ea791336320b265dc7dab6008e0ddc00d4ce12f7885340b76d5e3e3501c7abda"
     sha256 monterey:       "ef2ddfa9cd75867a96292d47a927f8803ecc3f8ff96435c0552860d8145fcd42"
     sha256 big_sur:        "620c1ea085a7bca6465600acae29dd883583063cf7725285eacd5aa30f84021b"
     sha256 catalina:       "3955dc7e82b0ae049dee978d88a70c333126779558693660a984196f12f91479"

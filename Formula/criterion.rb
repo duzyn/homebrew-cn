@@ -11,6 +11,7 @@ class Criterion < Formula
     sha256 cellar: :any, arm64_ventura:  "888bccff3d928fd176d226117ae69b1ae6ee0f093158ee55abaacfffb64051ba"
     sha256 cellar: :any, arm64_monterey: "936db451f3b333687d75ee02f987793b5a2a6e799bdf19d4c402f4942a6466bb"
     sha256 cellar: :any, arm64_big_sur:  "893ed763895b094bfdcfaae2891fcb9c07c308d1d207da5aa988340a6d41f56b"
+    sha256 cellar: :any, ventura:        "c57317f951714c91e1c55b525ee409e11ca4f1fb949c29efe520b468ddaacb6b"
     sha256 cellar: :any, monterey:       "ccea6bdbe908966b8152948d39672bbe475a85dfa2d34e702a02ab17df236358"
     sha256 cellar: :any, big_sur:        "d6f833935149e7b6a85b2735db748251c076cdc3e4fb4ad9268ca26df0392d51"
     sha256 cellar: :any, catalina:       "5abf4ef75d576ccdfdd7d482cd74e9a97b82f86aef95c8aa731722da87bc93d0"

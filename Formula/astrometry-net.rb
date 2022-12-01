@@ -16,6 +16,7 @@ class AstrometryNet < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c084a215df96193428b5be2c4e9bf63377692d5312834981c19a24a83c3825ce"
     sha256 cellar: :any,                 arm64_monterey: "b938a76bf2321eb975bfcf90ad94e5ca256f0f2b71c3259dc486b1f0dd729a7a"
     sha256 cellar: :any,                 arm64_big_sur:  "76c407270dfa0aa73910e98c49b5c69209092d35306efda91a25ef85823255b3"
+    sha256 cellar: :any,                 ventura:        "f13c5f2f13dc4ad5812bafb969eedbbd0c95dbee8874994fd385104c59b25449"
     sha256 cellar: :any,                 monterey:       "f7fe5bdcc8207f971de1689f4b1abb49a3753c5eb82ed242cb976c2ecceff98e"
     sha256 cellar: :any,                 big_sur:        "13da4e8722df5de2582a008a489c559131116d343481ee2a2c8372932152e696"
     sha256 cellar: :any,                 catalina:       "b9d61e42e7674021e031380a174f9e66ebcd541ae85c089760888ecb1151e7f7"

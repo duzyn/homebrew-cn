@@ -11,6 +11,7 @@ class GnomeLatex < Formula
     sha256 arm64_ventura:  "2ce74461c6544307ce6ef78ca8ee4a041955401dadb131f95cf28df1d11a9ac4"
     sha256 arm64_monterey: "ed4db46967ee4e4a49617ccb1bab481aaf8c01c772fe98f4b09cec1374715ea8"
     sha256 arm64_big_sur:  "65daa605789bb193d0fcb02e45207c4ee200c28213dc923b2b0c6c2d3f64884b"
+    sha256 ventura:        "66e8b36170eb1ea6355b31f76e761e79e8809eb09bd53c5a55d9d10be2b595db"
     sha256 monterey:       "e6faaf0aff9d05e3c60261a37f65dba8036903c718cd40f9057825901b513498"
     sha256 big_sur:        "9fc46312b67c240185ef1929a3e3660aaead71cbd0ede56aaaf6422cc3429b8a"
     sha256 catalina:       "224ac8c01214d4b9171a7dd7432b441fe3631ad48b8f7bafa1a306bf894e31c2"

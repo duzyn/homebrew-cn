@@ -12,6 +12,7 @@ class CyralGimmeDbToken < Formula
     sha256 cellar: :any,                 arm64_ventura:  "6d25345463d0c2932be0a23a31fd3e1861bea45358d1dafee19a2fecfdb009e2"
     sha256 cellar: :any,                 arm64_monterey: "0b28ffa9ac0704e75f0b09fc30a3040a7fed22bca81d45a11618aced477a0708"
     sha256 cellar: :any,                 arm64_big_sur:  "8db9650eb0f4b71e5f654e2882f9b161ef6e6a283f6b4ea527fddf052d3fc7e0"
+    sha256 cellar: :any,                 ventura:        "411e839bf44b075c519c8dac4642f9b01bcf99887bf96c06635b8a80d5928232"
     sha256 cellar: :any,                 monterey:       "951f4f9252816b0c85f5ff120c8cde10d55b8b604e4ce6bc301eb9a4381b2740"
     sha256 cellar: :any,                 big_sur:        "90883ea1be8e6b62b80e88994026c16974d976aee235dc660022ca1e9f63b136"
     sha256 cellar: :any,                 catalina:       "4f438f8fc840756c10f1f38b9cbf6fe41d9370b4337d082f8e3eba2c1de4e6c9"

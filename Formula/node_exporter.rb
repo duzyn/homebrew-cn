@@ -15,6 +15,7 @@ class NodeExporter < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "1b186c09bf34900911bb0bc4940707d6a38b1c7a0e61fb86a5415f49ff5c4cc3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5f2e08c7b6c4f46771d29e41d348eb620849952059b5e4c136aa905f2af9190a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "01294c514574959a1b0f61cf5531f6cccab03735def7e29e870b7f3d274c6f94"
+    sha256 cellar: :any_skip_relocation, ventura:        "e5635c6e92beda5e1e4f85396c97a0f1bfc56e9b656e0822ef87fe8baed7a0d1"
     sha256 cellar: :any_skip_relocation, monterey:       "08b62862b6ff824d79fec85055012836edd688b80cde6c496cc6f2277775ddde"
     sha256 cellar: :any_skip_relocation, big_sur:        "7af3cb9e5fc4191af71c794708751e3c245e61235f9895b8c2c09f3fee819a25"
     sha256 cellar: :any_skip_relocation, catalina:       "7f8660b470247bc23fcb352ef896bc44d8b7662aa1bc033fbee74630471dcd24"

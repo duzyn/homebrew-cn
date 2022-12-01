@@ -10,6 +10,7 @@ class XalanC < Formula
     sha256 cellar: :any,                 arm64_ventura:  "26f8a177f0c16a0a9fb184683a37e0a7bc9b7ca44c6b71a4537aa0893afd59bf"
     sha256 cellar: :any,                 arm64_monterey: "7c3a09c8295eee985ae29bbb413117f3bcf561c2fb12ac2cf694812a0552a402"
     sha256 cellar: :any,                 arm64_big_sur:  "68fa397917ca7521f087e321c3f2c5201fd4692bdc61c7f807386ccfa2080486"
+    sha256 cellar: :any,                 ventura:        "d557fdf82ac5902c9943ce23b18e30584bbb97679c2d139c1ac3170d7e7f15aa"
     sha256 cellar: :any,                 monterey:       "3e45d82c41f1a30500ef0f9cc3614cae511ff88d9d25b4e041071d99ef2b364c"
     sha256 cellar: :any,                 big_sur:        "0fcb0a2509617e2b58bc75dd931a64ef065c4081e91066d05bae1f719cec6a81"
     sha256 cellar: :any,                 catalina:       "becbc6b53dc6656b58e9543832640fac7b4dacee131f2f830d918045b8c82f82"

@@ -11,6 +11,7 @@ class Groestlcoin < Formula
     sha256 cellar: :any,                 arm64_ventura:  "7f169f6c1b836a53ecd547562af19e7127ad922584092919967bb4b03c122723"
     sha256 cellar: :any,                 arm64_monterey: "e271b0f7cffcc522b9b280e4f96d79aaac5aa5a89706a57575a159e67fda5215"
     sha256 cellar: :any,                 arm64_big_sur:  "0bc45052b5f441bd2cd56a3b2205066c3eb6e5c20187f06e13740def6416b210"
+    sha256 cellar: :any,                 ventura:        "8efe5ce23f56d1784c5d3d69d08492852fba28ac623f843180911f14327144c3"
     sha256 cellar: :any,                 monterey:       "74770956a29628ed8c4f4f20db03947482e311d1a5b339e4006c8cb5c99da01f"
     sha256 cellar: :any,                 big_sur:        "a9109bf51667122319ebeaaacd57a9b82d5d4dd45a235691d311b42e9c9455f0"
     sha256 cellar: :any,                 catalina:       "8bdcc7cf88e1a1f8b32157e73afc17437c3714866dca1d00fd6efb3b872787bd"

@@ -12,6 +12,7 @@ class Zurl < Formula
     sha256 cellar: :any,                 arm64_ventura:  "44c8b90e6cc8188e7227c38737f520aa25cc5fc0362ef1e206b36db5ba56e32d"
     sha256 cellar: :any,                 arm64_monterey: "cbf5027867ea9729a019902d2f491b4ec2bf06c9b6e628b5b64e761b406a166e"
     sha256 cellar: :any,                 arm64_big_sur:  "52fa23c3cda835f52109102ddc9ccbe7ed64bb1b4ac5e8d2826b2019d7b3f5df"
+    sha256 cellar: :any,                 ventura:        "3cf94defa0e551ee553b7ff33b5ecf98847760dd7cdabf35ebc5c4ad5418f5d2"
     sha256 cellar: :any,                 monterey:       "732931b515e27cd2e89a605a561561981c73d46606ff71e80c64fe48a1708030"
     sha256 cellar: :any,                 big_sur:        "d56d33c65d948e66b3a8cf470d8e889c301e7cf6d71972e2e5b0668962e5fdfd"
     sha256 cellar: :any,                 catalina:       "4f7fb91c8fc4f34e43faad72bd1b172c254e09a5d68cf9bd48300afab7a79032"

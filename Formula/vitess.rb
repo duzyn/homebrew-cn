@@ -1,23 +1,22 @@
 class Vitess < Formula
   desc "Database clustering system for horizontal scaling of MySQL"
   homepage "https://vitess.io"
-  url "https://github.com/vitessio/vitess/archive/v15.0.0.tar.gz"
-  sha256 "0951281afc4b583248ca1ce323e882e919bcfd8d12122d6a610722aa67d6fb88"
+  url "https://github.com/vitessio/vitess/archive/v15.0.1.tar.gz"
+  sha256 "7c209f1eed48064b3c890de46f315701b7c5b30d55102f086bc7834ab9081644"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b20c1e7a1e1c09c1e53b90bc7bfb943ea643bdfc8317871ce03f31b8db72f04c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4352ef053f7440fd238beca302a5403eaf3283eaec2bee96c9d9f1dcbfd5420d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "76e201d0f261a4ad46ce1f91087bc862be18c0afae618c7c3f8628fef3bfc9a9"
-    sha256 cellar: :any_skip_relocation, ventura:        "54e392d393dd4c29f22c3c39f9225d4282be695de97f93c49b837a039425985a"
-    sha256 cellar: :any_skip_relocation, monterey:       "b90312ec97fcd0bd83792e3b2d284e75371e1e2fe1dba7f337358a67e493441e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ff8131bdc076e4e670d87280d216fc255d7341bf85751c69ec63e6665850e9d0"
-    sha256 cellar: :any_skip_relocation, catalina:       "5e18ccd4ec60b9e6dbb657f7b41a91853b835e60b2a86a76a8805e3abe9386cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b08d79ad6debfbf9289a408e6a3df44f36542d12cbe76b337fcfc057498d088"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "054272bbd5537c96beaf76ad38aa75ed4fba243904e475e64c0a0494889a1926"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5f38dc3f60969d75af326ce4fefa5673507a56212fa68600e788e71f18b88fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "88eb89d71b07ecc22443a7cc174a63ddd7dc612567d0c8a0a677425362d1be0d"
+    sha256 cellar: :any_skip_relocation, ventura:        "a556830941563b5effa10711f06b15e9c52350b7b51a3aa1236d64240c114bd3"
+    sha256 cellar: :any_skip_relocation, monterey:       "62b959efeee3feb16787dab4664a26b09dd2b90ca5cecd011ffef510f91f1da8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "52bbadbf719417234fdb8a6fef70a7fda2f4093077b59ea4bbb96afcb1d81fd3"
+    sha256 cellar: :any_skip_relocation, catalina:       "2861d38d75ec15816b24bff4c03af7e74237a00ddc63451e99abe0fd8b3d536c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41683987278cd0ff2c6b7810e0c45ee18cdd190f059de14b126ff9cf48d1c032"
   end
 
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
   depends_on "etcd"
 
   def install

@@ -13,26 +13,25 @@ class Ldns < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a5829a339bbe5301ac8cc728a2aae72f15649ac41686d306d189580c8e24caa3"
-    sha256 cellar: :any,                 arm64_monterey: "84fa570a26a953f4a793d8498c95fd4d2e63646673e514566b43096e6d01944b"
-    sha256 cellar: :any,                 arm64_big_sur:  "c165e0faa3f490a9f7c7baebb538cf79b48c1334fa4ea6da3a19ca0401b36bef"
-    sha256 cellar: :any,                 ventura:        "e753f68dacce2ca64f06a5949e60fb5e2954a586a09acb3fa962f9cd90ab6a6f"
-    sha256 cellar: :any,                 monterey:       "424b3710704a509032718b9e82c3814c7eeb3391b7ac4cc8fd2ce7e7fda8946d"
-    sha256 cellar: :any,                 big_sur:        "2187a1082edbca32be2bf59a8222f05c6fb68c371324116d288547c5cca60ce3"
-    sha256 cellar: :any,                 catalina:       "5e9493ff659d9b2e8587494f94df59bb7f97897dca0292c1880d4ebe9cef28e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d82fc8ab9aa3917ad9e3d565271a6e32231eb3aa914445002f4b52053e640455"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "e0d0acfb1f7f199ce05fe11177adf2db2492911a0f2d51aed693f4127b477604"
+    sha256 cellar: :any,                 arm64_monterey: "46ef12897880d4f3d53508ea397362762d6f97c68259ec67041bbd12b35edbbd"
+    sha256 cellar: :any,                 arm64_big_sur:  "251b84cfda5e8e24ca2e1dcc8bba380beb7edca524ab09b188fa2c5fbe18fa05"
+    sha256 cellar: :any,                 ventura:        "b2c4a095c0c4eb850537697ba51153c285033cb3f597ac4739a7167277ceb5bc"
+    sha256 cellar: :any,                 monterey:       "a3185a8decca00ced7e56098d8e6897e3cecf4f6a5db970d8d7dcceb24178c5d"
+    sha256 cellar: :any,                 big_sur:        "0faa2e9fc9c0fb46cfa52d539838875ffcec82e886977d0d23d91e111f29efed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6bc1207ee00802b2bd19648ea2da9dae3eee6da0236092c9c398f51b4fa56f1"
   end
 
   depends_on "swig" => :build
   depends_on "openssl@1.1"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   conflicts_with "drill", because: "both install a `drill` binary"
 
   def install
-    python3 = "python3.10"
-    args = %W[
-      --prefix=#{prefix}
+    python3 = "python3.11"
+    args = *std_configure_args + %W[
       --with-drill
       --with-examples
       --with-ssl=#{Formula["openssl@1.1"].opt_prefix}

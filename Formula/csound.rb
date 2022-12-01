@@ -16,6 +16,7 @@ class Csound < Formula
     sha256 arm64_ventura:  "1fa3f5ecd493502c6f8a380233ddf7ecaccf5590c1d0cb206eddf312e6195729"
     sha256 arm64_monterey: "a1d5e7f06bc3b999b0cbc943e694b8ae0a2a7862e2c720f3cd73e3b929ceff98"
     sha256 arm64_big_sur:  "8bed3925dc5b9741ec6f4d20f1cb17e9c1b22a77987fdcbef35b941f72e936bb"
+    sha256 ventura:        "44aac4e95442ef59d104f88e16b8f8c1e9c837c3b68ab8a1f288541ca9c08ab8"
     sha256 monterey:       "847442c274b43b8d327b5fe4767ec41a19db8b3f01597310f254c2e5526eabdd"
     sha256 big_sur:        "9fc1ef9ec6ce05f8d0661eb2a72f537d50a9c2fbdfd0ab0cf0b84febb05e21df"
     sha256 catalina:       "a857c9ab223839877ecc31a819ff2ae7a6691358306cc6f0a55b2fce905fb854"

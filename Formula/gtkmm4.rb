@@ -14,6 +14,7 @@ class Gtkmm4 < Formula
     sha256 cellar: :any, arm64_ventura:  "528dbb1dbb63538c5e603848ca21924a6788e051b1db9aa6c277472ca412e63e"
     sha256 cellar: :any, arm64_monterey: "dec88e65848253c7a4d434a2d2f8f203bd41815ca6b03caa19c40b38c9210a7c"
     sha256 cellar: :any, arm64_big_sur:  "9b85467c73912e156db432c26f8d65d20eb34d557849549e300ca7da48f47b61"
+    sha256 cellar: :any, ventura:        "4c745cb4d3b88143b1629a60c01729847dd3924f5c2ac83182fabcd97dfa94e6"
     sha256 cellar: :any, monterey:       "c9149bef97843c81b6f2345eecae097c88232164acfea98a09f63a7d4f283b29"
     sha256 cellar: :any, big_sur:        "2c7247708b823ce00462cf419513ba5cee394951f7a6db411a0654011bb68751"
     sha256 cellar: :any, catalina:       "8a1da65e7de51882a9815e05b20afc3a00c81e9dfff4a10d3c74f587ccc574bb"

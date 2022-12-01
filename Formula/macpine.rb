@@ -7,16 +7,18 @@ class Macpine < Formula
   head "https://github.com/beringresearch/macpine.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f0359c65c076d0e060e791bec4c066ec97168622e16901735f8eff5c6d30bf97"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b5b16afe5fa16d83e28d0bb40f9da10ab38192f290fbf9e961f50bef0bafa7c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dbbece12d9b3e3902080ad53fdee339506fa1ed27e077adc91681413e35a6d65"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d50502aadab956d2fbce0b3371eae5b206f6ee909478bec4636a10b7c7d4bb1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "aabc1160c360c19da0ba7476755c4c72593ed3f5eb0a1452c665c7049cbe9559"
-    sha256 cellar: :any_skip_relocation, catalina:       "6dc1ed5e5ad09ed9353b9fd37ce7aea7914c353c470357397eaf2d48296714cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f0f893f2ff0b6d5cb7da262de069692ce3e74f7bee01088efebf973bd2324bf"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "17724ae6ba9ff82b9d55cb7d51f0fa5641fa568569c27350083c6d88dbe2dcd8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be6eacbba1713dd2a5014bce46eb72ad3303272fd285b44bdafd3d1b892ba094"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a57f7dce7aa83d375d014b5a9c8cccfeb09cd3078d70feffccee520ddc1af78"
+    sha256 cellar: :any_skip_relocation, ventura:        "427c9caab46cd89a59ba627271cbc6d7611c8e3e75669ffa84606a7968f0610b"
+    sha256 cellar: :any_skip_relocation, monterey:       "83acd669c461cf5b20cd4585c3b40d257b746c2f387e523c65c89a829b4ee566"
+    sha256 cellar: :any_skip_relocation, big_sur:        "edb32132706f0919e66cd22df2bbe95d16564abe0cdf7e5d22e89960e21da34d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5bb38a7419f1314f36fe04c8f7aa94870e2bf12499ec08dba72ff24d1619b07"
   end
 
   depends_on "go" => :build
+  depends_on "qemu"
 
   conflicts_with "alpine", because: "both install `alpine` binaries"
 

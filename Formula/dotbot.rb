@@ -13,6 +13,7 @@ class Dotbot < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "87a12d128d6b818c686dcfed8f3303256f5ae06b99535e83e60eaf505885a8e8"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e69e86421ab5c05c270cbcc228a5e0756d0d016c204ef6d1a3be5cf4b57f250a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "423dfff4e1cab4c57c73d8636c28e611ced0ebfbcad10fe222497de2c7138c6e"
+    sha256 cellar: :any_skip_relocation, ventura:        "a27e69770f183088be7484f9d45bf62b23676da7f11ed47822fd7900df31a9e8"
     sha256 cellar: :any_skip_relocation, monterey:       "ef6c5cd693bbfb4d3f1bac46042143460f071b488ab008b1f761db1f99d986e5"
     sha256 cellar: :any_skip_relocation, big_sur:        "44ac111a5f85630d40605cc5a924283a332bf2a8d8dc0b3a5e626c771d286c7e"
     sha256 cellar: :any_skip_relocation, catalina:       "965c56d812816e5257fa6fc1380b3a7a63dd205c473358f73a12fe590031749f"

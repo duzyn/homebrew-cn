@@ -3,21 +3,20 @@ class LinodeCli < Formula
 
   desc "CLI for the Linode API"
   homepage "https://www.linode.com/products/cli/"
-  url "https://github.com/linode/linode-cli/archive/refs/tags/5.26.1.tar.gz"
-  sha256 "a2b4c6477b78bedc2692b739d5566ceb606bbd684b468f8ce957c38471a3217a"
+  url "https://github.com/linode/linode-cli/archive/refs/tags/5.27.0.tar.gz"
+  sha256 "34442df753186d59b00f1ecaa485354f53b2ab43c0f63de0b71f2f2440ddb903"
   license "BSD-3-Clause"
   head "https://github.com/linode/linode-cli.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5f0e1008e442b0e1423b9025459e47b554934ddf1db6fb21793990cd319adfe0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a33eaf9875268eae90e130740b08f443eeedaf111bf3d055bf6c84704c082ce8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "713d0239be5427c0ba7a3c18afd11236fc5adbfd6838589530c9e77281b979fa"
-    sha256 cellar: :any_skip_relocation, ventura:        "74e1a54afef0e3887d0ae26abe169174ada38f68c04ddced2915add6978161db"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f1e9a72299a09e94cda5b886095a620da8e5953ca717233897821d52597ef36"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cbd7de9bd2d8ce8f7f16024b1d4a6da9de8f730ae59d0a11c53e6eee8554f037"
-    sha256 cellar: :any_skip_relocation, catalina:       "857c906074523b96cda5360e9b968ef9a24c6d5f4ec5dcb6c002464abe95cca3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "381885a9ee7f6f4f9ba01cd9b849850bad38412ee81fdf5b60b7640468285017"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e56f3b98f1dc0b2debcaac19726b62d1ab4e130ad19e67934b0134701d2a121e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e640ac6ec849097d9f4c821865ccb59c1061cb5091d50e0fbd741180f651d8b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b5d09fabdec2bcf873941b04858ad578085b7088de13d3029b2ab3ff6ae54efa"
+    sha256 cellar: :any_skip_relocation, ventura:        "581dee10e18ec6a728d65981797eabf9e2a5a10b68b2933bacdea05f999ac8bd"
+    sha256 cellar: :any_skip_relocation, monterey:       "85f38a2c310bda1ea243d5057c047bc9fe5454051ab2b2a3405c279ec0fcadcb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7cf3ef4d94d1752efc251a15fcc8e3c77c8e5da7e2427ced745da43500317cb7"
+    sha256 cellar: :any_skip_relocation, catalina:       "f4a2f1ac725a0a82f44fc11319ac48a4c072cbadad70d1f8cb7019ae8d92304c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cbd53d20513a6c3e2912584c9639a4132be5503f17471ce18f9555ed5baa45f4"
   end
 
   depends_on "openssl@1.1"

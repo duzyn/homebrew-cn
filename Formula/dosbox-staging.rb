@@ -17,6 +17,7 @@ class DosboxStaging < Formula
     sha256 arm64_ventura:  "9b90bf8a0a8019fcf0dc4e3fdd55bb9785eee83846310b7a05805f803e5bbdf9"
     sha256 arm64_monterey: "75cc3a72f4674ea537d12afad7fe9d14617ceb7f1108c01894f880954b3df1df"
     sha256 arm64_big_sur:  "920b3320cb2f390130f7b58c1e16a13c515781f7de9211103d3cd89effea6f4c"
+    sha256 ventura:        "29e93115ee2d3b2a9b6578e9df0c29b37c0f63632a66c7464b31e61131ec60ad"
     sha256 monterey:       "de5c5f3431504c34b844a7bd4eae17acdc3d9a7f060ddc92aa8e34512b055535"
     sha256 big_sur:        "9968e4e15dc3618d1c317e09116ef6598520819834938d42a9e2cace23c78451"
     sha256 catalina:       "e36de3ab5208617a4320803ebe82a451ba2eb68dd8a8cf979abcd09e48b308fa"

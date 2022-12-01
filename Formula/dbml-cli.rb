@@ -11,6 +11,7 @@ class DbmlCli < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b76584272e842b679a948c0afebd9abf0e09d7c45f5bd5859c66426744b68532"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "b76584272e842b679a948c0afebd9abf0e09d7c45f5bd5859c66426744b68532"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b76584272e842b679a948c0afebd9abf0e09d7c45f5bd5859c66426744b68532"
+    sha256 cellar: :any_skip_relocation, ventura:        "f9a5c6ea0e99d609ffb466f095b82d7419be897db29b924f83f8f7139ddeaee2"
     sha256 cellar: :any_skip_relocation, monterey:       "f83ddfc7a1c85b213f1e06635b71d75dfb8830dc242906b4b5735130e4db59c3"
     sha256 cellar: :any_skip_relocation, big_sur:        "f83ddfc7a1c85b213f1e06635b71d75dfb8830dc242906b4b5735130e4db59c3"
     sha256 cellar: :any_skip_relocation, catalina:       "f83ddfc7a1c85b213f1e06635b71d75dfb8830dc242906b4b5735130e4db59c3"

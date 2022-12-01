@@ -15,8 +15,10 @@ class Notmuch < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "ed024d3539758c36f8cb6a97774ecaa52ef04d631f9af13eda3746060923d220"
     sha256 cellar: :any,                 arm64_monterey: "8df2e487a5c64d1eebdf18ba66171c9f3037550b2dcbb049bf62eb6f0a41cc7b"
     sha256 cellar: :any,                 arm64_big_sur:  "dea84eba81f2265c25fd9e4186fbd24175d0c00125ff0e4c5a783d0c627be3bd"
+    sha256 cellar: :any,                 ventura:        "fef920bcbd5fe54a3211110c18287b9622a328cdc2ede30a9307656620ccb1d0"
     sha256 cellar: :any,                 monterey:       "4815aac84a42dc1b40dcd7fced6295e764e77d57f1b270d87466a6addae1a6cb"
     sha256 cellar: :any,                 big_sur:        "7b26d6498972ee90cfebeda76047001fe8194f5f44bf8fe6425059723f17706d"
     sha256 cellar: :any,                 catalina:       "c5b74dd48985c55a7bb92b9b3eb1140ffc10b053a50ba7205da6be4913fd65cf"

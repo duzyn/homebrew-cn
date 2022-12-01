@@ -11,6 +11,7 @@ class Epeg < Formula
     sha256 cellar: :any,                 arm64_ventura:  "7e359c49c31d7cad1ef88f8089d77f7f7c979d8c26972b32cdbdb6651b92e37e"
     sha256 cellar: :any,                 arm64_monterey: "54f06cba442c80a7df90e99c50b1b681863c740f6c653c7583f36a09be729674"
     sha256 cellar: :any,                 arm64_big_sur:  "70a4ef28e4d14c9f48219b1b8e10ce674a6e6539a28fba655bcbc5cdda2ce546"
+    sha256 cellar: :any,                 ventura:        "fc256542930e4eb3278ba65dceccf2c3e79882d1cc76f7c04681fc4d414e1d7f"
     sha256 cellar: :any,                 monterey:       "e9a1cfb10c35553fabf7c39994dc1524da44b75c6370c00176734907d74b7380"
     sha256 cellar: :any,                 big_sur:        "4fdf88f8b37fbf5bd56460d0c6ef3e73483c7c13f31ff8e979ae6022666efe0c"
     sha256 cellar: :any,                 catalina:       "328f79a3a50d8d834870a26de6ce4913525151c3e814529a10416d93927f8433"

@@ -11,6 +11,7 @@ class Augustus < Formula
     sha256 cellar: :any,                 arm64_ventura:  "f1532d78fc1a8b788cf0f3bff293f0ca037157ea1bd84718e61063e6ceff1c4d"
     sha256 cellar: :any,                 arm64_monterey: "bb001f41a131cf3065eca32fe225afa567728d35b163f98dfd71a57b2aaf2a3d"
     sha256 cellar: :any,                 arm64_big_sur:  "ce56e04aa4c4f706485616f2a7947ae59538391ec58100e20cbf5216bd3311a9"
+    sha256 cellar: :any,                 ventura:        "9e99bdba9516428b987face683ba441d663ede6ba43d00de363d2b21a24210f2"
     sha256 cellar: :any,                 monterey:       "ae8d067cd836352d3aea30d22563eba8167fbc8223e24edfab93af36f623f63d"
     sha256 cellar: :any,                 big_sur:        "955b4dc7f98c97aef46a05c8c1075054186bffa7b79bc49305ae8086f494ec02"
     sha256 cellar: :any,                 catalina:       "0c01281063e3b4a3de714959e04e30229713e6043ea12fb050e546f7f69f62a8"

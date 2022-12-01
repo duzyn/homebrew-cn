@@ -10,6 +10,7 @@ class Carton < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e8b540a262fd997261a20add377f931b7eb4ddfd496954a7af4adb7d692abca3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "4ed93b6f36dcfcbda3cf60bd27d204ed6e3fef9837a2c604baf5134e5133a75d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4ed93b6f36dcfcbda3cf60bd27d204ed6e3fef9837a2c604baf5134e5133a75d"
+    sha256 cellar: :any_skip_relocation, ventura:        "1488d2dde96fc144cd7e787b90930275bf1e291850bca2feb2a7639bab69c7d5"
     sha256 cellar: :any_skip_relocation, monterey:       "ae0fcb618fd8b91fb40d7e52ed07d1ccb8a76ef5fabe0f7a73772f7f63a9979f"
     sha256 cellar: :any_skip_relocation, big_sur:        "ae0fcb618fd8b91fb40d7e52ed07d1ccb8a76ef5fabe0f7a73772f7f63a9979f"
     sha256 cellar: :any_skip_relocation, catalina:       "ae0fcb618fd8b91fb40d7e52ed07d1ccb8a76ef5fabe0f7a73772f7f63a9979f"

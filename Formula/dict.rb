@@ -9,6 +9,7 @@ class Dict < Formula
     sha256 arm64_ventura:  "51ab6ccc175d30964e823fe0496fe957adc402eababac5d0ed7dbf766f47a5c6"
     sha256 arm64_monterey: "78b07272ca6147d7bf00f0952d2c5a9692fd2de372d850e0ce3aed8f2acffc1d"
     sha256 arm64_big_sur:  "e09d115b6d78be9f257b943de096aa09ae616733776e9b9e9825f1124cb8da4e"
+    sha256 ventura:        "dcd648b871a30130c8f20300ba716f4cbd9714b631120454951b68955041128b"
     sha256 monterey:       "360dfa6fe899696ef4ddda448bdd904348dd02f147c3a0f5b7433c894773d214"
     sha256 big_sur:        "04cd15245ebd92063b552cc04a92cb5fa888ef9b1dbaeb3199abe3d3a68d8e0b"
     sha256 catalina:       "da4b9f76b6e3bb5d18f5ac0abe43dea7dd4f571f9e41686ff45b3945ecd40e9a"

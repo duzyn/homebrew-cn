@@ -10,6 +10,7 @@ class BaculaFd < Formula
     sha256                               arm64_ventura:  "42e79cb194d0d3891a4694d50531bc14e95468980dc4ccafb74a53876b310361"
     sha256                               arm64_monterey: "0ff0297669fece22344c9d26a49137112d941c8fe6d6821c6d26b81114d1f9e9"
     sha256                               arm64_big_sur:  "3572aa477e228c9c27b0c408d5fd0201f81c97983846551232c470903b2159bd"
+    sha256                               ventura:        "f00e354684d8aa9d8491d152fac327fa898a0f6fbd912efeed316756736fcac4"
     sha256                               monterey:       "cb1a1ef69ef2ef0053d2f8ca92279ad0bcd5458cdbe8077bf3acd3c4858dd948"
     sha256                               big_sur:        "3f8d86143bba66c4e2e41ae275353e843ba8d4934473a1fed73f09609eb37519"
     sha256                               catalina:       "c11e6a5e698b06bdfe5e02e825c6bc5ae6e6c8a0a5ff1a8605510ba5b3ad7fb7"

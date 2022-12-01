@@ -14,6 +14,7 @@ class Di < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0fe76ffb07cc8e29f57a247c138a888384fb3d8610dcddd29fab93c9aca547ee"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "2f0155678e6e44db1dbfbc24fff96aaee23c22a69d553457dd8ac1f9de13b527"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4fc57febb3e9e00603674540b9c90fff49df3f9b376149fd3ed37ed72d3c29b8"
+    sha256 cellar: :any_skip_relocation, ventura:        "a2f171a92a951fe16ac39c70720257ea80e2d75312eb9ebd98c07138f8363566"
     sha256 cellar: :any_skip_relocation, monterey:       "0ec56fe7507f200c983d2bbc2ade6465b8bf26c7714bf2626513312afa2b6568"
     sha256 cellar: :any_skip_relocation, big_sur:        "388ffea5e8416c1703aa07e2594ace704424987b1d99ee31718ef3cf6e9819d8"
     sha256 cellar: :any_skip_relocation, catalina:       "73122a618e0a2f834311d93ba4f8d11be103ea2bd8e8616af8690c34607104e3"

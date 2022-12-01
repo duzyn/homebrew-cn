@@ -9,6 +9,7 @@ class Bitwise < Formula
     sha256 cellar: :any,                 arm64_ventura:  "65415084e611bb674c85a509a489f3efb62f8cbb13fc729c2375d30b4f4e9625"
     sha256 cellar: :any,                 arm64_monterey: "37d182e71950518aa30bda7d31e838b064bf3fdca49bb19946529b848deae93f"
     sha256 cellar: :any,                 arm64_big_sur:  "b9e69835e64543d6f75709169ea716772f14d5122ceb197228afb40162400769"
+    sha256 cellar: :any,                 ventura:        "541cbdb46f824065566281d18a3269aa5e2498cf1f5a3e0973d4e3e22824fdae"
     sha256 cellar: :any,                 monterey:       "8788e244c3c623f42c3b5179bdc88b383c4a7bc0a660c8f228e41f5a1682c6e0"
     sha256 cellar: :any,                 big_sur:        "06b2465c3a088959dde713f12a1541f20bfdadee29fc4b52348f8a858ca5c95e"
     sha256 cellar: :any,                 catalina:       "96e4fbec05bf5d3db74039155aa0f58cc9ef5b9f531c3794149e7a4151d5ef60"

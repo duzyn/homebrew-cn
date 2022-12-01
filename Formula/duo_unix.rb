@@ -10,6 +10,7 @@ class DuoUnix < Formula
     sha256 arm64_ventura:  "a9f128f7fe11324bc828e24c2dee60bffd69ab9b50d2d678c55ef02fc35ccd87"
     sha256 arm64_monterey: "08bce85c82251dead2bf052f6ce1fef322d1b6f7c2faf485625a2e5dcedc536b"
     sha256 arm64_big_sur:  "2ab1b40f96e8b1e6f23b05e56f0f403b619c3e9888bf874f80e9fc5fc76a9574"
+    sha256 ventura:        "f6b61bed0039797c7ea218552cb4106c173399ac8878f998912a9ab0db0c6111"
     sha256 monterey:       "e55cb39233e2291cfc2470d3efb3e3e801d4ca60458c3cce4b29928689db7d54"
     sha256 big_sur:        "85ccdfae0db6736bb4637065a1b94dbce891bac3fc1c0af87cd6a8f853ace742"
     sha256 catalina:       "b1f3ab30a252a64d64301fb4d09b78d57702037b763015732ddeb5e62818c4e5"

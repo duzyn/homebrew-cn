@@ -13,6 +13,7 @@ class Wumpus < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "5e0c5273522a83dc13595e60003e11721b10290bd3c51724dabe63fc9a23c05f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c30d039fdfa46df8f14bf9f881b7bf07e33405f0eb0a1d3c84007b66a3ad06d6"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e1c53ffe64c591ac7e32ffe612d86a043588d0b6d5f63e0d8091dbcaa8af6d8"
+    sha256 cellar: :any_skip_relocation, ventura:        "4e280ae019d55dba2551f4365150a3a294f52eeac218c2caca7d8f939551ba94"
     sha256 cellar: :any_skip_relocation, monterey:       "65d79495cff080e070b1d3715968fd8f2ccd06e3ad7786ec995094cba248c18c"
     sha256 cellar: :any_skip_relocation, big_sur:        "ac3f0b19f9510c8599a213401973d1cac9a0cb575bb8caa0be97d944dc94f765"
     sha256 cellar: :any_skip_relocation, catalina:       "49bc794562f3b9a0ad5799b5fcd2d63a5f866b9b6dc7a4b0d80988c388ee3726"

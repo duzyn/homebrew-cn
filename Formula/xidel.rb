@@ -15,6 +15,7 @@ class Xidel < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1c90b748fa5f9087602a8d8670c25b706c24c3be99c11758300604fbac9a3eea"
     sha256 cellar: :any,                 arm64_monterey: "73f305dc1833d8ebdea3236df50cb4de5f52bdbefa2a37d3b682cf1cd73c8dd5"
     sha256 cellar: :any,                 arm64_big_sur:  "b9758092865f250399c41f7eb2c22d8a85d3a6f201abd87cf8bcc2df9f5ce72e"
+    sha256 cellar: :any,                 ventura:        "287aa987ef7a181f654506c15c24e58ed1e265118d8932f5bff259be79e76c70"
     sha256 cellar: :any,                 monterey:       "aecd66d3be7b4ab3ba13a57dab9f70988e9cf271e818ee0a06a2aebe0a62da4e"
     sha256 cellar: :any,                 big_sur:        "e0a2b032e2ad48fa616a29a3249a9c5fbee970832dac267f8430c67f6abc2895"
     sha256 cellar: :any,                 catalina:       "b3f68c54bd0e368870f81873cefe84d90249ec4d7cf2dfb68aae648d3fabb1ae"

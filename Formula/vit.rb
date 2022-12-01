@@ -13,6 +13,7 @@ class Vit < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "6a9ec60c1bea0b80ec4a455e3947af84a84ac93eec8b76150904bad79685dd8f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "92a82feed66d18761246eed767e5bcefe18cbe17c36f4104e245e9a8fc6ccc9f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b9a265b17cc76cb95b5852d458bc5996af619f85676d8b86ae69888e93d78f41"
+    sha256 cellar: :any_skip_relocation, ventura:        "98d3fa88a855c8aaa0d6c896b0deb0d72bbde2094395f05018413d8d7acae90c"
     sha256 cellar: :any_skip_relocation, monterey:       "7593aad3669004423effee2c0a1e27ea2e64e1763846f70054df85bf4d7b763e"
     sha256 cellar: :any_skip_relocation, big_sur:        "8f0526731e932d972914287016dac6953abba079b17da0e8dc4900a75ec3a848"
     sha256 cellar: :any_skip_relocation, catalina:       "fa0b151ea6e6ff4c747d77792843a6e5564318aae35afbd5a6fbbebd83920901"

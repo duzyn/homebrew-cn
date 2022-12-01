@@ -12,6 +12,7 @@ class Eleventy < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "0795b40d79fcce729ee0e67f2af1367b672ab20f614d633dff8a3e36e55d1ece"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3964b8a92c0fe9b3c731c4588c6d553775d1c83cb67a943b0aa2819d61ea2509"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3964b8a92c0fe9b3c731c4588c6d553775d1c83cb67a943b0aa2819d61ea2509"
+    sha256 cellar: :any_skip_relocation, ventura:        "1d2a78320d8b62f00268c27d0a7a194239b66c22ab681e34cfb1d9de33fe0a1e"
     sha256 cellar: :any_skip_relocation, monterey:       "37efa77486af2fd8c2f60998b446545b35d5e4f7f60e13e657fccc9a195e5b5c"
     sha256 cellar: :any_skip_relocation, big_sur:        "37efa77486af2fd8c2f60998b446545b35d5e4f7f60e13e657fccc9a195e5b5c"
     sha256 cellar: :any_skip_relocation, catalina:       "37efa77486af2fd8c2f60998b446545b35d5e4f7f60e13e657fccc9a195e5b5c"

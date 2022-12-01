@@ -11,8 +11,10 @@ class Omega < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "608b8b5e88c343e33208b874c4bd312361e12b1fb520028781b49a0868c56007"
     sha256 arm64_monterey: "d53c564d61ee83d764b52f502565344ff083b5c0a6d931674b351957da61736e"
     sha256 arm64_big_sur:  "f62b0e919856934256de998c0548b6bd93cf0e269196cd80e36dbefac895c46f"
+    sha256 ventura:        "57366b0fb68881a43beb22e6c24f937169ba87645cd84701e42031e09bd17cd1"
     sha256 monterey:       "da8c5e4432ad04fd0ceb16dd24202e61c7730622c73a66a13aceffec69b40462"
     sha256 big_sur:        "f30d69271aec6688ddf5c1ebd8deebb441b7618f3f70a0c5f9afc54b7f3a657d"
     sha256 catalina:       "b55e1518a7e54cb9a1867c1d0b518fa6e580a874df4af5e668f6d190148b4cda"

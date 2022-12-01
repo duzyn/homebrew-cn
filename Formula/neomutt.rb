@@ -7,8 +7,10 @@ class Neomutt < Formula
   head "https://github.com/neomutt/neomutt.git", branch: "main"
 
   bottle do
+    sha256 arm64_ventura:  "902d00ad1b80131e28a43dbe428062a54a9ddf0d0ec1632c794f51daf3d393b6"
     sha256 arm64_monterey: "e9e21e018e976287ca9ce25f41cdb1b18604a4a6429ddf0afc9fd2cec5806294"
     sha256 arm64_big_sur:  "ffcba35c188f273f26c1710cb9aa2ee719c4e77778a3383eeaa383f7246d5c8b"
+    sha256 ventura:        "54f01a19bc95eecc5eee5ff7dd656158fbd5639c3a7a1e1aab89d75c31f7e1a4"
     sha256 monterey:       "88624a8ff7948237403ddf40d98c4a9ea410b85fa3327c0f34f19771f978a9a9"
     sha256 big_sur:        "c0a68a0170522d6151e819d0813036a4d997da34657be41794abf6aec0512ef0"
     sha256 catalina:       "dad7c71b94e11592fbc657b54495bd243d9a5ba9a092e38a136a998cbc26a06f"

@@ -3,27 +3,27 @@ class Pylint < Formula
 
   desc "It's not just a linter that annoys you!"
   homepage "https://github.com/PyCQA/pylint"
-  url "https://files.pythonhosted.org/packages/62/6d/d671e27077c7d2721266180757c507e68f46403728c6e87eac1b4309c372/pylint-2.15.6.tar.gz"
-  sha256 "25b13ddcf5af7d112cf96935e21806c1da60e676f952efb650130f2a4483421c"
+  url "https://files.pythonhosted.org/packages/f8/56/81d13f29c39361c99c307e5b98bd8fc243db10089a16726d7cd80f843726/pylint-2.15.7.tar.gz"
+  sha256 "91e4776dbcb4b4d921a3e4b6fec669551107ba11f29d9199154a01622e460a57"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "60d0f99d145c77c277a4aa363d181418b7a376e609eb18d6cbf24bc26e8d12a4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c52942760ef2e88fdb0b0e7ec745c917a973f45a413e21b48d7e486e7b160cdc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8dcc40772f2c77533096b47f70505974a9d28ce38a6f1ed574d113c50617732c"
-    sha256 cellar: :any_skip_relocation, ventura:        "803f016370768bf83ad5effd8e7ec2869ac035952412d1be69e079a13e4100c9"
-    sha256 cellar: :any_skip_relocation, monterey:       "bc5b16e1ee22af68485725e648a3ec161518c5bb31fcd0a63328c6f69e849bd4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e6512e4f75911ba0a3338554e025d2b59914a94e4d6691170064b4e520599f3"
-    sha256 cellar: :any_skip_relocation, catalina:       "5bebd2800a56659ef238cb26119e4ccfcead83c869207ca12e926fe1bea0cea2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cebc00937a131e30027545f6a8ea90ef2b48fc46f221ccdaf6d1b2be692e576"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "336d7a90b1e583c6a14c33c7485389cd1116d9e0afad869e71becd07121d3149"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "06460c6003e93b1be5ba9aed2b7ba34e051f32e3e71bdcbaface4f09c0d489fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "650fdf44d9bfd9cec29ba3a2800a5681e7d0f884b4f5fff6f6b7b8809acb882e"
+    sha256 cellar: :any_skip_relocation, ventura:        "2d71e810f5ae9d2025c0b644504182f5f7b203884b201b9e1eb75687d27b004d"
+    sha256 cellar: :any_skip_relocation, monterey:       "cdf582b03efe9c62f91c4238a475339c3326aaca6c9845171e3b3d14fd365ce0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "af481fafca6f0cea7dd2cfc60ac7a230f6d448cac27dc7fd3a05a51e384ded5d"
+    sha256 cellar: :any_skip_relocation, catalina:       "79bf7363350df1420bcfdd4c8aa717cb164b92000e3fac55729a3af1492bb057"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "497767db5a035ff4928fd39e3946c56650e368a010fe02838f07199e061d83ca"
   end
 
   depends_on "isort"
   depends_on "python@3.11"
 
   resource "astroid" do
-    url "https://files.pythonhosted.org/packages/be/61/5a97efa0622b3413e3d01d6bc6b019a87bcc23058c378dbd24b8c2474860/astroid-2.12.12.tar.gz"
-    sha256 "1c00a14f5a3ed0339d38d2e2e5b74ea2591df5861c0936bb292b84ccf3a78d83"
+    url "https://files.pythonhosted.org/packages/61/d0/e7cfca72ec7d6c5e0da725c003db99bb056e9b6c2f4ee6fae1145adf28a6/astroid-2.12.13.tar.gz"
+    sha256 "1493fe8bd3dfd73dc35bd53c9d5b6e49ead98497c47b2307662556a5692d29d7"
   end
 
   resource "dill" do
@@ -44,11 +44,6 @@ class Pylint < Formula
   resource "platformdirs" do
     url "https://files.pythonhosted.org/packages/cb/5f/dda8451435f17ed8043eab5ffe04e47d703debe8fe845eb074f42260e50a/platformdirs-2.5.4.tar.gz"
     sha256 "1006647646d80f16130f052404c6b901e80ee4ed6bef6792e1f238a8969106f7"
-  end
-
-  resource "tomli" do
-    url "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz"
-    sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
   end
 
   resource "tomlkit" do

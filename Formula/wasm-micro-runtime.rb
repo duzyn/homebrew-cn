@@ -15,6 +15,7 @@ class WasmMicroRuntime < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d183e21e3bc95938af7d943e6cb19f980217d3e08fd13835eeff6089f5fce073"
     sha256 cellar: :any,                 arm64_monterey: "c0a38b9109ed9cfcc6901184052eb0811be19df85544ff94ff717a0274d8f1b8"
     sha256 cellar: :any,                 arm64_big_sur:  "1ed6f1071d65b77470021148d12125a262f0726681c41129eb90c9d9004bf324"
+    sha256 cellar: :any,                 ventura:        "795a748d1f83f60ff0fe215df8b09e458e0737dee9727fe28dfeed006bb89373"
     sha256 cellar: :any,                 monterey:       "41c55c28ada9093a6c209ead50434ef9a24f9c36dde0b022c81912f994bc3f3c"
     sha256 cellar: :any,                 big_sur:        "331144af23c53902d36da43c7ec3e5413972c5fe597cb27d06d943f79b3c3afe"
     sha256 cellar: :any,                 catalina:       "04cbf45e45f900656f6268ff7a9a8f4a17aa9ac13175c29397bbbbc8972267f3"

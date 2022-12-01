@@ -14,6 +14,7 @@ class Grokmirror < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7f150f165e9b344bdd451af27884677d636af72239d1168914b5b58377ce22aa"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3247fcb790e5bf02062162e65ee093bf6c33528a2f734e472bc259ea7b36ae02"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b3fa6d1cab11e8a5420fb936a5e0815f4913fa3c228316820fd489b02c7c4141"
+    sha256 cellar: :any_skip_relocation, ventura:        "12024c31b1e067f1028b2a089838ad8da3cd195aeb48b4a34591e3344a8be60d"
     sha256 cellar: :any_skip_relocation, monterey:       "1021e03076c4b6851ecd9edc8916024e839e1731d10dcfc60799f01aae79e28c"
     sha256 cellar: :any_skip_relocation, big_sur:        "fc8fb3248cde8ca25f41c572e33250e7b74d77864366a3419457a57d9ba02d62"
     sha256 cellar: :any_skip_relocation, catalina:       "711286b10063e47357abfdd277c1fdb12aa5c6bdd147c0f94349ea12aab51156"

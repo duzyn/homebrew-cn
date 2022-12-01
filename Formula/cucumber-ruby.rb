@@ -14,6 +14,7 @@ class CucumberRuby < Formula
     sha256                               arm64_ventura:  "a95d4749713fe812d9f7e44d8572abfe55187c66c63b1ae11897bd15d3af89a8"
     sha256                               arm64_monterey: "2ce8d7ed9c6f0a41cf86029da8e72584b36b4a2a1d18e79c22cb5855c191aaa1"
     sha256                               arm64_big_sur:  "9e2e4a70dfcb245dad57752fd538a29ec0ea56caabf22c1704598b036a8cb55c"
+    sha256                               ventura:        "923e371248945cc80828d280f3c5997a7b2ef8ac1cd947a67e62fd0d45f29b28"
     sha256                               monterey:       "5b05d36faf72b95190f77acae632bd3a8ac4ba947df23262ea4bc1c6b2402004"
     sha256                               big_sur:        "30ac06c2908e0ca4ce7ba75e92393259911e454206a81c52f360b9aeda9a7c62"
     sha256 cellar: :any,                 catalina:       "ee1eabb3641184384650cb0990a2d54c0b9f346cd941274a40d7c427e0c70f5e"

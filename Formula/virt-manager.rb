@@ -10,8 +10,10 @@ class VirtManager < Formula
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any, arm64_ventura:  "6ac9d407cca582a4aeaa5f82e23cb5115d05003bb658c4bd5ca89722ee3ecbcb"
     sha256 cellar: :any, arm64_monterey: "5c8a05881b2d8700e85101802e6c907793f00daba10444caad1fc45043deb68f"
     sha256 cellar: :any, arm64_big_sur:  "c8a1922dced9bb9862d74b9347bbedccc5f9261c8a7767e48441a9916ff91565"
+    sha256 cellar: :any, ventura:        "0f87365d83203fb78b6ce962843d68787afbcb0d4c7ec18db60a306a5d0d3f61"
     sha256 cellar: :any, monterey:       "460116c676caa375b1ff7f40d6e126273fc080548b99e618175e9643a48d55ec"
     sha256 cellar: :any, big_sur:        "f572380b0bc30f4e867c7f41568098d1437cdab76c5775382aa3aa62e4318f14"
     sha256 cellar: :any, catalina:       "2b2f1ed405d164f88a82a9d79bdcd8c38ebd0fcf45e9559ee63836a26d1a197e"

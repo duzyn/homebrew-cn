@@ -13,6 +13,7 @@ class Doitlive < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d31aad0b83d8280f4b1f6c10817673cd51a0639ca85cc0198816be672e5bac93"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f2e6d437381c9a10e6c4aeebe42b2d6c96ab9c620a10bf0c29f0f92d0aef6fe2"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b6652d74f01868cafb8e0f4faa77156a945f002548865fdbf8b7b0daa16e80e8"
+    sha256 cellar: :any_skip_relocation, ventura:        "7fe78af3fed37f26992dfcdb6f1efd158d77a67b358f0b82bdeb8b32379ef9d2"
     sha256 cellar: :any_skip_relocation, monterey:       "ea27be8ba7ad56eaf391ff746ae8a137bcb5a2caadb4d02822ab14c7409efd49"
     sha256 cellar: :any_skip_relocation, big_sur:        "68ea581db0c9699196e1a062a575d6fb1da95cdd73d838e7eac973a97157eb50"
     sha256 cellar: :any_skip_relocation, catalina:       "3749631070070d4301391a6d813a71cb5bf3607871805bed026d5e0f34e7b453"

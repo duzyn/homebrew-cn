@@ -11,6 +11,7 @@ class Borgmatic < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "72b69f482f40d65e9af725ee078a09d38885d6928dec85800283e16231265ece"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "7a17facc23d595296c99c42370a61d1b4af0858386c07edeb1746d19a047aab3"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "23779eece70d8322592bc87f4e38e0c76afe2ca6290b44ca638e89e06cfc7ad5"
+    sha256 cellar: :any_skip_relocation, ventura:        "732c839cd6817da415c40aa3651e48698d45570f50e8f16dd6293d3228a915ee"
     sha256 cellar: :any_skip_relocation, monterey:       "e1d62285d920f5c52e87ac0cac21cb21b0836b49fd3e869824073a7666ee48a3"
     sha256 cellar: :any_skip_relocation, big_sur:        "f5d7c96eccab1cb86a708cf0c0303ffeda4da964eb003c3c015a13838c870423"
     sha256 cellar: :any_skip_relocation, catalina:       "8783dbcb88e8b52a9ec2ca19384982caa1a22e1d323b3dedfeae7ad4d4c5da6e"

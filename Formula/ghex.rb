@@ -8,6 +8,7 @@ class Ghex < Formula
     sha256 arm64_ventura:  "d53e8c59361907d9b0348de0278366f8ab32629e02b0c08514f29038772ab12f"
     sha256 arm64_monterey: "4d7254cc2ef96df2c6187e904e2a63613cfa2963b1c4aa4965f10f49dac318ef"
     sha256 arm64_big_sur:  "c493a5c7d8421dbd84ab8bf8e61ba469fa57afe70f99728a17a95046ccfb85a5"
+    sha256 ventura:        "f645c9ba17cd1fa12ab3a39f16cd1a86d488ff886b4f2848a4a89652a3f42fa4"
     sha256 monterey:       "54fe13e40831f5e0032ce82bbded59c5521043e41fcbfed8d532ea2b878e90df"
     sha256 big_sur:        "54c7098a34cbc2cc9c5d32881bf19160fd9506dd81f06c9037036fbd5e08bf4c"
     sha256 catalina:       "b95753839545d3a7e8d664b7afb87cbf4a585635d49fef7ee5cb93ec9e890bd1"

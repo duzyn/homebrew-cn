@@ -14,6 +14,7 @@ class BareosClient < Formula
     sha256 cellar: :any, arm64_ventura:  "904e5300c5033605ca9386b4d64f31a0f65a6bf8fe52cdae5afcc5abc621cf8e"
     sha256 cellar: :any, arm64_monterey: "2eb590149448bc26586d83bae3005b40e88296f6e0dc4b58b45bcc4c8e578071"
     sha256 cellar: :any, arm64_big_sur:  "7c33ac81be7b4a6737a15c73ded062b6c50cd30268e2a1aa71a4c894e07f4ac7"
+    sha256 cellar: :any, ventura:        "974c8e22d4c88a2c44020ab6d32c810f32b9f185f85cdab5f46e135c97a0a5be"
     sha256 cellar: :any, monterey:       "5c29931f6e4ba576f88c899b0b4212a7c6842cf5ecbe4d9d9122facb5434ea43"
     sha256 cellar: :any, big_sur:        "5581dd3a339e743cf1487e2799a1f55747139fa2fa932c72f1f93f5bbaa2e6ff"
     sha256 cellar: :any, catalina:       "4197a24939fda5fcbff4b1b3843d82673b42b524d87cd4a096be40238e25c429"

@@ -16,6 +16,7 @@ class Quilt < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7dc018071ad510cf518a434ab4111cbe7c9818ce7e128cb0db45c9b070f28999"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "fc016251e7f6e00724b265762408f2f71c3414690f8c7e3e9b680af3f78240ef"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0a0dd81f8d4dadfd624bd4cdaf6521e7530c722938856ed515b25ee43d48c70b"
+    sha256 cellar: :any_skip_relocation, ventura:        "7dc018071ad510cf518a434ab4111cbe7c9818ce7e128cb0db45c9b070f28999"
     sha256 cellar: :any_skip_relocation, monterey:       "fc016251e7f6e00724b265762408f2f71c3414690f8c7e3e9b680af3f78240ef"
     sha256 cellar: :any_skip_relocation, big_sur:        "0a0dd81f8d4dadfd624bd4cdaf6521e7530c722938856ed515b25ee43d48c70b"
     sha256 cellar: :any_skip_relocation, catalina:       "d8bd4472f644e650e62b719bbae716c2f2c40c159dd6155e2d6fe74cbb02448e"

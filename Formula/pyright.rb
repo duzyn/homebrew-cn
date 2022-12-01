@@ -3,13 +3,19 @@ require "language/node"
 class Pyright < Formula
   desc "Static type checker for Python"
   homepage "https://github.com/microsoft/pyright"
-  url "https://registry.npmjs.org/pyright/-/pyright-1.1.281.tgz"
-  sha256 "a99adf3ab446b9f38d00a02215ff49b807b75c0ba78bc0fe5081092f11764c62"
+  url "https://registry.npmjs.org/pyright/-/pyright-1.1.282.tgz"
+  sha256 "f96f93cdaaa9b5ad7d2872ca9e0a1a88874bbdab39ab68b424371f1661648d4f"
   license "MIT"
   head "https://github.com/microsoft/pyright.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "993f876567206dec42ece1bddde4b716ea6303478930180bf4e623a1742da643"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4693f9a90a65946845cfbdb67f71d38f2f9a4a538b4f209bcb76d6de23e67d65"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4693f9a90a65946845cfbdb67f71d38f2f9a4a538b4f209bcb76d6de23e67d65"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4693f9a90a65946845cfbdb67f71d38f2f9a4a538b4f209bcb76d6de23e67d65"
+    sha256 cellar: :any_skip_relocation, ventura:        "6c31a59cabd882dedbeaeec6d67576341b5d3e8517766a0d4da97094521fdd23"
+    sha256 cellar: :any_skip_relocation, monterey:       "6c31a59cabd882dedbeaeec6d67576341b5d3e8517766a0d4da97094521fdd23"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6c31a59cabd882dedbeaeec6d67576341b5d3e8517766a0d4da97094521fdd23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4693f9a90a65946845cfbdb67f71d38f2f9a4a538b4f209bcb76d6de23e67d65"
   end
 
   depends_on "node"

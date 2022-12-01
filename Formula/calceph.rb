@@ -14,6 +14,7 @@ class Calceph < Formula
     sha256 cellar: :any,                 arm64_ventura:  "7fe05e34a406b6674bdb350483ec91de3232efd0a158f4f19b9072f3d5bd54c5"
     sha256 cellar: :any,                 arm64_monterey: "7d57b2878163732d50d7bbb920d7d1a4ffdb18f5a3e6a2b6d066d40f169316d5"
     sha256 cellar: :any,                 arm64_big_sur:  "0f3762cdf0a7d25f268340f36bde4cb4963ed8d472c82e83e217506f84a83433"
+    sha256 cellar: :any,                 ventura:        "ef8b48a2abf4393437e01da5a4e3c14aa7cbdd49952c4932b639a3682fe26239"
     sha256 cellar: :any,                 monterey:       "fd5bb3cad77f4e9e7fc4488cb812d7d5fb45fa0e25c97baeac488cf610d75fbb"
     sha256 cellar: :any,                 big_sur:        "353dcab7ad416277151c61feefcf673d25bb4f952aaaab3df6ead34a9828ab24"
     sha256 cellar: :any,                 catalina:       "5856594c37d877e282d9ba9ffab5789628f15a4252f506ae231d7dc8a7fb9f2c"

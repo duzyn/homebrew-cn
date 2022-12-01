@@ -11,6 +11,7 @@ class Zydis < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "b70bb8aec9d6f049046a37de51972c220408f747dde8881bddde7006f54d4371"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "151c4579826dace15babff8ee96994a477927c84dcf0345064c4af5e6f796fd1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cfda85213ebb2135914d60fb36c82f401ee463f8adb6142a6e5d8a930724f3f8"
+    sha256 cellar: :any_skip_relocation, ventura:        "fef2143f964ad8a5ffba4e7ba1c1905060bb312f94a7832042ab54c98c0936a6"
     sha256 cellar: :any_skip_relocation, monterey:       "a22ba879337f31e0f67b0938567b80e6c84c6db2fdfb4b6024399029862bebe5"
     sha256 cellar: :any_skip_relocation, big_sur:        "6bfc2b206264de685d541f6f83c735d2dc1e98bf854884415b07e7cc23eba8c9"
     sha256 cellar: :any_skip_relocation, catalina:       "01e219ba0e015f596bcd44ebec6a1b9311b3db6108db23ab9329ffb32bde08b4"

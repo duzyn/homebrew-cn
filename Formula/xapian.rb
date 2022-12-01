@@ -12,8 +12,10 @@ class Xapian < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "8a0ef8e5d8abca01d46ebefe17202b6051609776e6bb1e08c366d84b1b289974"
     sha256 cellar: :any,                 arm64_monterey: "e7f41e2d95fbde01dcc4750858cdf152708c963bf92e37fd14c7af35fd57fd5f"
     sha256 cellar: :any,                 arm64_big_sur:  "bdb29ed6033c31d37f83d77a9800c6ebd3f64f51974ecb0851b0ad5a1ed81e77"
+    sha256 cellar: :any,                 ventura:        "012b2b4e0c3d129b916ed85ccdec448fea36a24ba4a6ee9aece8d457ef3c7080"
     sha256 cellar: :any,                 monterey:       "54fd260ba675a7429ba9d870a299f24902eabde2758bf4ce65592c6732bdb7e4"
     sha256 cellar: :any,                 big_sur:        "122d19b6ca19c45af8b9ae46b395370310566c8a920df67b158bfa6c5a975ec4"
     sha256 cellar: :any,                 catalina:       "2d8add7cc126bb89fb4c6e954a74131df7e5f47c90c1a952de6a698a3bd50a6f"

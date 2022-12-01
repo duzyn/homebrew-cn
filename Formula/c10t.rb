@@ -10,6 +10,7 @@ class C10t < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a18abf440f06bf82f76feb72cd3d9586d9d1d0236590747776227e3c2bdaa6c6"
     sha256 cellar: :any,                 arm64_monterey: "bb52335803ba6ede73c4108d60521408261467674625dcf300a847aed813fab3"
     sha256 cellar: :any,                 arm64_big_sur:  "2ee23e4a9df8e49fea71796878b496e17fd85f708366cf7776706dcbcd7c5ffe"
+    sha256 cellar: :any,                 ventura:        "e0e81299712474d23a02564e1e4d282eaf0727618246772b5ad7c9c9e6bbe3c6"
     sha256 cellar: :any,                 monterey:       "69fb50b752d67060a557c23274bb83bfe73ec3a76a09988cf78646371d6abbf2"
     sha256 cellar: :any,                 big_sur:        "59e476e2c75735742d2147673a668bbf24e148383192b4ed8002f2e1222e90b6"
     sha256 cellar: :any,                 catalina:       "412f8b7ad24cd8ed63c2812c1ca4332ac4b3c159784e5dea36462d0a5dc3c41e"

@@ -12,6 +12,7 @@ class Volk < Formula
     sha256 arm64_ventura:  "5e9d7d3ad47fd6aa48f00671aa60a533dc6fc956c24f3c15890d1c45d84270df"
     sha256 arm64_monterey: "9bf109cded4de487f53c6cbb51c33c85ed15d8b4361a7c5d43f9f4c5bdbe683e"
     sha256 arm64_big_sur:  "68cd76a336bb15bc607f66c4af0bd73d700ddc7ae831fb90f137c15532b65a05"
+    sha256 ventura:        "24361c7fef223c44a047625469ea932b69468a677bfaae8c59a59084f5a89b72"
     sha256 monterey:       "e7580fa2cbb6de6837df1361ccfb403fa3106a009ac8bd2e08a02eb7a10ea12a"
     sha256 big_sur:        "541026b784ba6ed5e0067088330eb7226dab2b6a97e259841321938f0aa8843d"
     sha256 catalina:       "332e9cfa3b5b8d1a812aa32da50a51acdd1af5b884901f3de7e3f89a917e75fb"

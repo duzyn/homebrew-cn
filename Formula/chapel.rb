@@ -11,6 +11,7 @@ class Chapel < Formula
     sha256 arm64_ventura:  "02f2f907d5564b80034d763144584b56c551d3ee6024dba84f77a18e3581dddf"
     sha256 arm64_monterey: "16e3fd0177ab450a788271b0e38e417ec459fc91d70b8d388a9fe85e78d0291b"
     sha256 arm64_big_sur:  "c36c6e7cf4b30fefb9fe65aec07a04afdb168765c1a417318f75f65df0b4bd94"
+    sha256 ventura:        "bc45e9b7ea5aa0cc14b1158c4b62f88498f570a682b4128c2c5feee7ef41e9c8"
     sha256 monterey:       "e2d386f7f931f4c684f5aa325b56c678fc1613935404d40de5d9e09933a3e41b"
     sha256 big_sur:        "97697fee3e47ad73ad0e2cb80078ea2a7dd1110fa06e297e8b076fff4ec3bc84"
     sha256 catalina:       "4a588c9b8fdb17f01109be986a3d8df929eb666ddc403499ffdaabd2d174e8e1"

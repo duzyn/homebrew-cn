@@ -16,6 +16,7 @@ class Dmg2img < Formula
     sha256 cellar: :any,                 arm64_ventura:  "af9009c8bc805eee1b8b88c88f4323e31f9990476cd61bab48edb90c84c89e4e"
     sha256 cellar: :any,                 arm64_monterey: "03c18ebfadd3f15af4c5acfc3ddff35352b3ed74b734ad1a3f7fc3f991d641c7"
     sha256 cellar: :any,                 arm64_big_sur:  "30d93d8a25986e284ce16234d63262b9b09282194cac91c96e30ef2ac36915ed"
+    sha256 cellar: :any,                 ventura:        "8cb155a0d62a038484e9bda45b83cede96e6410ef20580bf715723c0285ff9eb"
     sha256 cellar: :any,                 monterey:       "5f98d762bda9e92cf497e1bca2cfc1f738da6251c807802cdaf4128b9f6d0972"
     sha256 cellar: :any,                 big_sur:        "0fb916b99c3006b44195e38d0234cb38e1e1aef0c76f73688d75b25d704d689d"
     sha256 cellar: :any,                 catalina:       "f78214ca14fa444d792fd6c9eeec1068717cb64ee8ce635154ccc783bc37099e"

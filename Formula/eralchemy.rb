@@ -12,6 +12,7 @@ class Eralchemy < Formula
     sha256 cellar: :any,                 arm64_ventura:  "27a2f33a19f3f7c4607889118aa894c36d71767bc3a89ac83f26d4c131cd6ea3"
     sha256 cellar: :any,                 arm64_monterey: "b6d4cb1be8dbc27afb9b6c6db6de4e74b53df3616be44eb297d269baa3e0aa1a"
     sha256 cellar: :any,                 arm64_big_sur:  "b00010ac117e4132bc096868a9f19756b61622a925e3651900518268e88957a7"
+    sha256 cellar: :any,                 ventura:        "33951e33765e406752c58ba828416b020f07cb9a79bc28564a3a3c11ba51431d"
     sha256 cellar: :any,                 monterey:       "123aeeadfe90378d56c1682ae5c3fb5011b9e0fe4cd4ced344da8c78af9b81a6"
     sha256 cellar: :any,                 big_sur:        "68f658eb8bb7a7c2a85a328445b10aa44e1b00e8090129089f143de22f0cea57"
     sha256 cellar: :any,                 catalina:       "e666bece0ef21146cba70ca4a723bcd30964adb1f4ef1a45a5b68e5a630e4dca"

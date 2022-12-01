@@ -22,6 +22,7 @@ class Curaengine < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "df46dbfdd389c20a311ffe46ccd8807496c60fdbb27ae3ed07f10592b0b8c27d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "87834e91270428e01cf4c8dfac8ee269f98c2ec52b4fb4a2759e6a7ad3dc9adf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1f9480ae014cdd9519ceeca9b0ee676b5a0152f6e888fe3d3ab415e83eae71d4"
+    sha256 cellar: :any_skip_relocation, ventura:        "77ea9ab7d45a4e0b896b556fc2223838902a894d70fdb7c0a7caa500c7538d10"
     sha256 cellar: :any_skip_relocation, monterey:       "bc652202bfd114cc016c7423301bd5c7dc7d309813d0d1b98c1bf970ebcd6cec"
     sha256 cellar: :any_skip_relocation, big_sur:        "dbb7b34444997d50d12d7048209375da2c7070bac81aefe237fd74292ddc7c68"
     sha256 cellar: :any_skip_relocation, catalina:       "47934876717e2bdc11b9ede033c2fbb33c3a2a9a506066143dacf59f7c572ecd"
