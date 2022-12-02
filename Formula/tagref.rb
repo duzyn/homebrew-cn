@@ -10,6 +10,7 @@ class Tagref < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e0be96defc6eb0491d7ba3dcc9c2cd6690e92558fe6c2a39b7f99ad1a36cfead"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "701bf977e8d122b7ed718602f0ff06223acdbc05272ad8f00c22b1e29a1fa3f8"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9b75447989ea48f149fd1705cd17a2e571e69c2ce2462f245573f6d25f1fd48"
+    sha256 cellar: :any_skip_relocation, ventura:        "e4e22e037620bfe7a96f660c675345d527a785fe69054568bc72384c8a6377d3"
     sha256 cellar: :any_skip_relocation, monterey:       "7688a4c441a2181e49eb77d311be518d11210fafac4f8a742f1a0922d5ece1f8"
     sha256 cellar: :any_skip_relocation, big_sur:        "35d290ce5c4fa8d08c4f3931fa33781695efdf37fb3377045880c2e27dd86a65"
     sha256 cellar: :any_skip_relocation, catalina:       "9bc1a31ff8b2132f81f9a7eaf9f555f38ff913e1c0b73a6210b25d7125705441"

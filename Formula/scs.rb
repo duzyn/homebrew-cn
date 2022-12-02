@@ -9,6 +9,7 @@ class Scs < Formula
     sha256 cellar: :any,                 arm64_ventura:  "eb200f5cf143aa097cc511a46e396eff44ccc3772fee0e353a97a1ba5bd77df7"
     sha256 cellar: :any,                 arm64_monterey: "5d58e4d13f0ccef559245229ad9f096a250f51eafac1056bda9150169d314431"
     sha256 cellar: :any,                 arm64_big_sur:  "47a4dff47f2c9cbfc4ab34f135074d45220faa03ccc57b7ce4c508d882e531bd"
+    sha256 cellar: :any,                 ventura:        "43e99e696976ef96197cf88749abbeb4b9627fbac9950157dd96413aa5b58af7"
     sha256 cellar: :any,                 monterey:       "4c739961d32188d84c24cc04753a87cbda9ef01342daa4f5f16694dfe3a3bc92"
     sha256 cellar: :any,                 big_sur:        "8f41b782fe1b00d1a6ef5e7ef63b518ee9521c357d32fd51b19a80ee47df70be"
     sha256 cellar: :any,                 catalina:       "9a931f25d46cab530d5883b248abe1f4b3fa3a0b56082c690bb5675442c58b65"

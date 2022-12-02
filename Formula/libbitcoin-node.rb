@@ -10,6 +10,7 @@ class LibbitcoinNode < Formula
     sha256 arm64_ventura:  "cc194f6874baa26fce10fb3b58b0ab520d0d6e3905f9fc21efaca2cc6f380393"
     sha256 arm64_monterey: "0fbb1c20470a60232647651c29ad41b547b8a162d5f6f59d64bacec746aa8a1a"
     sha256 arm64_big_sur:  "3ca1bcd8c32bfa5d8e3a5327d9f8358df52fecdf812fb3087de7892b6d0dec03"
+    sha256 ventura:        "d2051f6d157cef0abe11c17b479e8c04f7f47b283412b76034a93b749f24249b"
     sha256 monterey:       "a5571bba28d70456ccc9305288dbd732026ab47c10617fee089a96edbaf04ec3"
     sha256 big_sur:        "9a5602620a3379a70257c8982f18c93b17de661201100e612e0c47276ad7b1ba"
     sha256 catalina:       "858904050abfa1fb52dfc0f4e2c3cd87938824ad41582d439c0d411817b00213"

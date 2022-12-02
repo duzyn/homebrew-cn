@@ -11,6 +11,7 @@ class Poac < Formula
     sha256 cellar: :any,                 arm64_ventura:  "22ff6c3c8e3516e8fea9482aa3db8d2ea3c5068ec20cd029b9894fa8f069e06a"
     sha256 cellar: :any,                 arm64_monterey: "62eb08441a7e574ba07f6693fd9ce2ef246b7cc4502137cdf35bd26d60d84a8c"
     sha256 cellar: :any,                 arm64_big_sur:  "fb02b40300ae7f52e6dbe41ee68b915b4a211315b48401681700702050c1ff15"
+    sha256 cellar: :any,                 ventura:        "9a7775d491ccb71c4e7396c9b04438adf474a61576909cce42ae740311e615c7"
     sha256 cellar: :any,                 monterey:       "6f1c53ec7c7bd21b2b774f869570a63fb5267259ff2008be863b72f391cf5d8f"
     sha256 cellar: :any,                 big_sur:        "195f49d03013e49265f199fe5b03f78c2836a01d11988f7c2fd983ca3234a4c1"
     sha256 cellar: :any,                 catalina:       "fac554b882507bb5dac69ba90eca3605eac91e143680130779ec61b28e362643"

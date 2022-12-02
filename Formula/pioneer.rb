@@ -11,6 +11,7 @@ class Pioneer < Formula
     sha256 arm64_ventura:  "027d68852763a927f369c9b0a500fcc0ffb221bbea1bda39b3ad8700851cb07f"
     sha256 arm64_monterey: "b2e190f79505cc823854dcb3c46b333994fb15f065e95dc77934d4b27119aa8d"
     sha256 arm64_big_sur:  "0ca5b9a984198c3e3d60e3e02c8f3ccc046d2082900627a9bf970610c6260d95"
+    sha256 ventura:        "c1d523715401ea5664fd3a12888ec5a275401bf13e3427a23b7f4a2f6ce07a50"
     sha256 monterey:       "0bb70eb1bb53b649bafb3ae3a52d4743fdaf690274a3e9ee0288e03fc26bc427"
     sha256 big_sur:        "310a48a34c8a19d9cb66bb7aa4f9a231d4519f636cfe1f3f2ecc219236ddbf1f"
     sha256 catalina:       "9b4bf989c69c7d9c24093aa728351b2558ccaf3770891c65f3c8d28da9778bfa"

@@ -10,6 +10,7 @@ class LibbitcoinServer < Formula
     sha256 arm64_ventura:  "88cd9412ba4ba25d1234f342eaaba0240448783c420b9da55a60534ec2bf07a9"
     sha256 arm64_monterey: "4868aed6b0d00889b48e51756dc2c1e4dc83a84813121c0ae34bc9ba7b32b69e"
     sha256 arm64_big_sur:  "98c8f92377aeda734d266bab207245c01ebc9cf3dac2b3f7522f561aa8c3dfdb"
+    sha256 ventura:        "2faa22142ff16be03d52ccbe3c819682e0427eccede453d1032a23ff501f45ee"
     sha256 monterey:       "eed7d99d4a8d2d99aae78790f15428c43434272ddafe624f44f277f7d9f69922"
     sha256 big_sur:        "f288f34e1f92e3dab7396b5a23129119c5be203f57e05531a99bdb72466e09f0"
     sha256 catalina:       "f91b158f0e650cd12dfc48afd2bfa9f3df331a2029397a1037cd05a8bc59cdd2"

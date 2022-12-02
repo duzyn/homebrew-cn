@@ -11,6 +11,7 @@ class Neatvi < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "21431d7cfd1566d44ffac423f8780af05373d865e88c7de59658287d89881ebc"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1885311d215041a7fcbe43af2aad4d243a72db131f59bf16d5e8c38833c420f5"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4d02348c64815db38c3e52784dcd444bf926a39f5ec45770e417938760a9574b"
+    sha256 cellar: :any_skip_relocation, ventura:        "c57570242789947c6cf170de16b051ea318442359c8b88bec70f6c87673adccc"
     sha256 cellar: :any_skip_relocation, monterey:       "51b6ff945536b24119c2bdea08b0b383dedf07a30c8bb383ff5325ee50a47f49"
     sha256 cellar: :any_skip_relocation, big_sur:        "d91af1b2e27813770c80a8011828654f67835f90bdcc371b8f92ccbef65d9ec5"
     sha256 cellar: :any_skip_relocation, catalina:       "95e2903443c4855bf5930ff40c082914747bd867bd313d016d17d684b4ec630d"

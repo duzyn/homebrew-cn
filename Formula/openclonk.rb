@@ -41,6 +41,7 @@ class Openclonk < Formula
     sha256 cellar: :any, arm64_ventura:  "69f947dc71896c10d2f3459c7550609b154b65ad325e7c398567d83927bc0bb7"
     sha256 cellar: :any, arm64_monterey: "8df6fbb4658c855b62269b2e2e8662e3ece958a642ff2f364190466660dd4f12"
     sha256 cellar: :any, arm64_big_sur:  "1be50cd57fe2284eab644c8f7b96d2d73e41433bcee445c9ee4e32ecd624ed23"
+    sha256 cellar: :any, ventura:        "2edfeeffc28542ed25b07268667d0901a3682c7f65eb75bcfada1e1667271bc5"
     sha256 cellar: :any, monterey:       "c4f8dfb61e0ebc30ff721e326710424c256cb33bced493c9bcee7badf44e53fc"
     sha256 cellar: :any, big_sur:        "b863f8f7a26d65cc4524210a7d141b5a96948ce1a795268473c5ee4bfd640f35"
     sha256 cellar: :any, catalina:       "805a680c7377bc81ca2b1e8207a68348ebcbec5fb0efc036e30139626874494d"

@@ -14,6 +14,7 @@ class Minuit2 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2f7d577acba62cc976fa3c653eb12cc499054fd0fdc23d96ee1ce61c0792aa2e"
     sha256 cellar: :any,                 arm64_monterey: "6e205879629a898f1a797da87058b2cd7f727b5a5f21742af6227c74542977c0"
     sha256 cellar: :any,                 arm64_big_sur:  "937bc1d4b5613eadde5eb9b8706509ac46fba4b213df914b3a34f0b9645f9e8a"
+    sha256 cellar: :any,                 ventura:        "1038f1c50451e93a9195bf3fedd9b206da67c5d0981787ce29ca15c093431931"
     sha256 cellar: :any,                 monterey:       "4738710f5a36f8c52c56650f6a7f6b5ed9470ad9d9fa8f1a5aaf2c9292bcb269"
     sha256 cellar: :any,                 big_sur:        "d5d4d4ce8c56607be1a02cbb2703d396cda084c04cef18be6cd6665364478ab4"
     sha256 cellar: :any,                 catalina:       "13bf91dd19a6a1a2eb4a291cca8cc07e00b79fca07896216f15e09b2ae90a0e3"

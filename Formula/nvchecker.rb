@@ -12,6 +12,7 @@ class Nvchecker < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "20ec545013975b09051bc6633325c1a1895311d7013d9175fb0d376267f3d6ba"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0bdd1db64a899fdae2d8993acf71621c1238bc52351e9e0f53e72313e5c8ffb1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eb968b43b84fe58328e9d86dd90de26217ed780f92e65856bc92a7adaf57dfa7"
+    sha256 cellar: :any_skip_relocation, ventura:        "2bd93319be849813c09c5df746990bc8a5ed29f02316bd449c693cd0cdbdce3e"
     sha256 cellar: :any_skip_relocation, monterey:       "9dd0aef3d42132354fcc53d8d156eb3d0d49d8e1957935abfaaf37a102148874"
     sha256 cellar: :any_skip_relocation, big_sur:        "2386a26e194ece390a0ecc32b916f395c79fb0f15e7933f616ad56a7e7f109f4"
     sha256 cellar: :any_skip_relocation, catalina:       "3b94c562e4e11bcbb3a08dc4eb58ef0a0058d9dc318f951deab3c8ce97cc9177"

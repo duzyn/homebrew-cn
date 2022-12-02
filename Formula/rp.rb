@@ -25,6 +25,7 @@ class Rp < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "fcbf9fb210132a603c35746444b28de6ca8953ffb3002bbdf7eaefa10c871bd4"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e2cc474474f5fe70e41d693e534d8223e60085ab01e905125fc845d6605101b4"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fbbff042d70c19351c17402b84281119ca54b0e891e6ac51fbc860bd2420a60d"
+    sha256 cellar: :any_skip_relocation, ventura:        "5cde470fa93797c2c98228c941ae9821b104054f00aaf4437903c52bfedfffcf"
     sha256 cellar: :any_skip_relocation, monterey:       "b150d2d183c7630055d6ca16e1b8c262d280bc033977b2f78e34200ab814e7a6"
     sha256 cellar: :any_skip_relocation, big_sur:        "3317f6ee6566143a696822292eb36e606ac36c477f38b144091506a2aa917081"
     sha256 cellar: :any_skip_relocation, catalina:       "b8377b907ca950b7cbade53319faf087cd3afbd6a392d0d706cad3fad4699a9a"

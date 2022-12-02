@@ -10,6 +10,7 @@ class So < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "940ed2042c9c04ee89ea61a0f580eabecd2cfa4c5eea7f63fca11786abcbbb61"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0a48cd7ac2ba8b3289db6920bb611eb051e3711287569331292ab9c4f7652bbc"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47389e3710448b5bcccfd92eaa3624c347c86e911baf70fb4a5d41580289f696"
+    sha256 cellar: :any_skip_relocation, ventura:        "07d387ae95884f93365478b0969dab6fa6cbe13b36a3f54ab091b0d958ccbeda"
     sha256 cellar: :any_skip_relocation, monterey:       "abd12b88855ecd1f853a8fb926ef0d1ecc20541a5b4e05f7ef03ef5759f80598"
     sha256 cellar: :any_skip_relocation, big_sur:        "893ed4998287a50c96a0332700f4c98ec56817c7e6f00423fdf5cbac9ffd3453"
     sha256 cellar: :any_skip_relocation, catalina:       "72337e5a8cf8a9b8816b9a236f17ee36ca0132c99160bfe0e472351131cd64cf"

@@ -11,18 +11,18 @@ class Beagle < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e53a62618ddaa8f5cdd3fd99f4cb267b058862f0976f0e84de508f8f340c3623"
-    sha256 cellar: :any,                 arm64_monterey: "417d70e5874ea00a8eb1487ee490e8420599b5a6c8bd9f949b8fa296ade5df11"
-    sha256 cellar: :any,                 arm64_big_sur:  "1ea7c6f271742ecabc2b102d698bc4e65b5ab11e4445dc4829aa8cfc54c68d02"
-    sha256 cellar: :any,                 ventura:        "5fdc288d4c435430c1ef58672a5114cdca1e2b2a8a9d09b25fb782b1df8a9e0e"
-    sha256 cellar: :any,                 monterey:       "69a5e140d59bf732b928b6af01cb3ac153e4a7f841b47035edae263874abcad2"
-    sha256 cellar: :any,                 big_sur:        "ba32a1ab7c5f5d8d0b1c595e072b40cf4d4c744a946f388850834ce5a58304c2"
-    sha256 cellar: :any,                 catalina:       "858b9d97f17461ee0ba5111753c8d057d598d088566a247d0a4bb1fe2d3a2cfd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f89845cd5fabec607b9c2c3d648142a85bae3853609c38dc23930e3532b7336"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "bba13ae084772efb7e685d560fa444e1395dc8dbb3e60a87a1d3ad038bb13ef0"
+    sha256 cellar: :any,                 arm64_monterey: "d39a3c6afff8db4d34dd5a0e4358793f29aa8c27b0324aaa320ded3ba220f133"
+    sha256 cellar: :any,                 arm64_big_sur:  "b9f67e5318b50445e3d793184750c99a92f746f832f4daff24136f12b33e2172"
+    sha256 cellar: :any,                 ventura:        "d6f56b3a1962718a8d6fc2a3a0f02839a72099ff8e18b3670ac3d7377fa07f25"
+    sha256 cellar: :any,                 monterey:       "080d59dfd1136c9de6816f1c165e4f5889fe5d2177fa6f6f43d27374c285410f"
+    sha256 cellar: :any,                 big_sur:        "402bc5f510cceb63134695fd4a4727dd4b09dded8c9fb1f77309372940e6b378"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daa2a615224e3cfc0a53fb67a6dbc292b0fb5f766103703ddf4ed0c24c9551be"
   end
 
   depends_on "cmake" => :build
-  depends_on "openjdk" => [:build, :test]
+  depends_on "openjdk@11" => [:build, :test]
 
   # Reinstate versioning for libhmsbeagle. Remove in the next release
   patch do
@@ -51,7 +51,7 @@ class Beagle < Formula
     system ENV.cxx, "-I#{include}/libhmsbeagle-1",
            testpath/"test.cpp", "-o", "test"
     system "./test"
-    system "#{Formula["openjdk"].bin}/javac", "T.java"
-    system "#{Formula["openjdk"].bin}/java", "-Djava.library.path=#{lib}", "T"
+    system "#{Formula["openjdk@11"].bin}/javac", "T.java"
+    system "#{Formula["openjdk@11"].bin}/java", "-Djava.library.path=#{lib}", "T"
   end
 end

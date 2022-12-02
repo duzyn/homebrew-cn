@@ -14,6 +14,7 @@ class ShibbolethSp < Formula
     sha256 arm64_ventura:  "a8457f23f8cc4caf6bd5ae8dcd12ed596049669077521c41077540fe9d2ce380"
     sha256 arm64_monterey: "e90f7108926a0492b61d482442ca3363e01fe4ee0a5030d3d5128ee7bce62c04"
     sha256 arm64_big_sur:  "3627b9b94793331278c868f3f50c0feb832db68545ee689445efcb17e56abd99"
+    sha256 ventura:        "ea6dbd1660a92e82ad5ee36839ef72de30ea44f5f50dad828da005a2055336f9"
     sha256 monterey:       "3c5fddd0234a1d201aebf7cda85223212e0e3ccbded613e3258cc014d2811c0d"
     sha256 big_sur:        "6adfa5b54297937bf4bc1a5abba4f57dd5bca91647c3b9cac9a0b7a86c8ca444"
     sha256 catalina:       "82e21f772932a9edbbefc1288e26e6537b23cbb74dc7eb6d8c814486157789c9"

@@ -9,6 +9,7 @@ class Pkcs11Tools < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1d986581dbe9eb9490e77d3e61d5ce90ee30d6777f1cd2cb9fe0d39d0b70c2f8"
     sha256 cellar: :any,                 arm64_monterey: "bf484252566d3546fb51de13756957fc4325fe04ac2e9dab27f2bb83aeacbf8a"
     sha256 cellar: :any,                 arm64_big_sur:  "52173ec7a2ea6e8549caf29df6798510d919c6702fc8c04040b5b0ce90e51f3e"
+    sha256 cellar: :any,                 ventura:        "968b17275709f3bc7b9177771c3fc2eece67db206d2afb225075e7ed62c1b974"
     sha256 cellar: :any,                 monterey:       "010e67e29eff3d1c84ce1287fc9cb25dbca2f72e53cb7561aa148e5d9e432835"
     sha256 cellar: :any,                 big_sur:        "e92251b5b918108a76bbdadc1c9096c5484699cc7a841e9e346d2e8832d4430d"
     sha256 cellar: :any,                 catalina:       "066e8d93a82912709539b99c393e0063331502e57b8e8ba94d8531fb827fa656"

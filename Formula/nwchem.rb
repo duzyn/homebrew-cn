@@ -16,6 +16,7 @@ class Nwchem < Formula
     sha256                               arm64_ventura:  "a7a28f5e10783fa115a3e050880b34fec4b348ba5cc2d1917d19433f6aed0901"
     sha256                               arm64_monterey: "b4b262343bb2b678facc095654f787c6963f8ff8a20a8727093e10efa13e6047"
     sha256                               arm64_big_sur:  "decb7b643ef4ffd44491e4b1d60c0b3df718a479b68458358a9a37fdb28667d3"
+    sha256 cellar: :any,                 ventura:        "ccd39e685e93f45cd90382561bdc54511bcc0277fef00ddd0ea1bbc1fb278acf"
     sha256 cellar: :any,                 monterey:       "ecb6487a0bc0ac99a2d092efadc98d0739b0cf8fe1e6e498e690a2acee6a9aca"
     sha256 cellar: :any,                 big_sur:        "16df077bcd74a4fd905d04cdcbea7260a1428100e5013683d7eefd0e1ba40950"
     sha256 cellar: :any,                 catalina:       "a61a616252a0eed0803906342e9a029036d61fcfd2ed74dc0cd821fa46a6b8de"

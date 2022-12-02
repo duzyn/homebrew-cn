@@ -10,6 +10,7 @@ class ThorsSerializer < Formula
     sha256 cellar: :any,                 arm64_ventura:  "cacb46b0e8553c1d852eaa8a0f2f0b20d4fa6f7856d506ea391beed4c0656d6c"
     sha256 cellar: :any,                 arm64_monterey: "fed38939de49fd5392bb5eb5b73a232a908f3d7fcc6c8c6f46cbd62cb9692f66"
     sha256 cellar: :any,                 arm64_big_sur:  "c0bc34ed11e301a8c6c1d431b199a5d551ce001a645d3afcb4027be80175ebca"
+    sha256 cellar: :any,                 ventura:        "57aa05b75c6b7bc3cc4eb9a77fc989d5de90116d128c7b87b8b08aeb1e222739"
     sha256 cellar: :any,                 monterey:       "5b0f10dddcf34051c3dae5a89d645d9a8038fdfa205dfd1352a08fbb5ab512e2"
     sha256 cellar: :any,                 big_sur:        "345aa3d840c70e080ffdda7323a25aed65d264fd15e092a254bd0f798054f978"
     sha256 cellar: :any,                 catalina:       "6042a23651e48c42fc1f24736ce9c76f7c1b067321f882d1bd9e88836560ac28"

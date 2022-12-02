@@ -13,6 +13,7 @@ class Dooit < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "3343b1c9256da28ca0423aa3b26c3e0580138bc6afda0112a7adbd8d577932d9"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "66b7ea1e658422e69f1200ab0036ab7b101db35de94acc75e5c7e9b67a08fbf1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7253afa4f4d165ab89deb686258a8926d5bf29811207e31857aea4f3ce2aafb"
+    sha256 cellar: :any_skip_relocation, ventura:        "bca605e9ff879f1ff3952612216bb8350d5928bf7b60a135c65273fc0914d35c"
     sha256 cellar: :any_skip_relocation, monterey:       "ae77c6201c1342253b0b00cfd6e9e79c147574f2a689b03374cd1552eeb330c9"
     sha256 cellar: :any_skip_relocation, big_sur:        "d86878cd9521051f1c99301d26c3fe99f3c7ba6ce347c42ee254d08f27c25a80"
     sha256 cellar: :any_skip_relocation, catalina:       "ad25c06f95e4bb2deaf43ef17449ea5a5c651042768e55160752db3b9a67f418"

@@ -11,6 +11,7 @@ class SimpleTiles < Formula
     sha256 cellar: :any,                 arm64_ventura:  "0f616b2a67d63923b1d73d3871ec0c8918ea176a4a622d37def13e12dfc8820a"
     sha256 cellar: :any,                 arm64_monterey: "e1feae5d81d6053c7250b215f0479498e9b1c877a5fe9c4250912a4d68a4e24f"
     sha256 cellar: :any,                 arm64_big_sur:  "6a6fb456fa5ddbb46efd66c33f6146a8a690be8339d075900a71cb2822f8ca4f"
+    sha256 cellar: :any,                 ventura:        "1728da6b405a4c3af2218d664cc640299c5c44be6301e5ac30b2d545716f74a9"
     sha256 cellar: :any,                 monterey:       "34c7b1151f1d76c0960fd51fe58be239c1f5500ce899a751f80f35324285f7c0"
     sha256 cellar: :any,                 big_sur:        "c0a0749749fcaff01e88bf679bad4fc6b592ddb6b01565b5e1a213a81ed840ab"
     sha256 cellar: :any,                 catalina:       "74bf35c12b55c9906e7ff0e07cd4f9b379f936735efe376267c41c57e49e276d"

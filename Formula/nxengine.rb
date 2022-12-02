@@ -11,6 +11,7 @@ class Nxengine < Formula
     sha256 cellar: :any, arm64_ventura:  "dbf17c0f5d0c2ca0ff0f2065595593196d098b62004ef56bb5116907e63d6028"
     sha256 cellar: :any, arm64_monterey: "08131c36364793644508be87253a08535f9e6162c3e5c5506bcf28053b496ddf"
     sha256 cellar: :any, arm64_big_sur:  "4e95b8a7bba3017394e2a9c0cc3e3aeaa505a09b6491277a3a1eec7fd789d646"
+    sha256 cellar: :any, ventura:        "c57b40920cce4c09cd03cb85a1b2057acfcfdad6c073f78dcd6185659ff0f6c0"
     sha256 cellar: :any, monterey:       "64f5d24d27a052676ef63aa8f6624f77412f36031f9d6f3486fcbf9f232dfacb"
     sha256 cellar: :any, big_sur:        "8f73644dde241df28e005921c7b82d904466c87a0c3dd5e6ea0b72ad595a242b"
     sha256 cellar: :any, catalina:       "be3f2bcd0f8d5e04c25224d6ddeb0c0e11ec64627266ee35f79f5c35c1511264"

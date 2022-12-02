@@ -21,6 +21,7 @@ class Proftpd < Formula
     sha256 arm64_ventura:  "7ba70a8e04d5e6379b6fcfe9b521829e7a5a9f6710f8bfff7aaa8cd1c120b805"
     sha256 arm64_monterey: "af16db8ab4261d0daa4ee5e5f51046045a20b017dc854adb1421f26407688982"
     sha256 arm64_big_sur:  "07fadba73d0440b08846a2e3a5ddca07b2b398ef949d71931acf384c7d607181"
+    sha256 ventura:        "049d35236b80972e2a5cd8a149427460c5a2be23774229a9727ab5203b9595c2"
     sha256 monterey:       "1cb51eb56dab1081f6c64ac75904e38e59065ba1ec78f43cd761ab88c0de0117"
     sha256 big_sur:        "429dc14ebcbf7b31e4073578522fab149c08abc8986ca39b9e0c6a698e2c4a69"
     sha256 catalina:       "23aaeb1f2c8f08fd561cb9e2a4fac400b1176365726bb3044487a0658b0cdb24"

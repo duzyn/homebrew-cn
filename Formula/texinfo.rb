@@ -1,20 +1,19 @@
 class Texinfo < Formula
   desc "Official documentation format of the GNU project"
   homepage "https://www.gnu.org/software/texinfo/"
-  url "https://ftp.gnu.org/gnu/texinfo/texinfo-7.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/texinfo/texinfo-7.0.tar.xz"
-  sha256 "20744b82531ce7a04d8cee34b07143ad59777612c3695d5855f29fba40fbe3e0"
+  url "https://ftp.gnu.org/gnu/texinfo/texinfo-7.0.1.tar.xz"
+  mirror "https://ftpmirror.gnu.org/texinfo/texinfo-7.0.1.tar.xz"
+  sha256 "bcd221fdb2d807a8a09938a0f8d5e010ebd2b58fca16075483d6fcb78db2c6b2"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "33acf9386cbeab7b708f5c8dd22de953ebe75282faf7fbe36825678396aaf816"
-    sha256 arm64_monterey: "83e127cc706026b0279bb6891ff8649a3039e9340ed2c1a38e6fcfc17c2f490f"
-    sha256 arm64_big_sur:  "e44ae3361202b0eb5cd28d7730e273b09469eea900eea6bc327ac3eccce339d2"
-    sha256 ventura:        "0c515bf5c8badacf91147bc1b56a2c84b1b833b6e691dc338af092f47dea7f7d"
-    sha256 monterey:       "d4f1550361dbff38ba9d7a63ae2e00cf90109929434cec52ca48418a13ebeba8"
-    sha256 big_sur:        "fe5b705f97686161be9d985ca3dabdcc8692df85ed3ff2aa3583c7ce20fec1a4"
-    sha256 catalina:       "59505aedbf48a25fda2c71718168027a736bf0e954fe02eb1281910cdef82e3c"
-    sha256 x86_64_linux:   "0f41d9f1b881faca105bd7516a2b4fb2f5940522fa1e2ba5aaf249a877c7c311"
+    sha256 arm64_ventura:  "2ad2c341570b96e5d1d139abe0c7070c03b731645da4c1a3aa14b02516372c6e"
+    sha256 arm64_monterey: "594597765c2aa357c136322606b1bd5bf04465cc0330c698269e8ad3cb9d5875"
+    sha256 arm64_big_sur:  "57f426550721aacfe39fb53fc7d88c341c8670d2e738028495cea98d1a716277"
+    sha256 ventura:        "d34cea65a60480591758dded9219f6a145c5778aac009bb84f62b1289a2ef380"
+    sha256 monterey:       "66f27d06a7b00f627d677d35b1309ef3c2c4dd2eb2420904e451d56027eadeac"
+    sha256 big_sur:        "2fa5239618395f422b1554a15f1ed45933bbc621dc4439792aa46315a38f842f"
+    sha256 x86_64_linux:   "01afbaca71a6acb6dd68bec6e97ff75c3d66833036a8d64523810def13bb34fd"
   end
 
   uses_from_macos "ncurses"

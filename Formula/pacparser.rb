@@ -10,6 +10,7 @@ class Pacparser < Formula
     sha256 cellar: :any,                 arm64_ventura:  "faec5e06c1812b2e60f8398beae9703ba9f11124f4d8eee804e95b7784c28b75"
     sha256 cellar: :any,                 arm64_monterey: "c9a4d912f32c3d95b1d3e9908c1bf173b5454ab2fe97b72d542e7e9d3323acaa"
     sha256 cellar: :any,                 arm64_big_sur:  "87c7b416faa3933313915c97df4908636f6fb90d076906aedb9ab0f6349b0184"
+    sha256 cellar: :any,                 ventura:        "4de93574aec60553337d57731d2f38356f4a9fe633f627763d9bd4f8d26ea199"
     sha256 cellar: :any,                 monterey:       "66567eed659b8c575fd086749fb206f091b4dac80c18aace817402f53363ce5d"
     sha256 cellar: :any,                 big_sur:        "ec53ab3e50bc58c1fb3226e83ea9dea4ccf12294674588a2ac05177699816b49"
     sha256 cellar: :any,                 catalina:       "99ad319b5cefd28b2d33f4645fa0f2f408a99b5905901eb61a052d38fa29df1a"

@@ -1,24 +1,23 @@
 class Mimalloc < Formula
   desc "Compact general purpose allocator"
   homepage "https://github.com/microsoft/mimalloc"
-  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v2.0.6.tar.gz"
-  sha256 "9f05c94cc2b017ed13698834ac2a3567b6339a8bde27640df5a1581d49d05ce5"
+  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v2.0.7.tar.gz"
+  sha256 "f23aac6c73594e417af50cb38f1efed88ef1dc14a490f0eff07c7f7b079810a4"
   license "MIT"
 
   livecheck do
     url :stable
-    regex(/^v?(1(?:\.\d+)+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "475d7f9e2ccf7c9a036cb5b32e3a5b54d97551b86a6615950ee29451fcc1c0a3"
-    sha256 cellar: :any,                 arm64_monterey: "69c4b39ebd16770f33aaa3ce9023484e52c80d3c27d4f69e243e5be414c9237c"
-    sha256 cellar: :any,                 arm64_big_sur:  "3537ce70aff1b7d9bb8b0dfac8da2b404ebb92f483c40e9dc56ac7d098459f5d"
-    sha256 cellar: :any,                 ventura:        "c07c39d01f14cd9810e5fba45d7ac2420b9d02fee9da5111e4aded62fb719f0a"
-    sha256 cellar: :any,                 monterey:       "60f36a99ebca794366457e80b6847d0cf1c17d7bfae13ce49efe502bd5af4514"
-    sha256 cellar: :any,                 big_sur:        "98c9fa19f7c7a34603129ae7c92da4e127f52eab822dc74351ee8c30cb628489"
-    sha256 cellar: :any,                 catalina:       "37f9631af5e05af08eb339d800eee4b940f86f01b49e92a4281d4a508fbb91b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8740d8eb3ccab83e3832e28659165d5e93a083206ce0370125bf4dc43dada0e"
+    sha256 cellar: :any,                 arm64_ventura:  "3628509c807ce90ddbd4f31002a9457e8f517bc8a752a1f40a2831e93f9eea5a"
+    sha256 cellar: :any,                 arm64_monterey: "b59c78d2b01ae6199bfe1d1dad6f5bbdc08a7322c4b66314ecdae1abffb06140"
+    sha256 cellar: :any,                 arm64_big_sur:  "269def3ed2318340f1d60695d4928261cb37c809d0535707af1cfd3effa48022"
+    sha256 cellar: :any,                 ventura:        "0ced178e11021557b80b1757f50f0eb7d2df234cc13b80b280d2ab566bf76a57"
+    sha256 cellar: :any,                 monterey:       "00ca941816ee794e5cb573ec832e4391d716d1b6e708d48a89ec940a4a5386f9"
+    sha256 cellar: :any,                 big_sur:        "a2e3579c97a035bfdf4e611c8a6cef68fa5e56dcb770047adb2c73f1839f1fed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95113a19ace175085e8bc78020b42243c375cb36e76624d947c6e7a336db396e"
   end
 
   depends_on "cmake" => :build

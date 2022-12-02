@@ -12,6 +12,7 @@ class TrezorAgent < Formula
     sha256 cellar: :any,                 arm64_ventura:  "515b999a700bdfc68934c06c935fc7045b9196951fe7b988c8e99ffb82edbf7e"
     sha256 cellar: :any,                 arm64_monterey: "e9c21c9144a0262aeb8c8be34b5299912aa80717cbf801c9ae4bc57c74d8526a"
     sha256 cellar: :any,                 arm64_big_sur:  "46017d9bd87c292d6cc1be828647b58e6723ffeb44223035f0eb9672f226fd85"
+    sha256 cellar: :any,                 ventura:        "7e037a423e7a88c2f0e2a0f42dc2a31ca912ed923ee2d5627ac8094b605c4106"
     sha256 cellar: :any,                 monterey:       "0773675566f131166702c3bc9b838efec777f924be76b04293b237b200738cad"
     sha256 cellar: :any,                 big_sur:        "6cb146eb0618a186c90692e17a37c80313695eb3a956711fafc4f922d05b446d"
     sha256 cellar: :any,                 catalina:       "d7bcbef8dfcdd6c546f93a55d52cd91d3a0e52623d80b710904d8081aeb3208c"

@@ -15,6 +15,7 @@ class MonitoringPlugins < Formula
     sha256 cellar: :any, arm64_ventura:  "83d0666dc9cd070520141f966f4a133eaf8ec40c97add43d25c3b60d1e131bd9"
     sha256 cellar: :any, arm64_monterey: "e6682827d5a6e334847f857104a3415da7c717c3edf725a43f8ee58d0f881737"
     sha256 cellar: :any, arm64_big_sur:  "74484805120e1ef11f5c7696e32cb1fc8828f22ef19787e6c9a0e3df6f6f4911"
+    sha256 cellar: :any, ventura:        "062416d7a06739c928f2512d32d372fbe9d6f163a185ea861f376b8058ab8bcd"
     sha256 cellar: :any, monterey:       "4eba8230adf01aa4dc2dabee65866dae5a1b76ce01d878bd39d3e48d12729206"
     sha256 cellar: :any, big_sur:        "a1c9496818852e51b3d8ab83a238d0bd1dc1a42269d6326ed16a5777aafd0529"
     sha256 cellar: :any, catalina:       "b04944bcecebf22f4c5569be031fe50c45bfc51f9d9c82dbfdc55688a8cf7a63"

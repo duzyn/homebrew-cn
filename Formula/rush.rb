@@ -10,6 +10,7 @@ class Rush < Formula
     sha256 arm64_ventura:  "edac738221df3600f641718d8ef503d74b91f8b1d70152908d8f4e8543ea1f3f"
     sha256 arm64_monterey: "c40ad559ccaebe83031cb3118bdcc2ade53433fd9d733a3e750a8593e44c54d4"
     sha256 arm64_big_sur:  "c3031fa858e73ad07c42be20c11c97f8b8b46c52f3ae9c695fa5191751db7784"
+    sha256 ventura:        "3285a1b79c8401fda37feed9166fe87cf7ef93e2e210e178c77a75ae203b855a"
     sha256 monterey:       "5833155618b0bf4e4a0e2ee646a7f8585c4ef541f5548911d4eb09af38131327"
     sha256 big_sur:        "b9fe9b70c28fb4bbe8427f1465cd9b99deabdbf10de7260801f95d1181f8e8b2"
     sha256 catalina:       "e382adfc56df5e2fd3075f9183e0513ce85ed7358699f935272d57411d7979b9"

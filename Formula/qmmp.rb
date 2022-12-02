@@ -14,6 +14,7 @@ class Qmmp < Formula
     sha256 arm64_ventura:  "b3481723b568f28338bab140ea7a0d90a25d8a4bc2ad057145459a6b960af48f"
     sha256 arm64_monterey: "6372738827571b4b74600eb297afba37ba8fe85e8e3f461b3daa4dba499bbdba"
     sha256 arm64_big_sur:  "51baec5b0e6266fdb000624a163adadb85ab2de2c38de157b251e30c80b94cec"
+    sha256 ventura:        "e1fff6b8aad6c637408312c75faf724596ecdfb8799304cdd3c9322e50d788b3"
     sha256 monterey:       "f8efdbaafb771e7ef17c430e80f56baf161439842ded2212e5c691049c649d86"
     sha256 big_sur:        "3a10022920b829204dd6c95683e7e5ed591241bf32199dba74fc2d7b8a7310dc"
     sha256 catalina:       "26cfc6ce80cdf54067d9f166e9512904284e143cada1dc10cae94b8b938ca953"

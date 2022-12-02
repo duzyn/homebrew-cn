@@ -11,6 +11,7 @@ class Solargraph < Formula
     sha256                               arm64_ventura:  "140f622ff8ce629ecc4b1e298b5e44944311602a67e4db91fda7f6dc40dabd53"
     sha256                               arm64_monterey: "9ee4f9c6c6c3fdd9472d4b0edcd2b295759aa1df23f0c32f6cf0cf2cf4af7819"
     sha256                               arm64_big_sur:  "e482fe463b5a4df5fbeb2b04e79b0d2f2e3e610cd5cf497a6f65502c1179bff7"
+    sha256                               ventura:        "bceaecd82185a58b1e1d7d2c111dab07a73d9f3065e5963d2e99db81ac41197f"
     sha256                               monterey:       "8c96f3cfa556bf4e88a0b3746925a92ed9ef23653289131a30515e2b1b7fe8b7"
     sha256                               big_sur:        "42bfdcd3acbbf4512919b58ea9f37a9feb66118a86f3f74b04d4354596c7f101"
     sha256                               catalina:       "743ac7d4e922320ca45dc2d179fc6484526f84e737b567a97988dde3bc4cd372"

@@ -34,6 +34,7 @@ class SynergyCore < Formula
     sha256                               arm64_ventura:  "1b4a2490a8037d024db0d276cae2e8bc285aee8a103db5342ccbe10771199e3c"
     sha256                               arm64_monterey: "725f0f1fa1dfe02c9a1c7263475e56ea7ddd1851db82f7105713e722ac8a8420"
     sha256                               arm64_big_sur:  "4029385d37cae098379287bf401afdcfd0e7255956644ca9698066997ac8e662"
+    sha256                               ventura:        "1e8ef42fdc16ec61502ddc2e505fb3068cf3676d1f5139bf33c820cc732d6f2c"
     sha256                               monterey:       "24f862db876c623f46ad44fcc14350586783e84c1f0dd79bd17e37b2ab861280"
     sha256                               big_sur:        "f125834a8999cb0a9392e4a4f7085b9168b206e8b596929981426eb92a658036"
     sha256                               catalina:       "9d82863c4c7c1bb6dcd62d9cfb5eeb4abd05d9c360bf08b0b5408b2e90dde516"

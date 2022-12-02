@@ -12,6 +12,7 @@ class Shairport < Formula
     sha256 cellar: :any,                 arm64_ventura:  "6ec34c1a6192a444706e3bec92cb08424651737c23428cf32bd09fb87e08ec22"
     sha256 cellar: :any,                 arm64_monterey: "cc2f0f9f0a61452bbc6024ff53289c9769478d6c869e14c6b82eb122c2417e61"
     sha256 cellar: :any,                 arm64_big_sur:  "4ec084bdb28e1a1402ea518d2a7f9342ba3310b2b69d61e41c4aa1cbcfa2cd0c"
+    sha256 cellar: :any,                 ventura:        "bf78aa5d7f7dac89cd5a98ce2b953ad02a439cf07ac22c48e7a7c50f805328cb"
     sha256 cellar: :any,                 monterey:       "50066fb9c883277e109868b5023557545c56ed1424f3b2dae4b39c7491f09203"
     sha256 cellar: :any,                 big_sur:        "241a4d9155fb3a9c0e0e5f0fcb46c79e9d1febf07d09780d0865cd80379fdfcb"
     sha256 cellar: :any,                 catalina:       "eb61653e41a172eef6f5458c35e7f8a3627d730e44c2e361903cb75b96fd747b"

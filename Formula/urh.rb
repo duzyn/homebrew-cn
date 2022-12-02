@@ -14,6 +14,7 @@ class Urh < Formula
     sha256 cellar: :any,                 arm64_ventura:  "66d94ec0ed8cac4074e9e8783deec8088569069bfa7b8b2b7d7c9cfddb430c08"
     sha256 cellar: :any,                 arm64_monterey: "79b14cc0d9925d93224017e10e0719da2e8bb113e99589729fb661667ad49a5c"
     sha256 cellar: :any,                 arm64_big_sur:  "d50fd4c34ab6b56e28a89006ba3f27e030c1107e3dffe56f34236427721c6f4f"
+    sha256 cellar: :any,                 ventura:        "4443995daa3830f3da9f458eb34e1af6a14396b8a18a717514f05b1abb1b374d"
     sha256 cellar: :any,                 monterey:       "1ce1473b5c9661fbfe6aaf7acebf3212f1c87c8660c9afcc5674369196f82ab4"
     sha256 cellar: :any,                 big_sur:        "c4bf2f1bda2227932929cdea464da4e67302b5413f4c88d8a34bcc1a02e2c460"
     sha256 cellar: :any,                 catalina:       "9a4c90a206ee271341819db55da4ae14704265fab550cdce5928b4e31e5aa0d9"

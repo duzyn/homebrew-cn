@@ -1,8 +1,8 @@
 class Opensc < Formula
   desc "Tools and libraries for smart cards"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
-  url "https://ghproxy.com/github.com/OpenSC/OpenSC/releases/download/0.22.0/opensc-0.22.0.tar.gz"
-  sha256 "8d4e5347195ebea332be585df61dcc470331c26969e4b0447c851fb0844c7186"
+  url "https://ghproxy.com/github.com/OpenSC/OpenSC/releases/download/0.23.0/opensc-0.23.0.tar.gz"
+  sha256 "a4844a6ea03a522ecf35e49659716dacb6be03f7c010a1a583aaf3eb915ed2e0"
   license "LGPL-2.1-or-later"
   head "https://github.com/OpenSC/OpenSC.git", branch: "master"
 
@@ -12,15 +12,13 @@ class Opensc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "ff63000387afc269b6c1effaabcbec8bc0af5f4bff1547790d850eb2f564cb79"
-    sha256 arm64_monterey: "e36b99415f0289b18c89b41a018e410b689008d282e6bcc645563075725b3ff4"
-    sha256 arm64_big_sur:  "a784ed8b0ef0ec7dd1ca997331424d4899ffac2b3774a5424e1c0da2d180022f"
-    sha256 ventura:        "82734eaf05eb183e6a571633e7803077b36b3e0b48cf0032f7eab8065b4b1b69"
-    sha256 monterey:       "0956e69b33a8e39e9c7345a086d446472c55cb79fe2082c9c34535840b9ff23a"
-    sha256 big_sur:        "5b46706b6ed0a2104cccb2511b830b289882ef92d9d263a4ee951090e068549d"
-    sha256 catalina:       "447703c3545b2d5114c5f105af76269d01ef2830e00e7bb8057f33650bca2060"
-    sha256 x86_64_linux:   "36ee5e4298c955fad69d97e94732c8a159a4beadbc8f918041b2614e3111f222"
+    sha256 arm64_ventura:  "ed81cd1b4ee92927ea5a489e09a34878c81a924082e101071658e105cf858638"
+    sha256 arm64_monterey: "53e0966e77ab894831dc960cedd4efe50bad79d288866877242a476121158969"
+    sha256 arm64_big_sur:  "031be42a1b8ea5874e2ae9fea4ca3e2070fe99dd544356c98ea260de4ff4d564"
+    sha256 ventura:        "cb74b08610f26136891fc4f039712c29138d2b347b19bf9cbb3b2659b153e2a8"
+    sha256 monterey:       "ee4912d3e4173f004b7bf0df0a5ab7293bfa6e36cbe1d5a19b59eac5f1ab5637"
+    sha256 big_sur:        "e00651f78485c68d4f435363466a44827f332adcb20ee16fff6f2f17b8fc13e4"
+    sha256 x86_64_linux:   "152fb46a04da9f6e492ed3b9c1e0b4672e02fdc6cd98d4f177f646abe3d77ff2"
   end
 
   depends_on "autoconf" => :build

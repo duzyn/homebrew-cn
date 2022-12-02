@@ -14,6 +14,7 @@ class Oil < Formula
     sha256 arm64_ventura:  "2079930421898c514a2da59fa6dfda59397f5db927c9f18394f66d29a637ae6d"
     sha256 arm64_monterey: "a7308a9553f7f55c0cda7182612c0875f8c6a4a17103705671a9831b79ffbc5a"
     sha256 arm64_big_sur:  "af1df7bb8ee26ce3cd7c6e142f6ea32b2da3c5b2f84fa4e2625456ef2d96f075"
+    sha256 ventura:        "84d915ebdf4a754943a8d0856ee564bdc697f1779ebfc0a6bb6c6b3d12a62a11"
     sha256 monterey:       "aaa395c37c92e5973470ecc6562efb8c26a1a60fa15b693633ad500c075dbbb5"
     sha256 big_sur:        "b5cae372631f127c873c1f39c048d5330420b6e7d48841db8f1d27a9522b2b0b"
     sha256 catalina:       "c68663d0b15935329bc228454102cd7db844a17bd305decb672f2dad3607d19e"

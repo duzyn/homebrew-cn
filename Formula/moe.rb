@@ -10,6 +10,7 @@ class Moe < Formula
     sha256 arm64_ventura:  "ebe411a9b36b993c86920cdd4ec7a02e92794e397f658edb4cb62ee324279084"
     sha256 arm64_monterey: "0ef61e0d2ff4d8c1a6c6c113d678ab3dd2395330e977a82d98b0c5d7dcb0d5df"
     sha256 arm64_big_sur:  "4cd1ae57f10541bfdd1b593b03e23ec95c8505b9333910fea5a44609944db357"
+    sha256 ventura:        "2ed95f382bcdd5e223671049fff8d91925bcd81b90fdfed060bb2ce00f3d71e7"
     sha256 monterey:       "a88056ecb34970e4d33907be5c005b16c2dec0ff2f66a4a2600002c5ae65ad2d"
     sha256 big_sur:        "8a52882de612e38223232d3ec439d16e9aeeb3da3df3aed2f17c9e25bc4d4578"
     sha256 catalina:       "214f04ee485f292e4e33ce30a51385b118ba659fb97acef683a7aa0c07da4059"

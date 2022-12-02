@@ -39,6 +39,7 @@ class Singular < Formula
     sha256 arm64_ventura:  "5865b0a0e8438696321267a32c154f48d38738cc18cf0afafac606dbec29865b"
     sha256 arm64_monterey: "7570ef9396f60a13517a9e42735f991f2bd5d08402808633299e43814d40ddb1"
     sha256 arm64_big_sur:  "c549c126c15a56777dd54e20ee408fa1cf7945bd735fd615ab92c6e369bfaefd"
+    sha256 ventura:        "74246381406ca55b321b9ad7d7ee01d3efdee421166d7af6875d16ca1d5a3a59"
     sha256 monterey:       "150e76c1e1eb10366afa1aefa3053c171e75e8813eaa4814298db4804659cdd8"
     sha256 big_sur:        "e1acc9bf2daa815379592b57c3c1cecfcc7e7e2e167bd3c5e6ea90fc5ece2454"
     sha256 catalina:       "732a3d7fc116f9b896042b73a727d6631f575885449eb5d7f2479d6410afe51f"

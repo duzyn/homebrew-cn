@@ -15,6 +15,7 @@ class Qbs < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a628930a930a6ae3071eec4b21042251527854bc7a354fb7d41cc4a8cbc7330a"
     sha256 cellar: :any,                 arm64_monterey: "6604f19798d5ac7ba45cbbca0d658c03dd76ad74379edafda35dea199ee02bed"
     sha256 cellar: :any,                 arm64_big_sur:  "3646df419c8ccdecd847bbf39c6acac7fe2fe2b38cc7f5f36d9add60f241feb7"
+    sha256 cellar: :any,                 ventura:        "850f72158b239df054ed87c46b601e323a1892854d2b8d3fdc8f8aad429e1558"
     sha256 cellar: :any,                 monterey:       "a9a91161f9711ba9854355380e8547ca29ba77e619567fc559f987104c19a08c"
     sha256 cellar: :any,                 big_sur:        "b1f0b1a4e33df0edf23f1f733319429cfaab01c77051edeeacaf5861488ac4e9"
     sha256 cellar: :any,                 catalina:       "887de87ffddffda4613f41a8375a437053eba0b43def2f806459c9c6a7fcd61b"

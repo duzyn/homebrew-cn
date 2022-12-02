@@ -17,6 +17,7 @@ class Openmsx < Formula
     sha256 cellar: :any,                 arm64_ventura:  "5999e56087a8289b8fb18ed025525ddfaad855d8fa48fc57793efcb80e8358ee"
     sha256 cellar: :any,                 arm64_monterey: "906faeef395d49a464d05b3dd09fc8cf45930812dc3ed406bc3ce2a30e4e81d5"
     sha256 cellar: :any,                 arm64_big_sur:  "1d6d5e1f9cabb92201022499fa94fc0fe154a5c88ef956d4e822073fd46cace8"
+    sha256 cellar: :any,                 ventura:        "0b29189937b744d4d1a5da43dd36f21a9c501f631885d66908fd44ee655f177d"
     sha256 cellar: :any,                 monterey:       "00a56f37ea35e7546d518a011131a5576dc45596eca0251781969400d7882ca3"
     sha256 cellar: :any,                 big_sur:        "59436ec2d4257478c10c3c8d811ff0116f599b83ea77d9a0f9c2a6e1efdcb3d2"
     sha256 cellar: :any,                 catalina:       "c6a9798845991625cede35b99fd1a21f0dc264e0b639b2fc7881d2559dfef615"

@@ -15,6 +15,7 @@ class Pjproject < Formula
     sha256 cellar: :any,                 arm64_ventura:  "ccee5a9791d7286f541e9f59931f5c2193af1e0ca0ad189cb5dbe56826036ff5"
     sha256 cellar: :any,                 arm64_monterey: "71ba504dd2255cfba6d1867d27add23f415a841c0dea2a96cced2f5868c0645a"
     sha256 cellar: :any,                 arm64_big_sur:  "89e39245774453366e922ccca427a5ef2d70809a7fc952e89b095ba884830998"
+    sha256 cellar: :any,                 ventura:        "e5f65e36cef12259e4d690959b31a3a1345635b65d4a34b212873e8ed1272a5a"
     sha256 cellar: :any,                 monterey:       "66b92f14f4d14a45e55bdf306311cb2bbd0fca3573e2aa03900d4c4b1d427e6d"
     sha256 cellar: :any,                 big_sur:        "29ea64bce5012253aacc4ccf1cd43c8ec701ccf625739341817c6d452a9cc44e"
     sha256 cellar: :any,                 catalina:       "7265ffaa44bdc67e47721c12d80cf7e7d213f47a393d8923ceadeaee9968e68e"

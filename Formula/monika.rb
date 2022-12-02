@@ -11,6 +11,7 @@ class Monika < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "8b7569db6c5cb32dec0fb4ff0325a9378f093f4c11623bea272b3aedffa9d29a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "aa5c21c238bace78d7f665bcf5754461f4583fc8e6268412f45b09f31ac61b4f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "680d0fb4f40e7c47614f4cfc2e0245662e20a09cff592c85b491874451fe3216"
+    sha256 cellar: :any_skip_relocation, ventura:        "f957eb109eb296fba4a02a7edaee57d538b33ea4d141400912c5ebac7bc50248"
     sha256 cellar: :any_skip_relocation, monterey:       "70ec69448990d413b2116d17c57d94f30d20f9c6c56ab84bdb0cd9b8c1e922d9"
     sha256 cellar: :any_skip_relocation, big_sur:        "98318750b359f8dc6b5f64b3c869acb0358ab99f542b8654cc942395d208bb1f"
     sha256 cellar: :any_skip_relocation, catalina:       "e9ce43a708f271f42e0ec0c36cc6f9fac4fc90cfebd4b7b263951ec5c0e84ca9"

@@ -9,6 +9,7 @@ class Pgformatter < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "958626095788cd522c949b42f4ef80bf79c1fd05c31c9389f5b4a1a03d28cadd"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "958626095788cd522c949b42f4ef80bf79c1fd05c31c9389f5b4a1a03d28cadd"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7eefcaea365b20a43a68c55b20aea88c660f633e92b97355bf1db0bb66a296ed"
+    sha256 cellar: :any_skip_relocation, ventura:        "e07e4d8a053f0126dfa50c082c14a589d7cec6781d2abb53fc37aa737e2b3bad"
     sha256 cellar: :any_skip_relocation, monterey:       "e07e4d8a053f0126dfa50c082c14a589d7cec6781d2abb53fc37aa737e2b3bad"
     sha256 cellar: :any_skip_relocation, big_sur:        "d38e00a17190b05a85276c2b77f1cdfe3c6dd79f46183a862cb383cdd4abd8b3"
     sha256 cellar: :any_skip_relocation, catalina:       "e475bf116f1638ceafe659f0dd8685a70b9b2466256e927de8d14dd8655a7b3f"

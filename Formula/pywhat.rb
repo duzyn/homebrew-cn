@@ -14,6 +14,7 @@ class Pywhat < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "480ba6a8c42429fac58f689d10953189fafc5e6d88af1c89cf40b1cf9615206d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "dac74f058deb4625e95ac54d69abd24d2070d5e661bc07037706d330f88fac05"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "696e78d8044c155ad0953148b89a7e8d0f89c385b73452a0129b8db3ac8737e5"
+    sha256 cellar: :any_skip_relocation, ventura:        "a1843a509d2a5357beef1cae3b19387269868ed276d743520b94ba799c724fde"
     sha256 cellar: :any_skip_relocation, monterey:       "3c7fa1694ce65ed22d9aeb7ef7e853f06094049c2a2af5b0d04507ee452cccc0"
     sha256 cellar: :any_skip_relocation, big_sur:        "97bfac5197c7b3f4af650b1862b8e3675797fecb70568154488ca27bf47aabb3"
     sha256 cellar: :any_skip_relocation, catalina:       "11521a3f937f546818b64f33f369d6a748056853ce71f32aff13fdf0246fe938"

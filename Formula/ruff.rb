@@ -1,19 +1,19 @@
 class Ruff < Formula
   desc "Extremely fast Python linter, written in Rust"
   homepage "https://github.com/charliermarsh/ruff"
-  url "https://github.com/charliermarsh/ruff/archive/refs/tags/v0.0.149.tar.gz"
-  sha256 "be46985f8557c02830ef73c5f562acf799852ff57c1e7a8c9e4fe81872961e6a"
+  url "https://github.com/charliermarsh/ruff/archive/refs/tags/v0.0.150.tar.gz"
+  sha256 "59da061ef6b7d94843058ec9ad77f69d9af2cec463f53d84e5da9d33655f2f58"
   license "MIT"
   head "https://github.com/charliermarsh/ruff.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "907bedf5e116600ccc9cce04c50895264609d9ff34a445768156ceb82790eb1c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "857ba6ee11e2b72a72881c005e6bb1bcf534d13b9ee69527a8b9f56784b8ccf2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ffb3cac3d41b2fad099953572cae2c23dd6e8c4e652965536b6bbc8e67bcb185"
-    sha256 cellar: :any_skip_relocation, ventura:        "77d22156e45f1af755d87c656570679e0c706fd19bace848584f03acf3597cc7"
-    sha256 cellar: :any_skip_relocation, monterey:       "90010d8f8af6666020b97098dbf510e9a97081b9e51e9dd7c9221896a53199ab"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eb6a7f8af9042433d1d20c9232cfdacf8cf3e26a0bc3138a98fa172bfb474536"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fd0c70a2d40fa6b44e1f8b6ad55403e261d348c6ef81965f6dc045d63c8cc18"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b789ddc47b4790ebc71254a0d07c547c7bb7a6fbe1f4f320e5823171448cca18"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "db0a742694c317a06e2c1027c75781d781dd82f358ea3373428e11d7e0d6e1ec"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5c67bbb0c2a26b7ccbb2b8bad1686540ee0010d2040b9ac0f7b64f17ad970dd5"
+    sha256 cellar: :any_skip_relocation, ventura:        "babcc6759f3b4d661bdf56400db831e17f34b91fde8cdda3ae34d5d5cf345405"
+    sha256 cellar: :any_skip_relocation, monterey:       "e82c7c253e5d1dd0a5b69e8fd9ccc863993ab44f889ebffb6adc0ce134784a6e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e64c46c2873ef339d7c89fe5cb5e6b1db47b4e556897f514b5a24c8d24588a63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "379891b2f5c3b646b5a98a4c2fed4e1cca777a50e6204f9f86ba67c7339ad1e0"
   end
 
   depends_on "rust" => :build
@@ -28,9 +28,7 @@ class Ruff < Formula
     (testpath/"test.py").write <<~EOS
       import os
     EOS
-    expected = <<~EOS
-      test.py:1:8: F401 `os` imported but unused
-    EOS
-    assert_equal expected, shell_output("#{bin}/ruff --exit-zero --quiet #{testpath}/test.py")
+
+    assert_match "`os` imported but unused", shell_output("#{bin}/ruff --quiet #{testpath}/test.py", 1)
   end
 end

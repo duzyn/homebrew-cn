@@ -10,6 +10,7 @@ class Pluto < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "57995f33458eb17935d82b5bd338c9de60adce5fb18a9a1915fa0ae254ec1954"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3318191607547959c66988251db066325848aa9e32c5338fcc1c49795e14fa33"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "736ad336ce98702175b2c3a019bed7923b6e312dab6c1bd34cc9607fea90a3a0"
+    sha256 cellar: :any_skip_relocation, ventura:        "00db350fd3144a3ff18da0fcf8f325d901d3d6836b482d491c97755563a2afd3"
     sha256 cellar: :any_skip_relocation, monterey:       "be23ef2a0ae97badf56ad4472068c4048f04197097c70682f5bd87e2603e2539"
     sha256 cellar: :any_skip_relocation, big_sur:        "18a428637b47ad08b419d4534d925dcf3dd0f1c2f5ed29f07c7caca3ebd9c8fb"
     sha256 cellar: :any_skip_relocation, catalina:       "6c398e0471e87c67e66db9220aff5de8480c27bbef7d7cc648c507314c727190"

@@ -15,6 +15,7 @@ class Scotch < Formula
     sha256 cellar: :any,                 arm64_ventura:  "df7ba27e31b030f41580689a04f1613d6f37fd85a5ed1106ffe27c4e8c37cc22"
     sha256 cellar: :any,                 arm64_monterey: "46a3cc42b5362cb35a182a6b10d77913936c380d09298de39799ac7c7ff95d56"
     sha256 cellar: :any,                 arm64_big_sur:  "be66bc36acfa18ce38d45c642cb83830dd208d91ca3c2612312bae484a6eecfe"
+    sha256 cellar: :any,                 ventura:        "2ef4fc257a4c3f66ed24fbd69d2c3da8bb84439ab360fd010661dfec05982863"
     sha256 cellar: :any,                 monterey:       "57283af1e66679f2137cb7926b1789bf5f6a080eec4b679db53364c3c081d7e1"
     sha256 cellar: :any,                 big_sur:        "0e4ec98850e307bfc39a16d9572cb8e1f4e1bd4a214f117be55c12a4715b5365"
     sha256 cellar: :any,                 catalina:       "4b51d16f211dbe4d8777c69501423ab7d480c5efad89416067c46319702df7c9"

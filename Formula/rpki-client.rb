@@ -11,6 +11,7 @@ class RpkiClient < Formula
     sha256 arm64_ventura:  "d74d693d81b62819d0174df42bbd160ee2b50308e8f4a0e8f5db44ec7d1c4fe9"
     sha256 arm64_monterey: "9059d0885296268782caa8d7227c5fa36b2a0e57671067bd88468245cbcd493a"
     sha256 arm64_big_sur:  "5420908d212f7719ec7519b60b7ff5ee83c91c9bafd5690ee9ce8dbe3ff55b21"
+    sha256 ventura:        "21f32a882971ccf093f1ce24aeb3811551e627ac4efb76dda55fd52019ad4e80"
     sha256 monterey:       "4b96fe11c1d96b719600e01291a228c98bee810520ba35e7864b43150a17a826"
     sha256 big_sur:        "29eaddeaa39775a5f9ca600bc156b123ec38ff237a4c16d84b587f470ab3d776"
     sha256 catalina:       "c08b8ff4249d882e1558e5784c4cada008198cf90080c98ec6ad854c0fed27b9"

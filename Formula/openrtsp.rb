@@ -17,6 +17,7 @@ class Openrtsp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "6aac9bb9d3d0062af0841bf474e68b33d39643c4e63383ee9f6b1d446eb268dc"
     sha256 cellar: :any,                 arm64_monterey: "daccddb45b414c2e3d82cd5358a48432cf0aacdf245887fd84f0b7838088d6ce"
     sha256 cellar: :any,                 arm64_big_sur:  "a3395fe4703cfe776bf0e088a88a473d43f70bfc6dc45734ad254b32264dad85"
+    sha256 cellar: :any,                 ventura:        "b1a1a49a6af8180536370e0293c7ef3dbfde3efb644e22b8cf61425229dbd718"
     sha256 cellar: :any,                 monterey:       "c8733ed1d4afc4039448b003ded884f2483bd799ef67981fe174527f36f99a21"
     sha256 cellar: :any,                 big_sur:        "823f0acb202ab171a1c084616de4951113463d282d90182290667488e1be0e2d"
     sha256 cellar: :any,                 catalina:       "7b175ddda9e973ed2a51f3262cd9158f71babdc9bb933994f604d9c036c66d10"

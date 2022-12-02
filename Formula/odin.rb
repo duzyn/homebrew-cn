@@ -12,6 +12,7 @@ class Odin < Formula
     sha256 cellar: :any,                 arm64_ventura:  "733feaa92759d2b66cfc61a503011bb10cf3b83c8377000e952453e6388c4db6"
     sha256 cellar: :any,                 arm64_monterey: "59aa458fabfac60adbe9229556022f2139ee1c99925bf242b518b62402809ae8"
     sha256 cellar: :any,                 arm64_big_sur:  "b4db4322d91a616173a3454d46d40ac15c37b52ce4b4a38effdf26f7dd6bfaf5"
+    sha256 cellar: :any,                 ventura:        "4cacf29e5f58960ecdcd023de9288c197ea631e9542a786917f99d9229fd443d"
     sha256 cellar: :any,                 monterey:       "31613eb73b14283a127ab6b1975715c802c34e4e0636a785816440669d1f0e63"
     sha256 cellar: :any,                 big_sur:        "be00af3f548d58d94f073fbceb562f83996c1be39fc6335ba507e848cc11fbac"
     sha256 cellar: :any,                 catalina:       "3576c9ff57989433ebd7de0d113bfdf84b11052a27a9d741bb298760da44a02e"

@@ -6,6 +6,7 @@ class Telnetd < Formula
   license all_of: ["BSD-4-Clause-UC", "BSD-3-Clause"]
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b176900762ef22abfd9edce96ec5225009279291bc50b8d9551f9024d1209190"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e0f71c7ca40e07b2d12cc1ebcb547960381088891b4800637752d29999e3fdca"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e1227d7bf27eb7a58adac93e1a210a93c88d940dff07d48017d2858464ddc3b9"
     sha256 cellar: :any_skip_relocation, ventura:        "e4e977f33a2d9db9ec0f3e7cc588263e9416f7a733ed0564e7eca618c1b1f8f1"

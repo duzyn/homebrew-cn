@@ -9,6 +9,7 @@ class SagittariusScheme < Formula
     sha256 cellar: :any,                 arm64_ventura:  "e186542008a7cdc791ae6afba6ca61eaee7f24ef3e0deb3d1fcb838a38257120"
     sha256 cellar: :any,                 arm64_monterey: "aa58043d5a722199e9804c638b9dcd971e1bb581d56949cdd01eda2a6afcc2fe"
     sha256 cellar: :any,                 arm64_big_sur:  "aefe414d8854397b1e9d10af0af06dbbeaaad6ec31fafe15f56041912a221869"
+    sha256 cellar: :any,                 ventura:        "5595f61f227ec712709f574f0557581de68a85f6bc08cdc7d2b9fe746d1c9db8"
     sha256 cellar: :any,                 monterey:       "8e484bed19b121d1290f9498965d236422548c350150fce878e30831247b0e49"
     sha256 cellar: :any,                 big_sur:        "83e532ea9baf7353b69eee3cef275fde3c6deb35333abbf4982fa92a6c40d9bb"
     sha256 cellar: :any,                 catalina:       "61358c5b04f3fb9acb8752eafb515e1bc6bc1e3054495f974a6376b3dd795249"

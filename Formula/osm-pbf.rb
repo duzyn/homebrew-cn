@@ -10,6 +10,7 @@ class OsmPbf < Formula
     sha256 cellar: :any,                 arm64_ventura:  "83186e7dc2a8237fb480072b716ca0a3d274002bef9f1cda3bbaa00917324b78"
     sha256 cellar: :any,                 arm64_monterey: "0b4a492003e5dd41f96fbc40ca087cc64f7651992b65b7028434bf3c4c20eb74"
     sha256 cellar: :any,                 arm64_big_sur:  "b7db0864c304ea5d04094b88c0fa078d49424fa98950aed10f40ed596ef9b194"
+    sha256 cellar: :any,                 ventura:        "e24048c59c71a33485bfdf59a13e220318a590618ea076650753e3fd052c10b2"
     sha256 cellar: :any,                 monterey:       "c9c32991c08e164406494c12a5c3c9ad3b46ee249386cb5777068b1d1b12e80b"
     sha256 cellar: :any,                 big_sur:        "2a1309dd7c2a7634add17179732f452415febfb6b2a39b8f498b57f4d8ee222d"
     sha256 cellar: :any,                 catalina:       "6cea77ead1d01a4516a2a8e20a38a0dde0024eade075fa0738ba0f6910bb5df6"

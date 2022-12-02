@@ -1,8 +1,8 @@
 class Xmrig < Formula
   desc "Monero (XMR) CPU miner"
   homepage "https://github.com/xmrig/xmrig"
-  url "https://github.com/xmrig/xmrig/archive/v6.18.0.tar.gz"
-  sha256 "4531a31c0c095fcae18fdef0157f1e2a6694408abbcff6789c8f3cd6ab2c3ca0"
+  url "https://github.com/xmrig/xmrig/archive/v6.18.1.tar.gz"
+  sha256 "f97fe20248e0eb452f77e9b69f2fb1510b852152b3af4f9a8b20680c854888d1"
   license "GPL-3.0-or-later"
   head "https://github.com/xmrig/xmrig.git", branch: "dev"
 
@@ -12,13 +12,12 @@ class Xmrig < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "59d815bcd61a0ca712cb8f0de83e662f47782f518e0de42baedbb78a03d4a227"
-    sha256                               arm64_monterey: "1da1fc4a51baca0ef97dde96ce4574a743892f7abb001ee9a8009783aa0b8a2e"
-    sha256                               arm64_big_sur:  "5d21b0a51189c496add0957d7ff2029995c20f6b3ac9199d0ecb35e1177e76c3"
-    sha256                               monterey:       "4c2d83937291e552c369743ee8d2cebaa5834756de152e87022d8247431ac01e"
-    sha256                               big_sur:        "1756da83146306c303350f6d6764ded50a3c0eca947dca5dce35ec83de791920"
-    sha256                               catalina:       "e39c4c45bcdfd052399d7449e2fa38187bcb51a69eff0ea34ed44c07bdbac1a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70d997270b0fa25a71f43f7e278f063c7e95a6cd35751d9f46f0dc4de6342e93"
+    sha256                               arm64_ventura:  "96ba88c286be6e5b37025365e58b1a59b20e4ec19022489123b25ad32701e2c1"
+    sha256                               arm64_monterey: "571d64dca5b8bde50a3e29316c82643bc363c6f8fd2d4a221b5c67de0c3aa097"
+    sha256                               arm64_big_sur:  "2b61ffc4d5e7f8918f7f0c5bd1821a75da07777d652e861836968378fd0bbaec"
+    sha256                               monterey:       "b32548656468b7383a18a53e002f6ec094809b476da7b3a70975aa87e00946f2"
+    sha256                               big_sur:        "3c3d52dc162f372e33690b41ebda25b0cbf533ad0b3cc0b4a1621a9022841eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64683cfd18f31c4998e204a59e5e1e6ef9280b706d73696494b272ac4b31acd8"
   end
 
   depends_on "cmake" => :build

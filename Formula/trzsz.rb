@@ -12,6 +12,7 @@ class Trzsz < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "3f2338f18c26ef9115ad67c2338b8cd07139113e89e2a40e0eaa7b696de2b8cf"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "07154f877574bbf3fee21b8e6a13358473b3bd0d0d45130924042a004a1dbd53"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c64bd93a5b3d27d0906f0e72b0c24ab4b9376da99bd744102ee5e865523b490"
+    sha256 cellar: :any_skip_relocation, ventura:        "c30c763f211f69dd8163016f9f6532ad6cafab23e6576edd47a9728a659f17dd"
     sha256 cellar: :any_skip_relocation, monterey:       "f398dfd1819a386aba368ae0b3d9d2f8faf05a2f5534a75463588b6226106432"
     sha256 cellar: :any_skip_relocation, big_sur:        "544b91290504a9dd32eb95cd8088286fd47bbcb04cfd8ed87b2b78b73d265356"
     sha256 cellar: :any_skip_relocation, catalina:       "afc42b34487bfced6811239e7e0ba531a61b3d6a7f3871148f2216c60853f3b8"

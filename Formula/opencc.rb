@@ -9,6 +9,7 @@ class Opencc < Formula
     sha256 arm64_ventura:  "e0d807f71948b0ca7e224fc0fcb10236fe6158603ef3f2c5aa055624dda231d5"
     sha256 arm64_monterey: "b3b6c98505d778bffac40244ff3550082c67043700c11f8b4c2dc470bd708adb"
     sha256 arm64_big_sur:  "79dbf338581ae748fcbd116e8c6ec45c57a74fc950205c11e05aa586b6601bc6"
+    sha256 ventura:        "04ec43a5224dd4389194ef92589ce198f4e3cc8c85332578fa3d53da1a9dd5fc"
     sha256 monterey:       "abb5f38218d666e864435b8fdcc8dc83e5a9d74f6d5b72d13dddc518e2d068b2"
     sha256 big_sur:        "04e1e578598037552c24853cf84d2ed66da5d23f517612ea8e793e5ba44cc0c7"
     sha256 catalina:       "4dcee8df044e226db8af14ecee5ae84785b799a648c421e6d2f00768df9b30be"

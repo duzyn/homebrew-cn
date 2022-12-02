@@ -13,6 +13,7 @@ class Adios2 < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "86949939af368f21ba0637540fa28395b597a7ad5f0bfc2852faa16e27ad4672"
     sha256 arm64_monterey: "dd6c2120b4b480f41ed467eb288b7df6ad5c87a12fde5cb4d5b02c90098f2441"
     sha256 arm64_big_sur:  "b4c89ff59b0ed1b9c0bfe323baa1125955d07bfe64fa7dfdaf7a53d077a0b22e"
     sha256 ventura:        "3240624d9596ea6f0dc5dfcae7a2b9fff81e5bd170ead385ec25522be3434254"

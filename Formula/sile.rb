@@ -9,6 +9,7 @@ class Sile < Formula
     sha256 cellar: :any,                 arm64_ventura:  "b1ec8a69f69bec2fde86d310994642f2b47dbcc7a5523b780b5dd9f5e1a3dd17"
     sha256 cellar: :any,                 arm64_monterey: "173fa5e31a65fb208bfd27dff30e3bedb7115105679c5f75b1e7d396e68fc437"
     sha256 cellar: :any,                 arm64_big_sur:  "509e7218127ad380a0ca7628bdca7c200be4134b5b7a7f77a4ccb882052d0343"
+    sha256 cellar: :any,                 ventura:        "0d7bc022a47e22b81845f0b7ca9cca64538a259f8bd68c253c1310d3570464d2"
     sha256 cellar: :any,                 monterey:       "f1e8cc09a3d2259047ff0922fca9ed595273f01b84f018bd180158a7dbfedc9a"
     sha256 cellar: :any,                 big_sur:        "5521f377b47e5da50f89dd1fbb59fcfe0ef98d40b9999358359acb31b9566f25"
     sha256 cellar: :any,                 catalina:       "f592d76567d2a0bd440f3767dbc68e8add9bba65f9ba72be995800099ed8bcf4"

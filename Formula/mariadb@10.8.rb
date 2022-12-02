@@ -26,6 +26,7 @@ class MariadbAT108 < Formula
     sha256 arm64_ventura:  "32f8a8027aea6d5110d795427e4609c5c8c982722e64e5fcccb3aeeca5205938"
     sha256 arm64_monterey: "975d469d9cdd8e3f36dba49bd4778fea93a992baabecaea9e885484a5abe4c61"
     sha256 arm64_big_sur:  "55c3d6f5bf9424bf597db11c3f91b89d0ce3274a02f1d9262f35067eb439d975"
+    sha256 ventura:        "51eff1d0a0f3695ef49371aae2cdac0d0871d6dd9d3658cdc9074d5eb9c3b3ad"
     sha256 monterey:       "d176025e0bb857f10fae7934301e1225f344d06bf43a91883f0ad08fc4fa0846"
     sha256 big_sur:        "d8ec17c7b21dadbeb1ba072e331ae4b41786657dd9f483140c1519079c760725"
     sha256 catalina:       "66020a3fd9ed0e598465873fd2f2cc802c86aad95b8c374d83703e8eca6a1ca5"

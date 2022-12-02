@@ -10,6 +10,7 @@ class Qxmpp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c5855b91c763052baa2d2a05505cf26502e3433af8dacd607ba1ab5bbcc03e66"
     sha256 cellar: :any,                 arm64_monterey: "a45dee27f1476a882f3bb9c813c50ca7ade0f8746e3bb5597d17f0ac5e556691"
     sha256 cellar: :any,                 arm64_big_sur:  "6899676686e3bbe23b37d8d55c80f732ca0cf9d8da93c184957d278be653c77a"
+    sha256 cellar: :any,                 ventura:        "73d8a3edbda6481135f1f41bf9487c8dc95cb87758d1a8e2378c2bc1c2c8093a"
     sha256 cellar: :any,                 monterey:       "c2ed7027d5075c6963d352978b1f314e93b2d7625fc1390276dbd0888403bb5d"
     sha256 cellar: :any,                 big_sur:        "10b61feb8873148644facc80cc794e7d5a942e25e2e340dd60345e8e9d336cd0"
     sha256 cellar: :any,                 catalina:       "9134a8266be698258ba7943fc19b662c4c056c96465e50d7bae34a8d8181e8c4"

@@ -11,6 +11,7 @@ class Osm2pgrouting < Formula
     sha256 cellar: :any,                 arm64_ventura:  "0186ed30fb28a6910c3b9e792de81b473528bf591b4a56a4df143dc1a5588b1a"
     sha256 cellar: :any,                 arm64_monterey: "50a6b839a749405b1a8ed973112ec404588f9689cb6f9d1838fc93e069113aaa"
     sha256 cellar: :any,                 arm64_big_sur:  "f014ee852c616ed7e4bc83c06137c57a9005a21a6cc3a3d94867c368fcd3d4de"
+    sha256 cellar: :any,                 ventura:        "3a3826252a0b59eec79bc8471f50637b3327095c8e7073e11daa39f70a78280b"
     sha256 cellar: :any,                 monterey:       "98c0e8d3b2fa3eceda49deaf76a4577bfe2101b298f579a725fa9c06cc426e06"
     sha256 cellar: :any,                 big_sur:        "e8c9c756dedb666562e01bb2a617b11f81d176d1ce4c3caebf6390cd0e510790"
     sha256 cellar: :any,                 catalina:       "3e7d0bcb78fd7b62ebee99080133aae026a77a4b2b8d6f58e84f67b98d777039"

@@ -18,6 +18,7 @@ class Ompl < Formula
     sha256 cellar: :any,                 arm64_ventura:  "843607614ddb38dad78f7995c2a1926ada94aad6eccf7756120977033d58003f"
     sha256 cellar: :any,                 arm64_monterey: "30ee71e15b93d121ab4115219e73a518d64650a8bf557f8ec0074f13d746ac47"
     sha256 cellar: :any,                 arm64_big_sur:  "d917e5fdf5c7d440fd91b82b258f675d47dfdd98f6dbf1666297063c97847da3"
+    sha256 cellar: :any,                 ventura:        "9a4320bc23a07517bf829a7943e10fe5c1eb38719ce7b396760fe130c9b7fa8a"
     sha256 cellar: :any,                 monterey:       "6df2084f25065baf411c8d8308e2e8794ec64710dc12892d86ecd03d7e2221dd"
     sha256 cellar: :any,                 big_sur:        "21964e04b91b8246c5910fdedd6f038417f04b9d86c2c2fb79f6a06e00871f07"
     sha256 cellar: :any,                 catalina:       "c9691b20bccb579326f24add8b6b4c377d4f7bdf2e656a7de44b8811f486c0ca"

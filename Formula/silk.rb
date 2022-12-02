@@ -13,6 +13,7 @@ class Silk < Formula
     sha256 arm64_ventura:  "d9ee4215944603be82971a85a4ba5823459cde29ec59fd2de00b84687c859512"
     sha256 arm64_monterey: "1dbc420aa255de275e130e8badfd42fe90fa1e8a3a0e20c6c2f657810b1f632b"
     sha256 arm64_big_sur:  "c1ccffa9868d0dda8d58ca4f967a377edc87d92fa7290c142fe1f1864891b2e8"
+    sha256 ventura:        "ea2b9d55f3939a2c18084f7f0c08ada6ba3c0fe9f929443315c9f9534c8bd087"
     sha256 monterey:       "ecfdbcdc417073b477294debeaab6c64d4357e3424c19571b8ae8bc8074936d3"
     sha256 big_sur:        "a497049c441a67e363c76207398d5c26384ab6ecbd4b7e0cd850e08ba06e05e8"
     sha256 catalina:       "c6e3891773f58ee6259c73662aa37e7158c1e50aa1e172a5e11eae85104f62a2"

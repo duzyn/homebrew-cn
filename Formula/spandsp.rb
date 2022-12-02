@@ -9,6 +9,7 @@ class Spandsp < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d4a163f05a94cdabd07ce9dfbdeb0e78eb7a40891a2f58bb7c676d36c81020a3"
     sha256 cellar: :any,                 arm64_monterey: "68c43cb9a49a874a31020e96acf041e7a81c83abebebd03f81e4b24e2f462c7b"
     sha256 cellar: :any,                 arm64_big_sur:  "16f6c6a36a3c1cc4f322f1ecff38a6784e1aacc83c05c23dc0a15a74dc31fb5c"
+    sha256 cellar: :any,                 ventura:        "487198f59730bb22c25c250fcac5c677726d5039011848138ed3cce168f108db"
     sha256 cellar: :any,                 monterey:       "11a2c48bd52753bb1f907fafb5d1defda7509eec0df434fc15e3b7dd5929d839"
     sha256 cellar: :any,                 big_sur:        "e07fb092214a411f46e4f3a7b1203f9265c247d533d89b8e48cc69315c1fd0ca"
     sha256 cellar: :any,                 catalina:       "a473944f4d1a3896e9b630aaff267d43d5681071e8bdede3a9ef34ab0bd6ed0b"

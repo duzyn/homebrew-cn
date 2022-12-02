@@ -9,6 +9,7 @@ class Tgui < Formula
     sha256 cellar: :any,                 arm64_ventura:  "58265fe49f8d2e4aeb31469b53775f020c2d335ccb0499ac423a612b57312328"
     sha256 cellar: :any,                 arm64_monterey: "b9df36b637acb021e6a48820d3bfc8fd8921ce2bc6e1098cbfe0020481bafdb3"
     sha256 cellar: :any,                 arm64_big_sur:  "fc9b9d68d0eb79c88f04a936c4e2bb28c76ecf70aeadb8eb4d0397f15bf03337"
+    sha256 cellar: :any,                 ventura:        "b3563f9ab78cf4b330bc0e3a2c9b3484c9acdcceb44b18864a91325f90e8e4e2"
     sha256 cellar: :any,                 monterey:       "ae814b6976689b902356e4aad9ded09431ca45ba37ab33283a4c2156591e61d9"
     sha256 cellar: :any,                 big_sur:        "4295dbcf07ac7e2b2c3253823ea1743252db212ee81f5feddbf8ff1c14183ff1"
     sha256 cellar: :any,                 catalina:       "bf8e0820e7909e78a7c758ba3fc745dd2b3dd1e226451a855d90b642fdf26b5a"

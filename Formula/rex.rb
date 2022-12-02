@@ -9,6 +9,7 @@ class Rex < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "25e720f0a28f7762f424632605c417c2ee3ce1496cd1520c5a2c08e8877d4e4a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "25e720f0a28f7762f424632605c417c2ee3ce1496cd1520c5a2c08e8877d4e4a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7fb823e7d2b461e687f36b22be742da1c5b903b84cab11acde9a7fc44223737a"
+    sha256 cellar: :any_skip_relocation, ventura:        "a4640015236f2c3122de44650aca33bf0b249ee81fc1513a56390484bc217aec"
     sha256 cellar: :any_skip_relocation, monterey:       "a4640015236f2c3122de44650aca33bf0b249ee81fc1513a56390484bc217aec"
     sha256 cellar: :any_skip_relocation, big_sur:        "9ddcc81e4c5325a81de3822367fb083b1e51b3b60342c497653fb7b7e4e791ab"
     sha256 cellar: :any_skip_relocation, catalina:       "1e4b314b9f79b0ad955002062950d086c13436330dfc3575ee33ca53dfa5dfdf"

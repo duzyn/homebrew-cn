@@ -21,6 +21,7 @@ class Qscintilla2 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d4337a5f500a99e0bc88d83bc0be51a85913a7b60f4249a632ddbcd001a4c7f4"
     sha256 cellar: :any,                 arm64_monterey: "d4337a5f500a99e0bc88d83bc0be51a85913a7b60f4249a632ddbcd001a4c7f4"
     sha256 cellar: :any,                 arm64_big_sur:  "341f42c780929057356e40120c929562446f9f504fdd12a92ea0ff1e1472c5b5"
+    sha256 cellar: :any,                 ventura:        "c00a1377269db9bb302847b99b785edffd453d3f2bf36a2a26db0e629488d697"
     sha256 cellar: :any,                 monterey:       "e5f3be88e13c7fad078dc39c0fdb2871104002da39dbed1a63a9f9aed23fc393"
     sha256 cellar: :any,                 big_sur:        "935c0cbc9e462facb84f406f5959c09bb514c129bb11d96eaadbbc9aa4786c63"
     sha256 cellar: :any,                 catalina:       "86e6861479dc4340b36311b63f4b2356411de921abf9b412a1b7a5f0c47c7b52"
