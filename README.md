@@ -16,7 +16,7 @@
 
 ## 安装应用
 
-    brew install duzyn/cn/APPNAME
+    brew install duzyn/homebrew-cn/APPNAME
 
 ## 卸载 Homebrew
 
@@ -25,3 +25,7 @@
 或使用 jsdelivr CDN 的地址
 
     /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/uninstall.sh)"
+
+## 类似项目
+
+[scoop-cn](https://github.com/duzyn/scoop-cn)
