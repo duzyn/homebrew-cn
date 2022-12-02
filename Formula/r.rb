@@ -11,12 +11,14 @@ class R < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "32060cdba120854319cb7579cafae3b523fba583076c2ef40648a42cedf79972"
-    sha256 arm64_big_sur:  "7b5fe92459406db1b0dd7fdb53313eb96c8871f83531b70d9b88494306757ae3"
-    sha256 monterey:       "c726e4e3b7715280ad8d96bbf9ad00f3d56a4c0e39243a51d8e208a5ed6800d6"
-    sha256 big_sur:        "1f8f337835f21d680b6dc6a9e53688b9f23f0ed07bf94be0804529d070fff596"
-    sha256 catalina:       "f29d499dff7863d78c246cb1f97250fb39b6d0b03f387cdcff56e7fbebbdb5e8"
-    sha256 x86_64_linux:   "fc34d5eb2983c399e195a2aff8988d32a0141ccb298afa7a8c91d82ce711fbe7"
+    rebuild 1
+    sha256 arm64_ventura:  "152cd202b51db3b90eba88f21f92691c319e202fb01abe08a62d3de76b4968a2"
+    sha256 arm64_monterey: "cc3f05d038756ce34b3c2c32652fca65f19ccff0f2f75162ee3ce30208960580"
+    sha256 arm64_big_sur:  "4e27877ca60b5dd929ee36c09d00b75d07265771b18fc9a964ade43bab7d3724"
+    sha256 ventura:        "3f7812d59a4e9e1768e3422dd880ae60be33d3e53e156b593b8e0b07e61d8769"
+    sha256 monterey:       "758f1bdd261f521802a75981298e2c2fa322fbfa45114ab5fcd0a59ad0a623a1"
+    sha256 big_sur:        "fa0f1d125a7f669abbc42cbfd543a09d597e32fbd6ef53f2fb60ebe5703b4d1e"
+    sha256 x86_64_linux:   "c45b510ba60002efcd9b22fbdb5eb5f51fe81b68d76dbb52f6a5c210218b0d38"
   end
 
   depends_on "pkg-config" => :build
@@ -49,6 +51,15 @@ class R < Formula
   fails_with :gcc do
     version "11"
     cause "Unknown. FIXME."
+  end
+
+  # Patch to fix build on macOS Ventura, remove in next release
+  # https://bugs.r-project.org/show_bug.cgi?id=18426
+  patch do
+    on_ventura :or_newer do
+      url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/d647f4e1d61c8dba5f15edf7a0fc567f681641fb/r/ventura.diff"
+      sha256 "0b3c230432ef6a9231eaf48f39fd22155d3e1c7cd4f2a497e96ff4bdc7d91b84"
+    end
   end
 
   def install

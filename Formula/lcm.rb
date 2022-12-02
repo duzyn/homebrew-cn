@@ -23,6 +23,7 @@ class Lcm < Formula
     sha256 cellar: :any,                 arm64_ventura:  "386e950921eba82b38394b42e31fccaa778922b1d069d9f79ccec9574d721fca"
     sha256 cellar: :any,                 arm64_monterey: "43909fa2e1f9a714d4c8dd89776aa3781860242caeb4ffa8fecea7fa483401a6"
     sha256 cellar: :any,                 arm64_big_sur:  "edb01154939c091081d063b46ee1d1c0c66f2df50faf15902ec5cada1a5ef0b8"
+    sha256 cellar: :any,                 ventura:        "90ba9fcf114b80033bf82eb6db842667a6f6e2a6bd63ba4767ba62249469ddd3"
     sha256 cellar: :any,                 monterey:       "1758d440848cb30faea78cd2fe83adb3ebd1cd4397fda48ab69484ad4c2d0d40"
     sha256 cellar: :any,                 big_sur:        "253ad14044e332543f5857fb1ff33e81812fa01a539c204fa0189796a2ce60df"
     sha256 cellar: :any,                 catalina:       "1968fc2e98dbb67e409caaf101bb1e13662f15748d6b887c274d68d4a08265cf"

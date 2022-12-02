@@ -14,6 +14,7 @@ class Imageworsener < Formula
     sha256 cellar: :any,                 arm64_ventura:  "14a343a159b3410196cc3ed40b0e674b4bed5f8ee7b2760b49b1317e1a09811a"
     sha256 cellar: :any,                 arm64_monterey: "0d8c2dab98fa032f871df63f93ae33d4d1a989fe7c97f185d976d976f243134a"
     sha256 cellar: :any,                 arm64_big_sur:  "50063cbefef7614047703983639adaee5836d68c02f673aed62c38fea1c4418d"
+    sha256 cellar: :any,                 ventura:        "d360400241b1bf7a2199e04034e96da619f19c0473c17bf7637555fdaab73421"
     sha256 cellar: :any,                 monterey:       "443be530e6d93e197026cf8ec457817446c38c94d84b39a3ca76e7a2282225ae"
     sha256 cellar: :any,                 big_sur:        "7ce254b5dfb0dcd52e39b682cfd21ea665601cd14e9a2a5ab0c923e185ad5261"
     sha256 cellar: :any,                 catalina:       "7301d5557860b7402e3d624c77a208c1e3eb1ed69479d6d3d3f1158a3e3ea079"

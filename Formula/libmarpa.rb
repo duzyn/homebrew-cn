@@ -11,6 +11,7 @@ class Libmarpa < Formula
     sha256 cellar: :any,                 arm64_ventura:  "9bc5bbe1c61e54086b834a72bcc4998db8ed1e284a104346dfb2414044d27548"
     sha256 cellar: :any,                 arm64_monterey: "a2a018c3e68558b814af011edfd63e2e436b004ec922f421238069000df676fa"
     sha256 cellar: :any,                 arm64_big_sur:  "a76c00de9a82a60bdd16866d768707b067a234bb02ba3fc697b96bcf4565c186"
+    sha256 cellar: :any,                 ventura:        "6079b355d79394d0fbb02c938a76332f588dd0ccbc7afcafe41823d7988a4042"
     sha256 cellar: :any,                 monterey:       "7689fe94c88bfbad0797889ab2294d3537768135812bbf4babe9292edbd01a6e"
     sha256 cellar: :any,                 big_sur:        "850e548bbacd37de6bc739fc25feab2c2794715bf6d786cb0e8e54c107c5aa4f"
     sha256 cellar: :any,                 catalina:       "78eb4ac45c29dfc3237290d802f2f2cc29c0e17df238877ed2bcdb27f8b9d43e"

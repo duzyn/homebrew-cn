@@ -9,6 +9,7 @@ class Inadyn < Formula
     sha256 arm64_ventura:  "6b8253cd3c5d08cb1fae5aa4aa7bbc615ed9783cc48782b979fb951eb4b8b751"
     sha256 arm64_monterey: "086a2de0488d7686306eca87b9d12343cba8be9ccf98368cb1c027444bab06ee"
     sha256 arm64_big_sur:  "d6e580a78016e72d57f7c8ae6da22b32f95c06147d5242d05c976f6783f5da45"
+    sha256 ventura:        "16719ab1899b624cf9e9707d64e3e1a0e3ad67b30ed762649abf33efedd07f14"
     sha256 monterey:       "be2051f96804540b7bfa6c4d8c83922331ec2348d290e817d1fe7ac268d534d5"
     sha256 big_sur:        "1b37f802a5b200470c67b63f0634cffdec331216cf294bebfb77714f353c8c0b"
     sha256 catalina:       "98bb14ca5540b81c0f6a9a7565ac1bbb974b3d26f2ed9d9b5abb366c9e4177ec"

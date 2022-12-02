@@ -13,6 +13,7 @@ class Fortls < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d343091984013ed0eb45865981423c44f0c01e794d415cba0910bb9ac4241d83"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "174b1f4e2cd7d06a56dd4c8883d136a420ce74d57310c07f7e5aa2f095f68f71"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2cb162dde0328f45c09e9d0e184d6796183551df29380a8fde13cc97ed1309c5"
+    sha256 cellar: :any_skip_relocation, ventura:        "4e6939a128ef37a6426147a959f339373998e400a50f8d4b2f7056b71ea25f26"
     sha256 cellar: :any_skip_relocation, monterey:       "4f88081d545cecc1965e05ec0691192b878461e30225cdcc24e0025b0fcd5941"
     sha256 cellar: :any_skip_relocation, big_sur:        "305bc04b30d95ef280fc34d1fea38f032e54a19a126d016da69835a35877ee8e"
     sha256 cellar: :any_skip_relocation, catalina:       "853915ba370ec51c3c2ed3aa8253f31691a9a4674e3708f4c22084b2b4420994"

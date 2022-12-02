@@ -11,6 +11,7 @@ class Frotz < Formula
     sha256 arm64_ventura:  "a6133279bf928b9cb514abbdc8e755b0cb266d0ee95652541813b929f29b5c70"
     sha256 arm64_monterey: "a0c7658d7b137bea28fdb1b1f577d91c103158c31d30082f8bfbb352c6d72edb"
     sha256 arm64_big_sur:  "81e96f649f4c6b2f2d530effe32d1d5ab48a39c9aa47891b715062f1b768c565"
+    sha256 ventura:        "50665ccb39d076a2b704345e8fbbaacaabb53f6433109bc50c8d04bbf721ac51"
     sha256 monterey:       "0af910a56a445405c751aafb5c63df26b0ff4d65e254dd34f832bac4d16ccbe5"
     sha256 big_sur:        "50c1afd7e1de0f785f7a6a6b0587f5a1a6be7738131c9506d848e81a59d7cc72"
     sha256 catalina:       "300f82c7b6bf644a6883519eadc1e71d2463f5a8490fdf3b5f5ca3f4202d7e1e"

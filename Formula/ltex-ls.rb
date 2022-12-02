@@ -10,6 +10,7 @@ class LtexLs < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a1ec9dbf1312f4bdf843d5b58e68ffbf91f9ebd3b81b02df7e20aa22af5c12ce"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d82d420e9b4eef10741a489adc2b2bee0110bce30b97a9de047c8550f06c7ddf"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8107834513e60324f8310d4e2013659e7e7121d322574236ea9d54de124fbc7b"
+    sha256 cellar: :any_skip_relocation, ventura:        "999cd09dbafd332e7e4a4f5e205630ebc1b6129485db9949caeeb59acea10127"
     sha256 cellar: :any_skip_relocation, monterey:       "1a54a40b5905826e25ea25dbf3762a8f0230dcedd63872d0fdb3f512c41ae60f"
     sha256 cellar: :any_skip_relocation, big_sur:        "2ec73bb6429df9a4afccef19dda5a19462481a09a0eb99ddd6b876fdc262626a"
     sha256 cellar: :any_skip_relocation, catalina:       "28ab3330d21ac7e92cb20debadf017c84a09469e7b96d145e64d4c5553cd908a"

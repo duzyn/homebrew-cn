@@ -12,6 +12,7 @@ class Lc0 < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "416bf92837918753bc9529afdeb5555c938c3850ce9f79bfe9ca12dbfcdc3e44"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1f70c06601952298038fac27e1f00c6845a7e336cca8da9076dafe8b837d7564"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "18f719db679ef2edec0db9c9be8c6ac45ebd7fbfefb2e4adfe522a3c298d8a92"
+    sha256 cellar: :any_skip_relocation, ventura:        "76666a43175dc8dbe40e8ce5c3937a5b02aebe0cf25079704ba0af7af3af0a1d"
     sha256 cellar: :any_skip_relocation, monterey:       "be1f92357b0668c1d42750b4c7bfd36d1edd9e17e2a8df0e4042dab94b080f33"
     sha256 cellar: :any_skip_relocation, big_sur:        "855b625c35f7d2a2ac011fd23f1aa221cf0850e648ffb356435e018da9f9b5fa"
     sha256 cellar: :any_skip_relocation, catalina:       "e4191dceb99061e6e995db5d328214ee19eaf7e832ad6a2f5403d0007f397989"

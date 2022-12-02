@@ -6,6 +6,7 @@ class Chezscheme < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256                               ventura:      "88a5884b10c70dc190bca0ebd209f9b47e361e0168366c12375953ec112b10eb"
     sha256                               monterey:     "543881937eaf579ac51632831a010c6a95c1e8cf0757d3e55b7dd882e0899a16"
     sha256                               big_sur:      "dd2412bb1590f7d03c8bbc9a668daefb1eb847c76862f1e57c3b8c44441f5e74"
     sha256                               catalina:     "93730ca19f3472845b787b7d7e14de4f805c92b08da845a30f55e668dd54338f"

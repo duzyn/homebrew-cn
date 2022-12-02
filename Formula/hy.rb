@@ -11,6 +11,7 @@ class Hy < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b7df14b72e77baf89aa3deb363b57e23f37dafa5dcbf2ff5fba5a8b9c9858ff"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e15ed91dc5c45758d18a02bf06cc2765714ae2f54cfb683a1c9d5fc3e36fe086"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d5f9f99c934ff6947f9037b65ebc32579005c265fb3be5c976087e5bcafa4531"
+    sha256 cellar: :any_skip_relocation, ventura:        "3764ebace3731a2d1166cc6718a69760dfe09eb725894bc0a49fe1eea1cbd2b5"
     sha256 cellar: :any_skip_relocation, monterey:       "deda1c0fbdac60c70a30b9dada539dd8b92c2daf0a05e2fd9c24e255bab2115e"
     sha256 cellar: :any_skip_relocation, big_sur:        "b96dd8de1b784c10c4c3545f9890fb44bbf5fab5f1843abae67cd5ad0210e91c"
     sha256 cellar: :any_skip_relocation, catalina:       "0f0b54ba6b6e93b0b884c22148f8c269d9bfdf1707817b7f5558cc2988581386"

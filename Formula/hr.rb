@@ -1,13 +1,13 @@
 class Hr < Formula
   desc "<hr />, for your terminal window"
   homepage "https://github.com/LuRsT/hr"
-  url "https://github.com/LuRsT/hr/archive/1.3.tar.gz"
-  sha256 "258ff3121369d17c5c70fa18e466ac01cdb4cf890c605f7a5e706d5b1a3afebf"
+  url "https://github.com/LuRsT/hr/archive/1.4.tar.gz"
+  sha256 "decaf6e09473cb5792ba606f761786d8dce3587a820c8937a74b38b1bf5d80fb"
   license "MIT"
   head "https://github.com/LuRsT/hr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "01e0e362b30cb5eb92751375426626c3eb8d6bfd05aa61d3cbba188a12bd1b92"
+    sha256 cellar: :any_skip_relocation, all: "7d71a3a75027a3bc096f492ed779d0603542382f936572d91cd3f1c194abe48b"
   end
 
   def install

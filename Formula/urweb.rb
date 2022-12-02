@@ -11,6 +11,7 @@ class Urweb < Formula
     sha256 arm64_ventura:  "d0f58536193daaf1e310003f073a9979a526de2cedbd7eeca59fe13b07d5d79a"
     sha256 arm64_monterey: "bf59d45c3f80fa791e85e2da484773d0e571839076bb9314c57af39b7722cb71"
     sha256 arm64_big_sur:  "0759a24040fc7112cf1eb8512371e954c1b5b4f84d8a19fb14a938aef021533b"
+    sha256 ventura:        "46545553b3393de56c4fa3350acf96f972c694078aa156c9a919d9641374398d"
     sha256 monterey:       "b91f8faa12123ec1c8b75f431e2a7cd0d172a9fb56bcdd384d8e34d35112c042"
     sha256 big_sur:        "ec570b4ddd402fd2a2a2cbd9e9be87d1d07e6f888724eb52c4a8d68f93dd9bf4"
     sha256 catalina:       "2215d28b890d29d68f2d90bf371f606fcf7b07de606b1adcb06ffb73360d3558"

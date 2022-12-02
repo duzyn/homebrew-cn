@@ -11,6 +11,7 @@ class Innotop < Formula
     sha256 cellar: :any,                 arm64_ventura:  "514880fb1328de2d2aa76e929e5059c014aeee67b1355a35c04c85897d5feb38"
     sha256 cellar: :any,                 arm64_monterey: "750258fa6cdba7d0c1f5b1c63c6f7147b71fd0c011143ac4aaf0e79de9a3db81"
     sha256 cellar: :any,                 arm64_big_sur:  "3afc923395e6a125d9935d135b94b733512645155cd25f366a70b1f7e542b430"
+    sha256 cellar: :any,                 ventura:        "5580dfd4ea884c197b54a07a7f8c3a80b10d5864e8c1950c71cf0e84e88c8e19"
     sha256 cellar: :any,                 monterey:       "cca41045f9fd17f918ddd019e901ccdf7378af84432569678de80a2f20a78a6c"
     sha256 cellar: :any,                 big_sur:        "80dd83b847117c4134cfe92cbea270feab5d982cacf02589bdbe968c358d6998"
     sha256 cellar: :any,                 catalina:       "37d9c2e484c05d25308a5868af10f09d8dc7641ca88b8fa68ca2d3372f1c1545"

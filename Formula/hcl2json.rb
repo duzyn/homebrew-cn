@@ -10,6 +10,7 @@ class Hcl2json < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "186b5621f9249b485a7135bf7f52bc5e098f41e6a5fcd70dcbf89fbdc2fb8dff"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d68c637a7bd7529302404463f22c8088cf949af69b3afc43b7dfc593f0ff3834"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d68c637a7bd7529302404463f22c8088cf949af69b3afc43b7dfc593f0ff3834"
+    sha256 cellar: :any_skip_relocation, ventura:        "214f4dedc5cdbed590e4e0ebf413f8749ba324782b764b2ee58921f8ddbbfe89"
     sha256 cellar: :any_skip_relocation, monterey:       "0e7ae11f9d3a4af09e555d6a1b686a20171dc58440fee969a7d36987a7cc4ed9"
     sha256 cellar: :any_skip_relocation, big_sur:        "0e7ae11f9d3a4af09e555d6a1b686a20171dc58440fee969a7d36987a7cc4ed9"
     sha256 cellar: :any_skip_relocation, catalina:       "0e7ae11f9d3a4af09e555d6a1b686a20171dc58440fee969a7d36987a7cc4ed9"

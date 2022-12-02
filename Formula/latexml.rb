@@ -16,6 +16,7 @@ class Latexml < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ca5af78778b383947ac379e2f41931387b7b7e01a76776aad22926dfbad0bc30"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "c18a277513d01a2a903c86d5e8c99e4f9bb26563ca696e9086ae6a834b729b3f"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a45c1a8f68fd88726744dc56fdd2bc89f411c55e5aa892f51f4b5d62fbc0a5d7"
+    sha256 cellar: :any_skip_relocation, ventura:        "85d733423822d6b5294a2f47b9f654f1b19a57e151b754fe3558b3c961a31d42"
     sha256 cellar: :any_skip_relocation, monterey:       "04221a1d72fffe628383015984e4fe6e7e455eb2673f22cf66c3a501160348dc"
     sha256 cellar: :any_skip_relocation, big_sur:        "bdae0f514242de4202dccba2042ed4a548263d87e0173c0c8daf59306d707700"
     sha256 cellar: :any_skip_relocation, catalina:       "17f6d6b13a7b8002900e902409116bb8c119d405666678455ac70061ab2217de"

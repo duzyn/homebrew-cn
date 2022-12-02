@@ -1,21 +1,18 @@
 class Gxml < Formula
   desc "GObject-based XML DOM API"
   homepage "https://wiki.gnome.org/GXml"
-  url "https://download.gnome.org/sources/gxml/0.20/gxml-0.20.0.tar.xz"
-  sha256 "0a0fc4f305ba9ea2f1f76aadfd660fd50febdc7a5e151f9559c81b2bd362d87b"
+  url "https://gitlab.gnome.org/GNOME/gxml/-/archive/0.20.3/gxml-0.20.3.tar.bz2"
+  sha256 "22d8ed0f9f6bc895c94c74bfcd6f89f64aa96415c19e1b648277df70b4ed20f7"
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "77b5367f913c707314c8f0e73651959c905fda763ced192c7b93de1b69de44a7"
-    sha256 arm64_monterey: "7fe768a5398f9cb19eb57263e3b9b57716b48a149b175ff9b970eb1e898fbacd"
-    sha256 arm64_big_sur:  "33e373491cc352e2b11da05fc36b7c9e66451efcbee7b10c06b8454bda72b92c"
-    sha256 ventura:        "db5bde4b60fb33beb7094c4dee7a6ba3996c709895e45e0b248bcda5f99b252b"
-    sha256 monterey:       "79846b0652593f371cdc95ad36d037c58b51db809b5a0bb6baff00afee0a0c12"
-    sha256 big_sur:        "93014bd6358485893840d5e1fcb66bbb2b9528c342d5d38e08525ffd6c8dfd4c"
-    sha256 catalina:       "7ac6b48935cda53013a788e02cb0169fd609589beac7b1af2ad6b3b64e3045a2"
-    sha256 mojave:         "656bfa0f89deba237c40af306b141291c548befeadd268d7aaca198db78afe91"
-    sha256 high_sierra:    "c206e3ea69e32dce78804db3d9e0ab2d10a441a4677614324fd46e1e53bdb5e7"
-    sha256 x86_64_linux:   "e0fc25edebbe9a8fe4ac0ef484870d6f3481ff6d467314b793a933b66b32bcab"
+    sha256 arm64_ventura:  "8656553f20776f1cbfeac041d7a7aa21c88bf9237d49162cb76f3613dd023e25"
+    sha256 arm64_monterey: "004caf23ceb17a3c71ffb2b85879ef3d6bf85cb207d517f70c17edc5ba8821aa"
+    sha256 arm64_big_sur:  "4980c9844514c1ff646da64e64b728c0fddd14ce2a1c8262fc00a59429b10a37"
+    sha256 ventura:        "53d420b85af3e0e77aa517f66f731e1ff8f4c3f32cebc8acdff3ebf15e4ae97d"
+    sha256 monterey:       "1d892844ac448f58ecb5ef283a66de0d79112686a19963351c2136b28b483821"
+    sha256 big_sur:        "3a83e6b4ed0bfc8a4a869b13c9dc3573ab168ce39c9d625074c27d80615b7716"
+    sha256 x86_64_linux:   "59390a8cce6b9d523c93f9b4ceca1ab1bca8f8d83c35fd6f4d015319d5a9b055"
   end
 
   depends_on "gobject-introspection" => :build
@@ -28,11 +25,9 @@ class Gxml < Formula
   depends_on "libxml2"
 
   def install
-    mkdir "build" do
-      system "meson", *std_meson_args, "-Dintrospection=true", "-Ddocs=false", ".."
-      system "ninja", "-v"
-      system "ninja", "install", "-v"
-    end
+    system "meson", "setup", "build", *std_meson_args, "-Dintrospection=true", "-Ddocs=false"
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do

@@ -11,6 +11,7 @@ class LeappCli < Formula
     sha256                               arm64_ventura:  "8589ddf349046392b61224a86ffafb2d42cf4ee200eceaabb690f0e218e0ddcb"
     sha256                               arm64_monterey: "1c6f16311d8d8c00e9f88c8d820f552c74b75635e841023f8a75c5a762c95c48"
     sha256                               arm64_big_sur:  "cb94ba081e1de43c04f6d3c33ee187914de411ea2b18910ffc1219b7e609e9a0"
+    sha256                               ventura:        "b76da685f8258cc8f75486c4ea9d1d513e53a858b9268fd5794d340aa44f9227"
     sha256                               monterey:       "a4e8dc912bc1f20454c77d24d115a677ce8cbd35efb0edeb4239f08adb1c7577"
     sha256                               big_sur:        "ac0d9c98fa704b9107daae532b64526f9c6b53cde9f68e0261d47597c43cb7a9"
     sha256                               catalina:       "c601155bb75bf8d5f965e1f54dc764d64a0163516fd3985086696353cd83c822"

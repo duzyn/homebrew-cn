@@ -12,6 +12,7 @@ class Jello < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "8702c22dc4ba1bcfeaf7e0245a362bd904fc0ad86c57b95b19db36aa6e1a3330"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8702c22dc4ba1bcfeaf7e0245a362bd904fc0ad86c57b95b19db36aa6e1a3330"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8702c22dc4ba1bcfeaf7e0245a362bd904fc0ad86c57b95b19db36aa6e1a3330"
+    sha256 cellar: :any_skip_relocation, ventura:        "c6668ca389b6cd2c039515c27eee0f2e82b955d07634beba460b86062a634112"
     sha256 cellar: :any_skip_relocation, monterey:       "c6668ca389b6cd2c039515c27eee0f2e82b955d07634beba460b86062a634112"
     sha256 cellar: :any_skip_relocation, big_sur:        "c6668ca389b6cd2c039515c27eee0f2e82b955d07634beba460b86062a634112"
     sha256 cellar: :any_skip_relocation, catalina:       "c6668ca389b6cd2c039515c27eee0f2e82b955d07634beba460b86062a634112"

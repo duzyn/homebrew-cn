@@ -4,16 +4,17 @@ class Watchman < Formula
   url "https://github.com/facebook/watchman/archive/v2022.11.28.00.tar.gz"
   sha256 "bce42b77d60ca01dbadd4ae38a569216ca398b11001c5d1cf950481425317a87"
   license "MIT"
+  revision 1
   head "https://github.com/facebook/watchman.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6de2df92a66d7e5fe9d1a416bd27f7d5adcc2fc814580a92b93cbe4b0607e029"
-    sha256 cellar: :any,                 arm64_monterey: "1c7e1b12ad131fa38e69c53cc59a94fda8ea9160626465ad6436c78d1fe6723f"
-    sha256 cellar: :any,                 arm64_big_sur:  "6db675b1b30375b2571b4d0a2eab4edc1ddd8f16ba67ac64b5202e7befdf1406"
-    sha256 cellar: :any,                 monterey:       "28d1f19ee299eadadc15c805fece0a7838da02c92ad6b6f3505d9df82d81ce0a"
-    sha256 cellar: :any,                 big_sur:        "f84753c40302990567b9d450ff440a0050602cd0563de4b4fe4a233ccdff697c"
-    sha256 cellar: :any,                 catalina:       "bffb34718f3eafa805fc9c72a3cffa1d7845720e016ec0b58e99076138719bf4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7cebe9a04487290fcc46001a4a2c1aba18dfb0c6af07aaa21a857ee41ff161a0"
+    sha256 cellar: :any,                 arm64_ventura:  "45bf249ee303997d708164392b2e151b3f0b180b131c20e7b226d49557d50c44"
+    sha256 cellar: :any,                 arm64_monterey: "382dcb737f38315b50cf53743533dfc881027e255d710e26cbe967f598077ca1"
+    sha256 cellar: :any,                 arm64_big_sur:  "9a2f5678c080275a6a1848fdf92a922c1e4f554a04e93164b47f9adc8fed556e"
+    sha256 cellar: :any,                 ventura:        "f2cfdee47bb5c2fb44a9f4eddda8951cf6b369293ecbdd5da303dedf46f9d0b1"
+    sha256 cellar: :any,                 monterey:       "17e31ce618d19f05deacff2c2bb7935d5fb0b8aaec191093ffcd65c9646e2069"
+    sha256 cellar: :any,                 big_sur:        "fa682de748d2fad6cd224afb6280987eda9be084fbd06e869bc781007acc5be0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d3fee68c42b0acb1bde7f2f9de1ba6ca7d59ee5cca110937a9f8b7c01e5c8aee"
   end
 
   # https://github.com/facebook/watchman/issues/963
@@ -34,7 +35,7 @@ class Watchman < Formula
   depends_on "libevent"
   depends_on "openssl@1.1"
   depends_on "pcre2"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   fails_with gcc: "5"
 

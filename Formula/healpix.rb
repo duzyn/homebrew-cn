@@ -10,6 +10,7 @@ class Healpix < Formula
     sha256 cellar: :any,                 arm64_ventura:  "3e9e1fccdb358503b5a6574c55fe4e9b6443f5e546fc71d800706577d88eacb8"
     sha256 cellar: :any,                 arm64_monterey: "cadea8f03edf6b0be477bad212d7d9430acfdd1dda5f323bb2b31ce5ad846455"
     sha256 cellar: :any,                 arm64_big_sur:  "03d1980b6da3acaa9b2dafad82a978b0d30a747ad6856bc9225551ab21c6fac7"
+    sha256 cellar: :any,                 ventura:        "c1b1b833e4cfc6fe08ec0c426a307419ee5a0a18d6e2de4ad1acf6db6753e242"
     sha256 cellar: :any,                 monterey:       "5d38090ecd6924a73ba6c384198f14605335eeb752abbedf5783bd06e6fc8a27"
     sha256 cellar: :any,                 big_sur:        "153d21ddb88d85138eb6c2d5e839ca892e40af84fdf8c9871bbf7937c34191b2"
     sha256 cellar: :any,                 catalina:       "bab37de0e96ff73ec0866c512fb91d67603770249f51897a4e2535b5f37ae7b1"

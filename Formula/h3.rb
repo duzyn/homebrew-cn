@@ -9,6 +9,7 @@ class H3 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "ec85ae9d86486087437458bdc96754b4ce767932e288066c6d20744a64df46ce"
     sha256 cellar: :any,                 arm64_monterey: "31e999231a6b8b4fb6eeb008879da217ccf913de62f59faa3fc1c9a190760e06"
     sha256 cellar: :any,                 arm64_big_sur:  "3ed053460c2aa93b1af04ba78ac4e3dda4d21f2052075f33b91c9a38c6fc66e5"
+    sha256 cellar: :any,                 ventura:        "2b27ea0080b9b09055570f1579a750155bc67ee95b6c803e27dcd42a9898028c"
     sha256 cellar: :any,                 monterey:       "e1d529c7526515ea1a3f027fcad335046b4c6e041e0ce18089105f01ca3cebb4"
     sha256 cellar: :any,                 big_sur:        "11ae4107669832bc45e2c1a104c4d531a5385a5540e4e0b21371f11e07af7401"
     sha256 cellar: :any,                 catalina:       "cf0ee74ec6ee5ddc6248c4c6b7f50d7a63c8fc0df035005245d12829438d6ae4"

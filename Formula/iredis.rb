@@ -13,6 +13,7 @@ class Iredis < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b50ddc33b6ef2fbc534a32680f24473171d575d7d2baa04705a405347762d94"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "59b371854d2f07984f58bceed6578473d1a2e29e3f187f9b15918aa40ebc98e0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "69caee98a2fd8450ce9ff5131a00ff9a9bd0eb95197e325d60589233dea05292"
+    sha256 cellar: :any_skip_relocation, ventura:        "7dfd26065bcff326df9c7516e9612ece4362dc873cb60ca419400bf91a5bf03b"
     sha256 cellar: :any_skip_relocation, monterey:       "540602e1e1b59f53d3f09fb095b63ab9f7e938a8d8c97e8c4541791be5b0c3fd"
     sha256 cellar: :any_skip_relocation, big_sur:        "f488dc95a684fc40623256577d3faf2ed39af413df5b7d9cf91016b6a7e04b96"
     sha256 cellar: :any_skip_relocation, catalina:       "f6f4d1bc7cf5a412607debbc964e926e71e5e34e9d550bddd9942afab3472b8f"

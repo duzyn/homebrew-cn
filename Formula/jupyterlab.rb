@@ -8,20 +8,19 @@ class Jupyterlab < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "6827f0ab5e8c61146d86a0bc09a242d1b728fa30314c5809da77d804038b4a15"
-    sha256 cellar: :any,                 arm64_big_sur:  "a5fdc1782ec8f7155fe25f3c26270d2f5deba94587ffc5fed8c2ef6101d00836"
-    sha256 cellar: :any,                 ventura:        "fa985e64f39a897d0d073033e6372ffff261aced7a90dfc92538b37a6458a7d6"
-    sha256 cellar: :any,                 monterey:       "28fa7e8edea8cb955694576099ebdc2ed49fff00bb19343124f1066a4f82efaf"
-    sha256 cellar: :any,                 big_sur:        "aab5f832787c55a819ae80ab083b5db7781a3ddee7d22a4f13db5a3723475f50"
-    sha256 cellar: :any,                 catalina:       "8759d5dbd883284ea6fa1494e42b6c9c5107df557152253dbb4e55da30235e81"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "265784aa6fe3b33f11143678d2748d9ce5f9ae6452c86720aaab9fb61f3963ab"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_monterey: "c431d4513a62e9e7a39195c22b4f0c0175443240d000a60bc27db72810e813b9"
+    sha256 cellar: :any,                 arm64_big_sur:  "68dc6899b92312b92607ed9286c491008e1fb63ce8f6684d9576849d9afce5bf"
+    sha256 cellar: :any,                 ventura:        "3ca1369092fecfa2759361d750967500bb6bc9c2d28a3384425f3bb9f8d4aa76"
+    sha256 cellar: :any,                 monterey:       "341d1b3c42e3310405981fc79aed64d62efa731e6f27491dd8f5b9eb4e58025f"
+    sha256 cellar: :any,                 big_sur:        "3b0f7c5af61e8a1529d66fd0aa4fff74911c3db3b078032958a4ec37120bbc08"
+    sha256 cellar: :any,                 catalina:       "bc9594564c41553d785ed2904f6f2df998d1de757fcd7e7436e2e88d688a6c48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad28827fde7f094afa93f42dbad48f7f285b4a1905cc93205c0763f139eb8477"
   end
 
   depends_on "hatch" => :build
   depends_on "python-build" => :build
   depends_on "ipython"
-  depends_on "jsonschema"
   depends_on "node"
   depends_on "pandoc"
   depends_on "pygments"
@@ -46,6 +45,11 @@ class Jupyterlab < Formula
   resource "argon2-cffi-bindings" do
     url "https://files.pythonhosted.org/packages/b9/e9/184b8ccce6683b0aa2fbb7ba5683ea4b9c5763f1356347f1312c32e3c66e/argon2-cffi-bindings-21.2.0.tar.gz"
     sha256 "bb89ceffa6c791807d1305ceb77dbfacc5aa499891d2c55661c6459651fc39e3"
+  end
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
   end
 
   resource "Babel" do
@@ -121,6 +125,11 @@ class Jupyterlab < Formula
   resource "json5" do
     url "https://files.pythonhosted.org/packages/47/12/611bf15000c1fc54af909565aed1ad045e5ae1890d8c56cbfe5ceaf52446/json5-0.9.10.tar.gz"
     sha256 "ad9f048c5b5a4c3802524474ce40a622fae789860a86f10cc4f7e5f9cf9b46ab"
+  end
+
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/65/9a/1951e3ed40115622dedc8b28949d636ee1ec69e210a52547a126cd4724e6/jsonschema-4.17.1.tar.gz"
+    sha256 "05b2d22c83640cde0b7e0aa329ca7754fbd98ea66ad8ae24aa61328dfe057fa3"
   end
 
   resource "jupyter-client" do
@@ -228,6 +237,11 @@ class Jupyterlab < Formula
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
+    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
+  end
+
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
@@ -307,7 +321,7 @@ class Jupyterlab < Formula
     ENV["JUPYTER_PATH"] = etc/"jupyter"
 
     site_packages = Language::Python.site_packages(python3)
-    %w[ipython jsonschema].each do |package_name|
+    %w[ipython].each do |package_name|
       package = Formula[package_name].opt_libexec
       (libexec/site_packages/"homebrew-#{package_name}.pth").write package/site_packages
     end

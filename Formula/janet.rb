@@ -10,6 +10,7 @@ class Janet < Formula
     sha256 cellar: :any,                 arm64_ventura:  "c6deaf13e3401ec0b929324224b04e94948c0b219855997652a690a4e1d190bf"
     sha256 cellar: :any,                 arm64_monterey: "da6a5175726641da200ca353bc3b3cb0311161b61f17918177396e3eca1ef30c"
     sha256 cellar: :any,                 arm64_big_sur:  "e74fe5fbaa37a6a3fd1972daea26cf783aff534e249d4f7cdac49aacd3b59f87"
+    sha256 cellar: :any,                 ventura:        "3b9a6cda60e70eac143ade05592ad4e1f24a007a015e9d8afa1dfd5e46ec34e0"
     sha256 cellar: :any,                 monterey:       "5e99427c6720819e26fff4c0e6353348499bdf9f762cae9e033e9dd70b5be197"
     sha256 cellar: :any,                 big_sur:        "469af239c98f99bc0b38a2fbb09e6ccc9c585874f27a329debea283945c24ab8"
     sha256 cellar: :any,                 catalina:       "52801cff99c35dfa418cf4acb6030c8d486bdedcc4bea49a3b98e9fc2ac7aa61"

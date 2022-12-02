@@ -13,6 +13,7 @@ class Ipv6calc < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "d99b4ea93dd68a86651685bc3b587d80aa36a90e9077f3af69f6729245d57a02"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ca999fa659227c7bdca2b63006529c0e8dad64720e607cf94e1835e27c0a78a1"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b545b0a609090f95d5b2d3007808ae8817cad93a78cf7ba89cb6554a0e41e2bc"
+    sha256 cellar: :any_skip_relocation, ventura:        "9c971fcf11c6c96436a799e622b07c960595193f7ae87d430509ba68c9242146"
     sha256 cellar: :any_skip_relocation, monterey:       "b1925cb855c9999f95581d3694cdeb7a545ae704fa8f7d9f96231030ac712bc9"
     sha256 cellar: :any_skip_relocation, big_sur:        "fee579c01e98ca1a5123a3334f214a0d62c046440c9605c7f476b8ddc670c612"
     sha256 cellar: :any_skip_relocation, catalina:       "d83cd743ee2ad297ca525fd3de999f8025b54d404fc8261112c5a0481a69e7cf"

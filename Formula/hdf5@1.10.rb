@@ -11,6 +11,7 @@ class Hdf5AT110 < Formula
     sha256 cellar: :any,                 arm64_ventura:  "befeefbfcff47b7997ee6e7eda2369d5ee20a582eb78c58221c9570ed968c316"
     sha256 cellar: :any,                 arm64_monterey: "490d7bc56417f31bf761bbc3dffd23c3123cf67099048fab728a27dc2a0684f1"
     sha256 cellar: :any,                 arm64_big_sur:  "6ffe3a34dfdefec620aa4ddab9a129e7960a1df5fad0199c5b1842a9b9dee1c8"
+    sha256 cellar: :any,                 ventura:        "2be77115b4bc7fced0a2ecd5f5aea468ae5f70c3a4917971e87339d70d6d9cf5"
     sha256 cellar: :any,                 monterey:       "b634aa30af2ba672e9b240b12b6242ea87a17d1b64943d9434f2344432ebdc86"
     sha256 cellar: :any,                 big_sur:        "00ae5e5407ae574f2a9ae10ccb0d52de9a56650bde53c9328cc2e444a847b3f6"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "79a9c42606ceebd728d1c7d2373f0a117e0f45a3f64db6fc00d4dc57a23d7624"

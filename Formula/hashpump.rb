@@ -16,6 +16,7 @@ class Hashpump < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a382b6faa37c6c30e61262117c1424e8c5741a6eb6b47983c6fcb0514183b8f4"
     sha256 cellar: :any,                 arm64_monterey: "ea7d1f3e10bce4da2575a4f160f9b804112b81bf57a6d067585c84e8695295b0"
     sha256 cellar: :any,                 arm64_big_sur:  "1b2be6981dcbddf90e59a282397d40595a2d700568e9b851dec82332912e1711"
+    sha256 cellar: :any,                 ventura:        "237f29e79a732cdfc95ff6ee9604b404a55b07a9f025f9c35286ee75a6a68ced"
     sha256 cellar: :any,                 monterey:       "c9db19459ea6cc25bc9be7169c3c827f2bf53b8c43152d700393dfedd2dace0e"
     sha256 cellar: :any,                 big_sur:        "4885a0d89a07daa8e5140362c9dddf9071cf2b58ee17735bf840a28f99cee53f"
     sha256 cellar: :any,                 catalina:       "4b1676a599df7800b79a8c3bcd1d7c2685d7ff26343b02c98f930af4988bea71"

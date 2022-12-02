@@ -9,6 +9,7 @@ class JsonrpcGlib < Formula
     sha256 cellar: :any, arm64_ventura:  "9a07d3d66e08e50c022e44e961ca0d3427058d940940d02a75ce7fc0e80e446c"
     sha256 cellar: :any, arm64_monterey: "92133b3379600969851a22f77764ea937b7a2c6ed7abfaace7f5d82a46f2e365"
     sha256 cellar: :any, arm64_big_sur:  "3dba2a5b06bdbc459d6fec65f00dad9f9b2882fa5a67da9a50daa8a9a5332171"
+    sha256 cellar: :any, ventura:        "0af2def8340cdad1583d230f62cec998cba94796ccd1f379d2aac3880a9b8df6"
     sha256 cellar: :any, monterey:       "cd47544117766135f25e5330c9bf0d56714546c22a233d2fc958d3fad2fa1ab6"
     sha256 cellar: :any, big_sur:        "10bac873ad2f887cb49000ba547b74f3a0f415171cfc4b277ad597838ad77ba9"
     sha256 cellar: :any, catalina:       "56077dcb4a1b7160f150d9ce3fe15b7967b4575ba125be59dda49601d55740d8"

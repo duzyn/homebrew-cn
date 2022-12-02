@@ -11,6 +11,7 @@ class JsonFortran < Formula
     sha256 cellar: :any,                 arm64_ventura:  "d936676f2faf35b0341970dfb1061ce0aeb0f0614d86310106074449b784f93e"
     sha256 cellar: :any,                 arm64_monterey: "26b60a9213b96f66f52cb746e525b2d27f4bdcc32c8d5c45573a9bfe520cbe89"
     sha256 cellar: :any,                 arm64_big_sur:  "abb51e49f62492e8d97787aee78794d7cab70ac12bf87dd8b4fbdf800e6a2cfc"
+    sha256 cellar: :any,                 ventura:        "ad02003294f9502cff6da74532bb2f70afe86a8f9c203cd5efbe46026a4176d0"
     sha256 cellar: :any,                 monterey:       "ac9ac273a706c8e39c67a27feb28a56afae3dd1e46102a31db6d9a64723377cc"
     sha256 cellar: :any,                 big_sur:        "9b6d905241a4d21fb09d2e247c9044b0f4cc3e02f616966191f2457503a3c61c"
     sha256 cellar: :any,                 catalina:       "e08acdb01ec8e436afe559000f89b82cb94600e6fabd31c18c0f39239e4e3bb8"

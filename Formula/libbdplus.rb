@@ -15,6 +15,7 @@ class Libbdplus < Formula
     sha256 cellar: :any,                 arm64_ventura:  "f47c8d29158db9c810a1f037d3335ba5cb5b8c8c3769c5435d516f07cef44c73"
     sha256 cellar: :any,                 arm64_monterey: "c5e53b35cf902a1b1bed758850dc351c5fa005f78147a39085e284b02ddded9f"
     sha256 cellar: :any,                 arm64_big_sur:  "f4b3ecf7789e87ae8ebc97cf9a3c00321c79a3cca58d7a6679ea686da6c415e3"
+    sha256 cellar: :any,                 ventura:        "b4b549364f9d64a044ef9e90f7896f1214fef2c8303dfe3bd376af7b95387233"
     sha256 cellar: :any,                 monterey:       "6e72efd19ac6ebf39f3c22240a1e706cd101540a2c2b55c1c83cf4048642339f"
     sha256 cellar: :any,                 big_sur:        "d0e37545cdc9aa4e23e56dfead1e17ed894431e06bcdc06dec76a4ffb32b6deb"
     sha256 cellar: :any,                 catalina:       "f4887dd87e0d8ef822f629b603436db20ce331bf4105c2b3d5d2864ac82c9e3c"

@@ -2,8 +2,8 @@ class Clusterctl < Formula
   desc "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle"
   homepage "https://cluster-api.sigs.k8s.io"
   url "https://github.com/kubernetes-sigs/cluster-api.git",
-      tag:      "v1.2.7",
-      revision: "2d89ee6a3940a9508f463a1c20d8d97092d10ea1"
+      tag:      "v1.3.0",
+      revision: "72aa9d1e68971b5b489aa4dfa4c0687fca0d4f4a"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "main"
 
@@ -18,14 +18,13 @@ class Clusterctl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "20af2c73e7c9c5b2e6afe97db4c997a1aa26fd9e87b31769bdce162591532b32"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f61b5d4b70d3915cfb7a099d1a7ec83b9037fc520c36749447b123c07335ea6f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c35547172310ec21673041835109c3e0dbdfea7d4e89afd5bbcd5d9c9c85ff73"
-    sha256 cellar: :any_skip_relocation, ventura:        "49d102c8c2485399751a2776c5fa23244aebc338baf6569f1fc60daf7c72eeb7"
-    sha256 cellar: :any_skip_relocation, monterey:       "f2b23d2fb7edb803bca90b6693289a50b9ae4f9378f329cce250dc15bc30c8cf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e4d802af5acaeb694fd40dbce0eb127c3a5d847312706b29ba448950010e6ed"
-    sha256 cellar: :any_skip_relocation, catalina:       "4da3450e4bd4047883c1958b58ec050f28cf5783f9859de8d7e4e1245cc05e9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ae2f6b405f56d40c27d192f2147110c4d891533b6f3d22f62b5bf602fa0955b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "08b1b3ac03720d12cc7b742af4ac1f19655d555d9c21581d8a4a84274b22bc10"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a1a4ad63dc24b04dad8ebb9f6cb28e6a36eb1268ca4c815ed6b96fcb9bdebef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1d10fee7359d462be79ba15f1cd85ff488c9a31839850de25bea0701df375f70"
+    sha256 cellar: :any_skip_relocation, ventura:        "f785e18f10429848af0778724a838976cee226a81f9e1be6ab42cf4bfaede05a"
+    sha256 cellar: :any_skip_relocation, monterey:       "af4b577f4552efdb757c90aa959538fb64784315e0731427705e44aca59e3633"
+    sha256 cellar: :any_skip_relocation, big_sur:        "879a96f0cd53502617335e312c4faf7cb669600cd9cfeda34572f18b625672b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f98debbe2b845fc1d1a8bb60abedb649754313a8981b0b54d44f3b6e6325adb"
   end
 
   depends_on "go" => :build

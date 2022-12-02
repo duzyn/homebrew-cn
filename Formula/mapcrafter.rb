@@ -10,6 +10,7 @@ class Mapcrafter < Formula
     sha256 cellar: :any,                 arm64_ventura:  "4fea5d54718fc77b8b7557839d1507ffebf8f4ac9d85c040fb29e16411c55868"
     sha256 cellar: :any,                 arm64_monterey: "44e58878dcca0fafcad78133a2dc333e285f71716de830a264147ce2c42155cc"
     sha256 cellar: :any,                 arm64_big_sur:  "3a6bc0db21092639082f548fdf8a3072750f0273d5efe7968fc7b3c71183623e"
+    sha256 cellar: :any,                 ventura:        "fb44e3ae145f2d840d9688d864340e898ad8442394a74770774407342cdaa86b"
     sha256 cellar: :any,                 monterey:       "58e38265d1e6152ed0ca7d35cb992f878a4cfd9a09b6f72806959a3b51cb8678"
     sha256 cellar: :any,                 big_sur:        "8107c6f213679b2cb451607364773541449b764963707e29084e2562f2acd33c"
     sha256 cellar: :any,                 catalina:       "e1532320d92c4e5797aab789f4d26d11e871f8eb4fdfb3c5dd5b1f5995f3ab4a"

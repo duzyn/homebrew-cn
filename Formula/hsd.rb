@@ -16,6 +16,7 @@ class Hsd < Formula
     sha256                               arm64_ventura:  "84ebc75554473cb29d2d039262f3c9e12bdd4111ebb0876e6e8d6d72a81b639a"
     sha256                               arm64_monterey: "322295b784df6ecc6d4ed5cae4957589fba6f59662a38467cd7a16465161a7c4"
     sha256                               arm64_big_sur:  "92a27b35ba52bcd1aab836d70720cc8e0a343ef2c05a035dd038e95948bf9e88"
+    sha256                               ventura:        "22118bf48f42d6dfa49c09338ab1c4d60de4cf3e1f0a5b47c558f39c3e99d720"
     sha256                               monterey:       "333dda4bf02aed146bf4ae7c1458ac31dcd1ff9bdf0a5f7d25bdeeb88a711b64"
     sha256                               big_sur:        "5ff1b677c57757866eb2acd527f62a7582160fe2af6cf9f1334f298a93c7455d"
     sha256                               catalina:       "d13d7d46267337411111f127468ee825be178a80d3135bd68756589f54856641"

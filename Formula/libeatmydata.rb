@@ -10,6 +10,7 @@ class Libeatmydata < Formula
     sha256 cellar: :any,                 arm64_ventura:  "a86412fd8dceb0c94bf46eabd26ebac14584b355feab695df8f54b069e8e02e1"
     sha256 cellar: :any,                 arm64_monterey: "3f5017d7e37be50a9252f81e9022687522a7e3c1609b67444ad1ca057ad264dc"
     sha256 cellar: :any,                 arm64_big_sur:  "b9c56d489dc16c1a3beb5cdd985146be80175f4fb867c9a961889ffa0a90f554"
+    sha256 cellar: :any,                 ventura:        "bcd0ac619facc90a8c73fad0090e740177d0960a75ef1265bb42c9c0df74579e"
     sha256 cellar: :any,                 monterey:       "c8737d93760861f482f5d837c1a1895982b91fcb3f39641ecb4debb20aba9fad"
     sha256 cellar: :any,                 big_sur:        "8add447ca5e24dc7ca18806cd05e1c331524103d6386b7042990a53c48cedec4"
     sha256 cellar: :any,                 catalina:       "751364e952669da3326acb14d76957fce4b6208e6fbe3ce74bdeb14da8f0f600"
