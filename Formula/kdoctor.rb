@@ -1,23 +1,24 @@
 class Kdoctor < Formula
   desc "Environment diagnostics for Kotlin Multiplatform Mobile app development"
   homepage "https://github.com/kotlin/kdoctor"
-  url "https://github.com/Kotlin/kdoctor/archive/refs/tags/v0.0.4.tar.gz"
-  sha256 "cc972dfee89417c760eb845a0928cd99d3d7e4edf7d16ac5e43b5ea8425e1301"
+  url "https://github.com/Kotlin/kdoctor/archive/refs/tags/v0.0.5.tar.gz"
+  sha256 "02e57543fe9eab2aa5a8f776026391ffc0af58be858fa39762a29078be8d180f"
   license "Apache-2.0"
   head "https://github.com/Kotlin/kdoctor.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "665c11a1bc4fab8e432fd90fa4dd9c4febb2132a448de9e7ec7dcd8af97fb9c8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f5f58367195b2e6615ecf2f5e058383762e1960672deee009f1f4e99152c08b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "563f1aa5a78fca16dac048c7e1a14d54209cc25b80d3df8ebee7e49f0bc3423d"
-    sha256 cellar: :any_skip_relocation, ventura:        "ceb31cc77e28b09075e2c833c9f670a3270877376accdc7c71a7afdf0dc7ba12"
-    sha256 cellar: :any_skip_relocation, monterey:       "268c40758894f4acdc19a21586c4d1268ce5a407bfb291937fdf4dac3cf2a5ae"
-    sha256 cellar: :any_skip_relocation, big_sur:        "956ff7b276c22eb1828d049685858f0c3df23b287340ea04a052d54477dd74cb"
+    sha256 cellar: :any, arm64_ventura:  "ce84bfa22bff49eb672ddc79f801f83d675601b55bacb7676fd3d0e0a4d6dff2"
+    sha256 cellar: :any, arm64_monterey: "a288433059bf5a31544fa299f83859087f7b8f009008d1f91e105e9e1de80a94"
+    sha256 cellar: :any, arm64_big_sur:  "b8b082f257bc98dd60957a84f93d5dbb498d602924970851a7a23dba736520e8"
+    sha256 cellar: :any, ventura:        "63398f4fbccc67becfd7c5cbf3bee865b2c514d469f484d5c868afc0ecd4e461"
+    sha256 cellar: :any, monterey:       "63398f4fbccc67becfd7c5cbf3bee865b2c514d469f484d5c868afc0ecd4e461"
+    sha256 cellar: :any, big_sur:        "db47b398de4b9a38b434cb25e912cb6bc03490227f8c98816bbc29dc0896ac8b"
   end
 
   depends_on "gradle" => :build
   depends_on "openjdk" => :build
   depends_on xcode: ["12.5", :build]
+  depends_on "curl"
   depends_on :macos
 
   def install

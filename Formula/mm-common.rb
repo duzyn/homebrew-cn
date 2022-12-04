@@ -1,19 +1,12 @@
 class MmCommon < Formula
   desc "Build utilities for C++ interfaces of GTK+ and GNOME packages"
   homepage "https://www.gtkmm.org/"
-  url "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.4.tar.xz"
-  sha256 "e954c09b4309a7ef93e13b69260acdc5738c907477eb381b78bb1e414ee6dbd8"
+  url "https://download.gnome.org/sources/mm-common/1.0/mm-common-1.0.5.tar.xz"
+  sha256 "705c6d29f4116a29bde4e36cfc1b046c92b6ef8c6dae4eaec85018747e6da5aa"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d84097217ab7b2f9d1a4b64858d078ee708c3ebf6cb467ad32146c86729307b2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ea4a58e05333043201f42255d32ff54645f6443a221b093676b83d750954f35"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2ea4a58e05333043201f42255d32ff54645f6443a221b093676b83d750954f35"
-    sha256 cellar: :any_skip_relocation, ventura:        "706abb3080a6573eb9237d9b06d61354161a95e31b1515f929d521a8eb730cbe"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ea4a58e05333043201f42255d32ff54645f6443a221b093676b83d750954f35"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2ea4a58e05333043201f42255d32ff54645f6443a221b093676b83d750954f35"
-    sha256 cellar: :any_skip_relocation, catalina:       "2ea4a58e05333043201f42255d32ff54645f6443a221b093676b83d750954f35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fc4b178ecf7b46ce823e3e99f056f5375859018a669cb93fbfe8ee7944ea162"
+    sha256 cellar: :any_skip_relocation, all: "52bea5959ddf1201806fedbdbf650e46bfc42454147b13a5ffb93d0986c265eb"
   end
 
   depends_on "meson" => :build

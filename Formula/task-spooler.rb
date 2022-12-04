@@ -11,6 +11,7 @@ class TaskSpooler < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "19f19ba03fdec88335f2e8a84e1ef38e51fe9f00f0fb5af0488e55977d4f9860"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3e03f81d2de102317e9d6cfb0231672bde2d91580eae2b87fe1b85c506ae9324"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cdf989b9a44ffb8b4b5d525502688c238870c12073121ceee16e6ebd0042d3c4"
     sha256 cellar: :any_skip_relocation, monterey:       "fbeede406132097d9fed9b4855d16d3953ab25a793b8ec6aa839d1945d874606"

@@ -11,6 +11,7 @@ class Nqp < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "7ff14102f7d697a4b76126d6a611e742f53f6c1ef4118ebcbaf54231dcb9ac5f"
     sha256 arm64_monterey: "f594a0a65bb4335864a011a9e184e7c35ece4a7441ffdb7d576bb9406699503e"
     sha256 arm64_big_sur:  "cb61da491155f138a9847a34cc84c6abe717050cdc0143908c58e73b7028f98e"
     sha256 monterey:       "6b9b73cc13a7d53b006af8445cffa6a379671b2ae4fddfc94fe7c8197c967958"

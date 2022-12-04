@@ -10,6 +10,7 @@ class Khiva < Formula
     rebuild 2
     sha256 cellar: :any,                 arm64_monterey: "520d5879468b0454190fce7fa890fb98cc169c917c0f72975fd97e5d2a5f1a77"
     sha256 cellar: :any,                 arm64_big_sur:  "9ff14629f60e6ed2f278774c30ed9348d3965e8bfbe90cc31ea605bf475c747a"
+    sha256 cellar: :any,                 ventura:        "c3eefd4690eadad3ec6286d3ae1a95d354ed008612ffabbbbfcd82a1970794c4"
     sha256 cellar: :any,                 monterey:       "3c3fc743e58f62b1355ac3e942e1141cbf09b56de5e3516f522432c2de841491"
     sha256 cellar: :any,                 big_sur:        "9341225ecc460b464de3760bd654165199b598e6393bd2b92ffd24a6cdc0f7b6"
     sha256 cellar: :any,                 catalina:       "798a2bd7f9071245ce4c0b7c6058ade9f815e071e549ef07145cffbe59d2dc40"

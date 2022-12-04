@@ -14,6 +14,7 @@ class Zeek < Formula
 
   bottle do
     rebuild 1
+    sha256 arm64_ventura:  "c7ed92fb064de3aafc5c56d17e9f998916a8b0fd97e59c51e5820b2ebdb7e98a"
     sha256 arm64_monterey: "79cff929180fbf3e76c1b263a96cf16db2b7ae8ebbc48b7e7c19f7edb6b3deb7"
     sha256 arm64_big_sur:  "1dbab06ef418f7be7a2af05e74a8397ad8da0e62bf48ac9a5b9c80ce18128fd5"
     sha256 monterey:       "9f0c7484c6c89089e496da6a82126f1ad6150a091ec7ac1e3365123bc9e73ae3"

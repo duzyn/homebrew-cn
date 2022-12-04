@@ -6,12 +6,14 @@ class Ipmitool < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_big_sur: "2e6e3fea7a8cadd51398d01f72cd0006ebe5ec829d507dea76a5a95d7edd5272"
-    sha256 ventura:       "38b9675a7c608cf7e12942fe25fc009a94926ee28c5d4d1730e2d5a609b7743e"
-    sha256 monterey:      "77afdfc5d78d5bf3648ad8735ceeebc0bd9e828cc4745ae8a3f9bb9a21bf84d0"
-    sha256 big_sur:       "48374423f791ed6480c95f1ab3b3dd1b3b001d26fd10209d381a6cdf345881c5"
-    sha256 catalina:      "6150b711f1eadfc1efe639b27f499394c45e06c2a72effacf76136f8d5ad9d2f"
-    sha256 x86_64_linux:  "8724e4c0d6db47b52c350a243ea96e512dbd277e3265e54adc22cc44f4e9df39"
+    rebuild 1
+    sha256 arm64_ventura:  "eedcd4c1fce5ff3dabb6dc2ec82edb04d21a1d14d2174976719403e2b8c92f38"
+    sha256 arm64_monterey: "dd6910b46efcf9ff2c57a613204ef21f0c0c51a3aeea353d270824edc8e51d60"
+    sha256 arm64_big_sur:  "ead2f3d6123ca51af690637b4b9a9820bd2c3ce6d9ce2e837c3970fe6bafc2f0"
+    sha256 ventura:        "176c0d710be65afe8949ddb016bdf86c7829e476f06efc49a435001e6d73be8f"
+    sha256 monterey:       "c54b37fb1277bf5bea3be2ea71644864ab8abfbdbe9ab37e27b875116089d439"
+    sha256 big_sur:        "0cc29edd4db4889608169415905299c268dfd44698734a529fdf616b560097a3"
+    sha256 x86_64_linux:   "ed7f7643e9d022a4ebc674018b9ac1731c6bc03fbb3943d6d13e6820ea55a84e"
   end
 
   depends_on "autoconf" => :build
@@ -21,6 +23,13 @@ class Ipmitool < Formula
 
   on_linux do
     depends_on "readline"
+  end
+
+  # Patch to fix build on ARM
+  # https://github.com/ipmitool/ipmitool/issues/332
+  patch do
+    url "https://github.com/ipmitool/ipmitool/commit/a45da6b4dde21a19e85fd87abbffe31ce9a8cbe6.patch?full_index=1"
+    sha256 "98787263c33fe11141a6b576d52f73127b223394c3d2c7b1640d4adc075f14d5"
   end
 
   def install

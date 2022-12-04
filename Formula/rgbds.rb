@@ -1,8 +1,8 @@
 class Rgbds < Formula
   desc "Rednex GameBoy Development System"
   homepage "https://rgbds.gbdev.io"
-  url "https://github.com/gbdev/rgbds/archive/v0.6.0.tar.gz"
-  sha256 "dcf26588b52a8ccfa28aa47c14f6b222f096f1109c658b3fe57dd6ff150cd0ab"
+  url "https://github.com/gbdev/rgbds/archive/v0.6.1.tar.gz"
+  sha256 "fdc48f5b416fd200598320dec7ffd1207516842771a55a15e5cdd04a243b0d74"
   license "MIT"
   head "https://github.com/gbdev/rgbds.git", branch: "master"
 
@@ -12,14 +12,13 @@ class Rgbds < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cb17e7cf53292ba0c8159f0b87749fb95b01d8a0fe143e5220af01eb11722eac"
-    sha256 cellar: :any,                 arm64_monterey: "8825196bc19415872f2b9b65bf3ce7e91ec8d1bddb43c74e40838cd273c79421"
-    sha256 cellar: :any,                 arm64_big_sur:  "32163f2fc3313e80a91136a980a996c48b15d2dfa9aa3767ab9fedd8ea26f0f3"
-    sha256 cellar: :any,                 ventura:        "28c29a756dc875900f8b2823e9bc5282a61fca2195f7265965cf4bf26602d534"
-    sha256 cellar: :any,                 monterey:       "ae055f9546c5ccc0ff4f05cc02ef28a79802293baaf8d404171783449d8cf82f"
-    sha256 cellar: :any,                 big_sur:        "bb2749706783eecf9af80b6fe1cd89594e09f2fb7f2463a143f5371303db33a2"
-    sha256 cellar: :any,                 catalina:       "1c0ada26f7e4065187a09ea2dfdf647dba64aa11460cd37c8882f0e883144083"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3edaa68d9e948100b36d8347d3ddade81f84f302f15ba81b22016671441fbe11"
+    sha256 cellar: :any,                 arm64_ventura:  "1eec6c8d6d4f78f651b5532129e158284ce1173e1f12ac859deab109ebd0c039"
+    sha256 cellar: :any,                 arm64_monterey: "cf443f1dab35c7793eb27897a3562988605c9d1e0fdbb9ead6c02c62eb4cda7d"
+    sha256 cellar: :any,                 arm64_big_sur:  "86b0cb95d179d4a053bfbd8185edf64e3018a41fcb5707c3177ad3d0f9da4426"
+    sha256 cellar: :any,                 ventura:        "df05b8cd3e6ca7b2830efac8b5795bcfa24857aac4912c3b6dd1437a60403a90"
+    sha256 cellar: :any,                 monterey:       "33a3577cd38998588050aa6a615a1cbf0da29878623caacafa038f97660d98fb"
+    sha256 cellar: :any,                 big_sur:        "2c96ef131dac0f73a8ebeff0cd7a30585496076bdca02dd5f0926940e5bab2f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6a53081e67820c738c436eb06583ae338de9cf36d9c2e41c891c03beff017383"
   end
 
   depends_on "bison" => :build

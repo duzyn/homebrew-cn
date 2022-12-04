@@ -8,6 +8,7 @@ class Notcurses < Formula
   bottle do
     sha256 arm64_monterey: "58f7737491662b0ef1b40e6aa699f00bd586e002a64d908d7d417516b5115621"
     sha256 arm64_big_sur:  "987a325b91731940f435d91fa9de5a9e54bfdbdaeb162943da9c222adfaeb07d"
+    sha256 ventura:        "fbffd47016b5d08bf320b54ff52b1ef4e5cf1d9e2ceee7cfb054cfe78c53a1f0"
     sha256 monterey:       "b18a014fbd45c98a1b47e52b15a6315f946b8dc87afbdf7a91c56894cd82b31c"
     sha256 big_sur:        "377e88f33eec371ee01de99ec523f1f068afbbb8a7fd631185ed6c3693667c42"
     sha256 catalina:       "54940204bbf01d0f036c181fed7fece37cca832d0a35a70af8e6462229d7d237"

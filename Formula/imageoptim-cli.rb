@@ -13,6 +13,7 @@ class ImageoptimCli < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, ventura:  "2066f5cd74a81aa45d2eebc80d86223dda5af78ba5bfa2c19f6ad7089e733dc3"
     sha256 cellar: :any_skip_relocation, monterey: "5e330d75ae3187599414a272f05823d9e2e829cee4d4e75ca176e0e62aea2cdb"
     sha256 cellar: :any_skip_relocation, big_sur:  "633de8d348a6618d839ff4e16694c8634d59accafe13488cd72c88f44386cbe4"
     sha256 cellar: :any_skip_relocation, catalina: "633de8d348a6618d839ff4e16694c8634d59accafe13488cd72c88f44386cbe4"

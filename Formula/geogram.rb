@@ -1,23 +1,24 @@
 class Geogram < Formula
   desc "Programming library of geometric algorithms"
   homepage "https://brunolevy.github.io/geogram/"
-  url "https://brunolevy.github.io/geogram/Releases/geogram_1.8.0.tar.gz"
-  sha256 "7e59db5176ca22580055a5c48862d6fd50399f33551ab9bc20c80a4cc0adeb9e"
+  url "https://ghproxy.com/github.com/BrunoLevy/geogram/releases/download/v1.8.2/geogram_1.8.2.tar.gz"
+  sha256 "29703321b9271186a08ef3c651d90ce92c052bad55dd9395d084c02474258d7e"
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
   head "https://github.com/BrunoLevy/geogram.git", branch: "main"
 
   livecheck do
-    url "https://brunolevy.github.io/geogram/Releases/"
-    regex(/href=.*?geogram[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url :stable
+    strategy :github_latest
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "68878fb9bea83c3c49294f8eba28763c739c3fab9a69a7dfeeb9dc712362929c"
-    sha256 cellar: :any,                 arm64_big_sur:  "6e074cfbe89f210ee31944d0f28d479110072036d0f9e1a82eb80bbbeaee2bff"
-    sha256 cellar: :any,                 monterey:       "7e45ba031704d12d3ae114d063755c8c9977bdad41a2893b3a101b93ada74fe3"
-    sha256 cellar: :any,                 big_sur:        "4f6fec4a8880e11fa600ebf7bee5456471e60a3e764012a67b2e28593075c13e"
-    sha256 cellar: :any,                 catalina:       "1944cf02f77aae7134804276ee78052cdccf06532a2039a32e44d33d9cbd5997"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02cf25788c6614a20b1a33347605d8bd4d6e7653e99d8f420b43b7fb7b053d24"
+    sha256 cellar: :any,                 arm64_ventura:  "f87eca4e1d5bffd185848e63fbd51559d8cec3e1bdd2f35ac3aa61f6d090cb59"
+    sha256 cellar: :any,                 arm64_monterey: "45629538ecb5b06fdcdd09e3687770866a88185abfe6b0042182febad64ffbbe"
+    sha256 cellar: :any,                 arm64_big_sur:  "4ca3c5bba7cd0e645ddcef5428ca03b8a2acb5d42f6993b6c09ec70cad1b936f"
+    sha256 cellar: :any,                 ventura:        "57961c3d87adfa3bce98fdf9530d906d283fccdffe810f47176458917af04d86"
+    sha256 cellar: :any,                 monterey:       "c395bb9e853ced378d2d65c8e89229c7e0c13ff01aee7e61e964ae162e1aeff0"
+    sha256 cellar: :any,                 big_sur:        "213093224d92bf9924413c2cee6da8cf30301c85c352319e28ebda093d3784d4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0f19af5ac0b8a5f29b5d926d7772188661832cde5391aa1ae6a865795527dcc"
   end
 
   depends_on "cmake" => :build

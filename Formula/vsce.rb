@@ -3,8 +3,8 @@ require "language/node"
 class Vsce < Formula
   desc "Tool for packaging, publishing and managing VS Code extensions"
   homepage "https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce"
-  url "https://registry.npmjs.org/vsce/-/vsce-2.14.0.tgz"
-  sha256 "160b2e5e3a381ec249d13615e104ceadb52972a43eff1d0bdb177f488025d96c"
+  url "https://registry.npmjs.org/vsce/-/vsce-2.15.0.tgz"
+  sha256 "df4dd4002ad13c4787d29f4ced37133970c89db04af1c9041ad14b279b2a722f"
   license "MIT"
   head "https://github.com/microsoft/vscode-vsce.git", branch: "main"
 
@@ -14,14 +14,13 @@ class Vsce < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "acd2af0b9a1893ec75d6253ee63c16f01de621102db1cd59fa8a82043a38470d"
-    sha256                               arm64_monterey: "7672b5b42555b9500014fbe0519d019909f05f7dccbdbc98eced30a7b82e65cc"
-    sha256                               arm64_big_sur:  "b6346460c8f5dabbee25108816a01bd322ab28c7bf05715c8a2f706e4d6e9c73"
-    sha256                               ventura:        "3ac06e43e71cdddbed3c9ff51d34681909424bc13c5299188051726930f7ea05"
-    sha256                               monterey:       "c88b50cb8939e8ed22a1eb9c1fb805b633228e5d9af44d1e80c3899c833f95e4"
-    sha256                               big_sur:        "6015efbc69fa2ba06c6187d9139599d4391041d2398e02a4ce3c07b6298f2357"
-    sha256                               catalina:       "7ac92b45d332653e98ea6a7f2a98e2233d5f75699cf4a0a243dfd8a1508faade"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b01d508db4acd83a8ed5f5e0991ef8dd4a1069817a070797118b4255f7715a5"
+    sha256                               arm64_ventura:  "7f4a3b3b9f799b1a9c9512d7ef494b9824addf2a905eddd82e64bf9d63144442"
+    sha256                               arm64_monterey: "bdf14a9463ff09ed539eb806fa32ea0f696211393b63b0e863c5fd84b3b7c9c4"
+    sha256                               arm64_big_sur:  "a2f3f741154cf72545c2040069ef9b46bd0bbf1dc5fb2a44d7e316b46459b75b"
+    sha256                               ventura:        "8a63015f35cb184f30152a9c6436a49cbbea4d69360862dadd7727e6cc78f8ea"
+    sha256                               monterey:       "58550e96cc292bebc2f160606a487dfe586f7a1f1b420ecdd9f834cd9a6f647f"
+    sha256                               big_sur:        "d663fa67753a57eb4a82253bffcc7ae2563a0b8721e3ead316554ac7c305e830"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f848e56aeabd87e89ccd59771bfc6a7e5fb165d3b942b1cd75fc59d3ed040727"
   end
 
   depends_on "node"

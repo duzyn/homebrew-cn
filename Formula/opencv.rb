@@ -15,6 +15,7 @@ class Opencv < Formula
     sha256 arm64_ventura:  "8ddbd64d5158b2119143a9e4b5888bd9fb75f27f55aac4a1b9a8eeca5d4a6e20"
     sha256 arm64_monterey: "43d0fa746d4db8fb75c47f71dd519d04c0b46db1fb28cec002b295b96972adfa"
     sha256 arm64_big_sur:  "2bbfa4767c6802cbe2efff58bf3738e9a4e4ebc3aa3bc79505627130a0896ba8"
+    sha256 ventura:        "6da770fdc4bff2ace7e2dad73be7850ed92dbf3355d558fb14ce8507c6af2548"
     sha256 monterey:       "62878a3c791996285f5bdff682b7fc55504ca612670f6cb9b256de8326fee1da"
     sha256 big_sur:        "180902fac413cf9e5b12eb3546c33912b6c8c9ecbf97777a017063a969bb8f3d"
     sha256 catalina:       "883865a2853fb27173d02fc1bb2bbe64f65a139397632bc3e7c8f1917f983911"

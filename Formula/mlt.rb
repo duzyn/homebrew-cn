@@ -10,6 +10,7 @@ class Mlt < Formula
     sha256 arm64_ventura:  "327e2eced3732e4feaf7c233e130cc30cdf08e032c299495dc3b539d025acfc4"
     sha256 arm64_monterey: "ae182e813b36c3da6c381986b46136c63732821e9090ee6c7c8705cf3e91da4d"
     sha256 arm64_big_sur:  "9eb8be2a22ac2d125f70abe68fb0c19b3edc9c78380aaac094fd4da179d906ba"
+    sha256 ventura:        "429bbdfc1eef1eeb8a31639af2b94f6daa9be1470e8e4f12dbc510558554a93f"
     sha256 monterey:       "6cebbf6fc0e682c0db2781b4c938a0bc9efc7dac64f5abeaa36859c01907ae0c"
     sha256 big_sur:        "8e4096acbba93e64d3f37db56408e6672eb8fdda87f109fee2347111b1ae38ba"
     sha256 catalina:       "f46b832131ee0af2ffedfa568da4d285efb458dce6ffa94938cbca5d51e5da7a"

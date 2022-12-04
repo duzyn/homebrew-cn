@@ -11,6 +11,7 @@ class Octave < Formula
     sha256 arm64_ventura:  "98ddea50159a6056c6fe5c4f94a98634d8eeea846e305a16ba7fbe2f7ca3ae18"
     sha256 arm64_monterey: "5baea026579896de878336938dc603c478f7d10dded22eb2d679421d119450bf"
     sha256 arm64_big_sur:  "db84d5907dcac3a8c0e9972cff232df68a99fc71bacacf55495ac24a8cc53513"
+    sha256 ventura:        "e14f9aed956c00037ce352fc2f3066706a965cc9acc9039326f72a362ce81165"
     sha256 monterey:       "e2dafead6e1bc2d414e6241c8e61cef9fb1fd6e4f03658818ab6986e6129147a"
     sha256 big_sur:        "3e4f59e424e99817477be950020b382378805e6f844814eb3ed8c29f9e767f10"
     sha256 catalina:       "b760b86d281746ed0a9c1f706c6dc0f26b1ec82cbbc49a42820ef2c073d81320"

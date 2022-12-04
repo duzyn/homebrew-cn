@@ -10,6 +10,7 @@ class F3d < Formula
     sha256 cellar: :any,                 arm64_ventura:  "1670039c44e7d3cf5dd1bed69f036b631ebb82eae0e7cad0a8d21e8c7dc61f58"
     sha256 cellar: :any,                 arm64_monterey: "1730a7b915a69ef8a9369e7f032511a44bca9d280523cabaa69b2a64faeed122"
     sha256 cellar: :any,                 arm64_big_sur:  "082b489a728ad43f9f80a8aaa3610a2028d3e2eedf8303062973625bd1348fb7"
+    sha256 cellar: :any,                 ventura:        "190ac079b6094bf7d5e1def52dcf255bf6339c4c5c6f56236ce76557f0558264"
     sha256 cellar: :any,                 monterey:       "f7f44e7c2c788be7a6ab133c54c1aabdca2fa2aa882f9a8fdc88e8c5bc3f1c7c"
     sha256 cellar: :any,                 big_sur:        "1978912917d63001226f844b18696ac2dee6f79e21f433d4f3c51b8090798920"
     sha256 cellar: :any,                 catalina:       "9f118e2c5e7aeb9a84d2d04ed08fdfd7bdb922abdfd57c0c54409e3ed02e2209"

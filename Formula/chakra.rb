@@ -7,6 +7,7 @@ class Chakra < Formula
   revision 4
 
   bottle do
+    sha256 cellar: :any,                 ventura:      "007e7b8e6891276b0119d2b80c5338c9bd22055e205e86678daf89aa6f9a4f50"
     sha256 cellar: :any,                 monterey:     "ceb1e0d100c99107f9ebd5ec897a1f401d7114239a6c8b43a315d93099b67a9e"
     sha256 cellar: :any,                 big_sur:      "77f0293194dd2f7b8cf8fc9f6538223dc732430096ed292ceb8c2e5f046a4abd"
     sha256 cellar: :any,                 catalina:     "b3adc33441dcdaacee5df9f3924bf3d8d2df77a2f71265a01b06eead1d489ffc"

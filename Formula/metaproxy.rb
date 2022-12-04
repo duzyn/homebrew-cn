@@ -17,6 +17,7 @@ class Metaproxy < Formula
     sha256 cellar: :any,                 arm64_ventura:  "2dbdebfa383db51787cd167004e230225ee0629722f903ac4beee2a4668dfeb3"
     sha256 cellar: :any,                 arm64_monterey: "2446fc514fb3551a7b105579a57aeefa38a812da1629df37515a699c568a328a"
     sha256 cellar: :any,                 arm64_big_sur:  "49029d50fa78508964c23614563ad7769f0fe375adfb4b0efcf48ed0b689a606"
+    sha256 cellar: :any,                 ventura:        "56800821ac413a324c14b94573c463df7275e9fc4893e53f983ff26e44a60739"
     sha256 cellar: :any,                 monterey:       "0b2a53eca6621fd7c30097efe4a7fb81c063ec21916ea23b25733614a49916da"
     sha256 cellar: :any,                 big_sur:        "9e469f952edae1e99086c9276383f501b92407d81bfd1a94be7184a0865a5c4e"
     sha256 cellar: :any,                 catalina:       "d68cb245928089f4aef7f31cf637df806ff82977b30a14b883c1bd12c89e51f8"

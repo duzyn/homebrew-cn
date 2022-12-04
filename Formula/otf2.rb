@@ -1,8 +1,8 @@
 class Otf2 < Formula
   desc "Open Trace Format 2 file handling library"
   homepage "https://www.vi-hps.org/projects/score-p/"
-  url "https://perftools.pages.jsc.fz-juelich.de/cicd/otf2/tags/otf2-3.0/otf2-3.0.tar.gz", using: :homebrew_curl
-  sha256 "6fff0728761556e805b140fd464402ced394a3c622ededdb618025e6cdaa6d8c"
+  url "https://perftools.pages.jsc.fz-juelich.de/cicd/otf2/tags/otf2-3.0.2/otf2-3.0.2.tar.gz", using: :homebrew_curl
+  sha256 "ae3a7ad83055d8f873738fee5031470652d31b9bcbf223dd556aea41f5f62303"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,20 +11,19 @@ class Otf2 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "8963ed88db6c71b0b6f24756a38add399969a44b8c41dae582dbedb3e199b746"
-    sha256 arm64_monterey: "d895185d92f105adde7e226c11c866d4b71c95222d20e6e96818405218fe9802"
-    sha256 arm64_big_sur:  "3668159cd6c2f6e6a113ff22cafeb6e79bf2184c5fb7bf95a1c813f30d7f6904"
-    sha256 ventura:        "0f4f452e1062efbf64c4df01ccc540d5059545dacc54447f54da8e5b45b47599"
-    sha256 monterey:       "a2a968708bea0bed2b534cfa9e7c5396cc8c0738e7b8488ec9e7ade2b19d91db"
-    sha256 big_sur:        "016108e473931259c82aa88fcf43f1ef3094603f04364f4db9c8e83c862c5ab2"
-    sha256 catalina:       "766c74896f03d156b54288289cda986e0cbc762a938a4379c438bb33f87ba74d"
-    sha256 x86_64_linux:   "17697e2a84fadf8394ea50075566f80b403b6102ca8e28daa24de0a36373314c"
+    sha256 arm64_ventura:  "0e81939c9d785d6bb311495275795138c6f7c93e4964519b7c24c547d27ec29c"
+    sha256 arm64_monterey: "e5fffba2265304195226eb70368ce45ac5344ded0db9e3ec4ef2da8d6f882cac"
+    sha256 arm64_big_sur:  "4476aae927b41d23196fc37bb42b915e75676cc0adec356c50a925151ce1c35d"
+    sha256 ventura:        "48b0c402498bad68d9a41556d6a83f4c7412327f320d7383a42a71c15cfb257f"
+    sha256 monterey:       "4f677ed96138f801ccb4298d91e5e708b37b8b74d9ac282088f47933c9d6b155"
+    sha256 big_sur:        "3b452ecba67d54fe3a178ce9250d96b30007f51a39fc44f249784cb29144bfe1"
+    sha256 x86_64_linux:   "8595efc2302f6733b74a9938abb81f1d69dc184714a3689089b9a5e9dd9fe84d"
   end
 
   depends_on "sphinx-doc" => :build
   depends_on "gcc" # for gfortran
   depends_on "open-mpi"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
 
   # Fix -flat_namespace being used on Big Sur and later.
@@ -40,7 +39,7 @@ class Otf2 < Formula
   end
 
   def install
-    ENV["PYTHON"] = which("python3.10")
+    ENV["PYTHON"] = which("python3.11")
     ENV["SPHINX"] = Formula["sphinx-doc"].opt_bin/"sphinx-build"
 
     system "./configure", *std_configure_args, "--disable-silent-rules"

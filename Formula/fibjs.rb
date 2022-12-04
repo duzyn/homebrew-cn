@@ -7,6 +7,7 @@ class Fibjs < Formula
   head "https://github.com/fibjs/fibjs.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, ventura:      "cb3c4cd646f77e5ac95459b94bc0dde23233175697dabe800020c7167ff84662"
     sha256 cellar: :any_skip_relocation, monterey:     "01ae2f16b8a0aade5cc4fe5bdf332f736dc246978901b5e921b31a8f801ee248"
     sha256 cellar: :any_skip_relocation, big_sur:      "722369e2f61203eaec7d43d2788443381c3335e976bb78f2d1665526914056d9"
     sha256 cellar: :any_skip_relocation, catalina:     "b72ea1b966a3749f4dca1bebfa6bcaaa10ecd64c33f19b50e3f27990e387094e"

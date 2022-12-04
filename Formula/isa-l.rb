@@ -6,6 +6,7 @@ class IsaL < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 cellar: :any,                 ventura:      "bb6ff29b6adfa19eb203ff666cb45901799fafb92cb92729f4919b7897905ac3"
     sha256 cellar: :any,                 monterey:     "1894e71fbaf5e4d7e10fa7168065f84993eb031ac6da348f898584b23ad8f03c"
     sha256 cellar: :any,                 big_sur:      "ccc29db398c4450a5ae50066d9fe2ae4f3558b19ecf428a4f0fd3caef70256a6"
     sha256 cellar: :any,                 catalina:     "75555d777f620a2a8e69d6e1349027357ebed26ae32b5452b75f46c39d87a934"

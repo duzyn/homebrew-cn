@@ -12,6 +12,7 @@ class Bigloo < Formula
   end
 
   bottle do
+    sha256 ventura:      "095c3aab439429ab386196a1fc1cb5d490b89881964ec7900e45b55528486e28"
     sha256 monterey:     "5584d706ebdcabd22decf7b6c21437f518f02b42b93290c9d6e2f2cccbc578cb"
     sha256 big_sur:      "c960e247b0ea8492e1afde1fd02e76723651a4cd05fd5d4cd5ce4f8b653e09fb"
     sha256 catalina:     "2f33fa4caac94d93c2657a8d670fd4256876bcd15e20b4cff6cc2526bc2ee03a"

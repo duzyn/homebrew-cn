@@ -4,7 +4,7 @@ class Pdal < Formula
   url "https://ghproxy.com/github.com/PDAL/PDAL/releases/download/2.4.3/PDAL-2.4.3-src.tar.gz"
   sha256 "abac604c6dcafdcd8a36a7d00982be966f7da00c37d89db2785637643e963e4c"
   license "BSD-3-Clause"
-  revision 2
+  revision 3
   head "https://github.com/PDAL/PDAL.git", branch: "master"
 
   # The upstream GitHub repository sometimes creates tags that only include a
@@ -18,14 +18,13 @@ class Pdal < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "9f266bc1f0655e3cf6f3e970b0fd869716ab969fdebd1fad0d8c3c35b25fc5c3"
-    sha256                               arm64_monterey: "dc51e691abc1addb783ccef70b006726157aaa7caa273915c510786a84308f0b"
-    sha256                               arm64_big_sur:  "b0d6b2aa4949d66291d466da7825cd5e7d30563b7e3d8382c54e2b3a2b2f3b20"
-    sha256                               ventura:        "5f55e06253c50aecceebfa7f7cfbbbe1539d90919293d14d479562962e643c85"
-    sha256                               monterey:       "a905636f17a9e1ee38779d5a9c4150c08d83fab77c0df2f88719bec1b169694c"
-    sha256                               big_sur:        "6733756720845ac0549083d287557fc2653290e0e8e51a4f963f31f34d5bdbf1"
-    sha256                               catalina:       "893847c0127b8c653bca869f62f1da1b7dc3fe96d92eec64adc563c3448316b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3073d9958ec6aed15a1ed50d930a64534a3264081d5b998eca40ec09f172afa8"
+    sha256                               arm64_ventura:  "7337a95cde479ef4c077fe7b11ab5827659e6a9eaabad8bbb1564b1fec46e8e2"
+    sha256                               arm64_monterey: "ffa58effd207f9009cea9aa6af1dfb7f6ab838e1b3c6e901367c8338d68a2ae5"
+    sha256                               arm64_big_sur:  "99afb417f1c3e91f3943eb13ef46d90fca62a5ac08a8b6990b5a65d96ef60593"
+    sha256                               ventura:        "42467d416923a024ea1332e950f98b33b16f84b759a166c4c00c8e66ab93f038"
+    sha256                               monterey:       "9bf267ff88813b901de3fc44c1cb485eede891936e8594ae6dab94a93ee78f51"
+    sha256                               big_sur:        "bd743612466ca19436dc355b403315e45381e6598246319fe2a40cf9055d9db1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bafbfe6bc8408b97af48830b9cb3f9fd3e0adbad4aa5384ca97fde746018403a"
   end
 
   depends_on "cmake" => :build

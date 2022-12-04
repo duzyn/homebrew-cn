@@ -10,6 +10,7 @@ class Ncnn < Formula
     sha256 cellar: :any,                 arm64_ventura:  "74f7d2655429c8b0f463e564fa65a1a222169620be58d399d1e1a8a92a87a0d3"
     sha256 cellar: :any,                 arm64_monterey: "7b4d13fef792e5f849ff9d7750bed27a0fc53706558359c8ae2e50ac0a7e4370"
     sha256 cellar: :any,                 arm64_big_sur:  "084406d549aa875443b26506dc0499b49083e2bb3452efc098ef75e375e3f1b5"
+    sha256 cellar: :any,                 ventura:        "89b1454061731503d8cdeca11b393b750024b6028cb4d365243199fe96514c84"
     sha256 cellar: :any,                 monterey:       "a04771dbd8a2751363629201cebce8dc0b92c1130050c3dce764dfb546a8ca4a"
     sha256 cellar: :any,                 big_sur:        "d7ff1950a18f125e8edbc29d7bdd4b1bd4f75cd558dd4e52713df9c1794cc286"
     sha256 cellar: :any,                 catalina:       "dba2400e9fcb2e63c3699d3896ff9d61aa335ec1d1ed73479dbe529ac6839ae4"
