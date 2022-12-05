@@ -9,6 +9,7 @@ class Tinysearch < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "27b1c4d80f00537eac5cf8e0c06ee7c5ec3694b9f0c64bde1cf83fd7b9d02a15"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4bcb1e61a1b15295ef1825801509801a4c11357da93f8b81e23bfcc59757e159"
+    sha256 cellar: :any_skip_relocation, ventura:        "280dc34a0daf7c49230a27168d9c54adc9c1160023e52819fe4fc4ec8ce05512"
     sha256 cellar: :any_skip_relocation, monterey:       "c26c581707c1a5d317194a05c694715a6b6773df1ff2ce90d597a439990b5166"
     sha256 cellar: :any_skip_relocation, big_sur:        "e590809eeb3920451cad5946a72ed29c8307e4eb99d5f01ca6d442f50e620406"
     sha256 cellar: :any_skip_relocation, catalina:       "df5917867187c13145ea83ad38f9f285b2597073dbdb434d30c692b15b8d145e"

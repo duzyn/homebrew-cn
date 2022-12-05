@@ -17,6 +17,7 @@ class Zeek < Formula
     sha256 arm64_ventura:  "c7ed92fb064de3aafc5c56d17e9f998916a8b0fd97e59c51e5820b2ebdb7e98a"
     sha256 arm64_monterey: "79cff929180fbf3e76c1b263a96cf16db2b7ae8ebbc48b7e7c19f7edb6b3deb7"
     sha256 arm64_big_sur:  "1dbab06ef418f7be7a2af05e74a8397ad8da0e62bf48ac9a5b9c80ce18128fd5"
+    sha256 ventura:        "f3893d1d6a127fc1082252aa56e6f456ca7e40d24764935cb3a6f28ec5f513e2"
     sha256 monterey:       "9f0c7484c6c89089e496da6a82126f1ad6150a091ec7ac1e3365123bc9e73ae3"
     sha256 big_sur:        "eb6cec7c6008e645889203c0f9160a23e4bd747cb45df1b6f44070c9b45e3679"
     sha256 catalina:       "77328d64c938ee428b22d21937902848b52c098760cd63d3049ec43fae211982"

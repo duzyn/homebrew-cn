@@ -9,6 +9,7 @@ class PscPackage < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cb8fb988ac116590ec36ae48034fb205c2c1799183a477959a4f56edd239fe08"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d690a0db3d5c917fda1164691912d14f71bf21eb74d98070c7860805c0ee1a2c"
+    sha256 cellar: :any_skip_relocation, ventura:        "ed33f7c5b04a5ae8cd2e8b7c270f7ec9d89bdc15caa38d99d3d1cc0f4f2238c0"
     sha256 cellar: :any_skip_relocation, monterey:       "4bd4095ce0672aaa435d7f09b5f82bbea637f8e75550b0809cfd08e8127eb30b"
     sha256 cellar: :any_skip_relocation, big_sur:        "3a366e22aefb8cf179cf1aca4a4aae93bfac187a9d84324c9ba33e7a00abf7c3"
     sha256 cellar: :any_skip_relocation, catalina:       "699a7ad7342f3abba90787f0c3b2a2b981ebc2aa33f45015720a48e3c4a7110b"

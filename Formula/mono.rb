@@ -11,12 +11,13 @@ class Mono < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "b16add8f84faaaf2f13badc90201cc6adb0962e279cb652c3d8c93307fffc4f0"
-    sha256 arm64_big_sur:  "9399787ee351af3a2b43b06bf2063f434bec8f800d664ab4660e3b0d09d495f5"
-    sha256 monterey:       "9672cc2c9a6383261a1f648814e06ae1fcdde0add2b51609e665f1fe0e8a44db"
-    sha256 big_sur:        "90f25f2adc4d27335fe9025937e30c4a837135ec49fd84cdab2e88fa81a96c8b"
-    sha256 catalina:       "6d2f2f42ff1f002e82b41a37211ca6cc32e5a07f2c117f2427dee396827a7159"
-    sha256 x86_64_linux:   "9e83f5b981c00854b12aa1fd2f2866e5032ec272eaa2de0f887c7ffe6afa1a1f"
+    rebuild 1
+    sha256 arm64_monterey: "61b4b5c6e09559181bb324df3bf3be7176a5d11a46cd38140f1cd9a6945e665f"
+    sha256 arm64_big_sur:  "58a82c3bc29f421574b7b8372027099ff40413b79fbb7ad6604f4de6d2077506"
+    sha256 ventura:        "73ee9e234787f88bf7d2e00d8b19e8451aa88d06a973f843761da871f8761f63"
+    sha256 monterey:       "9377d9ec83e73e382853cb5f99dc865b4625ee3cf0717d6abb6b3c30a5803da8"
+    sha256 big_sur:        "02efa2df358fb3d45d8525d010b09ba553f259a2418370840231243b4439389b"
+    sha256 x86_64_linux:   "516caabaf57d2a4b90c6e6d09b0279774d4bf59afd3dfad4e120b80b61512ce7"
   end
 
   depends_on "cmake" => :build
@@ -100,6 +101,15 @@ class Mono < Formula
   patch do
     url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
     sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
+
+  # Fix Ventura build issue reported at https://github.com/mono/mono/issues/21567
+  # Patch lifted from dotnet https://github.com/dotnet/runtime/pull/76433
+  patch do
+    on_ventura :or_newer do
+      url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/dce4e25f7eacac188478ea9fbf61ce162f20811d/mono/ventura.diff"
+      sha256 "d534e564b936f8929e50551f42edfc1fdf13a643cf0ee65955668b7fe52d3ce7"
+    end
   end
 
   def install

@@ -1,8 +1,8 @@
 class Iozone < Formula
   desc "File system benchmark tool"
   homepage "https://www.iozone.org/"
-  url "https://www.iozone.org/src/current/iozone3_493.tgz"
-  sha256 "5a52f5017e022e737f5b55f320cc6ada0f2a8c831a5f996cce2a44e03e91c038"
+  url "https://www.iozone.org/src/current/iozone3_494.tgz"
+  sha256 "a36d43831e2829dbc9dc3d5a5a7eb1ca733c9ecc8cbb634022a52928e9b78662"
   license :cannot_represent
 
   livecheck do
@@ -14,17 +14,19 @@ class Iozone < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7eaa434d74f43691c718d76c09f1b756fcee32ad96ba5042f69de9efa00f8e7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d89148f54880ee8829237f33d129c5844d13ccda2621f1afd04ff715aaaa9521"
-    sha256 cellar: :any_skip_relocation, monterey:       "53a4da234813b26c9647f81b3c2c3aa6cfe2288a8902c257d6b790418444e685"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1d17f34feb80fd9906bfab67542f082232389be9ea7d6fc8e7c893cd858428a7"
-    sha256 cellar: :any_skip_relocation, catalina:       "ef7631b9c8639f7e84b81e3dfcd99b6b0707fc27e4185e21f0126d9e625ca8c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9aa1ad6e384d02895adf1b3afe200c886856982a7f42855602822fb3288bf76"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "120ac4967eb1ed381019643a0b57fd9935bccfe57f4a6a62d73db5971c12f68a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d764fcef8796a89fbc4851a738544d4fe5f4a2d946804466c38c54200cf8fe5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d224ac1cd5bf43cc51595ac642b6b8b511c05b694a8c7bd0eb9e040973aa68fc"
+    sha256 cellar: :any_skip_relocation, ventura:        "bcc526a3555b9ab8efc4e061f40b64c1948db1fea941b07eacf61440fee3b294"
+    sha256 cellar: :any_skip_relocation, monterey:       "0edd67fecabe2907d1a53d6c66d600408a3c357721284cec71c42099c56f3dc7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "30973f3d9664c0a4b585a20897c9764fb0556428d325afd5f196436eaf2b3d07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce1ad65c55a81789572e6ce23fa2b089a52771615849cc7b4443f564f090a92b"
   end
 
   def install
     cd "src/current" do
       target = OS.mac? ? "macosx" : OS.kernel_name.downcase
+      system "make", "clean"
       system "make", target, "CC=#{ENV.cc}"
       bin.install "iozone"
       pkgshare.install %w[Generate_Graphs client_list gengnuplot.sh gnu3d.dem

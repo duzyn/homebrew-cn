@@ -1,8 +1,8 @@
 class Rubberband < Formula
   desc "Audio time stretcher tool and library"
   homepage "https://breakfastquay.com/rubberband/"
-  url "https://breakfastquay.com/files/releases/rubberband-3.1.1.tar.bz2"
-  sha256 "a442551fe7d26fb4a54dd1c34178733dc9c76ac9ce051a02325f5cb35d154381"
+  url "https://breakfastquay.com/files/releases/rubberband-3.1.2.tar.bz2"
+  sha256 "dda7e257b14c59a1f59c5ccc4d6f19412039f77834275955aa0ff511779b98d2"
   license "GPL-2.0-or-later"
   head "https://hg.sr.ht/~breakfastquay/rubberband", using: :hg
 
@@ -12,14 +12,13 @@ class Rubberband < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "39ed0d04fc654ebc89f2819510ac5cad990a5b5c7ea2657cb38813c3ed41ba30"
-    sha256 cellar: :any, arm64_monterey: "ac1818bde00e42888ea13d151de85e8b387d6c6107df617ac24edf53ca6a9ded"
-    sha256 cellar: :any, arm64_big_sur:  "31a26e4d2c2f37af5f5347dad63b7e1264d0e69d607639e559b1a8f45b554a93"
-    sha256 cellar: :any, ventura:        "36de6f9a470b303f83dfdfbfde201ff02f38bf499407aac23d7eeebab42c3c68"
-    sha256 cellar: :any, monterey:       "84b15332391d9e870603dd31300db0b639cbde59f891e3e78b943e2d03dde0c9"
-    sha256 cellar: :any, big_sur:        "39d08fc2a284ba173fdb2c97c93cb526b0c2ac17006cd84249c7389b6ee2c85b"
-    sha256 cellar: :any, catalina:       "5f22527cc4d85d7b29c55c3e923f097f36d231041507ba75ab7b9669aea57d17"
-    sha256               x86_64_linux:   "9e50f245e3e1f7434390faac68adb7c306bb498845a30218f744fd0fbd238c0f"
+    sha256 cellar: :any, arm64_ventura:  "22172e690033abb29e48a440db401433c110ae09f4b0632f28c4397a839b5089"
+    sha256 cellar: :any, arm64_monterey: "fe6363f0a2cc447e10c819e1c7bac33ccbb5d5bfb0a239eb8573e4d55ba28b3f"
+    sha256 cellar: :any, arm64_big_sur:  "640bc828d90f53d0a369a4018fb85e613f2af25da4e38a63713db78682967c1a"
+    sha256 cellar: :any, ventura:        "97aa5feed6c72107a20bb7cd76ff58e8f04b19247121bdd504cdbf2be3304029"
+    sha256 cellar: :any, monterey:       "4ae7e36ab409a31df353cabb0f517161a4455740b94233bed5aaeeea51a8485d"
+    sha256 cellar: :any, big_sur:        "36da34e200b63614206089168a021a93499377360b13ed6ab663b86a594b70c3"
+    sha256               x86_64_linux:   "2f8993fef124b04bd00f9bdc6ab5be15a3956f7f00e7c690e3201d1879f4d5fa"
   end
 
   depends_on "meson" => :build

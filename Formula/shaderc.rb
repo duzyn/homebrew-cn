@@ -4,37 +4,36 @@ class Shaderc < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/google/shaderc/archive/refs/tags/v2022.2.tar.gz"
-    sha256 "517d36937c406858164673db696dc1d9c7be7ef0960fbf2965bfef768f46b8c0"
+    url "https://github.com/google/shaderc/archive/refs/tags/v2022.4.tar.gz"
+    sha256 "a948436f2eca403026fe2c900df0108a0f4972005230817d805c43d96554c9ea"
 
     resource "glslang" do
       # https://github.com/google/shaderc/blob/known-good/known_good.json
       url "https://github.com/KhronosGroup/glslang.git",
-          revision: "f771c1293dce29e1ac3557cf994169136155c81f"
+          revision: "728c689574fba7e53305b475cd57f196c1a21226"
     end
 
     resource "spirv-headers" do
       # https://github.com/google/shaderc/blob/known-good/known_good.json
       url "https://github.com/KhronosGroup/SPIRV-Headers.git",
-          revision: "0bcc624926a25a2a273d07877fd25a6ff5ba1cfb"
+          revision: "c214f6f2d1a7253bb0e9f195c2dc5b0659dc99ef"
     end
 
     resource "spirv-tools" do
       # https://github.com/google/shaderc/blob/known-good/known_good.json
       url "https://github.com/KhronosGroup/SPIRV-Tools.git",
-          revision: "3a8a961cffb7699422a05dcbafdd721226b4547d"
+          revision: "d9446130d5165f7fafcb3599252a22e264c7d4bd"
     end
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4b7c7c74437042176927dc761ad0096dd8948b0450fc607d89983358c4d5c631"
-    sha256 cellar: :any,                 arm64_monterey: "174b4530be3be6516e880e96c10cc1076ea951417e145a293163680bd98fa833"
-    sha256 cellar: :any,                 arm64_big_sur:  "e8947021cb1ef2e7a79ea4a64ca3050cd94737adb6b6b89f94dcaf34c5387bb8"
-    sha256 cellar: :any,                 ventura:        "fda812203383e8e7558c1bf49424e41f988a1e3de19f44c1c0c279495a226a0d"
-    sha256 cellar: :any,                 monterey:       "201b023ce23b2c17eba2395505373630d0688e76d9cce84c0fd334ae2f0f96a7"
-    sha256 cellar: :any,                 big_sur:        "185a7010cd011457e222d5a93c455ddeb9bb1f1848f8a2d9ccb6e8d233e631ec"
-    sha256 cellar: :any,                 catalina:       "32b45ff6b653221cb9e4c95169e8f6b5a07564f87e9b8a1574d054e218fd2b7f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b4ab5e9dad1d76e4419f8be1204ca5bc0000b13b30dee9108b4a9c2a9683245"
+    sha256 cellar: :any,                 arm64_ventura:  "32a384bc8c303087851d33095fcf5aa00d3ae2398e694984192d7444a43102a8"
+    sha256 cellar: :any,                 arm64_monterey: "d5a628d418beca1c5e64c1707de4908b6f89a4e2e4cf959f3ff4a1aa513ba29f"
+    sha256 cellar: :any,                 arm64_big_sur:  "1e11618686e65f3f767d6fce64894a0efddc81e48a46fa8a9fbb4f688925aaff"
+    sha256 cellar: :any,                 ventura:        "22eb75a448a7a946cd89ddc00f1caf8b80d37b49e1b46a0eeda81264dfb791dc"
+    sha256 cellar: :any,                 monterey:       "f927c6d71677fefe0671d211824a847e7221cd547ffe4e81ffda965b8254a96a"
+    sha256 cellar: :any,                 big_sur:        "5e0df49d49a8c64950cfc7049efc812ff078ad5d36978956009b1bb4ae9765e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aeab02a663b940cd5b25b288afa01ef28ea045aad330e4004736b68aacb1e1a4"
   end
 
   head do
@@ -66,7 +65,9 @@ class Shaderc < Formula
 
     system "cmake", "-S", ".", "-B", "build",
            "-DSHADERC_SKIP_TESTS=ON",
-           "-DSKIP_GLSLANG_INSTALL=ON", "-DSKIP_SPIRV_TOOLS_INSTALL=ON", "-DSKIP_GOOGLETEST_INSTALL=ON",
+           "-DSKIP_GLSLANG_INSTALL=ON",
+           "-DSKIP_SPIRV_TOOLS_INSTALL=OFF",
+           "-DSKIP_GOOGLETEST_INSTALL=ON",
            *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

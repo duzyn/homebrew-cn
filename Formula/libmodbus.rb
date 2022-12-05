@@ -1,20 +1,19 @@
 class Libmodbus < Formula
   desc "Portable modbus library"
   homepage "https://libmodbus.org/"
-  url "https://github.com/stephane/libmodbus/archive/v3.1.8.tar.gz"
-  sha256 "4cabc5dc01b2faab853474c5d9db6386d04f37a476f843e239bff25480310adb"
+  url "https://github.com/stephane/libmodbus/archive/v3.1.9.tar.gz"
+  sha256 "75ac07f49b138a636c65980b92a4792290ee901503c324f2f4e23592bfa036c0"
   license "LGPL-2.1-or-later"
   head "https://github.com/stephane/libmodbus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "99fde44af019a19d4c83f5cd238fabfc9ab21e5398931fcec84b2073304f481a"
-    sha256 cellar: :any,                 arm64_monterey: "74a9c2d2818aaa2c2eeeb562065a7adfdbe6d74a57efdcdf149216ac55bb5edb"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd7d87fb14eb1bef41df46f4c19bfd234f299ccec330d2ea00f81fdcd3b79a0d"
-    sha256 cellar: :any,                 ventura:        "3373ab1d921dc9728a00788c591f8dc11903f15ba1108c9501cd217a1b2a4b69"
-    sha256 cellar: :any,                 monterey:       "32f16b06488fbf761e3573c24648f30f6d436c723773e595f62fdaa123abf153"
-    sha256 cellar: :any,                 big_sur:        "51cc6f2ded4c476a96e90884c182086a8c1de60155ec6c0f3d9380a0e7ca468e"
-    sha256 cellar: :any,                 catalina:       "2ae1fc0a944674ae60fdae50a7f68f96eff57b90c73a2a5d241da50393777087"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74626e6ae591eb41843dfcbee39ac7a63c4e99050c2365ae70d1a5fbf55a108f"
+    sha256 cellar: :any,                 arm64_ventura:  "3ef59ed18d26450a46cb7d24014d623763109ab9b9f80ab5cd4e8236971531a7"
+    sha256 cellar: :any,                 arm64_monterey: "cfb0e36dc0fd0a7bb191c5fe5ef6e0253176ad5c1d284e3e059728302251cb38"
+    sha256 cellar: :any,                 arm64_big_sur:  "57ece84bf699755c6eeaa4f0fb21a098e922db9d3839bdf32634c08201dce4fd"
+    sha256 cellar: :any,                 ventura:        "f95e87950e5b886687087b3e9fa490a07b97da6a47405d0ed081fa50a12e250c"
+    sha256 cellar: :any,                 monterey:       "1a042509b854e844cf12aa28fa56cf4bfb274c28ef90eacd41a91219b5c6d9c1"
+    sha256 cellar: :any,                 big_sur:        "8dfd7fbbeb7810af481d97892f37ed23074de80c60f01506e4b975ccdcf20132"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "369ce1d96b985d316ae42ff23e828ffbbc816528243e315cf8a17561faad3880"
   end
 
   depends_on "autoconf" => :build

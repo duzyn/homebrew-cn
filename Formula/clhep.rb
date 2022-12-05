@@ -1,8 +1,8 @@
 class Clhep < Formula
   desc "Class Library for High Energy Physics"
   homepage "https://proj-clhep.web.cern.ch/proj-clhep/"
-  url "https://proj-clhep.web.cern.ch/proj-clhep/dist1/clhep-2.4.6.1.tgz"
-  sha256 "170161b8e498555f75c6de7936afde956a93fc9aa121a16d779ea602087a3239"
+  url "https://proj-clhep.web.cern.ch/proj-clhep/dist1/clhep-2.4.6.2.tgz"
+  sha256 "aded73e49bac85a5b4e86f64a0ee3d6f3cfe5551b0f7731c78b6d8f9dac6e8dc"
   license "GPL-3.0-only"
   head "https://gitlab.cern.ch/CLHEP/CLHEP.git", branch: "develop"
 
@@ -12,13 +12,13 @@ class Clhep < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a16ce7e7c2e2622686963f8549bdf088cfe57bb6078f8eb030e6e02858f53ac5"
-    sha256 cellar: :any,                 arm64_monterey: "c22a80ec97e83fd66173d935d399a601ea0a3d5d136ca76334608335a6723b7b"
-    sha256 cellar: :any,                 arm64_big_sur:  "391da90b1986c6e4e651962894c6a773996a91d9975d4dd968e0012e0465738a"
-    sha256 cellar: :any,                 ventura:        "ed395b9e469a2aad0e54f123077512123fe4fe7ef6a0605abd403919bfa5d558"
-    sha256 cellar: :any,                 monterey:       "88dfbe12e1f1207848ed03d61008ee5a46eba9a0032d89e42c24f9789dc4df85"
-    sha256 cellar: :any,                 big_sur:        "999b17307c0eceb9aa90c7b292530f841a7b17664b1e0c0898269321762c3e78"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "265d43475b57fa78dd9ffaf6c43341b677dcd8bdd63f150306c694c13414afca"
+    sha256 cellar: :any,                 arm64_ventura:  "d4e42f0b132dc01ad5a585d21245ab27b3b5786af8eb7ea2bcc1c3fd3aa5b26e"
+    sha256 cellar: :any,                 arm64_monterey: "6aa633b75a154f136a5a7b20295a98c4b88fdb7cdf133d2f5b61ed4d55254cf0"
+    sha256 cellar: :any,                 arm64_big_sur:  "4475b22a0678addf7be68ea7437b27ba97600841517b8d5bcf73e7534bfea56c"
+    sha256 cellar: :any,                 ventura:        "82f8d74a00f92c86b7c1695d67b6010ad63297582fd28aa0c971cb8919545707"
+    sha256 cellar: :any,                 monterey:       "78116b67ee5390a1abee1f27d07c755448b1d44ad006f320931ab97c023e2e15"
+    sha256 cellar: :any,                 big_sur:        "40bf5b2daa80692fdfe1360d0b326ba8d016f73b228909fab30b32aa5d7604e6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "342c4de82329f7e1d50eac4b99e1549fedef980c3450359a7fdcbd029c70d8c0"
   end
 
   depends_on "cmake" => :build

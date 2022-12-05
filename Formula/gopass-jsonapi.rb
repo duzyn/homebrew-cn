@@ -1,18 +1,17 @@
 class GopassJsonapi < Formula
   desc "Gopass Browser Bindings"
   homepage "https://github.com/gopasspw/gopass-jsonapi"
-  url "https://ghproxy.com/github.com/gopasspw/gopass-jsonapi/releases/download/v1.14.11/gopass-jsonapi-1.14.11.tar.gz"
-  sha256 "afb6053bd6bd628dcdef5deeb364fcabfe7830d4519b5ea71a3763cf7588760f"
+  url "https://ghproxy.com/github.com/gopasspw/gopass-jsonapi/releases/download/v1.15.0/gopass-jsonapi-1.15.0.tar.gz"
+  sha256 "c4b8e1cdfe64010798e93643b6590621d004794c558edd976da8f9b3861ea538"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5995642a3234734e39d7e9c5e13e4c92a7ebddce12b86a947d4bc17bde7b080b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14c39192b7ec1ddd0cf1844ab00572507d01ce43743e736395fe212ff828695b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3de43e66243acd4362e56ba117b5abd294883b26e730a4e76c0f7affdb726aa"
-    sha256 cellar: :any_skip_relocation, ventura:        "cf5ca1126b164badf337fc2044396da2db14f96c6a7fdfdebaf84cc0ac80706c"
-    sha256 cellar: :any_skip_relocation, monterey:       "f493c674d668a1e00a38896d2aae81bf17ca2df383e60f9dc817a25949c65759"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7dd1b409a6273150a1d254e408620d4e23321e5e2255880cc2322372b69ddc7c"
-    sha256 cellar: :any_skip_relocation, catalina:       "625285b45df9135f50231165e8f24203f3a3d4a81f81532d44a093814d1170e9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e5f176b2b27feec0a42d74d56c60100301aa545647edfdfddbfad2fac68bbf4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d467247389f2fa7a7ebd51ab6377b71c2a61dff5e508a2a850b3eeb3842cf6f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5db16691d23699c7803fb59ce3c6084ee9bda71776a3b57f3d38f4d8cdb3016d"
+    sha256 cellar: :any_skip_relocation, ventura:        "04dd7686218359670fcedfb0cd797ee1d4633a0e07c30890158e8b290cfe1740"
+    sha256 cellar: :any_skip_relocation, monterey:       "1cecdd6e9d9bc248f49beefd849df0f4db156f44e77ab4f48939d9098fa17fc7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "18fc8979b485db94cfecbcbe0e5154544db20bd863a1302e7ed4794837a65a36"
   end
 
   depends_on "go" => :build

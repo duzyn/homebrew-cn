@@ -8,6 +8,7 @@ class SpidermonkeyAT78 < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 ventura:      "4a62a6dda8c66340da405782a610b4748044faecea1af581fd69397973db3427"
     sha256 cellar: :any,                 monterey:     "1708e27a5b11fe1dfe24310d08c01b289bc5c4e0c00e797efb29b97d0097ec1f"
     sha256 cellar: :any,                 big_sur:      "96797d1ed292a57ad3592f4da7186be0c67eef98668d2eb5d9208a0289d6c9f2"
     sha256 cellar: :any,                 catalina:     "a1dcf35d035ce67b0ff26470130d8e2a986ff85c169e1b8ebed5c6d86e086527"

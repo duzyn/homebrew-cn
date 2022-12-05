@@ -7,14 +7,14 @@ class ContainerStructureTest < Formula
   head "https://github.com/GoogleContainerTools/container-structure-test.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "09425ba24a07cc526904d8a9a71a0591809ed0d2120eb8c836b18a0a277f2f28"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac67b4fa0a58c25ee63f9b664ccee63a8c410ad6d095bb13ea5fe1200a8f2877"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f02284416cfd39331c161d5b0fc409c42229956cd588a081e5b178bc89685ae"
-    sha256 cellar: :any_skip_relocation, ventura:        "2c9f71f01d66ed727bd4531ed13ca33965b49927b1f22bc34bbd76ad25131116"
-    sha256 cellar: :any_skip_relocation, monterey:       "924b7cf12f63b5ee248046c9f68f2d9de2c91838acf32da68b29bd7864c09afc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4007f283f958fb44985d867500617ec0fecfcb0e70c8943d0e1c79ce235bd2a7"
-    sha256 cellar: :any_skip_relocation, catalina:       "77e2b6d61f00faf44a948d6416591c1b643906208ce11be87c226c1dd93e320f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "183f1757591e1d72d3e2672277146f205168a8200eddd45920db6433d321edcf"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bc5f1f0df698f0d802139acc41623b97bdf2ad08d35a7e4659aad5ca1574d72e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8e344c0b7bed8f52093b54acc53859195b9db9fbd5a77c7315ffa480ae64ff43"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "53848d24575c7b9906c7b7648777a41c1e0a720e7ecd14a757c651a5fad9a2cc"
+    sha256 cellar: :any_skip_relocation, ventura:        "901c27176141d49fb77edbd0744c0bee2a030027fc39e3eae984ebee489dab49"
+    sha256 cellar: :any_skip_relocation, monterey:       "00ed46e545005d6ec023960645492ba26554ca94ce3204e975e725f1045feccb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d094b14c62b3bf32de53de3e189be7d618c47a8de22ab881df1af8e78de92087"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abb24fb7fc9e21d2406aa46f302f928663959c2446c5a199055fe8bab307d76c"
   end
 
   depends_on "go" => :build
@@ -26,7 +26,13 @@ class ContainerStructureTest < Formula
   end
 
   def install
-    system "go", "build", *std_go_args, "./cmd/container-structure-test"
+    project = "github.com/GoogleContainerTools/container-structure-test"
+    ldflags = %W[
+      -s -w
+      -X #{project}/pkg/version.version=#{version}
+      -X #{project}/pkg/version.buildDate=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/container-structure-test"
   end
 
   test do

@@ -9,6 +9,7 @@ class Texmath < Formula
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d57567aa453594462b8b93e16c7851646a117e410da6427f2e38bc5d460b4052"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a6492780d0f3111441313863c0be857cde1cbb65b546b82f43587c00a42df82"
+    sha256 cellar: :any_skip_relocation, ventura:        "12978dfee2bb7ad267bdf6e1d152d48623aa6fa534dd2fc36eb7fadf75738f3e"
     sha256 cellar: :any_skip_relocation, monterey:       "aac7b9048ab3c5c0b7e79e1ae690fc1eb94fdbc620133d5d8cf2f4f1af359afb"
     sha256 cellar: :any_skip_relocation, big_sur:        "f802665e0a3b6a40c4808a0d39ca99a59a2e27b89ee0fa57cd4b82467590aa02"
     sha256 cellar: :any_skip_relocation, catalina:       "804a24a3d75187f5194695c6c0f8ad441d336b2d40ddb99b257b4315da3149ef"

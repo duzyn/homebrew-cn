@@ -1,10 +1,9 @@
 class Coturn < Formula
   desc "Free open source implementation of TURN and STUN Server"
   homepage "https://github.com/coturn/coturn"
-  url "https://github.com/coturn/coturn/archive/refs/tags/4.6.0.tar.gz"
-  sha256 "42206be7696014920dbe0ce309c602283ba71275eff51062e5456370fbacb863"
+  url "https://github.com/coturn/coturn/archive/refs/tags/4.6.1.tar.gz"
+  sha256 "8fba86e593ed74adc46e002e925cccff2819745371814f42465fbe717483f1d8"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
@@ -12,14 +11,13 @@ class Coturn < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "eb2f2f7510a4b50df4e3e7428a8daca052b6450a872eb1f62293e9aedea65b8b"
-    sha256 arm64_monterey: "05ed1d26deb23be08ef663b1fe3f6b12d3c2b12446b602bf32da22bd35cbbcc9"
-    sha256 arm64_big_sur:  "8442d032bb086f804d0ecf9af43b35514406560b37f87f66a233452daf304ca5"
-    sha256 ventura:        "92637a06bb7803555d99cb13d30f411873faf9a8e5e14a6aeb078b4a8f1059f6"
-    sha256 monterey:       "1dcb943114d883f153c817085c806fdb4310fe83df506fd0f9f439b524463d1a"
-    sha256 big_sur:        "42a300446b36f922639fcd7a767257fcf77db52bdd3d20869174ee8ecc456654"
-    sha256 catalina:       "07d0a45f2a2c9561bae382d6febaedf79d230d10006d4c98e9cc5d85d1b236bb"
-    sha256 x86_64_linux:   "488f33b229882b58422fdad05e8aa5b96e5db6b68bcc6b630e3e25edc9488a82"
+    sha256 arm64_ventura:  "1dfbdbf3aefad9142ce2edec95d448ff9cd2fed007b52a648f3f1e922fab70e8"
+    sha256 arm64_monterey: "2501eebd1bafcb385aa6bd29251d154b5c923784c87153feed01d4c4004f692b"
+    sha256 arm64_big_sur:  "58ca95c9237a7214aed41ad8e316d7ce7598dc6b1a0b2760ca351411780bff6a"
+    sha256 ventura:        "cab7f10155f0805b455f92951adbd72c909a95157faf0512f9f0c6538e55435c"
+    sha256 monterey:       "ce8cce8014048c034e99d04c44f17715dc6c5910a49d35fdb0d5f2f6ce909e78"
+    sha256 big_sur:        "58f29be2f2ca8c8fbc24c94b5d78f81e5d70d01ff415444f3922ac04840f2425"
+    sha256 x86_64_linux:   "b84409e324a79a3eabdf937aa21369851ae533f2d4dfa7544480757e9bbdca74"
   end
 
   depends_on "pkg-config" => :build

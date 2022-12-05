@@ -1,19 +1,19 @@
 class TrezorBridge < Formula
   desc "Trezor Communication Daemon"
   homepage "https://github.com/trezor/trezord-go"
-  url "https://github.com/trezor/trezord-go/archive/refs/tags/v2.0.31.tar.gz"
-  sha256 "fd834a5bf04417cc50ed4a418d40de4c257cbc86edca01b07aa01a9cf818e60e"
+  url "https://github.com/trezor/trezord-go.git",
+      tag:      "v2.0.32",
+      revision: "9aa6576af6fabd557bc298d1a12b73170f467a07"
   license "LGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "303f7229f3842a2a55522d9f8855175b91d22d6542ba744431ef2b529098785e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "397b7e64540efe897cb2c5fadab51d577742e20d462fa1f95c20e1375bce5dbc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "78091c03859934522369c96f13b21c52c9cc8c2128b4c239bc1729f29402aa30"
-    sha256 cellar: :any_skip_relocation, ventura:        "7cfb49c1bbf75d92befc9e33a222c309ae0acf3b2dd7a52b9723f9ed7bed2b63"
-    sha256 cellar: :any_skip_relocation, monterey:       "8efd4d6faa3d474c11896774107f7458ed026dca8d4559580857d328364a1c29"
-    sha256 cellar: :any_skip_relocation, big_sur:        "69cf4437c5dc30489249a5b107d5e606b014c4550654641f8fa8fbef61061f8e"
-    sha256 cellar: :any_skip_relocation, catalina:       "87843da946e34a4c2316e75413a78b9eb8504d06f3be3fd6acbcd96c8e5dad64"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ccc59026f5d67a9008879c708acca64295e52abeb96edd6a93330d17ec5a87fb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "464cb3ea9e6f6e2c621df01a0ee1a4c06914a97f972818b84fe84f58f806f011"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "50f3201ea207a6ca5554018ef16a574866a5b207f5646cc4373a38a7ace5df41"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ffb43f934abbcdab466a049a02eb6b1931d8c232ef53dd6ad62d489be7215cb4"
+    sha256 cellar: :any_skip_relocation, ventura:        "3031a38ca271f26f3e6d948f8bdd2d10d77e6eb9c1beb9bad3e8aa4f14b36c7f"
+    sha256 cellar: :any_skip_relocation, monterey:       "0dde76f3050a020bcfc4e9b02586e4ad03414a16997ff328ff3577a60280aacd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "135b5e71c548f7995da5ea8c43059e4527f2e08f38c15715b387a54b6e993426"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "454855de505930c7876421c843d13ddf6e9c34fb67e8c33955b79e6189475411"
   end
 
   depends_on "go" => :build
@@ -34,8 +34,10 @@ class TrezorBridge < Formula
     # start the server with the USB disabled and enable UDP interface instead
     server = IO.popen("#{bin}/trezord-go -u=false -e 21324")
     sleep 1
-    assert_match '{"version":"2.0.31","githash":"unknown"}',
-        shell_output("curl -s -X POST -H 'Origin: https://test.trezor.io' http://localhost:21325/")
+
+    output = shell_output("curl -s -X POST -H 'Origin: https://test.trezor.io' http://localhost:21325/")
+    assert_equal version.to_s, JSON.parse(output)["version"]
+
     assert_match "[]",
         shell_output("curl -s -X POST -H 'Origin: https://test.trezor.io' http://localhost:21325/enumerate")
   ensure

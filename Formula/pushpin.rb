@@ -7,6 +7,7 @@ class Pushpin < Formula
   head "https://github.com/fanout/pushpin.git", branch: "master"
 
   bottle do
+    sha256 ventura:      "33e94285daed9502e5d04c46eeb26896a00004f59972313c56bf2eeef1653d9a"
     sha256 monterey:     "f8f10a253ee4924c2c567262947ae94a9be9375329c7a5d3d8bc3f24a1d8d093"
     sha256 big_sur:      "b9bd3866895d340453cf9d45dfef6cd60eace67d54fb4dcea1b90078461419ba"
     sha256 catalina:     "ae9302317756f34243ed218a0c16a5576085ac4a537415e82d88ce95d91b30b8"
