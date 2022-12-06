@@ -1,20 +1,19 @@
 class Terramate < Formula
   desc "Managing Terraform stacks with change detections and code generations"
   homepage "https://github.com/mineiros-io/terramate"
-  url "https://github.com/mineiros-io/terramate/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "b6c04dc321a8151c707d06b48dcb8152c0ed3cfc9864258027801ad7b00b6684"
+  url "https://github.com/mineiros-io/terramate/archive/refs/tags/v0.2.3.tar.gz"
+  sha256 "08cd7641e477ec6c7d1a5232a17e5e87ad7537d0a84d72ab7acee72ad6895edc"
   license "Apache-2.0"
   head "https://github.com/mineiros-io/terramate.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c6a4295704f0b58deed002f7e5e62151e6e7a8cf061ce8454fb6e0bfca4fa506"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "205f58b855e11d60b1f661f12dcfea48240cbdf4fcdecc2936c8c8f1e5bbd635"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3396ac731378bc55c7fe5d97f555551a7e7691953475560859e349f54101901"
-    sha256 cellar: :any_skip_relocation, ventura:        "1cf2240e9706c80a3fe6d31198a1407cdf052a3d078b96975b84a1f677a52da7"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e990b05c71591526e50a98c2d644209305a5c7171fa18500ea6cb4cfd28757c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5560e18a449a95c44f9cfca36d22e24d9ff98d65ade8a8b0afcf652c32f5ced1"
-    sha256 cellar: :any_skip_relocation, catalina:       "c1fda258c453193b6112d25b55e82a3cf0839fa2748e9dcb096295c21550ab62"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "92b18d60a22f82c7c0c38f9e5fec81d7e0d3b04d9a4129c5763c8553653e0a41"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "08c981c0ecc2774f3c22371107191d23f58d20d5f1017eee1fad8c5d24cf042c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a71db6558c1aeed1ed88be9238db4d65adb58d6909f635f12d19dd490205816d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "55ad6226a8735a33fca474b45248e0c601bcbee333b31a50a93ca855c65bf3d3"
+    sha256 cellar: :any_skip_relocation, ventura:        "3667fb7d2ada2d696f777c3a6535ecddfb4164a36a587c4c4f16b2c03e8a64ae"
+    sha256 cellar: :any_skip_relocation, monterey:       "f5bd7c11d823eb55d3efbefc9583dbd8c7f8bc569b518f08ff2735cdd7d4510f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5c42dac890af3f93bf9f047cba0d4249d011c436ea3483d37eb4c38061d26961"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2d94ec208e8fc063cc1e3643864de015e259c528273deadfd4c0e5fc68c1637"
   end
 
   depends_on "go" => :build
