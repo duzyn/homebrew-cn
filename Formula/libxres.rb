@@ -1,20 +1,18 @@
 class Libxres < Formula
   desc "X.Org: X-Resource extension client library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXres-1.2.1.tar.bz2"
-  sha256 "b6e6fb1ebb61610e56017edd928fb89a5f53b3f4f990078309877468663b2b11"
+  url "https://www.x.org/archive/individual/lib/libXres-1.2.2.tar.xz"
+  sha256 "9a7446f3484b9b7538ac5ee30d2c1ce9e5b7fbbaf1440e02f6cca186a1fa745f"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b9bc0c9dc2360187c4a20cba5cff03e7a984c87ba8385f1c90dd0f4e3cab3148"
-    sha256 cellar: :any,                 arm64_monterey: "08be16e63de32143d6e1d506c17b0bf9967ebf339559ddd4086e3da5e065d900"
-    sha256 cellar: :any,                 arm64_big_sur:  "60935c75823a1601c976f1bcd0ac3376bf61b3a5662722c2490da69f7f69ba91"
-    sha256 cellar: :any,                 ventura:        "3eb0829bc11d328efedab19036ff7e4e147b887513d00a83a80c8c3037360408"
-    sha256 cellar: :any,                 monterey:       "95854ac6d283e212a643ed836fcc24c21e4ae78a6c0d8ed251ed9090f7e3a613"
-    sha256 cellar: :any,                 big_sur:        "993e7994f092301118aec29874cd7332ac5ddf2199dc38784f46aa2650bf54ff"
-    sha256 cellar: :any,                 catalina:       "98b7edc1c10775aa7fb949cb1cdc8e2a33a6f4a9de16b7e7d9366f3cd7ecdbeb"
-    sha256 cellar: :any,                 mojave:         "147c8a30297594a8da02cf5b46942d2c1408683adde5a7abe8ec272ff0452ada"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0819e6b6456495c3fc61d885f2f07385fac6dcce43c1d78f81fb7c8ee91fa418"
+    sha256 cellar: :any,                 arm64_ventura:  "fbf27991234578c082292975c64ee98b2ab2b69dd2cbc71056dfb3c2fd94ffb9"
+    sha256 cellar: :any,                 arm64_monterey: "e3fa4b14265315d1dd48439e241df505cef320c6a25a33a91e58e2245bb2f203"
+    sha256 cellar: :any,                 arm64_big_sur:  "cb39d8ae314b09357fbaadbcbb14abb7a21e85bb4d298a3e2efe2bd411a21fe9"
+    sha256 cellar: :any,                 ventura:        "7ba9d4daab9d3636b53d98510309eb2c37dd07ba9efd5585947d1e3609067388"
+    sha256 cellar: :any,                 monterey:       "ab7139ca0d7d8b12508d9211704963ff34d8b62a3888b222018c76dad8702280"
+    sha256 cellar: :any,                 big_sur:        "6dfe38b8542221db4841c3326d2c647894b7a86b45cae7b82ee83e95105ec150"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0a84c746909317e32b8e527e20d56df64836bf461e8719d5bbab2be1f249cc0"
   end
 
   depends_on "pkg-config" => :build

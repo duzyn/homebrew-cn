@@ -1,21 +1,19 @@
 class Jj < Formula
   desc "Git-compatible distributed version control system"
   homepage "https://github.com/martinvonz/jj"
-  url "https://github.com/martinvonz/jj/archive/refs/tags/v0.5.1.tar.gz"
-  sha256 "bea5980f6857370b93b396df03401f38f928400ac42ba8e757c86f34098956ce"
+  url "https://github.com/martinvonz/jj/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "327b314895c5a745c764bfc65c4529526d632f9c705223aadb9a1a9df46d1aba"
   license "Apache-2.0"
   head "https://github.com/martinvonz/jj.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "dbc2425af53f76825a156ea37eb1dc07b91f6b3c7b42a387c68cebc3a1abf3ce"
-    sha256 cellar: :any,                 arm64_monterey: "3f2be89fa77a5e3b95d111728f7ecf0e112d1c42a757e11ab2dfec3f67c9240d"
-    sha256 cellar: :any,                 arm64_big_sur:  "e84e321994ba5567a14bf20e0faafcffbf47a9c11ee80f84734915561944b414"
-    sha256 cellar: :any,                 ventura:        "ace5f912e2bef127bdd8a12c47342298ee28aa2d3ec5a1cc724cfd46e4b2c0f5"
-    sha256 cellar: :any,                 monterey:       "19afd506a426d68190ccd3ced98804fbafcbbec02c293688717c32b5fdeceb77"
-    sha256 cellar: :any,                 big_sur:        "77d471140cacda3819826b17dec0a451c5328141b04f324cfba458b2f1067ccc"
-    sha256 cellar: :any,                 catalina:       "588a26d6a31f505f7e413924b34cfebcd679b4f3b44856b70046e36e3aaaf5db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "319452669e2ff05871e795c624f641a7bd31ff16123ac1abde6af43affc77d55"
+    sha256 cellar: :any,                 arm64_ventura:  "e9760df51a3d7460c0c67664205c4f1240d6c9df6537fd365f646a76c732cb2d"
+    sha256 cellar: :any,                 arm64_monterey: "ce2d23e08bb0dabe40d0d94c00c9ada38fddae233e6597883d758a8ccd5716c2"
+    sha256 cellar: :any,                 arm64_big_sur:  "0518c08612a67e23ef77d9f7a882b6e9f3d4e913326492ab2623a409814c02c5"
+    sha256 cellar: :any,                 ventura:        "cc3d2f4a9ad6c9f83e4652fdf4d9b943f53d4ac047bf2f73aacc165c3493de81"
+    sha256 cellar: :any,                 monterey:       "d222058c9b1fa337c4ce3d0cc08bc05bc7e26bd15749c9ab4d8223b882467cb6"
+    sha256 cellar: :any,                 big_sur:        "1e84ce8e4e7f85628e93993f4f5467f02cbab1d29d3621ec89750eb58c53e3b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13f8c896f8d2730fc7c177c4ee51818ff848a8480096cd8b76b9c132a4ae00c3"
   end
 
   depends_on "rust" => :build

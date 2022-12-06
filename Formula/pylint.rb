@@ -3,19 +3,18 @@ class Pylint < Formula
 
   desc "It's not just a linter that annoys you!"
   homepage "https://github.com/PyCQA/pylint"
-  url "https://files.pythonhosted.org/packages/f8/56/81d13f29c39361c99c307e5b98bd8fc243db10089a16726d7cd80f843726/pylint-2.15.7.tar.gz"
-  sha256 "91e4776dbcb4b4d921a3e4b6fec669551107ba11f29d9199154a01622e460a57"
+  url "https://files.pythonhosted.org/packages/1e/fa/690c4dcf3ade9ae0497413c788267eafa36228394099708bb0fd0b8a6949/pylint-2.15.8.tar.gz"
+  sha256 "ec4a87c33da054ab86a6c79afa6771dc8765cb5631620053e727fcf3ef8cbed7"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "336d7a90b1e583c6a14c33c7485389cd1116d9e0afad869e71becd07121d3149"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "06460c6003e93b1be5ba9aed2b7ba34e051f32e3e71bdcbaface4f09c0d489fe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "650fdf44d9bfd9cec29ba3a2800a5681e7d0f884b4f5fff6f6b7b8809acb882e"
-    sha256 cellar: :any_skip_relocation, ventura:        "2d71e810f5ae9d2025c0b644504182f5f7b203884b201b9e1eb75687d27b004d"
-    sha256 cellar: :any_skip_relocation, monterey:       "cdf582b03efe9c62f91c4238a475339c3326aaca6c9845171e3b3d14fd365ce0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "af481fafca6f0cea7dd2cfc60ac7a230f6d448cac27dc7fd3a05a51e384ded5d"
-    sha256 cellar: :any_skip_relocation, catalina:       "79bf7363350df1420bcfdd4c8aa717cb164b92000e3fac55729a3af1492bb057"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "497767db5a035ff4928fd39e3946c56650e368a010fe02838f07199e061d83ca"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2606e39ccc345e730370dbc9af9c7984eb2361539235078ab7b48010d0f5fbe1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "290b59456402f93ee98408143cc4905c7648fd38fab2a1adefced826cb8e3f31"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cd79ec19e5c92b1edd55b1b20bc2fcacc963fc314d684759f9b04c930f3f7cbe"
+    sha256 cellar: :any_skip_relocation, ventura:        "1be2c0e6790064f9238ac510d8787aed25efffd2bb8bf7d1af4625249ddf80df"
+    sha256 cellar: :any_skip_relocation, monterey:       "73bb1b8f64072b56497871f9e4942b89cab8fa2c585e2399cce2009943354a68"
+    sha256 cellar: :any_skip_relocation, big_sur:        "39b25268af11f0b664086ebf50f2c29d72a3652433e7a6d5b1bd1b64a9b05878"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d235df914d009eb994a3192e2ecb89353aa101e3d27ac7fda9fae68a1a7f7ad3"
   end
 
   depends_on "isort"

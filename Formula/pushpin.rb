@@ -7,18 +7,18 @@ class Pushpin < Formula
   head "https://github.com/fanout/pushpin.git", branch: "master"
 
   bottle do
-    sha256 ventura:      "33e94285daed9502e5d04c46eeb26896a00004f59972313c56bf2eeef1653d9a"
-    sha256 monterey:     "f8f10a253ee4924c2c567262947ae94a9be9375329c7a5d3d8bc3f24a1d8d093"
-    sha256 big_sur:      "b9bd3866895d340453cf9d45dfef6cd60eace67d54fb4dcea1b90078461419ba"
-    sha256 catalina:     "ae9302317756f34243ed218a0c16a5576085ac4a537415e82d88ce95d91b30b8"
-    sha256 x86_64_linux: "db4a5f53106cbf72d01112736058598b87611614eaaaed32eaf5cb910dcefbe9"
+    rebuild 1
+    sha256 ventura:      "812691f678a11153b1c81bc116a5ffb3e16f71d8c55ebefb1684e2215c7d91c6"
+    sha256 monterey:     "ce250ecc703f631f4a613ac6e2fe8a63e8eef24e49af5dfa0cf1c4683fbd68f1"
+    sha256 big_sur:      "f553c2932f6650caa39126bc0fab6bda2c2a2394ade2fd292196bc683b461198"
+    sha256 x86_64_linux: "512449c5c34beb705907ff40485f8d0a7ca80c6a6dcc24c174b50af2f63ea0f9"
   end
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "condure"
   depends_on "mongrel2"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "qt@5"
   depends_on "zeromq"
   depends_on "zurl"
@@ -92,7 +92,7 @@ class Pushpin < Formula
 
     begin
       sleep 3 # make sure pushpin processes have started
-      system Formula["python@3.10"].opt_bin/"python3.10", runfile
+      system Formula["python@3.11"].opt_bin/"python3.11", runfile
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)

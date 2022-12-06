@@ -7,13 +7,14 @@ class ProofGeneral < Formula
   head "https://github.com/ProofGeneral/PG.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f6ae1aaa0a5ffc38fbc024a4f41ad6da5f128ab95e771e7358f59009587b0834"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f8c9ac9e7c89e5d24b6045a20a08a80b20bdd6f3a93ef643e5ce3630c35d877"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5f8c9ac9e7c89e5d24b6045a20a08a80b20bdd6f3a93ef643e5ce3630c35d877"
-    sha256 cellar: :any_skip_relocation, monterey:       "0d3054b85b1e07a7b0eb5d07cfe387d43428c5aa4602505f08e41a8148d8f66b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0d3054b85b1e07a7b0eb5d07cfe387d43428c5aa4602505f08e41a8148d8f66b"
-    sha256 cellar: :any_skip_relocation, catalina:       "0d3054b85b1e07a7b0eb5d07cfe387d43428c5aa4602505f08e41a8148d8f66b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f8c9ac9e7c89e5d24b6045a20a08a80b20bdd6f3a93ef643e5ce3630c35d877"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402"
+    sha256 cellar: :any_skip_relocation, ventura:        "e0f721f16c2c5e2ffa6b7ef00595ab6bdbdeda815f00a04ca30d2df2cc474e8b"
+    sha256 cellar: :any_skip_relocation, monterey:       "e0f721f16c2c5e2ffa6b7ef00595ab6bdbdeda815f00a04ca30d2df2cc474e8b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e0f721f16c2c5e2ffa6b7ef00595ab6bdbdeda815f00a04ca30d2df2cc474e8b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b87a94e0c06c19d5d57aedd9a628b69a22d559cfd331f563dcb93c02b5f0a402"
   end
 
   depends_on "texi2html" => :build
@@ -38,7 +39,7 @@ class ProofGeneral < Formula
     end
     man1.install "doc/proofgeneral.1"
     info.install "doc/ProofGeneral.info", "doc/PG-adapting.info"
-    doc.install "doc/ProofGeneral", "doc/PG-adapting"
+    doc.install "doc/ProofGeneral_html", "doc/PG-adapting_html"
   end
 
   def caveats

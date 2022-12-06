@@ -1,20 +1,19 @@
 class Forcecli < Formula
   desc "Command-line interface to Force.com"
   homepage "https://force-cli.herokuapp.com/"
-  url "https://github.com/ForceCLI/force/archive/v0.99.3.tar.gz"
-  sha256 "4aeb530f4510b421b2d769e8e2f5b581f5e4613c5f58ec1e68273c2fa6f25d90"
+  url "https://github.com/ForceCLI/force/archive/v0.99.4.tar.gz"
+  sha256 "8439143f865b9baf8b5d073be5ff68d67e11873dc5edf50541525c14dd28a543"
   license "MIT"
   head "https://github.com/ForceCLI/force.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "83629e442ad44a4b286f3c323e562adcd845e0de85cad6d9360cea61ea3d5610"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6de14a4d594a25cf9de9736ae0a648beceb5cc28a5a6a20ba0283a4885a6abeb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad57d3ecb79c1cebd469ce71fb84ef1309ece79c145f5d158e25a553b75b2140"
-    sha256 cellar: :any_skip_relocation, ventura:        "b4d13e5259ac50f48a473bc2f5a527c2ab9b3440986bfa6a4153ac27304e148b"
-    sha256 cellar: :any_skip_relocation, monterey:       "43b5c07fcf2acf2755b9803998d4601c2945641fba850d509827007d16c62263"
-    sha256 cellar: :any_skip_relocation, big_sur:        "999673ddf79fde79cb559181fbec13e8d67bf76fc0e678f01607c9066992a562"
-    sha256 cellar: :any_skip_relocation, catalina:       "8cd3aef35fb79ab653eed7c48b6ea93900620194149906a620bc56eee6c522b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0819b1a5223e3a98b0d0d7d05e7aeb1b9a6aeccd15957944bb577ed1435cd3a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "241af37aa6b61cd2003a1cb90dfc1e69b9d0058e0f02daeb88230abab74dc997"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f2946b4428c3c9de54152f023d3c35ba297e1ed65970a5161209d6f17c5cd89"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e265631fa2aedf954e16b608a0b092536f0f01b4a3a1d9b5af87c59c215c6423"
+    sha256 cellar: :any_skip_relocation, ventura:        "2e187753bafd63a018a62b3c97499395a34b10af8924c335613f24f38d1a543d"
+    sha256 cellar: :any_skip_relocation, monterey:       "9c673f97165c2a21ec0286d3a41d7f79d5667d1b9917b1a9af7949fa8cd68f65"
+    sha256 cellar: :any_skip_relocation, big_sur:        "47522f113b88826dbef5cc05486994e2028393213f16a920c274f28b2403ceb4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49857724f89d31e790246097ffc8d249ca4eadf0a65c5b47a13d154780ef12e9"
   end
 
   depends_on "go" => :build

@@ -3,33 +3,36 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://github.com/ansible/ansible-lint/"
-  url "https://files.pythonhosted.org/packages/59/c9/bebba18cfb0eb91208fbfaf44156225aa55bfe7f2dbd5afeb6f020fa5dcb/ansible-lint-6.9.0.tar.gz"
-  sha256 "14ef919920c4acc980547ded0bd423a7a27a0b2327738e593343f446f3b126c6"
+  url "https://files.pythonhosted.org/packages/fb/c0/915c941753e6ef9ca998621a5ee07a812a07d674cf5bb759de0488f1325d/ansible-lint-6.9.1.tar.gz"
+  sha256 "4c85f0d61700042cab964dd7bdc9227137ba5490249f705acfd9de46eb00a07f"
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "63a7ebc28ab5cd909ce8e20f791d6b16f5143ffd5a49c7246b77fbb5647bcb1e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f557a9ff5f80508a087727471403f3e9fd884da2a12f7ab9dc8b2e29a41c286b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c19e545a62b9f18b61f4d1d1a6b6252489d04367e5415702f3a1ebb4bae70e86"
-    sha256 cellar: :any_skip_relocation, ventura:        "109ed8dde333355ae97f544c215174af4363a4fc1482ebc826967ed20ec6fac2"
-    sha256 cellar: :any_skip_relocation, monterey:       "91a8c36b424ea437187e5f3f355339ac93377b5690552054f37c8f1ce523c43e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ff160c43d5098b1e6cb8a70084d0bb026de7107b8a8b90026ccb336a3f3de895"
-    sha256 cellar: :any_skip_relocation, catalina:       "762cfdb670529a6bd7673d39889256bea32f22de761e0a8a259da824e9fc1163"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0593442c02685142c0873b753f087fd8b4d8b51c00815640df1d369c01369daf"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "63138e1a50fbe38ac704d03d85736e165179ccfd75ec48daa900ee74ab82b074"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4132e5fb69d2a6d1f4d5d9c7ec7bab8173e65c4b76eea182c113a8b46b75fa03"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d325936e19b02c91b6eb040e2ed886203b9c5655a3c1ebdb2a33a92ec3a4cb4"
+    sha256 cellar: :any_skip_relocation, ventura:        "895b967591fdc96cae218e9284125cfdcb64e42e4ee081d1c9b5b70ff2778a83"
+    sha256 cellar: :any_skip_relocation, monterey:       "2587351e991bc2e2c8361c9940054d608278f6179c636539d06c75c4f93fa60c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "31081c750a408aa4cff8fdf8ce25a16836664a0e437ebbb07498ab980c93f69c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d64d9032206eb542e77aaee7c69d3001920e51e8abf9c885e573286aa598fdfd"
   end
 
   depends_on "pkg-config" => :build
   depends_on "ansible"
   depends_on "black"
-  depends_on "jsonschema"
   depends_on "pygments"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "yamllint"
 
   resource "ansible-compat" do
-    url "https://files.pythonhosted.org/packages/37/1a/604884d3655a80476dff5ad3cc9991decc5fb26d3f5df51d38361c3cedb1/ansible-compat-2.2.5.tar.gz"
-    sha256 "28c7c545fd60ef9c3059cfb2fefd27f92db091ff6b5868f83f121ceb5e1fe1b5"
+    url "https://files.pythonhosted.org/packages/e6/1b/ec4cab729bea3531ad4368d1b66858f9cbee5edd84a32a9830ef7da1f1d2/ansible-compat-2.2.6.tar.gz"
+    sha256 "8bb3488327125a0948d38b766389a4819573343d5673aa78a7bed23eb9d5b28d"
+  end
+
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
+    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
   end
 
   resource "bracex" do
@@ -47,6 +50,11 @@ class AnsibleLint < Formula
     sha256 "55447caa666f2198c5b6b13a26d2084d26fa5b115c00d065664b2124680c4edc"
   end
 
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/36/3d/ca032d5ac064dff543aa13c984737795ac81abc9fb130cd2fcff17cfabc7/jsonschema-4.17.3.tar.gz"
+    sha256 "0f864437ab8b6076ba6707453ef8f98a6a0d512a80e93f8abdb676f737ecb60d"
+  end
+
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
     sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
@@ -55,6 +63,11 @@ class AnsibleLint < Formula
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
     sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/b8/ef/325da441a385a8a931b3eeb70db23cb52da42799691988d8d943c5237f10/pyrsistent-0.19.2.tar.gz"
+    sha256 "bfa0351be89c9fcbcb8c9879b826f4353be10f58f8a677efab0c017bf7137ec2"
   end
 
   resource "rich" do
@@ -80,8 +93,8 @@ class AnsibleLint < Formula
   def install
     virtualenv_install_with_resources
 
-    site_packages = Language::Python.site_packages("python3.10")
-    %w[ansible black jsonschema yamllint].each do |package_name|
+    site_packages = Language::Python.site_packages("python3.11")
+    %w[ansible black yamllint].each do |package_name|
       package = Formula[package_name].opt_libexec
       (libexec/site_packages/"homebrew-#{package_name}.pth").write package/site_packages
     end

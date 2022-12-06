@@ -5,20 +5,19 @@ class Bazarr < Formula
 
   desc "Companion to Sonarr and Radarr for managing and downloading subtitles"
   homepage "https://www.bazarr.media"
-  url "https://ghproxy.com/github.com/morpheus65535/bazarr/releases/download/v1.1.2/bazarr.zip"
-  sha256 "7134917e7318032a0ea13cb4c31f2cc6ac92f76ccfe8666ef1a1f9851453c54e"
+  url "https://ghproxy.com/github.com/morpheus65535/bazarr/releases/download/v1.1.3/bazarr.zip"
+  sha256 "8ede84f95b43ec974f20975606456b43288d7d3eefc52633e245eb15001da571"
   license "GPL-3.0-or-later"
   head "https://github.com/morpheus65535/bazarr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "928ad62574c24713c62cd86f7a6020bfa12c4ecf61f77e9fb516ffea220cc272"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ebe32b1145358d2cad23ac28811e0790dc5685f058bc9015ace97e060a1e74c8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "10ac64976c6e9b76370d2c374ccee845644cc741e19c3aca639accccc381db52"
-    sha256 cellar: :any_skip_relocation, ventura:        "e35c604060938b923994154ba8b8ba9f8f8d7d97c4319d8b5eec7165827a616c"
-    sha256 cellar: :any_skip_relocation, monterey:       "3adcf5f5cc03b9bd69671babd4ca01d03ba963c12073af3b1f7ef3c80c6891e3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8995962b478ed84f0bd4685df9f144f9e90720e180733a9970dc99f3e6a01573"
-    sha256 cellar: :any_skip_relocation, catalina:       "f915c272ba2ef71cc56f08bb0c5f30477bcb364e663a5286b6835ed6c3368bb8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6d9c38db158cea2fac353ec9bf8a4afa39ad86cc280d2b68490921cdd6de1c5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "191075c049ec2090616c698d31cc0560535871154b795cb82caddfd9d6e4f6dc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9eb2e9016fc21e59ef8b006cba0b9e7a55ea2e84b374c0fdf4cf61ae5daf147"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f3947958f831acef279c21ed4f0c2d3c80393f5d72296f2b7f3c9c35ab93b00"
+    sha256 cellar: :any_skip_relocation, ventura:        "cf2f8e9b53ea8f2dfcc1f6cd50f9654255e507dd0dd9258e5d900ba2089e34c3"
+    sha256 cellar: :any_skip_relocation, monterey:       "140d97b5cb92f3c32cfe1396bfbad2b30eafba6a8cdd705d13ecc2dea44a6d64"
+    sha256 cellar: :any_skip_relocation, big_sur:        "053078f4502732e1641d395d608fe5705cccaa451db325a56365ddd4da837ac7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4251de38404c2bdc75ad5670e2833d0676a6c919eac9dafb5ea0876a08bf3818"
   end
 
   depends_on "node" => :build
@@ -84,20 +83,24 @@ class Bazarr < Formula
   end
 
   test do
+    require "open3"
+    require "timeout"
+
     system "#{bin}/bazarr", "--help"
 
     port = free_port
 
-    pid = fork do
-      exec "#{bin}/bazarr", "--config", testpath, "-p", port.to_s
-    end
-    sleep 20
-
-    begin
-      assert_match "<title>Bazarr</title>", shell_output("curl --silent http://localhost:#{port}")
+    Open3.popen3("#{bin}/bazarr", "--config", testpath, "-p", port.to_s) do |_, _, stderr, wait_thr|
+      Timeout.timeout(30) do
+        stderr.each do |line|
+          refute_match "ERROR", line
+          break if line.include? "BAZARR is started and waiting for request on http://0.0.0.0:#{port}"
+        end
+        assert_match "<title>Bazarr</title>", shell_output("curl --silent http://localhost:#{port}")
+      end
     ensure
-      Process.kill "TERM", pid
-      Process.wait pid
+      Process.kill "TERM", wait_thr.pid
+      Process.wait wait_thr.pid
     end
   end
 end

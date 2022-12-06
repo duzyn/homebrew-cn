@@ -1,8 +1,8 @@
 class Eccodes < Formula
   desc "Decode and encode messages in the GRIB 1/2 and BUFR 3/4 formats"
   homepage "https://confluence.ecmwf.int/display/ECC"
-  url "https://confluence.ecmwf.int/download/attachments/45757960/eccodes-2.27.0-Source.tar.gz"
-  sha256 "ede5b3ffd503967a5eac89100e8ead5e16a881b7585d02f033584ed0c4269c99"
+  url "https://confluence.ecmwf.int/download/attachments/45757960/eccodes-2.27.1-Source.tar.gz"
+  sha256 "70405a4540a7394c9edc85a55abbe6fe214678d71acd2543487eebebc9e16bac"
   license "Apache-2.0"
 
   livecheck do
@@ -11,14 +11,13 @@ class Eccodes < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "2c8287ec7ec83c5ce981b618e1a7a1b2fe8319cd4a539a79dad55b35d508691e"
-    sha256 arm64_monterey: "dda92de3e5c0aa3b85e51660812593aaef9515621c812043e583c1f3b01196e5"
-    sha256 arm64_big_sur:  "0aebf47fe8b76bc646aae05b112ba71235e5e0318712ab86eedb667ace6d51a4"
-    sha256 ventura:        "a2844665e762a51f2a2b4c56c73d747a40d5e112d3c6b8b532ff8326c3393152"
-    sha256 monterey:       "ba8b4677c0cf19963cdf54c4dd4eadf426e15e43d5f395ed2dbf6a50282626d7"
-    sha256 big_sur:        "dcc5fa1823d0708af4581cba206faba6d893bff359e04fc50daa48547a74b8b3"
-    sha256 catalina:       "b25268b098dad80115e4a320881d2c39fee1a0af22559aa3ccaa0f159eb45cc2"
-    sha256 x86_64_linux:   "d46673a8c6e5c769093851c019c06cfe141868339231e7681a872ce3d813a7c7"
+    sha256 arm64_ventura:  "6baf1e629a44c54cf58d25a7ae5723053d03d8f076836dc094dafa2ec7f8c969"
+    sha256 arm64_monterey: "6f0e7432723a8a05e40ef42f22d27191efae2b00b36e249b6ae881639a223186"
+    sha256 arm64_big_sur:  "0071754b1112f0c3f2ce884e7a9007c72a7598cac0948c244e20650a3dc441ae"
+    sha256 ventura:        "6ffdf03a49e114af585c94061e49ddf0a348f9dc47df4fb8464798dcc017324c"
+    sha256 monterey:       "f685579541f0c36ea9c90d182244862d2baec22539e7cac83d68a3949a43b687"
+    sha256 big_sur:        "91d4bfad8df020707ae102ab299fef722a36396acbd515f286e2e9b5ff36cced"
+    sha256 x86_64_linux:   "512318c8588065048ceb6e46c486af5ef7c70e506d7b95f1303919c71dcd7042"
   end
 
   depends_on "cmake" => :build

@@ -11,14 +11,14 @@ class NodeAT16 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ca0dfad052e4717f0ef6a9d6101b97ec6a63be9eb7c4a0d6a1f25065a2904232"
-    sha256 cellar: :any,                 arm64_monterey: "3beab95c662121a6d297f8e799267d8c97ed8936f1c5fbb2806b4fd235c63978"
-    sha256 cellar: :any,                 arm64_big_sur:  "0b2a9fb0a9dc92eb886b91de3d48eb9f1e5cecdad0a1c01801ba13a45533770a"
-    sha256 cellar: :any,                 ventura:        "2db11ca089d2c28cbae771c16b065daf24518bd4b2df61af7557cafd0ed5c0cb"
-    sha256 cellar: :any,                 monterey:       "7eb25934eb8b7139e9b0e68f5ce67c249f3f7226b39fc53a3a1d3f461006d399"
-    sha256 cellar: :any,                 big_sur:        "5f9b8f7d8213ecec2d3b9a39efc8d6a4df8a2c3f30a32c4fefe00392f5a3f9a2"
-    sha256 cellar: :any,                 catalina:       "09104ccf6ea1cd8dfe19089d2147b35b752cfa61725cb0edb971157e06f1847b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62a367e6f121ab83b95774420716099efca22e096bfbe141a9a11b1ff9b86616"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "f6f3cdf1ef28b20c373b65a88c1f811f9e87b8c9a5ab77b1bbe8a94e4bea960c"
+    sha256 cellar: :any,                 arm64_monterey: "fc7655ab57006204393e302aed8838ce7a22f64d7cb2f774ed45074e5a4fb019"
+    sha256 cellar: :any,                 arm64_big_sur:  "067c25ff17a2b3cbf45855aab4ce684dd5bc3f2507899483ecc9fd521b9006eb"
+    sha256 cellar: :any,                 ventura:        "6c9f36b2bb01c03b55302f4c946ac6f7aea9f544b114fff4755d7f71a2b2caa1"
+    sha256 cellar: :any,                 monterey:       "3cb54f7d6b1b9dbd3f82f6e2ddf193343955922d4e47cdaddbe23ada77d84f48"
+    sha256 cellar: :any,                 big_sur:        "1367cae5fd528093953ab0dae08813256821de05c106c6c96b710b098f9e3fb7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b03e8d18f57ec0734f5d1cc125212862ce999bd38e314e6faeaa3ce5851f8a67"
   end
 
   keg_only :versioned_formula
@@ -27,7 +27,7 @@ class NodeAT16 < Formula
   # disable! date: "2023-09-11", because: :unsupported
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "icu4c"
@@ -46,7 +46,7 @@ class NodeAT16 < Formula
   fails_with gcc: "5"
 
   def install
-    python3 = "python3.10"
+    python3 = "python3.11"
     # make sure subprocesses spawned by make are using our Python 3
     ENV["PYTHON"] = which(python3)
 

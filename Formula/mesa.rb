@@ -7,8 +7,8 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   stable do
-    url "https://mesa.freedesktop.org/archive/mesa-22.2.4.tar.xz"
-    sha256 "65d76b53ca5c7b46019e0e8e5b414de45d2fecd3fcd71707f6c3bc7691c9f7ab"
+    url "https://mesa.freedesktop.org/archive/mesa-22.3.0.tar.xz"
+    sha256 "644bf936584548c2b88762111ad58b4aa3e4688874200e5a4eb74e53ce301746"
 
     patch do
       url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/f0a40cf7d70ee5a25639b91d9a8088749a2dd04e/mesa/fix-build-on-macOS.patch"
@@ -17,14 +17,13 @@ class Mesa < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0e51503327aa8b10c1722a14ca204a588e729f7248cdbb3b993c1c2a7650f853"
-    sha256 arm64_monterey: "b6b2c74644de233f763ebe804cd82928bde11249582d6600585cba16fb6003c3"
-    sha256 arm64_big_sur:  "a1e1b345d97597781518782015e56c7870beb2f6a42f0a7c2dc33c72a8663c66"
-    sha256 ventura:        "ff1e0d3f6cea874752d6e7b5f47c0d6e37a2d7c123f4a324d54e6e65c112a194"
-    sha256 monterey:       "fb8532b58035a362a0a07b6ad11601f8e3ea861db20ae045756015c38869d314"
-    sha256 big_sur:        "52cb74ff1b1287b15e978fd88bbfa361bac95be070db5addce4eb410a111a940"
-    sha256 catalina:       "0329c1d3f75fd8cfd22035c070e4876ee67d7eeda5b98f0080ab0b669b02945c"
-    sha256 x86_64_linux:   "454a44dd4d8ed31f8a6c556b0c579dde1c7f0639984971f1c582f3b06b68ed66"
+    sha256 arm64_ventura:  "0ee197a6b33084712c28a0c301459c5b32fcf4ded6549dad3db3c9427ffcc8f3"
+    sha256 arm64_monterey: "ddd377f1027b8ea1c6198e276e66aecf5b28669c46a3972bb0eb5a859fb29c65"
+    sha256 arm64_big_sur:  "ba60c4a68d1619b475fe103fd6461e19977a0be7d5165c9b673f30a724b46d37"
+    sha256 ventura:        "26cb5f6e6216568dccd7ead8607059178f2857e88383c52baa528a4c5c6c66bf"
+    sha256 monterey:       "9deff26e1f7f672384bc4f45b77f8098fdeefd0459afa5b033f550b8f2eb0145"
+    sha256 big_sur:        "da8555800d3a5c1c8f0834fb2d076ae918dd39482dcaf9bafd31e8a7d5cc9b07"
+    sha256 x86_64_linux:   "4d26c18b5827c1097bd502a005c97efe4eda1f081096a9ce9070133b962dcf53"
   end
 
   depends_on "bison" => :build # can't use form macOS, needs '> 2.3'
@@ -58,7 +57,6 @@ class Mesa < Formula
     depends_on "libxrandr"
     depends_on "libxshmfence"
     depends_on "libxv"
-    depends_on "libxvmc"
     depends_on "libxxf86vm"
     depends_on "lm-sensors"
     depends_on "wayland"
@@ -111,9 +109,8 @@ class Mesa < Formula
         -Dopengl=true
         -Dgles1=enabled
         -Dgles2=enabled
-        -Dgallium-xvmc=disabled
         -Dvalgrind=false
-        -Dtools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,xvmc,lima
+        -Dtools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,lima
       ]
     end
 

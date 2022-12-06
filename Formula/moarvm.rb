@@ -1,8 +1,8 @@
 class Moarvm < Formula
   desc "VM with adaptive optimization and JIT compilation, built for Rakudo"
   homepage "https://moarvm.org"
-  url "https://ghproxy.com/github.com/MoarVM/MoarVM/releases/download/2022.07/MoarVM-2022.07.tar.gz"
-  sha256 "337ef04d16f826f99465c653b92006028fe220be68d3dcfd0729612f4f6b5b46"
+  url "https://ghproxy.com/github.com/MoarVM/MoarVM/releases/download/2022.12/MoarVM-2022.12.tar.gz"
+  sha256 "51c3e9c9a7a191c148f213b65ae1f4fcfe5d4b7c16c86300e9ee8e18eaa8becb"
   license "Artistic-2.0"
 
   livecheck do
@@ -11,14 +11,13 @@ class Moarvm < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "5a0e24b677f599e65ab76c68536af693985bf4fce971283f748fd136353715e2"
-    sha256 arm64_monterey: "c335ea6fcf6d368da8cd089eef6d4e92f1afacc0b3611c3998962a30e11ef541"
-    sha256 arm64_big_sur:  "136c4fa195d271d6173d7cedce64687469d78f98abdb54e63ad0867b509aeee1"
-    sha256 ventura:        "79f919e3dfa490ec1b710e8594d6c4007e0c68e867cb3725cb0c4396bf5dfd89"
-    sha256 monterey:       "9701ad19168d40f5bc1f8dd8be949a8dedce92aa126ea2ec94610910cddeac8f"
-    sha256 big_sur:        "2a620be5f33a4905533b3c72e3cf89362539ce7afe73d9df8980c7546ede3346"
-    sha256 catalina:       "9e0bb460a56d78c2b92a9cd4a5c5bccab43a50cee9cb6edc32777edf4177f741"
-    sha256 x86_64_linux:   "0e0a0f4df22ec7905fe04088cb0f1544c889f3c7146ebe76d54d14808cbd18cf"
+    sha256 arm64_ventura:  "6fc43306382629ef7ec2fa15c42ca906093996f3ba5a3c70b19d18927e67907c"
+    sha256 arm64_monterey: "c33d6e42e77c897ed31ce2f18c5c6a8e8b707160a1f0a8e18c3dea2628dc4c12"
+    sha256 arm64_big_sur:  "a39c90a995940e34016dd9524951e75796e6e82761be29d4b84e0ea70ecb03dc"
+    sha256 ventura:        "26ccba25d90674158d130f5e59f28c45ca7fea13c08f1174519d76b15b07e4c6"
+    sha256 monterey:       "d6a260da5e201b3710b291b235067c3e12d12cb4342ce62096b2a378c46f687f"
+    sha256 big_sur:        "269be1fb61ffd7749068dfb92a8803c1d3c1844562239013abac1220da3f7aaa"
+    sha256 x86_64_linux:   "ee1182df9db306e739b76f3ad9ccde7d03137affc0d4a76ad1612c78664ff164"
   end
 
   depends_on "pkg-config" => :build
@@ -32,8 +31,8 @@ class Moarvm < Formula
   conflicts_with "rakudo-star", because: "rakudo-star currently ships with moarvm included"
 
   resource "nqp" do
-    url "https://ghproxy.com/github.com/Raku/nqp/releases/download/2022.07/nqp-2022.07.tar.gz"
-    sha256 "58081c106d672a5406018fd69912c8d485fd12bf225951325c50c929a8232268"
+    url "https://ghproxy.com/github.com/Raku/nqp/releases/download/2022.12/nqp-2022.12.tar.gz"
+    sha256 "e5f7d13a0a4855be420c071cdaf004c7abd0984977863bd2828a5cf7de8459ad"
   end
 
   def install

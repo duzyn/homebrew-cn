@@ -1,19 +1,18 @@
 class PinboardNotesBackup < Formula
   desc "Efficiently back up the notes you've saved to Pinboard"
   homepage "https://github.com/bdesham/pinboard-notes-backup"
-  url "https://github.com/bdesham/pinboard-notes-backup/archive/v1.0.5.4.tar.gz"
-  sha256 "c2a239f8f5d7acba04c8a5bdf6e0f337e547f99c29d37db638d915712b97505d"
+  url "https://github.com/bdesham/pinboard-notes-backup/archive/v1.0.5.6.tar.gz"
+  sha256 "0b544d5e3dfd0ebf029b50fcb405045f601dac1f103fbd95f2b24b5aefd4ef40"
   license "GPL-3.0-or-later"
   head "https://github.com/bdesham/pinboard-notes-backup.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3069c8f2bf3d19e00854023d614cbfaa54124714bc24f19add7342fddadbc7fb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "872d668ef3797167027e12761a3d7f75624c1fa0f2d2fd319e003647f6d67d0e"
-    sha256 cellar: :any_skip_relocation, ventura:        "aa2a58fc830cf1fd4251f2115f8ac0de7f0f5b1b87a43f9362dac87243d55072"
-    sha256 cellar: :any_skip_relocation, monterey:       "014147bd4fab3f85d1d01efa02132303dbe6240ef67c7a71c1fe4f4595ea7d0f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b383069c859d37cc356106c445768f3996f1eac4a83e20d57d9800a0c4328485"
-    sha256 cellar: :any_skip_relocation, catalina:       "8f86319b5bd957198edc1a19cf7af1a11fba9ee5ef950f8f8bd8b8f56af0d37c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "183578ddb3979e5736e4d317eb393c4b967f63421b30eb8a5c8403fafc398624"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "44a95be5ba2c82644c18c048756fe4223dd61f2ba7fd010e0c895cbe78b0585a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a668842564ed2394a77076e8c3e8b4efe8b9b5032e2a3316f8ff3a741acc480c"
+    sha256 cellar: :any_skip_relocation, ventura:        "e3b01674e194bf24426b5414f0468ad94b2286862a02338a7f9c26767cf9f2fa"
+    sha256 cellar: :any_skip_relocation, monterey:       "bb0049130131cd64c501093904ff99a6df2d2bc26e4c4c05aafbe840e28c9b27"
+    sha256 cellar: :any_skip_relocation, big_sur:        "01a6a006a5df7ec5ad09606c18a80ae9df4b4551035c35c7777ef6220e691445"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d27dbcd35071c388a067a7b15bf279f334b0c188d121afbf50cab84c261e5ca"
   end
 
   depends_on "cabal-install" => :build

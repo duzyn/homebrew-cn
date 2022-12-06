@@ -7,15 +7,14 @@ class Fontforge < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "2877b10547ba4cd29f862f6c1dc1c309d77160cd5f2c77579e293b2384fafeed"
-    sha256 arm64_monterey: "c4c7c43b312119d9b97d42ebaa210697568cf22ce82498cf8813e5ec58ab37b0"
-    sha256 arm64_big_sur:  "eb069fa8949ad7af2695a89274759db5cb38e98e9bcc23fdf30c7de72a9d6d53"
-    sha256 ventura:        "03acf1f910c8092b29c06f8c4f893ddec0902b4bcebe4dbe7172fb7d3e2449a7"
-    sha256 monterey:       "44b3d610d061ef7fe534c2987335139d66864bafef53a3e7ba49cb84aa1275e5"
-    sha256 big_sur:        "228b244c5aaea2c32509766bff600123517f2f2a8237c55777c4330cb2172ca9"
-    sha256 catalina:       "de84a69c165f80517bdf2a20de3449ffb15e8ca17d02d4f5e7d3dfd7a298b32c"
-    sha256 x86_64_linux:   "4cb6042dc8bce77449063f59bce4e9fb886508e3f0cef6ca5e46e68f29a9c17b"
+    rebuild 2
+    sha256 arm64_ventura:  "072fc4af1b9c6b1fbcf32dbee28b8eb62f06dfd7153a25bfa9c1fe7042264d5d"
+    sha256 arm64_monterey: "a7031eb564d235e82213d442196924b91c11476e4a647db9c45d51d0726b0954"
+    sha256 arm64_big_sur:  "beb4d356444abd866b702f45fe89f29968afe1ccf95813472fd9c5ad9fa335fd"
+    sha256 ventura:        "706492e1dbe79ec3f96f9d0230f07a4edb76961116be298536ab038a70b35c38"
+    sha256 monterey:       "06a77e255751a88fd8d7e0f48b6f19c5689aae22ad6570c0f6a9501f3ea2dcbe"
+    sha256 big_sur:        "c81153b469fb6a7e5d55caa349702c7c80230e6f4dcd18867e36cbec9fc4332b"
+    sha256 x86_64_linux:   "06fc685890e7c42b7150e1e20b314db18dac38270d7f8b9d5e54e9bdb0147769"
   end
 
   depends_on "cmake" => :build
@@ -34,7 +33,7 @@ class Fontforge < Formula
   depends_on "libtool"
   depends_on "libuninameslist"
   depends_on "pango"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "readline"
   depends_on "woff2"
 
@@ -73,9 +72,10 @@ class Fontforge < Formula
   end
 
   test do
+    python = Formula["python@3.11"].opt_bin/"python3.11"
     system bin/"fontforge", "-version"
     system bin/"fontforge", "-lang=py", "-c", "import fontforge; fontforge.font()"
-    system "python3.10", "-c", "import fontforge; fontforge.font()"
+    system python, "-c", "import fontforge; fontforge.font()"
 
     resource("homebrew-testdata").stage do
       ffscript = "fontforge.open('Ambrosia.sfd').generate('#{testpath}/Ambrosia.woff2')"

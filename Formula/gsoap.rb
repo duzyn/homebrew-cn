@@ -1,8 +1,8 @@
 class Gsoap < Formula
   desc "SOAP stub and skeleton compiler for C and C++"
   homepage "https://www.genivia.com/products.html"
-  url "https://downloads.sourceforge.net/project/gsoap2/gsoap_2.8.123.zip"
-  sha256 "e018500ac942bb7627612cc9a8229610efe293a450359c413da1a006eb7c193d"
+  url "https://downloads.sourceforge.net/project/gsoap2/gsoap_2.8.124.zip"
+  sha256 "4b798780989338f665ef8e171bbcc422a271004d62d5852666d5eeca33a6a636"
   # Parts of the software are alternatively licensed under gSOAP-1.3b, but this
   # license is considered non-free by Debian and Fedora due to section 3.2:
   #
@@ -19,15 +19,13 @@ class Gsoap < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "34714734575ed67d4e9f615ddb657f4c3f542976aee666ab8c776b757f9e4d20"
-    sha256 arm64_monterey: "1c94359903d3ba4209032859ee9de3796770a727f71ef1816b26aea52564341b"
-    sha256 arm64_big_sur:  "55cb4f1b8dc2b473f08ad10669a9c50d1df270c41b1a2e80e4d85c8339443ded"
-    sha256 ventura:        "e51bc65094b6e04811bd49155a2a9eb0447fae212aada2a275caf9e6b6697968"
-    sha256 monterey:       "ea1dc19b64927f5ced7ace5733068b65b52185d9d5dd8acc47873ad654ef1773"
-    sha256 big_sur:        "d4c16542ff785bf25cc1043d7c659ac6d5c7b7be9885db216ec224247cfc913a"
-    sha256 catalina:       "84431c27cac489061a0f24e507ccc36690e2cb696d5e05a62ac13e834795566e"
-    sha256 x86_64_linux:   "6966f95eb5cd051a081b744e272adef135570a52f3843163fa58a18378aeec7c"
+    sha256 arm64_ventura:  "8ae72f5a869fbc40c6f15450c37a46b05db0c494d339ade75b9a25aa1c397417"
+    sha256 arm64_monterey: "df2f4a61fdd83bfb228c1812b4139ab8c31025a7a19aa3c9bb021b0d5b6c2300"
+    sha256 arm64_big_sur:  "b894ca19436b1fecb537a2872786809b0f61afc683ca1f5c2e928bf78d63c05a"
+    sha256 ventura:        "cdfab81f973c13b116aca05af37f399c3aa05161e29b453d15a92765490ffa06"
+    sha256 monterey:       "58ff66ccf30a497abda50598d1298fbccf657b161c362301c6fad1968a758bc5"
+    sha256 big_sur:        "f829846214c1157e6902a0efc8f126395428753aa4793a6d64bb60e787fe1f4f"
+    sha256 x86_64_linux:   "9845cc9f94df31097c5a9b3006619b9aedfeb1343b714c0eb0b0649fd7ce2d74"
   end
 
   depends_on "autoconf" => :build

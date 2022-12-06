@@ -2,6 +2,7 @@ class Screen < Formula
   desc "Terminal multiplexer with VT100/ANSI terminal emulation"
   homepage "https://www.gnu.org/software/screen"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://git.savannah.gnu.org/git/screen.git", branch: "master"
 
   stable do
@@ -18,18 +19,19 @@ class Screen < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "ce1f17b090b32eec82a32d8d57c8a8e820dc5c4fb7e0cf47ffcf7e50d339a405"
-    sha256 arm64_monterey: "fe5385e7a06b3b3c7b619979a2506ab727c0c2abc0f69eba749fe9f737a934ac"
-    sha256 arm64_big_sur:  "b6cf1074628d7dbbf2fd816234c666f56f2a4f0a58f6ec5d6cce97fd4d0150b1"
-    sha256 ventura:        "f8d02d5c974557441f72d624d86292b2a039e180b7864ef1683252c3757be77a"
-    sha256 monterey:       "7df16eac999996ffccb6215a711039ccac9e4a7b576a3ae07b90be855bd017c0"
-    sha256 big_sur:        "8d4a322e94a212359803fb59f0dd306fda8baf7ae825e47dee1f307feb0dfb43"
-    sha256 catalina:       "3d60abe23c16c832fab478a211305c30e86f19e3d859d19f5855b3ab21dd0082"
-    sha256 x86_64_linux:   "2b36866a15b6811d4682815c4d446e05c93cad630f1ad3ca2b97e7589429b81c"
+    sha256 arm64_ventura:  "710010dcc95e1c009e74900645ed999f5061468be5d6d8132e858218ed9c4b9f"
+    sha256 arm64_monterey: "82681e96492eee0fcc3bb05fc35bb9c851863977661f0cb82e8566e9e00281ab"
+    sha256 arm64_big_sur:  "db92cc1e9676ee7395909eec825d41ea84812e6190583e220f9ee252ec13499c"
+    sha256 ventura:        "7d57b0e3d553434da8944818f44a0795400ad7047861b7bb13ca4b23027297a0"
+    sha256 monterey:       "a20516f42dece533dde56d54b7a23d48f8dcb15532fb8645939e3585ef744e8e"
+    sha256 big_sur:        "458a2df89e572e2b3d058881f843965dc45c5a2dedeebeb1ebfbd0aa6c8297be"
+    sha256 x86_64_linux:   "37add3e97f6ba3316be8b920dd6a41089b095c5e8a3fb4b3a5e64cf98c98b0ef"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+
+  uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
 
   def install

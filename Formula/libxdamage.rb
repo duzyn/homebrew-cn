@@ -1,21 +1,18 @@
 class Libxdamage < Formula
   desc "X.Org: X Damage Extension library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXdamage-1.1.5.tar.bz2"
-  sha256 "b734068643cac3b5f3d2c8279dd366b5bf28c7219d9e9d8717e1383995e0ea45"
+  url "https://www.x.org/archive/individual/lib/libXdamage-1.1.6.tar.xz"
+  sha256 "52733c1f5262fca35f64e7d5060c6fcd81a880ba8e1e65c9621cf0727afb5d11"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f6d6b8f9afcd3746a9d0da10592b154474817d5740ecd514fce6568fcfde672c"
-    sha256 cellar: :any,                 arm64_monterey: "eeefeeb565b76ee3e2439d2eb4341e02f36b5ce4d9aae5dc150f7f1489c8fd73"
-    sha256 cellar: :any,                 arm64_big_sur:  "bbd5ef8f7408de369198e66bc6aa8a75ddc798c444ebd7f03b885bc25ccfb136"
-    sha256 cellar: :any,                 ventura:        "79bf762bdf9ac37319a7d0ac0e343c4664681b19b6a8f7366c0edbb411622438"
-    sha256 cellar: :any,                 monterey:       "e6b04a9a43aea7fa0e047ee721d78cbaf9985ff1f8e7b62b9d0645bbccc88746"
-    sha256 cellar: :any,                 big_sur:        "68750157664e1290e30b15ad95dbfcc1be2748b85e7eaef0851f2c0f56f043e3"
-    sha256 cellar: :any,                 catalina:       "2c09f29dfafe280bc0179dfe6ad82b623459e6bec07fefac41cf6b3e52385100"
-    sha256 cellar: :any,                 mojave:         "ea0aee131addc90c4b4ba6e0d8c4f8cdfd39dc034a7bfc3e841c408042ad8906"
-    sha256 cellar: :any,                 high_sierra:    "5c0ca5debb8c99cfed432fa2299e4a280ca81f8988aaacf44e0c0194d89ca7ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b55a0d21cbb4d4ad796564955f10369d59d80e7ba156c95cce2f82486cfcdf7"
+    sha256 cellar: :any,                 arm64_ventura:  "f7ba5d6474c6d7be855f270e843c42d1e3b819d43e7d96c3b62789265f264a3b"
+    sha256 cellar: :any,                 arm64_monterey: "1b820498fc3f7216bcf074f0c8165875a0250390e837d9db05a62bb9ada85d5b"
+    sha256 cellar: :any,                 arm64_big_sur:  "e80bbc3be1914e6a890f446dca34b789b0c0746bb0bf78426bd8d3137b771f13"
+    sha256 cellar: :any,                 ventura:        "0a57b493cab139a05dfd0d497b01a98525161094a456568fe35175043bd5f792"
+    sha256 cellar: :any,                 monterey:       "f4a6249de91d6f556fe83f4d092233a7b45dff9fe2a3dcf7c23f43e8cb502b9a"
+    sha256 cellar: :any,                 big_sur:        "682e7654ca8a9c91c37b156e173f2280fef06e51ba6604062a8fc3966ef01028"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d888f5feb3f6cbaf35ca9d4f6af015555e30be8295bb378594290081e74c29f"
   end
 
   depends_on "pkg-config" => :build

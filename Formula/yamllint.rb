@@ -9,17 +9,17 @@ class Yamllint < Formula
   head "https://github.com/adrienverge/yamllint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "58d67664eca5c91e1072fa00941491a9af5e6d07a99c422ef022cd033f7f6b16"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e734080f9ef58b1e5b324cd5a421601519a181b466df093f2890252c8c32a61"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "652aac84b2465cacd8148561d7448986c73df6b512b7aed9e351e4c7c7f8be60"
-    sha256 cellar: :any_skip_relocation, ventura:        "3737f04fc04a1a689e140055a09125d10d7e138eb2b1f9ebbab90e5f1917b5d1"
-    sha256 cellar: :any_skip_relocation, monterey:       "13e33c28193edf6781c3cf33e992c3b4e32cd63275b76678b634e6cdd06eb46e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ad293f400a905f2543160b822dbe7ef35fc57cc311af01cf6e42323649ce6ea3"
-    sha256 cellar: :any_skip_relocation, catalina:       "ca41159b0a775a9352295d2232520385baf10edbbdcf422bd1bc5b498efd1173"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f973b37601f6e98ad1b30d03c81f6accf8155da0feb0c146c2b3b544e6a72fe5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7afd5ce4129a2b8dc19364a45db7eb13e6cf94ce28aa34626f754065a5eb83f4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a0c0746af382e94c290e18940b6a0cf3348da5a505b0b85164e8e0c2107e3d99"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "53d2145c8b89c3bcf0ffe6c4978a67b8f686250e3633473ca0575c0bb5f99dff"
+    sha256 cellar: :any_skip_relocation, ventura:        "2ee52b5752706b8eb7561b17173fe9d8a117ff9959e827494e18a1fc818ddd53"
+    sha256 cellar: :any_skip_relocation, monterey:       "957f364235a62b3f309db996edaccc0c99a80ad767e238246e6c53e4fdecba18"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dff529d3f7f29984710a09ef2b1b72f5a390466fae3499d5091599a72ea387b6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6778f7b696ef2df84b7c46c31277f22fa761a4b59701243c7da3e05fc913db12"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
 
   resource "pathspec" do

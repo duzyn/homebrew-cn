@@ -8,14 +8,14 @@ class Fdroidserver < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0b379d897e3aef060bb365fde3252793849b8aa18d167ea49a96d2a50b60d890"
-    sha256 cellar: :any,                 arm64_monterey: "7394bcccd88504b7c6caa7df811299b40b776d62b96f2095f7aef63f095b478d"
-    sha256 cellar: :any,                 arm64_big_sur:  "63fb14aa4991927ae142646672798414d574b5d8e422b8d8dfffc3c03f8f7e4d"
-    sha256 cellar: :any,                 ventura:        "12017fc567d4207acb81a391a6c7cb082e4d641a968a6a6ac0b53a9be6cc0dd9"
-    sha256 cellar: :any,                 monterey:       "88745ae0cfcf92903566e57e21f3a2c9d9b4dcb51abed6666c23b3086b9deb9a"
-    sha256 cellar: :any,                 big_sur:        "9078b026b42bd3d327d7f39e12e4bd778816b37e22168b48af27249a07a01e19"
-    sha256 cellar: :any,                 catalina:       "6ac7690e433971be661e15bdab1c03f840647be08f87d0c2574992f08606aff9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "037b17aefa5b781b804372af92856c5e155b96031e18ecd5330a8158e078d962"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "9d5dca80e5c29d32730764679d592228c5d2e28794ae9c15ac720d440e393374"
+    sha256 cellar: :any,                 arm64_monterey: "478596b676723f6cfd33b8286e4cd75926e9a4aab6559389222a83eefabb6dbf"
+    sha256 cellar: :any,                 arm64_big_sur:  "e28f7965e0ea2bb2bbd658a672ab92abd300b94d93c104222ecaf2a37596da25"
+    sha256 cellar: :any,                 ventura:        "0ac49d151a861189fadd72e24ff558ab17b05a9883593379d90170bef50677d2"
+    sha256 cellar: :any,                 monterey:       "913dda8b7deb11c6a68b6b278f53df30faa3de6f7f1043c99bd37b1b6eb1c91b"
+    sha256 cellar: :any,                 big_sur:        "f10323033b644fb255d7177cb07dce4ee8f14a38974b0012788d17df389750a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66718afc83ee3fa44ca09ba48dffe2efb1b4ca31dc7ec75ef99a6cf7d65462d1"
   end
 
   depends_on "pkg-config" => :build
@@ -26,7 +26,7 @@ class Fdroidserver < Formula
   depends_on "openssl@1.1"
   depends_on "pillow"
   depends_on "pygments"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "s3cmd"
   depends_on "six"
@@ -227,7 +227,7 @@ class Fdroidserver < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3.11")
 
     venv.pip_install resource("lxml")
     venv.pip_install resource("cffi") # or bcrypt fails to build
@@ -243,7 +243,7 @@ class Fdroidserver < Formula
     bash_completion.install "completion/bash-completion" => "fdroid"
     doc.install "examples"
 
-    site_packages = Language::Python.site_packages("python3.10")
+    site_packages = Language::Python.site_packages("python3.11")
     %w[fonttools ipython pygments yamllint].each do |package_name|
       package = Formula[package_name].opt_libexec
       (libexec/site_packages/"homebrew-#{package_name}.pth").write package/site_packages

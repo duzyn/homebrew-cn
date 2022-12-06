@@ -8,20 +8,20 @@ class Weasyprint < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "466244a171b97a80fa0f4cd401a0ad232a007847f8cd0f1f6ea50fa1b66faea6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "899fa0f8cbde19fda5930378eccce1b5e1266cc43f561faeec5a9f6d12b5d75d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1980034b618869237405fb1b5eae667ec7d0a3691e11dd64827709a84658dcfb"
-    sha256 cellar: :any_skip_relocation, ventura:        "a05290b9569300111f945e286feeb4c577ba247490d2ccea163e3e9435a2aa1c"
-    sha256 cellar: :any_skip_relocation, monterey:       "258262bd1b246b2532ae085158e3225079f874d09ad30982ac7bffae54f6b579"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fbf8a42ff240743bc71ee8406212b42ff2f7b16af4c30c8257e4a32e48005786"
-    sha256 cellar: :any_skip_relocation, catalina:       "a2a047df728552b1448827b48e5dc4e409695d4e1e8621397b22558956ee643e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ef6c7af41626c449c08394bedf5a70ac580f563f50c8fb6017c5f6260033afc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0b77bac5a71195e57d911f300ac80c0f01359932c3d3e46a22cfd3a25ee80a34"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe33f25a704614d886f91c1b69b86cdd3afe6fb87de23dc25f010284172974b9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc6c6125555167cab03683ceac8990aa6d7a2708042912bf2956ede1ec006a76"
+    sha256 cellar: :any_skip_relocation, ventura:        "51cd997d1fdd8d78105fc4d9a3b0c51131627f2a03a88d40148ff6f3f50a3875"
+    sha256 cellar: :any_skip_relocation, monterey:       "4ce13a1001b743ec5657f6a757b901a0a9da7d5f06b8dc3a82fe06d1820b1e79"
+    sha256 cellar: :any_skip_relocation, big_sur:        "78b8c25be8b5f03fc70c6f11a3e2999381fe9c75518ac7624df550b39c54e274"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a84cd9d63149db9f3dcbbb24cb88f26dbec2f572df97b1f26d56263131cceecc"
   end
 
   depends_on "fonttools"
   depends_on "pango"
   depends_on "pillow"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
 
   uses_from_macos "libffi"
@@ -69,7 +69,7 @@ class Weasyprint < Formula
   def install
     virtualenv_install_with_resources
     # we depend on fonttools, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.10")
+    site_packages = Language::Python.site_packages("python3.11")
     fonttools = Formula["fonttools"].opt_libexec
     (libexec/site_packages/"homebrew-fonttools.pth").write fonttools/site_packages
   end

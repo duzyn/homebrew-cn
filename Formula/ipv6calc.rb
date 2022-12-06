@@ -5,32 +5,31 @@ class Ipv6calc < Formula
 
   desc "Small utility for manipulating IPv6 addresses"
   homepage "https://www.deepspace6.net/projects/ipv6calc.html"
-  url "https://github.com/pbiering/ipv6calc/archive/4.0.1.tar.gz"
-  sha256 "0de7dbe66c0e3602becc18bb8f69a278a02eeaf5d58779cd1c0e0069eb80a7e6"
+  url "https://github.com/pbiering/ipv6calc/archive/4.0.2.tar.gz"
+  sha256 "f96a89bdce201ec313f66514ee52eeab5f5ead3d2ba9efe5ed9f757632cd01a1"
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d99b4ea93dd68a86651685bc3b587d80aa36a90e9077f3af69f6729245d57a02"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ca999fa659227c7bdca2b63006529c0e8dad64720e607cf94e1835e27c0a78a1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b545b0a609090f95d5b2d3007808ae8817cad93a78cf7ba89cb6554a0e41e2bc"
-    sha256 cellar: :any_skip_relocation, ventura:        "9c971fcf11c6c96436a799e622b07c960595193f7ae87d430509ba68c9242146"
-    sha256 cellar: :any_skip_relocation, monterey:       "b1925cb855c9999f95581d3694cdeb7a545ae704fa8f7d9f96231030ac712bc9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fee579c01e98ca1a5123a3334f214a0d62c046440c9605c7f476b8ddc670c612"
-    sha256 cellar: :any_skip_relocation, catalina:       "d83cd743ee2ad297ca525fd3de999f8025b54d404fc8261112c5a0481a69e7cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ddfd1020b80b018704b06593b591928ba6e4fe280a3d5b1757eb0cb2a32b380"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ec95bedb2ffc3314f59eabfb03c15e3d2df693cbf6d12751ea6ceb9f303e8a20"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6fcdc8e16f2afbca82bed3e603ebb43909bcc606e18a8d272ead9265c5a29e3b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a3f06f0c71e1b4276f9aa6fbfca5dd6faf075b4e3ca6021a65a63842d1ece4a0"
+    sha256 cellar: :any_skip_relocation, ventura:        "d2329add8cc4d59f0dfe8e31fe146410e0de8fd70b67f8efdf351f4311950412"
+    sha256 cellar: :any_skip_relocation, monterey:       "1c59cf12317c2376dc3822a35683778664f6f1a0224329ddca4135390bb1874b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "98418aac5aed19fef65e68151cf86e5dbd8189c00abade45ab7ffcc47077ad46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "844ebdae509e6b79ce9cb74474db0f5563f4e277220f887a38b5c5d1a814a02f"
   end
 
   uses_from_macos "perl"
 
   on_linux do
     resource "URI::Escape" do
-      url "https://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.72.tar.gz"
-      sha256 "35f14431d4b300de4be1163b0b5332de2d7fbda4f05ff1ed198a8e9330d40a32"
+      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/URI-5.17.tar.gz"
+      sha256 "5f7e42b769cb27499113cfae4b786c37d49e7c7d32dbb469602cd808308568f8"
     end
 
     resource "HTML::Entities" do
-      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.76.tar.gz"
-      sha256 "64d9e2eb2b420f1492da01ec0e6976363245b4be9290f03f10b7d2cb63fa2f61"
+      url "https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.80.tar.gz"
+      sha256 "63411db03016747e37c2636db11b05f8cc71608ef5bff36d04ddb0dc92f7835b"
     end
 
     resource "DIGEST::Sha1" do
