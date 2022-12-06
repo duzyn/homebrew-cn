@@ -16,7 +16,7 @@
 
 ## 安装应用
 
-    brew install duzyn/homebrew-cn/APPNAME
+    brew install duzyn/cn/APPNAME
 
 ## 卸载 Homebrew
 
