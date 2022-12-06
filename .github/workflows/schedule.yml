@@ -78,11 +78,11 @@ jobs:
         # Tor Browser
         perl -pi -e 's/dist\.torproject\.org\/torbrowser\/(.+)/ghproxy\.com\/github\.com\/TheTorProject\/gettorbrowser\/releases\/download\/osx64-$1/g' ./Casks/tor-browser.rb
 
-        # install.ps1
-        curl https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | perl -pi -e 's/\"https:\/\/github\.com/\"https:\/\/ghproxy\.com\/github\.com/g' > ./install.ps1
+        # install.sh
+        curl https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | perl -pi -e 's/\"https:\/\/github\.com/\"https:\/\/ghproxy\.com\/github\.com/g' > ./install.sh
 
-        # uninstall.ps1
-        curl https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh | perl -pi -e 's/raw\.githubusercontent\.com/ghproxy\.com\/raw\.githubusercontent\.com/g' > ./uninstall.ps1
+        # uninstall.sh
+        curl https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh | perl -pi -e 's/raw\.githubusercontent\.com/ghproxy\.com\/raw\.githubusercontent\.com/g' > ./uninstall.sh
 
         git config user.name github-actions
         git config user.email github-actions@github.com
