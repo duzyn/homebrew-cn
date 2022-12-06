@@ -1,20 +1,19 @@
 class Dylibbundler < Formula
   desc "Utility to bundle libraries into executables for macOS"
   homepage "https://github.com/auriamg/macdylibbundler"
-  url "https://github.com/auriamg/macdylibbundler/archive/1.0.4.tar.gz"
-  sha256 "839c6a30be2c974bba70ab80faf8167713955bb010427662b14d4af7df8d5f19"
+  url "https://github.com/auriamg/macdylibbundler/archive/1.0.5.tar.gz"
+  sha256 "13384ebe7ca841ec392ac49dc5e50b1470190466623fa0e5cd30f1c634858530"
   license "MIT"
   head "https://github.com/auriamg/macdylibbundler.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3668e4679ae61c5234c77494dee1e33200aaae0b3e6baeea755c5b0ac62aa14a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "906a8b5293262c5416a17657e70bd7283ef007a2eaac10b0627729f14da3d685"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0c87ee93247dfb14af9096049d1eac119b2f52bed32eba7e8b7743ff3de76c4"
-    sha256 cellar: :any_skip_relocation, ventura:        "de75590bfe2b9519e65a04b97bcaacce228356095c8435d9042d358853484725"
-    sha256 cellar: :any_skip_relocation, monterey:       "7459d9405ef5405c0be7fbc6db4987fbc4a4ce1dbca93c8902b945dd7b9d3307"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f6699edbfc9c65203e3dba211bfbed054e1c98420155f7aa2c90c2c08de1419d"
-    sha256 cellar: :any_skip_relocation, catalina:       "f0e0cb6d2d0f852911795684b2817a13357c16077f153fead1e40fdc0e84edfe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9f64c147777fe104678a78648a73fbed44471f02ba99698d382565f26b20c98"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8749638bc5670b6a9c6f6fba7f609b2d72352639cf14cf10b9bc59c3f9ca3972"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "daba4f32451618f8bde33249c02d2e07a2a33080d4ce4e3f6b1085109e996a1a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0f72a1ddbced1016b9804320c8affd47919efa48bc8c3ec9beb2975e66ebcc6f"
+    sha256 cellar: :any_skip_relocation, ventura:        "c564cf5d48edcaab9c2940d0820bc420b5c99621d359a2b681c7b3e68e413843"
+    sha256 cellar: :any_skip_relocation, monterey:       "fec981eff597fa04d969914104bc997bebe8858f2bfaf5ec532910295ca43167"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7562a49bdaa12d85af55aa8843379179dbfd78d9d8d44f14b481ca22760d4df6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8c2ea435fa7ee838cc3fa07684b4f1b68ac5f65a224c7b5860b5bf06d254f50"
   end
 
   def install
