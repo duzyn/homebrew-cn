@@ -12,6 +12,12 @@
 
     export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/github.com/Homebrew/homebrew-core"
 
+## 设置 Homebrew Bottle
+
+在 `.zshrc` 或 `.bash_profile` 中加入
+
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
+
 ## 添加应用库
 
     brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/github.com/duzyn/homebrew-cn
