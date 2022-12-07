@@ -15,9 +15,6 @@
 ## 添加应用库
 
     brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/github.com/duzyn/homebrew-cn
-    brew tap --custom-remote --force-auto-update homebrew/cask https://ghproxy.com/github.com/Homebrew/homebrew-cask
-    brew tap --custom-remote --force-auto-update homebrew/cask-versions https://ghproxy.com/github.com/Homebrew/homebrew-cask-versions
-    brew tap --custom-remote --force-auto-update homebrew/bundle https://ghproxy.com/github.com/Homebrew/homebrew-bundle
 
 ## 安装应用
 
