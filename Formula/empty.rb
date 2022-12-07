@@ -1,7 +1,7 @@
 class Empty < Formula
   desc "Lightweight Expect-like PTY tool for shell scripts"
   homepage "https://empty.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/empty/empty/empty-0.6.22b/empty-0.6.22b.tgz"
+  url "https://downloads.sourceforge.net/project/empty/empty/empty-0.6.22b/empty-0.6.22b.tgz?use_mirror=nchc"
   sha256 "f581d560e1fa857f5304586e3c2107b5838bcf11dedcccec4a7191fa9e261b69"
   license "BSD-3-Clause"
 

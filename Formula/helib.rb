@@ -1,20 +1,18 @@
 class Helib < Formula
   desc "Implementation of homomorphic encryption"
   homepage "https://github.com/homenc/HElib"
-  url "https://github.com/homenc/HElib/archive/v2.2.1.tar.gz"
-  sha256 "cbe030c752c915f1ece09681cadfbe4f140f6752414ab000b4cf076b6c3019e4"
+  url "https://github.com/homenc/HElib/archive/v2.2.2.tar.gz"
+  sha256 "70c07d2a2da393c695095fe755836524e3d98efb27a336e206291f71db9cec7d"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "cb50632c3c96fbb78bd1a00011482bc72af2237cd92d7d8cfa0757322ff8bf71"
-    sha256 cellar: :any,                 arm64_monterey: "a1bb15e9acfc20963af42f415e063a98c97b38f1893b40c7db5b9468b200509a"
-    sha256 cellar: :any,                 arm64_big_sur:  "0cc75cb7e8d863c93ed6a00d7914924b4c88439d8741d56e644ef927422ce7a4"
-    sha256 cellar: :any,                 ventura:        "2babae50254625c99f41c09918cf53ffe1caa88ced1c4df497811aa93f453c2f"
-    sha256 cellar: :any,                 monterey:       "6f056c82e35c77d4958d117a15e02f3d3b0246d444b47c9620d8933ed40aff5c"
-    sha256 cellar: :any,                 big_sur:        "83405e4482e49d720269dd76aa39fe4d97f6b85d5e71db310d21e431ac54cfe5"
-    sha256 cellar: :any,                 catalina:       "827101ec9dce3beb4d8dd344ad593f5e46a9d0787c595ab8d75811acd3660aa1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43bb0c66cbb108055b9f557f2317643f4366fc7cdaf4e7de40ea33ca12ece48d"
+    sha256 cellar: :any,                 arm64_ventura:  "34f163bd12676026f9590a15244bfcb002df6967d031301a822150fa4ca9a888"
+    sha256 cellar: :any,                 arm64_monterey: "4f356464d714ffcac9f68b883c70b6d80521e148b4c1522421a28b44ef31c326"
+    sha256 cellar: :any,                 arm64_big_sur:  "7c004f3ea1822de6b87312b2ecfe5f1052fc0c73f2981e0ec829d982b1eb9fc1"
+    sha256 cellar: :any,                 ventura:        "1e5fc998605dad875c1e1778118107ef0f99d2222464511cc0e2269bf8bf950e"
+    sha256 cellar: :any,                 monterey:       "d92cef10a464476085a433a9a796185c8f3acb0c7675b574a9c8e40686f4e97a"
+    sha256 cellar: :any,                 big_sur:        "6bacf1a7120bfe69efaf04ba14a3fe2fa0264389bbaace8fa0107d8024525a9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6dcba1a913111cd6d07c99089fc7766a59cccdca4fd28b860399a1197bb62c82"
   end
 
   depends_on "cmake" => :build

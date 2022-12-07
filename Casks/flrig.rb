@@ -3,10 +3,10 @@ cask "flrig" do
 
   if MacOS.version <= :catalina
     sha256 "aacbef604d070d16493f0b22d9a02772314fe25fd8131b19604ae5621a1d9211"
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_HS.dmg"
+    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_HS.dmg?use_mirror=nchc"
   else
     sha256 "e83e95e004778b66ea9079d608cda009c1996a0ac975a4258fcd68ae0d23479b"
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_BS.dmg"
+    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_BS.dmg?use_mirror=nchc"
   end
 
   name "flrig"

@@ -1,7 +1,7 @@
 class Tgif < Formula
   desc "Xlib-based interactive 2D drawing tool"
   homepage "https://bourbon.usc.edu/tgif/"
-  url "https://downloads.sourceforge.net/project/tgif/tgif/4.2.5/tgif-QPL-4.2.5.tar.gz"
+  url "https://downloads.sourceforge.net/project/tgif/tgif/4.2.5/tgif-QPL-4.2.5.tar.gz?use_mirror=nchc"
   sha256 "2f24e9fecafae6e671739bd80691a06c9d032bdd1973ca164823e72ab1c567ba"
   license "QPL-1.0"
   revision 1

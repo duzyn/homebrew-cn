@@ -2,7 +2,7 @@ cask "font-andale-mono" do
   version :latest
   sha256 :no_check
 
-  url "https://downloads.sourceforge.net/corefonts/andale32.exe"
+  url "https://downloads.sourceforge.net/corefonts/andale32.exe?use_mirror=nchc"
   name "Andale Mono"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 

@@ -5,7 +5,7 @@ class Libdc1394 < Formula
   revision 1
 
   stable do
-    url "https://downloads.sourceforge.net/project/libdc1394/libdc1394-2/2.2.6/libdc1394-2.2.6.tar.gz"
+    url "https://downloads.sourceforge.net/project/libdc1394/libdc1394-2/2.2.6/libdc1394-2.2.6.tar.gz?use_mirror=nchc"
     sha256 "2b905fc9aa4eec6bdcf6a2ae5f5ba021232739f5be047dec8fe8dd6049c10fed"
 
     # fix issue due to bug in OSX Firewire stack

@@ -13,7 +13,7 @@ class Fop < Formula
   depends_on "openjdk"
 
   resource "hyph" do
-    url "https://downloads.sourceforge.net/project/offo/offo-hyphenation/2.2/offo-hyphenation-compiled.zip"
+    url "https://downloads.sourceforge.net/project/offo/offo-hyphenation/2.2/offo-hyphenation-compiled.zip?use_mirror=nchc"
     sha256 "3b503122b488bd30f658e9757c3b3066dd7a59f56c3a9bbb3eaae2d23b7d883f"
   end
 

@@ -1,7 +1,7 @@
 class JpegTurbo < Formula
   desc "JPEG image codec that aids compression and decompression"
   homepage "https://www.libjpeg-turbo.org/"
-  url "https://downloads.sourceforge.net/project/libjpeg-turbo/2.1.4/libjpeg-turbo-2.1.4.tar.gz"
+  url "https://downloads.sourceforge.net/project/libjpeg-turbo/2.1.4/libjpeg-turbo-2.1.4.tar.gz?use_mirror=nchc"
   sha256 "d3ed26a1131a13686dfca4935e520eb7c90ae76fbc45d98bb50a8dc86230342b"
   license "IJG"
   head "https://github.com/libjpeg-turbo/libjpeg-turbo.git", branch: "main"

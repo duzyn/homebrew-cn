@@ -1,7 +1,7 @@
 class Libxmp < Formula
   desc "C library for playback of module music (MOD, S3M, IT, etc)"
   homepage "https://xmp.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/xmp/libxmp/4.5.0/libxmp-4.5.0.tar.gz"
+  url "https://downloads.sourceforge.net/project/xmp/libxmp/4.5.0/libxmp-4.5.0.tar.gz?use_mirror=nchc"
   sha256 "7847d262112d14e8442f44e5ac6ed9ddbca54c251284720b563c852b31f26e75"
   license "LGPL-2.1-or-later"
 

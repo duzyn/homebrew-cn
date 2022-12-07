@@ -2,7 +2,7 @@ class Librevenge < Formula
   desc "Base library for writing document import filters"
   homepage "https://sourceforge.net/p/libwpd/wiki/librevenge/"
   url "https://dev-www.libreoffice.org/src/librevenge-0.0.4.tar.bz2"
-  mirror "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.bz2"
+  mirror "https://downloads.sourceforge.net/project/libwpd/librevenge/librevenge-0.0.4/librevenge-0.0.4.tar.bz2?use_mirror=nchc"
   sha256 "c51601cd08320b75702812c64aae0653409164da7825fd0f451ac2c5dbe77cbf"
 
   livecheck do

@@ -1,7 +1,7 @@
 class Takt < Formula
   desc "Text-based music programming language"
   homepage "https://takt.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/takt/takt-0.310-src.tar.gz"
+  url "https://downloads.sourceforge.net/project/takt/takt-0.310-src.tar.gz?use_mirror=nchc"
   sha256 "eb2947eb49ef84b6b3644f9cf6f1ea204283016c4abcd1f7c57b24b896cc638f"
   license "GPL-2.0-or-later"
   revision 2

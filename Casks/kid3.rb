@@ -3,7 +3,7 @@ cask "kid3" do
   version "3.9.2"
   sha256 "f29bdd539c2cdfae0f5a4ee10e567a23f882c6eba6cae788a10ee4d9d6391b9b"
 
-  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg",
+  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg?use_mirror=nchc",
       verified: "downloads.sourceforge.net/kid3/"
   name "Kid3"
   desc "Audio tagger focusing on efficiency"

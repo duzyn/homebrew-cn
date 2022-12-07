@@ -4,7 +4,7 @@ class Liblo < Formula
   license "LGPL-2.1"
 
   stable do
-    url "https://downloads.sourceforge.net/project/liblo/liblo/0.31/liblo-0.31.tar.gz"
+    url "https://downloads.sourceforge.net/project/liblo/liblo/0.31/liblo-0.31.tar.gz?use_mirror=nchc"
     sha256 "2b4f446e1220dcd624ecd8405248b08b7601e9a0d87a0b94730c2907dbccc750"
 
     # Fix -flat_namespace being used on Big Sur and later.

@@ -2,7 +2,7 @@ cask "font-courier-new" do
   version "2.82"
   sha256 :no_check
 
-  url "https://downloads.sourceforge.net/corefonts/courie32.exe"
+  url "https://downloads.sourceforge.net/corefonts/courie32.exe?use_mirror=nchc"
   appcast "https://sourceforge.net/projects/corefonts/rss"
   name "Courier New"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"

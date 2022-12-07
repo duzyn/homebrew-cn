@@ -1,7 +1,7 @@
 class Avfs < Formula
   desc "Virtual file system that facilitates looking inside archives"
   homepage "https://avf.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/avf/avfs/1.1.4/avfs-1.1.4.tar.bz2"
+  url "https://downloads.sourceforge.net/project/avf/avfs/1.1.4/avfs-1.1.4.tar.bz2?use_mirror=nchc"
   sha256 "3a7981af8557f864ae10d4b204c29969588fdb526e117456e8efd54bf8faa12b"
   license all_of: [
     "GPL-2.0-only",

@@ -2,7 +2,7 @@ cask "font-times-new-roman" do
   version :latest
   sha256 :no_check
 
-  url "https://downloads.sourceforge.net/corefonts/times32.exe"
+  url "https://downloads.sourceforge.net/corefonts/times32.exe?use_mirror=nchc"
   name "Times New Roman"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 

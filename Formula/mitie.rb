@@ -22,7 +22,7 @@ class Mitie < Formula
   depends_on "python@3.11"
 
   resource "models-english" do
-    url "https://downloads.sourceforge.net/project/mitie/binaries/MITIE-models-v0.2.tar.bz2"
+    url "https://downloads.sourceforge.net/project/mitie/binaries/MITIE-models-v0.2.tar.bz2?use_mirror=nchc"
     sha256 "dc073eaef980e65d68d18c7193d94b9b727beb254a0c2978f39918f158d91b31"
   end
 

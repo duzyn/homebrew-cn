@@ -4,7 +4,7 @@ class CmuPocketsphinx < Formula
   license "BSD-2-Clause"
 
   stable do
-    url "https://downloads.sourceforge.net/project/cmusphinx/pocketsphinx/0.8/pocketsphinx-0.8.tar.gz"
+    url "https://downloads.sourceforge.net/project/cmusphinx/pocketsphinx/0.8/pocketsphinx-0.8.tar.gz?use_mirror=nchc"
     sha256 "874c4c083d91c8ff26a2aec250b689e537912ff728923c141c4dac48662cce7a"
 
     # Fix -flat_namespace being used on Big Sur and later.

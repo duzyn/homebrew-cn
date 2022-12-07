@@ -1,7 +1,7 @@
 class Nrpe < Formula
   desc "Nagios remote plugin executor"
   homepage "https://www.nagios.org/"
-  url "https://downloads.sourceforge.net/project/nagios/nrpe-4.x/nrpe-4.0.3/nrpe-4.0.3.tar.gz"
+  url "https://downloads.sourceforge.net/project/nagios/nrpe-4.x/nrpe-4.0.3/nrpe-4.0.3.tar.gz?use_mirror=nchc"
   sha256 "f907ba15381adfc6eef211508abd027f8e1973116080faa4534a1191211c0340"
   license "GPL-2.0"
 

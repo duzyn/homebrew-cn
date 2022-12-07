@@ -2,7 +2,7 @@ cask "dvdstyler" do
   version "3.2.1"
   sha256 "ed17b737f98f2d6a297f6c049285384c81f9680cf43db15b412be6269d6a051b"
 
-  url "https://downloads.sourceforge.net/dvdstyler/DVDStyler-#{version}-MacOSX.dmg",
+  url "https://downloads.sourceforge.net/dvdstyler/DVDStyler-#{version}-MacOSX.dmg?use_mirror=nchc",
       verified: "sourceforge.net/dvdstyler/"
   name "DVDStyler"
   desc "DVD authoring application"

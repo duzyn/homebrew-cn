@@ -1,7 +1,7 @@
 class Fpc < Formula
   desc "Free Pascal: multi-architecture Pascal compiler"
   homepage "https://www.freepascal.org/"
-  url "https://downloads.sourceforge.net/project/freepascal/Source/3.2.2/fpc-3.2.2.source.tar.gz"
+  url "https://downloads.sourceforge.net/project/freepascal/Source/3.2.2/fpc-3.2.2.source.tar.gz?use_mirror=nchc"
   sha256 "d542e349de246843d4f164829953d1f5b864126c5b62fd17c9b45b33e23d2f44"
   license "GPL-2.0-or-later"
   revision 1
@@ -33,12 +33,12 @@ class Fpc < Formula
 
   resource "bootstrap" do
     on_macos do
-      url "https://downloads.sourceforge.net/project/freepascal/Mac%20OS%20X/3.2.2/fpc-3.2.2.intelarm64-macosx.dmg"
+      url "https://downloads.sourceforge.net/project/freepascal/Mac%20OS%20X/3.2.2/fpc-3.2.2.intelarm64-macosx.dmg?use_mirror=nchc"
       sha256 "05d4510c8c887e3c68de20272abf62171aa5b2ef1eba6bce25e4c0bc41ba8b7d"
     end
 
     on_linux do
-      url "https://downloads.sourceforge.net/project/freepascal/Linux/3.2.2/fpc-3.2.2.x86_64-linux.tar"
+      url "https://downloads.sourceforge.net/project/freepascal/Linux/3.2.2/fpc-3.2.2.x86_64-linux.tar?use_mirror=nchc"
       sha256 "5adac308a5534b6a76446d8311fc340747cbb7edeaacfe6b651493ff3fe31e83"
     end
   end

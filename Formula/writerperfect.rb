@@ -1,7 +1,7 @@
 class Writerperfect < Formula
   desc "Library for importing WordPerfect documents"
   homepage "https://sourceforge.net/p/libwpd/wiki/writerperfect/"
-  url "https://downloads.sourceforge.net/project/libwpd/writerperfect/writerperfect-0.9.6/writerperfect-0.9.6.tar.xz"
+  url "https://downloads.sourceforge.net/project/libwpd/writerperfect/writerperfect-0.9.6/writerperfect-0.9.6.tar.xz?use_mirror=nchc"
   sha256 "1fe162145013a9786b201cb69724b2d55ff2bf2354c3cd188fd4466e7fc324e6"
 
   livecheck do

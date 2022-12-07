@@ -1,7 +1,7 @@
 class Ser2net < Formula
   desc "Allow network connections to serial ports"
   homepage "https://ser2net.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.3.10.tar.gz"
+  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.3.10.tar.gz?use_mirror=nchc"
   sha256 "bfad2b5d98c56f957daf2be975a5a2cefd645f27ef02d54817fadd6e4bf291b3"
   license "GPL-2.0-only"
 
@@ -24,7 +24,7 @@ class Ser2net < Formula
   depends_on "libyaml"
 
   resource "gensio" do
-    url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.4.1.tar.gz"
+    url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.4.1.tar.gz?use_mirror=nchc"
     sha256 "949438b558bdca142555ec482db6092eca87447d23a4fb60c1836e9e16b23ead"
 
     # Fix -flat_namespace being used on Big Sur and later.

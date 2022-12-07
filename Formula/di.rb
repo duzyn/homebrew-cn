@@ -1,7 +1,7 @@
 class Di < Formula
   desc "Advanced df-like disk information utility"
   homepage "https://gentoo.com/di/"
-  url "https://downloads.sourceforge.net/project/diskinfo-di/di-4.51.tar.gz"
+  url "https://downloads.sourceforge.net/project/diskinfo-di/di-4.51.tar.gz?use_mirror=nchc"
   sha256 "79b2129c4aff27428695441175940a1717fa0fe2ec2f46d1b886ebb4921461bb"
   license "Zlib"
 

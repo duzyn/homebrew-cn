@@ -2,7 +2,7 @@ cask "vienna" do
   version "3.8.4"
   sha256 "b3e06a80f0eb7377f278fb562c7b14779a99790522bc1ea6ac3203dd09433aca"
 
-  url "https://downloads.sourceforge.net/vienna-rss/v_#{version}/Vienna#{version}.tgz",
+  url "https://downloads.sourceforge.net/vienna-rss/v_#{version}/Vienna#{version}.tgz?use_mirror=nchc",
       verified: "downloads.sourceforge.net/vienna-rss/"
   name "Vienna"
   desc "RSS and Atom reader"

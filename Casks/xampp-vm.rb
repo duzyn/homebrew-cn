@@ -2,7 +2,7 @@ cask "xampp-vm" do
   version "8.1.6-0"
   sha256 "11be67f9c8bd955a07bbc93af9cf126fda20ba2b60eef66f8c92bb655776cedb"
 
-  url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-vm.dmg",
+  url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-vm.dmg?use_mirror=nchc",
       verified: "downloads.sourceforge.net/xampp/"
   name "XAMPP-VM"
   desc "Virtual machine with apache distribution containing MySQL, PHP, and Perl"

@@ -1,7 +1,7 @@
 class Bogofilter < Formula
   desc "Mail filter via statistical analysis"
   homepage "https://bogofilter.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/bogofilter/bogofilter-stable/bogofilter-1.2.5.tar.xz"
+  url "https://downloads.sourceforge.net/project/bogofilter/bogofilter-stable/bogofilter-1.2.5.tar.xz?use_mirror=nchc"
   sha256 "3248a1373bff552c500834adbea4b6caee04224516ae581fb25a4c6a6dee89ea"
 
   bottle do

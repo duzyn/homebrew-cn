@@ -2,7 +2,7 @@ cask "tibco-jaspersoft-studio" do
   version "6.20.0"
   sha256 "3025aaa6b5bf74f689f75eae5dbe119ee5cf11cad3bdb2661bbfda6c02d38dfe"
 
-  url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIB_js-studiocomm_#{version}_macosx_x86_64.dmg",
+  url "https://downloads.sourceforge.net/jasperstudio/JaspersoftStudio-#{version}/TIB_js-studiocomm_#{version}_macosx_x86_64.dmg?use_mirror=nchc",
       verified: "sourceforge.net/jasperstudio/"
   name "TIBCO Jaspersoft Studio"
   desc "Eclipse-based report development tool for JasperReports"

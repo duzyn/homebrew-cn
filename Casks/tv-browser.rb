@@ -2,7 +2,7 @@ cask "tv-browser" do
   version "4.2.6"
   sha256 "b4db2548dae7491619c49a4d22fde422331d42065af448b2c844b9a3f196809d"
 
-  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg",
+  url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg?use_mirror=nchc",
       verified: "sourceforge.net/tvbrowser/"
   name "TV-Browser"
   desc "Electronic TV guide"

@@ -1,7 +1,7 @@
 class Gptfdisk < Formula
   desc "Text-mode partitioning tools"
   homepage "https://www.rodsbooks.com/gdisk/"
-  url "https://downloads.sourceforge.net/project/gptfdisk/gptfdisk/1.0.9/gptfdisk-1.0.9.tar.gz"
+  url "https://downloads.sourceforge.net/project/gptfdisk/gptfdisk/1.0.9/gptfdisk-1.0.9.tar.gz?use_mirror=nchc"
   sha256 "dafead2693faeb8e8b97832b23407f6ed5b3219bc1784f482dd855774e2d50c2"
   license "GPL-2.0-or-later"
   revision 1

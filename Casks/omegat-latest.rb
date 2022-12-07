@@ -2,7 +2,7 @@ cask "omegat-latest" do
   version "5.7.1"
   sha256 "557a4f21533e8f73a4463f4b195c2d81996fbc25e576e447add9f5ce68661949"
 
-  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Latest/OmegaT%20#{version}/OmegaT_#{version}_Beta_Mac_Notarized.zip",
+  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Latest/OmegaT%20#{version}/OmegaT_#{version}_Beta_Mac_Notarized.zip?use_mirror=nchc",
       verified: "downloads.sourceforge.net/omegat/"
   name "OmegaT 5"
   desc "Translation memory tool"

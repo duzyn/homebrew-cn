@@ -1,7 +1,7 @@
 class Pcb < Formula
   desc "Interactive printed circuit board editor"
   homepage "http://pcb.geda-project.org/"
-  url "https://downloads.sourceforge.net/project/pcb/pcb/pcb-4.3.0/pcb-4.3.0.tar.gz"
+  url "https://downloads.sourceforge.net/project/pcb/pcb/pcb-4.3.0/pcb-4.3.0.tar.gz?use_mirror=nchc"
   sha256 "ae852f46af84aba7f51d813fb916fc7fcdbeea43f7134f150507024e1743fb5e"
   license "GPL-2.0-or-later"
   version_scheme 1

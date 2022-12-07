@@ -1,7 +1,7 @@
 class Sfk < Formula
   desc "Command-line tools collection"
   homepage "http://stahlworks.com/dev/swiss-file-knife.html"
-  url "https://downloads.sourceforge.net/project/swissfileknife/1-swissfileknife/1.9.8.2/sfk-1.9.8.tar.gz"
+  url "https://downloads.sourceforge.net/project/swissfileknife/1-swissfileknife/1.9.8.2/sfk-1.9.8.tar.gz?use_mirror=nchc"
   version "1.9.8.2"
   sha256 "051e6b81d9da348f19de906b6696882978d8b2c360b01d5447c5d4664aefe40c"
   license "BSD-2-Clause"

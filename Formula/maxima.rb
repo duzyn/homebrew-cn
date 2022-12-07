@@ -1,7 +1,7 @@
 class Maxima < Formula
   desc "Computer algebra system"
   homepage "https://maxima.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/maxima/Maxima-source/5.46.0-source/maxima-5.46.0.tar.gz"
+  url "https://downloads.sourceforge.net/project/maxima/Maxima-source/5.46.0-source/maxima-5.46.0.tar.gz?use_mirror=nchc"
   sha256 "7390f06b48da65c9033e8b2f629b978b90056454a54022db7de70e2225aa8b07"
   license "GPL-2.0-only"
   revision 7

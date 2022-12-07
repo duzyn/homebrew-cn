@@ -1,7 +1,7 @@
 class Rhash < Formula
   desc "Utility for computing and verifying hash sums of files"
   homepage "https://sourceforge.net/projects/rhash/"
-  url "https://downloads.sourceforge.net/project/rhash/rhash/1.4.3/rhash-1.4.3-src.tar.gz"
+  url "https://downloads.sourceforge.net/project/rhash/rhash/1.4.3/rhash-1.4.3-src.tar.gz?use_mirror=nchc"
   sha256 "1e40fa66966306920f043866cbe8612f4b939b033ba5e2708c3f41be257c8a3e"
   license "0BSD"
   head "https://github.com/rhash/RHash.git", branch: "master"

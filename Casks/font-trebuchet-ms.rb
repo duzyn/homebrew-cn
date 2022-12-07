@@ -2,7 +2,7 @@ cask "font-trebuchet-ms" do
   version :latest
   sha256 :no_check
 
-  url "https://downloads.sourceforge.net/corefonts/trebuc32.exe"
+  url "https://downloads.sourceforge.net/corefonts/trebuc32.exe?use_mirror=nchc"
   name "Trebuchet MS"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 

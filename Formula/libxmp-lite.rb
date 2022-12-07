@@ -1,7 +1,7 @@
 class LibxmpLite < Formula
   desc "Lite libxmp"
   homepage "https://xmp.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/xmp/libxmp/4.5.0/libxmp-lite-4.5.0.tar.gz"
+  url "https://downloads.sourceforge.net/project/xmp/libxmp/4.5.0/libxmp-lite-4.5.0.tar.gz?use_mirror=nchc"
   sha256 "19a019abd5a3ddf449cd20ca52cfe18970f6ab28abdffdd54cff563981a943bb"
   license "MIT"
 

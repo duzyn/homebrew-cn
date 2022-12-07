@@ -1,7 +1,7 @@
 class Luabind < Formula
   desc "Library for bindings between C++ and Lua"
   homepage "https://github.com/luabind/luabind"
-  url "https://downloads.sourceforge.net/project/luabind/luabind/0.9.1/luabind-0.9.1.tar.gz"
+  url "https://downloads.sourceforge.net/project/luabind/luabind/0.9.1/luabind-0.9.1.tar.gz?use_mirror=nchc"
   sha256 "80de5e04918678dd8e6dac3b22a34b3247f74bf744c719bae21faaa49649aaae"
   license "MIT"
   revision 2

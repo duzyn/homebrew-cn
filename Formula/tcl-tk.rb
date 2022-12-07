@@ -1,7 +1,7 @@
 class TclTk < Formula
   desc "Tool Command Language"
   homepage "https://www.tcl-lang.org"
-  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.13/tcl8.6.13-src.tar.gz"
+  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.13/tcl8.6.13-src.tar.gz?use_mirror=nchc"
   mirror "https://fossies.org/linux/misc/tcl8.6.13-src.tar.gz"
   sha256 "43a1fae7412f61ff11de2cfd05d28cfc3a73762f354a417c62370a54e2caf066"
   license "TCL"
@@ -41,7 +41,7 @@ class TclTk < Formula
   end
 
   resource "tcllib" do
-    url "https://downloads.sourceforge.net/project/tcllib/tcllib/1.21/tcllib-1.21.tar.xz"
+    url "https://downloads.sourceforge.net/project/tcllib/tcllib/1.21/tcllib-1.21.tar.xz?use_mirror=nchc"
     sha256 "10c7749e30fdd6092251930e8a1aa289b193a3b7f1abf17fee1d4fa89814762f"
   end
 
@@ -51,13 +51,13 @@ class TclTk < Formula
   end
 
   resource "tk" do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.13/tk8.6.13-src.tar.gz"
+    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.13/tk8.6.13-src.tar.gz?use_mirror=nchc"
     mirror "https://fossies.org/linux/misc/tk8.6.13-src.tar.gz"
     sha256 "2e65fa069a23365440a3c56c556b8673b5e32a283800d8d9b257e3f584ce0675"
   end
 
   resource "itk4" do
-    url "https://downloads.sourceforge.net/project/incrtcl/%5Bincr%20Tcl_Tk%5D-4-source/itk%204.1.0/itk4.1.0.tar.gz"
+    url "https://downloads.sourceforge.net/project/incrtcl/%5Bincr%20Tcl_Tk%5D-4-source/itk%204.1.0/itk4.1.0.tar.gz?use_mirror=nchc"
     sha256 "da646199222efdc4d8c99593863c8d287442ea5a8687f95460d6e9e72431c9c7"
   end
 

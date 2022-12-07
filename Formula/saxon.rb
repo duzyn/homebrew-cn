@@ -1,7 +1,7 @@
 class Saxon < Formula
   desc "XSLT and XQuery processor"
   homepage "https://saxon.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/saxon/Saxon-HE/11/Java/SaxonHE11-4J.zip"
+  url "https://downloads.sourceforge.net/project/saxon/Saxon-HE/11/Java/SaxonHE11-4J.zip?use_mirror=nchc"
   version "11.4"
   sha256 "2ec48dde4092862b1d3510d7a673d3149ad48885f8831c7878c9a85d79417094"
   license all_of: ["BSD-3-Clause", "MIT", "MPL-2.0"]

@@ -2,7 +2,7 @@ cask "font-verdana" do
   version :latest
   sha256 :no_check
 
-  url "https://downloads.sourceforge.net/corefonts/verdan32.exe"
+  url "https://downloads.sourceforge.net/corefonts/verdan32.exe?use_mirror=nchc"
   name "Verdana"
   homepage "https://sourceforge.net/projects/corefonts/files/the%20fonts/final/"
 

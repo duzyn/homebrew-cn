@@ -5,7 +5,7 @@ class Xmltoman < Formula
 
   desc "XML to manpage converter"
   homepage "https://sourceforge.net/projects/xmltoman/"
-  url "https://downloads.sourceforge.net/project/xmltoman/xmltoman/xmltoman-0.4.tar.gz/xmltoman-0.4.tar.gz"
+  url "https://downloads.sourceforge.net/project/xmltoman/xmltoman/xmltoman-0.4.tar.gz/xmltoman-0.4.tar.gz?use_mirror=nchc"
   sha256 "948794a316aaecd13add60e17e476beae86644d066cb60171fc6b779f2df14b0"
   license "GPL-2.0"
 

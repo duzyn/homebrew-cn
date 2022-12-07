@@ -1,7 +1,7 @@
 class Log4cplus < Formula
   desc "Logging Framework for C++"
   homepage "https://sourceforge.net/p/log4cplus/wiki/Home/"
-  url "https://downloads.sourceforge.net/project/log4cplus/log4cplus-stable/2.0.8/log4cplus-2.0.8.tar.xz"
+  url "https://downloads.sourceforge.net/project/log4cplus/log4cplus-stable/2.0.8/log4cplus-2.0.8.tar.xz?use_mirror=nchc"
   sha256 "f5949e713cf8635fc554384ab99b04716e3430f28eed6dd7d71ad03d959b91a0"
   license all_of: ["Apache-2.0", "BSD-2-Clause"]
 

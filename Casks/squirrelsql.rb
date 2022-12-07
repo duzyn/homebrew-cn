@@ -2,7 +2,7 @@ cask "squirrelsql" do
   version "4.5.1"
   sha256 "9fea734c8667059dafd93c427b93ba206ad86230b59adda7323c344478596a81"
 
-  url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar",
+  url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar?use_mirror=nchc",
       verified: "sourceforge.net/squirrel-sql/"
   name "SQuirrel SQL"
   desc "Graphical Java program for viewing the structure of a JDBC compliant database"

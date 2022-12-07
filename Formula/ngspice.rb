@@ -1,7 +1,7 @@
 class Ngspice < Formula
   desc "Spice circuit simulator"
   homepage "https://ngspice.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/38/ngspice-38.tar.gz"
+  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/38/ngspice-38.tar.gz?use_mirror=nchc"
   sha256 "2c3e22f6c47b165db241cf355371a0a7558540ab2af3f8b5eedeeb289a317c56"
   license :cannot_represent
   revision 1

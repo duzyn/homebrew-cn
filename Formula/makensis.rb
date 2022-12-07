@@ -1,7 +1,7 @@
 class Makensis < Formula
   desc "System to create Windows installers"
   homepage "https://nsis.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/nsis/NSIS%203/3.08/nsis-3.08-src.tar.bz2"
+  url "https://downloads.sourceforge.net/project/nsis/NSIS%203/3.08/nsis-3.08-src.tar.bz2?use_mirror=nchc"
   sha256 "a85270ad5386182abecb2470e3d7e9bec9fe4efd95210b13551cb386830d1e87"
   license "Zlib"
 
@@ -23,7 +23,7 @@ class Makensis < Formula
   uses_from_macos "zlib"
 
   resource "nsis" do
-    url "https://downloads.sourceforge.net/project/nsis/NSIS%203/3.08/nsis-3.08.zip"
+    url "https://downloads.sourceforge.net/project/nsis/NSIS%203/3.08/nsis-3.08.zip?use_mirror=nchc"
     sha256 "1bb9fc85ee5b220d3869325dbb9d191dfe6537070f641c30fbb275c97051fd0c"
   end
 

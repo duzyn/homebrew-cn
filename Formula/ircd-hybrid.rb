@@ -1,7 +1,7 @@
 class IrcdHybrid < Formula
   desc "High-performance secure IRC server"
   homepage "https://www.ircd-hybrid.org/"
-  url "https://downloads.sourceforge.net/project/ircd-hybrid/ircd-hybrid/ircd-hybrid-8.2.43/ircd-hybrid-8.2.43.tgz"
+  url "https://downloads.sourceforge.net/project/ircd-hybrid/ircd-hybrid/ircd-hybrid-8.2.43/ircd-hybrid-8.2.43.tgz?use_mirror=nchc"
   sha256 "bd0373c780e308c1a6f6989015ff28e1c22999ef764b7b68636b628573c251ef"
   license "GPL-2.0-or-later"
 

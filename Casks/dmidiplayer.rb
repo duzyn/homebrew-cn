@@ -2,7 +2,7 @@ cask "dmidiplayer" do
   version "1.7.0"
   sha256 "36735065d7f1bb27d2370d813554f3a9f2dcbef1d31f44298720bb4c45237615"
 
-  url "https://downloads.sourceforge.net/dmidiplayer/#{version}/dmidiplayer-#{version}-mac-x64.dmg",
+  url "https://downloads.sourceforge.net/dmidiplayer/#{version}/dmidiplayer-#{version}-mac-x64.dmg?use_mirror=nchc",
       verified: "downloads.sourceforge.net/dmidiplayer/"
   name "dmidiplayer"
   desc "Multiplatform MIDI File Player"

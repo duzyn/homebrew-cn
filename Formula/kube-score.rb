@@ -2,20 +2,19 @@ class KubeScore < Formula
   desc "Kubernetes object analysis recommendations for improved reliability and security"
   homepage "https://kube-score.com"
   url "https://github.com/zegl/kube-score.git",
-      tag:      "v1.14.0",
-      revision: "3d6392471f65c47a1c617d78d9f84a53457c5f5d"
+      tag:      "v1.15.0",
+      revision: "23510f90198ffe85a750d55e18cdd0bd75400dab"
   license "MIT"
   head "https://github.com/zegl/kube-score.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a0a649b918556cdfcc540d547e5dc69ee0b7e25e134e29f6fff7a12edd8b33f5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "28d65ca4f637272e9c26f9488c34f06ae1f97f09207899f6afe38cb0db4eaf91"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9263d0aeab0f5ee03f541dd149669a3d227e92305735c37f89322d8ccfbcbd82"
-    sha256 cellar: :any_skip_relocation, ventura:        "07684a84ef98a4a4cac935078fe823c78ee5795d33791ea17fcab0347f2ab064"
-    sha256 cellar: :any_skip_relocation, monterey:       "db28c4baa1d32c6688288f002c735c64f39433a6ab010d5c05ec3036b919417f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9a2c2f4a974e02af3a7bbbf2ec80931860d8581f3fe2c74ea79b9706664785fe"
-    sha256 cellar: :any_skip_relocation, catalina:       "051dd60d5d5e40cdf7cf9a1d26e3ea8d735bff0faa1a300dd373e92c73a26494"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd66fefdb488875005d4f2e998084569e534b60e0ceba45add602bf5f6d897d9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ee178a1e1073d8b972e5ca8b2a81630a7fdd1a700c438a3a28387809e51298f4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0998cdbd0025ec9f89ffb9ea03b7d85146019c7d05636caa04079840110759d6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9541bea8004aa70783f0fdf7daa8fd2efac46212b7946a526231e1344afe146c"
+    sha256 cellar: :any_skip_relocation, ventura:        "33e0d6d33b2df01d680253df8eeb219118f765ee2ea17a9451e3144ec4dfd884"
+    sha256 cellar: :any_skip_relocation, monterey:       "6d65b528a25ccaf73bb0b64a1b336c0bf0d7126ed54dce5741e11975c617bd36"
+    sha256 cellar: :any_skip_relocation, big_sur:        "aeff01e0c37ecf85071d6512db00b84e39874b77fa14c8390cd6c41e29582349"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f1b18df82f3dfacc0f93b6d02a735c54486a3d11858c01c83d21d289b5a9627"
   end
 
   depends_on "go" => :build

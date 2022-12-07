@@ -2,7 +2,7 @@ cask "midi-router-client" do
   version "1.4.2"
   sha256 "7e7323e3e97d8686926079c55595971231657fe1f580fbaed9d3bf41623e0cbc"
 
-  url "https://downloads.sourceforge.net/midi-router-client/releaseOSX11_#{version}.zip"
+  url "https://downloads.sourceforge.net/midi-router-client/releaseOSX11_#{version}.zip?use_mirror=nchc"
   name "Midi Router Client"
   desc "Create routes from anywhere to anywhere"
   homepage "https://sourceforge.net/projects/midi-router-client/"

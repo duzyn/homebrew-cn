@@ -1,7 +1,7 @@
 class Zsh < Formula
   desc "UNIX shell (command interpreter)"
   homepage "https://www.zsh.org/"
-  url "https://downloads.sourceforge.net/project/zsh/zsh/5.9/zsh-5.9.tar.xz"
+  url "https://downloads.sourceforge.net/project/zsh/zsh/5.9/zsh-5.9.tar.xz?use_mirror=nchc"
   mirror "https://www.zsh.org/pub/zsh-5.9.tar.xz"
   sha256 "9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5"
   license "MIT-Modern-Variant"
@@ -34,7 +34,7 @@ class Zsh < Formula
   end
 
   resource "htmldoc" do
-    url "https://downloads.sourceforge.net/project/zsh/zsh-doc/5.9/zsh-5.9-doc.tar.xz"
+    url "https://downloads.sourceforge.net/project/zsh/zsh-doc/5.9/zsh-5.9-doc.tar.xz?use_mirror=nchc"
     mirror "https://www.zsh.org/pub/zsh-5.9-doc.tar.xz"
     sha256 "6f7c091249575e68c177c5e8d5c3e9705660d0d3ca1647aea365fd00a0bd3e8a"
   end

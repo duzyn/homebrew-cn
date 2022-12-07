@@ -7,7 +7,7 @@ cask "qbittorrent" do
     sha256 "9979e1013ea02b41ff09e9881c2702876e5bf290f5b724e0239060e61a31d6a7"
   end
 
-  url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg",
+  url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg?use_mirror=nchc",
       verified: "sourceforge.net/qbittorrent/"
   name "qBittorrent"
   desc "Peer to peer Bitorrent client"

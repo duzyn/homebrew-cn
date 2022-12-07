@@ -1,7 +1,7 @@
 class Cfv < Formula
   desc "Test and create various files (e.g., .sfv, .csv, .crc., .torrent)"
   homepage "https://cfv.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/cfv/cfv/1.18.3/cfv-1.18.3.tar.gz"
+  url "https://downloads.sourceforge.net/project/cfv/cfv/1.18.3/cfv-1.18.3.tar.gz?use_mirror=nchc"
   sha256 "ff28a8aa679932b83eb3b248ed2557c6da5860d5f8456ffe24686253a354cff6"
   license "GPL-2.0"
 

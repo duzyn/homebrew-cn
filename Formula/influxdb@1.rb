@@ -1,8 +1,8 @@
 class InfluxdbAT1 < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
-  url "https://github.com/influxdata/influxdb/archive/v1.10.0.tar.gz"
-  sha256 "2efe515ba55e4fee18a994902bb3de242f0d498e3662e6cec1548c7f700d8278"
+  url "https://github.com/influxdata/influxdb/archive/v1.11.0.tar.gz"
+  sha256 "51bdde988fca05c1d54de82cd1ec096f790db15d00eda1f74d9375f16c22500b"
   license "MIT"
 
   livecheck do
@@ -11,12 +11,13 @@ class InfluxdbAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a227d99a24905a7ce83f2b8726643ad96c98e52ffb28a1ad02f91c1b7f8ef155"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15f2975fbb4840dbf635669ad98a44eedb49a08253e565a692ace55c3ea3a5d2"
-    sha256 cellar: :any_skip_relocation, monterey:       "d29e6e0cf8758c3e0e55becad5e4b908a2aa0b9ff2aa4c90f72258f5986c88af"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ee0a66646092723683a124f764327dc639f24dcc8d090f71899d78f4047c91fd"
-    sha256 cellar: :any_skip_relocation, catalina:       "06ba8b1160b29c9ce3eff969df29478ae2b40241cdadb066e6e3b96e351afd51"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3e95b7e154b320eefc0819528a5c2144b6b13df799253438c6876a25a9eacd9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "147eedd437e4203306b325c1fd39c73b438dc384cb9ed3b286d50500da31bb3a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "36c0f99e67112313b0cde43ac8f59184557414425b8eb61b99b433dd3f1f8741"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5a55487ef139a65a14a07dacd554c857268029fed6816da06c8034c186ea0f4b"
+    sha256 cellar: :any_skip_relocation, ventura:        "0f35f24db9ebec2a03e3f5e0fcb50b7b63cbd42da2c26da85c302049c54fceac"
+    sha256 cellar: :any_skip_relocation, monterey:       "516c3660519327bc13b7fb92a1aa3587b7afcb60b5b25645f33aef05802a0402"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ce57d336ba99c3fd4cf578c9e76b64b897bc7b26da1232d24255bd37bcb85dbc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57b35a4c3668c6f930cb0b6cb1d25e2c57a8cae0afaa366b897da7acb19c56d3"
   end
 
   keg_only :versioned_formula
