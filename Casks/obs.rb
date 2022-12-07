@@ -5,7 +5,7 @@ cask "obs" do
   sha256 arm:   "c0dfee808b58cff1b9de16d28f524195805cbf09cabfa0c023fb6270b10aef3f",
          intel: "cf5edb7a6e27c142e70f7daf05a48d59ad377b6aed285b0f9e4ef58bdaad2674"
 
-  url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
+  url "https://ghproxy.com/github.com/obsproject/obs-studio/releases/download/#{version}/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/"

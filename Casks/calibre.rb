@@ -10,7 +10,7 @@ cask "calibre" do
     sha256 "5ddbb1f61c339db6c85e40c2326ef08421c1d0198186c9c00dfe56060bd4446e"
   end
 
-  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
+  url "https://ghproxy.com/github.com/kovidgoyal/calibre/releases/download/#{version}/calibre-#{version}.dmg"
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
