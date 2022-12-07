@@ -79,7 +79,7 @@ jobs:
         perl -pi -e 's/dist\.torproject\.org\/torbrowser\/(.+)/ghproxy\.com\/github\.com\/TheTorProject\/gettorbrowser\/releases\/download\/osx64-$1/g' ./Casks/tor-browser.rb
 
         # Calibre
-        perl -pi -e 's/download\.calibre-ebook\.com/ghproxy\.com\/github\.com\/kovidgoyal\/calibre\/releases\/download/g' ./Casks/calibre.rb
+        perl -pi -e 's/download\.calibre-ebook\.com\//ghproxy\.com\/github\.com\/kovidgoyal\/calibre\/releases\/download\/v/g' ./Casks/calibre.rb
 
         # install.sh
         curl https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | perl -pi -e 's/\"https:\/\/github\.com/\"https:\/\/ghproxy\.com\/github\.com/g' > ./install.sh
