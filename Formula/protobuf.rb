@@ -21,14 +21,14 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "dcfd589b02e3c9ca6b0388f013223934413022f6823e39ed2732aec935c0d349"
-    sha256 cellar: :any,                 arm64_monterey: "56a18680209f0b28abbb8e0f3c6079446e976b09f24eed9e9a2aaaaed5dbbbf6"
-    sha256 cellar: :any,                 arm64_big_sur:  "46955560681fd311617fd17dc92827a7804950fa602514537b12f2b4ee004e85"
-    sha256 cellar: :any,                 ventura:        "50343754dd5021305288b7e5ecfff19586beea27e1cab786c03b8dd2086e3a16"
-    sha256 cellar: :any,                 monterey:       "1a645d011a09010b7cda09dffb54e97facb516965ad6c90ff56c59ccaa45670d"
-    sha256 cellar: :any,                 big_sur:        "42d6f1cdd90ea13c9b5e63106acaa289e781149cd34cc6b1c831e2a64f40e7bd"
-    sha256 cellar: :any,                 catalina:       "18c2e746f2a7b2fd85238b0bc7890fb66321ca83c3a67669c0706eb32abff125"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fafb7f3058823653ddc5a8b4219ece68ffc441d649f47e240223679e6e94c439"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "7b26ae5359fb989cd6fc50e05d4fcf622f2291a9241885a0f01860734cceebdd"
+    sha256 cellar: :any,                 arm64_monterey: "3d958a45ab58b6a3365d9db8bef59f37c3d89ffb9e33362a2ea82f8d80626c50"
+    sha256 cellar: :any,                 arm64_big_sur:  "09d1eb17559a50e6e072566af5557bb27f6b9b8e61217d05603f59736e02b3ef"
+    sha256 cellar: :any,                 monterey:       "86daf1d5f0503a8be1465b7a668d0e3d36a634f5a3d4d02d23adf07a8359a881"
+    sha256 cellar: :any,                 big_sur:        "ef7203b8626f6f9f8a7ac1916a26c1f0840eefc2984754cc6b345f78704a99a5"
+    sha256 cellar: :any,                 catalina:       "f6728218308e96b523a173e1ad2c7b706bd1225657df20968cc50cc6e32284a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "064f8ca12c10601729bb4f54818a042ae571348adc2cf89000e506fdfb1d933a"
   end
 
   head do
@@ -58,7 +58,7 @@ class Protobuf < Formula
     ENV.cxx11
 
     system "./autogen.sh" if build.head?
-    system "./configure", *std_configure_args, "--with-zlib"
+    system "./configure", *std_configure_args, "--with-zlib", "--with-pic"
     system "make"
     system "make", "check"
     system "make", "install"

@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v1.0.0",
-      revision: "0719a3d0637a142559f2a39e77cae9e37012f4b7"
+      tag:      "v1.1.0",
+      revision: "404eb78ddbb1cb6842a60b7ec10686906fceb5d6"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,13 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "a7b39c163ab3e24259d9f95c56bbc7e8e20a30471a6d78b3211c26eab3158f32"
-    sha256 cellar: :any, arm64_monterey: "2f55bf1488fe7e286ac54cdfa2baf6304c4803a5057f7ace8e14f139501277b8"
-    sha256 cellar: :any, arm64_big_sur:  "5e33f39049d94b6fa87bf2823776ad6f670e5491237f98a45d9993e3fd6233e3"
-    sha256 cellar: :any, ventura:        "1e06378afd4dabcb5440354e39725f0429d65964c9669224294a2012717fb91a"
-    sha256 cellar: :any, monterey:       "1b58a2fbfbaf608f5b475057da7675ce9836e2b8a704e1ce81350389ccf6cd33"
-    sha256 cellar: :any, big_sur:        "c8906bb5cd91ea1dd73041d6efdeea063934c53d9d955925d612ad1df14588a2"
-    sha256               x86_64_linux:   "369ec02ee472aad5f945db57e778f673574a6d41c34f3151bfa7824a123e3e71"
+    sha256 cellar: :any, arm64_ventura:  "cf95a250c0de3a49e1b3382e11649a4e5f8e21ebd99d8020cb2d19893b3b7534"
+    sha256 cellar: :any, arm64_monterey: "4eddfe737ae2535fb5742bb670b9ef38b0f34128ae14cb918b72a8d07e723b01"
+    sha256 cellar: :any, arm64_big_sur:  "48dcc0eb6af4ed77149902dc36472e553a78cff172b1ceab6dc1f7c2cf5c031a"
+    sha256 cellar: :any, ventura:        "4b85e15495a110bfae879e5f87d27c99492eef3c761d73ca6262c80909c171be"
+    sha256 cellar: :any, monterey:       "dd1d5a3cb8695fe5eab7ac59db3926ea285bb088047c07811a0c20d0958e335a"
+    sha256 cellar: :any, big_sur:        "b4ad07f1b82a09be6c6fd997956a6947bf4731f98bcc6c6c8ea5082a2a9a6b78"
+    sha256               x86_64_linux:   "05190385421a7d3bc857c7b4caf38d68b9c7d7620f3ca4556c13b40368caff17"
   end
 
   depends_on "cmake" => :build

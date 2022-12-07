@@ -3,20 +3,18 @@ class Enex2notion < Formula
 
   desc "Import Evernote ENEX files to Notion"
   homepage "https://github.com/vzhd1701/enex2notion"
-  url "https://files.pythonhosted.org/packages/81/98/9c422258a4905d571155d4291d7b4db745bf53f18d4e2ba900f6b469e197/enex2notion-0.2.24.tar.gz"
-  sha256 "13eb9e3f0c4e645491be74b651e85b587bde7f2e55509776b553c475367b70ad"
+  url "https://files.pythonhosted.org/packages/bc/bd/8e6be68ee1be77dbcab9daad66f47526d4b569b98cceebbe686b8e341b50/enex2notion-0.2.25.tar.gz"
+  sha256 "90b82462aac993b0553a5e6532bd72a2f40d17629d76ced47a442becf53da1f2"
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e54917562a1308c9aa5b6ea08b2e98e46ffd983e7bf11a493805c4f52cf85838"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5690ba744d20e47b353b450ac29676651563f291732c3b5ea646201c4a5dc672"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f00c233db811274157cf421ff2e1ab2e53ebcdbc6a05c2b3031d20ef0d1f865a"
-    sha256 cellar: :any_skip_relocation, ventura:        "f1d52cadd0de32d888799a950ac5290913c7a5c980b2f6d700c794e1b28fcd88"
-    sha256 cellar: :any_skip_relocation, monterey:       "760eb19dd95c8b0ccabfeff10ff7262606220e92ba2a7dd4e9ffacfb3ed25e37"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6246cbc1136e4277cc31a0c6de7f47cabd602276feb6b46d8f09e95244bc4a04"
-    sha256 cellar: :any_skip_relocation, catalina:       "e643a6c430bb8485e6891b0ddea5ff31c6c5a0ef42af239fbdca53806f20fd87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12a97b15485f20ec8183690390d7921c792ea9b68ba16ba3d72fc552a34a3c10"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "385fd1cea11355a5eb361f6ce8818c0699fe0f032634b047cfd00d5f3a336674"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b74fcbd6fe0fac9136b91ff0e2d4f8e45ffafc32b2ef33f25fd0e0c0591bb500"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f97592f627a23a9cb926cff2f41b256ae945fde96ca654f069a8922d21a355e2"
+    sha256 cellar: :any_skip_relocation, ventura:        "b29de37a2c18e4214741740d0f9e4a355486e914cf0821b4d3e99e094c2a2dbb"
+    sha256 cellar: :any_skip_relocation, monterey:       "3d0919837ba9cc55171092596217a90da76a9af91e33b51de88aae7f3dac7a49"
+    sha256 cellar: :any_skip_relocation, big_sur:        "83b62cb1eb022e1040b130ac8db807d4098e9efcc1135504f43d748b800bcf09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a51b7eaad03952dec08fa75868710c7f5e3bdc5e4a0fbeea6ee1d4f2a54ae72"
   end
 
   depends_on "pymupdf"
@@ -64,8 +62,8 @@ class Enex2notion < Formula
   end
 
   resource "notion-vzhd1701-fork" do
-    url "https://files.pythonhosted.org/packages/8b/4a/ac1cfe7609b36fd5bc50f72e07c320368fbbef9dbc1f899375322c383198/notion-vzhd1701-fork-0.0.35.tar.gz"
-    sha256 "0879bed98e4bb7f3765d6099a5d39704d34243b36105a0fbb513dcbf0fa0a5d5"
+    url "https://files.pythonhosted.org/packages/22/de/bf39964ff563671e066dce64d7503b9f693aa1a650234bb164be3a540e64/notion-vzhd1701-fork-0.0.36.tar.gz"
+    sha256 "343bfa8d1e720ca6a4d7ad1caf20e3958f9026f567fc19bf02b96f5827c98710"
   end
 
   resource "pdfkit" do
@@ -119,8 +117,8 @@ class Enex2notion < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/5e/9f/63f7187ffd6d01dd5b5255b8c0b1c4f05ecfe79d940e0a243a6198071832/tzdata-2022.6.tar.gz"
-    sha256 "91f11db4503385928c15598c98573e3af07e7229181bee5375bd30f1695ddcae"
+    url "https://files.pythonhosted.org/packages/5b/30/b7abfb11be6642d26de1c1840d25e8d90333513350ad0ebc03101d55e13b/tzdata-2022.7.tar.gz"
+    sha256 "fe5f866eddd8b96e9fcba978f8e503c909b19ea7efda11e52e39494bad3a7bfa"
   end
 
   resource "tzlocal" do
@@ -129,8 +127,8 @@ class Enex2notion < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "w3lib" do

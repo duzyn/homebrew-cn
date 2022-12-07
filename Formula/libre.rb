@@ -1,19 +1,18 @@
 class Libre < Formula
   desc "Toolkit library for asynchronous network I/O with protocol stacks"
   homepage "https://github.com/baresip/re"
-  url "https://github.com/baresip/re/archive/refs/tags/v2.9.0.tar.gz"
-  sha256 "d820e1bf595b35e5e71f33d131d105aca2c53b05876abfe5e80303aa502583f0"
+  url "https://github.com/baresip/re/archive/refs/tags/v2.10.0.tar.gz"
+  sha256 "4d2b6f8fc73efdbcb5a7b2a98d0b46ac6eb28ede5ae90f9596b49663eec623a9"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "68185c640b0b3e7a2fece5b0dbd5324ccc199b46bf06bb0533a2f87b78ee069c"
-    sha256 cellar: :any,                 arm64_monterey: "6c1106c9c13760418b17c4ada4384bc04226c51ade387262809760d68da80829"
-    sha256 cellar: :any,                 arm64_big_sur:  "ab6d1f01cfbc37a019593fad04e93206eeec47947a8f4f516a99863fc9cef880"
-    sha256 cellar: :any,                 ventura:        "6a4cc34c80dc2ff88ec0a1908ffe682da98dccf450adf9304287819e65f6ce44"
-    sha256 cellar: :any,                 monterey:       "b51e2f7088f17a2387b3de37a002b6a9fc3f3ad3563d2f609d261745ffd510b3"
-    sha256 cellar: :any,                 big_sur:        "c1b8e522004c71238b062b9c2dd703a5dc8de703588bb6283511a80ba511464a"
-    sha256 cellar: :any,                 catalina:       "82686d1b93e1dd6c9fd203bb86fdd03a623777db13086166a3143adfd0e355f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9dcb2de4cc3deb6bb09a27cf0458f830ab951f4a02f02908a646e46c7d907c99"
+    sha256 cellar: :any,                 arm64_ventura:  "c7d463b9a3cd136b2bd71565b1976355145ff79aefefee8e0e2826936d1a6b5e"
+    sha256 cellar: :any,                 arm64_monterey: "c1639d21606975a56d5f0093900f3cffc604f3057f0127e6cc3b3b9b8447cb02"
+    sha256 cellar: :any,                 arm64_big_sur:  "44df50d7545a2d48ef61ec184d776e1c604ef12873723e9128ec99e6088df8f8"
+    sha256 cellar: :any,                 ventura:        "d8738736cdd1c1aaf26df6357fb8d4da0821e3e85e055f2b9abfdce8cee57f8f"
+    sha256 cellar: :any,                 monterey:       "915f96fa9d8346e9e4ff7c8cb271287c122d84eb6347e93059f2d5da154996ec"
+    sha256 cellar: :any,                 big_sur:        "daaa97bbaf3c5acd4464a8a1d8da7e25668434907faf1222b185a7749886e1f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c0553f193f135f8ca44a3d04bbac3510049b98bff41512f6fc8616ed17150665"
   end
 
   depends_on "openssl@3"

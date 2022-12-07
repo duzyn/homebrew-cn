@@ -3,19 +3,18 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/0c/34/d28a7e7637bb1b6c58ea19a36c214f476fa0ff8590b73e98443e26b43d3e/cfn-lint-0.72.1.tar.gz"
-  sha256 "c133d626b9b168881f5e0938ebd11759752e5aaa49865dae0af878b29e098aba"
+  url "https://files.pythonhosted.org/packages/24/c4/f448e0af35fa64e074358de3c13df9ccf4336f9b6066a48dc338bc5fd3bf/cfn-lint-0.72.2.tar.gz"
+  sha256 "d7ef1658687cf119adcf6ec312f28b5adc312d80293a54cdd5c140e2695a243c"
   license "MIT-0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "50b24c5f2c9b2eeee318d37a210944e49e0c69a58363e63b8dbc07e1057ac11f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "21526c3665d70c12a856741e504e23225bdd48b0bcf1eb2ef0c4d0a29df28886"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "17b1ae4caed1a2c733eaa7bbf33be04532dc1f78b082659c661de4c7dd9447c3"
-    sha256 cellar: :any_skip_relocation, ventura:        "8afe3a76abb967c2d5823b61ddbcb4a912f98c7fe5582857db3d91e41f3019b4"
-    sha256 cellar: :any_skip_relocation, monterey:       "27fb719330d00f1d2ca88fbf58f0b8dd17e4a27f4fbd56e98d8fc92b6dde4025"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cb3eb3fad16a4983c146dc0cf52a2951c9f8d793e5b6adb356c85672282d51ee"
-    sha256 cellar: :any_skip_relocation, catalina:       "da049460e563681b7637e1f8f9486ff4786647f94177ccfabc7912e4bb1d1036"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf738ad9a5cbb7414fd4b0e580e87cd27c4651b5430b94d6238701b7da75d3d9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "72f6452087bd457ac6ec412b621c1d4bf0f6d11493eac76eae1fd5a426332144"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f945b77848d1c657c27c06f7fe6f679bf0a8fb5968856abf99f1b057dd51ee4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b5fe228edc5b10668df7c3b1aedb36386c88e7f0d65d2ddc8eb1adb9dc20097"
+    sha256 cellar: :any_skip_relocation, ventura:        "6fc9fe7d3e856e8a6c7799cd69410dae39dcab990392eaa391cf23ca923f15a2"
+    sha256 cellar: :any_skip_relocation, monterey:       "f0d18dd916e1befb25e5a35f864b5aef1a8802ed47fd6d78f9de21358654780f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d9c6127df6cc06e00cd6ac1ad60bbf78480ace285d9478f1ddeea3f16ec807ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "26c42c0a79d0b352ab7b741c40279de0d13d9a6d383e4a2f891318d9cce912ad"
   end
 
   depends_on "python@3.11"
@@ -28,18 +27,18 @@ class CfnLint < Formula
   end
 
   resource "aws-sam-translator" do
-    url "https://files.pythonhosted.org/packages/d3/47/c7b4eb84fb294f294df45fc75cf8e1fb987535f5adbda5d2e53c47e0a2de/aws-sam-translator-1.54.0.tar.gz"
-    sha256 "a3ae79f1f2d430f5ade4d245165d5612414233f540b471d170f1aab95c3713a6"
+    url "https://files.pythonhosted.org/packages/c2/b7/df9463df4ebf3d573a58accc394fe3b5c765e49d3502d3175dc449519178/aws-sam-translator-1.55.0.tar.gz"
+    sha256 "08e182e76d6fabc13ce2f38b8a3932b3131407c6ad29ec2849ef3d9a41576b94"
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/7f/76/ce989f204b3e7e0875aea5dff4365de774877c2ba42332fb192cfd4ef17b/boto3-1.26.17.tar.gz"
-    sha256 "bb40a9788dd2234851cdd1110eec0e3f6b3af6b98280924fa44c25199ced5737"
+    url "https://files.pythonhosted.org/packages/19/d2/6221197d1cdd2614665dd8a8e92fda93e0d729f2c6c61587638f07b740bd/boto3-1.26.23.tar.gz"
+    sha256 "f478dde5a7e600e222c406bbf6cd2927371822d2b95a931c3ccb69eed18af83a"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/69/e9/a68478453f743df3a532ff617b2d5a35140ab79930b6a83462407bfa8c73/botocore-1.29.17.tar.gz"
-    sha256 "4be7ca8c581dbc6e8584876c4347dcc4f4bc6aa6e6e8131901fc11816fc8151b"
+    url "https://files.pythonhosted.org/packages/5d/cd/b178e8c52548adbc72824762bbb6b5d0a366d4fe63125e7724985f593ff8/botocore-1.29.23.tar.gz"
+    sha256 "216400fa6736a335f5b5c643655cc7d69d0bf996eb4d21069373aa5aa84b5c10"
   end
 
   resource "jmespath" do
@@ -58,8 +57,8 @@ class CfnLint < Formula
   end
 
   resource "jsonpickle" do
-    url "https://files.pythonhosted.org/packages/65/09/50bc3aabaeba15b319737560b41f3b6acddf6f10011b9869c796683886aa/jsonpickle-2.2.0.tar.gz"
-    sha256 "7b272918b0554182e53dc340ddd62d9b7f902fec7e7b05620c04f3ccef479a0e"
+    url "https://files.pythonhosted.org/packages/d8/56/4351ac08ac5bf7207d6c1f6cfb327ed9599c452ced03ab165810bc87e471/jsonpickle-3.0.0.tar.gz"
+    sha256 "504586e5c0fd52fd76a56f86c36f8c4d29778bdef92dc06d38ca6e2e9fc4f090"
   end
 
   resource "jsonpointer" do

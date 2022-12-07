@@ -4,17 +4,16 @@ class Libicns < Formula
   url "https://downloads.sourceforge.net/project/icns/libicns-0.8.1.tar.gz"
   mirror "https://deb.debian.org/debian/pool/main/libi/libicns/libicns_0.8.1.orig.tar.gz"
   sha256 "335f10782fc79855cf02beac4926c4bf9f800a742445afbbf7729dab384555c2"
-  revision 4
+  revision 5
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f346f50f790f74105c7d74ed2f4fa138cf1ba36aaf887c28d99cd40bd3c842d5"
-    sha256 cellar: :any,                 arm64_monterey: "7f1629857173f47627750a68b5365c3b5302296077b9062022b82af8bae31d8f"
-    sha256 cellar: :any,                 arm64_big_sur:  "593fecff6cdb88a92fd91a09563d3c253013128c4b00537766b905dbf988e76c"
-    sha256 cellar: :any,                 ventura:        "db7f40a1f0eb534b3ffda394ee48ae6559890623f55ae70f58e26888e8d80307"
-    sha256 cellar: :any,                 monterey:       "4f58e79a5425fa0efa47388c5cb74d51f15f3f6ba5e97b32b92910004a78b933"
-    sha256 cellar: :any,                 big_sur:        "460930e37a288de03e036ecdcfeb2031bf5ccd44a6abd17a9374ec006cdfa388"
-    sha256 cellar: :any,                 catalina:       "b3a7a96858b1ccf7c772a4384df25b4442d021a9feb0ff3fef60d2aaf3243c33"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d6d2b1f27b7e27161e362f4b90f4ab5783e2ad9c81525d411478c03fecfaebf"
+    sha256 cellar: :any,                 arm64_ventura:  "144537e569ff40707cbb02a4d5d14592bc001cc7eff0e21f102dfd6c36908689"
+    sha256 cellar: :any,                 arm64_monterey: "b9e9bde24513deaf1b8b09089b691c3108f0d3e456f6cdaf29851f138a9b75f7"
+    sha256 cellar: :any,                 arm64_big_sur:  "163ac60e31105b323182e807195977f27bf0e7870b151d9744a1bbbd2a37b78e"
+    sha256 cellar: :any,                 ventura:        "0b9b72d44a2d0737fe8f9c0fcca4250436b618cb437a6fb9715b2817220c180a"
+    sha256 cellar: :any,                 monterey:       "53d553054ef00243c22ae45d5b4937b11c2427064b083420b95090f96855ec94"
+    sha256 cellar: :any,                 big_sur:        "43f30bf4451dbc02f68bb4befc43ed730dc2d5757306111b62d37005ab45bb74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6738c70d5d8f9025be9ba3cd49b1e2b2510b6c05b6a27b7605e39d60e27566df"
   end
 
   depends_on "jasper"

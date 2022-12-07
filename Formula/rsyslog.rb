@@ -1,8 +1,8 @@
 class Rsyslog < Formula
   desc "Enhanced, multi-threaded syslogd"
   homepage "https://www.rsyslog.com/"
-  url "https://www.rsyslog.com/files/download/rsyslog/rsyslog-8.2210.0.tar.gz"
-  sha256 "643ee279139d694a07c9ff3ff10dc5213bdf874983d27d373525e95e05fa094d"
+  url "https://www.rsyslog.com/files/download/rsyslog/rsyslog-8.2212.0.tar.gz"
+  sha256 "53b59a872e3dc7384cdc149abe9744916776f7057d905f3df6722d2eb1b04f35"
   license all_of: ["Apache-2.0", "GPL-3.0-or-later", "LGPL-3.0-or-later"]
 
   livecheck do
@@ -11,14 +11,13 @@ class Rsyslog < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "c32e2a31cbe600635f19841453ac20c855ed65fee7516ece6a9276e016978a19"
-    sha256 arm64_monterey: "77a264afbd4cb7837928db2c5b26d9c766382d4d880e6d1ac9cf6559d91eab7d"
-    sha256 arm64_big_sur:  "c91d31f0086438b83a17f9e072974eb760717a6cbbf1e876454633d96affb340"
-    sha256 ventura:        "b121a92cc08dc9c6dfd7486b9f4a4011fbbae142e92a4c4557e4b8a15d3a5588"
-    sha256 monterey:       "9374aa6c63bc963454d2379affac8286f4ae04843c2e051752c653e8e0b0d0c8"
-    sha256 big_sur:        "4675d50ec60509f389554c3773f32d34c1b68dc565985c9057e9001e53d25c25"
-    sha256 catalina:       "8197c7d7f1c086a4c5473c65a069e2a7b335bcf76b48f531bc69262f7e9b0e8b"
-    sha256 x86_64_linux:   "29bb59016d7acf82f0816a49db21ed4fea2f4d16ec62369c12e3ec5b07b32c6a"
+    sha256 arm64_ventura:  "ea07ecd8c1ae19c9eaf4aa6de15967db259e6337a42edb618337eaa22428e659"
+    sha256 arm64_monterey: "c0093e2af230c0326c732e344456d4331675243fa4d5d1d09d25790a7a28c111"
+    sha256 arm64_big_sur:  "62a189e54933f372b8ff1b09a917a2d6318c7dee4728ac78395eeefd4d2f335b"
+    sha256 ventura:        "f5fdfa5aace6cb3b7cdfca78c9484b0136842a1dc253e15e5f976effe094216c"
+    sha256 monterey:       "73b16409f73ab1797036defbeac5e1b69cf9ab3846d87d3bf385b37528d5d573"
+    sha256 big_sur:        "ccf0a584c9a4ea5c733d2c71e34b58d1bc70de88fbc3f087c56555aec513081f"
+    sha256 x86_64_linux:   "a6563955f83d00e63a62c27490c9c4fc6102b0227d9c33d2e13763eba5ef1eb0"
   end
 
   depends_on "pkg-config" => :build

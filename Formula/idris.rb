@@ -7,14 +7,13 @@ class Idris < Formula
   head "https://github.com/idris-lang/Idris-dev.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "445fd6dc56bf3e6db6bbc3fabca8631a95ebeadf9dba1d3df2237bfb9c030492"
-    sha256 arm64_big_sur:  "5eb72d95ae07a2d7da0bf9c56c152a35ae57f41222da5c47661b3df0a1823a5a"
-    sha256 ventura:        "0dcd8bfa28dc9a3d9db8ab9f1bc8537bea6800a75cb23c8e1c8696269b2fdae6"
-    sha256 monterey:       "30b22c6d78dda77313fc42e959a0ef42b072f4517ed9e2aa5aeba57e9c51030c"
-    sha256 big_sur:        "5683f5a66b71affbf7ae4772e95ed5ef594c9b494c255c2aa09943a8436dab62"
-    sha256 catalina:       "01e7e70d851df23dda11b9a7cc16bfd4e9b946ea4d57824b78f78e2e484b5824"
-    sha256 x86_64_linux:   "ace178397055df3f7427278c940e27121236e02a5a5eff504bc10ca330411189"
+    rebuild 2
+    sha256 arm64_monterey: "9150e74cf8c82c309d033dca9040789ca64994c0c761b192c44a067741f2418a"
+    sha256 arm64_big_sur:  "f2769fc400bf64efe5acc9597580941ac41e9c5b5a0f06e2ac5102e5700d9bd6"
+    sha256 ventura:        "64efdce9b9e7028223996595ddfbbdec7938a59109c68f997dd5f686239d5b4f"
+    sha256 monterey:       "71135b6676bee0321a1d1725cf546385a6019abca0dac7503f76683d3cc5cf3c"
+    sha256 big_sur:        "750f4c74007ad366853262c6617321443e2ae3cf20e404ca825b5b9ca13d3b19"
+    sha256 x86_64_linux:   "864094063e7ad6971b4e121b6b4debb38fecaa338be1b829d6c8e626f8b0f8b9"
   end
 
   depends_on "cabal-install" => :build

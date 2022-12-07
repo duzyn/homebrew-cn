@@ -2,19 +2,18 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v0.6.0",
-      revision: "2213f9c946073a6df1242aa1bc339ee46bd45716"
+      tag:      "v0.6.1",
+      revision: "919cad22e8090087ae33625661f26a5fc78d188b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8ae40f7aa990a7a52e6d230555285d4d174a5bb7535ddd7e54e18e82804a8081"
-    sha256 cellar: :any,                 arm64_monterey: "70e3ec7d1d9ea967a8fc345e83bc53966bccea15b24d63f81498e7e0ec6e3f0c"
-    sha256 cellar: :any,                 arm64_big_sur:  "c802d1302a8e0d6c33fda447db102bafbecab74e2508f78fe6cc59448378b4f2"
-    sha256 cellar: :any,                 ventura:        "0b2ebf6385dbfd682eafb2edc35ae538f32bce73609e188ece2f3e4af801c628"
-    sha256 cellar: :any,                 monterey:       "0cd2ea482fb01ea4aab3bd35e01169895ae31ba82f5947a4b24e9b20a22bae99"
-    sha256 cellar: :any,                 big_sur:        "9a7b99c6588586d0e9aa4c1388af49e84b67bcb09b65d94ea7f1f654514dca46"
-    sha256 cellar: :any,                 catalina:       "1c010a0e17e7f22ba3fadb32b4271b99e97b8489b6a16786087a8f47104df4b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d8b16c2a57cd0b0fab42fa573c863b6ade263725a94f93887552b26757055fe"
+    sha256 cellar: :any,                 arm64_ventura:  "f04816e93e6beaedb8181a3b56eaf3a9896540e5a2f69de9447eb9042f8148e9"
+    sha256 cellar: :any,                 arm64_monterey: "59c7ba61892ae55255c72c5be0753b0ce8d618f0b7c66a5994e757c0e5f90d5d"
+    sha256 cellar: :any,                 arm64_big_sur:  "00a4cdabbfa3a66d5255c62b063358c0fb54cbae0365d00c7f9c0d97d60d9ba4"
+    sha256 cellar: :any,                 ventura:        "ee18a8a94d21bb9521a553683e09a868879a4477836d10afd27fd6768d94afc0"
+    sha256 cellar: :any,                 monterey:       "427077f959add9d23f75e2a01ad19d31024162958b2b3a3d76a94932bc283ec3"
+    sha256 cellar: :any,                 big_sur:        "690498b4d19dc171ecaa5dd469c5b3ba24fbdb833b6c4b7b769c83fd73518d32"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a66be4e86280eff90ffedacc07d4842d80f6b8d7f3d8edc294b4a4e466dd3b87"
   end
 
   depends_on "cmake" => :build

@@ -1,9 +1,9 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.19.3.src.tar.gz"
-  mirror "https://fossies.org/linux/misc/go1.19.3.src.tar.gz"
-  sha256 "18ac263e39210bcf68d85f4370e97fb1734166995a1f63fb38b4f6e07d90d212"
+  url "https://go.dev/dl/go1.19.4.src.tar.gz"
+  mirror "https://fossies.org/linux/misc/go1.19.4.src.tar.gz"
+  sha256 "eda74db4ac494800a3e66ee784e495bfbb9b8e535df924a8b01b1a8028b7f368"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/go.git", branch: "master"
 
@@ -13,14 +13,13 @@ class Go < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "6e7f284d44cfd7cb22e783350c428154b6a7867bef3eb4c40c2c914d0fc6fd7f"
-    sha256 arm64_monterey: "5566ef32f95654fb2729d739e8d5208848b83b577c82c873c98ef9c8b9c79406"
-    sha256 arm64_big_sur:  "251e3c47fa7fc5beee48c41037a736cc13c5d3d1b8e62c69a612419aa99ec493"
-    sha256 ventura:        "029df5024e097c0c44b556c457c0bc242a1f4ca6ef3d092349da0983cba3d2f2"
-    sha256 monterey:       "30f1ceb685ec8589c2b40f832cdbf45f23354704d109b1c428bfe5952791c5f3"
-    sha256 big_sur:        "4f8b1fae32e814117d3fe23880f66d94bbff7951933d60ae26402f081e693f06"
-    sha256 catalina:       "2b29ff8bc520e4fd469248ddb1e79bb8c2714c6a06430f80b3a26ac5c1886bb9"
-    sha256 x86_64_linux:   "0eef78ee9d77f1e81eb233d2459181438cc26b3400f746206a83addcfa63cca7"
+    sha256 arm64_ventura:  "1bcac5ddef2548a68b34360c06fdc9c7e1eddf74609c297d2ee11559002de09b"
+    sha256 arm64_monterey: "98186e4f8856e6b9bf6b066f6f4e732679892038a4b52679a9489bb06ea96716"
+    sha256 arm64_big_sur:  "90c6e39856c80b18ec9bcfc138abfa0405a59d9757e388084bda5c364b850b56"
+    sha256 ventura:        "52d7bf0a6f7ea153aff7ee3f66370b39ad457cccde1a6df4ddce32c2105a09d9"
+    sha256 monterey:       "499e4853df920d45b9c1c06a01d143005c283297b155ff07c5a08e90962499f8"
+    sha256 big_sur:        "74f1680f7a335b8dd5fa86d6b5cf0279bce1925023770aaf301e7ff23f8c7313"
+    sha256 x86_64_linux:   "126d902967e54ed738ac28a1e03c1a27e20504d4bbdd2a68d8c3a70ba9a2b288"
   end
 
   # Don't update this unless this version cannot bootstrap the new version.

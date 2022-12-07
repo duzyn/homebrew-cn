@@ -3,20 +3,19 @@ class Bzt < Formula
 
   desc "BlazeMeter Taurus"
   homepage "https://gettaurus.org/"
-  url "https://files.pythonhosted.org/packages/03/67/52379e512f8850a2f369873287d986a2e00e754a023aa978a3d1dfd85c4f/bzt-1.16.18.tar.gz"
-  sha256 "3790ec560d8f178d1821d631814849525a88eb4aca96d69b09d31e3c9c5558d3"
+  url "https://files.pythonhosted.org/packages/f6/51/92bfc0a067dbe944dd41d215fee27ab9730d053e943b41f85028b5c4b41f/bzt-1.16.19.tar.gz"
+  sha256 "823dbf91cdc204b3bd0c3441a924b03e5c0c4ef8203e5b327ab45301f54af7b2"
   license "Apache-2.0"
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e11e8f8f7493c0214980de9628b05aaad308a7c51d4c47ada5ea52bb692e9d0e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b5631d607db9b2d3856068ec883c910184b9070c00ef69b0769b65a9ceedc125"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6f8787385c5add2fabfd169e2f3d998cbdd565b53947e3e1437762420ea8fd46"
-    sha256 cellar: :any_skip_relocation, ventura:        "f2810e81ad64fa14257da1860be3f866d90ab2627f275108eda1c38eb65bb71e"
-    sha256 cellar: :any_skip_relocation, monterey:       "82ebc18b6145a8651cec3173bd5d430e55e7c55b4d6a13e01430f31a15a1cdbd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b99266a66e9df2b9df706d8dc0d0a4fd0a4e3790004a2bd3f7844b3f21f6981b"
-    sha256 cellar: :any_skip_relocation, catalina:       "fe08fc8464111d435d9c6560fcfd86c9d4f7caacfe735cacd8d14158e2267ddd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c12a90afbbfb3f49ec3cac70ace9f32f4b3839f8324989a369b8e5e745933a99"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "15db5f840b5762acb9e6fe6f1ad457f7c72567d2f92f1eb0c34c84f3bb337317"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "05c909619b1c3fc2292e8ea757ffa3e9c4e590c50ac106648b67f28ee7ae4849"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f9c7550e720bfd4e8cc55b9e33a2d96902bfe09bd3bc79b6de680f1cff180cc3"
+    sha256 cellar: :any_skip_relocation, ventura:        "e2edc47cc5ef463c6b705a74178c7a38c50e9de5776e4fa9fd9db1e685c0a0c0"
+    sha256 cellar: :any_skip_relocation, monterey:       "97dba0bda4ad88f20cbc1f129cea6ec3036a403c52d7ff72b4f126c4cc40e381"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c65f6cd87ad27cb82bbd0517f0657c4bbf1d35c74818fe87e5daaae9dc5ff79c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0ca57dd490ec29f11330e27bf1153706b31b6d2851c3143d144b2d5e1bb786e"
   end
 
   depends_on "cmake" => :build
@@ -122,8 +121,8 @@ class Bzt < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/fa/a7/71c253cdb8a1528802bac7503bf82fe674367e4055b09c28846fdfa4ab90/multidict-6.0.2.tar.gz"
-    sha256 "5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013"
+    url "https://files.pythonhosted.org/packages/b5/5b/1dd3b9cf73c474ea1d0f0b1f8b7b712b0f13817493fd93101256ec856b59/multidict-6.0.3.tar.gz"
+    sha256 "2523a29006c034687eccd3ee70093a697129a3ffe8732535d3b2df6a4ecc279d"
   end
 
   resource "multiprocess" do
@@ -137,8 +136,8 @@ class Bzt < Formula
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/e2/d9/1009dbb3811fee624af34df9f460f92b51edac528af316eb5770f9fbd2e1/prompt_toolkit-3.0.32.tar.gz"
-    sha256 "e7f2129cba4ff3b3656bbdda0e74ee00d2f874a8bcdb9dd16f5fec7b3e173cae"
+    url "https://files.pythonhosted.org/packages/c4/6e/6ff7938f47981305a801a4c5b8d8ed282b58a28c01c394d43c1fbcfc810b/prompt_toolkit-3.0.33.tar.gz"
+    sha256 "535c29c31216c77302877d5120aef6c94ff573748a5b5ca5b1b1f76f5e700c73"
   end
 
   resource "psutil" do
@@ -152,8 +151,8 @@ class Bzt < Formula
   end
 
   resource "rapidfuzz" do
-    url "https://files.pythonhosted.org/packages/7a/85/b880d556130d19ac415bfaf1af9406263f7597b5b7ba062db1f532e587b9/rapidfuzz-2.13.2.tar.gz"
-    sha256 "1c67007161655c59e13bba130a2db29d7c9e5c81bcecb8846a3dd7386065eb24"
+    url "https://files.pythonhosted.org/packages/57/93/8a975f8462fadffd1b608a1a5df2bb9feea569e5bcef5a6abfb154853e24/rapidfuzz-2.13.3.tar.gz"
+    sha256 "c734d54b5fbdcfea605f7365dedb7083e7499d394fbd03378d663b398e9790ad"
   end
 
   resource "requests" do
@@ -167,8 +166,8 @@ class Bzt < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "urwid" do
@@ -187,8 +186,8 @@ class Bzt < Formula
   end
 
   resource "yarl" do
-    url "https://files.pythonhosted.org/packages/d6/04/255c68974ec47fa754564c4abba8f61f9ed68b869bbbb854198d6259c4f7/yarl-1.8.1.tar.gz"
-    sha256 "af887845b8c2e060eb5605ff72b6f2dd2aab7a761379373fd89d314f4752abbf"
+    url "https://files.pythonhosted.org/packages/c4/1e/1b204050c601d5cd82b45d5c8f439cb6f744a2ce0c0a6f83be0ddf0dc7b2/yarl-1.8.2.tar.gz"
+    sha256 "49d43402c6e3013ad0978602bf6bf5328535c48d192304b91b97a3c6790b1562"
   end
 
   def install

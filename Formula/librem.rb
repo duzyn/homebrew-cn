@@ -1,19 +1,18 @@
 class Librem < Formula
   desc "Toolkit library for real-time audio and video processing"
   homepage "https://github.com/baresip/rem"
-  url "https://github.com/baresip/rem/archive/refs/tags/v2.9.0.tar.gz"
-  sha256 "ec87deef927c27b2199e652993bdd8d62d6176efc0231ddbe5227f212e27a881"
+  url "https://github.com/baresip/rem/archive/refs/tags/v2.10.0.tar.gz"
+  sha256 "82d417f9ece6cafdbfb1e342cf1c7cf4390136578dd7c77b4c7995cbbf4792a0"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "56442361d6b20c84d630cebd8cd7ef5ef24aa4f88b4a627dc4fa346d8bfdddc2"
-    sha256 cellar: :any,                 arm64_monterey: "e9dc062a114d69b463b7ec80988249390e6f4111ef0801a618cb0256e3842391"
-    sha256 cellar: :any,                 arm64_big_sur:  "57c83221b7d6bc51972c02509eae3d18e54b67c112bb78b5ca90d0e3b871b8f0"
-    sha256 cellar: :any,                 ventura:        "83cf37952aa9241ab30838cc324fb4e7eacf1fe22220873c20efce948f2a5a7b"
-    sha256 cellar: :any,                 monterey:       "92c89a0f99ae9342a7c4d7b7802bb82085877fa908e78c4d481c1aa38665d4bd"
-    sha256 cellar: :any,                 big_sur:        "45d019137c7c4100c87e3f238e597b396546b11c16261cb2cd899c29bfc6cdbe"
-    sha256 cellar: :any,                 catalina:       "3c7fb584d06bd818a49d9b80356ff2579183d9d8bb583c77a995bbfe4e5cc82e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6e610de0068c95b1cf76f0f98c6f03fc4801b98422ea3669e3ad9caf1e76576"
+    sha256 cellar: :any,                 arm64_ventura:  "d0cf64aa790ea6aac79182d29099c1cc42cb1752297bda95a28fc4025584b836"
+    sha256 cellar: :any,                 arm64_monterey: "087ec2256e2018f922c5d3079924aabe4aca4b3ade6f8962b33830804f4c6a8b"
+    sha256 cellar: :any,                 arm64_big_sur:  "be1d9c635cd194bd454469bc881559b46ac880a547996fe8d647a4d6383ceb5c"
+    sha256 cellar: :any,                 ventura:        "e3b0095dbcde57dd96bc76491cad7afb1496bcb511a967bbf42f31c837ec404e"
+    sha256 cellar: :any,                 monterey:       "d4781737400aa7d6d175a92e720f08a05ff1b2d05a3e6611eb92c1579f77fe15"
+    sha256 cellar: :any,                 big_sur:        "dca401b156819e3cceccb9abc2aab5e49ff1d21fa52380de3562ee5a5d8f9ec6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51a69e77ce208071f5887d222ba6808bc4aab080c0866879c3bc533c0b6e2e1f"
   end
 
   depends_on "libre"

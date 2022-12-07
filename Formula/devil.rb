@@ -2,7 +2,7 @@ class Devil < Formula
   desc "Cross-platform image library"
   homepage "https://sourceforge.net/projects/openil/"
   license "LGPL-2.1-only"
-  revision 4
+  revision 5
   head "https://github.com/DentonW/DevIL.git", branch: "master"
 
   stable do
@@ -33,14 +33,13 @@ class Devil < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3c904138930704de95d3f06fc8e10afe822b6ca53ffec4e7fac0271a2bbc6ae8"
-    sha256 cellar: :any,                 arm64_monterey: "56f554eaa912201d0cd5a9b4783b835a1c014680bcc68f0121fa408a80694fd6"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd4565ebe834a0a101dd3d814ed2a2a9665f9dca838c2140a18fe919946abf0c"
-    sha256 cellar: :any,                 ventura:        "7e9486662d5fe64632d557730ab93bb7452e4b65a031ff58d96c9bae0d28a5bf"
-    sha256 cellar: :any,                 monterey:       "59b94dd86092643eabfd45de3430c67aa08a8892aad8854cf0afe026bf03d380"
-    sha256 cellar: :any,                 big_sur:        "844d8143f71624d42d3bcd563332bf516c2f02b63eab17c58691a92e92238b4d"
-    sha256 cellar: :any,                 catalina:       "2a37254c7b690e432cfc1f7e3c36870386dd371b410372b9d20695d9e80e018c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1aa601bd3dbdbc04f22a59a87053c7961bd5f97df0e8ea9be12dec27b7dfc1dc"
+    sha256 cellar: :any,                 arm64_ventura:  "b9d1ac5aadc1c29523a0b8eebe8d84eed00078a46b4d3793e4c63727f6c1abfd"
+    sha256 cellar: :any,                 arm64_monterey: "6bc555c4ee3262b3ceb8bba2d0a598463e9ddcdbf59954ef87d3a66a3513006d"
+    sha256 cellar: :any,                 arm64_big_sur:  "625e8a26133ba0830dbbd014fb578f1c4a5cd53421cb84bf187f9778811af25b"
+    sha256 cellar: :any,                 ventura:        "51236fff5aed6438ec8852794faf97a2fdd1a418591cf89a2774a51ddf9f774f"
+    sha256 cellar: :any,                 monterey:       "21bce79dd7ba915985ae9357a7aa481847641ec67db54dd78dc27daa3f69f9f2"
+    sha256 cellar: :any,                 big_sur:        "4e293eab35dc5a76913c7aced1f8b957e691bf346b398ddb7c22ca9625239234"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b514833cebad2a1c751d4885c1213ac44c0269f780352f79540bba4058cba37"
   end
 
   depends_on "cmake" => :build

@@ -3,19 +3,18 @@ require "language/node"
 class Monika < Formula
   desc "Synthetic monitoring made easy"
   homepage "https://monika.hyperjump.tech"
-  url "https://registry.npmjs.org/@hyperjumptech/monika/-/monika-1.11.0.tgz"
-  sha256 "efdb34745a1de2fca8e918ee69577feee3f09a55bd6f5f6e1cddfa9f058ceeaf"
+  url "https://registry.npmjs.org/@hyperjumptech/monika/-/monika-1.14.0.tgz"
+  sha256 "d07d4f047b8b68bd02bd7e1ee5f0e07e589b1441653f05a39af9d4737bb0deee"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8b7569db6c5cb32dec0fb4ff0325a9378f093f4c11623bea272b3aedffa9d29a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa5c21c238bace78d7f665bcf5754461f4583fc8e6268412f45b09f31ac61b4f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "680d0fb4f40e7c47614f4cfc2e0245662e20a09cff592c85b491874451fe3216"
-    sha256 cellar: :any_skip_relocation, ventura:        "f957eb109eb296fba4a02a7edaee57d538b33ea4d141400912c5ebac7bc50248"
-    sha256 cellar: :any_skip_relocation, monterey:       "70ec69448990d413b2116d17c57d94f30d20f9c6c56ab84bdb0cd9b8c1e922d9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "98318750b359f8dc6b5f64b3c869acb0358ab99f542b8654cc942395d208bb1f"
-    sha256 cellar: :any_skip_relocation, catalina:       "e9ce43a708f271f42e0ec0c36cc6f9fac4fc90cfebd4b7b263951ec5c0e84ca9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e428eb84abe4d9abba4e9d20e1cd38e6d8114aaad0e02640a2babc52005f4b0d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ddf7fa1f72c0bafa638601afa2c25b5fb7f8d9d89cc92d854031ba89745573be"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e12edfca3ed835bb982673a851536255d9a14ea0b90232dac95424e762c6119f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "36bbad5aa254368c416c892de247b2bee087c9c9e7bddb9d4a461e19a9a36009"
+    sha256 cellar: :any_skip_relocation, ventura:        "18a581fc1e2b240233242870f8dc59c92839c28fae6b5dd6f5504c7d479c373e"
+    sha256 cellar: :any_skip_relocation, monterey:       "fb2767701e8ee22b6c3e920c8145e6a410689485f5bdcf29ba4060f8c09a3573"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1fe236c364472bb568a6b826a5a76fb2331c1c39dad6d75a94711c0278f75696"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb7c4c6503f834389a08b151251bc4367ff10be911eabb2966532f41daa54bcb"
   end
 
   depends_on "node"
@@ -47,7 +46,7 @@ class Monika < Formula
       $stdout.reopen(monika_stdout)
       exec bin/"monika", "-r", "1", "-c", testpath/"config.yml"
     end
-    sleep 5
+    sleep 10
 
     assert_match "Starting Monika. Probes: 1. Notifications: 1", monika_stdout.read
   end
