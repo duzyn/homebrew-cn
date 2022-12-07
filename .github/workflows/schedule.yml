@@ -56,7 +56,10 @@ jobs:
         # GitHub Raw
         perl -pi -e 's/raw\.githubusercontent\.com/ghproxy\.com\/raw\.githubusercontent\.com/g' ./{Formula,Casks}/*.rb
         perl -pi -e 's/github\.com\/(.+)\/raw/ghproxy\.com\/github\.com\/$1\/raw/g' ./{Formula,Casks}/*.rb
-
+        
+        # SourceForge
+        perl -pi -e 's/(https?:\/\/downloads\.sourceforge\.net.*\..*)"/$1?use_mirror=nchc"/g' ./{Formula,Casks}/*.rb
+        
         # 7-Zip
         perl -pi -e 's/www\.7-zip\.org\/a/experiments-alicdn\.sparanoid\.net\/7z/g' ./Formula/sevenzip.rb
 
