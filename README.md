@@ -4,25 +4,26 @@
 
 ## 安装 Homebrew
 
-    /bin/bash -c "$(curl -fsSL https://ghproxy.com/raw.githubusercontent.com/duzyn/homebrew-cn/install.sh)"
-
-或使用 jsdelivr CDN 的地址
-
     /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)"
+
+## 设置 Homebrew Core
+
+在 `.zshrc` 或 `.bash_profile` 中加入
+
+    export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/github.com/Homebrew/homebrew-core"
 
 ## 添加应用库
 
-    brew tap duzyn/homebrew-cn https://ghproxy.com/github.com/duzyn/homebrew-cn
+    brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/github.com/duzyn/homebrew-cn
+    brew tap --custom-remote --force-auto-update homebrew/cask https://ghproxy.com/github.com/Homebrew/homebrew-cask
+    brew tap --custom-remote --force-auto-update homebrew/cask-versions https://ghproxy.com/github.com/Homebrew/homebrew-cask-versions
+    brew tap --custom-remote --force-auto-update homebrew/bundle https://ghproxy.com/github.com/Homebrew/homebrew-bundle
 
 ## 安装应用
 
     brew install duzyn/cn/APPNAME
 
 ## 卸载 Homebrew
-
-    /bin/bash -c "$(curl -fsSL https://ghproxy.com/raw.githubusercontent.com/duzyn/homebrew-cn/uninstall.sh)"
-
-或使用 jsdelivr CDN 的地址
 
     /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/uninstall.sh)"
 
