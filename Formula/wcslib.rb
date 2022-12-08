@@ -4,6 +4,7 @@ class Wcslib < Formula
   url "https://www.atnf.csiro.au/pub/software/wcslib/wcslib-7.12.tar.bz2"
   sha256 "9cf8de50e109a97fa04511d4111e8d14bd0a44077132acf73e6cf0029fe96bd4"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :homepage
@@ -11,14 +12,13 @@ class Wcslib < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "01aae3e82d7469c400573154e2cb724a8c0243ec91ee24dc3c6c0e1c45b948ba"
-    sha256 cellar: :any,                 arm64_monterey: "f418a0c421237a184ea92462338644f6f60a3065815bed980118d13dfaacf45c"
-    sha256 cellar: :any,                 arm64_big_sur:  "106c631c29a069fc17e4648807c308414765a88b838dac66fed25997d2265aa4"
-    sha256 cellar: :any,                 ventura:        "fd5d489023f5a76af25221f504f1a122926fef40d3bd1a8aaf79519de37e512c"
-    sha256 cellar: :any,                 monterey:       "eb4b9167d77c897c36d72e919976ae99da5793d8df33ff457c6d01efa6b2d739"
-    sha256 cellar: :any,                 big_sur:        "989da78f103e6d0b9b0f933b688614f09a7809ee0a5fdbb5939c94b96556e5d8"
-    sha256 cellar: :any,                 catalina:       "a7fee6167237f971ca2b474dbc774b8a4c72c50e402ff3dcd329841192c4bc19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f34302a5f97870b9a5db747c965a47fd17bef5545a6caf96bac06fa45d4c497b"
+    sha256 cellar: :any,                 arm64_ventura:  "cf56e8f00d910a9504e52dcd663a679a304fcfffb3476229fc4fae47b3ee58ad"
+    sha256 cellar: :any,                 arm64_monterey: "5a0e1c9316e9c87d0d138cb95548d3533de9b565ff898528209808834279a639"
+    sha256 cellar: :any,                 arm64_big_sur:  "4a9043503641f0ea77dbfd50e0ca2281313302d0e0ad8a382bf44eb7e5fb8dd4"
+    sha256 cellar: :any,                 ventura:        "50f4ece595a1fb84b2de9a3f50cfc79aba7022ebe61bdbe2f1da78db6b4f25a5"
+    sha256 cellar: :any,                 monterey:       "fa7daa0fe9e470fd6e018cd5693e75c1027a1101968e248f82d4ea78ac90a41d"
+    sha256 cellar: :any,                 big_sur:        "48ea25010a8e8f6f5463066b6b7853de13b956c807a0e02ab5f95cb9549ec547"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "306df7e5bcde3578745801d8b4bcf7b9c6028b6c978dd8702501df0716957a13"
   end
 
   depends_on "cfitsio"

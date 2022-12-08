@@ -3,20 +3,19 @@ class Ptpython < Formula
 
   desc "Advanced Python REPL"
   homepage "https://github.com/prompt-toolkit/ptpython"
-  url "https://files.pythonhosted.org/packages/d5/95/1acee8aec7a8a683c03ced796217713aa649e370b621308f9c5e164124e3/ptpython-3.0.21.tar.gz"
-  sha256 "a57b9952eac4a12540a4dfb4ccd4a243403eceb27b0d13245b5e4144c8731d32"
+  url "https://files.pythonhosted.org/packages/a7/83/bf0a0bc0d0028ec41917c59f81661b66d86e0d0fb329a1aea0acd849e568/ptpython-3.0.22.tar.gz"
+  sha256 "c097b324406014a005c6b09f493bbbdde571e412360af2ba1551873a10c36cf8"
   license "BSD-3-Clause"
   head "https://github.com/prompt-toolkit/ptpython.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aeed5663a32409d4304fe52f78209a626b541e3e526406d5a623bb02d57106eb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec295138817ebb7bd620d458841575494b925e4a7441f91e631f1d95d0a33691"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb5ca41cf2eb07ac7f9fafd0610ae7487a4614fd4aaaf44b2c3a1424a86486a8"
-    sha256 cellar: :any_skip_relocation, ventura:        "f90a827c2bc79b18a5f1e300cf6e383cc46c9d08e9e3601c76c615b2d4885546"
-    sha256 cellar: :any_skip_relocation, monterey:       "da67eebd48454f67723a483d93819fec01b035b18dd19eb52d4a02fdd0e5fc18"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bb03e83101a85159ed14bede937622fce3f20b2fb8fbf18b4b53920951203b0d"
-    sha256 cellar: :any_skip_relocation, catalina:       "bc8ec8fe589bb4cce90b5b5927cae33eba98a3dab4a059eeeade4dc23c75e2bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1937d9409ce35b1c7e01008f2d92282e8bc3113d826468b773687d3dc51befbd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8119a9151bf965172dab4c79593e20d6349530ab7af5c70f044ee9f3fcde1320"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "04d8f2f4fcc40c3e8f9270dffa586c87e1e92f8362efcc1fd2ca67b78251e3b3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bb39b8ee66418c86e8ddeeca0a9ca852f0ee58b29f79045c2aff398728ea1ce4"
+    sha256 cellar: :any_skip_relocation, ventura:        "7d09ad6c3aa4fcc54b8c5af0853e426260880659cc12610dc1227d77977ea721"
+    sha256 cellar: :any_skip_relocation, monterey:       "aadb58206b8587d106b9ea36cd3b1a68f8be4ec029123ca675eb7a4ff3a0d972"
+    sha256 cellar: :any_skip_relocation, big_sur:        "abf083f54beb1d98083981115e83ba826e8a9e73992889ce29769e11dcd6ffbe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89462b8c6a3c93543f16fb70e8753ae02788d27e5700343ebed89201450b9931"
   end
 
   depends_on "python@3.11"
@@ -37,8 +36,8 @@ class Ptpython < Formula
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/c4/6e/6ff7938f47981305a801a4c5b8d8ed282b58a28c01c394d43c1fbcfc810b/prompt_toolkit-3.0.33.tar.gz"
-    sha256 "535c29c31216c77302877d5120aef6c94ff573748a5b5ca5b1b1f76f5e700c73"
+    url "https://files.pythonhosted.org/packages/fb/93/180be2342f89f16543ec4eb3f25083b5b84eba5378f68efff05409fb39a9/prompt_toolkit-3.0.36.tar.gz"
+    sha256 "3e163f254bef5a03b146397d7c1963bd3e2812f0964bb9a24e6ec761fd28db63"
   end
 
   resource "Pygments" do

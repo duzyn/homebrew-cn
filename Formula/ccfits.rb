@@ -3,6 +3,7 @@ class Ccfits < Formula
   homepage "https://heasarc.gsfc.nasa.gov/fitsio/CCfits/"
   url "https://heasarc.gsfc.nasa.gov/fitsio/CCfits/CCfits-2.6.tar.gz"
   sha256 "2bb439db67e537d0671166ad4d522290859e8e56c2f495c76faa97bc91b28612"
+  revision 1
 
   livecheck do
     url :homepage
@@ -10,15 +11,13 @@ class Ccfits < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cf449f75a29fc914235777f67cc2428a5c81a1d0d3e30073673442dbe92a6406"
-    sha256 cellar: :any,                 arm64_monterey: "95ebe7fe1047fc97a480395dedf612bf1220ed8fb3ddc2a33bad54bed196b7f8"
-    sha256 cellar: :any,                 arm64_big_sur:  "93653ea8290192929bc4b61b468fa55e4e1435e67dea0d6b232751dc610126bd"
-    sha256 cellar: :any,                 ventura:        "c5230908959532b52b785421794e9a2a3673f29ea62258a265f653b0166d9663"
-    sha256 cellar: :any,                 monterey:       "ca6b01bdf19a73d77314f6576524039f810c53782c20be03dc5da89873c54b0f"
-    sha256 cellar: :any,                 big_sur:        "504f3e52451e700b4562dd91e5017587ebe829aa25421600bb8cb01ee2faa571"
-    sha256 cellar: :any,                 catalina:       "fb2b7a32b1c881c91191aee126e556879184b2ac23a7c4dc62b88eb1328007af"
-    sha256 cellar: :any,                 mojave:         "d7111f916b0ee822f04fe233d00c5e66c151bd821a9ba8fc52365c2270e37fa7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ec9d494a486df7902b5848cfcc17479f3daa752fd164b0424ca15f0cb7e6c32"
+    sha256 cellar: :any,                 arm64_ventura:  "8f1e70f55129b991cc5bb8035c8e0eb92901225984af325857cf7124180a2b02"
+    sha256 cellar: :any,                 arm64_monterey: "5c222b5a44e8de98ffb844eaf585b718979f8e7a0f9f8ec0b3e34a74045310c1"
+    sha256 cellar: :any,                 arm64_big_sur:  "17a553e7d2b1bd6ac44e54ab8a6cbb101a212d8732aeb785068d7fca13f6d431"
+    sha256 cellar: :any,                 ventura:        "11c18cd3d891784215ce49c01335e936c4c7dad470b9354260b2a6cf0021750d"
+    sha256 cellar: :any,                 monterey:       "9f88ac9b101bdb715eb5c17714a49850550485a74d4bd152c46b4085420c4da9"
+    sha256 cellar: :any,                 big_sur:        "5567fdf74dea208531b63f0014da6f9b528beeaf58eeda3251f90f5b0fd4cba3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4e46548887f6794b6a28674f506071ed6070bc368c616086bb423b30301495e"
   end
 
   depends_on "cfitsio"

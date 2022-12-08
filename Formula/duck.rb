@@ -1,8 +1,8 @@
 class Duck < Formula
   desc "Command-line interface for Cyberduck (a multi-protocol file transfer tool)"
   homepage "https://duck.sh/"
-  url "https://dist.duck.sh/duck-src-8.5.1.38745.tar.gz"
-  sha256 "7b4f43d3c5496a24347b8a22f5de63630a0353ad54f9075c21ae0ad87bff06f1"
+  url "https://dist.duck.sh/duck-src-8.5.2.38799.tar.gz"
+  sha256 "54cf37880cd1db807784c00055ea70f66c52721c869431812f92054d89d5dc0c"
   license "GPL-3.0-only"
   head "https://github.com/iterate-ch/cyberduck.git", branch: "master"
 
@@ -12,13 +12,13 @@ class Duck < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "e9cf30f026eed466cf0ab38f4683d83ac1e54800e2e7f9b54508b1007157bf61"
-    sha256 cellar: :any, arm64_monterey: "8a3802747afa20999eb56049cdfd0033ad2caa69e113fbf5ee1735c829f377b1"
-    sha256 cellar: :any, arm64_big_sur:  "2e3048e25b895d0508fe0e1f32abb802b64098eb2a827de3a9a9b09d58a7d19f"
-    sha256 cellar: :any, ventura:        "57a4b5789073cf648ffc0b0cb6c5c9af1f5e645c45f3362ced646e8200ac4f4e"
-    sha256 cellar: :any, monterey:       "3a133dbc968af55b022717b59c34a608864653bd27b12706e070853d5f118182"
-    sha256 cellar: :any, big_sur:        "9322f87a7953ea409dd28293df34a617ffa3146ec7da351522e19ab0bc3fa9da"
-    sha256               x86_64_linux:   "84a415c8f2225b9fc2c7abc0133b46c6b99679e66fc137019e1cdecf73d0095a"
+    sha256 cellar: :any, arm64_ventura:  "fafa6e1ff6c68fdc1051103db29affa7a524d70253831c91d422bc476d47eae0"
+    sha256 cellar: :any, arm64_monterey: "8d5878620195f7e96465fc53993b052f473ed8b40b5fce6ae9127e0bc6a5a9b6"
+    sha256 cellar: :any, arm64_big_sur:  "167cb6b79225330eaddb48de677a434abc91a869498d561e0267bfc412e100a2"
+    sha256 cellar: :any, ventura:        "138c21288185bb99a8ffa516f21189f339f77711d651aaa89dd74f5df7624d00"
+    sha256 cellar: :any, monterey:       "01f5303eae3d3bf30bd9783dfc7afae9c81b679b8a6ebded4248cd22f24e57da"
+    sha256 cellar: :any, big_sur:        "1d8df2460df82ff75f54698df3890119626b82d6fb7e6ec29ed634fa39d438f4"
+    sha256               x86_64_linux:   "5a1371819e002be45776183ba93c9be8f488fc78edd3c80a511b6590322e4e72"
   end
 
   depends_on "ant" => :build
@@ -38,8 +38,6 @@ class Duck < Formula
     depends_on "libxi"
     depends_on "libxrender"
     depends_on "libxtst"
-
-    ignore_missing_libraries "libjvm.so"
   end
 
   resource "jna" do

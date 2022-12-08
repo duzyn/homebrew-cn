@@ -4,7 +4,7 @@ class Root < Formula
   url "https://root.cern.ch/download/root_v6.26.06.source.tar.gz"
   sha256 "b1f73c976a580a5c56c8c8a0152582a1dfc560b4dd80e1b7545237b65e6c89cb"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
   head "https://github.com/root-project/root.git", branch: "master"
 
   livecheck do
@@ -16,14 +16,13 @@ class Root < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "739e89ef0557b3cbe9b2635b5de747fc4e7f885d4adb73bff01bee99b9411fc2"
-    sha256 arm64_monterey: "3342f160ffce464e80c476495c3db713d51e0e7fe1741b6ec4a8dfc102206fe8"
-    sha256 arm64_big_sur:  "d70d636539b03c091233a81a74f3de23b0e9ed0d6fd7f8ee97e9df6b5c779393"
-    sha256 ventura:        "7503cd0b99215aaf04d979c6031cb8ecd8917d453bf2252b8ae979f46e6f3583"
-    sha256 monterey:       "9604024d36babeaa07f5805c18b5fc65086ed2b2accbed28969a85fdbf8f7ee7"
-    sha256 big_sur:        "6bfc729920596fe19e0be9effa4e4bc68872299a5f88e0ba7696dcb032db7fcc"
-    sha256 catalina:       "f02a6372941aad78aaeebb41e3ddbf0551f09ea579a0cb411c6bca83f586a339"
-    sha256 x86_64_linux:   "23f78dc32e443689bbbe0ead39dab2825575772bb3a8dedc4df4fe2240aabb33"
+    sha256 arm64_ventura:  "518327e8d51327dd15e831e2c62295b7e097631a1784458ab24556330107a09b"
+    sha256 arm64_monterey: "45877591c1f918118d22af0a64f8eed6e2ea5e72065e83880f456b6a1d659a90"
+    sha256 arm64_big_sur:  "da66a37c80908ebc07f42711389826594c863e63e7dc6f2a84b22bc2b4648864"
+    sha256 ventura:        "3339efad3893620bcea994f98118ac9ee38ef891471dc974df772a46e88c25af"
+    sha256 monterey:       "04a4970b5c8343e92141c20a9bbb613e5925d4d9b6c67d764030aac2d958c610"
+    sha256 big_sur:        "2e2fb3dc681cdae836443ec3eeeb671e03c3bec8cc17372339598a71e7a8f959"
+    sha256 x86_64_linux:   "4eeebd8873194ba310f5b388b767ec682e5369ef52a9e655abed65ba2747240b"
   end
 
   depends_on "cmake" => :build

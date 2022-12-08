@@ -1,18 +1,18 @@
 class Hcloud < Formula
   desc "Command-line interface for Hetzner Cloud"
   homepage "https://github.com/hetznercloud/cli"
-  url "https://github.com/hetznercloud/cli/archive/v1.31.0.tar.gz"
-  sha256 "6f014e92e31e842c0aa49d82159a4e9df34d26bb896461b09680561216cb9246"
+  url "https://github.com/hetznercloud/cli/archive/v1.31.1.tar.gz"
+  sha256 "d9ee39db85eb2f0ff5f812331c674f32ceab6f1203f5d14be2f732a555f12795"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7f38c00d158410f4b8d71f687235d7ce6808fda33000305efd51bd943fd9d0c9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "08619f372c12b424a72ccaeef4605e9edcb0d786cbdab2c14523ebd86675c1fe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "665580bf74cdabb604f389f23c06e43d9b5422a2307854ee83b21c93bec7ebf0"
-    sha256 cellar: :any_skip_relocation, ventura:        "fe3c75ceb0b89313d6a48db4a6cf633d712b014c847e5aeb5ed8fe3ccc87f4fa"
-    sha256 cellar: :any_skip_relocation, monterey:       "ffde5c437f729a383601f2a750d31cf62cbef9845004029302ba0c55b888c93c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "833103cf9af9740352c433698399f0272594a78961c65b77b6a7157eb564c383"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "29c6db00c30032dbe3fc8588eccc6f9c46650a8068224885183fc014368b499a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bc2b1aa458056bc26b179cb3f507519f43e85b69c29fa742c5849de293980508"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "07370138e5435a09a6a45cb681d5a20447e5b616316f8a4765488995a1a683c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c99816aaa8b3bb2a4690e654b8e64079b2f3193d3fcc9c7f2f2ec4c74edd1348"
+    sha256 cellar: :any_skip_relocation, ventura:        "6e92d2575604e7b8ede752f4820a5692e54b97e7d62e88fbda9fee32acd4d2fb"
+    sha256 cellar: :any_skip_relocation, monterey:       "4da94e9d4edf7b5b6cf78d7c9bb193ef928ae920eecb0f9911596548fef20b3b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "41af47c9690f373990f708dfce797a7675076b9ab3af5e1d9dfc3a03cd83e76f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bfa1e981fcdd655b2af1856837831d8ec4b733695e1c6e3855899b5c575a4235"
   end
 
   depends_on "go" => :build

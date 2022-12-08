@@ -6,6 +6,7 @@ class AstrometryNet < Formula
   url "https://ghproxy.com/github.com/dstndstn/astrometry.net/releases/download/0.92/astrometry.net-0.92.tar.gz"
   sha256 "d6eec262bb8979028d64ea05322f80eec275d7aaeed5efd537e2a79410c678a5"
   license "BSD-3-Clause"
+  revision 1
 
   livecheck do
     url :stable
@@ -13,14 +14,13 @@ class AstrometryNet < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c084a215df96193428b5be2c4e9bf63377692d5312834981c19a24a83c3825ce"
-    sha256 cellar: :any,                 arm64_monterey: "b938a76bf2321eb975bfcf90ad94e5ca256f0f2b71c3259dc486b1f0dd729a7a"
-    sha256 cellar: :any,                 arm64_big_sur:  "76c407270dfa0aa73910e98c49b5c69209092d35306efda91a25ef85823255b3"
-    sha256 cellar: :any,                 ventura:        "f13c5f2f13dc4ad5812bafb969eedbbd0c95dbee8874994fd385104c59b25449"
-    sha256 cellar: :any,                 monterey:       "f7fe5bdcc8207f971de1689f4b1abb49a3753c5eb82ed242cb976c2ecceff98e"
-    sha256 cellar: :any,                 big_sur:        "13da4e8722df5de2582a008a489c559131116d343481ee2a2c8372932152e696"
-    sha256 cellar: :any,                 catalina:       "b9d61e42e7674021e031380a174f9e66ebcd541ae85c089760888ecb1151e7f7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96dc3f32a449fa1d8eff381afcb83f7a9f6bad4b651c92809399c7da60255102"
+    sha256 cellar: :any,                 arm64_ventura:  "4c963fa7d64d61b0ab80a4d256927c2618fd59b094f70662a2181064f3e1127c"
+    sha256 cellar: :any,                 arm64_monterey: "4d5ae0449dbb029acea4edc7861420a3638ba9991e011a30873bc0e6cef1abb5"
+    sha256 cellar: :any,                 arm64_big_sur:  "46ddbaa8a6836f310b4ca401ee92908653f65db846b291ec83c3521a18c6fd5b"
+    sha256 cellar: :any,                 ventura:        "35159b32c2ffb9f3026ba8f576c660fe8e72d812bbd957ecc6ab56d729884389"
+    sha256 cellar: :any,                 monterey:       "1e53c10f51e47c59a6ce6093b6bc33cb78edd07822ef15d06aac54f71cc67514"
+    sha256 cellar: :any,                 big_sur:        "a075c24e76fa2b447f501a8c8d5d950c0ee2ee2c190e6668e241987f8cdb6ac7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8562e1b4028cd038f7f1e7a0906d8589f79f4320769d583c318ed299768404a4"
   end
 
   depends_on "pkg-config" => :build

@@ -2,7 +2,7 @@ class Mapnik < Formula
   desc "Toolkit for developing mapping applications"
   homepage "https://mapnik.org/"
   license "LGPL-2.1-or-later"
-  revision 14
+  revision 15
   head "https://github.com/mapnik/mapnik.git", branch: "master"
 
   stable do
@@ -22,14 +22,13 @@ class Mapnik < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "68355025b86d76329b51e1dd87884b80f77e7312a78843cac3e470b5483a64a6"
-    sha256 cellar: :any,                 arm64_monterey: "3f3301e67e53bab4b9d2009a3a88a817cd65c12344c7f3107c4b3b7b19a87922"
-    sha256 cellar: :any,                 arm64_big_sur:  "096c04a8ffed91b414fa0fe8b032e6ec4dee4f2c97ba2e10e0528fb5ccb2d203"
-    sha256 cellar: :any,                 ventura:        "27cc2fc0f6895996c32516152e794498cce02a0f89e9f4ce3d64ccca561edbdc"
-    sha256 cellar: :any,                 monterey:       "d287416d72cb6c8fd7804c9f036365cf95c30bdadd1edd084b69752a495344e8"
-    sha256 cellar: :any,                 big_sur:        "4425ba437fe79dc15a11e9fff5f0d4f0064ae6dc9339cbc8fefbdf16db24ba1b"
-    sha256 cellar: :any,                 catalina:       "45a0236d1958ee2bd3b70108e50b30e47db194cfd02aa4e7323c0e7d0c70e971"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30eeaa43fc6aa85315c09b254cc707e0f0bced3329af3039f61c68e82b51e900"
+    sha256 cellar: :any,                 arm64_ventura:  "1ee8e37cfd927c0bddb456cd0435cb26de4dc6d9ae25728cff8f9e66daf61846"
+    sha256 cellar: :any,                 arm64_monterey: "c19d5bc65c66038e87e3048e96552fcd275a9b7e3230a77035604489a7195cba"
+    sha256 cellar: :any,                 arm64_big_sur:  "8bcb940e5911dcbd7a2c0c38d457a93e390c3c789d7097bb10841e81780cb3ef"
+    sha256 cellar: :any,                 ventura:        "a600af8282f392bfdd596cb5075bd4f1661aa1bddc6bef1ed67e1de2b186e835"
+    sha256 cellar: :any,                 monterey:       "86e4858ca029222867ef5a75d4e2b3a435acf1e2e77b4ff25f9216d7dbbeb0ef"
+    sha256 cellar: :any,                 big_sur:        "32870d981e76517265efd49cbbbd93c9a6ecb6551d255a8d6578094086c6cd80"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4e5a360f7bbb15196d1038e9914e99f8ae07a03b4e95261b2ec6699bb6b0c5c2"
   end
 
   depends_on "pkg-config" => :build

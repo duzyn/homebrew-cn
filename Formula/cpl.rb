@@ -4,6 +4,7 @@ class Cpl < Formula
   url "ftp://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/cpl-7.2.3.tar.gz"
   sha256 "0b18ae87786d1f9a3cddd841464a6ec2f3339989eea9d5ef84a4b8a1e4ce68da"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/"
@@ -11,13 +12,13 @@ class Cpl < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "d3851c7f58809902fc9c424f0605a84c5d6185a46cd72fd6eb59dab119da5abf"
-    sha256 cellar: :any,                 arm64_monterey: "d8fa5d505932b8dd95630862595bb08968cab15aa283db26b9cde635f84ec356"
-    sha256 cellar: :any,                 arm64_big_sur:  "02c5c4b357de2c6bccd1b78549441d8d1ff6b3b03b51a005bad66b1bbf6555c0"
-    sha256 cellar: :any,                 ventura:        "17d71f59448d62a12f237f2fe1517935bfbd83f5386d137d4e5c9b1e11d3718b"
-    sha256 cellar: :any,                 monterey:       "6139cbb88732334d574378460b9c3446b809d24b9fcdd108ba301097e7ad83c7"
-    sha256 cellar: :any,                 big_sur:        "8440862ae12cacc1db0d4b4d8a404908a9a9ab8563799ee838f48d5975668885"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15e376dee4b4f4bd0b3afe53d9066ebdee4c3373b4b397723a2b2412246bc8ab"
+    sha256 cellar: :any,                 arm64_ventura:  "3c4457137efca6354a8ea72a9075888a0eea87592c67877a8f05b7c56b233c23"
+    sha256 cellar: :any,                 arm64_monterey: "20f83e505566f0631d7b198893f308b7f043a551f28832ccd5e63ad91c5b4eda"
+    sha256 cellar: :any,                 arm64_big_sur:  "42d6669c08ce7e1d579be68fc963538e594f58760cfb63b7efea66b48ce0b048"
+    sha256 cellar: :any,                 ventura:        "391461d78a67f1ea130b0772eb11dbe9c9ed10a99d4eb906087f5cc1ce0b877a"
+    sha256 cellar: :any,                 monterey:       "690a5653359f54bc206db50b57e152fa5fa7bb0b93440e0598d73ecc18bc3eaa"
+    sha256 cellar: :any,                 big_sur:        "0e7624192f76ac7b3813826f07e0b18e9e638a87128f292ba78b5bbf17d960bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69631a7f3deb433997beae6ddee746c36ea0c60d287ce862a097bc4974c9f437"
   end
 
   depends_on "cfitsio"

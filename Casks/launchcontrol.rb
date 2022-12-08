@@ -3,8 +3,8 @@ cask "launchcontrol" do
     version "1.52.7,1959"
     sha256 "16c3d89e41a99cbf43e6996681358e8e7a4bc63fa770b9f8c0bc72c5356a0b8a"
   else
-    version "2.0.2,2309"
-    sha256 "5b7114f1bd8fcb1d7c8f33f627f96044c3764c4063ee217933accf7974b1a8bb"
+    version "2.0.3,2310"
+    sha256 "bd73e6836ba5b27df04b296d8a47df019e22e2bcc67619b11645a919c0f3dd8f"
   end
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version.csv.first}.tar.xz"
@@ -18,6 +18,7 @@ cask "launchcontrol" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "LaunchControl.app"
 

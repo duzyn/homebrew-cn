@@ -17,6 +17,11 @@ class CollectorSidecar < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c7da214e88be65203ffab9c4cc0b4106b2dbe97dec451a9b5d1137907daf74e"
   end
 
+  # license change commit, https://github.com/Graylog2/collector-sidecar/commit/13a2ad0992f55a56c1d735308c464df761b52ae3
+  # https://www.graylog.org/post/graylog-announces-4-0-release-of-its-log-management-platform
+  # https://www.graylog.org/post/graylog-v4-0-licensing-sspl
+  disable! date: "2022-12-06", because: "SSPL license"
+
   depends_on "go" => :build
   depends_on "mercurial" => :build
   depends_on "filebeat"

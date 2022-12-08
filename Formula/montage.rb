@@ -4,16 +4,16 @@ class Montage < Formula
   url "http://montage.ipac.caltech.edu/download/Montage_v6.0.tar.gz"
   sha256 "1f540a7389d30fcf9f8cd9897617cc68b19350fbcde97c4d1cdc5634de1992c6"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/Caltech-IPAC/Montage.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "f669dea76769203b2b971c321d43a92c1741ef7332accd78d498388c08a70d73"
-    sha256 cellar: :any, arm64_monterey: "32ca9b9c2b38f96f315089ea6a0ac53a1e46a56d5a19e8448976728a7b61e770"
-    sha256 cellar: :any, arm64_big_sur:  "f11424edd9f5e990992a1f3ca2109bab5b379cd1315a20f6aca9325737451868"
-    sha256 cellar: :any, ventura:        "0837c7341caeb05381ce1af16c934ab873c934401ae9943a0e26701ee5d90143"
-    sha256 cellar: :any, monterey:       "7bde65d353daef1efbc2905d9020dc5be21209432acd60082b7e846974b13e59"
-    sha256 cellar: :any, big_sur:        "4b0e265c15f132b49b7f92f181c9d68f92c5b2a7150b36ebada3af966401d733"
-    sha256 cellar: :any, catalina:       "fa8e44313ba11b9784a9ae19a993613c5eaca2089ef7c50ac72ef486fb06d7a5"
+    sha256 cellar: :any, arm64_ventura:  "5fb0ba7f92da2f1640b5b167a534e25dbbd8bfca5985496dc3160b8c80f8e941"
+    sha256 cellar: :any, arm64_monterey: "3351038e38cb15aea0c03e8085869f13d7a08e595b3ac175d7e516ebbb23930b"
+    sha256 cellar: :any, arm64_big_sur:  "89c301642c9ecdbc1735d7c4f7a2d4682579df7c47bbc79b4a9ca458f8ac612a"
+    sha256 cellar: :any, ventura:        "dd2019c0ad78b267ca235ad2d7a49a1554e94bba0e5366846ce79f6cf5d923c0"
+    sha256 cellar: :any, monterey:       "31f5c80d33f8b8ab6c19931c2d9ee4ce8afbc5bf3521beb30852caf253144acb"
+    sha256 cellar: :any, big_sur:        "185ebdfbbeacdfb4e2c5bf3b3e96e8a9bb21d74415612bab5417024465849ee9"
   end
 
   depends_on "cfitsio"
