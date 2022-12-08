@@ -79,7 +79,7 @@ jobs:
         perl -pi -e 's/cdn-fastly\.obsproject\.com\/downloads\/obs-studio-(.+)-macos/ghproxy\.com\/github\.com\/obsproject\/obs-studio\/releases\/download\/$1\/obs-studio-$1-macos/g' ./Casks/obs.rb
 
         # Tor Browser
-        perl -pi -e 's/dist\.torproject\.org\/torbrowser\/(.+)/ghproxy\.com\/github\.com\/TheTorProject\/gettorbrowser\/releases\/download\/osx64-$1/g' ./Casks/tor-browser.rb
+        perl -pi -e 's/dist\.torproject\.org\/torbrowser\/(.+)/ghproxy\.com\/github\.com\/TheTorProject\/gettorbrowser\/releases\/download\/macos-$1/g' ./Casks/tor-browser.rb
 
         # Calibre
         perl -pi -e 's/download\.calibre-ebook\.com\//ghproxy\.com\/github\.com\/kovidgoyal\/calibre\/releases\/download\/v/g' ./Casks/calibre.rb
