@@ -2,7 +2,7 @@ cask "tor-browser" do
   version "12.0"
   sha256 "11c8360187356e6c0837612a320f1a117303fc449602c9fd73f4faf9f9bbcfc9"
 
-  url "https://ghproxy.com/github.com/TheTorProject/gettorbrowser/releases/download/osx64-#{version}/TorBrowser-#{version}-macos_ALL.dmg"
+  url "https://ghproxy.com/github.com/TheTorProject/gettorbrowser/releases/download/macos-#{version}/TorBrowser-#{version}-macos_ALL.dmg"
   name "Tor Browser"
   desc "Web browser focusing on security"
   homepage "https://www.torproject.org/"
