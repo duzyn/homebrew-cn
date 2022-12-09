@@ -4,6 +4,7 @@ class HaskellLanguageServer < Formula
   url "https://github.com/haskell/haskell-language-server/archive/1.8.0.0.tar.gz"
   sha256 "e1081ac581d21547d835beb8561e815573944aa0babe752a971479da3a207235"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/haskell/haskell-language-server.git", branch: "master"
 
   # we need :github_latest here because otherwise
@@ -14,25 +15,22 @@ class HaskellLanguageServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf00ea6424aeca6c4159348fb18e098edba657166616bccda8e32fe457382589"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ad7dfeb2638c5a9938dc6f3b7724f7ef0dfd748f58024172bda77567ef54f55"
-    sha256 cellar: :any_skip_relocation, monterey:       "b5ee85bbf76737036206843fb9d3381e712495c5ecf19d30500fa0738d6dc3f5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b916bba19076554209aea3fb359b323762044ca8a74bfb9ff67662b15cd335c8"
-    sha256 cellar: :any_skip_relocation, catalina:       "eaabfb9b4f28088843f180577afbf811b5273fc091261fbb2ab637d373bea85a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "068dde2e6fec89fdc79e710befe909b86570024da48f4daf9be135df6d4c04d6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "40af22428f511e5369d5c8acbdc4fc5031b090c032cf57c43ca59f7c8ee52ece"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f3aa7aa60da44f6881c60aab247a2e487c1676cb805b5d7a6ac480d518a5ef4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0836f3d83e63d0da82e9f198c81ab787e81d36dc4a5cd2c70f770d162e6f3388"
+    sha256 cellar: :any_skip_relocation, ventura:        "02561ba835952cc58397acfbda8fedaeabcf21e29d2b10abb93e550a84b7856b"
+    sha256 cellar: :any_skip_relocation, monterey:       "db38aeef73fd9a9cea8e8a5b78fc3b4d2b0c9f30376fd627bf42b23d6b14c816"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d4620cedbd3de4349f66f9aa5e566b01d1d19e6f72c0102f33e37b6eb5bc863e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69ec5d6ecab4566c7d86637d13022da13c05f95aa3c48bf167aec0a4e7ed4290"
   end
 
   depends_on "cabal-install" => [:build, :test]
   depends_on "ghc" => [:build, :test]
   depends_on "ghc@8.10" => [:build, :test]
+  depends_on "ghc@9.2" => [:build, :test]
 
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
-
-  on_intel do
-    depends_on "ghc@8.6" => [:build, :test]
-    depends_on "ghc@8.8" => [:build, :test]
-  end
 
   def ghcs
     deps.map(&:to_formula)

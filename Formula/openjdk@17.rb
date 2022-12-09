@@ -11,39 +11,42 @@ class OpenjdkAT17 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "0ad3ce7237dbc948aa314be7cebcc729c30bcd8eef08277fa464287f9211c426"
-    sha256 cellar: :any, arm64_monterey: "0e2244e35a350256474b6eb6e03d11af5c0270ab7ca4e6bc710c6273cb087b24"
-    sha256 cellar: :any, arm64_big_sur:  "911d64028e026092ce9f8f4b1a7d3c95bd7d631941d057afd5fec646a5e968d1"
-    sha256 cellar: :any, ventura:        "5c424f6cf45913e05b1b394c2aff0281c0d4e32982a0ee33e05d16144e1a05af"
-    sha256 cellar: :any, monterey:       "c1ac28437f8c07409f386e1a3d4d1738fc70b80081579efb64dd6e831a2d78fc"
-    sha256 cellar: :any, big_sur:        "b9093c0c83b7964496208e4abb8805c335f2c8fc916c85148c08324c64e26a10"
-    sha256 cellar: :any, catalina:       "9e21c33ba30e623252df8f74a33b8db56d61753a56f1c3c2aa9891f174152439"
-    sha256               x86_64_linux:   "75bfd5b65e8718cc6f2818a78d5d279520901f6f049fcbcbe9928304220b7e60"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "566d9586e90fc9f0cc3796788557e925dac1f4740870e75e3d6443c829f4bc42"
+    sha256 cellar: :any, arm64_monterey: "97a7577c516e2a23c0c6a2f195f23f5014fd2aa21b84503a07a8dbdd95889a97"
+    sha256 cellar: :any, arm64_big_sur:  "9622f533acaceda168d8f934c9db17d39287ecada94d4133221355c4648953ca"
+    sha256 cellar: :any, ventura:        "ff335f31da3df5c713607b25b81673fad376cc1bf33a23d1fc8cd961f8e40ecf"
+    sha256 cellar: :any, monterey:       "d4c45935c0f1edaecd0a695a24268fb265fbd83eb108d8d03645bad34f916169"
+    sha256 cellar: :any, big_sur:        "d60c7b04fb0e8695015519d773238ad6eeccf2fb1265f6add47fcdc9f7633b09"
+    sha256               x86_64_linux:   "85db60921d8edf43af2eb8dea4e6d3ba29486bc1972e473afd6fdbd442b704db"
   end
 
   keg_only :versioned_formula
 
   depends_on "autoconf" => :build
+  depends_on "pkg-config" => :build
   depends_on xcode: :build
+  depends_on "giflib"
+  depends_on "harfbuzz"
+  depends_on "jpeg-turbo"
+  depends_on "libpng"
+  depends_on "little-cms2"
+
+  uses_from_macos "cups"
+  uses_from_macos "unzip"
+  uses_from_macos "zip"
+  uses_from_macos "zlib"
 
   on_linux do
-    depends_on "pkg-config" => :build
     depends_on "alsa-lib"
-    depends_on "cups"
     depends_on "fontconfig"
+    depends_on "freetype"
     depends_on "libx11"
     depends_on "libxext"
     depends_on "libxrandr"
     depends_on "libxrender"
     depends_on "libxt"
     depends_on "libxtst"
-    depends_on "unzip"
-    depends_on "zip"
-
-    # FIXME: This should not be needed because of the `-rpath` flag
-    #        we set in `--with-extra-ldflags`, but this configuration
-    #        does not appear to have made it to the linker.
-    ignore_missing_libraries "libjvm.so"
   end
 
   fails_with gcc: "5"
@@ -61,13 +64,19 @@ class OpenjdkAT17 < Formula
       end
     end
     on_linux do
-      url "https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
-      sha256 "6c714ded7d881ca54970ec949e283f43d673a142fda1de79b646ddd619da9c0c"
+      on_arm do
+        url "https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-aarch64_bin.tar.gz"
+        sha256 "1ffb9c7748334945d9056b3324de3f797d906fce4dad86beea955153aa1e28fe"
+      end
+      on_intel do
+        url "https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
+        sha256 "6c714ded7d881ca54970ec949e283f43d673a142fda1de79b646ddd619da9c0c"
+      end
     end
   end
 
   def install
-    boot_jdk = Pathname.pwd/"boot-jdk"
+    boot_jdk = buildpath/"boot-jdk"
     resource("boot-jdk").stage boot_jdk
     boot_jdk /= "Contents/Home" if OS.mac?
     java_options = ENV.delete("_JAVA_OPTIONS")
@@ -87,9 +96,15 @@ class OpenjdkAT17 < Formula
       --with-version-build=#{revision}
       --without-version-opt
       --without-version-pre
+      --with-giflib=system
+      --with-harfbuzz=system
+      --with-lcms=system
+      --with-libjpeg=system
+      --with-libpng=system
+      --with-zlib=system
     ]
 
-    ldflags = ["-Wl,-rpath,#{loader_path}/server"]
+    ldflags = ["-Wl,-rpath,#{loader_path.gsub("$", "\\$$")}/server"]
     args += if OS.mac?
       ldflags << "-headerpad_max_install_names"
 
@@ -102,30 +117,29 @@ class OpenjdkAT17 < Formula
         --with-x=#{HOMEBREW_PREFIX}
         --with-cups=#{HOMEBREW_PREFIX}
         --with-fontconfig=#{HOMEBREW_PREFIX}
+        --with-freetype=system
+        --with-stdc++lib=dynamic
       ]
     end
     args << "--with-extra-ldflags=#{ldflags.join(" ")}"
 
-    chmod 0755, "configure"
-    system "./configure", *args
+    system "bash", "configure", *args
 
     ENV["MAKEFLAGS"] = "JOBS=#{ENV.make_jobs}"
     system "make", "images"
 
+    jdk = libexec
     if OS.mac?
-      jdk = Dir["build/*/images/jdk-bundle/*"].first
-      libexec.install jdk => "openjdk.jdk"
-      bin.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/bin/*"]
-      include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/*.h"]
-      include.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/include/darwin/*.h"]
-      man1.install_symlink Dir[libexec/"openjdk.jdk/Contents/Home/man/man1/*"]
+      libexec.install Dir["build/*/images/jdk-bundle/*"].first => "openjdk.jdk"
+      jdk /= "openjdk.jdk/Contents/Home"
     else
-      libexec.install Dir["build/linux-x86_64-server-release/images/jdk/*"]
-      bin.install_symlink Dir[libexec/"bin/*"]
-      include.install_symlink Dir[libexec/"include/*.h"]
-      include.install_symlink Dir[libexec/"include/linux/*.h"]
-      man1.install_symlink Dir[libexec/"man/man1/*"]
+      libexec.install Dir["build/linux-*-server-release/images/jdk/*"]
     end
+
+    bin.install_symlink Dir[jdk/"bin/*"]
+    include.install_symlink Dir[jdk/"include/*.h"]
+    include.install_symlink Dir[jdk/"include"/OS.kernel_name.downcase/"*.h"]
+    man1.install_symlink Dir[jdk/"man/man1/*"]
   end
 
   def caveats

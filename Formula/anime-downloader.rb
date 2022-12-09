@@ -10,14 +10,14 @@ class AnimeDownloader < Formula
   head "https://github.com/anime-dl/anime-downloader.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3e390f26846d6749c4cdc6a40ffb39bf25a302afa14a714caa940423b2f08624"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f21a305c94e195e2b72ac5ae205f1c21ae3b20ab2bc5d6318551dfb4f5696032"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "67c4ca45e0e95a3bc87154948e6ddf4c43d87d4b5e530d8801550db431f630ae"
-    sha256 cellar: :any_skip_relocation, ventura:        "28fd307282bb93b5e6d72e543cfc60c5dcaa59177273c1af75912880f07f1d5b"
-    sha256 cellar: :any_skip_relocation, monterey:       "af19db669c5b6fa89d6325d6379d0bf5456d3078bd0eb249a78865a0153d0127"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bef75ad9d6fea8ae7653f1bab947ed54b2893c658182a2ec6bace4bd4e5e6e10"
-    sha256 cellar: :any_skip_relocation, catalina:       "f5c32fd6103a2841a2137e128233b8ced960d5de18a4ebfd68fa009b360d74ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b202c394ec2ca23cbe1a2e720f4833b49b0288b2f884d474e2c0629b48968c1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "98e0f6cfcb073096be611b18ebd8e00409b8fffe66d356d18714055b4163538d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5a0d9538acb902ab6570f479c3f64db73588f4dfd6bbc2bfe1f97c7ff088b7fe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9f14c91f5fc8d4085b117862fab75f7f627fce41779630d39faa074d338d69b3"
+    sha256 cellar: :any_skip_relocation, ventura:        "b36953aca79c443345fd49b26aaabdf61cf51f1e3077c20932e9fd66650b7771"
+    sha256 cellar: :any_skip_relocation, monterey:       "31f79f267a1efa5df257f9fdad0e78f20669d48ea37182d7a5172356fe8caf56"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cd65772b34924b995eba6966e3b62a9dc31d7bb482c34960db17f8e42f27e73b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e21296ba0f844f521e250fcff933fcf13375a3db3a8dee260c7a7a18eb97ddff"
   end
 
   depends_on "aria2"
@@ -47,8 +47,8 @@ class AnimeDownloader < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cfscrape" do
@@ -87,8 +87,8 @@ class AnimeDownloader < Formula
   end
 
   resource "pycryptodome" do
-    url "https://files.pythonhosted.org/packages/11/e4/a8e8056a59c39f8c9ddd11d3bc3e1a67493abe746df727e531f66ecede9e/pycryptodome-3.15.0.tar.gz"
-    sha256 "9135dddad504592bcc18b0d2d95ce86c3a5ea87ec6447ef25cfedea12d6018b8"
+    url "https://files.pythonhosted.org/packages/0d/66/5e4a14e91ffeac819e6888037771286bc1b86869f25d74d60bc4a61d2c1e/pycryptodome-3.16.0.tar.gz"
+    sha256 "0e45d2d852a66ecfb904f090c3f87dc0dfb89a499570abad8590f10d9cffb350"
   end
 
   resource "pySmartDL" do
@@ -124,8 +124,8 @@ class AnimeDownloader < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install

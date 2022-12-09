@@ -1,5 +1,5 @@
 class Unison < Formula
-  desc "File synchronization tool for OSX"
+  desc "File synchronization tool"
   homepage "https://www.cis.upenn.edu/~bcpierce/unison/"
   url "https://github.com/bcpierce00/unison/archive/v2.53.0.tar.gz"
   sha256 "9364477df4501b9c7377e2ca1a7c4b44c1f16fa7cbc12b7f5b543d08c3f0740a"
@@ -14,14 +14,14 @@ class Unison < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4876cf47609bab458e0471701db69e70324ec022cd59baec2b4792ac67afc47f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "07eba0dce086b3c1bfeca8c24046f1744382d8c8b9d7ebb23960a9887e02a870"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f732d4bbeb53c7f2d8fd5f364e358eb63abd351df307f5e18d32e280a081ae2f"
-    sha256 cellar: :any_skip_relocation, ventura:        "545fef29b1cdc4d5cd9b8df29fe6239f2fb504c84d6e0efb1896e767be7e6b3b"
-    sha256 cellar: :any_skip_relocation, monterey:       "27d35992c23abb1c65c6c89d9d4b9e126725c0230f60c7b5d188954e42922800"
-    sha256 cellar: :any_skip_relocation, big_sur:        "27bd65233cafcb9f8f8eb4f4ca8e9339ecc6fcc030a1b463a899a7889d9bc227"
-    sha256 cellar: :any_skip_relocation, catalina:       "9ec0303933a284cde4bd5ffe76ad90b2eaba690c14cc36290d4171487c9374c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "732b9db81d32a663a8b3f9ec29bee276ded17abf8a2cddbee7adf51b314db42b"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4ecca599dd555f8bf39177b3d69b4091a60391adc88543a54f33949309ecb4f9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4482f0925510919ff323ad11cdabd5d72cb57bb7dbfa774ae229aaca19efbff"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "be465eaea4ca2fe8f7e9d9c7c28041b4578b3426987858dfbfe9f72fb8b74e5b"
+    sha256 cellar: :any_skip_relocation, monterey:       "5f944c773921df6d29441c3901089432022476b7c1985743ca25f2fbaac7ca6e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "61aeab9ca513053c3eb6899ab0ce49574462b3b03a3749d6aa35fcce98250d9f"
+    sha256 cellar: :any_skip_relocation, catalina:       "9bedf63a15335555b43b3a94cb827cad73ad107796c7c878e177dd281a83d2f1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "303b4bbdc40c9171d22c5fcec4b5b7a0898ba791b9b0a06b37abf6c853c6e032"
   end
 
   depends_on "ocaml" => :build
@@ -32,6 +32,8 @@ class Unison < Formula
     ENV.delete "NAME" # https://github.com/Homebrew/homebrew/issues/28642
     system "make", "UISTYLE=text"
     bin.install "src/unison"
+    # unison-fsmonitor is built just for Linux targets
+    bin.install "src/unison-fsmonitor" if OS.linux?
     prefix.install_metafiles "src"
   end
 

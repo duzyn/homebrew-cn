@@ -3,19 +3,18 @@ class PipAudit < Formula
 
   desc "Audits Python environments and dependency trees for known vulnerabilities"
   homepage "https://pypi.org/project/pip-audit/"
-  url "https://files.pythonhosted.org/packages/8d/10/f78fdb7944b421fe33341e47e6c1375cd5b75245f58c9e44e8f178af133a/pip_audit-2.4.7.tar.gz"
-  sha256 "f87b37b6db5317a3f5ecebc202b5d4401958b5e4bd05b39d7b230bdc6f63c34b"
+  url "https://files.pythonhosted.org/packages/a1/13/7e75d4dfc367ead0085ff31238576019306b73d70a415be3c5ab2f78809d/pip_audit-2.4.8.tar.gz"
+  sha256 "a45540ab0c5a9311315ca42c78fa8f72cf3598d5968a67d883d2d6194eda598c"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2e183da90644848fc9dfd006c810100b36c80b753e6d057922b853ec8e963f35"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e0f23ab4446d0ffec8c86e20ee6fa2fa30031586805d03b6ed20088a3fdf856d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8a1560eb394e7492dad1fe200630ff49a35d271065d8495dbae5902af3b4fbb"
-    sha256 cellar: :any_skip_relocation, ventura:        "788e026f7ecf23cd801d8426a2c4f71a85e9f23521eaf4a20b7e5537c11a2150"
-    sha256 cellar: :any_skip_relocation, monterey:       "9999bb54c5671ec03e8dc8b7ceca28042af1d664c290b04290c78ec012911905"
-    sha256 cellar: :any_skip_relocation, big_sur:        "68e2f7df8e73e74bc81219e0e923aa89c905e569470ba8e9d0484f067a21c01b"
-    sha256 cellar: :any_skip_relocation, catalina:       "a65907ca8b020605612dff0e09e6590c71c4cd4624c1537ba9b74c15af63a399"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe5558350793196c0ba41275ea2638d98d6d5b0ce1ab2e319c2fdcc601c74437"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7519e51da080b2b854c095276454ce4b8e3599c812428a1de628e60a848d6861"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c946fdac8d9fd4eee9e80280bc337fdf8df0ee55fd04a04d7e8c45314396a975"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1d360771e6d8d686475637ec149a8aef6fade8d3b9d36d04a7016e0439edeb1b"
+    sha256 cellar: :any_skip_relocation, ventura:        "8ff7a53034ac4d2c46bcc15e1dbac8b22ed0f864988a68d0f2a9f6b08bfec263"
+    sha256 cellar: :any_skip_relocation, monterey:       "7002a6506d5b305d66d23a7cd159f88265089cee6f38b974e149b00cc80f925f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8d44474cec5881883de3f3b8270435472f9d402929af00293338ce6d3cf98dab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ec242baae73c20ae7409561e1d72acf3970ce275a5ae5c337f2fba57af55dba"
   end
 
   depends_on "pygments"
@@ -28,8 +27,8 @@ class PipAudit < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -48,8 +47,8 @@ class PipAudit < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/95/55/b897882bffb8213456363e646bf9e9fa704ffda5a7d140edf935a9e02c7b/filelock-3.8.0.tar.gz"
-    sha256 "55447caa666f2198c5b6b13a26d2084d26fa5b115c00d065664b2124680c4edc"
+    url "https://files.pythonhosted.org/packages/d8/73/292d9ea2370840a163e6dd2d2816a571244e9335e2f6ad957bf0527c492f/filelock-3.8.2.tar.gz"
+    sha256 "7565f628ea56bfcd8e54e42bdc55da899c85c1abfe1b5bcfd147e9188cebb3b2"
   end
 
   resource "html5lib" do
@@ -83,8 +82,8 @@ class PipAudit < Formula
   end
 
   resource "pip-requirements-parser" do
-    url "https://files.pythonhosted.org/packages/fc/aa/4fbc8040db7afae616eda6329ddc8ef73afc8bcb611bf9126937970bca83/pip-requirements-parser-31.2.0.tar.gz"
-    sha256 "8c2a6f8e091ac2693824a5ef4e3b250226e34f74a20a91a87b9ab0714b47788f"
+    url "https://files.pythonhosted.org/packages/b9/23/521b47a48e8d0a66e9cb15d25279381efbda8e2e474d04018d577e677c7b/pip-requirements-parser-32.0.0.tar.gz"
+    sha256 "5159b8a9485a5a0d0254a29c9bd8b8ce66db2eb9a1a0244c64dfce43f7f2ac90"
   end
 
   resource "pyparsing" do

@@ -9,15 +9,14 @@ class AwsElasticbeanstalk < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "56fdac2671333fcf13f0dc32190a782e9fd5f5ccb21ccc37cf828281d2948290"
-    sha256 cellar: :any,                 arm64_monterey: "b493e27f9b65f146521bd6f323866ac62f5ae3a83ca5516bcb242987ea1aefc5"
-    sha256 cellar: :any,                 arm64_big_sur:  "cbbd0c07de5f5029f1716d38ef8ba5523e1e749a16ca3ea7296d799effa4fe9c"
-    sha256 cellar: :any,                 ventura:        "4da317d0aab537ff8ca5e5cc0127e8a43ba4bce746cc69ed2d41c4969d1279ac"
-    sha256 cellar: :any,                 monterey:       "d8fcd2bf79cb2c21b506cd8f47c1830bc97b7d0d11c7506c0a1a8ade965c4526"
-    sha256 cellar: :any,                 big_sur:        "faa23c367d466637207cdb60224e462da017667827355e0e464ea29883a1dcce"
-    sha256 cellar: :any,                 catalina:       "1f5d8e804284426bdd84a1eff01646edf7cfed6791631b213ee8a3d44bb76ed0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2259308f4cbbca22a142c04d3f21b28011a47514354f1b787c3b2637bc191f5f"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "cf080ffaf3b45f621f98a9ab2c1736f74c7fefdb4918de70623cb44b144989a9"
+    sha256 cellar: :any,                 arm64_monterey: "a34c6446714ae065dee49f781da3f99099d3f8aaa8e0b360660ed4ebbb3d4af2"
+    sha256 cellar: :any,                 arm64_big_sur:  "0c97f7ebda9a2d462c0070d4275aebfbb55dd2291c4f18c61b47941308834bfe"
+    sha256 cellar: :any,                 ventura:        "72cc2c2ff6ef6d6200401489e35af719623bf6871bffa1dbbe8455fa29655493"
+    sha256 cellar: :any,                 monterey:       "2e67d5e178da112cb97d60c6946891a731b95aa95004484da0455f3dad8cea95"
+    sha256 cellar: :any,                 big_sur:        "9493db8bce99693e8f5069054e7965d2d70efa6a315dfd2e40f3d9a989f3c8dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f542eed1e0fe4ab7559d8b594a34c42a03280368f93bf0cac2d9011715c50c8"
   end
 
   depends_on "rust" => :build
@@ -60,8 +59,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cffi" do
@@ -80,8 +79,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/13/dd/a9608b7aebe5d2dc0c98a4b2090a6b815628efa46cc1c046b89d8cd25f4c/cryptography-38.0.3.tar.gz"
-    sha256 "bfbe6ee19615b07a98b1d2287d6a6073f734735b49ee45b11324d85efc4d5cbd"
+    url "https://files.pythonhosted.org/packages/e3/3f/41186b1f2fd86a542d399175f6b8e43f82cd4dfa51235a0b030a042b811a/cryptography-38.0.4.tar.gz"
+    sha256 "175c1a818b87c9ac80bb7377f5520b7f31b3ef2a0004e2420319beadedb67290"
   end
 
   resource "docker" do
@@ -180,13 +179,13 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "texttable" do
-    url "https://files.pythonhosted.org/packages/d5/78/dbc2a5eab57a01fedaf975f2c16f04e76f09336dbeadb9994258aa0a2b1a/texttable-1.6.4.tar.gz"
-    sha256 "42ee7b9e15f7b225747c3fa08f43c5d6c83bc899f80ff9bae9319334824076e9"
+    url "https://files.pythonhosted.org/packages/e4/84/4686ee611bb020038375c5f11fe7b6b3bb94ee78614a1faba45effe51591/texttable-1.6.7.tar.gz"
+    sha256 "290348fb67f7746931bcdfd55ac7584ecd4e5b0846ab164333f0794b121760f2"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "wcwidth" do

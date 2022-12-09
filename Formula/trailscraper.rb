@@ -3,49 +3,47 @@ class Trailscraper < Formula
 
   desc "Tool to get valuable information out of AWS CloudTrail"
   homepage "https://github.com/flosell/trailscraper"
-  url "https://files.pythonhosted.org/packages/f4/89/392581eaa901f2690f5d9b0c9589f41ad03606371f16bedd9680a12413aa/trailscraper-0.7.0.tar.gz"
-  sha256 "8aade831f331d5f3b3780478473c4dbe45dc2018026df0112624cd37bbdc3605"
+  url "https://files.pythonhosted.org/packages/b5/d0/c46ca8b3857576debced3e52471693b5acae996882c9f33a78dc6ddc91da/trailscraper-0.8.0.tar.gz"
+  sha256 "b0ae6be8013226943a6db068420fef8c537c0061cb1e36528b05896aa9326393"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/flosell/trailscraper.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd6794ada78df92b5543194fbce4f6da6e26ebde864fca19fe834f7f62baf5db"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea86aaf4571e9a0a6b04cd63cf265eceb4e1e0501add7e03d34ef6403eb6874e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "14f98091da770e1f69b54b9457c583dea2202afb91fe70fad909192d3b8bb377"
-    sha256 cellar: :any_skip_relocation, ventura:        "8dcbbbfc12c9d5127529c9e883e1e14f6d7aa3bb90a7bbbd57bea45c7d0feeb3"
-    sha256 cellar: :any_skip_relocation, monterey:       "4aba6586e5e9902a0ce1cab93a57ebe6c7ef2797ce00c07f36943abbd3bd858e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "836c585ae4f12ef2ec8389e8647e4056e0a16a4bf6952fd30bcdda7907768c96"
-    sha256 cellar: :any_skip_relocation, catalina:       "257b4fba89023afaf7cd8cf7eeae67d9d6bc7c21859067e028434e48555cdc3f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd9a48aeb5cd08a08fb10d35d83eebef69c66e9436de70e737e3c10e3efbc3f8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0bb654d437d44d9d59769a77b5c2d603d1cf54660a72632935f4498acfa336cc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "010aeca289d9ccc086eba0bb417b82ff593ad59b71a46f363720724e0b3b5620"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7583d820887dbe67efcf9ee53f4b30f32b4392789348870f2e6c8d47b35edf6b"
+    sha256 cellar: :any_skip_relocation, ventura:        "fb760de33c8b333c2b6020284eaacf38523eb8ad00bf179142bdda9f2c4dca41"
+    sha256 cellar: :any_skip_relocation, monterey:       "84170df9025d6ac407dae454486e803cbec770bcf4a8bbe58dca75b9482fb8db"
+    sha256 cellar: :any_skip_relocation, big_sur:        "209de4cd23a327251538d17b5bfaa34ac56eac59429ee3c1ede333c88614528f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9588284863f7f8a4a26961d3427909011a81166546c18b1a8e346998abd3ca5"
   end
 
   depends_on "python@3.11"
+  depends_on "six"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/c5/d6/af0c15b601e38bff38d975a231d8c4401d29e1385bf1ebb65b97cefa91e1/boto3-1.17.62.tar.gz"
-    sha256 "d856a71d74351649ca8dd59ad17c8c3e79ea57734ff4a38a97611e1e10b06863"
+    url "https://files.pythonhosted.org/packages/bf/05/c256c7936520cc265f7561b5180920e986321916d341e7399fc5de5bea6b/boto3-1.26.22.tar.gz"
+    sha256 "f16c3aef1432c5083a9e1c36ac08b70b9072e87205e970f8d7520b10b964858f"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/4d/c8/2d47e502c12d4b436e5b865cc78552604888aee59570c12b1863bb09c11b/botocore-1.20.112.tar.gz"
-    sha256 "d0b9b70b6eb5b65bb7162da2aaf04b6b086b15cc7ea322ddc3ef2f5e07944dcf"
+    url "https://files.pythonhosted.org/packages/70/99/823369588a62d5208628d67a9488905a637989ce09d150108c9de11d6b50/botocore-1.29.24.tar.gz"
+    sha256 "4f9c92979b29132185f645f61bdf0fecf031ecc26a8dd1a99dbd88d323211325"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/21/83/308a74ca1104fe1e3197d31693a7a2db67c2d4e668f20f43a2fca491f9f7/click-8.0.1.tar.gz"
-    sha256 "8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a"
+    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
+    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
   end
 
   resource "dateparser" do
-    url "https://files.pythonhosted.org/packages/a9/f3/09df53068a630a69c95ae0fe8e4fae597bcfbd5f25abb30ab94dc02a7cb2/dateparser-1.0.0.tar.gz"
-    sha256 "159cc4e01a593706a15cd4e269a0b3345edf3aef8bf9278a57dac8adf5bf1e4a"
+    url "https://files.pythonhosted.org/packages/57/a0/60fd5e9e5a9d5086d124071c748214766e04d75098d892998778b02fc89f/dateparser-1.1.4.tar.gz"
+    sha256 "73ec6e44a133c54076ecf9f9dc0fbe3dd4831f154f977ff06f53114d57c5425e"
   end
 
   resource "jmespath" do
-    url "https://files.pythonhosted.org/packages/3c/56/3f325b1eef9791759784aa5046a8f6a1aff8f7c898a2e34506771d3b99d8/jmespath-0.10.0.tar.gz"
-    sha256 "b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"
+    url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
+    sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
   end
 
   resource "python-dateutil" do
@@ -54,8 +52,8 @@ class Trailscraper < Formula
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/b0/61/eddc6eb2c682ea6fd97a7e1018a6294be80dba08fa28e7a3570148b4612d/pytz-2021.1.tar.gz"
-    sha256 "83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da"
+    url "https://files.pythonhosted.org/packages/76/63/1be349ff0a44e4795d9712cc0b2d806f5e063d4d34631b71b832fac715a8/pytz-2022.6.tar.gz"
+    sha256 "e89512406b793ca39f5971bc999cc538ce125c0e51c27941bef4568b460095e2"
   end
 
   resource "pytz-deprecation-shim" do
@@ -69,28 +67,23 @@ class Trailscraper < Formula
   end
 
   resource "ruamel.yaml" do
-    url "https://files.pythonhosted.org/packages/fd/6b/b83bdc8fb9aad62f6469117874e7c11b64d94ba9e8557f73ca1f28c2df7d/ruamel.yaml-0.17.7.tar.gz"
-    sha256 "5c3fa739bbedd2f23769656784e671c6335d17a5bf163c3c3901d8663c0af287"
+    url "https://files.pythonhosted.org/packages/46/a9/6ed24832095b692a8cecc323230ce2ec3480015fbfa4b79941bd41b23a3c/ruamel.yaml-0.17.21.tar.gz"
+    sha256 "8b7ce697a2f212752a35c1ac414471dc16c424c9573be4926b56ff3f5d23b7af"
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/27/90/f467e516a845cf378d85f0a51913c642e31e2570eb64b352c4dc4c6cbfc7/s3transfer-0.4.2.tar.gz"
-    sha256 "cb022f4b16551edebbb31a377d3f09600dbada7363d8c5db7976e7f47732e1b2"
-  end
-
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
-    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+    url "https://files.pythonhosted.org/packages/e1/eb/e57c93d5cd5edf8c1d124c831ef916601540db70acd96fa21fe60cef1365/s3transfer-0.6.0.tar.gz"
+    sha256 "2ed07d3866f523cc561bf4a00fc5535827981b117dd7876f036b0c1aca42c947"
   end
 
   resource "toolz" do
-    url "https://files.pythonhosted.org/packages/d6/0d/fdad31347bf3d058002993a094da1ca95f0f3ef9beec08856d0fe4ad9766/toolz-0.11.1.tar.gz"
-    sha256 "c7a47921f07822fe534fb1c01c9931ab335a4390c782bd28c6bcc7c2f71f3fbf"
+    url "https://files.pythonhosted.org/packages/cf/05/2008534bbaa716b46a2d795d7b54b999d0f7638fbb9ed0b6e87bfa934f84/toolz-0.12.0.tar.gz"
+    sha256 "88c570861c440ee3f2f6037c4654613228ff40c93a6c25e0eba70d17282c6194"
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/5e/9f/63f7187ffd6d01dd5b5255b8c0b1c4f05ecfe79d940e0a243a6198071832/tzdata-2022.6.tar.gz"
-    sha256 "91f11db4503385928c15598c98573e3af07e7229181bee5375bd30f1695ddcae"
+    url "https://files.pythonhosted.org/packages/5b/30/b7abfb11be6642d26de1c1840d25e8d90333513350ad0ebc03101d55e13b/tzdata-2022.7.tar.gz"
+    sha256 "fe5f866eddd8b96e9fcba978f8e503c909b19ea7efda11e52e39494bad3a7bfa"
   end
 
   resource "tzlocal" do
@@ -99,8 +92,8 @@ class Trailscraper < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install

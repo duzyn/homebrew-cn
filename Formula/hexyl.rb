@@ -1,18 +1,18 @@
 class Hexyl < Formula
   desc "Command-line hex viewer"
   homepage "https://github.com/sharkdp/hexyl"
-  url "https://github.com/sharkdp/hexyl/archive/v0.11.0.tar.gz"
-  sha256 "ffab2a52f6d95afd4d83ef87b694ec749837a1fb6ea8099b700bd6323a9b622e"
+  url "https://github.com/sharkdp/hexyl/archive/v0.12.0.tar.gz"
+  sha256 "bf3a3e8851e7bbcf01f75ae95c018faf3c9f1b7f363159d4a7459bbe11478144"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/hexyl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3f033d8bb6aa0df9c5bf32552ab2f023a0b0067b892d1e5d5d8207ec838730dc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f73c44d29f4953e97fb48939b36f551189197d08c7b99c3dcb91f04be63ce0ea"
-    sha256 cellar: :any_skip_relocation, ventura:        "35386ebfeb38d54bec134e92e8229432e7e8ddcc34c8dd2c8a98a67087a34833"
-    sha256 cellar: :any_skip_relocation, monterey:       "3ab6dd0e35b54784bbedfb46099f52edb3a258cc0cf1dac1e9074137e58ada81"
-    sha256 cellar: :any_skip_relocation, big_sur:        "97e15dc5c3e71eb3598a56870fde2d3e547306b6780a51ad1c0ca93672c1a28b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "85ced5662e57be08b28ca529df677e6d1cbe74c491e9450eb8e5b9194724a2c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bc5cffa1706a75b4d0b6c7af65c89407f875f92d8f44994c6b70b36e4bb3160"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba4180de5a5e9e107e21f07295342d465ed7a7a4612ada48c06d4a38d447b55a"
+    sha256 cellar: :any_skip_relocation, ventura:        "2dad61e73eb77225469344d0833d797e29303ad098913df720f21137660b1457"
+    sha256 cellar: :any_skip_relocation, monterey:       "09bb90fc13b3f4cbf45bc84272aa19c2bb35d0b526bb726994edc1997575b343"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fd78b492b9c38580e3fabcd3ce56ac405751b6cddbedc08a599b30a59bda4de1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4644fc35b963b754ab228dd220305ca4c509238c828956ba1ac6959a0b1c2b0a"
   end
 
   depends_on "pandoc" => :build

@@ -10,15 +10,14 @@ class Awscurl < Formula
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "0684b73a3273fb2bfcaedccaf6a6aaf3d23e907c2a0048174480e520d87a0b75"
-    sha256 cellar: :any,                 arm64_monterey: "9a4a0c0bb4979d0ee08b9ffff456d79191326fa0ed7d29dc19e0323ec6713123"
-    sha256 cellar: :any,                 arm64_big_sur:  "6675dd94fe8ce001a56f39fd8b973aeae6852e51316adbd625190f4cfb5a70c1"
-    sha256 cellar: :any,                 ventura:        "8549b5cd37215e32b78d0163bb832d29267282a230c3d52a2a6eec55a7d56b1e"
-    sha256 cellar: :any,                 monterey:       "7eac4d1801aeb8fc8fd0718d7c09b85927e866616d5f136f20e6bae434e7af6b"
-    sha256 cellar: :any,                 big_sur:        "471ca74336a65054df2342fbce5b4d88facee4321ee0f531f599cc3df4cdb0d5"
-    sha256 cellar: :any,                 catalina:       "fa3fbbbef4bf6663c7426d446caac167683081465f4c554369137af194059768"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e344df93eb1aee6eac992fdfed5495d4d07c186dbaaca36bebe3a24fbd1c75e3"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "5358c8ddda4e4134640b53c58df145cf01f786efd2a1813dfd02bbebeea006a0"
+    sha256 cellar: :any,                 arm64_monterey: "c7915264e8ea0553714c8a95a5a1b75bc4f3af5bfec2d0f5c124a7ea85aa6213"
+    sha256 cellar: :any,                 arm64_big_sur:  "5402933d60a39f87ce4a47731282adf12fddab30a6ed93ccdd57dc867617e35e"
+    sha256 cellar: :any,                 ventura:        "c16f3a9dbd8b5bc78b6a9db33a531a8e0f5afefcab7304c2d8948d3824a7c92c"
+    sha256 cellar: :any,                 monterey:       "7c5a70efd6149129edb6dc77e996145de158f6daa10fcdaa964fdadaef190208"
+    sha256 cellar: :any,                 big_sur:        "e6ef3ffe330576f4ca845aa60ac433d8995194d672ea444d1b5568d4ebb5fb05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0843401423ae91bf6ab680449c16429305c10db54a77b4fe9535be4dcd1474c5"
   end
 
   depends_on "rust" => :build
@@ -32,8 +31,8 @@ class Awscurl < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cffi" do
@@ -57,8 +56,8 @@ class Awscurl < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/13/dd/a9608b7aebe5d2dc0c98a4b2090a6b815628efa46cc1c046b89d8cd25f4c/cryptography-38.0.3.tar.gz"
-    sha256 "bfbe6ee19615b07a98b1d2287d6a6073f734735b49ee45b11324d85efc4d5cbd"
+    url "https://files.pythonhosted.org/packages/e3/3f/41186b1f2fd86a542d399175f6b8e43f82cd4dfa51235a0b030a042b811a/cryptography-38.0.4.tar.gz"
+    sha256 "175c1a818b87c9ac80bb7377f5520b7f31b3ef2a0004e2420319beadedb67290"
   end
 
   resource "idna" do
@@ -82,8 +81,8 @@ class Awscurl < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "urllib3-secure-extra" do

@@ -9,15 +9,14 @@ class Airshare < Formula
   revision 3
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "254c7bb2312af945bacc012087f1f20b6bf09640a5ae4fe39e8257ed78c3f0dd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4d6238402006c5a7b0e1d6c223b59ac45c59a7820d193698c2b64eda7435452b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5c65d79fdfd2c345cc6b14def1fd87153d91fdfaa0fea70d8aa1c7e4af6cfbe0"
-    sha256 cellar: :any_skip_relocation, ventura:        "89d2a3b149ffe3247da33f3193c770dcc3fbca3f994722d511f826ba675326e6"
-    sha256 cellar: :any_skip_relocation, monterey:       "3cc5b64b96f92a560986b1154bf3c52f0fdb5c0e27d072c7b15455e1592bc196"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3576c23e2096a4ca5709692374e5af90b5f7c8201ae99affb67bb68f8c30f7b2"
-    sha256 cellar: :any_skip_relocation, catalina:       "1ad770538d96edc8f7165b5c82781e3ac42c6c92f7ee7e02c4d12f8f27f695ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c406480844bcc97b13a601c0a871d61380dbdf8b9debb13d45b616b789e9b8ef"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a0b75e8296057c53e2e908b48aa2b94745080dc1ea8fa7b99abf4c07e575de05"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aaddb77b59550bfc5fb7f1348e69f01734819e6476bcc41d41b1b7c367dbd396"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b648c1e831b3325b61d3348146ab57da9e9cbb77ebd111c9f56ae995c12690ed"
+    sha256 cellar: :any_skip_relocation, ventura:        "65f223b2d581ab3e903cb682356b9858b116cb986a4a4cf74f4deebc3420e381"
+    sha256 cellar: :any_skip_relocation, monterey:       "5edc8f8865415a5bb5557a068c14ccb0a51602bbf3e07f8403114d65f74c51d6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d0cbf473e2fba0484156a6e8974b03c794fe091d5f35ab15f8ae68f3d04d00b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "90e31f4ea062d42c66d96d9982a6b05b310f588c1b85e9970ad1126f4fd1304c"
   end
 
   depends_on "python@3.11"
@@ -28,8 +27,8 @@ class Airshare < Formula
   end
 
   resource "aiosignal" do
-    url "https://files.pythonhosted.org/packages/27/6b/a89fbcfae70cf53f066ec22591938296889d3cc58fec1e1c393b10e8d71d/aiosignal-1.2.0.tar.gz"
-    sha256 "78ed67db6c7b7ced4f98e495e572106d5c432a93e1ddd1bf475e1dc05f5b7df2"
+    url "https://files.pythonhosted.org/packages/ae/67/0952ed97a9793b4958e5736f6d2b346b414a2cd63e82d05940032f45b32f/aiosignal-1.3.1.tar.gz"
+    sha256 "54cd96e15e1649b75d6c87526a6ff0b6c1b0dd3459f43d9ca11d48c339b68cfc"
   end
 
   resource "async-timeout" do
@@ -48,8 +47,8 @@ class Airshare < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -68,8 +67,8 @@ class Airshare < Formula
   end
 
   resource "frozenlist" do
-    url "https://files.pythonhosted.org/packages/8a/95/229aacfe85daa28e2792481a98c336bc30d3729533e6a44db537880aca21/frozenlist-1.3.1.tar.gz"
-    sha256 "3a735e4211a04ccfa3f4833547acdf5d2f863bfeb01cfd3edaffbc251f15cec8"
+    url "https://files.pythonhosted.org/packages/e9/10/d629476346112b85c912527b9080944fd2c39a816c2225413dbc0bb6fcc0/frozenlist-1.3.3.tar.gz"
+    sha256 "58bcc55721e8a90b88332d6cd441261ebb22342e238296bb330968952fbb3a6a"
   end
 
   resource "humanize" do
@@ -88,8 +87,8 @@ class Airshare < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/fa/a7/71c253cdb8a1528802bac7503bf82fe674367e4055b09c28846fdfa4ab90/multidict-6.0.2.tar.gz"
-    sha256 "5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013"
+    url "https://files.pythonhosted.org/packages/b5/5b/1dd3b9cf73c474ea1d0f0b1f8b7b712b0f13817493fd93101256ec856b59/multidict-6.0.3.tar.gz"
+    sha256 "2523a29006c034687eccd3ee70093a697129a3ffe8732535d3b2df6a4ecc279d"
   end
 
   resource "pyperclip" do
@@ -108,8 +107,8 @@ class Airshare < Formula
   end
 
   resource "termcolor" do
-    url "https://files.pythonhosted.org/packages/62/1a/e78a930f70dd576f2a7250a98263ac973a80d6f1a395d89328844881a0c0/termcolor-2.1.0.tar.gz"
-    sha256 "b80df54667ce4f48c03fe35df194f052dc27a541ebbf2544e4d6b47b5d6949c4"
+    url "https://files.pythonhosted.org/packages/19/da/ff1f0906818a5bd2e69e773d88801ca3c9e92d0d7caa99db1665658819ea/termcolor-2.1.1.tar.gz"
+    sha256 "67cee2009adc6449c650f6bcf3bdeed00c8ba53a8cda5362733c53e0a39fb70b"
   end
 
   resource "tqdm" do
@@ -118,13 +117,13 @@ class Airshare < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "yarl" do
-    url "https://files.pythonhosted.org/packages/d6/04/255c68974ec47fa754564c4abba8f61f9ed68b869bbbb854198d6259c4f7/yarl-1.8.1.tar.gz"
-    sha256 "af887845b8c2e060eb5605ff72b6f2dd2aab7a761379373fd89d314f4752abbf"
+    url "https://files.pythonhosted.org/packages/c4/1e/1b204050c601d5cd82b45d5c8f439cb6f744a2ce0c0a6f83be0ddf0dc7b2/yarl-1.8.2.tar.gz"
+    sha256 "49d43402c6e3013ad0978602bf6bf5328535c48d192304b91b97a3c6790b1562"
   end
 
   resource "zeroconf" do

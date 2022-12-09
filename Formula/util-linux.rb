@@ -14,26 +14,25 @@ class UtilLinux < Formula
   ]
 
   bottle do
-    sha256 arm64_ventura:  "f1c32579a284798da77cecf823ef86d41e70e91e86e5cfa5ea09e2b4e4b70a7e"
-    sha256 arm64_monterey: "b0b3c6d674a5ddc13707ac4af2ba34745b7dea8048b6b12034f3685cb017cadc"
-    sha256 arm64_big_sur:  "1b806803757b40e4ffed44f68364cb45386ff96d467fa94d6d776b1f41c1d5bc"
-    sha256 ventura:        "7e8d8823d3666212fbedaa7725dffa7f1fc6e29005b0cca7eb6bd6cf1ecd5130"
-    sha256 monterey:       "0c66175a5324b3a5a31bfbe2b6c2154666cbbddd1203182a661f6f6cb1095799"
-    sha256 big_sur:        "237a36c3eb5250d0b71d5cac628c364d2a753174ad8b891cdb1f548b60c182b7"
-    sha256 catalina:       "3d52e89f1e08a9d93462d2008289379784842ff8caa538eeaf653ea689500993"
-    sha256 x86_64_linux:   "27177c2a258f719de1236fc0eafa5e45021f7997e332dd9d345c28d0c4354c36"
+    rebuild 1
+    sha256 arm64_ventura:  "871957ce4150fd4795387c3a0040ef6ba7f804641f2821085867a5cc58496dc7"
+    sha256 arm64_monterey: "d55a06518360d9677ab53abfca0566f4cf90330f3798bb99944d208f44787bbf"
+    sha256 arm64_big_sur:  "e3d17bcc5a81b040e346b59f73491fd544f33b560dd0586961a9dbe085a54b57"
+    sha256 ventura:        "57fca00e8206de00ca97b88d605c6490c82c4f33f8ddf8dd7853841e6023e434"
+    sha256 monterey:       "793b7fd5fbaadba11b74130ff3f91d4429b119663692d57862f2a82695f02a9b"
+    sha256 big_sur:        "36d7907e0929a843753bc02f76b523189422cd1de66f9c042ffbd8095437159f"
+    sha256 x86_64_linux:   "69fb0dd33dc299a156948d60b6d34d0cb23e4cb50f1b2687618ad1765fe0401d"
   end
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
 
   depends_on "asciidoctor" => :build
-  depends_on "gettext"
 
   uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
-  # Everything in following macOS block is for temporary patches
+  # Everything in following macOS block is for temporary patches other than `gettext`.
   # TODO: Remove in the next release.
   on_macos do
     depends_on "autoconf" => :build
@@ -41,6 +40,7 @@ class UtilLinux < Formula
     depends_on "gtk-doc" => :build
     depends_on "libtool" => :build
     depends_on "pkg-config" => :build
+    depends_on "gettext" # for libintl
 
     # Fix lib/procfs.c:9:10: fatal error: 'sys/vfs.h' file not found
     patch do
@@ -50,6 +50,8 @@ class UtilLinux < Formula
   end
 
   on_linux do
+    depends_on "readline"
+
     conflicts_with "bash-completion", because: "both install `mount`, `rfkill`, and `rtcwake` completions"
     conflicts_with "rename", because: "both install `rename` binaries"
   end
@@ -69,7 +71,6 @@ class UtilLinux < Formula
     else
       args << "--disable-use-tty-group" # Fix chgrp: changing group of 'wall': Operation not permitted
       args << "--disable-kill" # Conflicts with coreutils.
-      args << "--disable-cal" # Conflicts with bsdmainutils
       args << "--without-systemd" # Do not install systemd files
       args << "--with-bashcompletiondir=#{bash_completion}"
       args << "--disable-chfn-chsh"

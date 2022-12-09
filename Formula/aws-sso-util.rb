@@ -9,15 +9,14 @@ class AwsSsoUtil < Formula
   head "https://github.com/benkehoe/aws-sso-util.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5ee64d6ce2c9bcce10cac77cbd246a3fe168a501c47a616a1ac4bfff035bc44b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8ebd9914aed8e905b7bf9ed44549a024fbe4462c7864ab5342ef54f431f4171d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9598cbfc4f2ba0a2e55e92bbe00fc30b56e23c6fe818c4bdaad996caebf57d5"
-    sha256 cellar: :any_skip_relocation, ventura:        "811a4b990cabe68d12153a6b4f3fb797dd0e7091c6fe2636c359f0fcd97678c8"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ba43e1d940391131a43c2d38bbb4f256734ef715868f97ca2bc33a503bf7979"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8962218a8e7655acda0006cd913b042861a6731f65b2c277203ec36c22dad68d"
-    sha256 cellar: :any_skip_relocation, catalina:       "39f15e6e93021787716c54a07585c4f75cca9f8cce62dc05059680513ee17bed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "062c08c1ed6b2f3a901b39774699d2da83a259345bb7fa2f6e811b254e3c8652"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "644061e3b2149f86fffa3d191326d054a85e341c1c9edd373485a622f4d8ddfa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcd9c76459e9fd7e96e53e84a4b26f845b27c87b24d4a55146716bc85db201c3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b2420f4ea6bb3a13d35672db645031fc3a4770c215b49e9fd018118e4642bb8"
+    sha256 cellar: :any_skip_relocation, ventura:        "3ade2ba8d4684edda7d8bd76af958537bfe3dc92b535047a94103d3220a86422"
+    sha256 cellar: :any_skip_relocation, monterey:       "3596886db39bb8ec8d88bc161d913d31a32d05166f93a65393843a9ecc9225b8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "db5eb1bd65c0c06f5d534235f133c18fd2892034598193104bcabf695c0b4fcd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aef2aaa71e70de99b18828a65103208d1c0449db3f12fcacd28166c03674d5cc"
   end
 
   depends_on "rust" => :build
@@ -44,18 +43,18 @@ class AwsSsoUtil < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/df/e4/893fc4af6ee0c801725b48ba4d3120705126edab71e0fe84f8eb4850c427/boto3-1.26.4.tar.gz"
-    sha256 "244fd0776fc1f69c3ed34f359db7a90a6108372486abc999ce8515a79bbfc86e"
+    url "https://files.pythonhosted.org/packages/90/8a/bd891775c4948f2ae5d8dd9af13f6d0a085bc82dc7608abf474691558eb1/boto3-1.26.25.tar.gz"
+    sha256 "e0ba3620feb430e31926270ea3dc0bb94df55a0fd2b209bd91f7904f2f2166ef"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/32/c1/3a3cbbdc58a71c1dfafbeeb79dd09b68a030ff5c52df7ad8e87d5ed57c10/botocore-1.29.4.tar.gz"
-    sha256 "fa86747f5092723c0dc7f201a48cdfac3ad8d03dd6cb7abc189abc708be43269"
+    url "https://files.pythonhosted.org/packages/5e/d5/503f88cc4ccf6881db110c31257c1aa5270c59aad0be6e807a6520db0b71/botocore-1.29.25.tar.gz"
+    sha256 "a204140c9d7adadf3919d8024d79278f1865a20c869e4f216eaea599ca3a1743"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -109,8 +108,8 @@ class AwsSsoUtil < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install
