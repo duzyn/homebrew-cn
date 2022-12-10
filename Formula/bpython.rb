@@ -9,15 +9,14 @@ class Bpython < Formula
   head "https://github.com/bpython/bpython.git", branch: "main"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7e1f934ecdfd7e176ae519a4f2e3c7842606ed91b4a7bbfe52ea1b053568d1e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "51415da492e0680a8f7506b7583987cc9e82a613b49ecaaa3f859858089e38b3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "09e671aeb6b897898d6a02c50b0cf23bc3e660f22bcb2db074f4bd29b9579783"
-    sha256 cellar: :any_skip_relocation, ventura:        "e63b5bf3ca991828c469213bc38ff1821b6ea16fd4a9ce18657ce899fdfa7499"
-    sha256 cellar: :any_skip_relocation, monterey:       "58eb4fcacb47a322c5dd459b1ffca04725bc5363093ca2d6cfd7916a89f65f68"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e0cfb059ee562407de784c0cf94b1e11af2eb1326f936b49e79f15a1cd6af412"
-    sha256 cellar: :any_skip_relocation, catalina:       "3beafb36bd3e94a97ba9d99538b59fdf9b9f344b70d9bb04421db9880c6a5867"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "06ebf1532a49e4c88bbca4effe8dbc79b4a26e376bce4d2803d7445ca22d11a1"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e5130679e537bb21be214bb865b900e6371ce71cc7092d6f5c4f6b41a04195ad"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7b0eb79ff7e09a96920b34e9e82e2abeec1f7a57afca5cece01a381482f6996"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "046c2fd1923b244280be7848451bce1c58bb1877b49f2068ae66275141c1b23e"
+    sha256 cellar: :any_skip_relocation, ventura:        "14cd59266dc3e75530709b89ce695807c5e5c7337aa1577ab030106fb7df49ca"
+    sha256 cellar: :any_skip_relocation, monterey:       "7e957af13cde91deb3ffb5305b4760f5e9f9c6026ec827272c60ca982bc98d27"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4fc1046162df864a562faa4ffb0c64e4f898f0fbc0952eb86d34a69214f8de31"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "697e9b60b8dd7733e686dc93f19035eeafd7e72dd12f40ffa0c5fecbb999bcd0"
   end
 
   depends_on "pygments"
@@ -30,8 +29,8 @@ class Bpython < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -50,8 +49,8 @@ class Bpython < Formula
   end
 
   resource "greenlet" do
-    url "https://files.pythonhosted.org/packages/d4/e7/e41e5150909f58d3161b7ab680d17bb8d47dbbc45385f07a870164d3d02f/greenlet-2.0.0.post0.tar.gz"
-    sha256 "ad9abc3e4d2370cecb524421cc5c8a664006aa11d5c1cb3c9250e3bf65ab546e"
+    url "https://files.pythonhosted.org/packages/fd/6a/f07b0028baff9bca61ecfcd9ee021e7e33369da8094f00eff409f2ff32be/greenlet-2.0.1.tar.gz"
+    sha256 "42e602564460da0e8ee67cb6d7236363ee5e131aa15943b6670e44e5c2ed0f67"
   end
 
   resource "idna" do
@@ -70,8 +69,8 @@ class Bpython < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "wcwidth" do

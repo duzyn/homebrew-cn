@@ -2,8 +2,8 @@ class Kyverno < Formula
   desc "Kubernetes Native Policy Management"
   homepage "https://kyverno.io/"
   url "https://github.com/kyverno/kyverno.git",
-      tag:      "v1.8.3",
-      revision: "44604bf74bdafc4b199dc28e1eed14ed42dfa27e"
+      tag:      "v1.8.4",
+      revision: "0675d21dd9586a8e55ac2b3796a8db850b996895"
   license "Apache-2.0"
   head "https://github.com/kyverno/kyverno.git", branch: "main"
 
@@ -15,13 +15,13 @@ class Kyverno < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aedac81513e1e59ebfbc7076c79a06f410a3619933f76e4499044b8006d5d660"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b49e1b3c3010599d213ec5971499506931859f803320631c769f94dddb38ddf1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "41cf9e49c82b0eeaf67559eb10f2f1cbe9a3cfa34a2298bf325a913765ab4dfc"
-    sha256 cellar: :any_skip_relocation, ventura:        "45d3f75a2d350f0dd4f25b604c913c8810f447115e1e361e3f90af2ff41bd9ad"
-    sha256 cellar: :any_skip_relocation, monterey:       "74e0c732b93fb098a7caf853af5bfa1e0f5eac3488188bedd0067a9e71078a2c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d78f6c15cc6bf50f79bd5a7f0cf52d2da009f71e72c96759d1c5d1560dce28a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "415babb1db9a01d922d86bb7025a68350164aabcf95935622515ba44a0239ba2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9e39e1d04396fd8f650f5d47c8157b681e57edf692db534c18403f34acf44291"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed047d888622493bd0d0154bc7302a5cda37a233e61b214f123ba87a41df9c9b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d1e4d51aeb0abc36ec3f871ec25e2d8aa83ca7e760e849ee0f840ba352b571fc"
+    sha256 cellar: :any_skip_relocation, ventura:        "9373ab7705dcddf04c4a873cbdd6d7d3b72e738d2f63bdd812e7fb51af55d2cf"
+    sha256 cellar: :any_skip_relocation, monterey:       "66dd64d0de756725f8daa510592773233a8ddf9e24a58688506ac9b7c006e21b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ca2d05f115a8c22c27bb29edbe0f3c96ef6ba68a25932eb2ab08e0080334cbbe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60071832eab109f9ad50c01eea9fd78bf7328b003499ad96613ef1310fff63d5"
   end
 
   depends_on "go" => :build

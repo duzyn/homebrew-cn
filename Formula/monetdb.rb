@@ -1,8 +1,8 @@
 class Monetdb < Formula
   desc "Column-store database"
   homepage "https://www.monetdb.org/"
-  url "https://www.monetdb.org/downloads/sources/Sep2022/MonetDB-11.45.7.tar.xz"
-  sha256 "3707897bb84ecbb73b196bed06a017a7f8a9f50bc8cfca87eb496e87d9254a0e"
+  url "https://www.monetdb.org/downloads/sources/Sep2022-SP1/MonetDB-11.45.11.tar.xz"
+  sha256 "f35f3d13facc959f117dcb96ec68c7501d7152078a75ac57641c5b41893a6b73"
   license "MPL-2.0"
   head "https://dev.monetdb.org/hg/MonetDB", using: :hg
 
@@ -12,14 +12,13 @@ class Monetdb < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "8b6ef089c9fcd9693f9265d9aeaab08fbbd894f9bc5b1a275aaa12f1bd31053d"
-    sha256 arm64_monterey: "10c4b08ae59991ce808feff4fb88210396ac80d92dc859104c9857b1d814d98e"
-    sha256 arm64_big_sur:  "9e08d1f8d71afa11eca9aa2556068ab50852f76440950a0cf19517e8f5a6962c"
-    sha256 ventura:        "f0f4f1a5493f14a390c9bdbcea80f0c1f91ab2b72ed286be6477f911139b6d5c"
-    sha256 monterey:       "56b5f2c947286c843ce9f2592a0b1cffbfdad964665777f0f5ac2e910f0fbd29"
-    sha256 big_sur:        "3ceea0311e182c56ed047b5ca461163dacbd2cfa6427dabebb2022da6a72935b"
-    sha256 catalina:       "74eacef45f9f0458eba07b4e8b1023c9ce5b01ac6959853b90792c9e986d146c"
-    sha256 x86_64_linux:   "359f7f846d2f375661b4ece67c706e628861128206987863153a88b47a9e0850"
+    sha256 arm64_ventura:  "a4f86275162be3c6933238a8aafc4bb7a12a980885c6d1d63bcbd069373db6a5"
+    sha256 arm64_monterey: "084cfbbc44858e24cf55cc425e4917edd1d3bc087c5ebc65e049118bfc892ad5"
+    sha256 arm64_big_sur:  "10213916912b2d8b387c8056e63bc88e3ac90e89e5cb7b43971c84c8d15351c4"
+    sha256 ventura:        "5cc2898a341550357e0588087876865bcf92f31b581455836b404b6cf9af5c75"
+    sha256 monterey:       "efd39b064e0a6308176ad248ca0fc2677c441ef3ec6a39b3524bf771aa9f1375"
+    sha256 big_sur:        "94e4ba3e9764c701e4607ccc90e8c8e1192a44d881a01c3e44a68332221b4aa0"
+    sha256 x86_64_linux:   "284c9d2b3b6e7e32537189b596a450ae8858e7b7dd03f1a5df0525d379d97be7"
   end
 
   depends_on "bison" => :build # macOS bison is too old

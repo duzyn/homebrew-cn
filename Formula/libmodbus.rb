@@ -1,19 +1,19 @@
 class Libmodbus < Formula
   desc "Portable modbus library"
   homepage "https://libmodbus.org/"
-  url "https://github.com/stephane/libmodbus/archive/v3.1.9.tar.gz"
-  sha256 "75ac07f49b138a636c65980b92a4792290ee901503c324f2f4e23592bfa036c0"
+  url "https://github.com/stephane/libmodbus/archive/v3.1.10.tar.gz"
+  sha256 "e93503749cd89fda4c8cf1ee6371a3a9cc1f0a921c165afbbc4fd96d4813fa1a"
   license "LGPL-2.1-or-later"
   head "https://github.com/stephane/libmodbus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3ef59ed18d26450a46cb7d24014d623763109ab9b9f80ab5cd4e8236971531a7"
-    sha256 cellar: :any,                 arm64_monterey: "cfb0e36dc0fd0a7bb191c5fe5ef6e0253176ad5c1d284e3e059728302251cb38"
-    sha256 cellar: :any,                 arm64_big_sur:  "57ece84bf699755c6eeaa4f0fb21a098e922db9d3839bdf32634c08201dce4fd"
-    sha256 cellar: :any,                 ventura:        "f95e87950e5b886687087b3e9fa490a07b97da6a47405d0ed081fa50a12e250c"
-    sha256 cellar: :any,                 monterey:       "1a042509b854e844cf12aa28fa56cf4bfb274c28ef90eacd41a91219b5c6d9c1"
-    sha256 cellar: :any,                 big_sur:        "8dfd7fbbeb7810af481d97892f37ed23074de80c60f01506e4b975ccdcf20132"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "369ce1d96b985d316ae42ff23e828ffbbc816528243e315cf8a17561faad3880"
+    sha256 cellar: :any,                 arm64_ventura:  "585781b5c3f26d145faf3b0c06e58bd9789ace242f6631689edfc4dee3ab5b1f"
+    sha256 cellar: :any,                 arm64_monterey: "782038c57d82103f1c245d8d76f9acec4fd25b9bbb38c90fc8558c63ff00ddb5"
+    sha256 cellar: :any,                 arm64_big_sur:  "870b055e0964bde546ca96ac9a381f6d47de22e1bda504e9332800eefa2478bf"
+    sha256 cellar: :any,                 ventura:        "20eb8bf548c71959c9269981ec3d95b30871cca5074b32d60780356ee2930bb2"
+    sha256 cellar: :any,                 monterey:       "aaf518a16cbfdcc17b4355d4edb497607363b3b8f78d57e5b1c7d5af67588532"
+    sha256 cellar: :any,                 big_sur:        "25ad3c494672c5006f15cb27bd69cedb91d5a14ada0f52a4e8c622dbdec76d6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b04b946ea68e47136a06d01734d22e1a6c6eb9ed21514394f28f9b30364e1f54"
   end
 
   depends_on "autoconf" => :build

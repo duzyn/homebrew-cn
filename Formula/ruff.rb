@@ -1,19 +1,19 @@
 class Ruff < Formula
   desc "Extremely fast Python linter, written in Rust"
   homepage "https://github.com/charliermarsh/ruff"
-  url "https://github.com/charliermarsh/ruff/archive/refs/tags/v0.0.169.tar.gz"
-  sha256 "d35fb24e9fff017ad254d19351f8f8b01cf6142e4510f52f5b2497e2bd5fa8b7"
+  url "https://github.com/charliermarsh/ruff/archive/refs/tags/v0.0.171.tar.gz"
+  sha256 "f9243a74e5311d06201bf0ca24a036076951705e39e44187a50f89e11c402ac8"
   license "MIT"
   head "https://github.com/charliermarsh/ruff.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "21453c4b94321c402374c451b99ba5c565adb545b68b2a9870e3c94d0bca689e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e12af1276ad9138118631a61299a31ee072a2aaa31d59cca00dc60f810a7e6a3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a319dfe6348dc5e481c8b29f9f6136cf97b85f021ed15216933d0bca358ac734"
-    sha256 cellar: :any_skip_relocation, ventura:        "a767e30f8df797531d25282b8ba9732902a63132557552843dd2d1c0fa4ae953"
-    sha256 cellar: :any_skip_relocation, monterey:       "991eb1c81dc808805ab56d4aaf4296dcca42ebc383f82e27a1f212b79bd49dbc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7f8a6b7cd687122ce4faf6255a37ae15d71c5c370f82335b98014e8943091ba1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "612e9ff0782039774140b64c556b22224d6c4efefcc22d4ac0263dd834bce910"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8140b701029be1568d5c699eb5491c8503cf97ca8a58ac9e4bdcd5d42f99d5d1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7b700f1f945323faa2bcb270efca9e1d046789106f54b7831f6b0f69dcf03165"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ed7a86260ad348be45a274d3bfcedc71a9a03f991d75b4f1765cadcf1c1900bf"
+    sha256 cellar: :any_skip_relocation, ventura:        "ca18ba174d5cae25165196eba452f77616b31c631dd5c9b66297e1510db37325"
+    sha256 cellar: :any_skip_relocation, monterey:       "398eda98a63724f1eece072be17ae55036194e4dce087f9d66d3390d8d68d845"
+    sha256 cellar: :any_skip_relocation, big_sur:        "63e45aad10301b10771d381aacbe7a3217e72a71c89def9e404ffabfc73db381"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a232a10b77b4aa031b72132c9600cc825f9dd8f2286ba11bab86308bf453ecac"
   end
 
   depends_on "rust" => :build

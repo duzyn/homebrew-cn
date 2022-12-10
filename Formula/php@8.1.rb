@@ -1,33 +1,32 @@
-class Php < Formula
+class PhpAT81 < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-  url "https://www.php.net/distributions/php-8.2.0.tar.xz"
-  mirror "https://fossies.org/linux/www/php-8.2.0.tar.xz"
-  sha256 "6ea4c2dfb532950fd712aa2a08c1412a6a81cd1334dd0b0bf88a8e44c2b3a943"
+  url "https://www.php.net/distributions/php-8.1.13.tar.xz"
+  mirror "https://fossies.org/linux/www/php-8.1.13.tar.xz"
+  sha256 "b15ef0ccdd6760825604b3c4e3e73558dcf87c75ef1d68ef4289d8fd261ac856"
   license "PHP-3.01"
 
   livecheck do
     url "https://www.php.net/downloads"
-    regex(/href=.*?php[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/href=.*?php[._-]v?(#{Regexp.escape(version.major_minor)}(?:\.\d+)*)\.t/i)
   end
 
   bottle do
-    sha256 arm64_ventura:  "1cd68cd16bad12a23e4e3f8ab4be87455ff3e35d58ba22212cb8a3f0be5e83f5"
-    sha256 arm64_monterey: "3a6df9ae8fc672c12df1db29eaa7585d3f482fa1142cea0c751a79573028a1ba"
-    sha256 arm64_big_sur:  "f305c6a7053e819ce2a1afa0397debd97737fbccf013ed62f742778fc0596882"
-    sha256 ventura:        "f1b15af07a08e7e494d1ee469784fdd32f1a703b7a47f08198d44b7a062b681f"
-    sha256 monterey:       "b2776587333c8755a0a30249ff13110e8ae30ee461a0306424a2d5af66571038"
-    sha256 big_sur:        "1d4a3e676be4aefd7b2f95e6aaaf6c5c19768f38fcf937b863d05ca471460946"
-    sha256 x86_64_linux:   "8afad2a52f4fa331f0853c96533ce379c6c9b7dcf741491ecf9b5a6079cab2ef"
+    sha256 arm64_ventura:  "2f60883710ebb145b8a43aa903dc6a5867af9b103528fce50e7f98a2631aa289"
+    sha256 arm64_monterey: "b040f0edf912f5021fa6af2505eeef432ae9fd3f5f616c7951657d77ede86506"
+    sha256 arm64_big_sur:  "586a4fe9c870f34aac9e0a4fac47d3b907dadf949a25357b224add5d9bed5e4c"
+    sha256 ventura:        "aac017954ec5dd227c2af09e9cd0c4bd7e77cdb710514002d6daa142e2879f31"
+    sha256 monterey:       "07c6e518531379d33f566897f89d37f607ee8998959dede8f3511591ea6d3c63"
+    sha256 big_sur:        "f1b01ef6155747bb7d03d6627b913273bbac9bb97358c945a294a4968eb96bf6"
+    sha256 x86_64_linux:   "b323e25063a29950bb163d4a23533e1fbaf897141f9dba0790496106404edfc3"
   end
 
-  head do
-    url "https://github.com/php/php-src.git"
+  keg_only :versioned_formula
 
-    depends_on "bison" => :build # bison >= 3.0.0 required to generate parsers
-    depends_on "re2c" => :build # required to generate PHP lexers
-  end
+  # Security Support Until Nov 25 2024
+  # https://www.php.net/supported-versions.php
+  deprecate! date: "2024-11-25", because: :unsupported
 
   depends_on "httpd" => [:build, :test]
   depends_on "pkg-config" => :build
@@ -79,6 +78,10 @@ class Php < Formula
               "APXS_LIBEXECDIR='$(INSTALL_ROOT)#{lib}/httpd/modules'"
       s.gsub! "-z `$APXS -q SYSCONFDIR`",
               "-z ''"
+
+      # apxs will interpolate the @ in the versioned prefix: https://bz.apache.org/bugzilla/show_bug.cgi?id=61944
+      s.gsub! "LIBEXECDIR='$APXS_LIBEXECDIR'",
+              "LIBEXECDIR='" + "#{lib}/httpd/modules".gsub("@", "\\@") + "'"
     end
 
     # Update error message in apache sapi to better explain the requirements
@@ -261,7 +264,7 @@ class Php < Formula
     php_ext_dir = opt_prefix/"lib/php"/php_basename
 
     # fix pear config to install outside cellar
-    pear_path = HOMEBREW_PREFIX/"share/pear"
+    pear_path = HOMEBREW_PREFIX/"share/pear@#{version.major_minor}"
     cp_r pkgshare/"pear/.", pear_path
     {
       "php_ini"  => etc/"php/#{version.major_minor}/php.ini",

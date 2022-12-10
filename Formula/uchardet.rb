@@ -1,21 +1,18 @@
 class Uchardet < Formula
   desc "Encoding detector library"
   homepage "https://www.freedesktop.org/wiki/Software/uchardet/"
-  url "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.7.tar.xz"
-  sha256 "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1"
+  url "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.8.tar.xz"
+  sha256 "e97a60cfc00a1c147a674b097bb1422abd9fa78a2d9ce3f3fdcc2e78a34ac5f0"
   head "https://gitlab.freedesktop.org/uchardet/uchardet.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "eca4ce7dd7360c3739d795ff79d166e35413b5969fa351f6c56b294ffdf2cbc7"
-    sha256 cellar: :any,                 arm64_monterey: "6f144a202080194afbba458511b7250a27a5b0ff5f0baa4f81a4ab4148906aa5"
-    sha256 cellar: :any,                 arm64_big_sur:  "33989aa08f1ffc6f71f536c2a3cb28aabcc774e90da2aa40db110048f4b38238"
-    sha256 cellar: :any,                 ventura:        "7e575e77685897002867a6a8444a0132c99daa8b564785cf921b6d91404d116e"
-    sha256 cellar: :any,                 monterey:       "2b32584a9ef94d89025ed7b2d027608013571f12e30b363fa46bfddd5aab2893"
-    sha256 cellar: :any,                 big_sur:        "f5125cd193034470e278536d8b5d2498e99ddbd5c2853e214fe24fe845cc56d7"
-    sha256 cellar: :any,                 catalina:       "34bd4791834a762da961de136a3cad253800a98deea2d1dededf8efb465f215d"
-    sha256 cellar: :any,                 mojave:         "a254139ee777de77d5907dfeb47d4306f2e5e5f0b3775edfedcbf1fcf217fdbe"
-    sha256 cellar: :any,                 high_sierra:    "a89237dd88e4190826ce6fb4a8a625711636db7d6c4ba10d5ddd56d37347e868"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a85799a4ea86198a27dcd64601a9bf3445baa3dca32762ca6616c9c78a79583"
+    sha256 cellar: :any,                 arm64_ventura:  "a85a41114a32e8a455a0940c5d1f9b475a2dcb15b0041966cde44f632c5f8caf"
+    sha256 cellar: :any,                 arm64_monterey: "b8da933deae20869dfec3d4d04688424230adc652863dc7015b73ed8ffbdc028"
+    sha256 cellar: :any,                 arm64_big_sur:  "96c2ca2cfaef487e62d7286fe76df3f50fba67fe22b21bffb8478cbed2eb3e0a"
+    sha256 cellar: :any,                 ventura:        "a553c6d711641482107e7604e8d81e00a615932f1a79cdb2cdfca9cd22a3d6db"
+    sha256 cellar: :any,                 monterey:       "52b6ebd4f6db0057634f195332a98b18d0f1dff5e7911e550291cb91c86b54cb"
+    sha256 cellar: :any,                 big_sur:        "8da0b45a3f4d87647b96aea829a3db161ef364eb131529b6393b718f5478006a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6392159b044059cbf22acfbe579343e119a8639dcea266e93a49b5e1a0bf08df"
   end
 
   depends_on "cmake" => :build

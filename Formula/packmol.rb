@@ -1,20 +1,19 @@
 class Packmol < Formula
   desc "Packing optimization for molecular dynamics simulations"
   homepage "https://www.ime.unicamp.br/~martinez/packmol/"
-  url "https://github.com/m3g/packmol/archive/v20.11.0.tar.gz"
-  sha256 "0ca999875487cd15ea575c82a590333c7ff63b2d2b42448645acd650e6821398"
+  url "https://github.com/m3g/packmol/archive/v20.11.1.tar.gz"
+  sha256 "3e3c3b0d860fa48f115f9665325244737103dde1b978dd6d31700a329c3bfe17"
   license "MIT"
   head "https://github.com/m3g/packmol.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f9b0671562d5d5c490af41b77af3e4e62708883a2a2f9aa465fd42df7471c85a"
-    sha256 cellar: :any,                 arm64_monterey: "4f1afb57de63afe102cedf900ae3e6fd7d3ed6eaee7d4221f6c1c9453813b931"
-    sha256 cellar: :any,                 arm64_big_sur:  "3adfa0f57afadf605e10d6ffbad8270683fa2a289bffcb56d4d5389af76a1fe9"
-    sha256                               ventura:        "299ed04aa9c3fa0f9f315c11bf6f9a2efb56bab618c2386096cb516880014938"
-    sha256                               monterey:       "b8456629364d20ecd067449dbcd38dde85f5fe09069129c71602f07ec1097c0d"
-    sha256                               big_sur:        "8a31e699d23377960bf668e5c715f6ee13b7514a287e7bfed3ecb81aa7223078"
-    sha256                               catalina:       "f3320c503509b9fe783c5953ef0dd25818ee13d310beafdb9bf048b126d450c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c62ae6f6b423fc5a4da7ef21251afb5230511800540c69aa187926dbdf89c44e"
+    sha256 cellar: :any,                 arm64_ventura:  "c7ae8e230d8e282900b723897bdbb741bdf3a1aaff8582ee1ba863dcb60de19e"
+    sha256 cellar: :any,                 arm64_monterey: "7c7d1f78867bdcc96ad187976bd8ac41082e639b21dbcf286bf94228650c1c19"
+    sha256 cellar: :any,                 arm64_big_sur:  "fa039b0ae50bbe63b1bb8f7055e7966f41e7f02a4c1d7134f6916c64ea7fce90"
+    sha256                               ventura:        "18f85b3d4c964f3fc14e53d0034d0f82d4919f70e421ec2d671e427ddea8e306"
+    sha256                               monterey:       "cce33f6c899378e1055aa05d7f87de6a064784bc41f33b87ebefbb81681c9275"
+    sha256                               big_sur:        "0ac12ca2e9ae4f83fd5303480cb4d9549b0fa6addd4115165bee90ab4c60ab7d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "62f8a1b6670a2fc0e5276851e3ef65b5d5c1b64b3326789eca565f8dc3a1e3e2"
   end
 
   depends_on "gcc" # for gfortran
@@ -25,9 +24,6 @@ class Packmol < Formula
   end
 
   def install
-    # upstream PR ref, https://github.com/m3g/packmol/pull/39
-    inreplace "Makefile", ": strlength.f90", ": strlength.f90  $(modules)"
-
     system "./configure"
     system "make"
     bin.install("packmol")

@@ -1,20 +1,19 @@
 class Prr < Formula
   desc "Mailing list style code reviews for github"
   homepage "https://github.com/danobi/prr"
-  url "https://github.com/danobi/prr/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "2b0353977e1dbf1ca89e550954cb04d269cfab5e888a8d9ec7366583cb32fa1d"
+  url "https://github.com/danobi/prr/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "15fc841f50c3313ca8646240e937fb76b87d5270cd3db64042e48e819745e5af"
   license "GPL-2.0-only"
   head "https://github.com/danobi/prr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f48e8173231abf5ebf0d0cab14c17d4e56b5761cc855506a2b5efa2a1087b48d"
-    sha256 cellar: :any,                 arm64_monterey: "d182872df7155301e4baa5ec763b7531ec71fc2788ad6647ba81f0920766d7f6"
-    sha256 cellar: :any,                 arm64_big_sur:  "67b94ea52b713f2d4ebb43b226f9dfe8ab77afafc7882b54fe2a8e8f11fb48cb"
-    sha256 cellar: :any,                 ventura:        "f22f1933bf38c5d0332eb85ff96a05445d49b6825f91e686fe654a98ed1d2ad5"
-    sha256 cellar: :any,                 monterey:       "543d3450e1fc617249d0d0706bc2997d0eaa928e7d5b4852d5dd204c88aa91a3"
-    sha256 cellar: :any,                 big_sur:        "a22481f6e1558e25545abe5634ad2c92bdb3c43741a30472612da352d897d7f6"
-    sha256 cellar: :any,                 catalina:       "baa01991c64459f78850d50e23db3ec2b7e119bdeec1befb3f315b4be8737457"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16f3b7a6ee4738ee708c9e7bf3c490645d735ca7945446782f5b10f60bc9144a"
+    sha256 cellar: :any,                 arm64_ventura:  "cddba8742edd307becd8bf74510d893108b06bb27771f93b533915c53754c123"
+    sha256 cellar: :any,                 arm64_monterey: "6f7df8f2c4452b383291d33dae9c24a7e6fbd3986cc890d78f56b1ad3e13085f"
+    sha256 cellar: :any,                 arm64_big_sur:  "482cd1bb86b33a3dae2819552f8e1a1511393b22dabf17fbe9cb1ff3512b1e79"
+    sha256 cellar: :any,                 ventura:        "118c222fb49ced9d3193cb802160b566206d9d305e553bd151bc26d54ecd8046"
+    sha256 cellar: :any,                 monterey:       "3bf4a7ad20bdf2648fefe3459703ae01c29ddd45fb3dc7e40deeb8692c155932"
+    sha256 cellar: :any,                 big_sur:        "8d9352097065f6c68ebaf425e9e7c4394429dbf6a3c47901cd6c6c1a499fdd2c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81914293781ece90566832ee3736e472b53148b634daabdae6293d7e7d2277f1"
   end
 
   depends_on "rust" => :build
