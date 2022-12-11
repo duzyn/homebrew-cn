@@ -1,13 +1,13 @@
 class Tart < Formula
   desc "macOS and Linux VMs on Apple Silicon to use in CI and other automations"
   homepage "https://github.com/cirruslabs/tart"
-  url "https://github.com/cirruslabs/tart/archive/refs/tags/0.35.0.tar.gz"
-  sha256 "a7c16318d70c4d8b418e253da8ab8b024bdc9f71f08721dfbbb8cbb251a87e0a"
+  url "https://github.com/cirruslabs/tart/archive/refs/tags/0.35.2.tar.gz"
+  sha256 "0b35754ecd1267290f53099a64e38642d7f743bff0501a19d53945d8630dc010"
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "87589f6dbefeebcf0db61407fbf652754ce0d761754622b0fec5f0e35d70ee3b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "81b374095aa9a1ac6012a4c3df29dc0179aa7ab72dbc60c246513b9816a735a6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6ac418f4f0b1871ccf6f843bc68444481b8b2071f6a15db42fd6ce55104aa2a5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "03454be44162d31f4a6a0fafafa4926166913f5d116c202881c78ffefb533588"
   end
 
   depends_on "rust" => :build

@@ -8,15 +8,14 @@ class Censys < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8e4f720ffea10c8b33f5664165e001667c3d5e253a059cced71a7d3aadc13e2e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "61634a1f1bab414835f2370a8326cbffc124e16a3e2293d4304c8ee663c60146"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "895b358c869ac1d649af52642c30c9144226e640e0913e58b9b2d5f0172d423a"
-    sha256 cellar: :any_skip_relocation, ventura:        "ba01e8344bcebea36605c7a4969b2bc736cf3ad5f97dd5afed7e5909f76b894b"
-    sha256 cellar: :any_skip_relocation, monterey:       "51a1a461f5d4602ae29aaf7081283fb4a4de40090223bd4a69bda05cd9fc9616"
-    sha256 cellar: :any_skip_relocation, big_sur:        "25797d090339da2fc9197884d3a46ba678091b11e893bfd478968a325a069ba4"
-    sha256 cellar: :any_skip_relocation, catalina:       "f35f564e23dc1bf9133c04ca171b7a178b32d9f5905a99f16f96787c5aab43b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8992257e82ef1a8d535f0e97c7846b3530205bd40c87b3034ead7599c8d113e"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "75c237ae13f9ecfbc96c29c6b773af8bdbff91f03f873d4858eb51e91657ce1d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "599e7bf259e4286a1213ad6d8fc80966bf8d03d4e5fe4cafd58987b23013288c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8dddc8cc613700c1b1430175e56044468c63518741048fd017ab0ffa86b7ebb"
+    sha256 cellar: :any_skip_relocation, ventura:        "7889dd589af26f1eefa24b1e7bb3480b2a2b4d68309beb8e103394c8e3d4a9a1"
+    sha256 cellar: :any_skip_relocation, monterey:       "c040cfa9c6f7d3b8ae0c751f2c89dbf3156aff51d515dfeafc643d171bc24ee5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5b7d0ae329c1015f55c8a6c706eb3a800aabfb9e41e2255316532584774d2a93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb1a229eb55899b13e3bbc7ecfb61fb69866a0540e3a01384675239a97ca81eb"
   end
 
   depends_on "pygments"
@@ -28,8 +27,8 @@ class Censys < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -58,8 +57,8 @@ class Censys < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install

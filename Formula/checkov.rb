@@ -9,14 +9,14 @@ class Checkov < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6ff376979dd782c15f94dca8546c2a1b7560f19c3443acc4c5edeabcec6310f7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1d6a59c33841758aa207fc827b9dbea7441fac758fede1848947f54f9c67fc4e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b52a60bbcc938ab53432b30bafc41be28e76031a6df407928e11a3af39285942"
-    sha256 cellar: :any_skip_relocation, ventura:        "14edd0912995c22d606cfcaf4ba134de3553cedef8b8ed9c261a9b04cee292c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "a3993c3a534193e46f61ae758aa0c96263976a5bf160b6a964403d144695f2b0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3b6d666b182b49bd73b17cb2bd01ffb8225fdce2b47940bf0475a8c8bc779c46"
-    sha256 cellar: :any_skip_relocation, catalina:       "8184b4f363616a1574b27b918e23280ee9cb84a7da7409564a29c595c4efdde4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d9429cb8261ac87c880fca2c3c5ec835bdbb014b7bac474a6a10a2eaeb4402ea"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e3dbf510ced4e69d44952bdce073c8ff9cb4674b4b1c05c50e7d98d603404a3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8cab82d6a3492ad20fab567dc49a62b0550cfb0b3eda4d398ba837c82e66496"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "069761d0b4c9912a15514ccf9ca4488b5e93437ee8481693af6f39eddbf89e4e"
+    sha256 cellar: :any_skip_relocation, ventura:        "a58ccbfe2179b983b29f43f1208926f96983f9490bcead3d7ef86a694fac681e"
+    sha256 cellar: :any_skip_relocation, monterey:       "357aab12863968e10649556a51906296b149d850baeb8cbd86ac8e715e2a68f1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "45ac4c7797dc801267738ad7c8e60a5af665a25531cdce10ba870164dc9dbb93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d10a455b5ef20f6b41badad73892f43d632e1efa92008ab642d5f4d998e88945"
   end
 
   depends_on "python-tabulate"
@@ -76,13 +76,13 @@ class Checkov < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/43/26/69fa1b8ddc04a3bbe9d447cbe2cb2b15f2ad29af9c61d851dae28fd9fc1c/boto3-1.26.18.tar.gz"
-    sha256 "3c7315da16eb0b41823965e5ce55f99cb07e94680e0ed7830c581f505fb5bd15"
+    url "https://files.pythonhosted.org/packages/62/7b/7cdcb980d9d90c910a6abec2cdee0ff6aa7a3d8afea4044ffd968d5c107c/boto3-1.26.27.tar.gz"
+    sha256 "255a7565226c21c5d500f69aabb977e1ac07dbaf576f4428d00558e8e508a23b"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/2e/f8/35dff3051d2bbdfddf9a5ca4990bef838f5d5f0d6fcba7e41f0554bd4126/botocore-1.29.18.tar.gz"
-    sha256 "26e86fce95049f6cc18b5611901549943c4c22522fa8a3b6b265404f673977b2"
+    url "https://files.pythonhosted.org/packages/08/3f/e9f97b0700e0be670404a7d4a9ac62fd59495897f15c928dd38874e98ef7/botocore-1.29.27.tar.gz"
+    sha256 "0932b22d8737b11037adf7e734f9b90425b575d0757e4c1a035e99f382955221"
   end
 
   resource "cached-property" do
@@ -96,8 +96,8 @@ class Checkov < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cffi" do
@@ -221,8 +221,8 @@ class Checkov < Formula
   end
 
   resource "lark" do
-    url "https://files.pythonhosted.org/packages/1d/08/eb2590d4f824b5a947d866c603799fa70278f1372cbf8d15b7b4823dfb2b/lark-1.1.4.tar.gz"
-    sha256 "eee86062b149600ef62de0d8dfd38cf85ffc737e16911e7d8c18880f8c5b1333"
+    url "https://files.pythonhosted.org/packages/a2/25/8e16de418fc83bb00dabaf8c7110bc45a90bf5481a70aa5f1668fcea73bc/lark-1.1.5.tar.gz"
+    sha256 "4b534eae1f9af5b4ea000bea95776350befe1981658eea3820a01c37e504bb4d"
   end
 
   resource "Markdown" do
@@ -236,8 +236,8 @@ class Checkov < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/fa/a7/71c253cdb8a1528802bac7503bf82fe674367e4055b09c28846fdfa4ab90/multidict-6.0.2.tar.gz"
-    sha256 "5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013"
+    url "https://files.pythonhosted.org/packages/b5/5b/1dd3b9cf73c474ea1d0f0b1f8b7b712b0f13817493fd93101256ec856b59/multidict-6.0.3.tar.gz"
+    sha256 "2523a29006c034687eccd3ee70093a697129a3ffe8732535d3b2df6a4ecc279d"
   end
 
   resource "networkx" do
@@ -381,8 +381,8 @@ class Checkov < Formula
   end
 
   resource "yarl" do
-    url "https://files.pythonhosted.org/packages/d6/04/255c68974ec47fa754564c4abba8f61f9ed68b869bbbb854198d6259c4f7/yarl-1.8.1.tar.gz"
-    sha256 "af887845b8c2e060eb5605ff72b6f2dd2aab7a761379373fd89d314f4752abbf"
+    url "https://files.pythonhosted.org/packages/c4/1e/1b204050c601d5cd82b45d5c8f439cb6f744a2ce0c0a6f83be0ddf0dc7b2/yarl-1.8.2.tar.gz"
+    sha256 "49d43402c6e3013ad0978602bf6bf5328535c48d192304b91b97a3c6790b1562"
   end
 
   resource "zipp" do

@@ -8,7 +8,8 @@ class PhpCsFixer < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2e0658f7344cdead9565fe95a736c36d60c26753f88b13303059bd2311d56843"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "511f1c7453f945211375f4a2c4dcc9fddf7b6cb1546a42ad9a6a6d23c9a2665e"
   end
 
   depends_on "php@8.1"
@@ -17,7 +18,7 @@ class PhpCsFixer < Formula
     libexec.install "php-cs-fixer.phar"
 
     (bin/"php-cs-fixer").write <<~EOS
-      #!#{Formula["php"].opt_bin}/php
+      #!#{Formula["php@8.1"].opt_bin}/php
       <?php require '#{libexec}/php-cs-fixer.phar';
     EOS
   end

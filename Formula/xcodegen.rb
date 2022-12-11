@@ -1,19 +1,18 @@
 class Xcodegen < Formula
   desc "Generate your Xcode project from a spec file and your folder structure"
   homepage "https://github.com/yonaskolb/XcodeGen"
-  url "https://github.com/yonaskolb/XcodeGen/archive/2.32.0.tar.gz"
-  sha256 "dbf6c1af134a8db4d19f11065ef4502cfe4c4b1fe488d7bf5993e56a1d545775"
+  url "https://github.com/yonaskolb/XcodeGen/archive/2.33.0.tar.gz"
+  sha256 "e05107f779c206cbacba0f2038f98cd1dc5cdc895324a76daec4b5168f119934"
   license "MIT"
   head "https://github.com/yonaskolb/XcodeGen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dd35de6f71508052f8ccac6d2198150822c9b0c28d662e7b543f3d539cae336b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "22d97109850126936386bc38a22459d9e8ac3ba1e00b254f5149e954f543c2ec"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ab30a37ef8e3c885b1cd05c30a844612237f52308556256cb4698784d00a2ad4"
-    sha256 cellar: :any_skip_relocation, ventura:        "7fccacda022483fab4c0c38c8c1b60c3ac7d263bc91ccf76169d58b0de8728e0"
-    sha256 cellar: :any_skip_relocation, monterey:       "6ef4431936bc868e8026c9ddb8396fa5ac2d9d53a611a59b23fc081d3a5ad0bb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4c990bf05734cbb192171079d69e996837092603985c41904ddec799aa51fcbe"
-    sha256 cellar: :any_skip_relocation, catalina:       "330bf63ef11b30bde8f32aea2d46604fd16bcfcff1b918ab95fe294ea9f3708a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "76d47e558129e02cb16dbcdbb92b25ac5ab47658f4736cd1f68d205bebcd0001"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "092164ce460d49adbc33023f55ec6b9a5704d787e18c05ac7d62232c47bdc91e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b4ba5b91c37a2b3b364a5af35d207eac215a2c00987d008a3002a9d643d39652"
+    sha256 cellar: :any_skip_relocation, ventura:        "38a9e261286f6f7e402eef108a6b0fc02884a9872d9464d69a56b1adc725c7fe"
+    sha256 cellar: :any_skip_relocation, monterey:       "a05217b82deaa2efa0ee832b663232aab66aabe2d2c08ad2e3fde723b6faffb0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f5b9313d25bff493ea073b291c2a86d3633cc16ec331fa3d2caf8a1131247bbb"
   end
 
   depends_on xcode: ["10.2", :build]

@@ -8,7 +8,8 @@ class Deployer < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "53895f90f4afca9b8ca1857d4a5dda39759720657eb1a8f774f52a042b29c6c2"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "945de0a43e6b2ba7b28bf7eaf9eaec43fe693b2563a2cbcce8d8a249c192b829"
   end
 
   depends_on "php@8.1"
@@ -17,6 +18,8 @@ class Deployer < Formula
 
   def install
     bin.install "deployer.phar" => "dep"
+    bin.env_script_all_files libexec, PATH: "#{Formula["php@8.1"].opt_bin}:$PATH"
+    chmod 0755, libexec/"dep"
   end
 
   test do

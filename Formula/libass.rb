@@ -1,23 +1,22 @@
 class Libass < Formula
   desc "Subtitle renderer for the ASS/SSA subtitle format"
   homepage "https://github.com/libass/libass"
-  url "https://ghproxy.com/github.com/libass/libass/releases/download/0.16.0/libass-0.16.0.tar.xz"
-  sha256 "5dbde9e22339119cf8eed59eea6c623a0746ef5a90b689e68a090109078e3c08"
+  url "https://ghproxy.com/github.com/libass/libass/releases/download/0.17.0/libass-0.17.0.tar.xz"
+  sha256 "971e2e1db59d440f88516dcd1187108419a370e64863f70687da599fdf66cc1a"
   license "ISC"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c4296af635127c59f3fa97a542359870ab0e91dda850c152a325995095c5f2e1"
-    sha256 cellar: :any,                 arm64_monterey: "78b33a83599fa08d424552a3bfae77cd00adc2bc343006e86300a0236d144afe"
-    sha256 cellar: :any,                 arm64_big_sur:  "ca188b422309aa7962beeb2313be7d2976f4dfeff98a20de8ea5ad1522a7214e"
-    sha256 cellar: :any,                 ventura:        "ec3c6ef1a5247e947155c4d21dc51a2b961dc0dd9eade6f0f95478ca060408bf"
-    sha256 cellar: :any,                 monterey:       "bdef66960d51e5e05cf78aca163ab3a8067e7d0589a7ddfbaaf8d4ffb32c319a"
-    sha256 cellar: :any,                 big_sur:        "745323103a372dac6d5c81cb00cc02e9b51d2da99f8c0b08007c851977094e03"
-    sha256 cellar: :any,                 catalina:       "4031a10db6546e55d4f8c9b23ab2b82fd0b960791641cd12189363a6bc425b47"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52049797d742af4527e561aaee7ba8fde6d9f155291d58f7a3b9f9d8c8cd8105"
+    sha256 cellar: :any,                 arm64_ventura:  "baa3b648fc992ec6809cedfabb7590cabca2dfea3c927e562191656a80d396b3"
+    sha256 cellar: :any,                 arm64_monterey: "0b19597e0eb0d9a5bddc13e0a5bcc17b2bfd77a17b5cc5cddb68c208a6838609"
+    sha256 cellar: :any,                 arm64_big_sur:  "091a8dc756479e45b245c0c913e39101991df611c9670ebf38e04fd4ad2d7c8b"
+    sha256 cellar: :any,                 ventura:        "7d65f258e3f0ad6a7d60428c9982050ec18edf64aa22c91692fd4084a42dbe34"
+    sha256 cellar: :any,                 monterey:       "eb7c43548a66b39afbc8822640b02531824f65e4293f8f6a0fa8c0addb874581"
+    sha256 cellar: :any,                 big_sur:        "affb71cad007121bb77b910707e7d3c197fa73875b366d70e7b31d927bf05c13"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ccd2e410057e8e959628f5c95152fbb9137267cac65092f5ac6ad1e111b9bb56"
   end
 
   head do
-    url "https://github.com/libass/libass.git"
+    url "https://github.com/libass/libass.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
@@ -28,6 +27,7 @@ class Libass < Formula
   depends_on "freetype"
   depends_on "fribidi"
   depends_on "harfbuzz"
+  depends_on "libunibreak"
 
   on_linux do
     depends_on "fontconfig"

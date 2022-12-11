@@ -9,15 +9,14 @@ class Buku < Formula
   head "https://github.com/jarun/buku.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "9a793d1c6ac976e252212aeb2d202f0609bfb7f5acee5fe755a7713c6169f867"
-    sha256 cellar: :any,                 arm64_monterey: "6a4c5629699a594fd13def627e9549b0d65a4fe5f656be1b5df406d7ac1b8cfa"
-    sha256 cellar: :any,                 arm64_big_sur:  "4b4dd4cb23f639bfd9a405e63e1e43d140651e596e345f65afdf00200b856087"
-    sha256 cellar: :any,                 ventura:        "799c57645799d536e0f9a5b697ea3a85e216c9b7f8e7f3dd6613d2128ffba5b2"
-    sha256 cellar: :any,                 monterey:       "18f3707ef5957bef14d9e18ee2d943567794a14c156bece8f5b8860f67bd111a"
-    sha256 cellar: :any,                 big_sur:        "1d23e98533075753f5d34369d8889869e564df8173cbde815098fbc45eca57ec"
-    sha256 cellar: :any,                 catalina:       "0b524849b68b43a58e3f38d06139e4d8418726baa6c00b63d93fd2d09e3cb7e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7718c862cec46c8ce256cc4551862da08f8d2fdffddb0739a3d31252c61ea76f"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "cf51c010d50bb71250d17f4e3da876d735af64bc8b8a1b1edd7e94a4ce01cf55"
+    sha256 cellar: :any,                 arm64_monterey: "2dde10f7c29c668ad7243d05735745ac3c753b9cc7f7a9fb9e17c7641be6ac59"
+    sha256 cellar: :any,                 arm64_big_sur:  "b8f93cc8f7fae2666a3ff53fcc1dbe1b852680bf5c405968a8b6ccd80d397834"
+    sha256 cellar: :any,                 ventura:        "aadc5fb99df06ddabab49eee7d151db88dd81afbd49e8d1d8a1e622978f56845"
+    sha256 cellar: :any,                 monterey:       "4402232487ed095877b1ec6340554ed32209478c5dc6f900ba721c121605c0b9"
+    sha256 cellar: :any,                 big_sur:        "bff321359f006a68408ab0cbc4a132f9bcf9d97b629e54a1869bf85b2633f037"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "806641894cfb837585768df236375ca638f2a6a31fe2e6401e5d112e886b7f85"
   end
 
   depends_on "rust" => :build
@@ -48,8 +47,8 @@ class Buku < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cffi" do
@@ -68,8 +67,8 @@ class Buku < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/13/dd/a9608b7aebe5d2dc0c98a4b2090a6b815628efa46cc1c046b89d8cd25f4c/cryptography-38.0.3.tar.gz"
-    sha256 "bfbe6ee19615b07a98b1d2287d6a6073f734735b49ee45b11324d85efc4d5cbd"
+    url "https://files.pythonhosted.org/packages/e3/3f/41186b1f2fd86a542d399175f6b8e43f82cd4dfa51235a0b030a042b811a/cryptography-38.0.4.tar.gz"
+    sha256 "175c1a818b87c9ac80bb7377f5520b7f31b3ef2a0004e2420319beadedb67290"
   end
 
   resource "dominate" do
@@ -141,8 +140,8 @@ class Buku < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
+    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
+    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
   end
 
   resource "pyasn1" do
@@ -153,11 +152,6 @@ class Buku < Formula
   resource "pycparser" do
     url "https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz"
     sha256 "e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"
-  end
-
-  resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
   resource "python-dateutil" do
@@ -176,8 +170,8 @@ class Buku < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "visitor" do

@@ -13,14 +13,14 @@ class Itk < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "f80a093043819355114ba7a3bfd5d7d3a096460f8126551c5cd53fd31b40b4fb"
-    sha256 arm64_monterey: "f53ec6554cc1d9b0bc41fe37a5ba183acc04410c932e9290deb4cb8b469232bd"
-    sha256 arm64_big_sur:  "aba2287bf5d7f25b9a141fd123c04abdcd12aa970d09815118979b475ab6daf5"
-    sha256 ventura:        "127d790e7857bff8cc428f2ff8cd1e7947f5d743cbd237178755895ae570b4f1"
-    sha256 monterey:       "6c32846d72a91f1ae1d2ed1e4f5d306826abc0087b30e0a5a5115eef79e8a6bb"
-    sha256 big_sur:        "c2dac27e4b6818a6472e2d28438f41a45280ec7be67b710eb2c6508b3007fe3f"
-    sha256 catalina:       "b3a6984b550cdae671d061175c4a8193c7c3d7e37cc5c5d2c0c49f8f94f1217d"
-    sha256 x86_64_linux:   "8371e79ea8dd12072ad133544f757dfa2e25a9939dd5d736fdb2b0d65198ce13"
+    rebuild 1
+    sha256 arm64_ventura:  "1410301f5cc936c0e950328b6390d42a6fb0dc87fd7a53a8d9a3b6a83e46d76e"
+    sha256 arm64_monterey: "f55fbffb6f9b00f5f78e5823a70257e55c8ce675967df69fbf655058e7a99c15"
+    sha256 arm64_big_sur:  "3e6ca9bc77673500b57b30b8c5a5d73aacdcf3bf9ee1b365b752847e3c68cd97"
+    sha256 ventura:        "b4b2581f753c57f72babbb20800a9034f6135f2b7d14f9e041b9ec26f5880c39"
+    sha256 monterey:       "0ab063f285db8f83792070e8702ba51d2b9b14342114921b7fedccde7478b503"
+    sha256 big_sur:        "23babc0810e7aca8372c414f3b85f9405668448aaead6d4491292be4b58d054f"
+    sha256 x86_64_linux:   "ed6fa53b507ff8aba2b20653ffed65cfc040f312f20b360e4e2eda248a8a4403"
   end
 
   depends_on "cmake" => :build
@@ -36,8 +36,6 @@ class Itk < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "unixodbc"
-
-    ignore_missing_libraries "libjvm.so"
   end
 
   fails_with gcc: "5"
@@ -87,6 +85,9 @@ class Itk < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    # Remove the bundled JRE installed by SCIFIO ImageIO plugin
+    (lib/"jre").rmtree if OS.linux? || Hardware::CPU.intel?
   end
 
   test do

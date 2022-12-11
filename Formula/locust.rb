@@ -3,18 +3,18 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/23/e2/091862cbd961d8b2b10e6b163d465d9c187c68e0f69618f5bdcbe9179dbc/locust-2.13.1.tar.gz"
-  sha256 "875bb048b9845ba2592a65a9583a22a56d7910101cbd831fc4214548c8b54b18"
+  url "https://files.pythonhosted.org/packages/71/57/5f4fe02ce9af68afecf734ac64086a0e191f386831b9ae765a71c088e477/locust-2.13.2.tar.gz"
+  sha256 "fbacb26dbc7fdb39f94e5f0e618a0ae6d9e0412446411ba5a30067cdf078fe05"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "daf23630d3959406f75babfd8d1066c214dae4df74a82ae8410f31db143a5ea0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c75b734b86e0143773c451d9bd1d3a950590f9a949dbe0c680acc3e956bd2505"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ea971cd5d7d70ea5a86dcafe53044cc0fb7687cde2bb48cd56a29da9c8515987"
-    sha256 cellar: :any_skip_relocation, ventura:        "97889ca4fb8761cda871d3c521ed8cae99f125d312ea187c80304ebac642f787"
-    sha256 cellar: :any_skip_relocation, monterey:       "92a6828ffe23d8d65c9c1f8ac9b981a69d697b045199ed690333638695923828"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5b43475a442e2290353a1ee3e9d80c543eaa5472852e9b51d6937426c83bb8c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09fd6ae061314701cc1dd1cba00ab7add5cb74de0c02544534e21e77ca5951ec"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bbe7c6039c6353bd3badbdeed1fcd5c3dcabcb251223b9c25303d0e7345dd57d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c4ed6798cd4aff34e35c267df1e6411510878e986b85174d7f80009e191d39db"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a34346bda555c3704896fc3108ce3f1e4064628aa11d206afc52abe8bbae16d"
+    sha256 cellar: :any_skip_relocation, ventura:        "df3a540dc234b6825283c377a61d991059011a5785c1b73c2030a9cb272e936b"
+    sha256 cellar: :any_skip_relocation, monterey:       "70bb9355f023c5173ad7bcc4b3cccba4e2155c7de38a60ac555c22252b8a3008"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8ad15d4f3c438ad9dae032bced8fe43b2cbbf6ab273dabd935b82365ee343620"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9dbfc139c1b56ff2edc4159745a47d096c8e9cf287e27455cc27263c8616de3e"
   end
 
   depends_on "python-typing-extensions"
@@ -27,8 +27,8 @@ class Locust < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do

@@ -9,13 +9,14 @@ class Conan < Formula
   head "https://github.com/conan-io/conan.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bcb1c4fae84ad67b2e5bff4d3c0e07cdfc12c1f61495b826cde4a94b5eacc250"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c417402cdbe877c0716006b9d6605cd31791de7d409e68241c41ac037fd8b7aa"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8ad8c1980fa58e25d954daca4106bd52b3d04a59ac44540f6e82cf7b042876c2"
-    sha256 cellar: :any_skip_relocation, ventura:        "64384424a75477184aad039c3821994be46a1183a78a9da0b030ee935e472f73"
-    sha256 cellar: :any_skip_relocation, monterey:       "d94b1d3ba18b174e0fcba2d5f96ca1923f8dc5e9562c7228c42ecb1d2bb9a5ba"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8a258b91650fef577e0d12c060a07cd919031f836e7b31e1eea261a1c5fe9bbd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9058028dfcae40f076b9a859720f1b8fae492ac548794ab8b8f4e6e9ab4fd392"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e19e3ffe3f7a770bd6fae2f5efb290152f871ebbf148d204d6ea264910089bd5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c2baba5dce623cd86842ed9ed6bc77ef9b5ff45713afd2801a0dd154550e7bfe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "441d688ea67f9f3c3ce046b16fb612bc6949a5f8c2b2860bc9a7565686653abe"
+    sha256 cellar: :any_skip_relocation, ventura:        "78ac0a57cc1a977d462894f35076b4b06af20297694f80d00a94e5ecdc7d5fd9"
+    sha256 cellar: :any_skip_relocation, monterey:       "80d06aa4ce11e2bed6b9f45574ab6dcb9a92e109d08ffea0e23e13ff8151213c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d412986995f70a0ee700be31dee58321ef4fa0c1f1ded5f910c5681c2c4131fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "165a3a15b0574df1aa14f5d1bcc1bfef32d84e42d1e22b3e3358558c784fb260"
   end
 
   depends_on "pkg-config" => :build
@@ -32,8 +33,8 @@ class Conan < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do

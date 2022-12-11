@@ -1,8 +1,8 @@
 class Logcli < Formula
   desc "Run LogQL queries against a Loki server"
   homepage "https://grafana.com/loki"
-  url "https://github.com/grafana/loki/archive/v2.7.0.tar.gz"
-  sha256 "fcdf692b117bd412e4b5a61811d92f18b3a02db6e3802e6abec0c4f584d31861"
+  url "https://github.com/grafana/loki/archive/v2.7.1.tar.gz"
+  sha256 "363f7ba0782e3eb1cfa89b1240311b182ce3e1c0c53497f18e876e71749f0e89"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/loki.git", branch: "main"
 
@@ -11,19 +11,16 @@ class Logcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e30c9d6da1e5a098acc4c57d5d2b08b102b4dd6a5d65e150a86f2e66006e89f8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a70ba2e57d29b261e09ac15f53489d7f0ff63e3f90d011b03cd9554d1bb99086"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b555e614c1f2bba433124a04310801ed89065cb69a1ca0086316375d173b1351"
-    sha256 cellar: :any_skip_relocation, ventura:        "ed56322e2e7a51ec00ffd45ca4320c1f5c1b0e9d2f4e8a6a2333707c217dec66"
-    sha256 cellar: :any_skip_relocation, monterey:       "8a62eb2c98b7dc08ec0e93ddb86c5b189a7059a0ce7ea3133c37ef254a964b61"
-    sha256 cellar: :any_skip_relocation, big_sur:        "78e5824b3e1e5d2bbb52a83c338768e8a8655a36bc92e0a53c7e1003fb5ab29e"
-    sha256 cellar: :any_skip_relocation, catalina:       "26403cd3898a625a3dd02a561565a814a852bf4104c2649c95e5a569a9afcf65"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5017b5f0cfc0ce2e77ee014deef9a81389448f0a0b006846aeda935be0b00284"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2c17c08d69bb343cbbc14ad3d1bca9b20cbeebf868a74158884e832f5d32a535"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f31ab4c5d7e70fec6f0483602b2e6bf356cbf43e06a16a1f1546568936087135"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "65c5556705f0da02601bb5ed39cb65ffd20033846c64d22cc1830bc11820fb93"
+    sha256 cellar: :any_skip_relocation, ventura:        "ecc598b8c62649560950de5f926d52af535361d5c3de134df00c55a82e84686d"
+    sha256 cellar: :any_skip_relocation, monterey:       "6d4b8059f1b2c3bda92fb22862b6f9935c8dcc687bdb03c5335cb95316e992f5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4638b9f160c090a597eb3d883192fee36b3b3bcfa36d6653175b53f6f018de9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2efcf510740a8f8f6487dfdb33d31e4e6c5ade49686a3fea13c879a7f582ad9d"
   end
 
-  # Required latest https://pkg.go.dev/go4.org/unsafe/assume-no-moving-gc
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
   depends_on "loki" => :test
 
   resource "testdata" do

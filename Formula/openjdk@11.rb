@@ -1,10 +1,9 @@
 class OpenjdkAT11 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.16.1-ga.tar.gz"
-  sha256 "3008e50e258a5e9a488a814df2998b9823b6c2959d6a5a85221d333534d2f24c"
+  url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.17-ga.tar.gz"
+  sha256 "1d36043f2cecfe2b079ca288c66ad7f009c50c828f4eab989e1adaeee443367b"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url :stable
@@ -12,38 +11,40 @@ class OpenjdkAT11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ec9827ab4a3895ddb6739939af6dc3426fd09995a805af69daccf099ac4301ab"
-    sha256 cellar: :any,                 arm64_monterey: "81eccbbd81a405f07a1ac2bb0f3ccaef70d2f586a26f6c9b5326a4deb9d30404"
-    sha256 cellar: :any,                 arm64_big_sur:  "ef1efd7cb78ff5d788dabcef4ff376b214f422584d9b50ae086965ebe4c2e607"
-    sha256 cellar: :any,                 ventura:        "4157114f6dd128b93d0732559787f191678d2d496476e19855a03d0f226aa50c"
-    sha256 cellar: :any,                 monterey:       "938120ca00af5d30d606a37576fe11394511bfe1ac9d36817e8d4da4c662e92b"
-    sha256 cellar: :any,                 big_sur:        "a0943ce186432e16eab04996b743f4a52c1d4eb365a4f0fb9d2283d6554fc810"
-    sha256 cellar: :any,                 catalina:       "bdbb96550f521b4c79ffe9c8651c97b5a28fdf75061a3aff84c2ae57b2ad95dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aef7857996800a12b2441c499e46b80695eb090efef5e4b7e3f9c44ae89620d7"
+    sha256 cellar: :any,                 arm64_ventura:  "65d8e7b7a4e6f86ea503be7583d662040db8b3808cad76db4c7165bec17fcefc"
+    sha256 cellar: :any,                 arm64_monterey: "8fde089f21fc5b44cec749335be1cbff63008c0b160ff44cce36a865ad22bcd8"
+    sha256 cellar: :any,                 arm64_big_sur:  "cef244f475241213637c473bfca2057f0d73081edd9cee4c5e5a1a50d1df013b"
+    sha256 cellar: :any,                 ventura:        "8082fbf61e89734ef6c97d27f9b79c523aac57e60cce48492307d7527626d94d"
+    sha256 cellar: :any,                 monterey:       "a7dd4515b5a6c3215390a6fcf07a8809b88cca277ab1c3db190bf644eebce6fe"
+    sha256 cellar: :any,                 big_sur:        "a129af42c5d12e807a111916faa1654ac2547510d68994327288a83976da727b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c4cdc324c887be6e88483846a2368ada8c6a64f77045991d8c2bb535143e546"
   end
 
   keg_only :versioned_formula
 
   depends_on "autoconf" => :build
+  depends_on "pkg-config" => :build
+  depends_on "giflib"
+  depends_on "harfbuzz"
+  depends_on "jpeg-turbo"
+  depends_on "libpng"
+  depends_on "little-cms2"
+
+  uses_from_macos "cups"
+  uses_from_macos "unzip"
+  uses_from_macos "zip"
+  uses_from_macos "zlib"
 
   on_linux do
-    depends_on "pkg-config" => :build
     depends_on "alsa-lib"
-    depends_on "cups"
     depends_on "fontconfig"
+    depends_on "freetype"
     depends_on "libx11"
     depends_on "libxext"
     depends_on "libxrandr"
     depends_on "libxrender"
     depends_on "libxt"
     depends_on "libxtst"
-    depends_on "unzip"
-    depends_on "zip"
-
-    # FIXME: This should not be needed because of the `-rpath` flag
-    #        we set in `--with-extra-ldflags`, but this configuration
-    #        does not appear to have made it to the linker.
-    ignore_missing_libraries "libjvm.so"
   end
 
   resource "boot-jdk" do
@@ -57,14 +58,15 @@ class OpenjdkAT11 < Formula
         sha256 "77ea7675ee29b85aa7df138014790f91047bfdafbc997cb41a1030a0417356d7"
       end
     end
+    # Bootstrapping with JDK 10 hit a java.util.ConcurrentModificationException so we use JDK 11
     on_linux do
-      url "https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz"
-      sha256 "f3b26abc9990a0b8929781310e14a339a7542adfd6596afb842fa0dd7e3848b2"
+      url "https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz"
+      sha256 "99be79935354f5c0df1ad293620ea36d13f48ec3ea870c838f20c504c9668b57"
     end
   end
 
   def install
-    boot_jdk = Pathname.pwd/"boot-jdk"
+    boot_jdk = buildpath/"boot-jdk"
     resource("boot-jdk").stage boot_jdk
     boot_jdk /= "Contents/Home" if OS.mac? && !Hardware::CPU.arm?
     java_options = ENV.delete("_JAVA_OPTIONS")
@@ -86,9 +88,15 @@ class OpenjdkAT11 < Formula
       --with-vendor-vm-bug-url=#{tap.issues_url}
       --without-version-opt
       --without-version-pre
+      --with-giflib=system
+      --with-harfbuzz=system
+      --with-lcms=system
+      --with-libjpeg=system
+      --with-libpng=system
+      --with-zlib=system
     ]
 
-    ldflags = ["-Wl,-rpath,#{loader_path}/server"]
+    ldflags = ["-Wl,-rpath,#{loader_path.gsub("$", "\\$$")}/server"]
     args += if OS.mac?
       ldflags << "-headerpad_max_install_names"
 
@@ -101,12 +109,13 @@ class OpenjdkAT11 < Formula
         --with-x=#{HOMEBREW_PREFIX}
         --with-cups=#{HOMEBREW_PREFIX}
         --with-fontconfig=#{HOMEBREW_PREFIX}
+        --with-freetype=system
+        --with-stdc++lib=dynamic
       ]
     end
     args << "--with-extra-ldflags=#{ldflags.join(" ")}"
 
-    chmod 0755, "configure"
-    system "./configure", *args
+    system "bash", "configure", *args
 
     ENV["MAKEFLAGS"] = "JOBS=#{ENV.make_jobs}"
     system "make", "images", "CONF=release"
@@ -128,10 +137,12 @@ class OpenjdkAT11 < Formula
   end
 
   def caveats
-    <<~EOS
-      For the system Java wrappers to find this JDK, symlink it with
-        sudo ln -sfn #{opt_libexec}/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
-    EOS
+    on_macos do
+      <<~EOS
+        For the system Java wrappers to find this JDK, symlink it with
+          sudo ln -sfn #{opt_libexec}/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+      EOS
+    end
   end
 
   test do
