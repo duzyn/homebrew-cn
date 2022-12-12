@@ -8,6 +8,7 @@ class Allureofthestars < Formula
   head "https://github.com/AllureOfTheStars/Allure.git", branch: "master"
 
   bottle do
+    sha256 arm64_ventura:  "7b817a675a66d28cd4d431ebe632f191c008268dd6e4e220f4f0a2ba537b0214"
     sha256 arm64_monterey: "6ae827beabe27357dc2508cb2df02ee6fc91334b82b89f7f224c1b2d1547f950"
     sha256 arm64_big_sur:  "b5575dc7c4003a656fd86e9bb6ccc1bb32ca6e7cc69b269b5119185fe026d4ef"
     sha256 ventura:        "a55f0d42d41db620f24a58b4254e201805f096f9df3900bc73d4494992c7ff9d"

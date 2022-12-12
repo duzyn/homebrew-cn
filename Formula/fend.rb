@@ -12,6 +12,7 @@ class Fend < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8c7e68f999804fd7f7d2803df96a196c533e61d7a9efbb809b73cefed629d16f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "15618930db2981a714b233b010c395bfed2f770f1937275fb3489bbaf11dba8c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9f47ceaa72e96fb5ecfefc9eeedcc13b903e557d507d4e588920c72503712710"
     sha256 cellar: :any_skip_relocation, ventura:        "8f246377f4119cba1b55875724f4b7a09e8589b805a005d1753568accd5c8caa"

@@ -11,6 +11,7 @@ class Dvc < Formula
     sha256 cellar: :any,                 arm64_ventura:  "fc34553a0ceaf547347452d2de4b314775d84fb29b37e1809be97fd01fec3ed9"
     sha256 cellar: :any,                 arm64_monterey: "757be0dc48db7a67374ed85979af2537884f741dae8214b023e77e6daaa39c0f"
     sha256 cellar: :any,                 arm64_big_sur:  "f3a028815f1d99fb82ad8a2460a1442eaf9ce217f0119f8019b676008590d5d0"
+    sha256 cellar: :any,                 ventura:        "a78b347e089002f130089ddc098c4cb166ed37be48bab4d2d5e1f9d3e3668ff3"
     sha256 cellar: :any,                 monterey:       "48163f31e0dc949e4dfb27410842c3a6da774054e6346ce2bef597fdb88635db"
     sha256 cellar: :any,                 big_sur:        "86b103f5d14a5b9499414ad747862845ed277c00c4a32398b429f9825a8dfa9b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f20863d00ea5e85605f648d979b6a5dcb277589704632b040a39d6609852b91"

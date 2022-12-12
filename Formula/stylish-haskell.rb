@@ -20,6 +20,7 @@ class StylishHaskell < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "945190777d785552525eac8f9cd812f909b806d30002f65dcb98da0cfbba2279"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "51d558bc19d94bf7ce019e4be28fe016e8ca51f80b7f8853b3287f5705f14760"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6171291422a4cf5d2281f6cf0d4f9cfc3aa6c3b68beb38b81bfdee37fc4a60da"
     sha256 cellar: :any_skip_relocation, ventura:        "66e5d594e32b86480288e83ae9589c754e9796a6148b8b4992c1bb405688c7ef"

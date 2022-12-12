@@ -1,4 +1,4 @@
-cask "font-bio-rhyme-expanded" do
+cask "font-biorhyme-expanded" do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,7 @@ cask "font-bio-rhyme-expanded" do
       verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/biorhymeexpanded"
-  name "Bio Rhyme Expanded"
+  name "BioRhyme Expanded"
   homepage "https://fonts.google.com/specimen/BioRhyme+Expanded"
 
   font "BioRhymeExpanded-Bold.ttf"

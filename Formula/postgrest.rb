@@ -13,6 +13,7 @@ class Postgrest < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "2c8799ebbba5b43da78c6732291e6e989d875710a0ec433db0873e08e3ac8b4b"
     sha256 cellar: :any,                 arm64_monterey: "a6e3487057fd0995e25420d30f7350e98da5dda1904b9876175fbe8d7540eb46"
     sha256 cellar: :any,                 arm64_big_sur:  "a7ce47936920a047e0b9dea9d4faee946527079acef62fc6fab4b9ba1f5d44b1"
     sha256 cellar: :any,                 ventura:        "c51015920bf8d7738f61123f4f7b89d24ecf50c54ea6622b6b3787161419a6f5"

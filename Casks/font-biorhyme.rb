@@ -1,4 +1,4 @@
-cask "font-bio-rhyme" do
+cask "font-biorhyme" do
   version :latest
   sha256 :no_check
 
@@ -6,7 +6,8 @@ cask "font-bio-rhyme" do
       verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/biorhyme"
-  name "Bio Rhyme"
+  name "BioRhyme"
+  desc "Latin typeface family"
   homepage "https://fonts.google.com/specimen/BioRhyme"
 
   font "BioRhyme-Bold.ttf"

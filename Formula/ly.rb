@@ -12,6 +12,7 @@ class Ly < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "038b39a72ba2a8eb2a1ac853e8c7e26228c3dfc97e4d639bd0b9a19507bdb11a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "038b39a72ba2a8eb2a1ac853e8c7e26228c3dfc97e4d639bd0b9a19507bdb11a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "038b39a72ba2a8eb2a1ac853e8c7e26228c3dfc97e4d639bd0b9a19507bdb11a"
+    sha256 cellar: :any_skip_relocation, ventura:        "83799e7be92015501c6b041cc121a9ffff202b46d995e618b5bf131dc571bd5b"
     sha256 cellar: :any_skip_relocation, monterey:       "83799e7be92015501c6b041cc121a9ffff202b46d995e618b5bf131dc571bd5b"
     sha256 cellar: :any_skip_relocation, big_sur:        "83799e7be92015501c6b041cc121a9ffff202b46d995e618b5bf131dc571bd5b"
     sha256 cellar: :any_skip_relocation, catalina:       "83799e7be92015501c6b041cc121a9ffff202b46d995e618b5bf131dc571bd5b"

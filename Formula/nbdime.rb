@@ -9,6 +9,7 @@ class Nbdime < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "293eafe8fa077130dc17da07557e8d009c4e2d0e2210c1ac9a658eba9d79797c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "1553392c5720fd680644d4d617abebe012ece27b89c1fe96aeb9b7e968f5d896"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a33accd3f14e9c11a65be4c198cffbbd2f8e5275d4aa0359d1b5800528074540"
     sha256 cellar: :any_skip_relocation, ventura:        "438e55d4b673b9a866a83de50a315daaed0d50c23358edb6f24ee243f4e1afdd"

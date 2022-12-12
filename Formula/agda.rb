@@ -31,6 +31,7 @@ class Agda < Formula
   end
 
   bottle do
+    sha256 arm64_ventura:  "13f390f73cc8566deef7e0cda118754858b75df3100e3b9dde94c6d87c6b5a3e"
     sha256 arm64_monterey: "efbb34a0ee23b6aa85ea3a7f1352e4d54a6b5981c9c4712e78555bc80037f39f"
     sha256 arm64_big_sur:  "d1315c0ec23b0344d52ed52b979e5021c9979da34bfd7da7353dd7030bcd9eae"
     sha256 ventura:        "bc71fe33bc97c42ebfd1e633025c6c3740d45db6c902d18431d32bfc9e040cf5"

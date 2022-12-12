@@ -8,6 +8,7 @@ class StellarCore < Formula
   head "https://github.com/stellar/stellar-core.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "232a88e9183d689fe28518a397000a5d7a422abbf33521a07c87f1cf0b4fec97"
     sha256 cellar: :any,                 arm64_monterey: "db753ca7609c40481550a0c8c3aec7a17f7f2a4d1efc172322acbafc95c48635"
     sha256 cellar: :any,                 arm64_big_sur:  "1f63554a2afeb277da1b7ae09294ab73702a0c0b234b87d64d1475f8a36e0f14"
     sha256 cellar: :any,                 ventura:        "a36974492e7e2b8af18038b05ee0a72c354c5a95ea597a25e59d05b7a30187e3"

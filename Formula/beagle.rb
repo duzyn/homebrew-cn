@@ -11,14 +11,14 @@ class Beagle < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "bba13ae084772efb7e685d560fa444e1395dc8dbb3e60a87a1d3ad038bb13ef0"
-    sha256 cellar: :any,                 arm64_monterey: "d39a3c6afff8db4d34dd5a0e4358793f29aa8c27b0324aaa320ded3ba220f133"
-    sha256 cellar: :any,                 arm64_big_sur:  "b9f67e5318b50445e3d793184750c99a92f746f832f4daff24136f12b33e2172"
-    sha256 cellar: :any,                 ventura:        "d6f56b3a1962718a8d6fc2a3a0f02839a72099ff8e18b3670ac3d7377fa07f25"
-    sha256 cellar: :any,                 monterey:       "080d59dfd1136c9de6816f1c165e4f5889fe5d2177fa6f6f43d27374c285410f"
-    sha256 cellar: :any,                 big_sur:        "402bc5f510cceb63134695fd4a4727dd4b09dded8c9fb1f77309372940e6b378"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "daa2a615224e3cfc0a53fb67a6dbc292b0fb5f766103703ddf4ed0c24c9551be"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "ca4a6d6a63718cbfffbc3d4f4729bd0dac761e12d5249bb69dd4cc9336af12c7"
+    sha256 cellar: :any,                 arm64_monterey: "ce5c2677ecdb6a2969889eb4540188d2011c11d89254377357b798650e306d58"
+    sha256 cellar: :any,                 arm64_big_sur:  "718a01898aefd3ae1bfdb855d15e2181b2391c30aa7ae657696caaab64481013"
+    sha256 cellar: :any,                 ventura:        "fd6f151f516ea25e41988a4f84d504e058d9bb176a4d0a286ae9a961229eb0d9"
+    sha256 cellar: :any,                 monterey:       "58819eab7ee85c4ef9a5d387e49b9a71f4ed7af37e89fae1b3671277f62a4ded"
+    sha256 cellar: :any,                 big_sur:        "ad1826295881c322d817c4be45da9bc16d8e9e60908aa5f01cad8e6cc023c120"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c43b06552d98d1890569bd221710face4cf9301336ee0ecd2f612ec8831ee9e"
   end
 
   depends_on "cmake" => :build
@@ -31,7 +31,11 @@ class Beagle < Formula
   end
 
   def install
-    ENV["JAVA_HOME"] = Language::Java.java_home
+    # Avoid building Linux bottle with `-march=native`. Need to enable SSE4.1 for _mm_dp_pd
+    # Issue ref: https://github.com/beagle-dev/beagle-lib/issues/189
+    inreplace "CMakeLists.txt", "-march=native", "-msse4.1" if OS.linux? && build.bottle?
+
+    ENV["JAVA_HOME"] = Language::Java.java_home("11")
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
@@ -48,10 +52,9 @@ class Beagle < Formula
         public static void main(String[] args) {}
       }
     EOS
-    system ENV.cxx, "-I#{include}/libhmsbeagle-1",
-           testpath/"test.cpp", "-o", "test"
+    system ENV.cxx, "-I#{include}/libhmsbeagle-1", testpath/"test.cpp", "-o", "test"
     system "./test"
-    system "#{Formula["openjdk@11"].bin}/javac", "T.java"
-    system "#{Formula["openjdk@11"].bin}/java", "-Djava.library.path=#{lib}", "T"
+    system Formula["openjdk@11"].bin/"javac", "T.java"
+    system Formula["openjdk@11"].bin/"java", "-Djava.library.path=#{lib}", "T"
   end
 end

@@ -7,6 +7,7 @@ class Fourmolu < Formula
   head "https://github.com/fourmolu/fourmolu.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0f156016307a109109dd829e4f7f5f241208c6faa8fa51a33ad7efdee26cc16a"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "724dc5c416a1961bc8d4444bf56115e1a6da2dde912205c89ebe41984a732a91"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0dc70433e6758fe2c22523f0d90bc326ee293e3a1e2624b3d14105bbf11db6e4"
     sha256 cellar: :any_skip_relocation, ventura:        "9eb3b18d545d8e5e67dfa18b4a9a18a8cbf3413483c50c74dd5ad92fc6d0fa64"

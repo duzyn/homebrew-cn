@@ -7,6 +7,7 @@ class Hpack < Formula
   head "https://github.com/sol/hpack.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4a2e6e37999a1325ca9429f5faa7716fe07557b4fc3c7d3c6ea75500e649e79f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "5a3a2a22f4ec0040e49ea3c9f0cee6b0aa9088626b145c01db092364f951b87a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "151c61eb08afd855006104db4ad884225afa63b562ef1b5261986c5ad67b85fd"
     sha256 cellar: :any_skip_relocation, ventura:        "5c1891ae0a2c5fbbb3a41007cf1b4d08915af6470bf812178fe9f448daf47001"

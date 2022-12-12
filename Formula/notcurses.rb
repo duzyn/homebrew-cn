@@ -6,6 +6,7 @@ class Notcurses < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 arm64_ventura:  "34d3a21fa36154110b37ad9cfac9c40044342ea33484288120d66e22ddd943a5"
     sha256 arm64_monterey: "775909949455ef932fe960a656989e7f0f893d1699f0a0be035321b5ad095cd8"
     sha256 arm64_big_sur:  "0ca63187446cc5f3681a3aa31616af97a5d078f566f018d7e5f953dd88a1ca19"
     sha256 ventura:        "70114af88cf86f16dcd602148b64f466516707a373d8400dcd4bc1661e422531"

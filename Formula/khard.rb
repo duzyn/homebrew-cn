@@ -3,21 +3,18 @@ class Khard < Formula
 
   desc "Console carddav client"
   homepage "https://github.com/scheibler/khard/"
-  url "https://files.pythonhosted.org/packages/a3/4e/e9cbcb281d371c355f251e5d9ca58b7e0d02dffd2bf4938888068fbc2def/khard-0.17.0.tar.gz"
-  sha256 "164e1aee9264735ec0473a74a38842e6272bbb814d949a66084c6a373bd95618"
+  url "https://files.pythonhosted.org/packages/fd/d6/3172fc469cc09decfb502e5428f6a44b0fec48952ae5afe4d657d9e74ea0/khard-0.18.0.tar.gz"
+  sha256 "fe88d4b47fdd948610ac573c01fa13d1b7996265cbc44391085761af9a030615"
   license "GPL-3.0"
-  revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1fc819763201a7c29c325be259fd5c28832d0a54719327f3eb5cccf3437560a0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "adec0c167f9673be452f1c695a832835f46da17700bba0df78b053c80db69c5a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28ed6dc0506b9f6434caae9cb9294f7fdbacfdba3d54483f6a0bd33a97bdb95a"
-    sha256 cellar: :any_skip_relocation, ventura:        "f70d695cf222879e763004ec96e0d0df0c6e38aa7f6d686c2823047c278305bc"
-    sha256 cellar: :any_skip_relocation, monterey:       "4926349ad3de43a969e15f153fd405f44600f7d728d36e67a3f553f583ced621"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3383947a6a566b663728df7b3a790941093b515fc38dea6fdd190e0c339bdd19"
-    sha256 cellar: :any_skip_relocation, catalina:       "8708b26b71a7cb95b39279b1a653ffcc3ea37f203dcf05dc3fd8fbb6893e3152"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb3831e654b813d9c219fc06d9cfa5094c0ff495e958b7326236ee05cd8558c2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd1e2cf55cf4db6d949fb5d323ae5f012879b708509e42ca653063219646b457"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "74d3bb85f5dffdd698f66e289163ec068a4dd20f40063bee9430cee827283d44"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b17fcb88bffbe52279883633a3ade7c39eb89b82495f6f8013f795d0f22c8c1"
+    sha256 cellar: :any_skip_relocation, ventura:        "e0a97ec63cdef5c1e383053591966a0ca5872b9b96f0a733431611567551c475"
+    sha256 cellar: :any_skip_relocation, monterey:       "1966589c1fbf696ab701e65f171ec517601a3de20f05d01a0f484767b2603ed1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "80506ea07260b9e958ad9e41b752308ba6b1b963585aa30a7919f94e412e0042"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ecdd8b889de9800958f6b364b1399bd2bbe22e5dd64380dede70bc012172a2d"
   end
 
   depends_on "python@3.11"

@@ -17,14 +17,14 @@ class Subversion < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "feb2c3336172d37bd48015ae6383d643205c811136d7cfd94d5d2a1e09c21056"
-    sha256 arm64_monterey: "ad95b56cba0ee03647508c4763112e759e84f6a24057e4936d11fab781e3122e"
-    sha256 arm64_big_sur:  "0864d99a6b7b2edef137c3f6116a76fc31b0aeca8c227ca094af6cdcdc8278c2"
-    sha256 ventura:        "812c869433acff9ef2330083c3ce3728e7fbcdd7e273bc361b593b52a6ed316f"
-    sha256 monterey:       "45b2f7ab2a1997db75e64357831a1a11de27a9a2cefec97784dd67e8e89b1a04"
-    sha256 big_sur:        "218244b61740174700695368abb9fc8921ea74f404e1dc363ff4e49a6c21b78f"
-    sha256 catalina:       "2307bedfc2da8c3a660cf145b723d51e809278fe212f471dea99bf3f4faee483"
-    sha256 x86_64_linux:   "748afaa6d152ff15fa8fa664adcb748a302d4366e81b92f63d946a87bd6970e9"
+    rebuild 1
+    sha256 arm64_ventura:  "f6412d897a14bc49d2aae2fc05fb46480391d9b5cfbe5483085029a1439a4ab8"
+    sha256 arm64_monterey: "2536b8677ac26a06f54ee32dca6ab33096c51f109873a24b12e6df54fcdb2e8c"
+    sha256 arm64_big_sur:  "931e19de15f027514469762dca70cf3c7e84e1f9261bad2c5cd8ced85427c314"
+    sha256 ventura:        "8ee9ddf543cd875188ef3d4d8dd8eb9d8bc816e19df60534d267b2104ee83527"
+    sha256 monterey:       "2f17ebb1087b69a59a4242bcc4f91172098c44a95a719d2c53b57138544aa1e5"
+    sha256 big_sur:        "8179f32563a92bc8eb5ed2dcec9625af50adb967f95037c78f6dd971576d064d"
+    sha256 x86_64_linux:   "b3f3c18b9c48a3504afc09a08d34686b759c618e308c25231b49d861d92c5e2d"
   end
 
   head do
@@ -57,14 +57,12 @@ class Subversion < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "openjdk" => :build unless MacOS.version.outdated_release?
     # Prevent "-arch ppc" from being pulled in from Perl's $Config{ccflags}
     patch :DATA
   end
 
   on_linux do
     depends_on "libtool" => :build
-    depends_on "openjdk" => :build
   end
 
   resource "py3c" do
@@ -146,7 +144,6 @@ class Subversion < Formula
       ENV.append "LDFLAGS", "-Wl,-rpath=#{serf_prefix}/lib"
     end
 
-    openjdk = deps.map(&:to_formula).find { |f| f.name.match? "^openjdk" }
     perl = DevelopmentTools.locate("perl")
     ruby = DevelopmentTools.locate("ruby")
     python3 = "python3.10"
@@ -174,10 +171,6 @@ class Subversion < Formula
       PYTHON=#{python3}
       RUBY=#{ruby}
     ]
-    if openjdk
-      args.unshift "--with-jdk=#{Formula["openjdk"].opt_prefix}",
-                   "--enable-javahl"
-    end
 
     # preserve compatibility with macOS 12.0–12.2
     args.unshift "--enable-sqlite-compatibility-version=3.36.0" if MacOS.version == :monterey
@@ -199,14 +192,6 @@ class Subversion < Formula
     system "make", "swig-py"
     system "make", "install-swig-py"
     (prefix/Language::Python.site_packages(python3)).install_symlink Dir["#{lib}/svn-python/*"]
-
-    # Java and Perl support don't build correctly in parallel:
-    # https://github.com/Homebrew/homebrew/issues/20415
-    if openjdk
-      ENV.deparallelize
-      system "make", "javahl"
-      system "make", "install-javahl"
-    end
 
     perl_archlib = Utils.safe_popen_read(perl.to_s, "-MConfig", "-e", "print $Config{archlib}")
     perl_core = Pathname.new(perl_archlib)/"CORE"
@@ -249,10 +234,6 @@ class Subversion < Formula
 
       The perl bindings are located in various subdirectories of:
         #{opt_lib}/perl5
-
-      You may need to link the Java bindings into the Java Extensions folder:
-        sudo mkdir -p /Library/Java/Extensions
-        sudo ln -s #{HOMEBREW_PREFIX}/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
     EOS
   end
 

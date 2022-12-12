@@ -7,6 +7,7 @@ class PandocCrossref < Formula
   license "GPL-2.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8f667990859410444cb20ee21f18dbc72a4a6f4627a8521d13f0b3ae5cb33a97"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "77964231643f46a4635a0795e9d2816ac69a1f1309349964288104b0e119a749"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2ca9608656d08bb2968a316d9089345022b2b44760096f4d8af2b050561d08a2"
     sha256 cellar: :any_skip_relocation, ventura:        "5f3048799b46ee8ed24fb668936c0a6decf027a7f4d680ec373416d49c966263"

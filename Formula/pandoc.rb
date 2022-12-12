@@ -7,6 +7,7 @@ class Pandoc < Formula
   head "https://github.com/jgm/pandoc.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9d2baab1e4f159c29ff5a24d675858ac6714a027648771e970593a08d5a96c55"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "62c83be98424758ef00e8536944ec94a0b8d824fddccc11c257020e3ead5a0c0"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9de935646243eaca586584f3d30f93378e4adbb51008c7c25e7582ab0bebcd5d"
     sha256 cellar: :any_skip_relocation, ventura:        "2c596760cdfa6ce0618b30bf5686fd6845558076266f8337a24eed71f14e32f3"

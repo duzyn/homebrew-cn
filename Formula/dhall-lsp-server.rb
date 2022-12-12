@@ -9,6 +9,7 @@ class DhallLspServer < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "adb8be04b6c9fdc8afae4a867181df4d4ed5486f7db5d1a5a520802946b5bade"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3b72ed07724e2a92a852dea0e273b97a63bc692488c5ed7ce0bb2efec4cab0ff"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c53f6489869ca6ffdc02b9d40145984b774f03b8673bb6c45df20d3e4008cf06"
     sha256 cellar: :any_skip_relocation, ventura:        "b4108e823d0f29c52f5573d9abc2be44bbeb24ed8e14990f4231f139bde9e59b"

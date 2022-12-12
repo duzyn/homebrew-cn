@@ -14,14 +14,14 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "0e5113457b48f829a823a2c27861937ed5ba3de48f02f20a73f934e84292df20"
-    sha256                               arm64_monterey: "72e51d21086a0f978b353bbf0eb273af83e10ed400df7272d282a3c810c96b73"
-    sha256                               arm64_big_sur:  "3b393a7329669564548d8edff26b613b85eb7209f952a14ed0e9c00bfff18784"
-    sha256                               ventura:        "5b7ae782226e371e57023a39b1b344187aa71de5c0d539f753811d0491bb9022"
-    sha256                               monterey:       "7f2394b7289eecc174e821204f41e756b7bc0b7070c14ef4dfe6ad671718482a"
-    sha256                               big_sur:        "912a5656461297bc57424f50258c64ef69ec6215b40e2e4ae538122d822e65cc"
-    sha256                               catalina:       "8eeb0ebb043660d3bf1ef17a8930050d992dd51084d86ac140c2b6f2b3431ec8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b1aad1b1afa533bfe5e6a88bedc7ac876cfb67d76fcc6066a85b2fb6686fe4e"
+    rebuild 1
+    sha256                               arm64_ventura:  "5bb817fb8e5a6f0982455d302b45fdd478196e1e2de5c61ca30174a280b1cf2e"
+    sha256                               arm64_monterey: "09e64532a9ea056866d595475b08d407d1077c61411983f1d79568ac85c69ac1"
+    sha256                               arm64_big_sur:  "f5fee6072f77684bc62cbb6736c80890d183f12e91fc65530c0f7e4e8f180301"
+    sha256                               ventura:        "139a22dfd0b331cba322980fbfc6e8838c9e51f5d6ca57b5f0f3d494b3a5d47a"
+    sha256                               monterey:       "5dade6b3df0ac3d6774f480ad5e2e0d96ab90000160503acfb58f387b4fd381a"
+    sha256                               big_sur:        "98caed03113decd462ac679a2e3d85fe970318104db44ababac863fad385ac97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b80f6ec2ef398da9a4d21e553328d95b0cc01a5bd0c9ce33b130467b6a801f4"
   end
 
   depends_on "autoconf" => :build
@@ -32,6 +32,7 @@ class GraphTool < Formula
   depends_on "boost-python3"
   depends_on "cairomm@1.14"
   depends_on "cgal"
+  depends_on "fonttools"
   depends_on "google-sparsehash"
   depends_on "gtk+3"
   depends_on "librsvg"
@@ -62,11 +63,6 @@ class GraphTool < Formula
   resource "cycler" do
     url "https://files.pythonhosted.org/packages/34/45/a7caaacbfc2fa60bee42effc4bcc7d7c6dbe9c349500e04f65a861c15eb9/cycler-0.11.0.tar.gz"
     sha256 "9c87405839a19696e837b3b818fed3f5f69f16f1eec1a1ad77e043dcea9c772f"
-  end
-
-  resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/55/5c/a4a25cf6db42d113d8f626901bb156b2f7cf7c7564a6bbc7b5cd6f7cb484/fonttools-4.38.0.zip"
-    sha256 "2bb244009f9bf3fa100fc3ead6aeb99febe5985fa20afbfbaa2f8946c2fbdaf1"
   end
 
   resource "kiwisolver" do
@@ -112,6 +108,11 @@ class GraphTool < Formula
     xy = Language::Python.major_minor_version(python3)
     venv = virtualenv_create(libexec, python3)
     venv.pip_install resources
+
+    %w[fonttools].each do |package_name|
+      package = Formula[package_name].opt_libexec
+      (libexec/site_packages/"homebrew-#{package_name}.pth").write package/site_packages
+    end
 
     args = %W[
       PYTHON=#{python3}

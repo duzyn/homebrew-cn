@@ -7,6 +7,7 @@ class Taskell < Formula
   license "BSD-3-Clause"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d3d4adedf5311251d430126a527c229bc743f7ad10204f953669c46ed1ecb1ae"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e3bddb43e9655602e40fdbdc7152cc34d574d76654410ae2735b02eb66e402f9"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0af5900a42ff1461448170364e3f8d7f81f274bb5e44db84779a34f6e76a7e46"
     sha256 cellar: :any_skip_relocation, ventura:        "d80b3487d9a6f372fe881ab460469daca32287cac49ddce328b794a067cb7c08"

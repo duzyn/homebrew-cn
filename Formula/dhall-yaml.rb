@@ -9,6 +9,7 @@ class DhallYaml < Formula
   head "https://github.com/dhall-lang/dhall-haskell.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cb2c9c1940c7a49d41b1fd1c6dba3861910547c879c9e28e7123c6adf9700d42"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8103d97ef51d7a331d4c15b9073e3847e7f9bd3e57a093b6476ebca10b550a99"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f85fdec06f8fe38a8b6da9453651f9c07f49889ecaa9c30a31e64598e33774f8"
     sha256 cellar: :any_skip_relocation, ventura:        "d7874a05f1a88499aa8377c693343ea922df26965f6e18b923fb2d5dc363ff20"

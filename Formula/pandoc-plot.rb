@@ -6,6 +6,7 @@ class PandocPlot < Formula
   license "GPL-2.0-or-later"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0e9f11f10fc2c7119e4df43e681eb5ef07154f405ca5d97d39b87b88afb3dd4f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ba31f72c88a32380b31d31e0f2fc8fbffd5596c06ae02e23eff0c09ee4e08d72"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7aeae2a6127242160d8bf858b4a4356d542b7b2f5d1a56e22b5e1a32f82c2115"
     sha256 cellar: :any_skip_relocation, ventura:        "32dc6c3fa4bdf9c92b385288163fb27fb596d3bb096759a7ee0d875af9023d12"

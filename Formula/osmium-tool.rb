@@ -7,6 +7,7 @@ class OsmiumTool < Formula
   revision 2
 
   bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "3259066785aa82d6dae6b4f1fcdd53c10858ba19bfe1672695e33a9d1beca680"
     sha256 cellar: :any,                 arm64_monterey: "ecfb1b350bb2d92d32ff311a1659084db2000b244eb7351c30bf94283c35265a"
     sha256 cellar: :any,                 arm64_big_sur:  "cfb56102bd3cb066cdfade5936679d4cf1c5ff7cb36464f901b7cb2071873aab"
     sha256 cellar: :any,                 ventura:        "fee70d13913c52c1cb502f5150586c15d88228c1459edb566999f1687d816f5b"

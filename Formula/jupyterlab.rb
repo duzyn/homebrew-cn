@@ -13,6 +13,7 @@ class Jupyterlab < Formula
 
   bottle do
     rebuild 3
+    sha256 cellar: :any,                 arm64_ventura:  "d8553aac2ecc7efa00334b40a8c9268c2740ae491029703249c62297d7368bb6"
     sha256 cellar: :any,                 arm64_monterey: "c431d4513a62e9e7a39195c22b4f0c0175443240d000a60bc27db72810e813b9"
     sha256 cellar: :any,                 arm64_big_sur:  "68dc6899b92312b92607ed9286c491008e1fb63ce8f6684d9576849d9afce5bf"
     sha256 cellar: :any,                 ventura:        "3ca1369092fecfa2759361d750967500bb6bc9c2d28a3384425f3bb9f8d4aa76"

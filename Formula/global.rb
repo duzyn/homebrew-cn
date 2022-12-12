@@ -3,20 +3,19 @@ class Global < Formula
 
   desc "Source code tag system"
   homepage "https://www.gnu.org/software/global/"
-  url "https://ftp.gnu.org/gnu/global/global-6.6.8.tar.gz"
-  mirror "https://ftpmirror.gnu.org/global/global-6.6.8.tar.gz"
-  sha256 "6f93d9732a07175817907d26640a90dc1009918e02be761bba09d1fa068357cd"
+  url "https://ftp.gnu.org/gnu/global/global-6.6.9.tar.gz"
+  mirror "https://ftpmirror.gnu.org/global/global-6.6.9.tar.gz"
+  sha256 "aacba0fa8d60ca645e62f312dcd23b47ed48a081aa0fb1563cff4702d9d1fad5"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "fc5220bc90cdbae9f5943afb92fab2a578764079288914243bc74943cca442d8"
-    sha256 arm64_monterey: "f695539cab306291779614dc48a7e711307499b448e18d88aaee41335717cfb8"
-    sha256 arm64_big_sur:  "4798c08d49b918a026a10457575f301dae7943d9f61d234a1c50dc2fe0159121"
-    sha256 ventura:        "5293be6d86806e1f71c6f1afeb75c99819bab17c57fa2a7d94ae60903f7a7327"
-    sha256 monterey:       "612fd73df9f636ce6fd323ad96475bb6fab68076ccddf0e7b064d0c3673ea0a9"
-    sha256 big_sur:        "b4981a0ed6b7445ddb0f21ce8005fb36c0f530cfbd20a3a95c1d840cdf81886b"
-    sha256 catalina:       "cbba064cb529f3a5f20e27d02f261f636afb2f099c32e09a3b6c210d4af3024f"
-    sha256 x86_64_linux:   "77a768a84867fbefbb58cf0cea3baa42a30584966e6725013361cef031b6d6f4"
+    sha256 arm64_ventura:  "8d1198b19e8434e3efd55a350ceb8025f9d8e3829379c1158b196453f5fc8726"
+    sha256 arm64_monterey: "16be70332826b4f6fff1fe329261c3e6d0c191ffa6c072aaee67f251f4884ec4"
+    sha256 arm64_big_sur:  "4db854ebdb0400e322b10cc71730568313c6723a9678360b316fc547684f06a4"
+    sha256 ventura:        "759433f9ee88cf432a33fafb16d2691e191a1cab98866f14c2cf17340ecccefb"
+    sha256 monterey:       "4b4df3d890c28bfdb765942a82781a1f2c28731e2b546592a37f361082360101"
+    sha256 big_sur:        "fde855f3b4b68c2bf34e33fe170bce3f53abe8ab76522aabe3d5c20c750d5d03"
+    sha256 x86_64_linux:   "f027aac458584bd59fa1d33033c62440af0521141759bf5e0199ab96ff9a02f6"
   end
 
   head do
@@ -32,21 +31,21 @@ class Global < Formula
 
   depends_on "libtool"
   depends_on "ncurses"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "sqlite"
   depends_on "universal-ctags"
 
   skip_clean "lib/gtags"
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/94/9c/cb656d06950268155f46d4f6ce25d7ffc51a0da47eadf1b164bbf23b718b/Pygments-2.11.2.tar.gz"
-    sha256 "4e426f72023d88d03b2fa258de560726ce890ff3b630f88c21cbb8b2503b8c6a"
+    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
+    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
   end
 
   def install
     system "sh", "reconf.sh" if build.head?
 
-    python3 = "python3.10"
+    python3 = "python3.11"
     ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
 
     resource("Pygments").stage do

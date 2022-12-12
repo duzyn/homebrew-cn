@@ -13,6 +13,7 @@ class Exa < Formula
 
   bottle do
     rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f4f0a33ce848a29c27997a81d159d21820da08880b83e9af5915aeb1fa34597d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "621d5ce8d5e8f9841a6191e3246fda50ca4d98fb3a108969157293e4454baa21"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "97b6bf5ce5591c1dc5c320ac857c3d977caf2547579d0d9145655ad9c2d9e255"
     sha256 cellar: :any_skip_relocation, ventura:        "147163a28ff48a30792fef4fb3566f7fa2d1bb59b85cf84b84ac784026115287"

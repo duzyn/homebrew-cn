@@ -8,6 +8,7 @@ class YoutubeDlc < Formula
   head "https://github.com/blackjack4494/yt-dlc.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b8410c4a3de8f1c17c230941f7945dad59a2ad222926f385cf2ad630a24f8a60"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
     sha256 cellar: :any_skip_relocation, ventura:        "08365319abe96f8bc0399db2d88c054d4272c4ecbb8309206fadc7adefbec28e"

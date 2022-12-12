@@ -9,6 +9,7 @@ class Datalad < Formula
 
   bottle do
     rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "72b86d7f7dd57f5fc771d57b14b9a689aecf44662eb41e3751b424d8ffba669c"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ac982d7cb0172fa468971340dbec0b2670cac4666bd51c0cec159331e45e397c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8867f3cd456d13d6731563da0d54d63ebd2c48c5347bdd61621b9de7b72dcfac"
     sha256 cellar: :any_skip_relocation, ventura:        "f6608dc552c7684f0017b4be7e30429783bddb67f1eac57ea9785fbdd379be37"

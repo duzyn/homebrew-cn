@@ -7,6 +7,7 @@ class Koka < Formula
   head "https://github.com/koka-lang/koka.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "00c395e0e93cdacbedd016a34e1a102674637845ea6297634914341a72cf2af2"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "e0b38553baeacde3c35f9f15a0e8b965a2339bb869005246a4fadc43f4f439fc"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "28fdf434b85e0a870a4c95df37c01ceef08acfd24c3f46cc8b8d951302a979a3"
     sha256 cellar: :any_skip_relocation, ventura:        "29b6d51eb8ae1c4a898f36183818d036b708d317e6446bcbc5c56b489ba03129"

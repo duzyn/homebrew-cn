@@ -7,6 +7,7 @@ class Bnfc < Formula
   head "https://github.com/BNFC/bnfc.git", branch: "master"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "54fca8ecd86a44eeb3a7fa2fc2f69181d8b2a9048b04acf2e2770531a9013a42"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "0fd0c1c666d0edd57810b310ecc403945e702aedcbb49229198a84846150a54a"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f7c9daed566d27315da319bf87850a51a36d3f619c485bff0eefa186c472652"
     sha256 cellar: :any_skip_relocation, ventura:        "79905967018817178599ec7aecbbe461486de62c3a3b72c4f62bdd6db513ecbb"

@@ -8,6 +8,7 @@ class Bup < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "488f320ae0dea994a83ff4610b4a52b9c2ea4275ad197edb55ace13c5e0899f4"
     sha256 cellar: :any,                 arm64_monterey: "fa27d1e7d41e432cd8e92a4bef4a0f40baec7aa017409bca0afbaea7600ae837"
     sha256 cellar: :any,                 arm64_big_sur:  "c4ecfafadc9a7a307b0e0b1d3affadd69a96307ba577abd257d7819d19780916"
     sha256 cellar: :any,                 ventura:        "5a22f269e8ab196be9724bfa63adfac2596178a50cc65bcb06a4f916f35c87de"
