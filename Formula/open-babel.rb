@@ -9,14 +9,14 @@ class OpenBabel < Formula
   head "https://github.com/openbabel/openbabel.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "60cb6bc616f2cda72267dc99601e6349ac1c1d9f27185a58fa60c4ec3dd482f2"
-    sha256 arm64_monterey: "f62cb276d94338ddfefe3610db7242b07071522e51b644993d538b27cdd67336"
-    sha256 arm64_big_sur:  "d21957b0b507d271ee125ba0ce47bd87eea70c807e78510a06c4066f476eb27d"
-    sha256 ventura:        "1a3c9bfdeb58b9fd85c76f2be00878822fabe7e94e7a459e1d4c540607effd41"
-    sha256 monterey:       "fe236b2a01b1ac206432b3954c66071bdb0f2b55540c699974a9d6410d0ddfe7"
-    sha256 big_sur:        "414dc53a50dd9eb8e5cedfead87ca2c79aae360075ef565c860526a7902167bd"
-    sha256 catalina:       "40e04ad79487b0394ea3b34443c9e2d4a6409915e941c54806e4d1fd2b6e3214"
-    sha256 x86_64_linux:   "6654aeb57160c573dbe4d069fc36fc8a3ecb46be163cabf0252f17c7a15480a6"
+    rebuild 1
+    sha256                               arm64_ventura:  "9f5f17dab6ecc4ef0a26c15d34fa3a07e15690459ac36372b0cb9e6a7a9d3173"
+    sha256                               arm64_monterey: "b8c4d0d18ffe49772d39f86e9a204262c3e32fef92aa29b38b76d36b61e0cade"
+    sha256                               arm64_big_sur:  "89817f17e6d1b7fa33a3a7c9321c2fe529f546fa6cbf59c014de0cf2ca279736"
+    sha256                               ventura:        "c8baf6ace5ea1d8700dc74642ebaf1f6a33fe172fcc8e016490688c4c4c66908"
+    sha256                               monterey:       "d7a93ad5a24deefcbd87ebcc094a9fe41024e938f54428f2d148da057e3dd7c3"
+    sha256                               big_sur:        "f4e76d3d62eabd132f5d177c62bd0c6ecc65bdb89b37d06661f66903d1726eb8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "18b1935653e40d9044045217cfeb9476cfb529763887a063ee6b81db8b3b9b3b"
   end
 
   depends_on "cmake" => :build
@@ -25,18 +25,26 @@ class OpenBabel < Formula
   depends_on "swig" => :build
   depends_on "cairo"
   depends_on "eigen"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
+
+  uses_from_macos "libxml2"
+
+  def python3
+    "python3.11"
+  end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
+    system "cmake", "-S", ".", "-B", "build",
                     "-DRUN_SWIG=ON",
                     "-DPYTHON_BINDINGS=ON",
-                    "-DPYTHON_EXECUTABLE=#{which("python3.10")}"
+                    "-DPYTHON_EXECUTABLE=#{which(python3)}",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
 
   test do
     system bin/"obabel", "-:'C1=CC=CC=C1Br'", "-omol"
+    system python3, "-c", "from openbabel import openbabel"
   end
 end

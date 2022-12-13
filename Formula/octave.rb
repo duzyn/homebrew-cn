@@ -1,21 +1,19 @@
 class Octave < Formula
   desc "High-level interpreted language for numerical computing"
   homepage "https://www.gnu.org/software/octave/index.html"
-  url "https://ftp.gnu.org/gnu/octave/octave-7.2.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/octave/octave-7.2.0.tar.xz"
-  sha256 "4aef78c3c9d49f75d64ccd55267df40b3020e6414f69ea8757a1939628b30171"
+  url "https://ftp.gnu.org/gnu/octave/octave-7.3.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/octave/octave-7.3.0.tar.xz"
+  sha256 "a508ee6aebccfa68967c9e7e0a08793c4ca8e4ddace723aabdb8f71ad34d57f1"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "98ddea50159a6056c6fe5c4f94a98634d8eeea846e305a16ba7fbe2f7ca3ae18"
-    sha256 arm64_monterey: "5baea026579896de878336938dc603c478f7d10dded22eb2d679421d119450bf"
-    sha256 arm64_big_sur:  "db84d5907dcac3a8c0e9972cff232df68a99fc71bacacf55495ac24a8cc53513"
-    sha256 ventura:        "e14f9aed956c00037ce352fc2f3066706a965cc9acc9039326f72a362ce81165"
-    sha256 monterey:       "e2dafead6e1bc2d414e6241c8e61cef9fb1fd6e4f03658818ab6986e6129147a"
-    sha256 big_sur:        "3e4f59e424e99817477be950020b382378805e6f844814eb3ed8c29f9e767f10"
-    sha256 catalina:       "b760b86d281746ed0a9c1f706c6dc0f26b1ec82cbbc49a42820ef2c073d81320"
-    sha256 x86_64_linux:   "ded660480377a43d24edf303a65de05267fa9952f80e74e5ef7e0bb5406c5d8f"
+    sha256 arm64_ventura:  "4cea8dcaac698ec5fc2e67c7aac70c057b229160984e5ee119967486e2b735ad"
+    sha256 arm64_monterey: "1ded732d4ae215ae8bb4f29d71380dafddd35fc95ac95510caf57fe4f17184ee"
+    sha256 arm64_big_sur:  "55ad0b58f4cc4420c2dd216e1505fd750bedc1bdebee5449656311ee4f373ef6"
+    sha256 ventura:        "61d3a8c93bf9a55e1420ab232d360b27cbb6c91f324cb73d7ef0e204b64736b2"
+    sha256 monterey:       "0b1e554cd8120526b224275a60ed9adfb007bef3340a91d2f92d849977f5f7dc"
+    sha256 big_sur:        "d6478685eeab67e5193bc695d3651eaffbd4cea0c7705fddf896b9723331f122"
+    sha256 x86_64_linux:   "d265f4e8b03f96649ba8bb9e96b77468000dfa9b0eb6435fe99e20b513cf7f6c"
   end
 
   head do
@@ -97,7 +95,6 @@ class Octave < Formula
     args = ["--prefix=#{prefix}",
             "--disable-dependency-tracking",
             "--disable-silent-rules",
-            "--enable-link-all-dependencies",
             "--enable-shared",
             "--disable-static",
             "--with-hdf5-includedir=#{Formula["hdf5"].opt_include}",

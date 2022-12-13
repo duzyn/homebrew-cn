@@ -12,10 +12,11 @@ class GccAT10 < Formula
   end
 
   bottle do
-    sha256                               monterey:     "734de3e434643524e973bc752c45de86d2de98b39c709e3a8735b875b5db08f2"
-    sha256                               big_sur:      "5cae922429ade324a434b01882825092166fe56b5f74597c0d8f0d3376f19b9a"
-    sha256                               catalina:     "baf8f3867cf211c64c6d747dca662323301824955b6aa4d0b201fc90b329217b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "bf5eb012ec771025b9512fd551984635e4a6b956849d6b9a3f5744e51ae603a0"
+    rebuild 1
+    sha256                               ventura:      "41fdc0ba7755243c1c489d265907b57f927c0f27d1a8708539f8d1fbf98b26ce"
+    sha256                               monterey:     "506382e56e8ba8adf3edf00b519d07e0b953985ba25e7974a5a7ccc6cb08c10a"
+    sha256                               big_sur:      "275d560e460a9045dbc19551eeef72b707eb02244f61a91cb4a53aa40e799a15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b828f739ed72d459927d3c0c6397faaa74d5bbe6c2c28acee4e7d1f9f1af60aa"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -36,6 +37,13 @@ class GccAT10 < Formula
 
   # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
   cxxstdlib_check :skip
+
+  # Fix for build against macOS 13 SDK
+  # https://github.com/iains/gcc-10-branch/issues/8
+  patch do
+    url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/d52cefd45a18ea9df3e3cd8cac5dcf6755f94edd/gcc/gcc-10.3-ventura.diff"
+    sha256 "26f45ae2ad69d9ba16f3ac2e9384a5a2e56f2a18722c91759f871d53fba43cce"
+  end
 
   def version_suffix
     version.major.to_s

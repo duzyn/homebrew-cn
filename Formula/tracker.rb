@@ -1,8 +1,8 @@
 class Tracker < Formula
   desc "Library and daemon that is an efficient search engine and triplestore"
   homepage "https://gnome.pages.gitlab.gnome.org/tracker/"
-  url "https://download.gnome.org/sources/tracker/3.4/tracker-3.4.1.tar.xz"
-  sha256 "ea9d41a9fb9c2b42ad80fc2c82327b5c713d594c969b09e1a49be63fb74f4fae"
+  url "https://download.gnome.org/sources/tracker/3.4/tracker-3.4.2.tar.xz"
+  sha256 "4e6df142a4f704878fca98ebb5a224750e5ea546aa2aaabaa726a73540bd1731"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   # Tracker doesn't follow GNOME's "even-numbered minor is stable" version scheme.
@@ -12,14 +12,13 @@ class Tracker < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "d042f24c2c9d9573b589e53932b1d2175db61af7d031a97209544faa7eb913ae"
-    sha256 arm64_monterey: "cb6ca6a5912870098e1ca387311a0902d92018ad5cc0f46a615b959d18c77a30"
-    sha256 arm64_big_sur:  "f55db3219384185dffe058a2849d57b4bcfbbe28ea1c04185381e90b0313bc10"
-    sha256 ventura:        "a901228c0dce04129cea33796f1f81b0e4ed3e89687800720944d33902e31059"
-    sha256 monterey:       "1ed6c8de2983a9991230ccf8e32c6fee32cd1d5d18cc2c7d303b0d6bb76df9b5"
-    sha256 big_sur:        "1825b70268c0b02075686c7623bbc9bfa000ce42badb09693c7b655fa12645d3"
-    sha256 catalina:       "f09dbe67cd27bd66748b220fc0596b8c2007ac14b6dcd077d21bc94d8078cd6d"
-    sha256 x86_64_linux:   "c8a5a3209753d81aebf2f49dcbf4212f4784a6c84fdcfd82238b376cf8f8c9b5"
+    sha256 arm64_ventura:  "25220e2fe811db4a7887b3f071ad49d5136066bb132f859df6f53975a2e2d5a2"
+    sha256 arm64_monterey: "0eb8634c38d2b09071c4283442a5df7dcc108c4bcb1fe89af17dbaaebb79cb6c"
+    sha256 arm64_big_sur:  "5200c2039328369a8f497f65e657ab29e31e0e8b64484f671361655af14188cd"
+    sha256 ventura:        "1dd30eb22b7f302bb6926ff8cb3e360c440a319ebfb77eaab0898b3f75df07b8"
+    sha256 monterey:       "e899d719c821a34cc30282a6203be5c8cd4141d9ba917e6804b8f6d8ea855c3d"
+    sha256 big_sur:        "28f909c8b463cb4ee9b056473850b7adbfc470b36a06ef90d2710be1d6bf6dba"
+    sha256 x86_64_linux:   "284fc92a1363d399eed150db8c9b323778a48e5d025cf200f705ea9b386187ce"
   end
 
   depends_on "gobject-introspection" => :build

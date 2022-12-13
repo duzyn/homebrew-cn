@@ -2,18 +2,18 @@ class Licensed < Formula
   desc "Cache and verify the licenses of dependencies"
   homepage "https://github.com/github/licensed"
   url "https://github.com/github/licensed.git",
-      tag:      "3.9.0",
-      revision: "02435ab9489d03617a7f95941d2a2d267306052d"
+      tag:      "3.9.1",
+      revision: "31b44067a069b7601060af337d7c27571486728f"
   license "MIT"
 
   bottle do
-    sha256 arm64_ventura:  "deb2eb18dcb03501b396fb4abfe06d057eee46e4dc8f43cecd26d617526184c5"
-    sha256 arm64_monterey: "17c719d56ee9aecf45d9f6c7de06e051a43004bd580d71d8f1beb267fae97ba7"
-    sha256 arm64_big_sur:  "8ec2cbed9312f16f5e0d8410ebfe67bc45d8757d46369d62331c04639201457d"
-    sha256 monterey:       "9413257d0ab186ca54af66a5818cf36182b3dd1b70ccc784c1a317b1ef128a08"
-    sha256 big_sur:        "c34bc2e9ec5c607be6df1de484144189187d7aef8cec5105378a0bf42abe85b5"
-    sha256 catalina:       "7909eb9eb07410a9c9155bcda4b390dd95e82f90067adc2f26e92e56ca49ec4c"
-    sha256 x86_64_linux:   "4163924b949ce0760436ddaf8ed6152078ad8a6c8ccba95f22919d0ba91e9f7d"
+    sha256 arm64_ventura:  "d20abc085408144616845a28c6cf6033ef2134d3ef86ea0781f3e5aac9560c80"
+    sha256 arm64_monterey: "baf0cc28c4a42a3a0cdd06cd340f5d8c77dd61ce1d02e2be841eeefe65947abf"
+    sha256 arm64_big_sur:  "7ec7afbd9e9ca667f56757e5e8cba8bf99725418f8dcede0c83410021483d956"
+    sha256 ventura:        "32474e1e05a1c6f4c40aca13b382cb0c971ef957bf278c244ce251bc61b9bf2d"
+    sha256 monterey:       "15af4a515958794628ea380eaa659419f5f3e009bc9a38c6099958583ebfd719"
+    sha256 big_sur:        "15aabae127bdacc1024b3fada7b873f3b04bd89b0723db7077b6dbff7920028a"
+    sha256 x86_64_linux:   "520a1c11b0a219b7225950d730d7abd05539b057a3a9caeb7d85af92ec9a8024"
   end
 
   depends_on "cmake" => :build

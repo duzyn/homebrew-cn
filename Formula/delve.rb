@@ -1,18 +1,18 @@
 class Delve < Formula
   desc "Debugger for the Go programming language"
   homepage "https://github.com/go-delve/delve"
-  url "https://github.com/go-delve/delve/archive/v1.20.0.tar.gz"
-  sha256 "39d2e3ae965abf5e71f3d8efbef368b1ee1d7154ea6604ec71d508350d419d03"
+  url "https://github.com/go-delve/delve/archive/v1.20.1.tar.gz"
+  sha256 "a10aa97d3f6b6219877a73dd305d511442ad0caab740de76fc005796a480de93"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cb2302aaef88f2b306ba590128920423f4cf024068a90fbf8d254866fcfa1e68"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d8383c4e4fc3613b9542f4644c6249846807420dbd9a4ff46f35bfcfe289de8f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "827cb79afcffac49eca03f2fdc9647c4736bc6f1c3e2e370efe0f16839523363"
-    sha256 cellar: :any_skip_relocation, ventura:        "3094768370c25d688a36c3eb8ffafdbd05b5aff4e9316fda5d7a2b59f874d111"
-    sha256 cellar: :any_skip_relocation, monterey:       "73caa50429a57f4edde1da1db8b08733276abd2044710e8c946bb4f9a1e1d381"
-    sha256 cellar: :any_skip_relocation, big_sur:        "007349a9417e16ceda0455fb49b7ef4bbe2b14824c744b89bc82400ae02d0019"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46c60883cfaccd53283458c485fd3e10ad0d7a1401f7484cf50df7596932d30a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "64ccaa15a16d959d300474755b10ca35d21b3c58aac0920aebcfe2160c329a8b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d9e85ebe92b4f75e16dc01a524536f82ec4515cf3b077867228ddb94f4a8bd4b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f0da05254b0868b3bd954f591ad56ad2e5dd0a371a429593877f932d4b6111c8"
+    sha256 cellar: :any_skip_relocation, ventura:        "932cd17b1d87466a1e755db56346ce9fd953724e879628f330a69dea825883e0"
+    sha256 cellar: :any_skip_relocation, monterey:       "a7e57b4ecfb290968e28cedd9e445c41472059ac3641202609696f63bfe3cac3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e8008caa12e9e775ce9dfc93a6081d4b6b42530aa15884b95e0b50ec93eb5068"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7482a316d8ce4eaecf282ef520b6444629884e31c96b21b50421b8d369e6824f"
   end
 
   depends_on "go" => :build

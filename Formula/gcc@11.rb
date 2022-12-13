@@ -12,13 +12,14 @@ class GccAT11 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256                               arm64_monterey: "635922720bf544c76e12f2baf7a567894f516cc84c340c202cf82643181726d8"
-    sha256                               arm64_big_sur:  "6a5bed7fde188c06c9878b922863c4969e0714b45e46795ee5a516f1ce7742d1"
-    sha256                               monterey:       "83f319563787b58129663404c80997ba11adb962f7101cf7711e0337c7763f6f"
-    sha256                               big_sur:        "2cbf39f31657e9d04e872676aedf1d0ff324172adba16d8959a7bdce0cbe323c"
-    sha256                               catalina:       "fbd468d951dfb5b28281300a73dff018dc6ae23044f479bfcd1b8d778a6a67ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4aa2521ece6b78eb7937a86bb184024db6954ac17f9d6be67b3634abe5b2c495"
+    rebuild 2
+    sha256                               arm64_ventura:  "2f18fea4420dccdc335906de63d33867f8f9488456cb9cb0426a7f65b7d4097b"
+    sha256                               arm64_monterey: "dce488703476feb1503515f148a968023709fec49f5b41145d28183c9ea9748f"
+    sha256                               arm64_big_sur:  "7c4e1607828da2cd0ebcb00c21ebbf5412dd07601db97317d565b41ae40d4184"
+    sha256                               ventura:        "903c7816c85617a0e676964c7b0e9af7226564efd3418b29760299f11ace27e5"
+    sha256                               monterey:       "172639c1d7f9a833b965e9038cf106664aaf8d09f02fc5012a342b17b910566c"
+    sha256                               big_sur:        "0256112a77174201596837633e196b2a2a44c6cfe2b8e83f8fb261c766fecfa7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fff7421a7aaffd0d1b7b2e2a34f66a2a5117c18bee0fd2c338b35cb56be59e91"
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -43,10 +44,15 @@ class GccAT11 < Formula
   # Branch from the Darwin maintainer of GCC, with a few generic fixes and
   # Apple Silicon support, located at https://github.com/iains/gcc-11-branch
   patch do
-    on_arm do
-      url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/07e71538/gcc/gcc-11.3.0-arm.diff"
-      sha256 "857390a7f32dbfc4c7e6163a3b3b9d5e1d392e5d9c74c3ebb98701c1d0629565"
-    end
+    url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/07e71538/gcc/gcc-11.3.0-arm.diff"
+    sha256 "857390a7f32dbfc4c7e6163a3b3b9d5e1d392e5d9c74c3ebb98701c1d0629565"
+  end
+
+  # Fix build on macOS Ventura
+  # https://github.com/iains/gcc-11-branch/issues/5
+  patch do
+    url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/86fa3c4b/gcc/gcc-11.3-ventura.diff"
+    sha256 "70499af2e5745c91ef4e886c0083cd70d7e94b7b45ba7b1276449bbb102df93b"
   end
 
   def install

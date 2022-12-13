@@ -8,13 +8,14 @@ class BitwardenCli < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "113d45ccf002db515cdbb089706b55e3c5fa8022bf431432112fcfd814f6b4e7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "113d45ccf002db515cdbb089706b55e3c5fa8022bf431432112fcfd814f6b4e7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "113d45ccf002db515cdbb089706b55e3c5fa8022bf431432112fcfd814f6b4e7"
-    sha256 cellar: :any_skip_relocation, ventura:        "1cd783bd644011cdaa3058e842df464c855a91237b0ef884006cad8f02304e22"
-    sha256 cellar: :any_skip_relocation, monterey:       "1cd783bd644011cdaa3058e842df464c855a91237b0ef884006cad8f02304e22"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1cd783bd644011cdaa3058e842df464c855a91237b0ef884006cad8f02304e22"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "113d45ccf002db515cdbb089706b55e3c5fa8022bf431432112fcfd814f6b4e7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1466950502a9152ee108b0b4c070799fa18742c667c52caf907cee4475999d5c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1466950502a9152ee108b0b4c070799fa18742c667c52caf907cee4475999d5c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1466950502a9152ee108b0b4c070799fa18742c667c52caf907cee4475999d5c"
+    sha256 cellar: :any_skip_relocation, ventura:        "2c9ae76e972ea3e409be58a3a437f0b39b53c5f3fa5bcdb019832057566de8d0"
+    sha256 cellar: :any_skip_relocation, monterey:       "2c9ae76e972ea3e409be58a3a437f0b39b53c5f3fa5bcdb019832057566de8d0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2c9ae76e972ea3e409be58a3a437f0b39b53c5f3fa5bcdb019832057566de8d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1466950502a9152ee108b0b4c070799fa18742c667c52caf907cee4475999d5c"
   end
 
   depends_on "node"
@@ -22,6 +23,8 @@ class BitwardenCli < Formula
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir[libexec/"bin/*"]
+
+    generate_completions_from_executable(bin/"bw", "completion", shell_parameter_format: :arg, shells: [:zsh])
   end
 
   test do

@@ -1,17 +1,17 @@
 class GopassJsonapi < Formula
   desc "Gopass Browser Bindings"
   homepage "https://github.com/gopasspw/gopass-jsonapi"
-  url "https://ghproxy.com/github.com/gopasspw/gopass-jsonapi/releases/download/v1.15.0/gopass-jsonapi-1.15.0.tar.gz"
-  sha256 "c4b8e1cdfe64010798e93643b6590621d004794c558edd976da8f9b3861ea538"
+  url "https://ghproxy.com/github.com/gopasspw/gopass-jsonapi/releases/download/v1.15.1/gopass-jsonapi-1.15.1.tar.gz"
+  sha256 "b3463f74c563f8220ef9714c660b52eeff88de3ea9e461f46928241b28e565b4"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e5f176b2b27feec0a42d74d56c60100301aa545647edfdfddbfad2fac68bbf4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d467247389f2fa7a7ebd51ab6377b71c2a61dff5e508a2a850b3eeb3842cf6f8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5db16691d23699c7803fb59ce3c6084ee9bda71776a3b57f3d38f4d8cdb3016d"
-    sha256 cellar: :any_skip_relocation, ventura:        "04dd7686218359670fcedfb0cd797ee1d4633a0e07c30890158e8b290cfe1740"
-    sha256 cellar: :any_skip_relocation, monterey:       "1cecdd6e9d9bc248f49beefd849df0f4db156f44e77ab4f48939d9098fa17fc7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "18fc8979b485db94cfecbcbe0e5154544db20bd863a1302e7ed4794837a65a36"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6f1adaf00c0d37771acea1428e429cf6920af1bcc7e2e69f21401fffce6c3255"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "09fa08a4411933c315dca0790988b6414d0a295e47d3ff6a6fac4b85a47ade78"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b0137d069bac105475b7a85cdea727dd280c45cdd250cb22bebab314f08489b1"
+    sha256 cellar: :any_skip_relocation, ventura:        "0fead53999085231859c4fa855e4069d7654904f69eccd0562b76ca9b8ff1b94"
+    sha256 cellar: :any_skip_relocation, monterey:       "1e32f4723665a4d5a14b2eea870c6c9b06496ac9a340f0a98646854f1ca7dcb2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7525d824b5244fca04aabb89d0e5c19311a39ac47539cb53254d49d77708d468"
   end
 
   depends_on "go" => :build

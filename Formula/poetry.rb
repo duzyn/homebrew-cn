@@ -3,19 +3,19 @@ class Poetry < Formula
 
   desc "Python package management tool"
   homepage "https://python-poetry.org/"
-  url "https://files.pythonhosted.org/packages/99/19/f14830634ef8ec6191ff44debb386304900001817a6a6061d134565631cb/poetry-1.3.0.tar.gz"
-  sha256 "d42943b44e80f5afafebdb696393cbdbcc750aecfaa6801174a4da42147c73fc"
+  url "https://files.pythonhosted.org/packages/1b/02/b2ac00c4d7baf3173f55193dfd4640c61a760f1803f8e09024d8c4d195d1/poetry-1.3.1.tar.gz"
+  sha256 "fde98462ad5dc9879393157da93092206a3411117e25a4761a41c6d08f31aea8"
   license "MIT"
   head "https://github.com/python-poetry/poetry.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "622ff2d2b0e2e49c98d2a8b5d58755b17e95f62316589f094be8958a9d4e7cf8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "afbe25d4b99a7e1c6ca127f15ac1321fbeacfffad243f593a5f58da0a2220202"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "61234d6bc752db38a9bb1208ab3786fe9dbd84243e9bfffb8ac82139d8f7dbf1"
-    sha256 cellar: :any_skip_relocation, ventura:        "2beaec45da49f98f68828e7e03d255353fdfad46bce923e33e1df596b1ff9006"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ac46252aa6959d30fdc9cd2fcf452b7a5cef819e6c67dcbb52f100d745c14dd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e044761cf4cfb631766973fb3c52223f6ca4cda28cbda41f336e680a2476b83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "45058cb8a135038dfc8aeace6bb66e82ae2cf527b4b8295d7da79dcaae9eda51"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6059692e0be93590385913af8da42c922350b6f7f7e94008b32e71b5e2426fd2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8efd10ab74dcfbaf7782589089ec89f06aac6be8a26df68ab5a3ff0259ba14a6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "abb0c9184a424579386dd143c9cdd3be88df6a476dd41e8c77646cc021425c8e"
+    sha256 cellar: :any_skip_relocation, ventura:        "46aaab32e627325e8fa0ad8c7cc3ce64cf22ede3cefb177eae3e68b05378f36c"
+    sha256 cellar: :any_skip_relocation, monterey:       "f96dda0371341abd1a4eceecfb1f9a13f44cd29a0bb1ba52c368114f1131c610"
+    sha256 cellar: :any_skip_relocation, big_sur:        "650f5ce89f808781cdbdb6a56d0a4b2c8a07f5f7c10891c54d664ecdca615440"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "806424b933601a36de82efb5124c047e74e078ec02cc11fcd247094424aa14b5"
   end
 
   # `rapidfuzz` requires `cmake` to build
@@ -28,11 +28,6 @@ class Poetry < Formula
 
   # `lockfile` is used directly by `poetry` but is not present as a direct dependency.
   # See https://github.com/python-poetry/poetry/pull/7169
-  resource "lockfile" do
-    url "https://files.pythonhosted.org/packages/17/47/72cb04a58a35ec495f96984dddb48232b551aafb95bde614605b754fe6f7/lockfile-0.12.2.tar.gz"
-    sha256 "6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799"
-  end
-
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
     sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
@@ -108,6 +103,11 @@ class Poetry < Formula
     sha256 "ad192263e2cdd5f12875dedc2da13534359a7e760e77f8d04b50968a821c2361"
   end
 
+  resource "lockfile" do
+    url "https://files.pythonhosted.org/packages/17/47/72cb04a58a35ec495f96984dddb48232b551aafb95bde614605b754fe6f7/lockfile-0.12.2.tar.gz"
+    sha256 "6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799"
+  end
+
   resource "more-itertools" do
     url "https://files.pythonhosted.org/packages/13/b3/397aa9668da8b1f0c307bc474608653d46122ae0563d1d32f60e24fa0cbd/more-itertools-9.0.0.tar.gz"
     sha256 "5a6257e40878ef0520b1803990e3e22303a41b5714006c32a3fd8304b26ea1ab"
@@ -164,8 +164,8 @@ class Poetry < Formula
   end
 
   resource "rapidfuzz" do
-    url "https://files.pythonhosted.org/packages/87/d4/4fcd1d0f6b702969f2d1f1068d2bc618f2a1e859c8f4881f523687b855bd/rapidfuzz-2.13.4.tar.gz"
-    sha256 "85f5e8667b8e6cb7687c86374c60b133abdc76b2af24455172388c5d7ab2787b"
+    url "https://files.pythonhosted.org/packages/cc/42/f3bde4d6e5711b5ba266dc66c66bc0659e7c2f2016f46d1927c76d40ad57/rapidfuzz-2.13.6.tar.gz"
+    sha256 "948445a054d9fb30a93597c325d8836232bd68e61443a88779a57702aa35a007"
   end
 
   resource "requests" do

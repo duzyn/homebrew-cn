@@ -1,8 +1,8 @@
 class Git < Formula
   desc "Distributed revision control system"
   homepage "https://git-scm.com"
-  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.38.2.tar.xz"
-  sha256 "115a1f8245cc67d4b1ac867047878b3130aa03d6acf22380b029239ed7170664"
+  url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.39.0.tar.xz"
+  sha256 "ba199b13fb5a99ca3dec917b0bd736bc0eb5a9df87737d435eddfdf10d69265b"
   license "GPL-2.0-only"
   head "https://github.com/git/git.git", branch: "master"
 
@@ -12,13 +12,13 @@ class Git < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "38c60a3af2005c26571576224e960247f5698d52ed4fa01205a947eaf7e1d1b1"
-    sha256 arm64_monterey: "9c212206f138fddaf2198e0a24dc4a046b35ac1460a0ac70b8f4870c50db6199"
-    sha256 arm64_big_sur:  "2c7f501fc34835360782358dee5e3be852379c708f94d42a875c2cd817b54b25"
-    sha256 ventura:        "cf4f1cc7b42f24dd881675a7dd5061479d3b8ee669256f0188c8679f48e9168c"
-    sha256 monterey:       "732874629baba05919e45f0877bb4f5e1dfe31d684a469323dd33816bbdd6d5a"
-    sha256 big_sur:        "1278e2a72d800c4904c6d93ac957820af6cdd74d9c25c2ef15859abd1a9d78c9"
-    sha256 x86_64_linux:   "ff2b9713ae528a72f3be95ce1f65697d180c39e0f41afd4c28dc33f79e9581d9"
+    sha256 arm64_ventura:  "008095cdb07f1bbb0020249e3f3077322eaad0f16e3fc9bc2214cfa991cc58ed"
+    sha256 arm64_monterey: "6b78bc16509bd6b15d0ffae0dbf6e87517a80c5d22b780775bd0f87048e1a43d"
+    sha256 arm64_big_sur:  "c982e453985bd084ed4881e19acd2b918469f10ad35d01b5179d2a7e8fad9b13"
+    sha256 ventura:        "f8e49ae6974d47ee1b7a3ed929ec5ff0524cca3f6bb92328a478a72019e7b24f"
+    sha256 monterey:       "c97012f77d833b2ef076557d3d042108c49f4e15207f3304f8e79e9bc0d2d4e6"
+    sha256 big_sur:        "bef4488835140c1aebb852a6bb2ba4ca119ad88c410891d5878958697a51d026"
+    sha256 x86_64_linux:   "d51a09cef4ca4b5f0cdb5995b4683e2492a7f62d57a783a8b1799c4e33913fe4"
   end
 
   depends_on "gettext"
@@ -34,13 +34,13 @@ class Git < Formula
   end
 
   resource "html" do
-    url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-htmldocs-2.38.0.tar.xz"
-    sha256 "704826a1bc8c80505f85658724f71be1a84373a784e8f982bdf60fcbb2d1d6ad"
+    url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-htmldocs-2.39.0.tar.xz"
+    sha256 "59dbbb0508854ca3e28859d01c225bbca1c90965a743e684cfe035cf45ed9c70"
   end
 
   resource "man" do
-    url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-manpages-2.38.0.tar.xz"
-    sha256 "4820d9056a8bfe0d54d48464b715da2e30212645ac4d7021f850d3c56136d6e3"
+    url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-manpages-2.39.0.tar.xz"
+    sha256 "7770f6d542cc34a2ccfaf02b82d7f9aefcd5d5156db847f36c218322671e9467"
   end
 
   resource "Net::SMTP::SSL" do
