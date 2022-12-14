@@ -1,8 +1,8 @@
 class Klavaro < Formula
   desc "Free touch typing tutor program"
   homepage "https://klavaro.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/klavaro/klavaro-3.13.tar.bz2?use_mirror=nchc"
-  sha256 "e8200b3e98c9a7d7acf1e846df294aeb488c081da9de38feaca0cc19311dcc7c"
+  url "https://downloads.sourceforge.net/project/klavaro/klavaro-3.14.tar.bz2?use_mirror=nchc"
+  sha256 "87187e49d301c510e6964098cdb612126bf030d2a875fd799eadcad3eae56dab"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,15 +11,13 @@ class Klavaro < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "c69147ab8fcd4e71a00eaf69084b2d2f3cc8aaa4090f80a3ff6fb3ce446b7d76"
-    sha256 arm64_monterey: "a961d4e3a5b19f56257c164d72795209975d95063710c2cca9bd01f2b33ca19c"
-    sha256 arm64_big_sur:  "f8134898ced1370ca151f5ed12042f5ea38a527f715369b6e59ebc7b1500d616"
-    sha256 ventura:        "372b9659f15b7984c9dcc9330c72cc6bdec43282f2a8fbc4997442ce8650a469"
-    sha256 monterey:       "0cecac2787231738ec7e647f32f06171118d243c941160049611de7cc7cb0c52"
-    sha256 big_sur:        "d6d1c7aaf96acb9061577df307bb98cb4d0b87e28b930d3a875b551d498d9f6e"
-    sha256 catalina:       "76b1fc9787963e805dfe796c68450265d129797867bc1ac13a66bd489514cd32"
-    sha256 mojave:         "886f52a4f91c189d2f5a3f9c68d2490842f0cb0d66f2d5d8b904b104c56fdf07"
-    sha256 x86_64_linux:   "37086fa81be9f3d2e3dc31036a72bcc635e9db942107a1f012ec1c6cf1bc0823"
+    sha256 arm64_ventura:  "23667d36263cc2dbd16c0be5a4628b0d5b9b21f0282bfa9a48c207fd713fc89a"
+    sha256 arm64_monterey: "d79e9d33e63f7bc74f5490e973cee657e7649069df4b4c0a557365ddcfce3899"
+    sha256 arm64_big_sur:  "9be15accb0fef930088244748470938306d6cd52c86335a5f4b149f79608ba3c"
+    sha256 ventura:        "8ab24479ec2c6b924c37d45605583e0f8f9a213a967ac2d28ad16a8ba1d159e5"
+    sha256 monterey:       "1f8df6b3585c1c5b11512917c3345ab63097fb0802c27007b5706ee06f190723"
+    sha256 big_sur:        "4ac2d5a091258fb5ae44d5883fc71f719446ff7df9e827b2b555b3bb7a850d77"
+    sha256 x86_64_linux:   "ad2be44442da47138dd950ba6bad4701ba7db850fc1304fa7ad93aa1bd7d7284"
   end
 
   depends_on "intltool" => :build

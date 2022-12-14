@@ -4,14 +4,16 @@ class Augeas < Formula
   license "LGPL-2.1-or-later"
   head "https://github.com/hercules-team/augeas.git", branch: "master"
 
+  # Remove stable block when patch is no longer needed.
   stable do
-    url "https://ghproxy.com/github.com/hercules-team/augeas/releases/download/release-1.13.0/augeas-1.13.0.tar.gz"
-    sha256 "5002f33f42365ab78be974609a0f3b76a4c277fc404ec79f516305cab5ce5de1"
+    url "https://ghproxy.com/github.com/hercules-team/augeas/releases/download/release-1.14.0/augeas-1.14.0.tar.gz"
+    sha256 "8c101759ca3d504bd1d805e70e2f615fa686af189dd7cf0529f71d855c087df1"
 
-    # Replace deprecated 'security_context_t' with 'char *'. Remove in the next release.
+    # Fix "fatal error: 'malloc.h' file not found".
+    # Remove when https://github.com/hercules-team/augeas/pull/792 is merged.
     patch do
-      url "https://github.com/hercules-team/augeas/commit/f38398a2d07028b892eac59449a35e1a3d645fac.patch?full_index=1"
-      sha256 "1697379e0676edf94346a3377a75c871d1d0d033e3a37a29d69ae66f6e57553a"
+      url "https://github.com/hercules-team/augeas/commit/6cc785a46f2c651a299549eab25c6476c39f3080.patch?full_index=1"
+      sha256 "754beea4f75e6ada6a6093a41f8071d18e067f9d60137b135a4188a6e3a80227"
     end
   end
 
@@ -22,14 +24,13 @@ class Augeas < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "916e1603688af06ca325d7ecf378f379c82e88f3712d015e0874a560103d47de"
-    sha256 arm64_monterey: "c2b38e9d3f4611a7d7c569ce62d19e35b6d9da3feb4706abddc27828fd4e2a09"
-    sha256 arm64_big_sur:  "64fd8945d6a7408664bad5acc707e587f9c54a78fe3e320c57f13bf456c61553"
-    sha256 ventura:        "b7b815ed1d01632344e3c77d7ab974115b1007958add8888edb44a5e9af7ccc3"
-    sha256 monterey:       "8978eb7d972b143ab12e895b3fc72a4e9a12bd980e02e37eb0dadba9977d8fcd"
-    sha256 big_sur:        "cb898760713b1cc45c6cfb24e8692e762037ca7d947b57d8d39fb89082681b7c"
-    sha256 catalina:       "e3b262dfad73f3b6efb01ff258a465f566fd451377f0bf3bbe37a99f57926427"
-    sha256 x86_64_linux:   "37c08a6a125569eb281a1a2812c44db90f529159418e9a0c5559697c634d2c65"
+    sha256 arm64_ventura:  "8efcca1e374d9d238c8ec4aad93269c62e64d7f604235a0ae73b068814c78814"
+    sha256 arm64_monterey: "9121d1ac0dc18a438172e5263887bda632350c43685a522218ca150d6a445bb3"
+    sha256 arm64_big_sur:  "95a3be7acb99bde6f6f9eb50409c33abbcc854b5b8478c818a1ef2701fb5ba3c"
+    sha256 ventura:        "df3ad97e0413003227700405470ad81d414800eb1ea742c6ba5d0c26feb5e254"
+    sha256 monterey:       "6590ef5711dade266f63cd4d97afe0c54e8b2e854380c498e5dd0a8f37f46379"
+    sha256 big_sur:        "aaed7f82bb2fc6b940f4068049945c452eba4017bdd87ea86ca5124800c007d2"
+    sha256 x86_64_linux:   "35c90b53f33210c6b1952673ed62f33be5f90cb0a280f96f95e8cb930c4696fa"
   end
 
   depends_on "autoconf" => :build

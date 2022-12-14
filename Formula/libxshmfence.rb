@@ -1,19 +1,18 @@
 class Libxshmfence < Formula
   desc "X.Org: Shared memory 'SyncFence' synchronization primitive"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libxshmfence-1.3.1.tar.xz"
-  sha256 "1129f95147f7bfe6052988a087f1b7cb7122283d2c47a7dbf7135ce0df69b4f8"
+  url "https://www.x.org/archive/individual/lib/libxshmfence-1.3.2.tar.xz"
+  sha256 "870df257bc40b126d91b5a8f1da6ca8a524555268c50b59c0acd1a27f361606f"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a28329811422f189228b3fb3edddc4db7fdb54265d933da3c2379b90f0ba7e88"
-    sha256 cellar: :any,                 arm64_monterey: "d54d02c984d1c3004dc80c6293a11a334074ef3ce84d5a411f3250bc9a8b22d2"
-    sha256 cellar: :any,                 arm64_big_sur:  "a20786f8e3b41c75c7a8f6ec72e135d6e8a4bedfa9a052174f80467fc4e18b77"
-    sha256 cellar: :any,                 ventura:        "daf1efe95074195c6d97cc4f4229d08e931391b201a7188caf18d48a9c57ec62"
-    sha256 cellar: :any,                 monterey:       "fb31054f7e6e05c95d9e06ce328471128fa536b8f154a6dd33aaa9eb804f1980"
-    sha256 cellar: :any,                 big_sur:        "2a0ad3f3f628be1aae3ba5b3fc9f467fd5d855c5e6187c21e315875ff65dc8d9"
-    sha256 cellar: :any,                 catalina:       "db84e2577b6d8ee05c841d8a779873a303da9e836be8afe0e1a8e3e18e777323"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d4a8107cc0119312c78821e27241616dca90e38c9ff26801b88e5b99d985bc7"
+    sha256 cellar: :any,                 arm64_ventura:  "9965e61e94b01b1b56db8f6c0d908e226133e0818fa06c45ea0089f499c746f6"
+    sha256 cellar: :any,                 arm64_monterey: "7b78f18eb800573284bf21013d554a84a89059de1dff8d2433debedcf8f07afc"
+    sha256 cellar: :any,                 arm64_big_sur:  "ae4ff0449a655fb0232a0e4050ebd219876e2e1e18d8e3af1bfe0a09bf7d3862"
+    sha256 cellar: :any,                 ventura:        "14444b0b9ca86f0e7e268ba20cd2f835ad988d0b4c1dd045e41ad7e847d0866a"
+    sha256 cellar: :any,                 monterey:       "e42af7c5bdd609cf576b788467eac1accfdbb229049005f0213216a408888b2f"
+    sha256 cellar: :any,                 big_sur:        "f115cf1d363821613850b45647ffe514d9682ff5cd853ad1cf9ce44f0c74933c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "531196f68924b7a5f887156766dbc04ae745e8315f6e41adbe812e1119bc6d20"
   end
 
   depends_on "pkg-config" => :build

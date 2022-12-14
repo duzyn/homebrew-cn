@@ -1,20 +1,19 @@
 class Fn < Formula
   desc "Command-line tool for the fn project"
   homepage "https://fnproject.io"
-  url "https://github.com/fnproject/cli/archive/0.6.22.tar.gz"
-  sha256 "40581ee36aed8c570ce5dff63ac3dc291b5c0c17dcb92ded54626157d9db702b"
+  url "https://github.com/fnproject/cli/archive/0.6.23.tar.gz"
+  sha256 "1f34eb5c1c43759a4d5a4de01fe850ade410a1b4c4e7d4d51e23910e2f978854"
   license "Apache-2.0"
   head "https://github.com/fnproject/cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed604b55ae49715482f78a62e9ffc1f9bc9d4ce8319e9fa309981d1b6f305e3e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5421d5d17008f4875e0ad4d668c8577e4fbf099361448fea87693e9ebef625c0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4df8321d69f919d23372426207b07fce0e702e8fa6d34014347cfdc121277d20"
-    sha256 cellar: :any_skip_relocation, ventura:        "f5ed8f1dede6bd2b914e538dc43cf7e38e4a344b2ed0daafd886bf6fe44165bb"
-    sha256 cellar: :any_skip_relocation, monterey:       "80db7dacc20937b4a32a46718a85d57f13468467bf4e1b3e4b4ccb86d1ca6faf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5903e71285bdbe6076501bce58562eb902dfa0371b19b196be021407182ef430"
-    sha256 cellar: :any_skip_relocation, catalina:       "67b518b567ea6a5b00d068693f6efb3b4aad5839296633e9124f5470ff15c657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac6f652d760870c91e44ce718cff8a08d43315f9c7f42e9de5c422109563602e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "459e3ccc7de4bb49f8e901fcd27a14cfd41e754d6867fc694124bf1038b7d657"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c5a73a2c61a782c491c472eef535f660d7eddfef12d788d4c644ae040eb4e013"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a7e5fac2037ebf083c484554a1aca56729b9a631e5e6db8cd2e0930e1179d708"
+    sha256 cellar: :any_skip_relocation, ventura:        "abcd61b594b462e75305596a99635b21545121e1221a5c78d527d93f3f43c905"
+    sha256 cellar: :any_skip_relocation, monterey:       "81ea4ec3ababd3e8f3473ee9876d5d360835352ccf969751b5fef9afc0946b21"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ec596a172d47796de2f76d1cbf45c844e791ee468fdf198e4e83eefea35ebeb3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e38836cae152077e69d2ddd9e232ab2f3a5b9e3bd3140a4c6cc83d1f7f3c6555"
   end
 
   # Bump to 1.18 on the next release, if possible.

@@ -4,20 +4,19 @@ class Cassandra < Formula
 
   desc "Eventually consistent, distributed key-value store"
   homepage "https://cassandra.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=cassandra/4.0.7/apache-cassandra-4.0.7-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/cassandra/4.0.7/apache-cassandra-4.0.7-bin.tar.gz"
-  sha256 "9a68e3943511ffcb26b971eaaabf5925b52e69994e398e285494d458eaae670e"
+  url "https://www.apache.org/dyn/closer.lua?path=cassandra/4.1.0/apache-cassandra-4.1.0-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/cassandra/4.1.0/apache-cassandra-4.1.0-bin.tar.gz"
+  sha256 "e4fd6ef4a9e32eb297886c4bf04b42a8c740864e1fe8cc93deb240d576d607ae"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "db53945550e0a2e0838c6d9e9d1d934088f81203d4befcdcffb5e6498a969a98"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8bbd031f90392e885ea405273095089b9fac33360ade72608ee744aa1f985475"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb18744b3e1dbb3d00d83a1cc9aad047a4799ecc3796e8fc954d27ecd1e0e157"
-    sha256 cellar: :any_skip_relocation, ventura:        "5998eb51ec00e6b9dc5f0d49b5c50d725c5ce58ea185cd3fa0c49321d153dfb4"
-    sha256 cellar: :any_skip_relocation, monterey:       "d8165cdb52880750272909883eb0fcc5fa4c6aa35759361ce027e24ad278c08b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c0cf55d9cadac0d31cc4e80cbe22a0a7859755e07521a4370410aa1f6d6cbb0b"
-    sha256 cellar: :any_skip_relocation, catalina:       "a5913bb8b78e2ee11341f3dbf39f9abfb29f548057179e4d63696dc6cb26ef97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebc82cc8f133829d2214d148b7f1801b8aa51e59c171f4c91d21daec8918c1ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dda2455a952b5c13eff5f8ed7d6e3fd12f8b473d0acf969eef529c01e7262159"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "26497667e88a297847fc70df9df523ca3dcf2e6bb52b3c8b48bb9f221bfa8446"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c670a228ea5298163efb99a3215476424802305e1ce0942901f11f08b9830fb"
+    sha256 cellar: :any_skip_relocation, ventura:        "4f0f7ff4b12546d0a3bc19cde3bcf1373506be98dc1ce5f8c6ebd2e130de7953"
+    sha256 cellar: :any_skip_relocation, monterey:       "a0d96a62ef5a3dfac4f3eda755519b35f83cc57db727ac102b4d92cba2ac4549"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e8575ba10cca5156a8ae1c83c0d10f3708567141b16b6363fa7fa693726afcaa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee0b557fcbe7fa1cc0a66c21abae6e8ba12e1593a006553cf024b1ca9dbcdaff"
   end
 
   depends_on "libcython" => :build
@@ -61,8 +60,8 @@ class Cassandra < Formula
     inreplace "conf/cassandra.yaml", "/var/lib/cassandra", var/"lib/cassandra"
     inreplace "conf/cassandra-env.sh", "/lib/", "/"
 
-    inreplace "bin/cassandra", "-Dcassandra.logdir\=$CASSANDRA_LOG_DIR",
-                               "-Dcassandra.logdir\=#{var}/log/cassandra"
+    inreplace "bin/cassandra", "-Dcassandra.logdir=$CASSANDRA_LOG_DIR",
+                               "-Dcassandra.logdir=#{var}/log/cassandra"
     inreplace "bin/cassandra.in.sh" do |s|
       s.gsub! "CASSANDRA_HOME=\"`dirname \"$0\"`/..\"",
               "CASSANDRA_HOME=\"#{libexec}\""
@@ -76,8 +75,8 @@ class Cassandra < Formula
       s.gsub! "JAVA_AGENT=\"$JAVA_AGENT -javaagent:$CASSANDRA_HOME/lib/jamm-",
               "JAVA_AGENT=\"$JAVA_AGENT -javaagent:$CASSANDRA_HOME/jamm-"
       # Storage path
-      s.gsub! "cassandra_storagedir\=\"$CASSANDRA_HOME/data\"",
-              "cassandra_storagedir\=\"#{var}/lib/cassandra\""
+      s.gsub! "cassandra_storagedir=\"$CASSANDRA_HOME/data\"",
+              "cassandra_storagedir=\"#{var}/lib/cassandra\""
 
       s.gsub! "#JAVA_HOME=/usr/local/jdk6",
               "JAVA_HOME=#{Language::Java.overridable_java_home_env("11")[:JAVA_HOME]}"
@@ -117,7 +116,7 @@ class Cassandra < Formula
       # Tools Jars are under tools folder
       s.gsub! "\"$CASSANDRA_HOME\"/tools/lib/*.jar", "\"$CASSANDRA_HOME\"/tools/*.jar"
       # Storage path
-      s.gsub! "cassandra_storagedir\=\"$CASSANDRA_HOME/data\"", "cassandra_storagedir\=\"#{var}/lib/cassandra\""
+      s.gsub! "cassandra_storagedir=\"$CASSANDRA_HOME/data\"", "cassandra_storagedir=\"#{var}/lib/cassandra\""
     end
 
     pkgshare.install [buildpath/"tools/bin/cassandra-tools.in.sh"]

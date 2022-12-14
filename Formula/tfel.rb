@@ -1,34 +1,25 @@
 class Tfel < Formula
   desc "Code generation tool dedicated to material knowledge for numerical mechanics"
   homepage "https://thelfer.github.io/tfel/web/index.html"
+  url "https://github.com/thelfer/tfel/archive/refs/tags/TFEL-4.1.0.tar.gz"
+  sha256 "7505c41da9df5fb3c281651ff29b58a18fd4d91b92f839322f0267269c5f1375"
   license "GPL-1.0-or-later"
   head "https://github.com/thelfer/tfel.git", using: :git, branch: "master"
 
-  stable do
-    url "https://github.com/thelfer/tfel/archive/refs/tags/TFEL-4.0.tar.gz"
-    sha256 "ed3fb2f59c6b8c9896606ef92276f81942433dd5f60d8130ba07c3af80b039e2"
-
-    # Fix CMake link Flags for bython bindings
-    patch do
-      url "https://ghproxy.com/github.com/thelfer/tfel/raw/fca68680750847fd56315664ecad19089bf9f0b7/patches/homebrew/tfel-4.0.0.patch"
-      sha256 "ef0b78b1c59d066afe67ee7d3054828008fe364020e5a9204f19a315fdc87e48"
-    end
-  end
-
   bottle do
-    rebuild 1
-    sha256 arm64_monterey: "b7313449606256872bc7447bb52d1f195411a078356fe48797ca2ffcb26e002c"
-    sha256 arm64_big_sur:  "8b51ed9cb27fba16427e79b7cdb4c9f306438a754a09ec76605199bbce040525"
-    sha256 monterey:       "653b115729926a849c04e3ab3596f175dfd498c437d2e3678b0ba6b1fea409fc"
-    sha256 big_sur:        "7a28c18787680efbbf2e69db3fac99229ef8874defee1653de5777e1b32744df"
-    sha256 catalina:       "e3448d18abc4bf873be71797e7a42ebf2269a0bdabe9c86e44d9fcbcc07f0479"
-    sha256 x86_64_linux:   "7035117ab603f7cf4c8e9fd7a5d0d1c67f0e5d4497fa718c50ca591d6c8f9d13"
+    sha256 arm64_ventura:  "730f69c7daf530581f01c87b5e8934f938ae4a3585fe11c7adb33160de2568aa"
+    sha256 arm64_monterey: "558bbbf8978f0fd1a81b672b1bfece19c5316dcb2dcf0a3a4bcbb5c2239d8bfe"
+    sha256 arm64_big_sur:  "72a86416e1e0f9046d76d48aaa4688b23bf99c17ade8c05c5d113cd225bf89f6"
+    sha256 ventura:        "5ad32922cad1b904726ba6689f5815d1100c0dbfc306afcfe5bb2ef9724143b0"
+    sha256 monterey:       "9334e2f6d1fd4f688947b3c408aae56ec98510501c8eab2cbb2f3fb5210ec090"
+    sha256 big_sur:        "9a4a31b1327e390840dc28eeba23284f4b1934f825194fc08975452489c00f58"
+    sha256 x86_64_linux:   "c7507b59585685bdc7375a20c6b5f21e8b112594e791cea3095edc8d539895ce"
   end
 
   depends_on "cmake" => :build
   depends_on "gcc" => :build
   depends_on "boost-python3"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   fails_with gcc: "5"
 
   def install

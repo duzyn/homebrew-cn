@@ -1,20 +1,19 @@
 class Starship < Formula
   desc "Cross-shell prompt for astronauts"
   homepage "https://starship.rs"
-  url "https://github.com/starship/starship/archive/v1.11.0.tar.gz"
-  sha256 "7b408ef8a2ab47d7a7d0e120889bf12c8f2a965796f8a027d8b2176287fdec6b"
+  url "https://github.com/starship/starship/archive/v1.12.0.tar.gz"
+  sha256 "748a0541009b0bee5f51b716d072f244d8d5cb3fb8d768519ed305494ea11e02"
   license "ISC"
   head "https://github.com/starship/starship.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e82c237024245b338dbf0f3c928a05331d660e1f7e34882bc02796c13b90dd54"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f74ee071e7bfe07eafa8669e5535f7f6779366ad80d03fe7609ebdd8338b4fc4"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1ca97b358ec38bc8ee0e7f969d737358452db909c819f9aeb9b24cb4c1acd904"
-    sha256 cellar: :any_skip_relocation, ventura:        "b2d3f5cf93491b77ee2f0a0646b25e4b871c25659ac414974f75eab2e46b4558"
-    sha256 cellar: :any_skip_relocation, monterey:       "0307c6c463623dc15883119240259c1938daced16c133329e9163c8544cf63d3"
-    sha256 cellar: :any_skip_relocation, big_sur:        "dbdebf730799d739164472dc738b11e38092600cb5c0ab5304ad73a86b8e3a3d"
-    sha256 cellar: :any_skip_relocation, catalina:       "1c30ef3224d2baed5bbfba4bad8ec7a6b329abcb0354d74ddd4c4d78a40d9a64"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4507d8939df5833d693b4b6cbbc14f721a973a56f99281723e276dbdc75deeec"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "01f950a875e7903eafde1bc29121e8f0d30e33a73f8ef514a21c63907c3a8b9c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ddafeedf0a4a3677a4abc46dd237879fabd1b449b4254418f1e8ea5fd19c180"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c57117968bda80a63bf9edf6b585418aae20fc45a23b23e0a6eebc958eff66e"
+    sha256 cellar: :any_skip_relocation, ventura:        "4ebc3aff8e3bf7edb0516ab404e320ecd26282671b79e8f4259e49c545b21769"
+    sha256 cellar: :any_skip_relocation, monterey:       "ed2c1d864d2097f92c5a329e2795839588437d78418f326c225d3554ab8aaa2c"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b57426a31e55cfde0bbe56211b9509974513d5283b51d8048448c883d136b10a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8bdd32cc58abd1cc4e3f532e33ce64231fe2d9611f344d49326851c07d0a932"
   end
 
   depends_on "cmake" => :build

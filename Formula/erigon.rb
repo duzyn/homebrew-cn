@@ -6,14 +6,20 @@ class Erigon < Formula
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later"]
   head "https://github.com/ledgerwatch/erigon.git", branch: "devel"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6c625da298616bd5a7993e1ea7104fd8308089d373d503a0372dc2749b742c7d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "21da5b03ae59058be8a1bd3750f6a3ab2b6a6b04a891fc267600e33600a24b68"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7d5508807c013aa60a598b916d46b292ca592cf29daef63fbf1fbac8e6f03551"
-    sha256 cellar: :any_skip_relocation, ventura:        "42d8216f8f41644254bec698bbc20168fce3467287c4310717b1992e35d1e09c"
-    sha256 cellar: :any_skip_relocation, monterey:       "a9c317c3c2015673c92c95c119134164dcd3b34924f8dff74cabada5cd5adf3d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "680b3a7fa4e6ccf78768b48110084afc336b1b7eda584cabad4826190f1bd94d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58b5f6e701cbe5ab6a8f24197f08a4b5ac901949af1d0eaee6a72de8882efb77"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "10259b11323d4a03801472efb747c94fa36fc642015ab3b7c22ad98315b35095"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d987f8e76b9ca723bed6d2a65515050ce95d5ad5814d9454041b651419d5e890"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e175e2c0c1c45ab7334c333f6417e83ab84703efdb7a192f140d0700d0cd948f"
+    sha256 cellar: :any_skip_relocation, ventura:        "3cb5e6dd313aecac3614989633f032da1eec8cf52dfd802d97554b5adddab6cc"
+    sha256 cellar: :any_skip_relocation, monterey:       "9b3c2829dd56ba0dc0b2ea80a6f51f4f269c1d85435acf070f3559ad7b6ad8e4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7a5d5a5e681352c193b944bf1e3719c492bc87a50c510f425e3beba3e4ce504a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afa1dcbe5c6241d00375beab4979b23e220d1f543d3801619196dff3c26feef2"
   end
 
   depends_on "gcc" => :build

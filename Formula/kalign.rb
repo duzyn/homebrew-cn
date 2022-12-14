@@ -1,19 +1,18 @@
 class Kalign < Formula
   desc "Fast multiple sequence alignment program for biological sequences"
   homepage "https://github.com/TimoLassmann/kalign"
-  url "https://github.com/TimoLassmann/kalign/archive/v3.3.4.tar.gz"
-  sha256 "f22fa45cbc5c81586d515ee6a77fdbb3704139dc8fdef83cc5f1596aafb59c7f"
+  url "https://github.com/TimoLassmann/kalign/archive/v3.3.5.tar.gz"
+  sha256 "75f3a127d2a9eef1eafd931fb0785736eb3f82826be506e7edd00daf1ba26212"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a6b7cf192e20ecfe822900fc1cdb71e9bf559ef4c2808b6b1f7b0e2329ce3669"
-    sha256 cellar: :any,                 arm64_monterey: "0183c78ad8d561035739573433b4b139c8695c85caed1af9430a1ec8731e9a32"
-    sha256 cellar: :any,                 arm64_big_sur:  "8166c12b058ab9463b2b86c582493d719515fbd6b732a0f713c7f55fc6fd1c1b"
-    sha256 cellar: :any,                 ventura:        "cab1cd3183cdeb5b0462643d8325b4641ebce6c3950479ac38cf9e48ab2acb58"
-    sha256 cellar: :any,                 monterey:       "fe3dc31a53bfae01ee41106653f41428db61a797822ff108ce5b4379cc9709a2"
-    sha256 cellar: :any,                 big_sur:        "7616559bef1a121f72152cfefc55a6e96e54bf435df093d6653d082ed7d474ac"
-    sha256 cellar: :any,                 catalina:       "3f5c667d8ef7cc9d042691c85756d049edc531807f371c80b6bb3fed89db853a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3feb15659276f132a080cd0e7b638bcb1d9f6943e08c9b087d6d91195c8538ef"
+    sha256 cellar: :any,                 arm64_ventura:  "5635f39d21c03d166f1f2b603618772cfbf40b5ef868ff819992d25ffc0540be"
+    sha256 cellar: :any,                 arm64_monterey: "d2834f77050ed2916a4e52b62453c600db111bcf9f4dc5170ae0a0b7bf59ff2d"
+    sha256 cellar: :any,                 arm64_big_sur:  "b34f64c5649ab5d5f72f8575f321444576e07012de69ce4d4c8d2f962c75189d"
+    sha256 cellar: :any,                 ventura:        "0f376ff405014200846681aeff10fbee9d65b00716cbc9cc7d655bd271b2a78d"
+    sha256 cellar: :any,                 monterey:       "01494d9ee7590e523f0de5159c556ff10bd98c03694920d1097e1dc42caaf695"
+    sha256 cellar: :any,                 big_sur:        "c71ad33602a96d843159ce93f7978a2cd274172eca84643a1ee35808e402c2c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a5c4aa4f551894d47d61203c727d204bfc4d7c246cd1b050f6fb04d1e950906"
   end
 
   depends_on "cmake" => :build

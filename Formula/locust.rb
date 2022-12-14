@@ -3,18 +3,18 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/71/57/5f4fe02ce9af68afecf734ac64086a0e191f386831b9ae765a71c088e477/locust-2.13.2.tar.gz"
-  sha256 "fbacb26dbc7fdb39f94e5f0e618a0ae6d9e0412446411ba5a30067cdf078fe05"
+  url "https://files.pythonhosted.org/packages/44/a0/66e91ca68dc199ce5fb571419bdd121151c2fe0159ef43e485582738b838/locust-2.14.0.tar.gz"
+  sha256 "4d558153594c3a5b4d59d8451e03a442b4b9d4c65137d5767c3575d3a1c16fcb"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bbe7c6039c6353bd3badbdeed1fcd5c3dcabcb251223b9c25303d0e7345dd57d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c4ed6798cd4aff34e35c267df1e6411510878e986b85174d7f80009e191d39db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a34346bda555c3704896fc3108ce3f1e4064628aa11d206afc52abe8bbae16d"
-    sha256 cellar: :any_skip_relocation, ventura:        "df3a540dc234b6825283c377a61d991059011a5785c1b73c2030a9cb272e936b"
-    sha256 cellar: :any_skip_relocation, monterey:       "70bb9355f023c5173ad7bcc4b3cccba4e2155c7de38a60ac555c22252b8a3008"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8ad15d4f3c438ad9dae032bced8fe43b2cbbf6ab273dabd935b82365ee343620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9dbfc139c1b56ff2edc4159745a47d096c8e9cf287e27455cc27263c8616de3e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8d5d57bbf2597da9a1bb1c21179807de720168481e8ebc95d938d9b3403c8bc7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "159c2c695b9e1f608073cca444518508048088a9b64cae98a97e50f68dbf7a9a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8deb23f0b54c8b241a17c7e730f158e402ecd631a5f70476a609ddf08b04e9bb"
+    sha256 cellar: :any_skip_relocation, ventura:        "e3cb027c1b3e0aa19f3fe4679ab5944de3d482fb318c9c18f3b5444da621a442"
+    sha256 cellar: :any_skip_relocation, monterey:       "4fbddf81fce9f8039a8f177eb95869a1725412fa635ce5fdd784d173cc24027f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "99aa78383eae1a95005a201f1c467e4e406b89387998a21c573e2a6d3fed43c2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f1abfdd87a4dea1d9b9011dfe2c3da01fdb0875c77afdcae5f19bae8fac3703"
   end
 
   depends_on "python-typing-extensions"

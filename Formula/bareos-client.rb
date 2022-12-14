@@ -1,8 +1,8 @@
 class BareosClient < Formula
   desc "Client for Bareos (Backup Archiving REcovery Open Sourced)"
   homepage "https://www.bareos.org/"
-  url "https://github.com/bareos/bareos/archive/Release/21.1.5.tar.gz"
-  sha256 "2bdae1c7b0667e49b62cea236c96c108a5b663b379170ab273a96f07494b01f0"
+  url "https://github.com/bareos/bareos/archive/Release/21.1.6.tar.gz"
+  sha256 "da883c7d8ded422dfc8fd9ab8467c3d79faf0d9b367328de7860ab85e1507172"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -11,14 +11,13 @@ class BareosClient < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "904e5300c5033605ca9386b4d64f31a0f65a6bf8fe52cdae5afcc5abc621cf8e"
-    sha256 cellar: :any, arm64_monterey: "2eb590149448bc26586d83bae3005b40e88296f6e0dc4b58b45bcc4c8e578071"
-    sha256 cellar: :any, arm64_big_sur:  "7c33ac81be7b4a6737a15c73ded062b6c50cd30268e2a1aa71a4c894e07f4ac7"
-    sha256 cellar: :any, ventura:        "974c8e22d4c88a2c44020ab6d32c810f32b9f185f85cdab5f46e135c97a0a5be"
-    sha256 cellar: :any, monterey:       "5c29931f6e4ba576f88c899b0b4212a7c6842cf5ecbe4d9d9122facb5434ea43"
-    sha256 cellar: :any, big_sur:        "5581dd3a339e743cf1487e2799a1f55747139fa2fa932c72f1f93f5bbaa2e6ff"
-    sha256 cellar: :any, catalina:       "4197a24939fda5fcbff4b1b3843d82673b42b524d87cd4a096be40238e25c429"
-    sha256               x86_64_linux:   "7faf4a5e8e663dc928cf07ebdb090e433f2729b1404a7a0ca929b07609920e66"
+    sha256 cellar: :any, arm64_ventura:  "6a7c8eb1e58e66920d4f3fd61261979452ef3d77d6d1f301b4d60c9693ea5406"
+    sha256 cellar: :any, arm64_monterey: "ee1e7a11d5a1baf0349ded5e412a8d1b4bd8344e11d507d2a39cc6c43fdda849"
+    sha256 cellar: :any, arm64_big_sur:  "f1ccf5e63e388372fad315f56427ed49ecb9110636d5437253907984a9ce650d"
+    sha256 cellar: :any, ventura:        "f0c9c7a88f80433a6d3464580a550982d7893623b4191149d6f8ff2b536cbd8d"
+    sha256 cellar: :any, monterey:       "6f9388b0b0bd05562ce6586ccb1af830d386b62447ae07f5a6f63b48f72c4dfb"
+    sha256 cellar: :any, big_sur:        "729711ab587ccd5342eba3fd5e6d76bab59aef3a8cd85cf8f4ed2124904e90ea"
+    sha256               x86_64_linux:   "758ec8851a851efd5e8c7762ee6ee4e80460143a152c67b8e4b5cdc66d0c28e0"
   end
 
   depends_on "cmake" => :build

@@ -1,19 +1,18 @@
 class Logrotate < Formula
   desc "Rotates, compresses, and mails system logs"
   homepage "https://github.com/logrotate/logrotate"
-  url "https://ghproxy.com/github.com/logrotate/logrotate/releases/download/3.20.1/logrotate-3.20.1.tar.xz"
-  sha256 "742f6d6e18eceffa49a4bacd933686d3e42931cfccfb694d7f6369b704e5d094"
+  url "https://ghproxy.com/github.com/logrotate/logrotate/releases/download/3.21.0/logrotate-3.21.0.tar.xz"
+  sha256 "8fa12015e3b8415c121fc9c0ca53aa872f7b0702f543afda7e32b6c4900f6516"
   license "GPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3e71062bd2782798ede332160421dec7881cbaff5bcfd8378def329908cebad9"
-    sha256 cellar: :any,                 arm64_monterey: "20bb6473a71d54801b2d141f8bb5fd57211bc4f4df3ec9e1d5f4b3c650a33cd2"
-    sha256 cellar: :any,                 arm64_big_sur:  "333fd71f9f463920a1a76f04cfdb700563477168d25675237a1863ec5fae8727"
-    sha256 cellar: :any,                 ventura:        "5d0ecdbd31094309515e8cfa92c342abbf3be4be8cdf680fcfe05979e44e9f9e"
-    sha256 cellar: :any,                 monterey:       "91cd5a2ed4988f3de33a607d22b77c4f629aba32b550810c4e5f6956a355fe39"
-    sha256 cellar: :any,                 big_sur:        "7fe8e0c87218bf3b58125ffea6278287d586855663c73a20ca8fa07d4d22737f"
-    sha256 cellar: :any,                 catalina:       "fded0c8e4a465b9fbed0f83bb371f3b3d950c75ab0e9bb786591455f4401ef05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a3d7d0e82594615a2fd4c0912aba1fee56fde87477a155054e771ae25cd5eeb"
+    sha256 cellar: :any,                 arm64_ventura:  "8e7e4ceaea1356aae5339c4b73e30357f2b5b7f2cd7885d088512e4424d587e6"
+    sha256 cellar: :any,                 arm64_monterey: "69e5e0b7e048425a9f65032bed75319417cffd44e5139240de34a0186e217adf"
+    sha256 cellar: :any,                 arm64_big_sur:  "412184f46ae0eb6a4c15c81349cccdfd1da979faa083aa21d72a9662198be08f"
+    sha256 cellar: :any,                 ventura:        "bf4b7d1163c6506ea22cc96da7c830cf1fb7b7a9f5e5c2fe2f0373fae9d2ad99"
+    sha256 cellar: :any,                 monterey:       "6e7b959f377ef96a40b1e25f8bf15a8aa0f05cde1d28e36ef2890d3d8239ef50"
+    sha256 cellar: :any,                 big_sur:        "58a2d05ffa4b5350d1f9985aeda51a1db40040c5d845428820c0c205313547c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f471902687bec2d0e8ed417300938568118d9c86a5f0535f837bbb6e67b30ca"
   end
 
   depends_on "popt"

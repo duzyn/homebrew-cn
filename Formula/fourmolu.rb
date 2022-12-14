@@ -1,19 +1,19 @@
 class Fourmolu < Formula
   desc "Formatter for Haskell source code"
   homepage "https://github.com/fourmolu/fourmolu"
-  url "https://github.com/fourmolu/fourmolu/archive/v0.10.0.0.tar.gz"
-  sha256 "e0daa1cd173fa18aa248bc181c50be1ffd7b869388e075d029a671fe9b48745f"
+  url "https://github.com/fourmolu/fourmolu/archive/v0.10.1.0.tar.gz"
+  sha256 "71adc64cf398cdab3b55310c5d2cdb2e6c5970d63581c28b0c3d8fc49ac45eb7"
   license "BSD-3-Clause"
   head "https://github.com/fourmolu/fourmolu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0f156016307a109109dd829e4f7f5f241208c6faa8fa51a33ad7efdee26cc16a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "724dc5c416a1961bc8d4444bf56115e1a6da2dde912205c89ebe41984a732a91"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0dc70433e6758fe2c22523f0d90bc326ee293e3a1e2624b3d14105bbf11db6e4"
-    sha256 cellar: :any_skip_relocation, ventura:        "9eb3b18d545d8e5e67dfa18b4a9a18a8cbf3413483c50c74dd5ad92fc6d0fa64"
-    sha256 cellar: :any_skip_relocation, monterey:       "670e7a6628871e02651b683a3ea634ac359891fd1cb887363575391988948865"
-    sha256 cellar: :any_skip_relocation, big_sur:        "86226298a955d31d459b345663c8b163c54699c37cf79c58f752e03ac665e8c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49754c69be237ccd781ebb9179c063639d875d78b5b2a437f390d82d86311797"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "45ebfa5b2c245b794b4e228e5a0518e8bc2fb39690b977e562b460e625785bea"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "622dfe781455e72efbd2e0b08310cfeb91a63a541b5f8ff2dc126cca7bb64b1e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "021666b7a375c7478f0fa6f112b55661243036e5cf286bc12d861e57c0da340f"
+    sha256 cellar: :any_skip_relocation, ventura:        "dbf14112d24e53b7bc7ebf9330ede1484d9323d37f5e3a983f52e3dab9fc70b9"
+    sha256 cellar: :any_skip_relocation, monterey:       "04c6f18f3afd744ab8bc2eaf5ae97013fa1100818f09082f4b5bec4a2cd1d192"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0fcd3f3ba0b2dcb18d8839143d7e59cdfd51d2b6b17eeaac013e1c14e59691bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4eb1f8ea82f1ecaad4240f6b420c3854ca25550e3d24347c0cce61188f04a8d"
   end
 
   depends_on "cabal-install" => :build
