@@ -1,19 +1,18 @@
 class Proteinortho < Formula
   desc "Detecting orthologous genes within different species"
   homepage "https://gitlab.com/paulklemm_PHD/proteinortho"
-  url "https://gitlab.com/paulklemm_PHD/proteinortho/-/archive/v6.1.5/proteinortho-v6.1.5.tar.gz"
-  sha256 "cf3b368ff73a7290f318081d37d9125eeb61a59507608814b8ae9be5736969cc"
+  url "https://gitlab.com/paulklemm_PHD/proteinortho/-/archive/v6.1.6/proteinortho-v6.1.6.tar.gz"
+  sha256 "a533817ce99ce471bce567974090a44a5281055c3aef18e90cb4425d5a877e85"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "723c844cf90ff27b0971d802f3c55bbf7e4600dc4139581db590ca04369b3e00"
-    sha256 cellar: :any,                 arm64_monterey: "9444ac857148f2f72faeefb4db23ad78c1cd85e91a17782abd68ef7dce8df640"
-    sha256 cellar: :any,                 arm64_big_sur:  "49ef58ef5ca0b8883740bb64a7a908ac61dd3ece17bf96bed7b1b089d417a517"
-    sha256 cellar: :any,                 ventura:        "81906bbfacf0b35f1de685ec623876e52e535c76047402fbd459af79c35e1774"
-    sha256 cellar: :any,                 monterey:       "cfa570a4a528a007840fffee9a996f6ab203fa88c5a245528138e91bd5e3db4b"
-    sha256 cellar: :any,                 big_sur:        "ca69cd32603ac5dbdd1309235ecc3033bf7d2b9022d8328d01754eeb68a7f253"
-    sha256 cellar: :any,                 catalina:       "8732e9696cac961b92f0e9e747b3f8332cf4484e2aa376af221a48f4d6f4a1cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2c9241deb186555e21db7a02b92dd7fa764eee761d8162d3262ddd2da7e8a83"
+    sha256 cellar: :any,                 arm64_ventura:  "709f0a0e8cfb46bad2b5f961cc3cfc3e0f7accedaa56d2d2e5afb7929a8f4093"
+    sha256 cellar: :any,                 arm64_monterey: "1be98247696cd02ccef82e717344de1c71f660db2c45cb844a241af70ebae469"
+    sha256 cellar: :any,                 arm64_big_sur:  "8788f84e6bd69759da988fa7d6988bdd3682fe706173ccd1f320d271dce387ce"
+    sha256 cellar: :any,                 ventura:        "4b62c7928b74008decf7ce0836ffcf61f5f6549d53b29f65855dbef70453d766"
+    sha256 cellar: :any,                 monterey:       "a674f6722c9507cd7648c53e9e4f5221aabfe36643dcd91e7cc6a65cadfa3b3c"
+    sha256 cellar: :any,                 big_sur:        "8b97332ab776d0f3c38c5db593ad36b1f88fde442d06d695d2c085db676d9975"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d767277c5f300d897dcefc8c5c381aecf5fd58012f981a7a7cfd7fe01d95a22"
   end
 
   depends_on "diamond"

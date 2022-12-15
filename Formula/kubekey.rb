@@ -2,19 +2,19 @@ class Kubekey < Formula
   desc "Installer for Kubernetes and / or KubeSphere, and related cloud-native add-ons"
   homepage "https://kubesphere.io"
   url "https://github.com/kubesphere/kubekey.git",
-      tag:      "v3.0.3",
-      revision: "fab5588dc6aa05d9b58778a8b355e049794f35d2"
+      tag:      "v3.0.4",
+      revision: "f34bf693b4c1770a9fd51c58b5c1ad85e9664f95"
   license "Apache-2.0"
   head "https://github.com/kubesphere/kubekey.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2c76a3b632ed321f3fc5dc35ed165693cb636a343bcd911aaef7411c0dec0f68"
-    sha256 cellar: :any,                 arm64_monterey: "7a5790624f7c35548ba426c896338db85e6531b57247161a6992d8b6354888d0"
-    sha256 cellar: :any,                 arm64_big_sur:  "25b5b81aa248c5ade8c198121cf9bcbe69239115b448f4b7c3731297e537ae0b"
-    sha256 cellar: :any,                 ventura:        "4d5ce097445d64b926c5e5d93229ecbaae548f8fdb42f1ea3497337807a30208"
-    sha256 cellar: :any,                 monterey:       "4de166ff5347486785e8000f40fcb538d09fed78fd98c3ea519509a11918dae7"
-    sha256 cellar: :any,                 big_sur:        "d19cecc274ea64fb7e3d425972420b88825803f72d5cd77974596db44dca7bd7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7e33c93056bea89a7fcf6429a8a9780ee08bf7a728573786f7a930d1bc1e3b8"
+    sha256 cellar: :any,                 arm64_ventura:  "0b98396ee5723c9cc67b703339e0b203b3f27345898d6e605c46d314fc409126"
+    sha256 cellar: :any,                 arm64_monterey: "82ed717f6fb1ebab98692d8123d2bc75e8f2c0e3df88e959c82713869883da1c"
+    sha256 cellar: :any,                 arm64_big_sur:  "2b455e13c17ef7381b7dafedfcd4edf41bb7de55aa802e87121899c2b7ed23fb"
+    sha256 cellar: :any,                 ventura:        "f7989fa2c9a39761351a0c9dc17541d2fc5f09a6fd8d61dec56f153f6fdf480d"
+    sha256 cellar: :any,                 monterey:       "299e3eafe45478f913d1c3997538ecbc6e158756c21819e8c212ce0595d01aa6"
+    sha256 cellar: :any,                 big_sur:        "d426aa8b3967568e99ac4798265bb9f751921bccbf343585a41deac8d5285b89"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8f979f4f3d1aa756c8071af761be6a6a60e7ce02c6592994723768df1d8bb97"
   end
 
   depends_on "go" => :build

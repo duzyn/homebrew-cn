@@ -3,19 +3,18 @@ class Sqlfluff < Formula
 
   desc "SQL linter and auto-formatter for Humans"
   homepage "https://docs.sqlfluff.com/"
-  url "https://files.pythonhosted.org/packages/d4/97/b89f0067ec68790efd3c17407f573f5ad4d05a953984049689f1f51c8fbb/sqlfluff-1.4.2.tar.gz"
-  sha256 "6182c8523b46b133bd4826462070fdcf72349e45906ad755813fb5b0f6cdcb4b"
+  url "https://files.pythonhosted.org/packages/99/11/5b6e292f842d03ce6eb0cb0b1d3b084658b040b5d7e3fb8d2633aa5dbcde/sqlfluff-1.4.3.tar.gz"
+  sha256 "566587d3475b80c88db6d5b202fa96b87c3bfb3d3740d47c02a81c3971f855f3"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3d2a28fde40ba35199b6e4d2333a1d49924faca4b8d1e3e5d55f7c7eaa9418c1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fcb11ad878981d30adf63dcf5531c25bdc39ef747140f20a9e2cf9b1b75e828b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "73fd229641306e2b858a60a597cd715216791613ef099a1cb44aaf10b38d2db6"
-    sha256 cellar: :any_skip_relocation, ventura:        "d45056eb03ddbbc378b7a420b0c9ef876e46dc01bce0347576fca326f585eaf6"
-    sha256 cellar: :any_skip_relocation, monterey:       "97904fb1f623d417a9efa340c7e08d41dcc0419bc8d0d3a4d0b1c37f4e049e88"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a6d414694a3c30990f8d6afa454d53cd4be4d8c5d50ca7f07324a84ad071aa2b"
-    sha256 cellar: :any_skip_relocation, catalina:       "0ca4d205416fc5e3093a0a8472b6be7e864926865a9731b2078d908c711d10d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6def3528dad5757057246d3c5085893340b47100a3afc6edeb8eceef942075b7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9e3798224a8f100ccc5ec4d445debb2b547e89a228a0920092891674755bf41f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7dc5fb7992ca5f7f7550799e50f8d5b2a0fac1a2e45d831cc8f89a86307923ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00680a8719aa3542c832472da2f91f4185e5c9745e6f9c4f0dbcf721f02f4e4f"
+    sha256 cellar: :any_skip_relocation, ventura:        "01c0d9bed1d334c114c2ebba8afd34097ac312c2eb6e6194dc49a3b7d6321349"
+    sha256 cellar: :any_skip_relocation, monterey:       "696a5f9914ee681333de511ddf081e0ccd99778679bd7bbb00a06a127efc5032"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2615306737cc2885270f664286253a598806be916295b5481759f78dc3d1eb6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "771641708a8f47f93193636e401724a299d3f7b0801a5cc91c01f1cf3f4bf4ca"
   end
 
   depends_on "pygments"
@@ -34,8 +33,8 @@ class Sqlfluff < Formula
   end
 
   resource "chardet" do
-    url "https://files.pythonhosted.org/packages/31/a2/12c090713b3d0e141f367236d3a8bdc3e5fca0d83ff3647af4892c16c205/chardet-5.0.0.tar.gz"
-    sha256 "0368df2bfd78b5fc20572bb4e9bb7fb53e2c094f60ae9993339e8671d0afb8aa"
+    url "https://files.pythonhosted.org/packages/41/32/cdc91dcf83849c7385bf8e2a5693d87376536ed000807fa07f5eab33430d/chardet-5.1.0.tar.gz"
+    sha256 "0d62712b956bc154f85fb0a266e2a3c5913c2967e00348701b32411d6def31e5"
   end
 
   resource "click" do
@@ -49,13 +48,8 @@ class Sqlfluff < Formula
   end
 
   resource "diff-cover" do
-    url "https://files.pythonhosted.org/packages/d1/4d/8557aab5641b8a524a83b3515f9a49128a4215d06712ebc4132f49d5b4d4/diff_cover-7.0.1.tar.gz"
-    sha256 "69258355daf8276057a92e42cec52594ad8cfe7dd505d6f0e56fe440bc4418d0"
-  end
-
-  resource "exceptiongroup" do
-    url "https://files.pythonhosted.org/packages/13/55/43ff6658a50a7f722d2f904810b42514c23a5d649d8a5d890cdc16b617de/exceptiongroup-1.0.1.tar.gz"
-    sha256 "73866f7f842ede6cb1daa42c4af078e2035e5f7607f0e2c762cc51bb31bbe7b2"
+    url "https://files.pythonhosted.org/packages/42/d0/0b8207a228d70d608e8bfeb66f02740f9f6545cb8d44d347859e26243ba0/diff_cover-7.3.0.tar.gz"
+    sha256 "a9b1f2bbd14962cd5279d7358a3ba8d726b9a6cc03dbf409f89cc2076a424234"
   end
 
   resource "iniconfig" do
@@ -74,23 +68,18 @@ class Sqlfluff < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
+    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
+    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
   end
 
   resource "pathspec" do
-    url "https://files.pythonhosted.org/packages/a2/29/959c72e1a6c3c25eaa46b9bfcc7fd401f65af83163d4796af09272c83c8a/pathspec-0.10.2.tar.gz"
-    sha256 "8f6bf73e5758fd365ef5d58ce09ac7c27d2833a8d7da51712eac6e27e35141b0"
+    url "https://files.pythonhosted.org/packages/32/1a/6baf904503c3e943cae9605c9c88a43b964dea5b59785cf956091b341b08/pathspec-0.10.3.tar.gz"
+    sha256 "56200de4077d9d0791465aa9095a01d421861e405b5096955051deefd697d6f6"
   end
 
   resource "pluggy" do
     url "https://files.pythonhosted.org/packages/a1/16/db2d7de3474b6e37cbb9c008965ee63835bba517e22cdb8c35b5116b5ce1/pluggy-1.0.0.tar.gz"
     sha256 "4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"
-  end
-
-  resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
   resource "pytest" do
@@ -111,11 +100,6 @@ class Sqlfluff < Formula
   resource "toml" do
     url "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz"
     sha256 "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
-  end
-
-  resource "tomli" do
-    url "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz"
-    sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
   end
 
   resource "tqdm" do

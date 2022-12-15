@@ -1,19 +1,18 @@
 class GitXargs < Formula
   desc "CLI for making updates across multiple Github repositories with a single command"
   homepage "https://github.com/gruntwork-io/git-xargs"
-  url "https://github.com/gruntwork-io/git-xargs/archive/v0.1.2.tar.gz"
-  sha256 "4c72733190db0b1bc07677384e0b8e99f97b21a43211cbb7ab25d407e72795bb"
+  url "https://github.com/gruntwork-io/git-xargs/archive/v0.1.3.tar.gz"
+  sha256 "f9347d4634b43f8fe10d76cce7a62faefacff945fcd6759929657ec03d105fb9"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a91a6466ad070fc69f12a1d668e247f6f188a8f81be279c24e1faf920fb21186"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "65ac686c223cf8e2a017bbae360e49a19bf718a73ad224a3e8461838c5bc9993"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3afe28990642017552b421f0cc4db21052d11e08946d88fb7d82ad940f9e524e"
-    sha256 cellar: :any_skip_relocation, ventura:        "523ccc420d00b80b4020ca1cdec5da5302f0c8c367aa124a766214cab5a3d6c6"
-    sha256 cellar: :any_skip_relocation, monterey:       "dfab7b1158e46ae606493165040a902d4157e4df3417974309915067c9404d27"
-    sha256 cellar: :any_skip_relocation, big_sur:        "587dbaa57efeb4c3a28a8b3d274dbbef2cdbcd423dbb59db880386d5742e51cb"
-    sha256 cellar: :any_skip_relocation, catalina:       "a6f32d12b1c6096404d33ab66528b0d6beebf2a69d94c422baaafe0d27d3685e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6ded4e7469bf3c94622ff26f37955b15ba3f29cf96e89f64a47eaef4e0cf1f4e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c63f00da0e78c9c31b52c0ebaa68187d2001029acae87dc38cca60a0e38834b3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "28bfffc04a13d6749e680557007482bcf1d402da18961024831fef1ff7680c6f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cf67eda7ec926ef5365b82684c384a62a6130c93e8e965181eeb128b2193439e"
+    sha256 cellar: :any_skip_relocation, ventura:        "edb5f7e8472c29ab90bb606e68a91cf2c63ab676fb677cc43486a089210cdf66"
+    sha256 cellar: :any_skip_relocation, monterey:       "91f99afbeeeeceb77ec41080c24056c1ffcd78c8a19b874864a1c6c6af4a3d9e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "628461a8b30a425856d1d5741faf5354afbf0b619ee2815f64c017fd6e295695"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01ee6428e1f7002b89bda7c11261cb4753ca41e9279ee449b9dd0d7c69ebfa4a"
   end
 
   depends_on "go" => :build

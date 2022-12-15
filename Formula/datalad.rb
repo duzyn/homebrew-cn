@@ -3,19 +3,18 @@ class Datalad < Formula
 
   desc "Data distribution geared toward scientific datasets"
   homepage "https://www.datalad.org"
-  url "https://files.pythonhosted.org/packages/95/ff/0fb13801bf41f60c76611445758f654e2a6344aadc9da8ef580269d5fef7/datalad-0.17.9.tar.gz"
-  sha256 "1044136cb522c8bfa02d126b61832451cd373a7d66f3a59150c5c5a685808f52"
+  url "https://files.pythonhosted.org/packages/f6/04/e16908fd12255994bcd7bcba84d747e70a6601862d02b15de412781b8fa4/datalad-0.17.10.tar.gz"
+  sha256 "cd0ebf3ec9b16d2ddebf3909bc99ff021ec0228d5609d4d4c3d58a63226c5052"
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "72b86d7f7dd57f5fc771d57b14b9a689aecf44662eb41e3751b424d8ffba669c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac982d7cb0172fa468971340dbec0b2670cac4666bd51c0cec159331e45e397c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8867f3cd456d13d6731563da0d54d63ebd2c48c5347bdd61621b9de7b72dcfac"
-    sha256 cellar: :any_skip_relocation, ventura:        "f6608dc552c7684f0017b4be7e30429783bddb67f1eac57ea9785fbdd379be37"
-    sha256 cellar: :any_skip_relocation, monterey:       "607e1657802323dd6ad8c6fd078f5634870c872168b93efdb1a132bb55b3d419"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3f742e644a34816f706bc59a34cab5e0d7eceb9627e4338b6112c2b9a0cee49d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54a83f26e184337ec85f83bf5742c38bb82f0178afa1f1495181f458159823e2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "809547150ab04373fe876ddf1b580450a630e9d1b0839cfc638debc19bdc3fb7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c076367cec49e295980c0e5f878ae83d4c832992a22225202aaccacf2e697733"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d920dc855dc744c8220b596d24fdaba00e91fc89df65e44a3d2b91d0d0d5db73"
+    sha256 cellar: :any_skip_relocation, ventura:        "2ee3fb4f4567e0ac06fb67947c8cf5765e04b7478f18a563cd893a7b6b2c4ac5"
+    sha256 cellar: :any_skip_relocation, monterey:       "470aa54415c1f5d4f19b60f9c9a2bc2d7143b0fd8f64fd68f5e84cf05ccaa657"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3f71c58c0d9814a320bbbfde337f0dd0a0cd2bbf294ddca85c00414b45885651"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "161400fce7718822d3177af899fbff9880a928096e7aa3000432b7cea23d417a"
   end
 
   depends_on "rust" => :build # for cryptography

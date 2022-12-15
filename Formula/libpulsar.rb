@@ -1,20 +1,19 @@
 class Libpulsar < Formula
   desc "Apache Pulsar C++ library"
   homepage "https://pulsar.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-2.10.2/apache-pulsar-2.10.2-src.tar.gz"
-  mirror "https://archive.apache.org/dist/pulsar/pulsar-2.10.2/apache-pulsar-2.10.2-src.tar.gz"
-  sha256 "20e367b120db9d7daacfe5f26b4b5a1d84958933a2448dfa01f731998ddd369a"
+  url "https://dlcdn.apache.org/pulsar/pulsar-client-cpp-3.1.0/apache-pulsar-client-cpp-3.1.0.tar.gz"
+  mirror "https://archive.apache.org/dist/pulsar/pulsar-client-cpp-3.1.0/apache-pulsar-client-cpp-3.1.0.tar.gz"
+  sha256 "e1da6cc9db1dc9e020e49126134d0a10532739907e389172405583933db67964"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "905e693415f1579ab386fd04827c04d8623b38a1270570e16db7341991d3ba99"
-    sha256 cellar: :any,                 arm64_monterey: "7684502a076c38f73c157a5e1c1d2487872ddab8bf2fc9571d31dade41e7e5b3"
-    sha256 cellar: :any,                 arm64_big_sur:  "d9cea1b23580663097fc1a33be9673bfd47780e0ac6c2d12ad8b58231901a2bd"
-    sha256 cellar: :any,                 ventura:        "f93a1789818aa9327a7aec4d5e40f40a6b56ee8ffd796014857f8a97b8c095dd"
-    sha256 cellar: :any,                 monterey:       "26e0535689cfc7b6104b416cb4b2d303d3cd477860dfacc8606af1a7dde78dd4"
-    sha256 cellar: :any,                 big_sur:        "dcc63503ddffdf7a90d1caacff4f8bbd5546514751bdaf59fbc442d4a49f7cd4"
-    sha256 cellar: :any,                 catalina:       "fc406b86e64b34cf971ffec37528e8956329930550ca78a0a1dcf91ead9d14dd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17c061facf327e271b579e843d5a98cf81508bdecbcefec4a54a6a04d5965e0e"
+    sha256 cellar: :any,                 arm64_ventura:  "40c882e122e2653488b6da665ef1501f85b1d9091ba0a338eedcacb397601b74"
+    sha256 cellar: :any,                 arm64_monterey: "96998b49377f24cb5bbd8476123969f8ae2e660ad432094e9b6d145294570e8d"
+    sha256 cellar: :any,                 arm64_big_sur:  "11ec8a6a9eafe96a9608b6bf535eb25583ced37e2d604143033cc71bf11bc9c3"
+    sha256 cellar: :any,                 ventura:        "8afb4b6f73c88f461dfc2f9e639dcab3e827283eb19acf76df60d7a55b693e58"
+    sha256 cellar: :any,                 monterey:       "570952f0a8966d2e5ce267fa408991afd993e7e21f8b06f0d145d4ecf7db486a"
+    sha256 cellar: :any,                 big_sur:        "a2840f48dbe7963bf1a31e1b8a0b4154071ac85251df6f311f9131f044e09d6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd3340740d78c604ea93f812741234768881bcba4eef87926ed03281acb0b768"
   end
 
   depends_on "cmake" => :build
@@ -28,16 +27,13 @@ class Libpulsar < Formula
   uses_from_macos "curl"
 
   def install
-    cd "pulsar-client-cpp" do
-      system "cmake", ".", *std_cmake_args,
-                      "-DBUILD_TESTS=OFF",
-                      "-DBUILD_PYTHON_WRAPPER=OFF",
-                      "-DBoost_INCLUDE_DIRS=#{Formula["boost"].include}",
-                      "-DProtobuf_INCLUDE_DIR=#{Formula["protobuf"].include}",
-                      "-DProtobuf_LIBRARIES=#{Formula["protobuf"].lib}/libprotobuf.dylib"
-      system "make", "pulsarShared", "pulsarStatic"
-      system "make", "install"
-    end
+    system "cmake", ".", *std_cmake_args,
+                    "-DBUILD_TESTS=OFF",
+                    "-DBoost_INCLUDE_DIRS=#{Formula["boost"].include}",
+                    "-DProtobuf_INCLUDE_DIR=#{Formula["protobuf"].include}",
+                    "-DProtobuf_LIBRARIES=#{Formula["protobuf"].lib/shared_library("libprotobuf")}"
+    system "make", "pulsarShared", "pulsarStatic"
+    system "make", "install"
   end
 
   test do

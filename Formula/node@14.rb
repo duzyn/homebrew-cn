@@ -1,8 +1,8 @@
 class NodeAT14 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v14.21.1/node-v14.21.1.tar.xz"
-  sha256 "3db95d6ca728957bf090b6301a7a9d2d80714b2a06d898a1db65c6e42b1da7ac"
+  url "https://nodejs.org/dist/v14.21.2/node-v14.21.2.tar.xz"
+  sha256 "d8f09a0f16773a77613c3817606f6d455624992d9c43443aca15e91807a1ff03"
   license "MIT"
 
   livecheck do
@@ -11,14 +11,13 @@ class NodeAT14 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cbe86d5c0f1c021ce41529f8e335c3832b711b8687759d7f5527afb0da6fe260"
-    sha256 cellar: :any,                 arm64_monterey: "5c6e81a3969c6e95c3a273697a5acf8d744f9e76d6d408e01e1a4ad1cda908c3"
-    sha256 cellar: :any,                 arm64_big_sur:  "868acabcda32d060dca96f1b3299f3c35fde3e37ab68c0f516636dca0d9027fa"
-    sha256 cellar: :any,                 ventura:        "a8f01ea53e89d6d995a6153b4dc028554dbbb28dd233a2b4908ac5b5ea4ebfd6"
-    sha256 cellar: :any,                 monterey:       "073257f3276e543a37117aa9d5553b9383607c1168c82f9b330f3d50ff86b4a3"
-    sha256 cellar: :any,                 big_sur:        "61f063876cbb7b3c8222116fe977fa6354caea76a5a697e148b2324755718d66"
-    sha256 cellar: :any,                 catalina:       "2b6f03f7caaea96b27fad538ec1600c0c7619195ee16c53a7d81081d6fe0f185"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31700b31d1d02aede35bb5fcb817667a6c12da6ca2b9e47c4a4bf25ae70a7a31"
+    sha256 cellar: :any,                 arm64_ventura:  "c38bea9f33b29358a8308e198ca4b5525ed311740e5b2a9dccc0d7496ef5c98e"
+    sha256 cellar: :any,                 arm64_monterey: "af7d629496c949305a0b3f719c99df0047f81741d0bc34ba01d2218d927a9aaa"
+    sha256 cellar: :any,                 arm64_big_sur:  "24e2beca4869daaef13720e30deef761cf7c4f76542093608034fa3b095a0b90"
+    sha256 cellar: :any,                 ventura:        "5f2d7a94a129ff0ed600c3de05ee95920e2f5a63793cca725f4d8c4a5a41ab49"
+    sha256 cellar: :any,                 monterey:       "5ccd16398ead0cabb0a7b32a61e17a59b2ff5f7b8ec9860c1d54d8c588bead12"
+    sha256 cellar: :any,                 big_sur:        "c7203cd3aaa9651c6b1123dff24caf11cf4088c66bab965284c3059565ffc59b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97c1f26d24d5cc9841090462102fd2926274e737d86ff4cd924ef066ae7e1c2f"
   end
 
   keg_only :versioned_formula

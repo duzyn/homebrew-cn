@@ -3,20 +3,18 @@ class Dnstwist < Formula
 
   desc "Test domains for typo squatting, phishing and corporate espionage"
   homepage "https://github.com/elceef/dnstwist"
-  url "https://files.pythonhosted.org/packages/01/1d/9fb15527db2bef65d522a2876784bfb90ce3f0dfc9650640073aadd69282/dnstwist-20221022.tar.gz"
-  sha256 "6121ef2dccec37c31dfd5b649d6ad65ebdcd97b8cfcb43a28ec0068761c52377"
+  url "https://files.pythonhosted.org/packages/86/fa/e952c219fe85908f664f371b89d0dce9f513ca3f211327ebb19f7b894d70/dnstwist-20221213.tar.gz"
+  sha256 "beb18ec2c4f866f0715c1b361a1ad8e276bd9e73f15d9c41a078d5a39035dacd"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0d639c9a59054193778c6ec3a3713a6dae9a9c81da7a7e3e82f77cee979bf788"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b39dae32e23dd3a0cfadaf82885cecaf6860a430850c65e91a878f0ddb735972"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e5204e3db811770005cd6b9b78c4fc96ca5bc2cdcc35822ff87de50487273338"
-    sha256 cellar: :any_skip_relocation, ventura:        "dd80ae005ee24a2e092ac214308d518bda44656acb25201200f97b04c1493bd2"
-    sha256 cellar: :any_skip_relocation, monterey:       "010db1edc9da57b553354b64dfe1663070ac31dcac2e9fc526dfbdb7c5a13b7f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "665402db57310586a5b5be0db1a5de669508c9147a90655414a811d804a9ebe8"
-    sha256 cellar: :any_skip_relocation, catalina:       "fcccfef626b64ea390ef302262be06f504d0450a654b0d7bc5c83bd21c3df8a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cf043279eed2302b4fb01335fc049b4b81dc45d34b36a7db7a752e9fa858063"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d46d210b536e7ec7677061b763f348f24718e23386ef6ab2cc3e5ecf6ab0a4bc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6424b50c4da3e725acf38d60143b578001537660c64178a8d1002ba2e6a56fd4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "988596be35b8886f3c8ad89b754a272b72542e82cec26a3d67b1f28af91c4837"
+    sha256 cellar: :any_skip_relocation, ventura:        "b2d7c151d5132e5c1e764f4abca507da2c1916151a8c58b712c76f195a645223"
+    sha256 cellar: :any_skip_relocation, monterey:       "16d3f88caab085745124df362abd9d74381c8eb8ca4674859980c6dfcb300870"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5cd7cbf5f2a38940f6878ea86b8cc10df32c39d5ba804b9df4b1cdacc8f62f0f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "26e51e902c65cd03b5d000dd759c15e8611ef11e812c2bd43abfe2018e5dedc7"
   end
 
   depends_on "geoip"
@@ -46,8 +44,8 @@ class Dnstwist < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -81,8 +79,8 @@ class Dnstwist < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/fa/a7/71c253cdb8a1528802bac7503bf82fe674367e4055b09c28846fdfa4ab90/multidict-6.0.2.tar.gz"
-    sha256 "5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013"
+    url "https://files.pythonhosted.org/packages/b5/5b/1dd3b9cf73c474ea1d0f0b1f8b7b712b0f13817493fd93101256ec856b59/multidict-6.0.3.tar.gz"
+    sha256 "2523a29006c034687eccd3ee70093a697129a3ffe8732535d3b2df6a4ecc279d"
   end
 
   resource "ppdeep" do
@@ -101,18 +99,18 @@ class Dnstwist < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "whois" do
-    url "https://files.pythonhosted.org/packages/97/e3/008a4f97114c43fd55966a4a1c5b4fa129ff364397fa79a39f87ef5084ea/whois-0.9.17.tar.gz"
-    sha256 "e0cf1c10c26d7e2ca8699568cf95cf99fcd72beb198ab5e6a1bb09ee94c8af4c"
+    url "https://files.pythonhosted.org/packages/9c/ac/949dad82306f47dadd5295ff8ddc14fe5ef4d3f209ab0636da2bbd965ddb/whois-0.9.18.tar.gz"
+    sha256 "6228a4f9617e9d06c4379ba8464181df64b0ac97dc07fc249c085745063ede91"
   end
 
   resource "yarl" do
-    url "https://files.pythonhosted.org/packages/d6/04/255c68974ec47fa754564c4abba8f61f9ed68b869bbbb854198d6259c4f7/yarl-1.8.1.tar.gz"
-    sha256 "af887845b8c2e060eb5605ff72b6f2dd2aab7a761379373fd89d314f4752abbf"
+    url "https://files.pythonhosted.org/packages/c4/1e/1b204050c601d5cd82b45d5c8f439cb6f744a2ce0c0a6f83be0ddf0dc7b2/yarl-1.8.2.tar.gz"
+    sha256 "49d43402c6e3013ad0978602bf6bf5328535c48d192304b91b97a3c6790b1562"
   end
 
   def install

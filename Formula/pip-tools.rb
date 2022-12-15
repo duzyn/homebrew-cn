@@ -3,18 +3,18 @@ class PipTools < Formula
 
   desc "Locking and sync for Pip requirements files"
   homepage "https://pip-tools.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/a5/4b/3b2cc29962f306210ee7bbc1b4305af81dd5289f3d163204f43a6df9f26f/pip-tools-6.11.0.tar.gz"
-  sha256 "90c5dc150e3856e4463b81ccc99307ccf9554e5db8393eb273705cb0b8f71c60"
+  url "https://files.pythonhosted.org/packages/35/72/91b0284111ca3d43e14caa879bd1aeceb9480f81a679d40ce2ab7481969d/pip-tools-6.12.0.tar.gz"
+  sha256 "f441603c63b16f4af0dd5026f7522a49eddec2bc8a4a4979af44e1f6b0a1c13e"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4dfa38dbaf51eac9e4b0ef64f6a0aa64e3f5385975f4ed8fc23220d11dbf7dbd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86cd89560b10178c99e9c97535102c7fdc8971f7dfa0980ebbb56c0cb11f3ca8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc0f11aae18f8c0bda9d10cf279b7a39df1223f2de12f30f76af3062fc3e5463"
-    sha256 cellar: :any_skip_relocation, ventura:        "870412e6dfc95c827c5705318a452a404065087fa831bb6f3f16c25535955e4c"
-    sha256 cellar: :any_skip_relocation, monterey:       "07b147704328bad09ed8c9e85328f28b4accba38651baaa46bd14b94093a7422"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ee9a253e6f9e529a1188dc6ad14521b12bb281e28ae52fa572b4c14d7ea0f28d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3d3e7070882df6507b6d52b4150b2158c86c6f732bc05d87db563153cd3404d8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a579ee92d160c845472c275c273291449e37285b9f9b1fd9119120dea5cab32d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "32351090149ba890933b9bd253072cebbc43423a4af75335b0a8751c316fcd94"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5643fabdf2197ec5dbcacc1b37b59b6df51eb07a948dd36e9a1aa2bb7afca6e6"
+    sha256 cellar: :any_skip_relocation, ventura:        "416eb45c658e54a359974df1f8fa566bdf6be12a64f4a6b47c374a1e17a5e92e"
+    sha256 cellar: :any_skip_relocation, monterey:       "c9eb5f78b3190a6f90f2f543b84e723626bf28200cf98b6ed0f85171551893d1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7e03b439f3bf8e63274e5b3d77a6199a1db252a1e5285f928474adf45d6e940c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b41ae2c82351a8a429f013cfc8baa89483a441cd4be74383179f8e80eac63fb5"
   end
 
   depends_on "python@3.11"
@@ -30,18 +30,13 @@ class PipTools < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
+    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
+    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
   end
 
   resource "pep517" do
     url "https://files.pythonhosted.org/packages/4d/19/e11fcc88288f68ae48e3aa9cf5a6fd092a88e629cb723465666c44d487a0/pep517-0.13.0.tar.gz"
     sha256 "ae69927c5c172be1add9203726d4b84cf3ebad1edcd5f71fcdc746e66e829f59"
-  end
-
-  resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
   resource "wheel" do

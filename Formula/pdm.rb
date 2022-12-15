@@ -1,7 +1,7 @@
 class Pdm < Formula
   include Language::Python::Virtualenv
 
-  desc "Modern Python package manager with PEP 582 support"
+  desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm.fming.dev"
   url "https://files.pythonhosted.org/packages/a0/22/dab6e1b1e46bd97707cea0e80d0ff5f4a02a21955a20887e54249d872b3c/pdm-2.3.2.tar.gz"
   sha256 "9bce2dd97012129b3ff2907648311edbac085fa8b9d6964a7e5c23845c785fbe"
@@ -9,18 +9,18 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "14de8becf38727f8122a6073c34e8c63d16467fc01f62d053c4914d6ffa64143"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5d6377fe1b611e699aad02a2b469f09f7080b9c95dd5da10892f17d5e3e26461"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "52af8ff41b80e2cde8f90d02158d705a591bfeea99fa5036e57bc8b6ab4ba1bb"
-    sha256 cellar: :any_skip_relocation, ventura:        "27c19dc386ff6bb0cbeac1204d28ee8ee9174b9d858a7378dc5ed4ff3eb7183f"
-    sha256 cellar: :any_skip_relocation, monterey:       "5a4252a91375bd86ff03c1d6db508824efa6c49e666c7b591f4ba6c5805683bd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "42400c67c4423fd3cdd805ed90cf7a413805978244adfc3b2bfeb767d5bb28d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ddd86f5b824184f535841af9b7249e365c1fb50159100395dcd204f40d688a68"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7ef1781c425fbd61b5d0e9f1b1d75c6d9c55fb4b17b84e1433357fcb73f265c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eba5fe8684708f683a9d8ec3ea0064ac46c6fa86b7a699b41e8f25621cc2e167"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "79ee7bb2a89e59b275f6da67be7506b22c01aff170ce4cc4f5972a3a354defde"
+    sha256 cellar: :any_skip_relocation, ventura:        "e7dc9cdf7d2fef2f2162b9cfb9e2a12438aaa1eab194f44c1979e2901274e231"
+    sha256 cellar: :any_skip_relocation, monterey:       "1e4e2117523618dfc6c298225aab2803f45ac28bcc8dde9a790e429ea584db73"
+    sha256 cellar: :any_skip_relocation, big_sur:        "3fe6a498516c51a6f28c247b626d77215120403bf9ca200a17a32d12b81060aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ef30b212b6de2ff7221fe5fcc627e4e77ebc6b708cf180e1b201c6b3e2fb74c"
   end
 
   depends_on "pygments"
   depends_on "python@3.11"
-  depends_on "six"
 
   resource "blinker" do
     url "https://files.pythonhosted.org/packages/2b/12/82786486cefb68685bb1c151730f510b0f4e5d621d77f245bc0daf9a6c64/blinker-1.5.tar.gz"
