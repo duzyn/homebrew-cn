@@ -1,9 +1,11 @@
 class Dotnet < Formula
   desc ".NET Core"
   homepage "https://dotnet.microsoft.com/"
+  # Source-build tag announced at https://github.com/dotnet/source-build/discussions
   url "https://github.com/dotnet/installer.git",
-      tag:      "v6.0.110",
-      revision: "ce0a42998a3d2a725f5bd08413b140d907f48177"
+      tag:      "v7.0.100-rtm.22521.12",
+      revision: "e12b7af219b96b5e07039ea8e3e268380329d72c"
+  version "7.0.100"
   license "MIT"
 
   # https://github.com/dotnet/source-build/#support
@@ -37,20 +39,18 @@ class Dotnet < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "7de1fed5e5f96e5a33b506bc67d7f42346fe3462692c555c7f8f77d2f574aeee"
-    sha256 cellar: :any,                 arm64_monterey: "4462cce323287e601c885a71418ff2425e59c62364806775a6fb49c2bd5fdb91"
-    sha256 cellar: :any,                 arm64_big_sur:  "341d025fed0a2bb01cf2199cc19aba069e90e83c9dd91c189818f68b12be8512"
-    sha256 cellar: :any,                 ventura:        "3d16e46012f344be4370aa4cfa4a8c8f7d9e76250de42f9e7d8fd674b774a9f3"
-    sha256 cellar: :any,                 monterey:       "b208c464e92f5dec6c9641a0a004a4c4f445e636ca4eee910866e5461784ebf7"
-    sha256 cellar: :any,                 big_sur:        "e5cdb53c941e2f484c36ce4573cab3919b90a2164ba4960bb15aeb47da342baf"
-    sha256 cellar: :any,                 catalina:       "68549d9d271924074783afaaf3257030c70d7f47511203d9badd3c43b62cff66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "645d857e3555c70c7475017f38d9556ead417f64e6903c4510fecaeb04741284"
+    sha256 cellar: :any,                 arm64_ventura:  "a48ccb41aef44b23111a8c9af155a7d4ca687d12e693abdf16a460606b643534"
+    sha256 cellar: :any,                 arm64_monterey: "d3b31cc177ef4abc05cbfc638bf10c5d208c727862698a65f2f1c1f200381134"
+    sha256 cellar: :any,                 arm64_big_sur:  "7758478afea76d3736405674b37476b45d73d855de155df35049d4dd92dda4cb"
+    sha256 cellar: :any,                 ventura:        "87c91d98f45df0407a2988272ec54016848ae6370dc0fed7a02444767f5f25db"
+    sha256 cellar: :any,                 monterey:       "9e202396b41bcb8d45c857b9f4806a7907edf018ec4e14d8af1e3867f5d66320"
+    sha256 cellar: :any,                 big_sur:        "015dca815eb4ea5b4a9a7160b79ad45e509ae6525e939f3a81d3985ec88533cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a75b5f8d7331b1db749735e6a8fb3f9dbfe6298c44fa0e8911d727e7195b8eb"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "icu4c"
   depends_on "openssl@1.1"
 
@@ -67,76 +67,49 @@ class Dotnet < Formula
   # GCC builds have limited support via community.
   fails_with :gcc
 
-  # Apple Silicon build fails due to latest dotnet-install.sh downloading x64 dotnet-runtime.
-  # We work around the issue by using an older working copy of dotnet-install.sh script.
-  # Bug introduced with https://github.com/dotnet/install-scripts/pull/314
-  # TODO: Remove once script is fixed.
-  # Issue ref: https://github.com/dotnet/install-scripts/issues/318
-  resource "dotnet-install.sh" do
-    url "https://ghproxy.com/raw.githubusercontent.com/dotnet/install-scripts/dac53157fcb7e02638507144bf5f8f019c1d23a8/src/dotnet-install.sh"
-    sha256 "e96eabccea61bbbef3402e23f1889d385a6ae7ad84fe1d8f53f2507519ad86f7"
+  # Backport fix for error on aspnetcore version while building 'installer in tarball'.
+  # TODO: Remove when available in release.
+  # PR ref: https://github.com/dotnet/installer/pull/14938
+  patch do
+    url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/f206f7a45b330cce79e6bfe9116fccd93b0d3ed8/dotnet/aspnetcore-version.patch"
+    sha256 "00103452e2f52831c04007f1b7f9fcd5ecddf0671943657104f0ac8d3a9ca613"
   end
 
-  # Fixes race condition in MSBuild.
-  # TODO: Remove with 6.0.3xx or later.
-  resource "homebrew-msbuild-patch" do
-    url "https://github.com/dotnet/msbuild/commit/64edb33a278d1334bd6efc35fecd23bd3af4ed48.patch?full_index=1"
-    sha256 "5870bcdd12164668472094a2f9f1b73a4124e72ac99bbbe43028370be3648ccd"
-  end
-
-  # Fix build failure on macOS due to missing ILAsm/ILDAsm
+  # Fix build failure on macOS due to missing bootstrap packages
   # Fix build failure on macOS ARM due to `osx-x64` override
   # Issue ref: https://github.com/dotnet/source-build/issues/2795
   patch :DATA
 
   def install
-    ENV.append_path "LD_LIBRARY_PATH", Formula["icu4c"].opt_lib if OS.linux?
+    if OS.linux?
+      ENV.append_path "LD_LIBRARY_PATH", Formula["icu4c"].opt_lib
+      ENV.append_to_cflags "-I#{Formula["krb5"].opt_include}"
+    end
 
-    (buildpath/".dotnet").install resource("dotnet-install.sh")
-    (buildpath/"src/SourceBuild/tarball/patches/msbuild").install resource("homebrew-msbuild-patch")
+    # The source directory needs to be outside the installer directory
+    (buildpath/"installer").install buildpath.children
+    cd "installer" do
+      system "./build.sh", "/p:ArcadeBuildTarball=true", "/p:TarballDir=#{buildpath}/sources"
+    end
 
-    Dir.mktmpdir do |sourcedir|
-      system "./build.sh", "/p:ArcadeBuildTarball=true", "/p:TarballDir=#{sourcedir}"
-      cd sourcedir
-
+    cd "sources" do
       # Use our libunwind rather than the bundled one.
       inreplace "src/runtime/eng/SourceBuild.props",
                 "/p:BuildDebPackage=false",
                 "\\0 --cmakeargs -DCLR_CMAKE_USE_SYSTEM_LIBUNWIND=ON"
 
-      # Fix Clang 15 error: definition of builtin function '__cpuid'.
-      # TODO: Remove with v7.0.0 release which should have merged fix
-      # Ref: https://github.com/dotnet/runtime/commit/992cf8c97cc71d4ca9a0a11e6604a6716ed4cefc
-      inreplace "src/runtime/src/coreclr/vm/amd64/unixstubs.cpp",
-                /^ *void (__cpuid|__cpuidex)\([^}]*}$/,
-                "#if !__has_builtin(\\1)\n\\0\n#endif"
-
-      # Fix missing macOS conditional for system unwind searching.
-      # TODO: Remove with v7.0.0 release which should have merged fix
-      # Ref: https://github.com/dotnet/runtime/commit/97c9a11e3e6ca68adf0c60155fa82ab3aae953a5
-      inreplace "src/runtime/src/native/corehost/apphost/static/CMakeLists.txt",
-                "if(CLR_CMAKE_USE_SYSTEM_LIBUNWIND)",
-                "if(CLR_CMAKE_USE_SYSTEM_LIBUNWIND AND NOT CLR_CMAKE_TARGET_OSX)"
-
-      # Work around arcade build failure with BSD `sed` due to non-compatible `-i`.
-      # TODO: Remove with v7.0.0 release which has removed GNU `sed -i` usage
-      # Ref: https://github.com/dotnet/arcade/commit/b8007eed82adabd50c604a9849277a6e7be5c971
-      inreplace "src/arcade/eng/SourceBuild.props", "\"sed -i ", "\"sed -i.bak " if OS.mac?
-
-      # Workaround for error MSB4018 while building 'installer in tarball' due
-      # to trying to find aspnetcore-runtime-internal v6.0.0 rather than current.
-      # TODO: Remove when packaging is fixed
-      # Issue ref: https://github.com/dotnet/source-build/issues/2795
-      inreplace "src/installer/src/redist/targets/GenerateLayout.targets",
-                "$(MicrosoftAspNetCoreAppRuntimePackageVersion)",
-                "$(MicrosoftAspNetCoreAppRuntimewinx64PackageVersion)"
-
       # Rename patch fails on case-insensitive systems like macOS
       # TODO: Remove whenever patch is no longer used
       rename_patch = "0001-Rename-NuGet.Config-to-NuGet.config-to-account-for-a.patch"
-      (Pathname.pwd/"src/nuget-client/eng/source-build-patches"/rename_patch).unlink if OS.mac?
+      (Pathname("src/nuget-client/eng/source-build-patches")/rename_patch).unlink if OS.mac?
 
-      system "./prep.sh", "--bootstrap"
+      # Work around build script getting stuck when running shutdown command on Linux
+      # TODO: Try removing in the next release
+      # Ref: https://github.com/dotnet/source-build/discussions/3105#discussioncomment-4373142
+      inreplace "build.sh", "$CLI_ROOT/dotnet build-server shutdown", "" if OS.linux?
+
+      prep_args = (OS.linux? && Hardware::CPU.intel?) ? [] : ["--bootstrap"]
+      system "./prep.sh", *prep_args
       system "./build.sh", "--clean-while-building"
 
       libexec.mkpath
@@ -201,7 +174,7 @@ end
 
 __END__
 diff --git a/src/SourceBuild/tarball/content/repos/installer.proj b/src/SourceBuild/tarball/content/repos/installer.proj
-index 712d7cd14..31d54866c 100644
+index f6803f4cf..da8caeda8 100644
 --- a/src/SourceBuild/tarball/content/repos/installer.proj
 +++ b/src/SourceBuild/tarball/content/repos/installer.proj
 @@ -7,7 +7,7 @@
@@ -214,7 +187,7 @@ index 712d7cd14..31d54866c 100644
 
      <RuntimeArg>--runtime-id $(OverrideTargetRid)</RuntimeArg>
 @@ -28,7 +28,7 @@
-     <BuildCommandArgs Condition="'$(TargetOS)' == 'Linux'">$(BuildCommandArgs) /p:AspNetCoreSharedFxInstallerRid=linux-$(Platform)</BuildCommandArgs>
+     <BuildCommandArgs Condition="'$(TargetOS)' == 'Linux'">$(BuildCommandArgs) /p:AspNetCoreInstallerRid=linux-$(Platform)</BuildCommandArgs>
      <!-- core-sdk always wants to build portable on OSX and FreeBSD -->
      <BuildCommandArgs Condition="'$(TargetOS)' == 'FreeBSD'">$(BuildCommandArgs) /p:CoreSetupRid=freebsd-x64 /p:PortableBuild=true</BuildCommandArgs>
 -    <BuildCommandArgs Condition="'$(TargetOS)' == 'OSX'">$(BuildCommandArgs) /p:CoreSetupRid=osx-x64</BuildCommandArgs>
@@ -223,7 +196,7 @@ index 712d7cd14..31d54866c 100644
 
      <!-- Consume the source-built Core-Setup and toolset. This line must be removed to source-build CLI without source-building Core-Setup first. -->
 diff --git a/src/SourceBuild/tarball/content/repos/runtime.proj b/src/SourceBuild/tarball/content/repos/runtime.proj
-index f3ed143f8..2c62d6854 100644
+index 59ea1d6fc..14d98fbb5 100644
 --- a/src/SourceBuild/tarball/content/repos/runtime.proj
 +++ b/src/SourceBuild/tarball/content/repos/runtime.proj
 @@ -3,7 +3,7 @@
@@ -235,22 +208,25 @@ index f3ed143f8..2c62d6854 100644
      <OverrideTargetRid Condition="'$(TargetOS)' == 'FreeBSD'">freebsd-x64</OverrideTargetRid>
      <OverrideTargetRid Condition="'$(TargetOS)' == 'Windows_NT'">win-x64</OverrideTargetRid>
 
-diff --git a/src/SourceBuild/tarball/content/scripts/bootstrap/buildBootstrapPreviouslySB.csproj b/src/SourceBuild/tarball/content/scripts/bootstrap/buildBootstrapPreviouslySB.csproj
-index 14921a48f..3a34e8749 100644
---- a/src/SourceBuild/tarball/content/scripts/bootstrap/buildBootstrapPreviouslySB.csproj
-+++ b/src/SourceBuild/tarball/content/scripts/bootstrap/buildBootstrapPreviouslySB.csproj
-@@ -33,6 +33,14 @@
-     <!-- There's no nuget package for runtime.linux-musl-x64.runtime.native.System.IO.Ports
-     <PackageReference Include="runtime.linux-musl-x64.runtime.native.System.IO.Ports" Version="$(RuntimeLinuxX64RuntimeNativeSystemIOPortsVersion)" />
-     -->
-+    <PackageReference Include="runtime.osx-arm64.Microsoft.NETCore.ILAsm" Version="$(RuntimeLinuxX64MicrosoftNETCoreILAsmVersion)" />
-+    <PackageReference Include="runtime.osx-arm64.Microsoft.NETCore.ILDAsm" Version="$(RuntimeLinuxX64MicrosoftNETCoreILDAsmVersion)" />
-+    <PackageReference Include="runtime.osx-arm64.Microsoft.NETCore.TestHost" Version="$(RuntimeLinuxX64MicrosoftNETCoreTestHostVersion)" />
-+    <PackageReference Include="runtime.osx-arm64.runtime.native.System.IO.Ports" Version="$(RuntimeLinuxX64RuntimeNativeSystemIOPortsVersion)" />
-+    <PackageReference Include="runtime.osx-x64.Microsoft.NETCore.ILAsm" Version="$(RuntimeLinuxX64MicrosoftNETCoreILAsmVersion)" />
-+    <PackageReference Include="runtime.osx-x64.Microsoft.NETCore.ILDAsm" Version="$(RuntimeLinuxX64MicrosoftNETCoreILDAsmVersion)" />
-+    <PackageReference Include="runtime.osx-x64.Microsoft.NETCore.TestHost" Version="$(RuntimeLinuxX64MicrosoftNETCoreTestHostVersion)" />
-+    <PackageReference Include="runtime.osx-x64.runtime.native.System.IO.Ports" Version="$(RuntimeLinuxX64RuntimeNativeSystemIOPortsVersion)" />
+diff --git a/src/SourceBuild/tarball/content/eng/bootstrap/buildBootstrapPreviouslySB.csproj b/src/SourceBuild/tarball/content/eng/bootstrap/buildBootstrapPreviouslySB.csproj
+index 9a00e2a48..27071417f 100644
+--- a/src/SourceBuild/tarball/content/eng/bootstrap/buildBootstrapPreviouslySB.csproj
++++ b/src/SourceBuild/tarball/content/eng/bootstrap/buildBootstrapPreviouslySB.csproj
+@@ -42,6 +42,17 @@
+     <PackageDownload Include="runtime.linux-arm64.Microsoft.NETCore.ILDAsm" Version="[$(RuntimeLinuxX64MicrosoftNETCoreILDAsmVersion)]" />
+     <PackageDownload Include="runtime.linux-arm64.Microsoft.NETCore.TestHost" Version="[$(RuntimeLinuxX64MicrosoftNETCoreTestHostVersion)]" />
+     <PackageDownload Include="runtime.linux-arm64.runtime.native.System.IO.Ports" Version="[$(RuntimeLinuxX64RuntimeNativeSystemIOPortsVersion)]" />
++    <!-- Packages needed to bootstrap macOS -->
++    <PackageDownload Include="Microsoft.AspNetCore.App.Runtime.osx-x64" Version="[$(MicrosoftAspNetCoreAppRuntimeLinuxx64Version)]" />
++    <PackageDownload Include="Microsoft.AspNetCore.App.Runtime.osx-arm64" Version="[$(MicrosoftAspNetCoreAppRuntimeLinuxx64Version)]" />
++    <PackageDownload Include="Microsoft.NETCore.App.Crossgen2.osx-x64" Version="[$(MicrosoftNETCoreAppCrossgen2LinuxX64Version)]" />
++    <PackageDownload Include="Microsoft.NETCore.App.Crossgen2.osx-arm64" Version="[$(MicrosoftNETCoreAppCrossgen2LinuxX64Version)]" />
++    <PackageDownload Include="Microsoft.NETCore.App.Runtime.osx-x64" Version="[$(MicrosoftNETCoreAppRuntimeLinuxX64Version)]" />
++    <PackageDownload Include="Microsoft.NETCore.App.Runtime.osx-arm64" Version="[$(MicrosoftNETCoreAppRuntimeLinuxX64Version)]" />
++    <PackageDownload Include="runtime.osx-x64.Microsoft.NETCore.ILAsm" Version="[$(RuntimeLinuxX64MicrosoftNETCoreILAsmVersion)]" />
++    <PackageDownload Include="runtime.osx-arm64.Microsoft.NETCore.ILAsm" Version="[$(RuntimeLinuxX64MicrosoftNETCoreILAsmVersion)]" />
++    <PackageDownload Include="runtime.osx-x64.Microsoft.NETCore.ILDAsm" Version="[$(RuntimeLinuxX64MicrosoftNETCoreILDAsmVersion)]" />
++    <PackageDownload Include="runtime.osx-arm64.Microsoft.NETCore.ILDAsm" Version="[$(RuntimeLinuxX64MicrosoftNETCoreILDAsmVersion)]" />
    </ItemGroup>
 
    <Target Name="BuildBoostrapPreviouslySourceBuilt" AfterTargets="Restore">

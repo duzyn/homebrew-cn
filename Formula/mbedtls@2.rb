@@ -1,8 +1,8 @@
 class MbedtlsAT2 < Formula
   desc "Cryptographic & SSL/TLS library"
   homepage "https://tls.mbed.org/"
-  url "https://github.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28.1.tar.gz"
-  sha256 "82ff5fda18ecbdee9053bdbeed6059c89e487f3024227131657d4c4536735ed1"
+  url "https://github.com/Mbed-TLS/mbedtls/archive/mbedtls-2.28.2.tar.gz"
+  sha256 "1db6d4196178fa9f8264bef5940611cd9febcd5d54ec05f52f1e8400f792b5a4"
   license "Apache-2.0"
   head "https://github.com/Mbed-TLS/mbedtls.git", branch: "development_2.x"
 
@@ -12,14 +12,13 @@ class MbedtlsAT2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b9683d97e7b975165e30db14429f24dfaa200debedf46e079d3b6746d0a5d1a0"
-    sha256 cellar: :any,                 arm64_monterey: "9334ea247c229ad29ed6b0e0c388b1c589c70e7187e3d8ed6bcd051ebceb1291"
-    sha256 cellar: :any,                 arm64_big_sur:  "bada695460468813a313ddae30a66888cb830d90e0f542f18508504bd4bedaf2"
-    sha256 cellar: :any,                 ventura:        "d540f2eb5697aeedad1fc0a9d700fce533641f7f2022154084b337f4e768cf76"
-    sha256 cellar: :any,                 monterey:       "a135ca31c4f80a80fcc42eb127e9538860b561ff8c62abbe4f70211be2ff8d48"
-    sha256 cellar: :any,                 big_sur:        "b335ec7c23a52d9aac74d184df4cb981ea930d955c4b57ce500591775dbf05b2"
-    sha256 cellar: :any,                 catalina:       "b93d06f753ca54aa84d22357c5cb682ad927769a859781cfbab239f68631ab7c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27e1b4369e86f86e399aee3b6bc24de82cdf6db688618d2e8da9189c9f2c2822"
+    sha256 cellar: :any,                 arm64_ventura:  "11bdbdfac1856bac179d00e3d4f817b56eb9dbf6226304083aba407e50a0132f"
+    sha256 cellar: :any,                 arm64_monterey: "9929799ce303833ce06c3ca5f53baab4d2be56f670b4bf20f605a1a50fed604f"
+    sha256 cellar: :any,                 arm64_big_sur:  "169614a9cdba21b3a6e87a55c3b4269fb613c5fdbd70706ffb15347f3a9c9da0"
+    sha256 cellar: :any,                 ventura:        "f7bb83a0f5b5345bd83f70d7b1575e1b8da02029dabf80ccd628c133c2ef9b4e"
+    sha256 cellar: :any,                 monterey:       "e2e7ff9ad34ef5d08a2579a755f9e5e205ba65e83f0275b6bc08d6e08d0b802f"
+    sha256 cellar: :any,                 big_sur:        "02461f5f2aa5cac6e4eb749ab88d56505026fbd3c84c15d834851e291bfd809c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dec992c648e1e0e3d1fd3b08acce0b82a451a5f09464c0a7852a6417c587da18"
   end
 
   keg_only :versioned_formula

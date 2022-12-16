@@ -1,23 +1,22 @@
 class Chapel < Formula
   desc "Programming language for productive parallel computing at scale"
   homepage "https://chapel-lang.org/"
-  url "https://ghproxy.com/github.com/chapel-lang/chapel/releases/download/1.28.0/chapel-1.28.0.tar.gz"
-  sha256 "64eacfb5915e1b3c487e865f819faf9bb8771c9f83aac6512698ded1baab250e"
+  url "https://ghproxy.com/github.com/chapel-lang/chapel/releases/download/1.29.0/chapel-1.29.0.tar.gz"
+  sha256 "f87bc7285c4641ed540f806c63ab904137b650b1e232a11c15f76e874e079804"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   bottle do
-    sha256 arm64_ventura:  "02f2f907d5564b80034d763144584b56c551d3ee6024dba84f77a18e3581dddf"
-    sha256 arm64_monterey: "16e3fd0177ab450a788271b0e38e417ec459fc91d70b8d388a9fe85e78d0291b"
-    sha256 arm64_big_sur:  "c36c6e7cf4b30fefb9fe65aec07a04afdb168765c1a417318f75f65df0b4bd94"
-    sha256 ventura:        "bc45e9b7ea5aa0cc14b1158c4b62f88498f570a682b4128c2c5feee7ef41e9c8"
-    sha256 monterey:       "e2d386f7f931f4c684f5aa325b56c678fc1613935404d40de5d9e09933a3e41b"
-    sha256 big_sur:        "97697fee3e47ad73ad0e2cb80078ea2a7dd1110fa06e297e8b076fff4ec3bc84"
-    sha256 catalina:       "4a588c9b8fdb17f01109be986a3d8df929eb666ddc403499ffdaabd2d174e8e1"
-    sha256 x86_64_linux:   "44e78c563407371437e9cb150ffd1b1f02dfd6f2643ec82d88322ad5665346a1"
+    sha256 arm64_ventura:  "e51cb39f28cf347f72b1ec2f05c74af9f0f3f4272d977aac489ba785f0fb9a79"
+    sha256 arm64_monterey: "cbfe50dc7f2fd6fe962378f8cbfabbe7ad4488a581d74c85ce29255cf14afa73"
+    sha256 arm64_big_sur:  "09261fe1b84ec271feac68d6da2ec0048f7b9fb73d3f0a17101e7d16acf0763e"
+    sha256 ventura:        "623949fa32c6bf31a7210e552d0dc65939817f7d261f9d167925ca6b5ffd0820"
+    sha256 monterey:       "229f681a694385448cdb7d7c5a46163c477a39f064a945c1ff74efe30eba7a82"
+    sha256 big_sur:        "7062a499e10d338ae265101feaf0a81f71f0e712c9fc7235e2f6ffb784e0bdd9"
+    sha256 x86_64_linux:   "4a89d208b5cb191266b3be9cf79ded54b397502621cb706c1a54af950045f620"
   end
 
+  depends_on "cmake"
   depends_on "gmp"
   depends_on "llvm@14"
   depends_on "python@3.10"

@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v19.2.0/node-v19.2.0.tar.xz"
-  sha256 "0956b0ff01f2f6383827e916a6048159ce2bdb05217f654a8fff54e8116dc17e"
+  url "https://nodejs.org/dist/v19.3.0/node-v19.3.0.tar.xz"
+  sha256 "d3189574ef9849c713822e7f31de7a1b9dd8a2c6b5fc78ddb811aaa259a22b1e"
   license "MIT"
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -12,14 +12,13 @@ class Node < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4a8987fe7696ab3226d83ac7ff7a1021736f053f4f2a12866c7e328d6ce927ed"
-    sha256 cellar: :any,                 arm64_monterey: "1688808aba40654d65e17770b1327acd69e566f0e56c04e7fbc27edb24cbbf0f"
-    sha256 cellar: :any,                 arm64_big_sur:  "047efdc50a9f934e89d865b152c2b54d17f05b2da2dbaadbfe7deacea1956b37"
-    sha256 cellar: :any,                 ventura:        "d1551f2933d6290e0420ccc372fb40b5008e1d33b0809ba066e370972ae95275"
-    sha256 cellar: :any,                 monterey:       "d4dcb22958f6d086b37b8552dc6d6f65187dd9013fb95df00e4289112805374d"
-    sha256 cellar: :any,                 big_sur:        "cbb0a18f7a9a1cb272a83947d790b4fdf427f39afec9f89048814c4aaf3e17ba"
-    sha256 cellar: :any,                 catalina:       "832532bfd6b4860d12830b28a3307e1bb21a6e94d5b9cb2781c4c26f4f44fbda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f164501057711e2f8fb9ee69c4f4d4ba5f771ac727aee748aae657d01eb28355"
+    sha256 arm64_ventura:  "20cdbd3baf3f64d56f94219e6651a76140424b90664b6787162f2267bb908165"
+    sha256 arm64_monterey: "ffc0cf0a5e3dc983f159a902a270a64cec1ab2830f2a8924d40379fe5adb351a"
+    sha256 arm64_big_sur:  "606c36fe955671b141ea6d6d846ae47f886c43a4b9c656bc0e98829388186d0d"
+    sha256 ventura:        "107f4a4160d9f87fefc3c413193625918f6439e629f02fef72debc50ae4a9712"
+    sha256 monterey:       "f1ad6dc2e40e38bfdfbb7f82fa35e133049b01f60c0f339dc2cbdacf68790013"
+    sha256 big_sur:        "1e396fa1297ed9e047c2d9eff13498a603f5643070309e60b891e36c2689a2d7"
+    sha256 x86_64_linux:   "95ef71c5e896043291001ae8de0e62beca4c9e9974b62722d39c47328fe6d356"
   end
 
   depends_on "pkg-config" => :build
@@ -50,8 +49,8 @@ class Node < Formula
   # We track major/minor from upstream Node releases.
   # We will accept *important* npm patch releases when necessary.
   resource "npm" do
-    url "https://registry.npmjs.org/npm/-/npm-8.19.3.tgz"
-    sha256 "634bf4e0dc87be771ebf48a058629960e979a209c20a51ebdbc4897ca6a25260"
+    url "https://registry.npmjs.org/npm/-/npm-9.2.0.tgz"
+    sha256 "e2574f7da94665dd2f717f8e67bd1874134c4b301f8781dabceecdfc3d685071"
   end
 
   def install

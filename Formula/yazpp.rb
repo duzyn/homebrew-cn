@@ -1,10 +1,9 @@
 class Yazpp < Formula
   desc "C++ API for the Yaz toolkit"
   homepage "https://www.indexdata.com/resources/software/yazpp/"
-  url "https://ftp.indexdata.com/pub/yazpp/yazpp-1.8.0.tar.gz"
-  sha256 "e6c32c90fa83241e44e506a720aff70460dfbd0a73252324b90b9489eaeb050d"
+  url "https://ftp.indexdata.com/pub/yazpp/yazpp-1.8.1.tar.gz"
+  sha256 "13b7e61b2f20a57d0925bf6925c1d82e40a11092a8d1ab1d9d49dfd1863dbb05"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url "https://ftp.indexdata.com/pub/yazpp/"
@@ -12,14 +11,13 @@ class Yazpp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f5323351a62f51e6eeb4b4844808bb418f181866f81d546bb4d304e9afb8b59d"
-    sha256 cellar: :any,                 arm64_monterey: "aa97daf6d2b5261aeac38b913d4987be6b3061cc2623f316f3dfc2290722c265"
-    sha256 cellar: :any,                 arm64_big_sur:  "3fc6095e006360bca8b4c911c9b81b473c1da8c35f791c0c6a719aeba59d7323"
-    sha256 cellar: :any,                 ventura:        "0dd42e0aa75b787281468307c34a7c9ef24423e2bb059559f793d4f7e71286c2"
-    sha256 cellar: :any,                 monterey:       "3c9e3071b8fd04b9aaf2bfbb0c535b7634aef29f613e45ec1c780f86cca0aa62"
-    sha256 cellar: :any,                 big_sur:        "7d1a3021270686dc8164533c8dfc7d9d944bf4ba093b1f7f89087c9bf7c456e1"
-    sha256 cellar: :any,                 catalina:       "2eaa4f5d58881c7ef007a18506bec5311044e958dd0ab37f1bf10984481faff3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a208d6ddfbf428b0f24a9afc17f8cdf6ac030c6390924c7b4f0c887fec541848"
+    sha256 cellar: :any,                 arm64_ventura:  "6e7458ff48b91fc278beb85d320d739425c6ba2077b15f951866e6ead6cc09ac"
+    sha256 cellar: :any,                 arm64_monterey: "aa4653b1b4bac44bb483c8f05a31f91b92a4cfe7ff5d338f357b01dc30156c4f"
+    sha256 cellar: :any,                 arm64_big_sur:  "ca058f59600e3f8931894e93a6aa901bffd86306e84f8cbabb971a3115210022"
+    sha256 cellar: :any,                 ventura:        "5968798b57294be416bb06594f46b73720d0f3406cff786c3eb2255ac175c367"
+    sha256 cellar: :any,                 monterey:       "fa049b03743d65e259b3fa771bf3228432b1d0edac7313f33843cbfa64683e0f"
+    sha256 cellar: :any,                 big_sur:        "8ace99b6b578b30de4fba470ec066283240faef60528a847d617c8c33bd1c405"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "674c51fc6edefe40af90e0fd8b2c7ad2546f5c9edee89b973967b713d9a0eee8"
   end
 
   depends_on "yaz"

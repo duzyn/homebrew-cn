@@ -1,8 +1,8 @@
 class FlowCli < Formula
   desc "Command-line interface that provides utilities for building Flow applications"
   homepage "https://onflow.org"
-  url "https://github.com/onflow/flow-cli/archive/v0.42.0.tar.gz"
-  sha256 "c40be063242a7ca3c271020c7f1e8d32830c5a1b752d9abcd6531cbb3db69e59"
+  url "https://github.com/onflow/flow-cli/archive/v0.42.4.tar.gz"
+  sha256 "eeadd32b7aa7538f08981e1ac25330e1ee57644b4434424c883f798e75bf51f9"
   license "Apache-2.0"
   head "https://github.com/onflow/flow-cli.git", branch: "master"
 
@@ -12,14 +12,13 @@ class FlowCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a8d3227b19d0733b4903545caef0383b09defd3caffe67fbbd85724a0878da7c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b47b1dce404ba061aa0d8689bc7d1cc980a528c8452eb9f12f23e3b8cf39dbb2"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a867ca1d814b6b89b63ff5325cc64ac4abc39b3c5e64f21fcc9fd69d618a3b35"
-    sha256 cellar: :any_skip_relocation, ventura:        "9199e32e91a60a7e41bf4417eb6d70100cd0b803ace7089206d4fd27a3b7ad65"
-    sha256 cellar: :any_skip_relocation, monterey:       "eabaf27e8720e420a72521de4121651ef6d25af9cda30f2258c6e0e87610fadf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1e5a9eb03c47b607d708bd741e0338d5a5519a6320ace62a8ebf8a3e82532459"
-    sha256 cellar: :any_skip_relocation, catalina:       "9bd44f6d449ab8596b996ee7dcc66dcdbeaa1e398c854d496c097f2cbd715370"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58124dca39f6e6531801be7c12bb9584cded9b55c4455825afc34530e22e7787"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c1437ae2a9f2bf521e248311e04570df92725ebc0f2d8dd1900a8e12c6b85620"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ce44af1e8a9cab8d8bd622f49ae540ef1b4f1498532e61067b7fb77f611031ba"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f7821c378c1e67ed3417bfafd9fd58c2d1acd27ca09d0b62586243f2bbaca491"
+    sha256 cellar: :any_skip_relocation, ventura:        "7e9015ed56417a79cc1511764edaf3a0e7354bd21d9d8c085b475b01aebddd48"
+    sha256 cellar: :any_skip_relocation, monterey:       "35b92201d461265aa1bbf445ccd9ac340bf7f1e7afc9e700974bac42ee869db5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f9c180d0ae2a11d2e0b147a9e40c6ea4769bca4816699e522cc894659c498a63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7d0db70b5f424487a0f57fd700e421e64aa709de0f65a691e7726af0b77cd69e"
   end
 
   depends_on "go" => :build

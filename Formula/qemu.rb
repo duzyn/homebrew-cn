@@ -1,21 +1,19 @@
 class Qemu < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
-  url "https://download.qemu.org/qemu-7.1.0.tar.xz"
-  sha256 "a0634e536bded57cf38ec8a751adb124b89c776fe0846f21ab6c6728f1cbbbe6"
+  url "https://download.qemu.org/qemu-7.2.0.tar.xz"
+  sha256 "5b49ce2687744dad494ae90a898c52204a3406e84d072482a1e1be854eeb2157"
   license "GPL-2.0-only"
   head "https://git.qemu.org/git/qemu.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 arm64_ventura:  "c671494a256a88f1f3a66a7bdb5bd675127c0aba1635894d6c4a74b0983d2d52"
-    sha256 arm64_monterey: "e3366feb468fab143e6d332f3acc38f4df0141c94d41c28fba2328f2370a3f94"
-    sha256 arm64_big_sur:  "9709da0099d23fd5c2ba3ced0757f177229276005969f7fa737377e9b83c21af"
-    sha256 ventura:        "4c39165caed64a42c11077a449d3d79cb92e971e93f862bb0208f1d99300bcd7"
-    sha256 monterey:       "684ebfa66c19080b76ece0751951d49a462941bebbf4a4cbd119f6c380a5396e"
-    sha256 big_sur:        "c25c7e2ddc015fea3324a0198f486defadf4585fbfefc43b853ce60e13e223e5"
-    sha256 catalina:       "38143adf6daaa9b22aeff9c44232be37208063ec116dc096fe597a4823c71f93"
-    sha256 x86_64_linux:   "972725397f4e571052829452a5f0685cf0170355e7c72d3061810385846e8786"
+    sha256 arm64_ventura:  "fa987f9dc770812c58333c910cb0f5c4e730d513a1568cc4d6a215dfa3ac82d1"
+    sha256 arm64_monterey: "62bea721ff6fa3ee15ed53ee8215fea42b2cd07e8fb39b77ce8e39f30287576f"
+    sha256 arm64_big_sur:  "9b2c3aa359719358370901d00a1b9323459ec9af3add371d212fd98071418e6b"
+    sha256 ventura:        "b4ae1b25edf4276936ad69d9399cf117a28cd49e212b0467c4cb6c22a7074f86"
+    sha256 monterey:       "6a32684edc7ed07358a8b9b602198d69a45902ec7c72230caf5c9b9b8b5e7f10"
+    sha256 big_sur:        "c327dffc16102993ab7fb81a2bbad0035af6af3e550a4095db72fcb8aff56ae8"
+    sha256 x86_64_linux:   "05ece9acbbb003a7e8035f18f5193ae7c9caffacd60a744eac629de4a545aea4"
   end
 
   depends_on "libtool" => :build
@@ -62,6 +60,7 @@ class Qemu < Formula
       --host-cc=#{ENV.cc}
       --disable-bsd-user
       --disable-guest-agent
+      --enable-slirp
       --enable-capstone
       --enable-curses
       --enable-libssh
@@ -84,10 +83,6 @@ class Qemu < Formula
     else
       ["--enable-gtk"]
     end
-
-    # The --enable-slirp flag (not the feature itself) was removed in the head:
-    # https://gitlab.com/qemu-project/qemu/-/commit/5890258aeeba303704ec1adca415e46067800777
-    args << "--enable-slirp=system" if build.stable?
 
     system "./configure", *args
     system "make", "V=1", "install"

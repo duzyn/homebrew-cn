@@ -1,6 +1,8 @@
 class Lilypond < Formula
-  desc "Music engraving program"
+  desc "Music engraving system"
   homepage "https://lilypond.org"
+  url "https://lilypond.org/download/sources/v2.24/lilypond-2.24.0.tar.gz"
+  sha256 "3cedbe3b92b02569e3a6f2f0674858967b3da278d70aa3e98aef5bdcd7f78b69"
   license all_of: [
     "GPL-3.0-or-later",
     "GPL-3.0-only",
@@ -9,19 +11,6 @@ class Lilypond < Formula
     :public_domain,
     "MIT",
   ]
-  revision 1
-
-  stable do
-    url "https://lilypond.org/download/sources/v2.22/lilypond-2.22.2.tar.gz"
-    sha256 "dde90854fa7de1012f4e1304a68617aea9ab322932ec0ce76984f60d26aa23be"
-
-    # Shows LilyPond's Guile version (Homebrew uses v2, other builds use v1).
-    # See https://gitlab.com/lilypond/lilypond/-/merge_requests/950
-    patch do
-      url "https://gitlab.com/lilypond/lilypond/-/commit/a6742d0aadb6ad4999dddd3b07862fe720fe4dbf.diff"
-      sha256 "2a3066c8ef90d5e92b1238ffb273a19920632b7855229810d472e2199035024a"
-    end
-  end
 
   livecheck do
     url "https://lilypond.org/source.html"
@@ -29,20 +18,19 @@ class Lilypond < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "ce6c92b231356bae757f2ee4d3df6e0ca42f869d4b66058294b66e04bdba7488"
-    sha256 arm64_monterey: "90d9c931ef38b4f20bfc1228b753fe00e563e45f02c22b4aca1e59b802594c06"
-    sha256 arm64_big_sur:  "2d02e4a99bfe749ae2ab24976f015ec1a38db76aa55146f441575dda15a0d2bd"
-    sha256 ventura:        "e9b7cb2f475610a72a818c9007da47c805a485079caff1af676dbc256e76db4c"
-    sha256 monterey:       "55c985abb54a13e8dfaab1bbf0deb6f5fdb6c960a7147e5c99134c7e763b6837"
-    sha256 big_sur:        "634c7aec2ac85a6fe1e04099e0b92b54e7fac31c2a586e9ca270403ddcd7d1a9"
-    sha256 catalina:       "fb23cd0100e20cdcc2de2333e8f470b3a1cd354322a7bcd257b37682c7ef4727"
-    sha256 x86_64_linux:   "1b351578a95058c9fab5f774a44ec960daf27ed498ac0546235c30da6b698fbe"
+    sha256 arm64_ventura:  "8b75d616d053954f52420a608e3fe40756fb4c987ca85601e3339b6ef1b3e40e"
+    sha256 arm64_monterey: "9eb2ad5a3edef407451fc47b02e507e74849ccc805e7926fd1b7b1e6d62ee230"
+    sha256 arm64_big_sur:  "57a16379b2dd9290894eae10ab88f7b4eed12f5af2145311436e19e827142101"
+    sha256 ventura:        "1495d0ad341340b67b0a6ec179b80d62cb29e0635c56b80e4798ae61778771a4"
+    sha256 monterey:       "9af1797f65d330b0624e786f9bc47bd6f47653581f7a0ebd8fa37ef025a4ca55"
+    sha256 big_sur:        "bcc12cfa0a1959a2d38514e843de20ffd54d82c4f86f2a0da00d682e6c0aa1c9"
+    sha256 x86_64_linux:   "4c90e984dec560d2ea318351f301b5a40b20182514c31c7d34d9e4acbed105fa"
   end
 
   head do
-    url "https://git.savannah.gnu.org/git/lilypond.git", branch: "master"
+    url "https://gitlab.com/lilypond/lilypond.git", branch: "master"
     mirror "https://github.com/lilypond/lilypond.git"
+    mirror "https://git.savannah.gnu.org/git/lilypond.git"
 
     depends_on "autoconf" => :build
   end
@@ -57,7 +45,7 @@ class Lilypond < Formula
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "ghostscript"
-  depends_on "guile@2"
+  depends_on "guile"
   depends_on "pango"
   depends_on "python@3.11"
 
@@ -67,23 +55,19 @@ class Lilypond < Formula
   def install
     system "./autogen.sh", "--noconfigure" if build.head?
 
-    texgyre_dir = "#{Formula["texlive"].opt_share}/texmf-dist/fonts/opentype/public/tex-gyre"
-    system "./configure", "--prefix=#{prefix}",
-                          "--datadir=#{share}",
-                          "--with-texgyre-dir=#{texgyre_dir}",
-                          "--disable-documentation"
+    system "./configure", "--datadir=#{share}",
+                          "--disable-documentation",
+                          *std_configure_args,
+                          "--with-flexlexer-dir=#{Formula["flex"].include}",
+                          "GUILE_FLAVOR=guile-3.0"
 
-    ENV.prepend_path "LTDL_LIBRARY_PATH", Formula["guile@2"].opt_lib
     system "make"
     system "make", "install"
 
+    system "make", "bytecode"
+    system "make", "install-bytecode"
+
     elisp.install share.glob("emacs/site-lisp/*.el")
-
-    libexec.install bin/"lilypond"
-
-    (bin/"lilypond").write_env_script libexec/"lilypond",
-      GUILE_WARN_DEPRECATED: "no",
-      LTDL_LIBRARY_PATH:     "#{Formula["guile@2"].opt_lib}:$LTDL_LIBRARY_PATH"
   end
 
   test do

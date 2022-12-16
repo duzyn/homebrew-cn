@@ -3,18 +3,18 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://github.com/ansible/ansible-lint/"
-  url "https://files.pythonhosted.org/packages/fb/c0/915c941753e6ef9ca998621a5ee07a812a07d674cf5bb759de0488f1325d/ansible-lint-6.9.1.tar.gz"
-  sha256 "4c85f0d61700042cab964dd7bdc9227137ba5490249f705acfd9de46eb00a07f"
+  url "https://files.pythonhosted.org/packages/24/84/19f148ada6996acd0408f8085bd6a5799acca7cd5f0d59cf4f8cf92f9aaa/ansible-lint-6.10.0.tar.gz"
+  sha256 "f5ecec58ebe7b6bfc4976be7d6e400411a8af05b0e1a19f15f25f59f3401348c"
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "63138e1a50fbe38ac704d03d85736e165179ccfd75ec48daa900ee74ab82b074"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4132e5fb69d2a6d1f4d5d9c7ec7bab8173e65c4b76eea182c113a8b46b75fa03"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3d325936e19b02c91b6eb040e2ed886203b9c5655a3c1ebdb2a33a92ec3a4cb4"
-    sha256 cellar: :any_skip_relocation, ventura:        "895b967591fdc96cae218e9284125cfdcb64e42e4ee081d1c9b5b70ff2778a83"
-    sha256 cellar: :any_skip_relocation, monterey:       "2587351e991bc2e2c8361c9940054d608278f6179c636539d06c75c4f93fa60c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "31081c750a408aa4cff8fdf8ce25a16836664a0e437ebbb07498ab980c93f69c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d64d9032206eb542e77aaee7c69d3001920e51e8abf9c885e573286aa598fdfd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c547854c6a8fd15f8b86389524770df9602cf84dd04b0a25b06fe8185bed986a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b91c157d5b9b463702bf656c58bf60387d760d83bd3dc620cf6d13cc4c2e31b8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e7fca61f7b0977dc3d6058425a08e34d892695d43a1a88880a23e8c3a86a6cf"
+    sha256 cellar: :any_skip_relocation, ventura:        "c42310b8db20bb1b401a75b27eb899a530b973cde8a84336dc2952a915c0e3dc"
+    sha256 cellar: :any_skip_relocation, monterey:       "60e3ca62785340be040c29da9dcfa0a2fa781b626e3cf12a0249d24f8084a0e1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2b5a2313677b26363dc71bc1753ec9709b5c562fd5cd3bdafe33efa4f0d54882"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5c49ab94a9e8d39d4b2c6f324a5d29c29bce2fb33b8d50359dc9814d0b03959"
   end
 
   depends_on "pkg-config" => :build
@@ -26,8 +26,8 @@ class AnsibleLint < Formula
   depends_on "yamllint"
 
   resource "ansible-compat" do
-    url "https://files.pythonhosted.org/packages/e6/1b/ec4cab729bea3531ad4368d1b66858f9cbee5edd84a32a9830ef7da1f1d2/ansible-compat-2.2.6.tar.gz"
-    sha256 "8bb3488327125a0948d38b766389a4819573343d5673aa78a7bed23eb9d5b28d"
+    url "https://files.pythonhosted.org/packages/b6/a1/bf63af6f20afa76b828956e67b811e76615cb06cbd44f5be1ff8cadb902a/ansible-compat-2.2.7.tar.gz"
+    sha256 "08deddcd0a1dc6baabe674b07c6ff882118492c123d281f56f01905271a7ffc4"
   end
 
   resource "attrs" do
@@ -46,8 +46,8 @@ class AnsibleLint < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/95/55/b897882bffb8213456363e646bf9e9fa704ffda5a7d140edf935a9e02c7b/filelock-3.8.0.tar.gz"
-    sha256 "55447caa666f2198c5b6b13a26d2084d26fa5b115c00d065664b2124680c4edc"
+    url "https://files.pythonhosted.org/packages/d8/73/292d9ea2370840a163e6dd2d2816a571244e9335e2f6ad957bf0527c492f/filelock-3.8.2.tar.gz"
+    sha256 "7565f628ea56bfcd8e54e42bdc55da899c85c1abfe1b5bcfd147e9188cebb3b2"
   end
 
   resource "jsonschema" do
@@ -56,13 +56,8 @@ class AnsibleLint < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
-  end
-
-  resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
+    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
+    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
   end
 
   resource "pyrsistent" do

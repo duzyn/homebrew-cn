@@ -2,20 +2,19 @@ class Glslviewer < Formula
   desc "Live-coding console tool that renders GLSL Shaders"
   homepage "http://patriciogonzalezvivo.com/2015/glslViewer/"
   url "https://github.com/patriciogonzalezvivo/glslViewer.git",
-      tag:      "3.0.8",
-      revision: "ed317b6a30c346cdfa1050623d4cab42754511cc"
+      tag:      "v3.1.1",
+      revision: "2671e0f0b362bfd94ea5160f2ecb7f7363d4991d"
   license "BSD-3-Clause"
   head "https://github.com/patriciogonzalezvivo/glslViewer.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "421c84b4e4fd9b6941922c4a0ce536cd19b8ee09eaeb736976ec5b09c356c925"
-    sha256 cellar: :any,                 arm64_monterey: "fc69dc5b243e0ebaf534c8577a92f60392e017edd9733fec84d079545bf93d18"
-    sha256 cellar: :any,                 arm64_big_sur:  "689396195e735373e157a8a3c167f2a68069e090574a9d80011cf721e79eda25"
-    sha256 cellar: :any,                 ventura:        "bce35154a04ba6e988272b7c8faee45fcd09790b88b662d0fa81785ce309798d"
-    sha256 cellar: :any,                 monterey:       "d69b49162105747437712bd045d433a2ba05a493e456d389e73a138d9c72a8e6"
-    sha256 cellar: :any,                 big_sur:        "8c3c68e24f17d9a930be4c620739890560a1e8dbc2ed04dc718978fd3e7a4d15"
-    sha256 cellar: :any,                 catalina:       "cfd3b93ec996e2278d477647eae3a303c2bd21f6b9d7958e95d6bbbd6d713915"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c0266debcdc9d6b9ac6af5c7ee2d211ca78ef779dbf22047e35d5284c2e0e6d"
+    sha256 cellar: :any,                 arm64_ventura:  "dd005595d1d94346bb45e9ed0f8f3c83936dcee87d5a1e807f2e47a5960f3472"
+    sha256 cellar: :any,                 arm64_monterey: "da13de9b3e3ac334470be3ac8deecd4f8e29de1a2c27d680bc46fb0d1ace4e31"
+    sha256 cellar: :any,                 arm64_big_sur:  "0c4dfef79e7c3f27c9b80ffba7ce11f7c06ff201c98d7ad23df01d73a675e204"
+    sha256 cellar: :any,                 ventura:        "075f85a29d9be935f0784c815db44ef3a2f903e2f8199497af62051273c3766d"
+    sha256 cellar: :any,                 monterey:       "cdbeada12aefbff29f9ce47c175bde59cbbba461e06de73bf778efc2652abb34"
+    sha256 cellar: :any,                 big_sur:        "91ef35f3f7112dd78bfae087d32c2fbfa6bd0161064cb232241999570758e416"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5ed1bb06051af16338321fb98f2e8868832b1163935b6f669f7c06db660c953"
   end
 
   depends_on "cmake" => :build

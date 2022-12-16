@@ -6,14 +6,14 @@ class Lsyncd < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "020b91706d7496492ddbdc24825f6d95687931ce13cc08e960cf3fe21d77d0c9"
-    sha256 cellar: :any,                 arm64_monterey: "ccd3f848f808e153f687db03dc3d5208b00d9f7c32a781e1ebbca2fa3c8cd2be"
-    sha256 cellar: :any,                 arm64_big_sur:  "9d735766c733d769528cb650521a5a09629bd50c4864edd9e8b9d266f6743e71"
-    sha256 cellar: :any,                 ventura:        "3a428e05585e921692cb63ae835e5b63a6893677f46a56ee37c4de02bb4bd605"
-    sha256 cellar: :any,                 monterey:       "47db8002be5a72d66b269a8668e25657266409369a3e7b65d8742c9687ee86c7"
-    sha256 cellar: :any,                 big_sur:        "1e1925d1c7206c3150085f87b641e6101667933f0e16db4d04907d33d6efea9a"
-    sha256 cellar: :any,                 catalina:       "09229576e7263c6e1454734886469786c73501212019c05eeb8890e5e0dbd404"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ac334f5ab4cdd8e6bf9402421f3753256924beb567c46bc47042ce90da8c87b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "eaf1cd2a7576eed88ab68e26b93b234132a1cf9e6ddf63f0883fa0b859fb798f"
+    sha256 cellar: :any,                 arm64_monterey: "e4ed253d0a0792a3c2e22f82a40c1627a8fcb6c15ed62f62cca24b1b965fdc81"
+    sha256 cellar: :any,                 arm64_big_sur:  "e818e3e8cafb4f9d8cf82f6ec29b8d247b2e17276f92f9e8bef9364f740fca85"
+    sha256 cellar: :any,                 ventura:        "36f5613aab337d30135d232e5abf5bc5baa63470537cbaa7917fd202fdf45b3e"
+    sha256 cellar: :any,                 monterey:       "453140f96382bf6eb4b4ecc9df475ef25ea690f27a870f0b457619d0fc15a69c"
+    sha256 cellar: :any,                 big_sur:        "c221932f57a2ddbda8c4722cbd4c547244fd4492a1eb46959aea03244897566f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de8ec6eb7f7122c422cb82bf5c1f1051ce23bde9dc48bb2327da7dca1573f757"
   end
 
   depends_on "cmake" => :build
@@ -69,6 +69,10 @@ class Lsyncd < Formula
       "12.1"    => ["xnu-8019.61.5.tar.gz",       "1e035fcf9a2b86dfadcccbbaf963f98b878772ae29c5058f1dc0e5852f70650e"],
       "12.2"    => ["xnu-8019.80.24.tar.gz",      "2fbfe90ec8c93d93f0dd69f09610011d26a722f98266202de6a7c2af764712b4"],
       "12.3"    => ["xnu-8020.101.4.tar.gz",      "df715e7b2bd5db0ba212b5b0613fbbc85c3cbc4e61f6ee355a8b6cf9a87d3374"],
+      "12.4"    => ["xnu-8020.121.3.tar.gz",      "8c765111cf971749a30f7426759d0a93cf3fac7c03a31055920f292335279125"],
+      "12.5"    => ["xnu-8020.140.41.tar.gz",     "b11e05d6529806aa6ec046ae462d997dfb36a26df6c0eb0452d7a67cc08ad9e7"],
+      "13.0"    => ["xnu-8792.41.9.tar.gz",       "ccd87512d2c525e081983fece12cf5f911465d4371449661dbcdff764238286f"],
+      "13.1"    => ["xnu-8792.61.2.tar.gz",       "61c5758d4423ede45e3cbe70b4316d982af59dc91fc482cd9afc145b2ad2226a"],
     }
 
     macos_version = MacOS.full_version.major_minor # Ignore bugfix/security updates
