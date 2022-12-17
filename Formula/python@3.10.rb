@@ -1,8 +1,8 @@
 class PythonAT310 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.10.8/Python-3.10.8.tgz"
-  sha256 "f400c3fb394b8bef1292f6dc1292c5fadc3533039a5bc0c3e885f3e16738029a"
+  url "https://www.python.org/ftp/python/3.10.9/Python-3.10.9.tgz"
+  sha256 "4ccd7e46c8898f4c7862910a1703aa0e63525913a519abb2f55e26220a914d88"
   license "Python-2.0"
 
   livecheck do
@@ -11,15 +11,13 @@ class PythonAT310 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "58948035f391012f3f7dadfbb43351453a6217bc7d28a1bdf993e8767000c350"
-    sha256 arm64_monterey: "8b1c01441f2dca4793a105919327a88418791ff6c9bb30575e7fe59991781cea"
-    sha256 arm64_big_sur:  "adcafc7cfb161b1bac9097c831dd05a0f598a9872decad4e9c1c266da22ff371"
-    sha256 ventura:        "343d404549a27a9083829ebecb2221e7790917fa7d246818d944a2da3273f36f"
-    sha256 monterey:       "017d295e8091cf75e95c8002806865dca73d47b898984fff0a4d00df63a28962"
-    sha256 big_sur:        "aae66daff6ce5b21497e42b2da13df9ae79048ae92c84dbb04c9f03b9430e0e9"
-    sha256 catalina:       "6d6357a145e0b1a3b066289ae0a6920089631400825b65a708f55a171b633c32"
-    sha256 x86_64_linux:   "2e0127173d003685094f79bf5f94652f66af803643cc89ae5dca0a5af8342e47"
+    sha256 arm64_ventura:  "b6bfa71a7d5f6188a1a28e45aed1e8ee08e0e4be11f99ed6d27774b149994364"
+    sha256 arm64_monterey: "a9b28161cec6e1a027f1eab7576af7c650e283f6c3dc492bc520eae969da8431"
+    sha256 arm64_big_sur:  "bdc9522e5b482e9bc1bdeb23611d3d8a2f3fd1559fa7cf5a55ef259022def5cd"
+    sha256 ventura:        "12dd2d60a7a6372c058b2eea154db193d9e788e36f1d00e4239f5bf6f5127d27"
+    sha256 monterey:       "7e95777f8c614e01f6c94419cf7feb72aa34a7940173a5b04f359ac845b28509"
+    sha256 big_sur:        "79ec380369e384d25b0c7e78e6b4c001e2708963efb113bf9ef098fd37170983"
+    sha256 x86_64_linux:   "b9ca7a7809be5b4f49f5d453f3c99cbe89dd4dea1c67c20c5f92f842829055ff"
   end
 
   # setuptools remembers the build flags python is built with and uses them to
@@ -68,18 +66,18 @@ class PythonAT310 < Formula
 
   # Always update to latest release
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/03/c9/7b050ea4cc4144d0328f15e0b43c839e759c6c639370a3b932ecf4c6358f/setuptools-65.4.1.tar.gz"
-    sha256 "3050e338e5871e70c72983072fe34f6032ae1cdeeeb67338199c2f74e083a80e"
+    url "https://files.pythonhosted.org/packages/b6/21/cb9a8d0b2c8597c83fce8e9c02884bce3d4951e41e807fc35791c6b23d9a/setuptools-65.6.3.tar.gz"
+    sha256 "a7620757bf984b58deaf32fc8a4577a9bbc0850cf92c20e1ce41c38c19e5fb75"
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/4b/30/e15b806597e67057e07a5acdc135216ccbf76a5f1681a324533b61066b0b/pip-22.2.2.tar.gz"
-    sha256 "3fd1929db052f056d7a998439176d3333fa1b3f6c1ad881de1885c0717608a4b"
+    url "https://files.pythonhosted.org/packages/a3/50/c4d2727b99052780aad92c7297465af5fe6eec2dbae490aa9763273ffdc1/pip-22.3.1.tar.gz"
+    sha256 "65fd48317359f3af8e593943e6ae1506b66325085ea64b706a998c6e83eeaf38"
   end
 
   resource "wheel" do
-    url "https://files.pythonhosted.org/packages/c0/6c/9f840c2e55b67b90745af06a540964b73589256cb10cc10057c87ac78fc2/wheel-0.37.1.tar.gz"
-    sha256 "e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4"
+    url "https://files.pythonhosted.org/packages/a2/b8/6a06ff0f13a00fc3c3e7d222a995526cbca26c1ad107691b6b1badbbabf1/wheel-0.38.4.tar.gz"
+    sha256 "965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac"
   end
 
   # Modify default sysconfig to match the brew install layout.
@@ -363,7 +361,7 @@ class PythonAT310 < Formula
            "--target=#{site_packages}",
            bundled/"setuptools-#{resource("setuptools").version}-py3-none-any.whl",
            bundled/"pip-#{resource("pip").version}-py3-none-any.whl",
-           libexec/"wheel-#{resource("wheel").version}-py2.py3-none-any.whl"
+           libexec/"wheel-#{resource("wheel").version}-py3-none-any.whl"
 
     # pip install with --target flag will just place the bin folder into the
     # target, so move its contents into the appropriate location
@@ -395,6 +393,7 @@ class PythonAT310 < Formula
       # <https://docs.brew.sh/Homebrew-and-Python>
       import re
       import os
+      import site
       import sys
       if sys.version_info[:2] != (#{version.major}, #{version.minor}):
           # This can only happen if the user has set the PYTHONPATH to a mismatching site-packages directory.
@@ -415,22 +414,24 @@ class PythonAT310 < Formula
           sys.path.extend(library_packages)
           # the Cellar site-packages is a symlink to the HOMEBREW_PREFIX
           # site_packages; prefer the shorter paths
-          long_prefix = re.compile(r'#{rack}/[0-9._abrc]+/Frameworks/Python.framework/Versions/#{version.major_minor}/lib/python#{version.major_minor}/site-packages')
+          long_prefix = re.compile(r'#{rack}/[0-9\\._abrc]+/Frameworks/Python\\.framework/Versions/#{version.major_minor}/lib/python#{version.major_minor}/site-packages')
           sys.path = [long_prefix.sub('#{HOMEBREW_PREFIX/"lib/python#{version.major_minor}/site-packages"}', p) for p in sys.path]
           # Set the sys.executable to use the opt_prefix. Only do this if PYTHONEXECUTABLE is not
           # explicitly set and we are not in a virtualenv:
           if 'PYTHONEXECUTABLE' not in os.environ and sys.prefix == sys.base_prefix:
               sys.executable = sys._base_executable = '#{opt_bin}/python#{version.major_minor}'
       if 'PYTHONHOME' not in os.environ:
-          cellar_prefix = re.compile(r'#{rack}/[0-9._abrc]+/')
+          cellar_prefix = re.compile(r'#{rack}/[0-9\\._abrc]+/')
           if os.path.realpath(sys.base_prefix).startswith('#{rack}'):
               new_prefix = cellar_prefix.sub('#{opt_prefix}/', sys.base_prefix)
               if sys.prefix == sys.base_prefix:
+                  site.PREFIXES[:] = [new_prefix if x == sys.prefix else x for x in site.PREFIXES]
                   sys.prefix = new_prefix
               sys.base_prefix = new_prefix
           if os.path.realpath(sys.base_exec_prefix).startswith('#{rack}'):
               new_exec_prefix = cellar_prefix.sub('#{opt_prefix}/', sys.base_exec_prefix)
               if sys.exec_prefix == sys.base_exec_prefix:
+                  site.PREFIXES[:] = [new_prefix if x == sys.exec_prefix else x for x in site.PREFIXES]
                   sys.exec_prefix = new_exec_prefix
               sys.base_exec_prefix = new_exec_prefix
       # Check for and add the python-tk prefix.

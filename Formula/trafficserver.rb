@@ -1,21 +1,19 @@
 class Trafficserver < Formula
   desc "HTTP/1.1 compliant caching proxy server"
   homepage "https://trafficserver.apache.org/"
-  url "https://downloads.apache.org/trafficserver/trafficserver-9.1.3.tar.bz2"
-  mirror "https://archive.apache.org/dist/trafficserver/trafficserver-9.1.3.tar.bz2"
-  sha256 "c8bf77b034b0da6c38d3ec9f3ca85ef1038aa046170e839308b0a59709d9afb6"
+  url "https://downloads.apache.org/trafficserver/trafficserver-9.1.4.tar.bz2"
+  mirror "https://archive.apache.org/dist/trafficserver/trafficserver-9.1.4.tar.bz2"
+  sha256 "186cc796d9d783c7c9313d855785b04b8573234b237802b759939c002a64b1df"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "70624fddac88e4b9358006484f69064d205d0573f3f138ec348c6127fd8d3040"
-    sha256 arm64_monterey: "ad1c4081325f16e88ab2e0a5b28fd40e73773ddd991aa58e6e34245ddb186e22"
-    sha256 arm64_big_sur:  "56104bf78296d6ae59562fadeda12ea162c14a201c28cb17a5d492c9ecbb2d13"
-    sha256 ventura:        "ccba3cb74efc81dc4e1386cc943449c49968bee610b8fc8de96441f0448699d8"
-    sha256 monterey:       "9514ddec436b6ca4e6b15745a82bc8e34a442c661422a603bfa5b9bd7c79746b"
-    sha256 big_sur:        "4f106b8242e5f85b470d7ee182426a4fd7f10d4cb48c77cd15b2d494fdf0981a"
-    sha256 catalina:       "cdef360aff3c14b9811e69da4c543bc62edbac14b02c36e3a1a8d70e856a07d2"
-    sha256 x86_64_linux:   "de988a5a2170b86814d457217b72f7f5c0f82f166fbfbea233b25177f3282b0a"
+    sha256 arm64_ventura:  "87bea1b8122598dd3c529135221dd31c2fa9b25d8237d0f719af47ac28d50903"
+    sha256 arm64_monterey: "bec943f9ccc45cd39cbe3da176a4a8279a6ef16525457b9c29bd1428a6d74ce3"
+    sha256 arm64_big_sur:  "3f8ba6b6234a3551c270cb62d3b14c5902ff3586b5d2be2718fced1aa34061ee"
+    sha256 ventura:        "3386ec7a4a5dbc28974c26378e9520caca6e38ca1957f8946370de83a8f3e926"
+    sha256 monterey:       "8f3ce83f3cea5b614e058f5ec01474d01e5db115a22441de27c690b0039f0a85"
+    sha256 big_sur:        "be85e056a66aff3010a2724a7401dc26f811ba63da7ca451c90db3505911de65"
+    sha256 x86_64_linux:   "75b329a3e0ede556c5a378fb8de7d8531904a9b9fe1fe59cfcf84450c8265ffb"
   end
 
   head do

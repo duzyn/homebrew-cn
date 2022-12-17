@@ -1,8 +1,8 @@
 class PythonTkAT310 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.10.8/Python-3.10.8.tgz"
-  sha256 "f400c3fb394b8bef1292f6dc1292c5fadc3533039a5bc0c3e885f3e16738029a"
+  url "https://www.python.org/ftp/python/3.10.9/Python-3.10.9.tgz"
+  sha256 "4ccd7e46c8898f4c7862910a1703aa0e63525913a519abb2f55e26220a914d88"
   license "Python-2.0"
 
   livecheck do
@@ -10,14 +10,13 @@ class PythonTkAT310 < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "08c243168db901bed54f2596034c578283eefd8a9744eca346f4fbe1dca8d799"
-    sha256 cellar: :any, arm64_monterey: "b28fa88f88581f432a9c17c5dcc065e81b16d7eaf739ed702e9de511ebbef048"
-    sha256 cellar: :any, arm64_big_sur:  "b9633cfa0899bdad1bb0568ca8f8731ba124c2a7f00f4970558fa124280e5d2b"
-    sha256 cellar: :any, ventura:        "81c3360cf1d2fc74a7809af4d9deaccfb9d0a3b653826204c866945f7235f8b5"
-    sha256 cellar: :any, monterey:       "367b3dfc45ac1c33655181e9fdd28bd0984c6fafad3edf7538ec2b5d611ddf95"
-    sha256 cellar: :any, big_sur:        "d0f6ee0c2b06cb096c59868b1c8116fae96d3aa3a7ab8e89d6e2b9f160b217ff"
-    sha256 cellar: :any, catalina:       "62469dbf3c34554e9ca8bf21b91ed6efa2af595d7f06990476dbe97552b3ab23"
-    sha256               x86_64_linux:   "378de196b95470e825f1df2691c4fa9f04f429bc277a4f629038d93f8d3eec72"
+    sha256 cellar: :any, arm64_ventura:  "daea00f0d9b71d4bbb907a6c4dac1dac9db202742e8ae3ed410a317e813b5b5e"
+    sha256 cellar: :any, arm64_monterey: "1d19d48d0d73b857f08f05be298a947a38f58ea0238d34350d9051497586a0ec"
+    sha256 cellar: :any, arm64_big_sur:  "8a217c67508f3ac5a3ef09697730730a61b81b27c9d46ec4004e53ca58be6e74"
+    sha256 cellar: :any, ventura:        "298225670b560465a5f90d605559f47ae14635c6e5a8524c73ac364db514fa95"
+    sha256 cellar: :any, monterey:       "65ca4f1766f5318a78ba9d3509bd9a04027b53d1e8c54a6ef603476cccc1cb3a"
+    sha256 cellar: :any, big_sur:        "5077e2c4e630e10ba2fd9a9e7867ebf3923f7cde29693ba1b854cc654d604992"
+    sha256               x86_64_linux:   "27ba1fb44bb618d124bd4526073b5d4e9e8271829c02c6551883b8cff7629fb9"
   end
 
   keg_only :versioned_formula

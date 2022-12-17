@@ -3,18 +3,18 @@ class PipAudit < Formula
 
   desc "Audits Python environments and dependency trees for known vulnerabilities"
   homepage "https://pypi.org/project/pip-audit/"
-  url "https://files.pythonhosted.org/packages/d0/dd/bff8f3a588e424030ea8a53378ce556a6fb4225a02910daf263df31347ee/pip_audit-2.4.9.tar.gz"
-  sha256 "aac7f1eabb723a18be9be4dbfe1b15ee4c3e48d09bf4bc2440ba7e0555dd4285"
+  url "https://files.pythonhosted.org/packages/15/0d/25bda39ed4ee0f917fd2647a27df68780b6a772772a0bb4f69849d960c64/pip_audit-2.4.10.tar.gz"
+  sha256 "c5fd9e97b9c87902539524c96d526fa8c89bf6afc11313eb2b296c15f8cb37a2"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e9d75208f71764dd3ddebfc1d1393671fb5181190972cd79ad6ceaaa46ac8420"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "93e74d3e8f0616bec48baa404c35dae2a6c49ce0f1c63d8cf4c949151f289297"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "68c89d0ed7012bc9cf38dc55510dd811dd733a7011c5ad6e388977ed169575f3"
-    sha256 cellar: :any_skip_relocation, ventura:        "2b7209c159314de4345363d02b47f18eab248da1b26eafcf282866769b456d4e"
-    sha256 cellar: :any_skip_relocation, monterey:       "298c3054fe55081b550489c4b66630d69ee7a552dc08287c7086fc5b4083dfb2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f367352a0028820352f3cd71f9f89f067d47119056099192134e34000f9ad7c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "06b1dd8b459d4e6f87d4e3387c5891193cd23274101bea093512e5ab6ec2166a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d7be562b52db979632ad0f549d2ebb2e9bc42f0bcd82d8938b9874a23369e65b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6dc2cbd15ca236450a86247580eb0530c3e6ce73ff457a83fde360acee759f8a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "12970a8c146f6ef941fd0313e35627bac95cd9e41bebb0a485631e2b2e489689"
+    sha256 cellar: :any_skip_relocation, ventura:        "a6f206cc9cd780d071751443856e8eaadb755fd9da7f93b37516ab9096ceb04a"
+    sha256 cellar: :any_skip_relocation, monterey:       "eca7b36aa5445204258a1424d6c6ffa25515ce151122cef5204c85a057f2f691"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a3f9fa83d41868d4299cfb6e2e61ee0522ae35e10b5bf30129dcdcdb252bb82c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f17b57d3c4cecc932acdb8bac08adf52277c26932f5ec1a19e92286a96ac4253"
   end
 
   depends_on "pygments"

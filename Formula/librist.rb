@@ -4,7 +4,7 @@ class Librist < Formula
   url "https://code.videolan.org/rist/librist/-/archive/v0.2.7/librist-v0.2.7.tar.gz"
   sha256 "7e2507fdef7b57c87b461d0f2515771b70699a02c8675b51785a73400b3c53a1"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
   head "https://code.videolan.org/rist/librist.git", branch: "master"
 
   livecheck do
@@ -13,14 +13,13 @@ class Librist < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "265eefae9e0acee5320ec6d53c00e1ce0a6a2db438808db64f81ef908f5f1f40"
-    sha256 cellar: :any,                 arm64_monterey: "05565a30880ee384c7d93fe794e9049ba26fa3defca0eeb2d404e92501a8bf32"
-    sha256 cellar: :any,                 arm64_big_sur:  "cc67eb033dd721686532b5510f8cb491d6a34d1f61abdec3b37c793a7170d5b9"
-    sha256 cellar: :any,                 ventura:        "c8788d4f4290cd71c0c820fda018f143391ebed8a4795141750ba39dd13d5de4"
-    sha256 cellar: :any,                 monterey:       "aa1d34394b985cc887e1e29dac1ba66cf300f47e3c29a818d0e16278b7b92b1b"
-    sha256 cellar: :any,                 big_sur:        "1236ff0ecd6cef12b1d75dafe96666ac2934f5a321b12f9bdb8f9cb42e742b9e"
-    sha256 cellar: :any,                 catalina:       "46ea9a2c900a027285fb9f321664987491bc8703d22f92d9a5047fffb8c25f69"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2724f4e1c469f66420ba87918041ca6871c772249470a92a99fd195c4977b46"
+    sha256 cellar: :any,                 arm64_ventura:  "5520123f90ac2fb54c6d913c49a81be30b1b4693c07d44b8f31054ef68fd00bf"
+    sha256 cellar: :any,                 arm64_monterey: "53839933b9d639a09762a2139d14958aab9892893945d9acf982875c9f50ed5f"
+    sha256 cellar: :any,                 arm64_big_sur:  "ff84b656ee0935b3138bfb6e824540b61f90f4e84be50c93270a84b1817a9628"
+    sha256 cellar: :any,                 ventura:        "3b12971a7e142caab9b768f70eb9acd3146c93398e59b95ca63da04f31140951"
+    sha256 cellar: :any,                 monterey:       "fb0dda69a580be48d9e5dc6fc303f7458e7da71789ae702ae0dc3e57b9d442aa"
+    sha256 cellar: :any,                 big_sur:        "fbfce89fa2745424375d0de29daac696add8cd2bd9adafcd49b81c9fdc4b520b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "163f8e9b98598500d3d4e70c6e2214413be075004ec4386d6311bc17b89479ec"
   end
 
   depends_on "meson" => :build

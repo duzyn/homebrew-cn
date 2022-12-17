@@ -1,10 +1,9 @@
 class GstPluginsBad < Formula
   desc "GStreamer plugins less supported, not fully tested"
   homepage "https://gstreamer.freedesktop.org/"
-  url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.3.tar.xz"
-  sha256 "7a11c13b55dd1d2386dd902219e41cbfcdda8e1e0aa3e738186c95074b35da4f"
+  url "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.4.tar.xz"
+  sha256 "a1a3f53b3604d9a04fdd0bf9a1a616c3d2dab5320489e9ecee1178e81e33a16a"
   license "LGPL-2.0-or-later"
-  revision 1
   head "https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad.git", branch: "master"
 
   livecheck do
@@ -13,15 +12,13 @@ class GstPluginsBad < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "2a9dfdea5613377e9272d1146bc19fee42d4e4b19aef3c3ebc66e7758e0304fd"
-    sha256 arm64_monterey: "90ab8d052e4e604af92c6f2da16c39d59edbeeb4c71468ed1f28baf5c5d25ef8"
-    sha256 arm64_big_sur:  "906df89626b77a02736354b57fea8a18cc5d66c2038fe18927a6248c39c2aa7a"
-    sha256 ventura:        "e001bb2b9450f7f5d9a30aee380ab520380fef5951449a7fb433db5bcb19e024"
-    sha256 monterey:       "6789a1ac8072824a179b5fe0d090e6af1c5c176a17bdd9ce12f4d170cffadc57"
-    sha256 big_sur:        "c32730a1408b72b32f3ec0cf4f935ad17496d455fdc9467ecf3b61c1acc99634"
-    sha256 catalina:       "e01365b988dd0b6f39c26b923978aeb9964e786489699fcffa857ac6d6da9cb0"
-    sha256 x86_64_linux:   "5afbb446595a497628aa384ef46504859db70fdfef9c1d28fbf15064c8502ff4"
+    sha256 arm64_ventura:  "13012d1dfac3c35da2601cdf180880f5a20c11a551165cb8989c82498843f928"
+    sha256 arm64_monterey: "0a46011e1de12c199ef9f29434e0ac698433897eb900b72e09f70d6b0cd0293e"
+    sha256 arm64_big_sur:  "78ef0269fbac8bcdf0820965ecdbac3fea4bdece2c5b2746b45ea178cebe565b"
+    sha256 ventura:        "15579ba1ed41f314c9f379b3ccedc7a651bfd0aec0e9d99b2cad761a7b314143"
+    sha256 monterey:       "28391708147df30000e582400c19674d484273820b72be3c5838f6f2f67b50ab"
+    sha256 big_sur:        "4d87ebee6c63ccca61b0b28f417b895e04c06e7156992b0d63c6bcc3a3ccc02b"
+    sha256 x86_64_linux:   "808d72501644b31b57aaf50d5ef1751cde9cc860830d791c2dcf59bc65b2ab4c"
   end
 
   depends_on "gobject-introspection" => :build

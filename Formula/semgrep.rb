@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v1.1.0",
-      revision: "404eb78ddbb1cb6842a60b7ec10686906fceb5d6"
+      tag:      "v1.2.0",
+      revision: "6021eba45621b4b0f7c149cf60becfb5c2ac8223"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,13 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "cf95a250c0de3a49e1b3382e11649a4e5f8e21ebd99d8020cb2d19893b3b7534"
-    sha256 cellar: :any, arm64_monterey: "4eddfe737ae2535fb5742bb670b9ef38b0f34128ae14cb918b72a8d07e723b01"
-    sha256 cellar: :any, arm64_big_sur:  "48dcc0eb6af4ed77149902dc36472e553a78cff172b1ceab6dc1f7c2cf5c031a"
-    sha256 cellar: :any, ventura:        "4b85e15495a110bfae879e5f87d27c99492eef3c761d73ca6262c80909c171be"
-    sha256 cellar: :any, monterey:       "dd1d5a3cb8695fe5eab7ac59db3926ea285bb088047c07811a0c20d0958e335a"
-    sha256 cellar: :any, big_sur:        "b4ad07f1b82a09be6c6fd997956a6947bf4731f98bcc6c6c8ea5082a2a9a6b78"
-    sha256               x86_64_linux:   "05190385421a7d3bc857c7b4caf38d68b9c7d7620f3ca4556c13b40368caff17"
+    sha256 cellar: :any, arm64_ventura:  "0c530a7546d20baf1e3d2c10cc74e03dc4ba2c7a0e8dcbc65fd01e2aed88fcbb"
+    sha256 cellar: :any, arm64_monterey: "fad60789be6229c0975830f3e5ae35fb50614e1ccd8c8416ef7ae0948346b9a4"
+    sha256 cellar: :any, arm64_big_sur:  "b9f9662abf8b6ac3c35ac2f2c45c7180c19a7cd62145e78a5130b06f1e014fd4"
+    sha256 cellar: :any, ventura:        "8c2f12f8ae3c64759bf96a72a689987aad631a6d44305480bc0a822a9b7f0f54"
+    sha256 cellar: :any, monterey:       "dd40c4c1666f9c6d95e76304b2fd655c4a7de24b0c2cae56c5f2f437b3defda1"
+    sha256 cellar: :any, big_sur:        "bd98d6c4c64ac47bb7d161be28fc74d9e776c8bd8d2c534e73b383dde97b7fa3"
+    sha256               x86_64_linux:   "d534a92397d6b3b0b1c749cea10b47fdb436ca2dbaec800105d9c90365959d4d"
   end
 
   depends_on "cmake" => :build
@@ -56,8 +56,8 @@ class Semgrep < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do

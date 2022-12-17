@@ -1,18 +1,18 @@
 class Libice < Formula
   desc "X.Org: Inter-Client Exchange Library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libICE-1.1.0.tar.xz"
-  sha256 "02d2fc40d81180bd4aae73e8356acfa2a7671e8e8b472e6a7bfa825235ab225b"
+  url "https://www.x.org/archive/individual/lib/libICE-1.1.1.tar.xz"
+  sha256 "03e77afaf72942c7ac02ccebb19034e6e20f456dcf8dddadfeb572aa5ad3e451"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "fa2c5df01e83c86a5130826e0bf9b9752d8882d135a3b5c690b97d43158e5d89"
-    sha256 cellar: :any,                 arm64_monterey: "cbbaa9a97687b280ea61a3495f1aefc45f23f646dc3e5fced4a5e2ae21b81770"
-    sha256 cellar: :any,                 arm64_big_sur:  "87b827a30308818f51d001943f240161c528603a5d28f925f53a3a2b8962a375"
-    sha256 cellar: :any,                 ventura:        "bf5ceabea0dcac1840788fd7a3c59177691795fecbc26a0fbf27be41d0ca6447"
-    sha256 cellar: :any,                 monterey:       "e8efaecd284e34f63f62014a4994b038f278cfa98c464516b79a3c8777c784d2"
-    sha256 cellar: :any,                 big_sur:        "849e7928d4ec633c0f043474f2461850e16ee37d2d2c222e4515999c4db7f4c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb765b7d87b1d54755316332ce323bfe222c76a327a686e9fbc4b6b395ce9d97"
+    sha256 cellar: :any,                 arm64_ventura:  "4b76f982119e65321f62bbb740a549d08f280ab7055496210ac78acf6505a6c4"
+    sha256 cellar: :any,                 arm64_monterey: "2b30372decf9b63bb1c02d6dabe2eb8216eefd7abbb71e902863ceac1633dcaa"
+    sha256 cellar: :any,                 arm64_big_sur:  "34577a485f10e25e38e27606158bd082e460a36874532bbc0e720bd71f5b9db8"
+    sha256 cellar: :any,                 ventura:        "be08a5e12f40f1f2e5fc780ca8735969a41b5f2f5d5994788721de92120828bd"
+    sha256 cellar: :any,                 monterey:       "a6c573ba977c781d5d6c8a5a361ed109b7bdb94f8ba0907a0ff4fc69cd425baa"
+    sha256 cellar: :any,                 big_sur:        "041d92a0fbdd7f581ac42bf05d63ff8156c52d5ce6218b92aa0929d221ece18c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aed9bb2a55522c29d05b499b235181e2474d34e242991238e8322b3d8222ecb7"
   end
 
   depends_on "pkg-config" => :build

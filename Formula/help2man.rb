@@ -1,21 +1,19 @@
 class Help2man < Formula
   desc "Automatically generate simple man pages"
   homepage "https://www.gnu.org/software/help2man/"
-  url "https://ftp.gnu.org/gnu/help2man/help2man-1.49.2.tar.xz"
-  mirror "https://ftpmirror.gnu.org/help2man/help2man-1.49.2.tar.xz"
-  sha256 "9e2e0e213a7e0a36244eed6204d902b6504602a578b6ecd15268b1454deadd36"
+  url "https://ftp.gnu.org/gnu/help2man/help2man-1.49.3.tar.xz"
+  mirror "https://ftpmirror.gnu.org/help2man/help2man-1.49.3.tar.xz"
+  sha256 "4d7e4fdef2eca6afe07a2682151cea78781e0a4e8f9622142d9f70c083a2fd4f"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f5b0bf73ebf258cb4870683c6baf8a4a029d3c46c2996413a6602ef049baf6cd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5b0bf73ebf258cb4870683c6baf8a4a029d3c46c2996413a6602ef049baf6cd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f5b0bf73ebf258cb4870683c6baf8a4a029d3c46c2996413a6602ef049baf6cd"
-    sha256 cellar: :any,                 ventura:        "364fc43f7b2281c96d22494ed9f2eccec465a00cceb8e7e3169213aab6b51232"
-    sha256 cellar: :any,                 monterey:       "0481c92c77f5a3fd47271eb8a4ce4e69ac65cdd9725648fa395a2e0c5a72a30c"
-    sha256 cellar: :any,                 big_sur:        "9ad7fec41ef9f551d6fa6b0f15cc0bce69253daf0e2d1e2c0f25b14d5ca2c045"
-    sha256 cellar: :any,                 catalina:       "758ca628b5bd9e705848c5ec78b2c00d61cd1a5b4363751ccc06bf146b019c72"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e934fa20f035226d407cb5c429ee6ae91b95710a4fd2c4445b26438d56c3450"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fba233e327acdda68edc9c3af88122aeee734e6636e3da2f9af15e9730f13b0e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fba233e327acdda68edc9c3af88122aeee734e6636e3da2f9af15e9730f13b0e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fba233e327acdda68edc9c3af88122aeee734e6636e3da2f9af15e9730f13b0e"
+    sha256 cellar: :any,                 ventura:        "63016e1dab1db06d4bfb4a8bd6b28ec76973c3e6ae61ae2cdc98fb413b4c8bb1"
+    sha256 cellar: :any,                 monterey:       "8219610cec9b20f4c4a6f50a836d2cc545045a1a2f285d4be5b03300b96ba760"
+    sha256 cellar: :any,                 big_sur:        "e84b7251622aaaa026961c936de0802bb8aa02bbace010765b9c75d941b819e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3180d4a66aea5c6fc513255d36cbc34bc97d155361965cb93de87e206a1d2ea"
   end
 
   uses_from_macos "perl", since: :mojave

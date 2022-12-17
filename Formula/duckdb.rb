@@ -7,26 +7,23 @@ class Duckdb < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f04816e93e6beaedb8181a3b56eaf3a9896540e5a2f69de9447eb9042f8148e9"
-    sha256 cellar: :any,                 arm64_monterey: "59c7ba61892ae55255c72c5be0753b0ce8d618f0b7c66a5994e757c0e5f90d5d"
-    sha256 cellar: :any,                 arm64_big_sur:  "00a4cdabbfa3a66d5255c62b063358c0fb54cbae0365d00c7f9c0d97d60d9ba4"
-    sha256 cellar: :any,                 ventura:        "ee18a8a94d21bb9521a553683e09a868879a4477836d10afd27fd6768d94afc0"
-    sha256 cellar: :any,                 monterey:       "427077f959add9d23f75e2a01ad19d31024162958b2b3a3d76a94932bc283ec3"
-    sha256 cellar: :any,                 big_sur:        "690498b4d19dc171ecaa5dd469c5b3ba24fbdb833b6c4b7b769c83fd73518d32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a66be4e86280eff90ffedacc07d4842d80f6b8d7f3d8edc294b4a4e466dd3b87"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "850a6d47aff870828513ee176e1f8132f76a4f533cf641cb32a942c4731dc770"
+    sha256 cellar: :any,                 arm64_monterey: "fd8791cb44e2261565dbe9cad94c1894134703ab430be64df06325c55c768414"
+    sha256 cellar: :any,                 arm64_big_sur:  "5f8b7c1746c9efbadc9858db48c7cb6b7fc86e09fdd4502389f15605d379abee"
+    sha256 cellar: :any,                 ventura:        "f8ec3cf2dc4bfe6fce10f7acbdb8a28ef1f7c43c53b11011904fb7dca2adc4f7"
+    sha256 cellar: :any,                 monterey:       "d44430150352cbc82d661818c7a46484f78e9dae0532430149eec2042f716ff9"
+    sha256 cellar: :any,                 big_sur:        "b66ff299905039374bb6fb2f685f9691f22aafbf23b45aef3b7614bd0b65f46b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c6fe2bdcc79e08538d07c204627217eb2f952e1d7db471645280e6f8e54e1d0"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.11" => :build
 
   def install
-    ENV.deparallelize if OS.linux? # amalgamation builds take GBs of RAM
-    mkdir "build/amalgamation"
-    python3 = "python3.11"
-    system python3, "scripts/amalgamation.py", "--extended"
-    system python3, "scripts/parquet_amalgamation.py"
-    cd "src/amalgamation" do
-      system "cmake", "../..", *std_cmake_args
+    mkdir "build"
+    cd "build" do
+      system "cmake", "..", *std_cmake_args, "-DBUILD_ICU_EXTENSION=1", "-DBUILD_JSON_EXTENSION=1",
+             "-DBUILD_PARQUET_EXTENSION=1"
       system "make"
       system "make", "install"
       bin.install "duckdb"

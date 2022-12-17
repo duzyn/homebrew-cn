@@ -1,19 +1,19 @@
 class Mcfly < Formula
   desc "Fly through your shell history"
   homepage "https://github.com/cantino/mcfly"
-  url "https://github.com/cantino/mcfly/archive/v0.7.0.tar.gz"
-  sha256 "11b88dcf0770fb5f6394d1f15225330ca5da27610d6a2764903b8d79f9062412"
+  url "https://github.com/cantino/mcfly/archive/v0.7.1.tar.gz"
+  sha256 "75bb4e64bcfe339181baadb8adc1ec47001d3e0fb5d20c6e13ec3e071076d4dd"
   license "MIT"
   head "https://github.com/cantino/mcfly.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ca7130975f99dd894a1353ec889e0fe958adbed33eca9c4f7ca0a7ecd625c8b0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "90a8ce1d73a673f2cffe746a54b6b202bf00466910de92196eebbb01c5133fb9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3e443adb5bcaf77ce53f4359d8b76cf760f4007bec0c8ac72045a84ea495da1b"
-    sha256 cellar: :any_skip_relocation, ventura:        "8729eb0e5d20307a4e8711d5482a426eca1e3fdc248627afb98c8848326fded3"
-    sha256 cellar: :any_skip_relocation, monterey:       "37d992cd851df92ff652413f397f162f86d4b548de627cb50b96b5a8b964da04"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b7529119d95ce8a773a2da17d0b545076fb1454e1cfce88b7445815c8d014ab6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22cfbe983d967729b4c2a940dfe02b72176801d1763b12a8d3118e7042beca46"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aa820545b749cafbd43b55a352cbde01c547208cbcf54af175427891d4a6f48a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "db4d5dd16e36ce2fdcaa29cc70fb0d4eb6d9cf4dd62f11c0d48b58c5b0f9d999"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "358ad877dc790c5cbd55737e6a5aba2b51ae0a067a2be98b598e494e3c73465b"
+    sha256 cellar: :any_skip_relocation, ventura:        "f15782845fcf66c5b4f190dc0dcef7606ab32b6ea1382d61d72bd3b101e61367"
+    sha256 cellar: :any_skip_relocation, monterey:       "29275577177be5f89af9179d6fa47b1c4b9b180173080be928ac1386312f101a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "aec022619e09a10a0f1feea4ec67d163976f9f5a2e703581d1e62bec488ebef8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a84fb6f4d7479f37925849ba6811811341bbbac5ea9db601955fa661dd051f9"
   end
 
   depends_on "rust" => :build

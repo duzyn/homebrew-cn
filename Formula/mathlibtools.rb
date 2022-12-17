@@ -3,19 +3,18 @@ class Mathlibtools < Formula
 
   desc "Lean prover mathlib supporting tools"
   homepage "https://pypi.org/project/mathlibtools"
-  url "https://files.pythonhosted.org/packages/29/e4/3b36dc61c23a72d52d9f406a9891c50acd8dec68c22ccc084ece6d5998a5/mathlibtools-1.3.1.tar.gz"
-  sha256 "1f0b66ac31889c22391e5faa865fbb84e049dd4c7483c223a0055ae2201c725f"
+  url "https://files.pythonhosted.org/packages/ae/6a/815d7f65dc853973b13be082fefe797074e633407ef1262a62bc0be84203/mathlibtools-1.3.2.tar.gz"
+  sha256 "9a49f4cb7355fda72792a5738bcc5df927b1e102efc719adfbe16db199a0ac6b"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1aededa5ca543dae36463c5437ede1f02fe44e30a414a6eb0d4cfb95592d25a7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1a875bf4a3a15143424a2ad3c55875cb65f60d44d558c46f54dcf0081a7bb54"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "00d3873e35b1cc7690536bce377587d2f5148f0f63aa772632228fbe05308db6"
-    sha256 cellar: :any_skip_relocation, ventura:        "9631a855c8c3f3bb800ea79161e898c024c29a083e0e7b8e7b9153aa10dcb9f9"
-    sha256 cellar: :any_skip_relocation, monterey:       "63cafdaa61781439aacb656f8d76c505d463791ea074fa4f1b77f2194c22ecfd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7e29ee785c2f2522619ac5c1006e88d37ffac4f187d3d8256496000675260d97"
-    sha256 cellar: :any_skip_relocation, catalina:       "7a4dda02e9537110e91a5df5b9ae9a66a8f596e9225371e8da314d35944245ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c0251441baf8cd9a669d5443ebb7b4a80143e2f7a8de77340d65a710d7619aa"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "940e38f6150431f45785287cb18663dd9a52c354b1b7f1389387ebc2bb42c74f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a4424ef9a8163027682c78b8a882367fd5edd0fb790e9d3dd35b3467a93131f2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce2453e8e82e4b85709c186dd4b858e8e4bc52a8679e805e96bc3c80cb34ccf1"
+    sha256 cellar: :any_skip_relocation, ventura:        "b991e8849ea23efc0b22fa2d57073b654e7581daa3ed2779017c4f69804e9925"
+    sha256 cellar: :any_skip_relocation, monterey:       "a162b23aa0561fe6cbeae78ec64c72b4101b1abb5bc9c56842373ea498c90535"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0388f2831031ed84aa8ea64abfb250fa11140f39f9970973ffae7da2b02e23dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f374f3d8156b4af5ff014db4c3578e9338ab504665b76b8b2fcf4262efe9398"
   end
 
   depends_on "lean" => :test
@@ -29,8 +28,8 @@ class Mathlibtools < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cffi" do
