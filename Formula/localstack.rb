@@ -3,18 +3,18 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://github.com/localstack/localstack"
-  url "https://files.pythonhosted.org/packages/27/6e/e4f3b2a4fe3d4fc067694d8094656cb392696e296d83a1cf58fcaa06b8aa/localstack-1.3.0.tar.gz"
-  sha256 "0bc5b9c86ee5ef8babfeef3981a26d546be716de1573c37d9d84509c3e0e92bb"
+  url "https://files.pythonhosted.org/packages/35/c0/f10f425501818714511db8a1551c46d5abda04b4b3fa180a0ff7a3ec03c4/localstack-1.3.1.tar.gz"
+  sha256 "e3eb32654ee84e706d04086a875a482a0496e3440971d67ed62a4f10fb41e6c1"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "dfb578162beda968a8461643be9bf8ec8852c4d90c6ceae06ef091202fc7d08c"
-    sha256 cellar: :any,                 arm64_monterey: "447fad2db094efa4775076ee3197231716e949dd5378e54eb630dc514ae71451"
-    sha256 cellar: :any,                 arm64_big_sur:  "2870ccf9393d9a4db773a2013b6191b22c8304f18f84b9c0a50c170d0fd9b8d6"
-    sha256 cellar: :any,                 ventura:        "24604d4bf4e138662a3d92530eda375137158b524bba6d055118563bc0f3a853"
-    sha256 cellar: :any,                 monterey:       "e50274c7c6b4126f3a00dd0e44124214bb25c4dbdfa8371abc5a7f0409c6ca29"
-    sha256 cellar: :any,                 big_sur:        "9bb581e182708fc32e799433e1f2220172bbb70917fb19e79960a5dd738c740e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59c77cd9eda9426418c4cff020f77a524613d283e31a9288ce8c12cbfdd5ae0f"
+    sha256 cellar: :any,                 arm64_ventura:  "2cdc47252b2d33584bc05e3adff586fc37646bfb51fc51b88586168b102b1714"
+    sha256 cellar: :any,                 arm64_monterey: "c9c25b10680d052400c89256649251a1fb4eef4af938f772b83af284fab98712"
+    sha256 cellar: :any,                 arm64_big_sur:  "de286d7a53af25abcded2d2b887761ec10b491ccc535d13abcba7ea1f69eff23"
+    sha256 cellar: :any,                 ventura:        "0aae582eff927c31117a45371835e42563c1cbeda16784304dd1afe1b7059825"
+    sha256 cellar: :any,                 monterey:       "a2a8bf09476977e45bd6e2fa53555926ca618a4b6efb84e7eae7a4e10e5295f7"
+    sha256 cellar: :any,                 big_sur:        "e1c88b79a4dcb47987d83be375205f97091f4512d098a25afce6d8d99203c934"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "33a83db870e571050f99d988d144f27f3d17f73471292a447c503c3e386883e9"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -46,8 +46,8 @@ class Localstack < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "cffi" do
@@ -111,13 +111,13 @@ class Localstack < Formula
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/47/fb/bd1f36bca51edc9717bcc4d585e2824d8c0c83dd4014fe620108e74f9d72/localstack-ext-1.3.0.tar.gz"
-    sha256 "bbcd18a2029df3b4b45cad84bd10ac6b671914d424b25cb33ee8106d34ed788c"
+    url "https://files.pythonhosted.org/packages/f9/7f/531135f2bacfb7ad97f1541a9742f274325724a755607f9c020609132c34/localstack-ext-1.3.1.tar.gz"
+    sha256 "ccc18a1932a899dbb2761380c5f89ffc269fd502621b69b18a0e1afbbf3d4897"
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
+    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
+    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
   end
 
   resource "pbr" do
@@ -148,11 +148,6 @@ class Localstack < Formula
   resource "pycparser" do
     url "https://files.pythonhosted.org/packages/5e/0b/95d387f5f4433cb0f53ff7ad859bd2c6051051cebbb564f139a999ab46de/pycparser-2.21.tar.gz"
     sha256 "e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"
-  end
-
-  resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
-    sha256 "2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb"
   end
 
   resource "python-dateutil" do

@@ -1,8 +1,8 @@
 class SwiProlog < Formula
   desc "ISO/Edinburgh-style Prolog interpreter"
   homepage "https://www.swi-prolog.org/"
-  url "https://www.swi-prolog.org/download/stable/src/swipl-9.0.0.tar.gz"
-  sha256 "d607733a776ca56b3ecb2118119d4ae08a8790ef4aaa08bbe8f2279f34fba4b8"
+  url "https://www.swi-prolog.org/download/stable/src/swipl-9.0.2.tar.gz"
+  sha256 "33b5de34712d58f14c1e019bd1613df9a474f5e5fd024155a0f6e67ebb01c307"
   license "BSD-2-Clause"
   head "https://github.com/SWI-Prolog/swipl-devel.git", branch: "master"
 
@@ -12,14 +12,13 @@ class SwiProlog < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "dad61a951cffa77ceb44aecafc285beafe76d08edf23b2520a1c03f3b7a631da"
-    sha256 arm64_monterey: "96a4d387468c9c72a7c156d6fb840cfca4f2801c8fd614196c137340c7223e77"
-    sha256 arm64_big_sur:  "4e979626e5e8bac0dcb34fc8312471fdc3132cfdbca9bba558b48d82fc48f521"
-    sha256 ventura:        "797bcd246f7b018e5a09de85f89c25f931a1cc08bb619ddc0edb80c1c730a421"
-    sha256 monterey:       "b30ae2ffde43ff63f9998f65546d4d02e8efa3aae0d82964173fa8ed50e3d171"
-    sha256 big_sur:        "629a08d96c0e958a3938567b07dc65e8dbc12985401396d4f74f7c0b924832cf"
-    sha256 catalina:       "268f7ae65b31dc579a80c985688a7638829af9ad73b9a6e453b5cacb89bdb0ae"
-    sha256 x86_64_linux:   "304b23b5ca22215e33415000849b0a36c267e3db3a81f13f9fd0da0aa7f896d2"
+    sha256 arm64_ventura:  "1cc32faa27bb1c02936d37d49adc58be62875e7ec8baa4951892aed260980836"
+    sha256 arm64_monterey: "e0c23800c4cc715e24ef922d114c69b63eb06c91a4b2554145c79de3d19a6aba"
+    sha256 arm64_big_sur:  "49284384aad776c9a4a6d7edb865b3c7bb126b5f7a9ed79c639a02ff44bc0e04"
+    sha256 ventura:        "a8348ee2ecd50798953e7c5a69d2980362d76a7c4f93a8323161184964775dbf"
+    sha256 monterey:       "4c9da59192f8dc392146520c8b45833e2afbabccddcf1e4f8b8dc054f0c0e2f5"
+    sha256 big_sur:        "ffc5e044ef693e2eae4900d85816a9646f5df6058d8dc97e93835f8bc0e30303"
+    sha256 x86_64_linux:   "f0fcf9d10f8bd96df32886daf7c79e7a949074f9c206caddd7e2a179919f04c9"
   end
 
   depends_on "cmake" => :build

@@ -1,8 +1,9 @@
 class Wumpus < Formula
   desc "Exact clone of the ancient BASIC Hunt the Wumpus game"
   homepage "http://www.catb.org/~esr/wumpus/"
-  url "http://www.catb.org/~esr/wumpus/wumpus-1.7.tar.gz"
-  sha256 "892678a66d6d1fe2a7ede517df2694682b882797a546ac5c0568cc60b659f702"
+  url "http://www.catb.org/~esr/wumpus/wumpus-1.9.tar.gz"
+  sha256 "41cfb4e1cacf2e94e52aa8f7edd3c7e1902e3d6be998ee007ada570d8b1146cf"
+  license "BSD-2-Clause"
 
   livecheck do
     url :homepage
@@ -10,16 +11,13 @@ class Wumpus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5e0c5273522a83dc13595e60003e11721b10290bd3c51724dabe63fc9a23c05f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c30d039fdfa46df8f14bf9f881b7bf07e33405f0eb0a1d3c84007b66a3ad06d6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e1c53ffe64c591ac7e32ffe612d86a043588d0b6d5f63e0d8091dbcaa8af6d8"
-    sha256 cellar: :any_skip_relocation, ventura:        "4e280ae019d55dba2551f4365150a3a294f52eeac218c2caca7d8f939551ba94"
-    sha256 cellar: :any_skip_relocation, monterey:       "65d79495cff080e070b1d3715968fd8f2ccd06e3ad7786ec995094cba248c18c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ac3f0b19f9510c8599a213401973d1cac9a0cb575bb8caa0be97d944dc94f765"
-    sha256 cellar: :any_skip_relocation, catalina:       "49bc794562f3b9a0ad5799b5fcd2d63a5f866b9b6dc7a4b0d80988c388ee3726"
-    sha256 cellar: :any_skip_relocation, mojave:         "e6881d8d217cebdd71e430c4ec8701d369d1ca03bb8724d30977b467d7422d83"
-    sha256 cellar: :any_skip_relocation, high_sierra:    "006271b20835150dcf3006041f7053adf26a3ec58f9549029d14c844a53570c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "375c8593dd6ee43951957cb526250db1e0950c29cffd23edceb0d6048d44bb80"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f3d3dd70c7e51fb37a91045f44dc229173d0f19ae86bd78e2a5384cd7ee54b34"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "372fecaade15d59382721760067f03f049d54f59f9881f2e607cef6f41738064"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b44ffe5c362b951f60bc3d9c1f85ead53ce8b719d6576c0a3ed149533c03d135"
+    sha256 cellar: :any_skip_relocation, ventura:        "48ef93d16c2a23d054fef94bee5d96c350575aa592406551a31152b6e5cbb4e0"
+    sha256 cellar: :any_skip_relocation, monterey:       "91855ad6e374529fbb0d1afa7ee9d43a1341f4c34fe61358ec8875e5c7e45b8e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "61beb0e786b6dd643c73193ab7316af45a72a91fc3771f3b06e79b0e11ec463c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa32a9e09d3b96fe8d4c7d86be19674a5a0996aa233d41cfb2632b1e40ac2669"
   end
 
   def install

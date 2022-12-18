@@ -1,8 +1,8 @@
 class WasmMicroRuntime < Formula
   desc "WebAssembly Micro Runtime (WAMR)"
   homepage "https://github.com/bytecodealliance/wasm-micro-runtime"
-  url "https://github.com/bytecodealliance/wasm-micro-runtime/archive/refs/tags/WAMR-1.1.1.tar.gz"
-  sha256 "3bf621401e6f97f81c357ad019d17bdab8f3478b9b3adf1cfe8a4f243aef1769"
+  url "https://github.com/bytecodealliance/wasm-micro-runtime/archive/refs/tags/WAMR-1.1.2.tar.gz"
+  sha256 "976b928f420040a77e793051e4d742208adf157370b9ad0f5535e126adb31eb0"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/bytecodealliance/wasm-micro-runtime.git", branch: "main"
 
@@ -12,14 +12,13 @@ class WasmMicroRuntime < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "d183e21e3bc95938af7d943e6cb19f980217d3e08fd13835eeff6089f5fce073"
-    sha256 cellar: :any,                 arm64_monterey: "c0a38b9109ed9cfcc6901184052eb0811be19df85544ff94ff717a0274d8f1b8"
-    sha256 cellar: :any,                 arm64_big_sur:  "1ed6f1071d65b77470021148d12125a262f0726681c41129eb90c9d9004bf324"
-    sha256 cellar: :any,                 ventura:        "795a748d1f83f60ff0fe215df8b09e458e0737dee9727fe28dfeed006bb89373"
-    sha256 cellar: :any,                 monterey:       "41c55c28ada9093a6c209ead50434ef9a24f9c36dde0b022c81912f994bc3f3c"
-    sha256 cellar: :any,                 big_sur:        "331144af23c53902d36da43c7ec3e5413972c5fe597cb27d06d943f79b3c3afe"
-    sha256 cellar: :any,                 catalina:       "04cbf45e45f900656f6268ff7a9a8f4a17aa9ac13175c29397bbbbc8972267f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "364da77f31320195c2639c54c0a62e8a63758638ba2977b941d95d589681e223"
+    sha256 cellar: :any,                 arm64_ventura:  "b6b4ebd54943c1d7ddebadf23a08c65e6baa5c548c52bc6683b9e6d98096084a"
+    sha256 cellar: :any,                 arm64_monterey: "3c7708981cb7a8620405cf91691c52401024201378419c7c2eec1f52c23fc8b2"
+    sha256 cellar: :any,                 arm64_big_sur:  "d58f7a78701696b263e8d6a96d9c83542351b5f3332d4e7a034e4f7df874e73e"
+    sha256 cellar: :any,                 ventura:        "516d902ca10fe5e2e5921de94fa4b4f8b787ffef491c52865405141b0ede0394"
+    sha256 cellar: :any,                 monterey:       "2c03d6dcf302f74f94738670765973e66652a024f23fc9f1a5fd3c7fbee5eb78"
+    sha256 cellar: :any,                 big_sur:        "75a1d108bcc7d686cdd3308569e2cbaf55a7a98d1a3c1218c4813c14406b2b94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "28d42609175ac5a44d5eb65fc4adfab34b8986e35bb867e5e2013f3a1cd64734"
   end
 
   depends_on "cmake" => :build
@@ -55,7 +54,7 @@ class WasmMicroRuntime < Formula
   test do
     resource("homebrew-fib_wasm").stage testpath
 
-    output = shell_output("#{bin}/iwasm -f fib #{testpath}/fib.c.wasm 2>&1")
+    output = shell_output("#{bin}/iwasm -f fib #{testpath}/fib.c.wasm 2>&1", 1)
     assert_match "Exception: invalid input argument count", output
 
     assert_match version.to_s, shell_output("#{bin}/iwasm --version")

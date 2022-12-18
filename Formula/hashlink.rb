@@ -1,18 +1,16 @@
 class Hashlink < Formula
   desc "Virtual machine for Haxe"
   homepage "https://hashlink.haxe.org/"
-  url "https://github.com/HaxeFoundation/hashlink/archive/1.11.tar.gz"
-  sha256 "b087ded7b93c7077f5b093b999f279a37aa1e31df829d882fa965389b5ad1aea"
+  url "https://github.com/HaxeFoundation/hashlink/archive/1.12.tar.gz"
+  sha256 "7632840f4f64b06662210858418c6d26b8492cf7486a4e86ebe242e27cf8babd"
   license "MIT"
-  revision 5
   head "https://github.com/HaxeFoundation/hashlink.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "f1122b430ddaf2dbce15063d9e39e0bf63fb168aa9f3f1efc36dbf0a14b8c66d"
-    sha256 cellar: :any,                 monterey:     "dd59e2432f05225f3eb9601fce04278d694c6d164a6a713be968ef04b4c81e4a"
-    sha256 cellar: :any,                 big_sur:      "1116d33cba9669325b72a9d2567a79469887886d2da656b37a94a0094b1965d1"
-    sha256 cellar: :any,                 catalina:     "f64cd8e07074671d1e4322246e87b586c1dab39d97c92e70238a3c89d8a5a3c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6e014cc31747cbe3825c7748e293501c7622d3e9dab87095d918e768446dabb2"
+    sha256 cellar: :any,                 ventura:      "aebc07d5b327f360bf8a98075f372ddddfa5d82c5e3c8c73b4448b36daf95476"
+    sha256 cellar: :any,                 monterey:     "6ceecb580787e3968b24652cc90198895524bf6208a49f36a2a59df2b7fedaff"
+    sha256 cellar: :any,                 big_sur:      "0de282297d22fabbcaa317504bb44318e5530c70490d23cb36300c374a1bfbd1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1622942df58df95150ebcb84d1535e3b98b9934ac13dada76f45b63befb8de16"
   end
 
   depends_on "haxe" => :test
@@ -31,10 +29,18 @@ class Hashlink < Formula
   end
 
   def install
-    inreplace "Makefile", /\$\{LFLAGS\}/, "${LFLAGS} ${EXTRA_LFLAGS}" unless build.head?
-    # On Linux, also pass EXTRA_FLAGS to LIBFLAGS, so that the linker will also add the RPATH to .hdll files.
-    inreplace "Makefile", "LIBFLAGS =", "LIBFLAGS = ${EXTRA_LFLAGS}"
-    system "make", "EXTRA_LFLAGS=-Wl,-rpath,#{libexec}/lib"
+    # remove with 1.13 release:
+    inreplace "Makefile", /PCRE_INCLUDE =/, "PCRE_FLAGS =" unless build.head?
+
+    if OS.mac?
+      # make file doesn't set rpath on mac yet
+      system "make", "PREFIX=#{libexec}", "EXTRA_LFLAGS=-Wl,-rpath,#{libexec}/lib"
+    else
+      # On Linux, also set RPATH in LIBFLAGS, so that the linker will also add the RPATH to .hdll files.
+      inreplace "Makefile", "LIBFLAGS =", "LIBFLAGS = -Wl,-rpath,${INSTALL_LIB_DIR}"
+      system "make", "PREFIX=#{libexec}"
+    end
+
     system "make", "install", "PREFIX=#{libexec}"
     bin.install_symlink Dir[libexec/"bin/*"]
   end

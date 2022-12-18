@@ -1,20 +1,19 @@
 class Cgrep < Formula
   desc "Context-aware grep for source code"
   homepage "https://github.com/awgn/cgrep"
-  url "https://github.com/awgn/cgrep/archive/v6.7.1.tar.gz"
-  sha256 "ba38c17ad5e6601c5d6bec371940898b713f74c910f755f5f743a52998ac5efd"
+  url "https://github.com/awgn/cgrep/archive/v7.0.0.tar.gz"
+  sha256 "87c596447882b3acf0a754ac52ac1b5314961e652708a25ffc49ec5977b1f11a"
   license "GPL-2.0-or-later"
   head "https://github.com/awgn/cgrep.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b57aecdb5cbd65e0e432300fdb6dd99809b21a5ffd449d1c9707f87988a811f8"
-    sha256 cellar: :any,                 arm64_monterey: "dc1dfe6ff0a88a1e8780ed1079c33230f78082ba4434c990d8a8cfcdf76ef89b"
-    sha256 cellar: :any,                 arm64_big_sur:  "ef954d3f2e1879f05a667b23aed866f2db7d87984ffe1d6402a35a2328f13454"
-    sha256 cellar: :any,                 ventura:        "4cb284a52c8ac573adcd6651a7483f0cde582a0eceb7b150ece23c4f418b6984"
-    sha256 cellar: :any,                 monterey:       "71686413fa2c85c8492b5abe85fb479d052005a18ebf90eab05da083d7ea3bf6"
-    sha256 cellar: :any,                 big_sur:        "3518bc205f0ddf5b4944b92360ba3980aac3b76f63731b31c1c349fca9bf548c"
-    sha256 cellar: :any,                 catalina:       "2730977f95916aaad571374e3432b059e1b9d9910fe840e31e37471a6288f0bc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e7152c7dd442a3c0ba0c4ea55fc8f46348bd3733b6e17f2b0472a5baad2ab7a"
+    sha256 cellar: :any,                 arm64_ventura:  "e17cbf5d7586ca6412b44e1ff1a83a944fc445bddad20292a92592d981bc41ab"
+    sha256 cellar: :any,                 arm64_monterey: "2655867717a9a2bc1db99c238a0a0d20794266480058a8e559fa97c40931b9f5"
+    sha256 cellar: :any,                 arm64_big_sur:  "6f559f1d9f6200d473916385605b98df079ff0a73f20c72c88fa5da0daff2e32"
+    sha256 cellar: :any,                 ventura:        "029ac12193d1a6b4435af4fae22a11c36c160ddeb78ab7fb0d1813972fe7362b"
+    sha256 cellar: :any,                 monterey:       "a9b7915b8f024de06e3112954f71da9b833e4bce365985c323128ff5f7c5c3f9"
+    sha256 cellar: :any,                 big_sur:        "da78325ef5883b34580775cb8edbebcca3eb587631744e9d0edbd8381a9552a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f5f2576e078a73d016397fffc8f26a8c1aafc176286bf885e16cee0f37b6abe"
   end
 
   depends_on "cabal-install" => :build

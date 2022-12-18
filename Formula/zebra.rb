@@ -1,10 +1,9 @@
 class Zebra < Formula
   desc "Information management system"
   homepage "https://www.indexdata.com/resources/software/zebra/"
-  url "https://ftp.indexdata.com/pub/zebra/idzebra-2.2.5.tar.gz"
-  sha256 "747714b33b653cbe5697193703b9955489fa2f51597433f9b072ab2bf9cf92bb"
+  url "https://ftp.indexdata.com/pub/zebra/idzebra-2.2.6.tar.gz"
+  sha256 "694532352cda6ba896607cacd7f090e9fce11e5944e52a2e58ec8d503b4ba75f"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url "https://ftp.indexdata.com/pub/zebra/"
@@ -12,14 +11,13 @@ class Zebra < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "e5031d8103e0a12a8250de2075d552577c3920e6dd5910506c126ad78339c2d2"
-    sha256 arm64_monterey: "8bede656eb92a62100fbef7242bc5983698621e2e197bbcae466ab9f3ff2c51d"
-    sha256 arm64_big_sur:  "3f306cc62317d8a0ace3904ea87cfbe2b87b86eb1b8a1261650d2142ed9670cd"
-    sha256 ventura:        "11256e93155452cc87c258f460ec2360d35bbbdeea07db933445523fa0c77a43"
-    sha256 monterey:       "4edf6fa6edd68cdd84f0160b2da734a11d1ea9ee3dba66f123d3a67786c8d6db"
-    sha256 big_sur:        "c4bcb8868fd1ad665e0b3793f63c3c26a2faf94be04c5bacc6cd3db12d6661d6"
-    sha256 catalina:       "f18e747b339b6df99dca4aa709d2545575a0f3f5cad7f1d1f76b9544ea7b8a39"
-    sha256 x86_64_linux:   "943a68df4bb5c465878db259e1865c9b181fc58b9af18eb57f6db5cbb5432363"
+    sha256 arm64_ventura:  "7a6cd8e88d334c6e578076d91e6de3cdcbe49579151e4c3f2aa261994ef9538e"
+    sha256 arm64_monterey: "d314c9a4b110d1ad1f59168cdaab3933eafc1974300d681e2a1e73e4d90f2a0a"
+    sha256 arm64_big_sur:  "cd218c0638852ca83e1e5c71e2a59f0a55bdd7793e85187289a9b9166f27f2fd"
+    sha256 ventura:        "33a6649d588718fd1e0b9e10504390c04562b8c5fc40bafb31088d4b107cc61a"
+    sha256 monterey:       "3e4e05389b5e6f3b9cd200ea8f5b04411c18867ec10070236af64286f3890cdc"
+    sha256 big_sur:        "36ea919889f235dd20e3043c6842aaaf20b8695eba96603a696afd30d0007ea7"
+    sha256 x86_64_linux:   "fc92eb9f67ee692c382a50e87c91bf000f4fc7941e3e285ddecd761544be389b"
   end
 
   depends_on "icu4c"

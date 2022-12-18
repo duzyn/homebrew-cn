@@ -1,10 +1,9 @@
 class Latexml < Formula
   desc "LaTeX to XML/HTML/MathML Converter"
   homepage "https://dlmf.nist.gov/LaTeXML/"
-  url "https://dlmf.nist.gov/LaTeXML/releases/LaTeXML-0.8.6.tar.gz"
-  sha256 "9529c651b67f5e8ddef1fd1852f974e756a17b711c46d4118f0677ad0e6e9bb1"
+  url "https://dlmf.nist.gov/LaTeXML/releases/LaTeXML-0.8.7.tar.gz"
+  sha256 "25da9d9440779dec0dadd4cc2d4227e8eab87437c0719877274dcfb906a4cc79"
   license :public_domain
-  revision 1
   head "https://github.com/brucemiller/LaTeXML.git", branch: "master"
 
   livecheck do
@@ -13,14 +12,13 @@ class Latexml < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ca5af78778b383947ac379e2f41931387b7b7e01a76776aad22926dfbad0bc30"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c18a277513d01a2a903c86d5e8c99e4f9bb26563ca696e9086ae6a834b729b3f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a45c1a8f68fd88726744dc56fdd2bc89f411c55e5aa892f51f4b5d62fbc0a5d7"
-    sha256 cellar: :any_skip_relocation, ventura:        "85d733423822d6b5294a2f47b9f654f1b19a57e151b754fe3558b3c961a31d42"
-    sha256 cellar: :any_skip_relocation, monterey:       "04221a1d72fffe628383015984e4fe6e7e455eb2673f22cf66c3a501160348dc"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bdae0f514242de4202dccba2042ed4a548263d87e0173c0c8daf59306d707700"
-    sha256 cellar: :any_skip_relocation, catalina:       "17f6d6b13a7b8002900e902409116bb8c119d405666678455ac70061ab2217de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f50eeb8ff7661de0c067de94b368b5cc2301f88df9564294842ce02184e3503e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c6eca94cb7b27ea7cb86afb4d7517168578b39f56c7acdb598d6e6f1256a5896"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9f56f4e69572b60572937a5ec5579cada6e176e3f5a1beef10013c6ca8f26906"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e6e78c4005ba5bc26fcbff6c8988cc032b7fbc10221884f3c619fd3cb8b61e29"
+    sha256 cellar: :any_skip_relocation, ventura:        "4bc1f2f1b79ddf8acfeebf9844547b7b2c72026d424751a4df5ca0ac016f6551"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b79a4aeb8ad5943678c6e396b72f0b4206cbbc6e68e8dc9803e81ea4a1538f6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b6fd3ea4fcb2cde8b601e1c1feae7cfc6d5c9a2abae14b977f3214fbaf7b0ccb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf8adc97afca846429fa66739ebb725dfd98fe56770f1db54f3ef85d40d80cdf"
   end
 
   depends_on "pkg-config" => :build

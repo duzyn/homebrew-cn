@@ -3,8 +3,8 @@ class Torchvision < Formula
 
   desc "Datasets, transforms, and models for computer vision"
   homepage "https://github.com/pytorch/vision"
-  url "https://github.com/pytorch/vision/archive/refs/tags/v0.14.0.tar.gz"
-  sha256 "be1621c85c56eb40537cb74e6ec5d8e58ed8b69f8374a58bcb6ec413cb540c8b"
+  url "https://github.com/pytorch/vision/archive/refs/tags/v0.14.1.tar.gz"
+  sha256 "ced67e1cf1f97e168cdf271851a4d0b6d382ab7936e7bcbb39aaa87239c324b6"
   license "BSD-3-Clause"
 
   livecheck do
@@ -13,15 +13,13 @@ class Torchvision < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "05e505a4b1f096f7fb43ef54108f02e70245267f2a98622fac536e759ceafdc6"
-    sha256 cellar: :any,                 arm64_monterey: "85dadcd30747d1545d423e5382be022f08b4cbe64d4792e51ac8be2b2a6bfe65"
-    sha256 cellar: :any,                 arm64_big_sur:  "74c3a9b9996b6f33a0dac17c3fc00448427849f05d3b3af96e7c90be3ffb28b3"
-    sha256 cellar: :any,                 ventura:        "2eff3282b96c376e89b839a03583528e215d211eda31cfb3830c938a8c9d1333"
-    sha256 cellar: :any,                 monterey:       "6c0e377f96b59173b241a959d09ffbf1a18b2d65108488e670f6cd950e6d4c7c"
-    sha256 cellar: :any,                 big_sur:        "818ed82d4d092f8b868a5dc330566d4d2bdca3692177d99d1e36ce0f3e8e5ffe"
-    sha256 cellar: :any,                 catalina:       "fb7b87345a559aca821f60d053990a4cc5015ce949b4530daf2a3b662db44577"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bb6e9a517f01141547e5d84053dc90cbe8fcdbb8837cff0cb3adf213300a5ef"
+    sha256 cellar: :any,                 arm64_ventura:  "105fefd0fba873baa04bb18d258764f2c19381f8df4898275f4f011bb3cc5093"
+    sha256 cellar: :any,                 arm64_monterey: "1535824bd57631ff8233c97973adf6e5aa580d0480f1075a1abeff42a6a824f4"
+    sha256 cellar: :any,                 arm64_big_sur:  "64468c7a188dc9e582ffbaa84f7676c0ab4429364ae0a4ff839c3b97666d5beb"
+    sha256 cellar: :any,                 ventura:        "ab654adfe800fb5651a631818801a603b942ff24b691ec1d48cf03b88e4b8a22"
+    sha256 cellar: :any,                 monterey:       "92dbfc9b11c8b410b8f3adfb3bff5bd1468865179e10ede6154a74be8d12bab2"
+    sha256 cellar: :any,                 big_sur:        "d494ddeddff9c94d692dc0bbc65881ca5a6ecb544884d8122b0aa100e427f90e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ee8ead5885d4f0e4cb5c4b9d1155e72111eb651998000cd8a5ab51654de055a"
   end
 
   depends_on "cmake" => :build
@@ -39,13 +37,13 @@ class Torchvision < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+    url "https://files.pythonhosted.org/packages/96/d7/1675d9089a1f4677df5eb29c3f8b064aa1e70c1251a0a8a127803158942d/charset-normalizer-3.0.1.tar.gz"
+    sha256 "ebea339af930f8ca5d7a699b921106c6e29c617fe9606fa7baa043c1cdae326f"
   end
 
   resource "idna" do
@@ -59,8 +57,8 @@ class Torchvision < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   def install

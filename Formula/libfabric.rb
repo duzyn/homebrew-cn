@@ -1,20 +1,19 @@
 class Libfabric < Formula
   desc "OpenFabrics libfabric"
   homepage "https://ofiwg.github.io/libfabric/"
-  url "https://ghproxy.com/github.com/ofiwg/libfabric/releases/download/v1.16.1/libfabric-1.16.1.tar.bz2"
-  sha256 "53f992d33f9afe94b8a4ea3d105504887f4311cf4b68cea99a24a85fcc39193f"
+  url "https://ghproxy.com/github.com/ofiwg/libfabric/releases/download/v1.17.0/libfabric-1.17.0.tar.bz2"
+  sha256 "579c0f5ef636c0c72f4d3d6bd4da91a5aed9ac3ac4ea387404c45dbbdee4745d"
   license any_of: ["BSD-2-Clause", "GPL-2.0-only"]
   head "https://github.com/ofiwg/libfabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "27fcdd0efd7e8cb9c9c3ab2bd753652aea58797ab5d5e1dc21ea78965df2f416"
-    sha256 cellar: :any,                 arm64_monterey: "d0ef41555d16ef392456abd4f7adc4d836ae986d6142265dc967089b5ddfd654"
-    sha256 cellar: :any,                 arm64_big_sur:  "dd53fa0772b081652dbd851a9c9021221b973012a41daf99f4066fbb9921c592"
-    sha256 cellar: :any,                 ventura:        "6626d21e58c0cc8b7ea66e50bb1f6326a863aa13812b9d5dbfa295674959ab60"
-    sha256 cellar: :any,                 monterey:       "112ca924b5cca67d91f1ec102e68db13a8a1c934df43f48d78a5319635e2ffbe"
-    sha256 cellar: :any,                 big_sur:        "66cffcac1e77eebf6a7b395f46d8726eba1feb5892a94ef60653a672de95760f"
-    sha256 cellar: :any,                 catalina:       "591163806258adc24cc89a71eeff81ba85dfb67799012bf63facb8febc5f6abf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a5bb8f38d64ddc25ec8662866d3b23f46aaae450c8c83c6d214d0e4cd7b81f3a"
+    sha256 cellar: :any,                 arm64_ventura:  "a560e5af2f44c81d2975b785f7352691064d7fd40a5801e41aa81a071f8e27cb"
+    sha256 cellar: :any,                 arm64_monterey: "b47867e82490d7e98701f055b8e60d0255429953eff8b63d4351f3f466f6c9fc"
+    sha256 cellar: :any,                 arm64_big_sur:  "56bc0e41773c830c3156a675e453689977b3be87106d22ebdfe7c67a80b51eb1"
+    sha256 cellar: :any,                 ventura:        "54281d9fe2471d565afee452bfd7d19fefb92708f71a0ab2979f9e1ec1111da3"
+    sha256 cellar: :any,                 monterey:       "2d24dd08d6eebe7ffbef65ade13cbc14c0edc9a30d4b4ae45160c6f2ed562d13"
+    sha256 cellar: :any,                 big_sur:        "3fc8bbd0cd05125fdbe3fc2e34864bccc59d3d6df95a6eef1e8830e5552846ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8208f023a7593aeda45218f44dc2958a6a7ad11ab33077c53f8d000fb314fa04"
   end
 
   depends_on "autoconf" => :build

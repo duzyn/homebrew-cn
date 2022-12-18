@@ -1,8 +1,8 @@
 class Redis < Formula
   desc "Persistent key-value database, with built-in net interface"
   homepage "https://redis.io/"
-  url "https://download.redis.io/releases/redis-7.0.6.tar.gz"
-  sha256 "7b33a7e890d13e27af1f246acb16312669ad8a1d56ce8f807dfbcd3c09aa7bb3"
+  url "https://download.redis.io/releases/redis-7.0.7.tar.gz"
+  sha256 "8d327d7e887d1bb308fc37aaf717a0bf79f58129e3739069aaeeae88955ac586"
   license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", branch: "unstable"
 
@@ -12,13 +12,13 @@ class Redis < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "d6871708dfbae5e2575e3a1c2463549688baef814fb2451a9f6752ed5f26bd52"
-    sha256 cellar: :any,                 arm64_monterey: "fab34949b18f10dd29ee058ee266e5bcc00e83e1cd84bcb2a63dae30f32bcc1e"
-    sha256 cellar: :any,                 arm64_big_sur:  "2e532087435e2fc0ea3105b7abc95388dc7c1cb630aa2f8558f9681bb77cc93b"
-    sha256 cellar: :any,                 ventura:        "945ca3b3b0a41c3dacdba3eb7a8301831a06706dc41a686ceadac5e70bcc6601"
-    sha256 cellar: :any,                 monterey:       "d8db070dfce9a2faba31ca3d628c7c95717b4b012729f777292dacdf2c7d5c00"
-    sha256 cellar: :any,                 big_sur:        "838f774265186892e89573b08409b858387b2f8394fcea811d0a6f6b4f632889"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb63211f7cca3d508d1a462cbe427d4186da09d0446581a74c12305ebfe5a1e5"
+    sha256 cellar: :any,                 arm64_ventura:  "ae86b7febe606ccae0aa8ffaa993610862d5e33ad3ac506575b6d9bcc635addd"
+    sha256 cellar: :any,                 arm64_monterey: "a1da26d419ac2337b312bf922348f1fabd3678906982dafc8640db8de912f558"
+    sha256 cellar: :any,                 arm64_big_sur:  "5b1a0cc4a506bf841210478887cf64a1e0db3b25907f000f7d31b694be997413"
+    sha256 cellar: :any,                 ventura:        "bd8f38b99ca93cbcc738a9e50dcf1c43a872b0693268609bb7f6dbff97d11f54"
+    sha256 cellar: :any,                 monterey:       "c789c9fe489acd0d1d44e213b4a36be0c4e37417194a1e12d5ca9048137a7b2d"
+    sha256 cellar: :any,                 big_sur:        "2c41b7dc7d3fc69bb4fa66e98617a72ba2b9ccfb0a7f0fa5057bf065b299e180"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "28037c9f3a8af1671d6e6ea9118cf933c10acfee2e7831b1528d7f9d1274538b"
   end
 
   depends_on "openssl@1.1"
