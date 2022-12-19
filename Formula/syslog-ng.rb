@@ -4,15 +4,16 @@ class SyslogNg < Formula
   url "https://ghproxy.com/github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-3.38.1/syslog-ng-3.38.1.tar.gz"
   sha256 "5491f686d0b829b69b2e0fc0d66a62f51991aafaee005475bfa38fab399441f7"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "675d1a2a2b70a6ba65300a2b79aa6fb0ca593dcdcffae7f029b4b65b516a5b97"
-    sha256 arm64_monterey: "c5b183bdee146482748c0f73f4c57ae223ca3411091a09712cba45cc272a4d88"
-    sha256 arm64_big_sur:  "f44ddd51a55cff76a51fcea4b280235b4a74f5377084d43987425b6f730e63d5"
-    sha256 monterey:       "fccdba6100604e263d3be61e0a2355eda2520c27dcde94cc6b953ee457fcb842"
-    sha256 big_sur:        "ac90f726c743e787eb3727618a53afc2350651057845609bbdea72568a3a5ed7"
-    sha256 catalina:       "72fd2a1b438e832e604f8487637aa81b6f1f489f5b6aa1f7554e18902a4f3fa9"
-    sha256 x86_64_linux:   "35d12e4a4b37549a947d1754aaad2f93c2a4b54aef4fd7e3266ccc90c526a114"
+    sha256 arm64_ventura:  "5c5183c1ae96ae26524f78a90219c8dafb35ae7eb5d7968c33e68cfa58940f91"
+    sha256 arm64_monterey: "e16a1658df491f7e107da9f6fae05e8d71969e105deff4fcdaab7b3b32b2471b"
+    sha256 arm64_big_sur:  "8faee7351f56f372ab4a3bc0bc194f26c8a6731cc373d6aee7ecdce93b47d9c9"
+    sha256 ventura:        "8b1b13f07de319fcd6efe0e23f7be97451b716f7703871fa0acb7e120fee1a42"
+    sha256 monterey:       "dbbf52030649f1a75517259055d4ea40efbb2675fce09fee16420b84cda5115b"
+    sha256 big_sur:        "d4dc9db2d912a890d6759de2288137604eb523dfc73c187d49543cb2c20f8b0e"
+    sha256 x86_64_linux:   "815cf738e4ab69828a7c112ad19514fd57e72bbf8b968b8c99b75d7cd62736d3"
   end
 
   depends_on "autoconf" => :build

@@ -3,21 +3,18 @@ class Dotbot < Formula
 
   desc "Tool that bootstraps your dotfiles"
   homepage "https://github.com/anishathalye/dotbot"
-  url "https://files.pythonhosted.org/packages/d3/67/733dbf0b444d41af473238537d5ef7bd5906870f35a69ef4f7dc64e74519/dotbot-1.19.0.tar.gz"
-  sha256 "29f4a461462a5ff3b1e9929849458e88d827a45d764f582c633237edd373f0af"
+  url "https://files.pythonhosted.org/packages/7c/40/5af5a63afb366e825998d7e618c9331661582e9366da2c21c1e1973e90c3/dotbot-1.19.1.tar.gz"
+  sha256 "17a770bfbf72deaddd5c054d26a8c2353ad145ed61c8de9d898134b825696e6b"
   license "MIT"
-  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "87a12d128d6b818c686dcfed8f3303256f5ae06b99535e83e60eaf505885a8e8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e69e86421ab5c05c270cbcc228a5e0756d0d016c204ef6d1a3be5cf4b57f250a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "423dfff4e1cab4c57c73d8636c28e611ced0ebfbcad10fe222497de2c7138c6e"
-    sha256 cellar: :any_skip_relocation, ventura:        "a27e69770f183088be7484f9d45bf62b23676da7f11ed47822fd7900df31a9e8"
-    sha256 cellar: :any_skip_relocation, monterey:       "ef6c5cd693bbfb4d3f1bac46042143460f071b488ab008b1f761db1f99d986e5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "44ac111a5f85630d40605cc5a924283a332bf2a8d8dc0b3a5e626c771d286c7e"
-    sha256 cellar: :any_skip_relocation, catalina:       "965c56d812816e5257fa6fc1380b3a7a63dd205c473358f73a12fe590031749f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a93db285c5f1670d5904594702bf19bab0429cde0cda6cd0f73ae740e6d51b1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "82a87ef5c38c91a4329bbafc6b6d4c0856e512e1334c8d39529d4964273d4a51"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d406769d6bb49ca919e1db2e271d7a6e20aef5320e07ed4f1d55755f31d10a1"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0d335163a7b3b68aaaf187ceba945a71f10067ee7bf2cbaa36e6611783f85ffa"
+    sha256 cellar: :any_skip_relocation, ventura:        "ca7ab372224f4b7ec9d1f165bf2d2d6a8f3e71d59e092818cd491545657f1d3a"
+    sha256 cellar: :any_skip_relocation, monterey:       "b62202266d5a89356facd76dbc1f12af470f3226f3a4cf08d2ef31b0aac52877"
+    sha256 cellar: :any_skip_relocation, big_sur:        "18a39de29f61831836bc9290694da93812b6b20f6bbd851dabc3643a6219137a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44acb56ce1e862e7ee29874f32e6c0318a38d4abc54988a21557c2e35bb6580b"
   end
 
   depends_on "python@3.11"

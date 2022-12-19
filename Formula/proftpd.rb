@@ -1,11 +1,10 @@
 class Proftpd < Formula
   desc "Highly configurable GPL-licensed FTP server software"
   homepage "http://www.proftpd.org/"
-  url "https://github.com/proftpd/proftpd/archive/v1.3.7e.tar.gz"
-  mirror "https://fossies.org/linux/misc/proftpd-1.3.7e.tar.gz"
-  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.7e.tar.gz"
-  version "1.3.7e"
-  sha256 "6e716a3b53ee069290399fce6dccf4c229fafe6ec2cb14db3778b7aa3f9a8c92"
+  url "https://github.com/proftpd/proftpd/archive/refs/tags/v1.3.8.tar.gz"
+  mirror "https://fossies.org/linux/misc/proftpd-1.3.8.tar.gz"
+  mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.8.tar.gz"
+  sha256 "f7139e7377a2cb059b8b9b14d76a6df5f440e3181cb15ae890d43bbcae574748"
   license "GPL-2.0-or-later"
 
   # Proftpd uses an incrementing letter after the numeric version for
@@ -18,14 +17,13 @@ class Proftpd < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "7ba70a8e04d5e6379b6fcfe9b521829e7a5a9f6710f8bfff7aaa8cd1c120b805"
-    sha256 arm64_monterey: "af16db8ab4261d0daa4ee5e5f51046045a20b017dc854adb1421f26407688982"
-    sha256 arm64_big_sur:  "07fadba73d0440b08846a2e3a5ddca07b2b398ef949d71931acf384c7d607181"
-    sha256 ventura:        "049d35236b80972e2a5cd8a149427460c5a2be23774229a9727ab5203b9595c2"
-    sha256 monterey:       "1cb51eb56dab1081f6c64ac75904e38e59065ba1ec78f43cd761ab88c0de0117"
-    sha256 big_sur:        "429dc14ebcbf7b31e4073578522fab149c08abc8986ca39b9e0c6a698e2c4a69"
-    sha256 catalina:       "23aaeb1f2c8f08fd561cb9e2a4fac400b1176365726bb3044487a0658b0cdb24"
-    sha256 x86_64_linux:   "f88d9dbcb70b79b0c008e23ddfeb7f72211116c7d89759dc9324dca3d348b3ed"
+    sha256 arm64_ventura:  "33f8063b1091a4ed78261a858a6469addd60fce2fae3bf662d800b695d214bed"
+    sha256 arm64_monterey: "daad1aaa7a68c37157ffe1413b7b42a6ccb84861dc364e7ed6f18fb5c42e61c0"
+    sha256 arm64_big_sur:  "5bda56800a66fa203e0e4ee496bce2495e86791900c59e34af486a5c0799b6e5"
+    sha256 ventura:        "7ae1010fc5a818f9d34f3af95d17d1b199a74ff54ea18a05fdfd852b049032e6"
+    sha256 monterey:       "9059bb7d481426b7c40c42203301ddb8db983ef87a6b81c7bd559cbe4d740471"
+    sha256 big_sur:        "a5295fda88d783978f9c9eb8b8af88c5ccf606a8e32dbe520fa574fdf2966b78"
+    sha256 x86_64_linux:   "f550c15a70adfbcee4149723ccb3ed8d8eb5ceaf78d788ca361116e61e7cfa6a"
   end
 
   uses_from_macos "libxcrypt"
@@ -36,11 +34,13 @@ class Proftpd < Formula
     inreplace "sample-configurations/basic.conf", "nogroup", "nobody"
 
     system "./configure", "--prefix=#{prefix}",
+                          "--sbindir=#{sbin}",
                           "--sysconfdir=#{etc}",
                           "--localstatedir=#{var}"
     ENV.deparallelize
     install_user = ENV["USER"]
     install_group = Utils.safe_popen_read("groups").split.first
+    system "make", "all"
     system "make", "INSTALL_USER=#{install_user}", "INSTALL_GROUP=#{install_group}", "install"
   end
 
@@ -53,6 +53,6 @@ class Proftpd < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{opt_sbin}/proftpd -v")
+    assert_match "ProFTPD Version #{version}", shell_output("#{opt_sbin}/proftpd -v")
   end
 end

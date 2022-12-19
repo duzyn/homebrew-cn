@@ -1,8 +1,8 @@
 class Erigon < Formula
   desc "Implementation of Ethereum (execution client), on the efficiency frontier"
   homepage "https://github.com/ledgerwatch/erigon"
-  url "https://github.com/ledgerwatch/erigon/archive/refs/tags/v2.31.0.tar.gz"
-  sha256 "eaed8d4e24d813991a53de0b8e89161ed5090168ddae8487e20be89dd861782d"
+  url "https://github.com/ledgerwatch/erigon/archive/refs/tags/v2.32.0.tar.gz"
+  sha256 "965dc615d72e81981809e6e8c72e7fa6615962cf1eae7df45668714cc8486f90"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later"]
   head "https://github.com/ledgerwatch/erigon.git", branch: "devel"
 
@@ -12,14 +12,13 @@ class Erigon < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "10259b11323d4a03801472efb747c94fa36fc642015ab3b7c22ad98315b35095"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d987f8e76b9ca723bed6d2a65515050ce95d5ad5814d9454041b651419d5e890"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e175e2c0c1c45ab7334c333f6417e83ab84703efdb7a192f140d0700d0cd948f"
-    sha256 cellar: :any_skip_relocation, ventura:        "3cb5e6dd313aecac3614989633f032da1eec8cf52dfd802d97554b5adddab6cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b3c2829dd56ba0dc0b2ea80a6f51f4f269c1d85435acf070f3559ad7b6ad8e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7a5d5a5e681352c193b944bf1e3719c492bc87a50c510f425e3beba3e4ce504a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afa1dcbe5c6241d00375beab4979b23e220d1f543d3801619196dff3c26feef2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d42726ddc83915e97367ca0f9e874963e1a6ed59a3816550fab93dc83f88b2d7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "73d8551089edd2cabbe70b8aa8141072151e71fe30094de20022f77846314f2c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d865132c211785f6379ba4f11e50d87ee715327956e6e12529376c315113f3ad"
+    sha256 cellar: :any_skip_relocation, ventura:        "18ac2edb5b2945b5f0952dafb867f979751603b9929e0b7ac2575ef225db0cde"
+    sha256 cellar: :any_skip_relocation, monterey:       "39ee99d8048df4b293cd97aae13a3774c3bce16f938b0e37c07c748064eb0cdd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ac95b4d73b8031fac02ea52d2a74b37617a89d20f30e2cc0561ce1c44cdc55c6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e658376e3869c4759ef17877e40dcd9cc8b36351ea1b0455e182a3fcae81cae1"
   end
 
   depends_on "gcc" => :build

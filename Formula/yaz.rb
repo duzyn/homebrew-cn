@@ -2,27 +2,27 @@ class Yaz < Formula
   desc "Toolkit for Z39.50/SRW/SRU clients/servers"
   homepage "https://www.indexdata.com/resources/software/yaz/"
   license "BSD-3-Clause"
-  revision 3
 
   stable do
-    url "https://ftp.indexdata.com/pub/yaz/yaz-5.32.0.tar.gz"
-    sha256 "04d08c799d5ee56a2670e6ac0b42398d2ff956bd9bf144bfe9c4c30e557140e0"
+    url "https://ftp.indexdata.com/pub/yaz/yaz-5.33.0.tar.gz"
+    sha256 "9eab77267524191a8286ad80291a2220ffe9d322b3ea0e4b1c6bdbc5db21a04f"
   end
 
+  # The latest version text is currently omitted from the homepage for this
+  # software, so we have to check the related directory listing page.
   livecheck do
-    url :homepage
+    url "https://ftp.indexdata.com/pub/yaz/"
     regex(/href=.*?yaz[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "fda2a2d7d7e478e581e24c51a9ddfb0e5640c6af5c4ee18a0cfb47a40dd35883"
-    sha256 cellar: :any,                 arm64_monterey: "e557c8be8f4c335fac3cfa8f37d984bbd63c5716d98145c0d83ca0423fda4525"
-    sha256 cellar: :any,                 arm64_big_sur:  "2cdab667383b932b13aaaf8e9516b104f09afef4b45b1ca16888f9da54612afe"
-    sha256 cellar: :any,                 ventura:        "5b8c7e6fb876ba038cc8157635d1cf8b613c36b64042cc06e41975e439ef61f8"
-    sha256 cellar: :any,                 monterey:       "9e7b9b9bd1292324bd8fb4e28cd0e4010c29972e508626a0110adbe3908ac8ae"
-    sha256 cellar: :any,                 big_sur:        "ba154d92aa07f094933650506c59094cce717db404fe394afc35b8be6e852d73"
-    sha256 cellar: :any,                 catalina:       "c02b3f2c2b8a1f874d9a6d3269e4c35ff37fd2cc2c7aefc76c89e68015d20ba5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a19506f2dc9e63a3ad1f6e0493c1304b912c1d7e18374ea4662de91abfaaf33d"
+    sha256 cellar: :any,                 arm64_ventura:  "aa89c290236c1f2e72f325f20e6eac52d998e78632ff1ac01294e14ab25d184f"
+    sha256 cellar: :any,                 arm64_monterey: "f7cf58ef82fe983ed07969e498a6eaee40d2e33c647326d39638a15c1d239677"
+    sha256 cellar: :any,                 arm64_big_sur:  "443f77e9afd087075232dbc89414bc8d1879980c856a9dcf5a57875f6ffbabe3"
+    sha256 cellar: :any,                 ventura:        "65519ae132fa21bf3f8a14d67ca552423c3fdb60d19e512493c07c28afd79c50"
+    sha256 cellar: :any,                 monterey:       "e437bf9b3f249f45d1cffdee7c42030f6a53ef48a78661d3579a6e3e3a15fb26"
+    sha256 cellar: :any,                 big_sur:        "9546416c957770190812a345b565ade5997e3e9667bb93b30804da55b0b29dad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "318a94f7ba3f6c79fa133e538b9e80106abab906071ad57739a0926806eed0d2"
   end
 
   head do

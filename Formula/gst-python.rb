@@ -1,10 +1,9 @@
 class GstPython < Formula
   desc "Python overrides for gobject-introspection-based pygst bindings"
   homepage "https://gstreamer.freedesktop.org/modules/gst-python.html"
-  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.20.3.tar.xz"
-  sha256 "db348120eae955b8cc4de3560a7ea06e36d6e1ddbaa99a7ad96b59846601cfdc"
+  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.20.4.tar.xz"
+  sha256 "5eb4136d03e2a495f4499c8b2e6d9d3e7b5e73c5a8b8acf9213d57bc6a7bd3c1"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url "https://gstreamer.freedesktop.org/src/gst-python/"
@@ -12,14 +11,13 @@ class GstPython < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "515b686b5530cf30f7e4c83097b9564356a629552522eec0bad876a5ddda33db"
-    sha256 arm64_monterey: "c7bd54bf59d884fece2bd93a8aa87156b1711fb792769e2e824b7980fe804fbd"
-    sha256 arm64_big_sur:  "46577a49c80650c862830b1dfc739962dcf3181b03ec2af19f6e03adb3731d31"
-    sha256 ventura:        "5c46dd4bb09b1da3ed57f74d49b32932b40dce10031f1929050008957a447a81"
-    sha256 monterey:       "7726dbe8e9697fc1704c7ed442fcfdcb7f5308b0b7ca573fee7d697b42978e8c"
-    sha256 big_sur:        "a12e52607ac75e19ee6712dddd5d6d27f403dd5feb4d4fa942ce432c566f2ce3"
-    sha256 catalina:       "6677dc74dee5380d456c0615390eeaefa55cdc3ec7e892c66cbb95a8c78e863c"
-    sha256 x86_64_linux:   "a3ed0216139c282fa4c8304a40c52da5e97d7a2403c9cd135fb3801d17ff82a1"
+    sha256 arm64_ventura:  "0aa72dc7195f547c39798a1c67b60ef93859364fd1cc0ca26e2c5b09de48895f"
+    sha256 arm64_monterey: "bc688b37f9e322aad1220e1b8224878134631fb26fe7ebe8d85e68e8ceedefbf"
+    sha256 arm64_big_sur:  "ff1862926c906426bb95dd517360b3b232b94ea06551b405df005d536771002a"
+    sha256 ventura:        "6df34c0c80ec7387d77b3a2c54c23b1baa2d9ec521a4b57237af3a61fba57801"
+    sha256 monterey:       "50ca198accf4076231df60b0fbb014b272b79c1541078303f7bf4e031878444d"
+    sha256 big_sur:        "e09a7c9030649452515dad14a484015599c2995532bbb9aceed7791c85c1537c"
+    sha256 x86_64_linux:   "89ac1bffbc7d622e935d39f905c160c9a520e1619b40e21e91e07b666cfdd524"
   end
 
   depends_on "meson" => :build

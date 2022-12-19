@@ -1,10 +1,9 @@
 class Heimdal < Formula
   desc "Free Kerberos 5 implementation"
   homepage "https://www.h5l.org"
-  url "https://ghproxy.com/github.com/heimdal/heimdal/releases/download/heimdal-7.7.0/heimdal-7.7.0.tar.gz"
-  sha256 "f02d3314d634cc55eb9cf04a1eae0d96b293e45a1f837de9d894e800161b7d1b"
+  url "https://ghproxy.com/github.com/heimdal/heimdal/releases/download/heimdal-7.8.0/heimdal-7.8.0.tar.gz"
+  sha256 "fd87a207846fa650fd377219adc4b8a8193e55904d8a752c2c3715b4155d8d38"
   license "BSD-3-Clause"
-  revision 3
 
   livecheck do
     url :stable
@@ -13,14 +12,13 @@ class Heimdal < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "589dd90ba100e7d4167a0973aa779e1f00d11482aa8d65188fa71a8b50bdb878"
-    sha256 arm64_monterey: "5bf1331cbf18fbacee694aebd48cf61bcebcd170fbbbe9e9c8a2bdf9ee90fcf6"
-    sha256 arm64_big_sur:  "5c45da30c4f837fd11fa4d656ff9f92c0a7cfd1d6c7e3442d925cd4c6406b766"
-    sha256 ventura:        "9f45c3bfa2a0e53d52ca57d84720f543c19c39a04f4c0262c04d358aede86289"
-    sha256 monterey:       "f91432a5c773478e95f79aed4381d8659980e7c19358cd109d9502eeaf5d6c6f"
-    sha256 big_sur:        "b0f45237bb7226ab0c6b06ce4c2a6ce143eded7335232e1cb85133863ad96f60"
-    sha256 catalina:       "1da6cca0420efc5ccd5075b8c3076435a9e2b077261d9ad91e0e3d4e644d38d0"
-    sha256 x86_64_linux:   "6505b354257b8f5096a209eb9bc8fbfea1f3377efff1e84b4c58a308c9cf2b34"
+    sha256 arm64_ventura:  "2a26a718345cbf16201908464eabc918470312b9490b411160d044ca91fffeda"
+    sha256 arm64_monterey: "469605c086a6f466b383c621b9696a01f506be578c47a89f8afb6627ab799979"
+    sha256 arm64_big_sur:  "817169ac078417ff4cb1e3a6f2c8b06f0d13033ac8498416125db75eaed29d9d"
+    sha256 ventura:        "1a6f53d8e4629ef7b0cf5b73797e0c2121e7b7cfcc8d8c86028d990d3a6831cc"
+    sha256 monterey:       "083a6661b4cb4c6d121b5627f440bfa733d5b0b86d4ff547d648888eaa2a4da2"
+    sha256 big_sur:        "34fb4389ad538efbbf671e42b20a9aafd503ce2cdc38ca8437d87d42bdac0127"
+    sha256 x86_64_linux:   "239f40e6405e0ac3231537a89872a94610d07e6c8e6324a593b55404b3c52e55"
   end
 
   keg_only "conflicts with Kerberos"
@@ -35,15 +33,14 @@ class Heimdal < Formula
   uses_from_macos "libxcrypt"
   uses_from_macos "perl"
 
-  resource "JSON" do
-    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.02.tar.gz"
-    sha256 "444a88755a89ffa2a5424ab4ed1d11dca61808ebef57e81243424619a9e8627c"
+  on_linux do
+    depends_on "pkg-config" => :build
+    depends_on "python@3.11" => :build
   end
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  resource "JSON" do
+    url "https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.10.tar.gz"
+    sha256 "df8b5143d9a7de99c47b55f1a170bd1f69f711935c186a6dc0ab56dd05758e35"
   end
 
   def install

@@ -9,21 +9,22 @@ class Bzt < Formula
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "15db5f840b5762acb9e6fe6f1ad457f7c72567d2f92f1eb0c34c84f3bb337317"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "05c909619b1c3fc2292e8ea757ffa3e9c4e590c50ac106648b67f28ee7ae4849"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f9c7550e720bfd4e8cc55b9e33a2d96902bfe09bd3bc79b6de680f1cff180cc3"
-    sha256 cellar: :any_skip_relocation, ventura:        "e2edc47cc5ef463c6b705a74178c7a38c50e9de5776e4fa9fd9db1e685c0a0c0"
-    sha256 cellar: :any_skip_relocation, monterey:       "97dba0bda4ad88f20cbc1f129cea6ec3036a403c52d7ff72b4f126c4cc40e381"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c65f6cd87ad27cb82bbd0517f0657c4bbf1d35c74818fe87e5daaae9dc5ff79c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0ca57dd490ec29f11330e27bf1153706b31b6d2851c3143d144b2d5e1bb786e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "039df2ca8c4791604c6ed8ac1ce38709c5349a1f09f47e46c2fc2861e0aced86"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e4511543e64eba712d72b9d0eb79bf4fb108771482181fc35e99c272449f6e38"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "82b93285d033ea5edbe209e15551e5fb07b8c509e3ea48e620bdfb469e9a8c9d"
+    sha256 cellar: :any_skip_relocation, ventura:        "870e20688afb43239d63066a74ba0b7572e95471b430eddf3dc6764fa9fef2de"
+    sha256 cellar: :any_skip_relocation, monterey:       "4d2bafe5457b1d12bbb347a7f14f8cb12ba0adf6c468c1daf3233f962a4d6029"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2fdb1e7195893e0a8ffae84ea0d322fe1a75ac188a84525e791eb0469b598ae5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8b7da648d0e3bf1b4dd233541eb3ebf38c789138623f44fff07875fc0fe9722"
   end
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "rust" => :build
-  depends_on "cython"
+  depends_on "libcython"
   depends_on "numpy"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
 
@@ -61,8 +62,8 @@ class Bzt < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
-    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
+    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
+    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
   end
 
   resource "charset-normalizer" do
@@ -111,8 +112,8 @@ class Bzt < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz"
-    sha256 "fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f"
+    url "https://files.pythonhosted.org/packages/06/5a/e11cad7b79f2cf3dd2ff8f81fa8ca667e7591d3d8451768589996b65dec1/lxml-4.9.2.tar.gz"
+    sha256 "2455cfaeb7ac70338b3257f41e21f0724f4b5b0c0e7702da67ee6c3640835b67"
   end
 
   resource "molotov" do
@@ -136,8 +137,8 @@ class Bzt < Formula
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/c4/6e/6ff7938f47981305a801a4c5b8d8ed282b58a28c01c394d43c1fbcfc810b/prompt_toolkit-3.0.33.tar.gz"
-    sha256 "535c29c31216c77302877d5120aef6c94ff573748a5b5ca5b1b1f76f5e700c73"
+    url "https://files.pythonhosted.org/packages/fb/93/180be2342f89f16543ec4eb3f25083b5b84eba5378f68efff05409fb39a9/prompt_toolkit-3.0.36.tar.gz"
+    sha256 "3e163f254bef5a03b146397d7c1963bd3e2812f0964bb9a24e6ec761fd28db63"
   end
 
   resource "psutil" do
@@ -151,8 +152,8 @@ class Bzt < Formula
   end
 
   resource "rapidfuzz" do
-    url "https://files.pythonhosted.org/packages/57/93/8a975f8462fadffd1b608a1a5df2bb9feea569e5bcef5a6abfb154853e24/rapidfuzz-2.13.3.tar.gz"
-    sha256 "c734d54b5fbdcfea605f7365dedb7083e7499d394fbd03378d663b398e9790ad"
+    url "https://files.pythonhosted.org/packages/cc/42/f3bde4d6e5711b5ba266dc66c66bc0659e7c2f2016f46d1927c76d40ad57/rapidfuzz-2.13.6.tar.gz"
+    sha256 "948445a054d9fb30a93597c325d8836232bd68e61443a88779a57702aa35a007"
   end
 
   resource "requests" do
@@ -191,6 +192,10 @@ class Bzt < Formula
   end
 
   def install
+    # Enable finding cython, which is keg-only
+    site_packages = Language::Python.site_packages("python3.11")
+    (libexec/site_packages/"homebrew-libcython.pth").write Formula["libcython"].opt_libexec/site_packages
+
     virtualenv_install_with_resources
   end
 

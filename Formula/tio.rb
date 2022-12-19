@@ -1,19 +1,19 @@
 class Tio < Formula
   desc "Simple TTY terminal I/O application"
   homepage "https://tio.github.io"
-  url "https://ghproxy.com/github.com/tio/tio/releases/download/v2.4/tio-2.4.tar.xz"
-  sha256 "b715e21454c5734154346486e61a9480d1e707c2c9b0cc56e4b1ba38838df8cf"
+  url "https://ghproxy.com/github.com/tio/tio/releases/download/v2.5/tio-2.5.tar.xz"
+  sha256 "063952ee90a78cee180f6e660d6c73773dfc109efcdc151585accfe1500c44a7"
   license "GPL-2.0-or-later"
   head "https://github.com/tio/tio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "dd89b3e200c51927c1ba619d5707105fefecad2d2ca25d758050cd97b315e6de"
-    sha256 cellar: :any,                 arm64_monterey: "3af3b33c9cab2f14e237298ab242c33c2dd0d3c499767f0fb19e51dece9aee30"
-    sha256 cellar: :any,                 arm64_big_sur:  "6d2da82e3070c7210b465f3a62ba8c0f1615cc2b4fcfb57b741ce4120bcae5eb"
-    sha256 cellar: :any,                 ventura:        "80f6f0d39cfb712d055bb1a17fd74d34f5d359e7818ed53365495881019f9711"
-    sha256 cellar: :any,                 monterey:       "16550a044ec987d6e121b6206fa2dcb24a6b0669394dc58836d2c1f9b65dedfc"
-    sha256 cellar: :any,                 big_sur:        "f0415808fde5b207d212b678cfa40c1f2b1de1074e078acb0808c8f5ef2616bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7385f55b676205f42e1bf3ccab48ab73a54e2ddad41716ca82b703d222b214fe"
+    sha256 cellar: :any,                 arm64_ventura:  "b930375c3f659075cbf694a4359c57a1faaeaae01d6870755d321f2aac8b736d"
+    sha256 cellar: :any,                 arm64_monterey: "b962573188a2f1607f489d6d33dbecbe2a70e69b73aa041ba6f6773410791fa1"
+    sha256 cellar: :any,                 arm64_big_sur:  "0273ac11ca8f72191b877b734dd99b791a3ee2cf64e9f2d0bb5709d0f35b80df"
+    sha256 cellar: :any,                 ventura:        "e684824b7b74ba4f7fe6d5defc20084462466b83e812bbe8a68a208d2766c09a"
+    sha256 cellar: :any,                 monterey:       "db8961e35722fd670a1f8393c20b87b7938f76b54391c6966ca5ebc3165586e4"
+    sha256 cellar: :any,                 big_sur:        "4a665334480f8cb670516b8cd96fa6779122795edafd240dd750d312a4867cb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "475c233968a41f7c4335244202d190ca916d0076472dc49c9e48ca527dec0710"
   end
 
   depends_on "meson" => :build

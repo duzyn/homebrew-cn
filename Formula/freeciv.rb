@@ -1,8 +1,8 @@
 class Freeciv < Formula
   desc "Free and Open Source empire-building strategy game"
   homepage "http://freeciv.org"
-  url "https://downloads.sourceforge.net/project/freeciv/Freeciv%203.0/3.0.4/freeciv-3.0.4.tar.xz?use_mirror=nchc"
-  sha256 "d9a83fe9268e6b9d0fbe933f1f8b5c391b7e3ad72333d2d4e35cfb2e3ce9adb9"
+  url "https://downloads.sourceforge.net/project/freeciv/Freeciv%203.0/3.0.5/freeciv-3.0.5.tar.xz?use_mirror=nchc"
+  sha256 "4d2e22da54cf1e2821f78d0743ca25429c38dd7802414cd9e6090ad52f49ee83"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,14 +11,13 @@ class Freeciv < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "e1c759f0a52bc1e257df771e19b21c4b6d0344e86c4c8865989d5a59716a05a3"
-    sha256 arm64_monterey: "d61fc79817b2c8b56cdea063ce11e9e90bb6f1ba88c412aff600369e81bd7d9b"
-    sha256 arm64_big_sur:  "58c8d87468b729f7faaf89233902f74f984c6bc9ae1580905fb6b37386133c22"
-    sha256 ventura:        "3dd05f6772b3e0563f3eadfdb4ae7a5b3cc6a40981b7707104fb5a500f037bb6"
-    sha256 monterey:       "0c9142560d9004315f4ae7dad894681e038dab5a4dff2a05dd14c63a2bb1830c"
-    sha256 big_sur:        "c9571c33afaf58c10542ef8cd1b996bf58992c50463b39291d89a6cf230f6431"
-    sha256 catalina:       "4c7be3976d09319dcbefb794fc574d427c2f370de0d84a57a7657ab20dec97b4"
-    sha256 x86_64_linux:   "e778ee2ab8f1aca3ff12845c5f71fa69e107f99c87561ddc3b1eb7dc6dbb80d5"
+    sha256 arm64_ventura:  "17172f5a4fe4631dc59cc655989b2e2494a609f2cc421ee9030723a5235d84f3"
+    sha256 arm64_monterey: "2cb9e80fc11522e27a95fa7f5e285bd2e2f9a835b1915e8c10bfe54390a0b7fd"
+    sha256 arm64_big_sur:  "eb2cc8ed171224639b45d503e7ad86ee89ff1a67c2178aeff1c486dc8ae70bd7"
+    sha256 ventura:        "f59557bd0ac5ecde2499fba18f082181072a1eec228843a1fab158bd7e2349a6"
+    sha256 monterey:       "7c7a1f032065718ea222027d46bcec9ad67f39ffb92b6230ff874a186c989511"
+    sha256 big_sur:        "ea9f8c372d71ad373d0a4d6b958a6d63ccf302b52e89376f29c44b26eae61087"
+    sha256 x86_64_linux:   "f0a1af7d18de79b8ba4f693f8dfe87db10e1ba4f25941091b27b58417ea3f6cb"
   end
 
   head do
