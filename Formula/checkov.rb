@@ -4,18 +4,18 @@ class Checkov < Formula
   desc "Prevent cloud misconfigurations during build-time for IaC tools"
   homepage "https://www.checkov.io/"
   # checkov should only be updated every 15 releases on multiples of 15
-  url "https://files.pythonhosted.org/packages/d6/8a/8888c1ec79a585e45ebfea5ae6c65e71f939da0f590d40b0f0b710c0d565/checkov-2.2.150.tar.gz"
-  sha256 "4667c4f8823b973d0e4c1f2ae1e4db6d6bc7e96cccb072265de0a5683bf6ff5e"
+  url "https://files.pythonhosted.org/packages/53/e2/463bb8a1944819a686e984d76817183f5d69b99cadc729fb0067d4e20053/checkov-2.2.180.tar.gz"
+  sha256 "b832cf171ccc6cc59473fc27eba9bf852c28b6db0fd0f1d1d12447691aaff149"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0652bd87f69d2edcd2d44ad07b804960b8cf70f44fb5649868c6a5abff620129"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9e9078c7042a14649c98cefe99d017f041c96b88b10b258493be30700b53775d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ed25555c1dfdba3ec1e598f081cbd68fa55d0c0dec756fdfd75671ef6e1764f0"
-    sha256 cellar: :any_skip_relocation, ventura:        "5ff33edde5f6a8dbfe099bff17e82b930f7a0a8cecdff763dce22e375607129d"
-    sha256 cellar: :any_skip_relocation, monterey:       "df6585f11cf697fe72c462578e4898445f68cdaa6d4de5ed2cd0a460df12c4e9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "60934fad430abcdac23568b7780174020b531c475fd40ee5bbf632754acaa626"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b6313a8834cbc261bebafb85b3b1d69158b16735e6e3e8ba287cdc708fec91a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "56470ce46008825f5d95093d5ecc6345651a28d6b68d41d8d193caeb50b56de4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3d30084e6b98424ca04ffda7ec5f4ca89084397a2c76b4b059205a24a5a2be39"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "74468bd821cea956b7504b398bc4015919f9c1f217fc1165156f4c6cf43a7e8c"
+    sha256 cellar: :any_skip_relocation, ventura:        "f63aff4675e9878760acad7e064b096361bddc78c494f4e5db3560fe6a81136a"
+    sha256 cellar: :any_skip_relocation, monterey:       "e92639c628563bc5cc98f0c0d079c0fa823a9dca3584a8307573043c6b9dd6dc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "76bc81062a08c3df79c8cd98243c6beb723e6e6799128d8af6f0ec6f4de03f3c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "784bb77a0b6c1d757dcf9338e5f00226202394ab8a45671c81fc1379b454ec47"
   end
 
   depends_on "python-tabulate"
@@ -60,18 +60,18 @@ class Checkov < Formula
   end
 
   resource "bc-detect-secrets" do
-    url "https://files.pythonhosted.org/packages/1c/1f/68884e94fb28dfbac89c22cfcb45426215c53126c3af661a2fd25d4529e4/bc-detect-secrets-1.4.5.tar.gz"
-    sha256 "8243aeb2bf79ee547cf54355b19ec951410c5fc2cab5353dff1b56190bf5973c"
+    url "https://files.pythonhosted.org/packages/53/2f/d509c64205843b41aa3043722bd39bc7bc43d64cd85d83d64795848fc84e/bc-detect-secrets-1.4.6.tar.gz"
+    sha256 "fc36639369d35a935d1088c3cb2a9ebc1b9c63dce8cefef4d1587a4668c1029b"
   end
 
   resource "bc-jsonpath-ng" do
-    url "https://files.pythonhosted.org/packages/8d/4b/3f365e05407e2aaf931abc4b994a0a91e65a16555218e535a1968680afdf/bc-jsonpath-ng-1.5.6.tar.gz"
-    sha256 "ae1640aedf0866bbba23102671907d34937b835e01867b8e2e25f63f4897ad4f"
+    url "https://files.pythonhosted.org/packages/f3/71/11faab6bd73cb53798aa67a6c457495a7f2525115cf1ef1946e05c8725df/bc-jsonpath-ng-1.5.8.tar.gz"
+    sha256 "c79388a3bfd00b52d8dd6cd600b637c377c9fca22faa7d30bbbc38cca9b06ee2"
   end
 
   resource "bc-python-hcl2" do
-    url "https://files.pythonhosted.org/packages/af/80/1b1d6f47cd1c147f961dbabf0d1da386b6c451c2e87b38664593315fe315/bc-python-hcl2-0.3.47.tar.gz"
-    sha256 "178bc09fa1d1bcd35cfb865f182cd479fd786cd9b14c80b010d99a39edcc6877"
+    url "https://files.pythonhosted.org/packages/83/30/23d56ecb6c572f84abd506a8af9e03fcccd69d342e7eafd25688d0ba46c1/bc-python-hcl2-0.3.51.tar.gz"
+    sha256 "15bfecbae882ead998dd9300737237a14e40dfd8c973e5c7de7b4c92040a010f"
   end
 
   resource "beautifulsoup4" do
@@ -80,13 +80,13 @@ class Checkov < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a4/4b/68e9f0c1df638321753e359f3668d2eec03f59f7fe2b230c3c26caef39cb/boto3-1.26.28.tar.gz"
-    sha256 "53badfc5f145b8a3f9117512b41bc5a64db1cce1b549061d8edba68909e63fdf"
+    url "https://files.pythonhosted.org/packages/2e/6e/4890eaf9cb614875f731d02649871feff240f9457397fa7230e9448ad913/boto3-1.26.33.tar.gz"
+    sha256 "722dccba749ee34ead7d8f52899ae270958959c509631338f2ca5e777fab3875"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/1f/89/9a1b9edcc8748b0e89cd3a1ce73037584506009ea2a0046fdb3954354da2/botocore-1.29.28.tar.gz"
-    sha256 "f0b8bb976e368dea20a960b47169e31fc0828feb6f0b9f59f1e5be8d08919b10"
+    url "https://files.pythonhosted.org/packages/2c/d9/7add2ea2563e90c9f64f78536ea1dd66dbf4ea14e817ae14cb5e90f68baf/botocore-1.29.33.tar.gz"
+    sha256 "303f8c3ba40b11563b0b6740af8c053d3ed187a4824e495a652ccdb593dd612e"
   end
 
   resource "cached-property" do
@@ -165,8 +165,8 @@ class Checkov < Formula
   end
 
   resource "dockerfile-parse" do
-    url "https://files.pythonhosted.org/packages/d0/f6/8eb044e3837f6da0a85d9f73158104fecdab68bc86a83625b1e398963ed3/dockerfile-parse-1.2.0.tar.gz"
-    sha256 "07e65eec313978e877da819855870b3ae47f3fac94a40a965b9ede10484dacc5"
+    url "https://files.pythonhosted.org/packages/0f/c4/8c4fc1da93a67878b15eaac0d47f467c87be7a12406544b1b33e261a0454/dockerfile-parse-2.0.0.tar.gz"
+    sha256 "21fe7d510642f2b61a999d45c3d9745f950e11fe6ba2497555b8f63782b78e45"
   end
 
   resource "dpath" do
@@ -195,8 +195,8 @@ class Checkov < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/32/5a/e0d75c8010295ae6746f379f5324bc726076dfc426548bfa6f0763fce870/importlib_metadata-5.1.0.tar.gz"
-    sha256 "d5059f9f1e8e41f80e9c56c2ee58811450c31984dfa625329ffd7c0dad88a73b"
+    url "https://files.pythonhosted.org/packages/a6/1d/7a01bc53a248ddb14eb0dca86f089ddf848d7b9485c31d7f840f27acbcfe/importlib_metadata-5.2.0.tar.gz"
+    sha256 "404d48d62bba0b7a77ff9d405efd91501bef2e67ff4ace0bed40a0cf28c3c7cd"
   end
 
   resource "Jinja2" do

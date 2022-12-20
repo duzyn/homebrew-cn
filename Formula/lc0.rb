@@ -7,13 +7,14 @@ class Lc0 < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4207b3c56b8f65325b3c9782709acbbf7e8f4d93506b8496915f698d47146236"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bae2d59b3ac882fececa7710510016b12dd6b57d2d580874efe396ddb799a17a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "529596b859865c633ea43260221fa74fbd1b8ddbd3d2b060ed10bca556d87d00"
-    sha256 cellar: :any_skip_relocation, ventura:        "99df228e19fd20db746645acb4cd25f4bdd5a6d26fcac45006fd2e7fb1914333"
-    sha256 cellar: :any_skip_relocation, monterey:       "55df9f9ee77017ddf717361595fcd0267ab1df6f06e515ba3ea19eccd7c35fde"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4decdac18080cd1a01fad5d8b2e263847d6e51feceb3ec7d4ec010e6c8eae887"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c788dcf4a6b1acfa7d96d1cc80fb0dd4c20b049b840a6068c19e52c729cdf7b"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "89b183e7deea7ff39d8463e70fc1b5da7e3fc547f90e91bf43baf1c8a3d49f99"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fdd6bfd76c58c7213d23bf1946340030701c6a57dbb171026c9213be6cd6be8d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d8bd4640d5eeca48ddf2c88cc5f606504f59d66d17aec6dabcb7333863ed07d"
+    sha256 cellar: :any_skip_relocation, ventura:        "576652ad17704ee01de8a1637d56e58fa0d0a52ae00fbe512bb10a90d3386e0d"
+    sha256 cellar: :any_skip_relocation, monterey:       "87f1af61af279b1e06d96659d6b28f6eb6ef1accea4875e5fdb066ce2383219f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d353339a78402996038ae6938477da3f0f4e29c1edcd74bbe9617374d90ff062"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7aae4b4e1fd9587f3dc01724c83c364af205428342507617e20f3f7a6de7f774"
   end
 
   depends_on "cmake" => :build
@@ -31,11 +32,11 @@ class Lc0 < Formula
 
   fails_with gcc: "5" # for C++17
 
-  # Currently we use "42850" network with 20 blocks x 256 filters
-  # from https://lczero.org/play/networks/bestnets/
+  # We use "753723" network with 15 blocks x 192 filters (from release notes)
+  # Downloaded from https://training.lczero.org/networks/?show_all=0
   resource "network" do
-    url "https://training.lczero.org/get_network?sha=00af53b081e80147172e6f281c01daf5ca19ada173321438914c730370aa4267", using: :nounzip
-    sha256 "12df03a12919e6392f3efbe6f461fc0ff5451b4105f755503da151adc7ab6d67"
+    url "https://training.lczero.org/get_network?sha=3e3444370b9fe413244fdc79671a490e19b93d3cca1669710ffeac890493d198", using: :nounzip
+    sha256 "ca9a751e614cc753cb38aee247972558cf4dc9d82c5d9e13f2f1f464e350ec23"
   end
 
   def install

@@ -4,7 +4,7 @@ class Geeqie < Formula
   url "https://ghproxy.com/github.com/BestImageViewer/geeqie/releases/download/v2.0.1/geeqie-2.0.1.tar.xz"
   sha256 "89c1a7574cfe3888972d10723f4cf3a277249bea494fd9c630aa8d0df944555d"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -12,15 +12,13 @@ class Geeqie < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura:  "e0f4adc0b1ba1bc1069c04613e133c1b1ea3754d318bb5a83ed8a91f47f63622"
-    sha256 cellar: :any, arm64_monterey: "9aea268f6843bd97784c8819b1b7864f95b6a9c0baba6bf4e60fe213190accfb"
-    sha256 cellar: :any, arm64_big_sur:  "94b5ef7be0839c42d359a3768d545a99b25bf093533b331a20e4b929a4848e0a"
-    sha256 cellar: :any, ventura:        "6501282671b37e9560f0d252cf27c926e919358cd4459dab8ce90ed388d06bba"
-    sha256 cellar: :any, monterey:       "1104afb3786b064ea3072c85f30fc8270e8e92907d30003558f9f32946668c14"
-    sha256 cellar: :any, big_sur:        "1a3f664e7889bf97ed3865872a46d5039ed45615e00102a1cb093dd94d5fa55b"
-    sha256 cellar: :any, catalina:       "e2dec2996f949bf09f887c4bf1c6374efa563c31c41bae8ae121f253f5be53de"
-    sha256               x86_64_linux:   "c6b662b72f13d521576f5de5e1614be0057041f768836d33c0053d4345fbb980"
+    sha256 cellar: :any, arm64_ventura:  "be131da5651dbaf7bbebc05071370964ace01fb7952318d77880e989571943ef"
+    sha256 cellar: :any, arm64_monterey: "21cbf95d6c94ee2ca0a829892af45658361648d06163a6459d0f341066430731"
+    sha256 cellar: :any, arm64_big_sur:  "b87ef020a355a72de1b5678d0777f6437600358e8f727db1271ebfeba5d51da5"
+    sha256 cellar: :any, ventura:        "dd7be8ecba39d584a89541517523c47050db8595d3551fc94dbe5934511d1cc7"
+    sha256 cellar: :any, monterey:       "238386bb528cced0050a095c89973d0edf4cf04abba612cd5778c1ffc36ea6b4"
+    sha256 cellar: :any, big_sur:        "edbd513fa2df92e02ce67adb19e95445744b1ff9c7a8f21d086d547a3c8c28d8"
+    sha256               x86_64_linux:   "fdee4ae387afd0ef3ef45a0e09a505aae49d007eff9b2e288fbbac1ae6e61e10"
   end
 
   depends_on "meson" => :build

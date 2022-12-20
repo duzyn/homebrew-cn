@@ -1,19 +1,18 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.11.5.1.tar.gz"
-  sha256 "a4f494a2739282d370c5186e1a8378427a41d4438bed416f52f0ad79701d20c4"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.11.6.tar.gz"
+  sha256 "ed2fed353630891f7c6b723f13cb1e586e079eb45e31bdaf2132d9e9cd583a2c"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3f9c5f5fc19f195d908700fdcf99adf36d339553ab5ee16c1f6e1681b1956d1f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4285a73cebdba6dfe268f6a6cfebb26e789717b678ad18bd012a5cb25abbcc0e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc4f92f39e35f7d485db6a83bf958e4009933f8fbc43179fd0685a51fdf25d99"
-    sha256 cellar: :any_skip_relocation, ventura:        "07e9642942d3857da15e5e7708c19cd934dbd0d20e048d9f9c5ab2b7d1d1de98"
-    sha256 cellar: :any_skip_relocation, monterey:       "23ab83d137735b3a07bf28d04ff62e20a607202819c61c5bc159f703c347e8c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cbd97f6ae258cede6733698da8ff79df73cd96419d2144baf6e77e76eef78c31"
-    sha256 cellar: :any_skip_relocation, catalina:       "9d64b9f69593d0d0b359d6d1e67b244eb2ad5934eb63661d6211db90192be46e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "be3e0ef34576095cda9d4f304cd4ddddb73c4d9451b2b513e9abf0705e042c09"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "600a098aadabe44498840cab0eadd54fc5a987cfb9cce97f153eedc1858e371f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ac10c81223ad1dfcf3ee8f4fc0bcf76f43edac978e0b9712310cd31706b7542"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b039febdf9edca4f1365355901c766fc4c4032818b1df4e89f833866f339a33d"
+    sha256 cellar: :any_skip_relocation, ventura:        "828f5a88a9aaa0c1b12e621f3a65be103ff4fb6a1d110c813c063943c237c5a9"
+    sha256 cellar: :any_skip_relocation, monterey:       "64a7c69e95cc3c7cefea33e489729b55962c1e472c11266287ac358a52aaf207"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f01382d3c8699a5495dc733b7a73d35ba438ddd70f8b2c8ddb21033c944b4f40"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "210f773da5337aad4bd7f80c6dc48f7f47a407aa68a1b297287c28d47c31d045"
   end
 
   depends_on "cmake" => :build # For `boring-sys` crate in `libsignal-client`

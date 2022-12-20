@@ -1,20 +1,19 @@
 class Cloc < Formula
   desc "Statistics utility to count lines of code"
   homepage "https://github.com/AlDanial/cloc/"
-  url "https://github.com/AlDanial/cloc/archive/v1.94.tar.gz"
-  sha256 "c835fe343e1c25194a61eb74d7a36e98413682ed0c3b4d6b8e35a327077bf926"
+  url "https://github.com/AlDanial/cloc/archive/v1.96.tar.gz"
+  sha256 "9cab16a2d9b9e915d7f7299f718d13bb7a8e2082255d29747dc79498d5a4a3a4"
   license "GPL-2.0-or-later"
   head "https://github.com/AlDanial/cloc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9e8cc8f4a60d5c7e60a9a31915b987f40cda4cb48b1a95a9a9959b048ddcacbd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "775e39398333238ecc87c8ac33aaedf624015f0df21f20927b3cac4c5774724f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8852c91261cd84c264fa2b9b0790cc17b330f34a005455dac5ff6566e2ffee9a"
-    sha256 cellar: :any_skip_relocation, ventura:        "a220cbeecede486966210219a0bc45fcb899e27ce82e8a7aead60a6fc15cfa41"
-    sha256 cellar: :any_skip_relocation, monterey:       "a2db66239933ccb04153b6f08eeb99adb1685cdba4dde2facd1dc79a21d0355b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "23bc48be8f921dd9d56ad3ed978036c7b1e9234d048370c78c8b90a9dcf930c9"
-    sha256 cellar: :any_skip_relocation, catalina:       "20ed206034300efcd3f689ab32aff996e550305a5cf4182763214c9bbc1e618b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1b4c754ea79bc50d46a0ab59c69b11148ce2a4ba02f41f8f85953fec90ac905"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f2ca644c64871c455ca23dbf4bb2a7484a6ae2efc24499137db2ac4f80637410"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f2ca644c64871c455ca23dbf4bb2a7484a6ae2efc24499137db2ac4f80637410"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0178f5ea1ba8f6af12d0f3d6922efcef4f36f3b183e0880aff0603f1c4ae047"
+    sha256 cellar: :any_skip_relocation, ventura:        "17612c45a4732801fe0a3611fd814126786546a23f9e5a11f19a60fe41f90dbc"
+    sha256 cellar: :any_skip_relocation, monterey:       "17612c45a4732801fe0a3611fd814126786546a23f9e5a11f19a60fe41f90dbc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6ea7874b57b82a041dca9f18e527007ce44a14836468f4b649e3893618c00928"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "480db584414f9730082099f836d29a80a7443fa14809d1d01e86c714b50a9cc2"
   end
 
   uses_from_macos "perl"

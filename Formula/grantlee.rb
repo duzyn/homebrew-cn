@@ -7,48 +7,39 @@ class Grantlee < Formula
   head "https://github.com/steveire/grantlee.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "46253789d31595c08c50abca379da6d795dbd6ed79419e3a764759f8fe17e1b1"
-    sha256 arm64_monterey: "cf5d7791583fbe05a7040ca9abcb8adcae421c1e6426d6c7b2d498f2fff5a882"
-    sha256 arm64_big_sur:  "98cf93a0121f6dc1fe9ff0c90fac922101e2105dafe8b78ef6d58e47f7077a7b"
-    sha256 monterey:       "208abce9f9486cb7ffa60421a026f44e3af436d74bf3a344ef00a92945eb5231"
-    sha256 big_sur:        "8aebd298307cd5055ee40a88a3728866a141e26a412b35c1db95f3c894f886e4"
-    sha256 catalina:       "c94ce97fcb5d60f4a31b48d2a36a4da60fa685a67d2f320716d535920abb5967"
-    sha256 x86_64_linux:   "aa0d2ecec107907c391964d313d1ae2fa164d22d8f15c80e02b721d21e058316"
+    rebuild 1
+    sha256 arm64_ventura:  "cd51401e55656ade5d8842df92957a6af33ea3d3da309c418d0dd3b9c360e85d"
+    sha256 arm64_monterey: "c48770f2d0dd9d96cff5f935f24da74cbba4bc03711803d86ca43a40bdb74d74"
+    sha256 arm64_big_sur:  "deb426bef80bf69b2ef4a52b9aeed26283400f6d7f6ebe6d495ae43c2ba647d3"
+    sha256 ventura:        "afe7f2fb56c25ea01712c69806e5e6c91bfbc495604f254ff10443ceafe46334"
+    sha256 monterey:       "ac395abc45412eca0aa6e5292127b6655f45ff4785d8d69457bc9f124f87f222"
+    sha256 big_sur:        "cb83e418903303323e40af6f902331b1365ecb31382fc7f7407753a1533d0a0b"
   end
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
 
-  depends_on "qt@5"
+  depends_on "qt"
+
+  patch do
+    url "https://github.com/steveire/grantlee/commit/1efeb1cb61947e69b8c99ddbfc5b75cd27013a87.patch?full_index=1"
+    sha256 "6c5fa321c5df2b970ec2873df610ec43dd2d50977cb0a104d0d7c4ecb90621c2"
+  end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DGRANTLEE_BUILD_WITH_QT6=TRUE", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    system "cmake", "--build", "build", "--target", "docs"
 
+    system "cmake", "--build", "build", "--target", "docs"
     (pkgshare/"doc").install Dir["build/apidox/*"]
+
     pkgshare.install "examples"
   end
 
   test do
-    # Test fails when qt (6) is installed
-    args = %W[
-      -D Qt5_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5
-      -D Qt5Gui_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5Gui
-      -D Qt5Sql_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5Sql
-      -D Qt5Widgets_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5Widgets
-    ]
-
-    # Other examples require qt-webkit. We doesn't test execution because they're GUI-only apps.
-    %w[books
-       codegen
-       textedit].each do |test_name|
-      mkdir test_name.to_s do
-        system "cmake", (pkgshare/"examples/#{test_name}"), *std_cmake_args, *args
-        system "cmake", "--build", "."
-      end
-    end
+    system "cmake", (pkgshare/"examples/codegen"), "-DGRANTLEE_BUILD_WITH_QT6=TRUE", *std_cmake_args
+    system "cmake", "--build", "."
   end
 end

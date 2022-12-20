@@ -12,17 +12,17 @@ class Xapian < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8a0ef8e5d8abca01d46ebefe17202b6051609776e6bb1e08c366d84b1b289974"
-    sha256 cellar: :any,                 arm64_monterey: "e7f41e2d95fbde01dcc4750858cdf152708c963bf92e37fd14c7af35fd57fd5f"
-    sha256 cellar: :any,                 arm64_big_sur:  "bdb29ed6033c31d37f83d77a9800c6ebd3f64f51974ecb0851b0ad5a1ed81e77"
-    sha256 cellar: :any,                 ventura:        "012b2b4e0c3d129b916ed85ccdec448fea36a24ba4a6ee9aece8d457ef3c7080"
-    sha256 cellar: :any,                 monterey:       "54fd260ba675a7429ba9d870a299f24902eabde2758bf4ce65592c6732bdb7e4"
-    sha256 cellar: :any,                 big_sur:        "122d19b6ca19c45af8b9ae46b395370310566c8a920df67b158bfa6c5a975ec4"
-    sha256 cellar: :any,                 catalina:       "2d8add7cc126bb89fb4c6e954a74131df7e5f47c90c1a952de6a698a3bd50a6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0aed1e2c661ca97ad06db18f16972f7453f20df1f4ed0f775ee0bf317f80c12d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "94282bf584c6f10784f1331f5c0f45a6e5fab4966e62cdb3046f6cb00f1ad305"
+    sha256 cellar: :any,                 arm64_monterey: "19ccb741b677fedbc18aab3eba8e3448f93e24e4495453091f5b4911ddb0ad28"
+    sha256 cellar: :any,                 arm64_big_sur:  "c6eaa3e9ca0c4433a9a68a001d43359a769fe332b20428842682bbf349a9d63c"
+    sha256 cellar: :any,                 ventura:        "69a1f2026b87b096a202506f2e249392affdfcdc3bc7f5dade8e813b1b4d8d7e"
+    sha256 cellar: :any,                 monterey:       "e3935fe73611fb3db2fa98dcb151e6129950bb9dda20d2b8fcf351abdec6f560"
+    sha256 cellar: :any,                 big_sur:        "8d97587e1fc548777532581c1d6409e39512309dfda50eb764c154bfdefd765a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c13c59d710c79b257cff9ca1bb60fa9c9345cceddb6b7706932e6dd2d85ba62b"
   end
 
-  depends_on "python@3.10" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "sphinx-doc" => :build
 
   uses_from_macos "zlib"
@@ -45,36 +45,30 @@ class Xapian < Formula
   end
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install
-    python = Formula["python@3.10"].opt_bin/python3
-    ENV["PYTHON"] = python
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    ENV["PYTHON"] = which(python3)
+    system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make", "install"
 
     resource("bindings").stage do
       ENV["XAPIAN_CONFIG"] = bin/"xapian-config"
 
-      xy = Language::Python.major_minor_version python
-      ENV.prepend_create_path "PYTHON3_LIB", lib/"python#{xy}/site-packages"
+      site_packages = Language::Python.site_packages(python3)
+      ENV.prepend_create_path "PYTHON3_LIB", prefix/site_packages
 
-      ENV.append_path "PYTHONPATH", Formula["sphinx-doc"].opt_libexec/"lib/python#{xy}/site-packages"
-      ENV.append_path "PYTHONPATH", Formula["sphinx-doc"].opt_libexec/"vendor/lib/python#{xy}/site-packages"
+      ENV.append_path "PYTHONPATH", Formula["sphinx-doc"].opt_libexec/site_packages
+      ENV.append_path "PYTHONPATH", Formula["sphinx-doc"].opt_libexec/"vendor"/site_packages
 
-      system "./configure", "--disable-dependency-tracking",
-                            "--prefix=#{prefix}",
-                            "--with-python3"
-
+      system "./configure", *std_configure_args, "--disable-silent-rules", "--with-python3"
       system "make", "install"
     end
   end
 
   test do
     system bin/"xapian-config", "--libs"
-    system Formula["python@3.10"].opt_bin/python3, "-c", "import xapian"
+    system python3, "-c", "import xapian"
   end
 end
