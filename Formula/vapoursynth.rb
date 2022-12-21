@@ -12,14 +12,14 @@ class Vapoursynth < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4ec2c7527a8005b82010c2094f842db805276395c67aff3bdb077f3716712ad6"
-    sha256 cellar: :any,                 arm64_monterey: "cb2bac5759ef81702178c25a6be35bb14ed18e69ff4e0ef5c34911d67c013880"
-    sha256 cellar: :any,                 arm64_big_sur:  "532b4272e50d571934f18597e92113c6fefae1313201d05703fa3de021bad000"
-    sha256 cellar: :any,                 ventura:        "fda32be9017874a18d2564d9470c9aa92a65f92c0af29d0636cc6b37ae3ceb04"
-    sha256 cellar: :any,                 monterey:       "265216c789a54f780ada7d12ff6f53172cf24094cb653cff240e7b1100e44cdd"
-    sha256 cellar: :any,                 big_sur:        "2e8ea488f9152e0bca718d9a244cda426d1481c6a264f142f07e0748a18a0fdd"
-    sha256 cellar: :any,                 catalina:       "0a5d7d81c8f5a61293eb115a2f1874d019cfd472d34edc6f6ab2a4eae760a776"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c1136401f6f7d77c52872cfbbcfda0ec1216c8ec0bcf302cca023f02ef21be19"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "168b8535fa080eaf1f31ab7f9067d4a9d2da34ec71f5ba6edef5b6915d3cd605"
+    sha256 cellar: :any,                 arm64_monterey: "ea994ffe530d5ca8dfa7346c7e72c0d7d641c484ec097ec3ac4cebee22163a53"
+    sha256 cellar: :any,                 arm64_big_sur:  "ed111308a209ef8a1c9579d7a3e0ce80aed70c03966356f1d4340165ba1d9776"
+    sha256 cellar: :any,                 ventura:        "c0771cfc95ce712bfd36b40ff3c49181256074ecdc6d7cfe1a899c95113c1b42"
+    sha256 cellar: :any,                 monterey:       "6ebbd237599d0efcad2a0d928f6b35dad8e5d079a98a254e2d0f4dcbe3ac2e07"
+    sha256 cellar: :any,                 big_sur:        "12680cc137631e3a5e785b3350c3129b8ece6bb8b17530242aba5e0097abf4cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b5a702042cf9f7d3161f67b7b4a7beb48589fba1cd9bdfe9ca6bbe5ac99762b"
   end
 
   depends_on "autoconf" => :build
@@ -28,7 +28,7 @@ class Vapoursynth < Formula
   depends_on "libtool" => :build
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "zimg"
 
   fails_with gcc: "5"
@@ -64,7 +64,7 @@ class Vapoursynth < Formula
   end
 
   test do
-    system Formula["python@3.10"].opt_bin/"python3.10", "-c", "import vapoursynth"
+    system Formula["python@3.11"].opt_bin/"python3.11", "-c", "import vapoursynth"
     system bin/"vspipe", "--version"
   end
 end

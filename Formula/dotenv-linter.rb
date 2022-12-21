@@ -1,21 +1,19 @@
 class DotenvLinter < Formula
   desc "Lightning-fast linter for .env files written in Rust"
   homepage "https://dotenv-linter.github.io"
-  url "https://github.com/dotenv-linter/dotenv-linter/archive/v3.2.0.tar.gz"
-  sha256 "c93ea23f578c2b2e7e1298d625a3b66e870c58222743657484a84415f54fcd64"
+  url "https://github.com/dotenv-linter/dotenv-linter/archive/v3.3.0.tar.gz"
+  sha256 "71328137c4bcee04226b149099a81ae3ffcfaf6c94d90d4a9ac8a82cb2c4dc10"
   license "MIT"
   head "https://github.com/dotenv-linter/dotenv-linter.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9c5d2c86aeb6cd06703803fdecbaed47dad1742e0465cb59449663becdd900cf"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b70c99caadc973689053dbe2036fbc249806f47a472634a5c95365361062a53"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6320dbfc3c337c732b8307709d80a3378c63aa6300475b82dc818adfbd2bb746"
-    sha256 cellar: :any_skip_relocation, ventura:        "c5775d58fca6491d12d0174c437c2d6a1789f4dfb521198692e266481d96dcc1"
-    sha256 cellar: :any_skip_relocation, monterey:       "5fb258b2a1ec2a0362a96c4737494780d76385b8e8795c36875aa507238be054"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b218930db55ecf7a3c3a84d9027adb77b7acc009eb6d59700b2dab46464ee38d"
-    sha256 cellar: :any_skip_relocation, catalina:       "b8c7248ad397808dff0ed62cd3bf997db6c355571e9bbb3fd3895b711ac97823"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "35e20bddf0db0de8f8d62bcfd14cc8fd2a123fbec9f71cd526c6d0939ee552ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "63cf0b41654d7400a69e02a2e1f62add8cf0dfcbe2d1a25e2488d90edcf0b335"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e254bf85ec318b79a7106efc1e186a99eddc6db73e21c2bc9cc58f703587f137"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "470451a731ba381ad8c220c6380a557b325a112cbd7cc57b25883c951972f6e9"
+    sha256 cellar: :any_skip_relocation, ventura:        "cf8d22f0d37d43b69853b34b5e9e8c80d0ed514bac0b336d1239c398ca42e980"
+    sha256 cellar: :any_skip_relocation, monterey:       "d3fceb50a7f92ddf61ac56e9daa80ff230a29a9474438e129b807e123ae79aae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6d2656a480a42fa1ada99abc99a101a8744073b839a088891a93e5f75ca000dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "31bc47faa9df9655396adbc0c1b137cb8491c1a13b933d0c2ac5edbd339f866f"
   end
 
   depends_on "rust" => :build

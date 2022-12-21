@@ -8,16 +8,14 @@ class Mvtools < Formula
   head "https://github.com/dubhater/vapoursynth-mvtools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8b39f0c8bf4f7ebb2377f63af919539e3027a606c03467875234d0a952342856"
-    sha256 cellar: :any,                 arm64_monterey: "103ac07596bd7b5e6142b3fbedabf5adffdc553381d8b9eb9e5832a1a8df8f3a"
-    sha256 cellar: :any,                 arm64_big_sur:  "d532c9381d9c889e06a0ce330ed9f3a95d5552572981605f233efd28a052b34f"
-    sha256 cellar: :any,                 ventura:        "75c77e62d51e537cc492f2176d43cf072f2ed86f40807095a4cfd879a28119aa"
-    sha256 cellar: :any,                 monterey:       "5fc1c4a4fda847ebc2a78fe9972fd99fa7c4f7f52b74cb68825181634f9c3d5e"
-    sha256 cellar: :any,                 big_sur:        "df691836b6052e38806e3e4a662f0b5da22120f8f586ad6ea388e2673dcf01b3"
-    sha256 cellar: :any,                 catalina:       "01785cf0cea2080cb2b875df545e027aaaf339fbbddeca53fd5dae8f39bf4726"
-    sha256 cellar: :any,                 mojave:         "0809f0353e48e30d8628bbe2124cebfa0ebd1a6add77e2d27798ce968dadb84d"
-    sha256 cellar: :any,                 high_sierra:    "0a1bab6b74375cb11959d2100e562bb2cc8124da7115b754975cd70c31e676b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "915cd8e779a5143a86f77cecc9efae2029eda0194358b52e69c4e59811c20c6f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "62463942e374b3ee49958f63a3e5bce607c9b82dc71857f300b95f531b292bb3"
+    sha256 cellar: :any,                 arm64_monterey: "3bfb4e19aa3c81d1b1b0b1c0fe00f68a58aece15f10f14858081f505fb417922"
+    sha256 cellar: :any,                 arm64_big_sur:  "7d4b6d61679ece8fcfb83a9a754e4263c7d94bdb0e2978a574d07af472743995"
+    sha256 cellar: :any,                 ventura:        "2af3b406d3e75883646d39fb31f827c7b1bf7efd63fb517705500233c56e3388"
+    sha256 cellar: :any,                 monterey:       "b52650498b19ccf12a79d4334c7e21255fe4e79b987c3259772de047ac679b58"
+    sha256 cellar: :any,                 big_sur:        "5bc809a1aadf67ec0a0b962a773b87c9c314780e919b2c56fd0904e898e08c57"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb7513fa52143b1835cbd909417dc89e4dd52da381ecc0dd33e27699779e173f"
   end
 
   depends_on "autoconf" => :build
@@ -55,7 +53,7 @@ class Mvtools < Formula
     python = Formula["vapoursynth"].deps
                                    .find { |d| d.name.match?(/^python@\d\.\d+$/) }
                                    .to_formula
-                                   .opt_bin/"python3"
+                                   .opt_libexec/"bin/python"
     system python, "-c", script
   end
 end

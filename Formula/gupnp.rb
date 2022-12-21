@@ -9,14 +9,14 @@ class Gupnp < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "c881ee736478e6b589d986be0170ca74288d72dc1aaf1e8a80c96bc8ce73f54b"
-    sha256 cellar: :any, arm64_monterey: "20a8225bd3f69fb56b37b09260e43699ac2ca88529178593c09b3b0ac6a05516"
-    sha256 cellar: :any, arm64_big_sur:  "cc2a5d6a8a5755eeddf83c5e39be393b9a8597ca4d35b4e230755cf2e25d2d78"
-    sha256 cellar: :any, ventura:        "34fed8ab99e60430b4fef8b1f51bb0bc2f482f8c9ed7178323a0ee1a35567ce3"
-    sha256 cellar: :any, monterey:       "bde4dbd7e0104c45f2776b1327fbf06876f98c376549b88221563a5e25b2597a"
-    sha256 cellar: :any, big_sur:        "a9aacbb2274395fcf56e2d8d18a6f91d342d09fbb1b1cf73e1fe51065b31af3a"
-    sha256 cellar: :any, catalina:       "ba073cf84ba7e26fa06dd14b4d6a0502650c99e0225822168d784520b2c7b036"
-    sha256               x86_64_linux:   "710a810a02b204d1570b4b20ed7d4fb625e5d009975f386c8a4a0509daa90389"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "81898c6f9183f8a141769c6aadd63f8835ab7dbb9a3fca0145b0862f4d4af04c"
+    sha256 cellar: :any, arm64_monterey: "7124e700f0f5f5ba2ea1d8b5666dd14738419a0a5476ac04a5de4a0eebf05290"
+    sha256 cellar: :any, arm64_big_sur:  "70b42ccefc7c188fa66a9d8fec99c64db4269e6a3364d765b778be23efa2d368"
+    sha256 cellar: :any, ventura:        "9288f119efbbe36f19bd6462e0acd10dfd9e1dc1fb92019742d6af2f00a73b50"
+    sha256 cellar: :any, monterey:       "4f0b3dbfd0daf7822f822958336f4e02d4c08983754294084edfac0da4927a35"
+    sha256 cellar: :any, big_sur:        "cd0880e2a66e5984f0d9a10bc76d2112bc23feeb250afd8f1d4bab3579f7dfdb"
+    sha256               x86_64_linux:   "6014f70bdae037603987199b6182a7fb70cdfa0184ed3c1a46f5c6a607cbf926"
   end
 
   depends_on "docbook-xsl" => :build
@@ -30,7 +30,7 @@ class Gupnp < Formula
   depends_on "gssdp"
   depends_on "libsoup@2"
   depends_on "libxml2"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     ENV.prepend_path "PKG_CONFIG_PATH", Formula["libsoup@2"].opt_lib/"pkgconfig"

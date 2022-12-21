@@ -21,14 +21,14 @@ class Lensfun < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0773deec541d4f869fb2948ada76ebd8e24cddbb7bbb236c7c5aedf2ded83c28"
-    sha256 arm64_monterey: "9486d22108299332ec92369f4e7338111a744f214c52ebb384db654ff7379699"
-    sha256 arm64_big_sur:  "98cfcaef6655bb8a9a67b1a9feaca1eba526f3b8ce46e35f40449f43902844cc"
-    sha256 ventura:        "8a81443e0bca1394f29fb73347ddd86d4de6019710d3a27d84983d3051df75fa"
-    sha256 monterey:       "1545b2a59105bb4906394498c6e21c2b4d1398d2a3301c6fc58c3106ccb37bae"
-    sha256 big_sur:        "07e1c1cca921506244057b958860353249aa676fd36d7bfc66d20da2d3281851"
-    sha256 catalina:       "1130d39462b5b1957109a78b93c31e3f1618860f37270c71e51213173193d2b8"
-    sha256 x86_64_linux:   "35c9b93d5196c8cd249b00ab7a7ad8347cb72ad57326fd4753f8fce01aaa55f2"
+    rebuild 2
+    sha256 arm64_ventura:  "1e47a3ce9b679747161cbf607127367249001b2162145787fd1f501dc4f0c477"
+    sha256 arm64_monterey: "5cd6ce6eec9f17b7bd176e3980b0047b9c497a4899d0e1a449185a2f026391ee"
+    sha256 arm64_big_sur:  "dbb34f96dc6fca84aed8450d617729cc6194e34069947c1e4c43adc27156c02d"
+    sha256 ventura:        "cdb64408d7544e20f2ac9cd204d7c3e18740589e25a763aadcb1e51db476642d"
+    sha256 monterey:       "f0194e2764c774b9a86e3016e41922a8c5a03e9c1513035b01dcc6019d99c1ce"
+    sha256 big_sur:        "b28108432c9ce8dc6f0947513082830fdb9673257701576892b544c46054c78d"
+    sha256 x86_64_linux:   "36cd0c58b8026f0712a6bbc25bfb287033912d80ba42fcfaca700f80282c9a04"
   end
 
   depends_on "cmake" => :build
@@ -36,7 +36,7 @@ class Lensfun < Formula
   depends_on "gettext"
   depends_on "glib"
   depends_on "libpng"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     # setuptools>=60 prefers its own bundled distutils, which breaks the installation
@@ -44,7 +44,7 @@ class Lensfun < Formula
 
     # Work around Homebrew's "prefix scheme" patch which causes non-pip installs
     # to incorrectly try to write into HOMEBREW_PREFIX/lib since Python 3.10.
-    site_packages = prefix/Language::Python.site_packages("python3.10")
+    site_packages = prefix/Language::Python.site_packages("python3.11")
     inreplace "apps/CMakeLists.txt", "${SETUP_PY} install ", "\\0 --install-lib=#{site_packages} "
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

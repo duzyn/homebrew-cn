@@ -14,13 +14,14 @@ class GstDevtools < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0fec4d236de24ba499dddd2018092b7f2fc60439cdc27ed9d77aef984d2a87bc"
-    sha256 arm64_monterey: "e4a0eb6ab7925745026f99a8f2bf3d745ae76015a95c65a055fbf46d53b9df44"
-    sha256 arm64_big_sur:  "f8358778a740398b86c986d0925b7b5a4a48f02f5d76d4ecaabe1f137cce971a"
-    sha256 ventura:        "a9ba3d7cef7e1a85947a3c0ebca87b2b4661e43e551cc4a4092fd7f141e1e523"
-    sha256 monterey:       "03a889e5e2fe120eca9a5d6d357d0ef5c202f9be3062eb72babf05c8660c026f"
-    sha256 big_sur:        "d9d9dc454cd16a15fc34fc31d8e5b06cb686ed4e6452034d9386b6cfafd57c10"
-    sha256 x86_64_linux:   "ae8f07845490d890bf1b76eb8f7e6daaf717724cfd54e92247c811370d585a36"
+    rebuild 1
+    sha256 arm64_ventura:  "e859091dd0314ec5ac9615e93b3f989b925e385112c80756de54880f55addb2e"
+    sha256 arm64_monterey: "34bc999c3ec0b285638aefcbfcb09c91dac1970522b2360264a182d7696cf530"
+    sha256 arm64_big_sur:  "87c2d002078bb392b1e8e84744490fa9e1e23d338b76d394dc1be3073d771ef4"
+    sha256 ventura:        "18865d7967560dc7a01177e72adcf09824549dea709e9489cd6eee6e4dc3754b"
+    sha256 monterey:       "7d241f7159010d90dd0ecf27595f2f34e90f0ae2e8c31afc1422967e6413ce30"
+    sha256 big_sur:        "57671b39b02280e4f57fd784d8868569f19e6f5d392ad94a6d6b2a105d898b80"
+    sha256 x86_64_linux:   "00a51ad101b5b16c07310b628787704fac546e48218d1e12161076c5be622a03"
   end
 
   depends_on "gobject-introspection" => :build
@@ -31,7 +32,7 @@ class GstDevtools < Formula
   depends_on "gst-plugins-base"
   depends_on "gstreamer"
   depends_on "json-glib"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     args = %w[

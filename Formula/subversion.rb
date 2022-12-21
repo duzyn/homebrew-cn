@@ -17,14 +17,14 @@ class Subversion < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "f6412d897a14bc49d2aae2fc05fb46480391d9b5cfbe5483085029a1439a4ab8"
-    sha256 arm64_monterey: "2536b8677ac26a06f54ee32dca6ab33096c51f109873a24b12e6df54fcdb2e8c"
-    sha256 arm64_big_sur:  "931e19de15f027514469762dca70cf3c7e84e1f9261bad2c5cd8ced85427c314"
-    sha256 ventura:        "8ee9ddf543cd875188ef3d4d8dd8eb9d8bc816e19df60534d267b2104ee83527"
-    sha256 monterey:       "2f17ebb1087b69a59a4242bcc4f91172098c44a95a719d2c53b57138544aa1e5"
-    sha256 big_sur:        "8179f32563a92bc8eb5ed2dcec9625af50adb967f95037c78f6dd971576d064d"
-    sha256 x86_64_linux:   "b3f3c18b9c48a3504afc09a08d34686b759c618e308c25231b49d861d92c5e2d"
+    rebuild 2
+    sha256 arm64_ventura:  "2a9a5e70f1fbaa17eeef6bb50376371c3a851b7a9a4b4603221c1fd14c54fc7f"
+    sha256 arm64_monterey: "da10671ff8bd10ab4032572c40963d60ddaa57feae1b6f09df6d9626bfd8496d"
+    sha256 arm64_big_sur:  "8944bdee4668b9750e8a1aa250eab73033ecbd1870d12e492637de25dd6251cc"
+    sha256 ventura:        "de4cc446ee4d782f3a1c44e078fd8644bbe321e6cbf275b7db78eed22a122448"
+    sha256 monterey:       "a29ab2cecb13316b6dc44e3ce0f9f3dc9bcc9484abaca2aac2984d1d89e2fc17"
+    sha256 big_sur:        "d24d68286d208a2294bf6e4e722aae60bed9574d827ca25354b12dccd8ef8ed7"
+    sha256 x86_64_linux:   "f3b735902067cdd7733ceac8310689236b4fe403205787bcbbc9ee7bced85968"
   end
 
   head do
@@ -36,7 +36,7 @@ class Subversion < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => [:build, :test]
   depends_on "scons" => :build # For Serf
   depends_on "swig" => :build
   depends_on "apr"
@@ -74,6 +74,10 @@ class Subversion < Formula
     url "https://www.apache.org/dyn/closer.lua?path=serf/serf-1.3.9.tar.bz2"
     mirror "https://archive.apache.org/dist/serf/serf-1.3.9.tar.bz2"
     sha256 "549c2d21c577a8a9c0450facb5cca809f26591f048e466552240947bdf7a87cc"
+  end
+
+  def python3
+    "python3.11"
   end
 
   def install
@@ -146,7 +150,6 @@ class Subversion < Formula
 
     perl = DevelopmentTools.locate("perl")
     ruby = DevelopmentTools.locate("ruby")
-    python3 = "python3.10"
 
     args = %W[
       --prefix=#{prefix}
@@ -168,7 +171,7 @@ class Subversion < Formula
       --without-gpg-agent
       --without-jikes
       PERL=#{perl}
-      PYTHON=#{python3}
+      PYTHON=#{which(python3)}
       RUBY=#{ruby}
     ]
 
@@ -253,6 +256,8 @@ class Subversion < Formula
     perl_version = Utils.safe_popen_read(perl.to_s, "--version")[/v(\d+\.\d+(?:\.\d+)?)/, 1]
     ENV["PERL5LIB"] = "#{lib}/perl5/site_perl/#{perl_version}/#{platform}"
     system perl, "-e", "use SVN::Client; new SVN::Client()"
+
+    system python3, "-c", "import svn.client, svn.repos"
   end
 end
 

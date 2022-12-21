@@ -1,19 +1,19 @@
 class DockerCompose < Formula
   desc "Isolated development environments using Docker"
   homepage "https://docs.docker.com/compose/"
-  url "https://github.com/docker/compose/archive/v2.14.1.tar.gz"
-  sha256 "4e3e92169ad9142718a168b71dc5027f173be4cdb6563f42c60677818efd7509"
+  url "https://github.com/docker/compose/archive/v2.14.2.tar.gz"
+  sha256 "72f25596fdaf3bfbb685460c6003acd7ea904b95f12151f892bb199f985fa285"
   license "Apache-2.0"
   head "https://github.com/docker/compose.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "eb20e5eb08c04f7250af871db049efd0ef3a1616270ff4c9f6c3a0d35ba57f57"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "eb20e5eb08c04f7250af871db049efd0ef3a1616270ff4c9f6c3a0d35ba57f57"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "eb20e5eb08c04f7250af871db049efd0ef3a1616270ff4c9f6c3a0d35ba57f57"
-    sha256 cellar: :any_skip_relocation, ventura:        "665a09161a6c440d06b343c9f75c9e0b3827aa5a1d71d598eb7e9d837c0fb635"
-    sha256 cellar: :any_skip_relocation, monterey:       "665a09161a6c440d06b343c9f75c9e0b3827aa5a1d71d598eb7e9d837c0fb635"
-    sha256 cellar: :any_skip_relocation, big_sur:        "665a09161a6c440d06b343c9f75c9e0b3827aa5a1d71d598eb7e9d837c0fb635"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8209c3500a7010f50c90ddeb986a4c760b46455d4a25a7dff6946fadac7e56fd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2418ab524836b20a73ddbced80971c5405283c4f85dbab1f6f13d33fd795f8a6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2418ab524836b20a73ddbced80971c5405283c4f85dbab1f6f13d33fd795f8a6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2418ab524836b20a73ddbced80971c5405283c4f85dbab1f6f13d33fd795f8a6"
+    sha256 cellar: :any_skip_relocation, ventura:        "16eb94550293c09791b52aeb36dac7ab48caffa74725a84225e8d6ec8e6b36c3"
+    sha256 cellar: :any_skip_relocation, monterey:       "16eb94550293c09791b52aeb36dac7ab48caffa74725a84225e8d6ec8e6b36c3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "16eb94550293c09791b52aeb36dac7ab48caffa74725a84225e8d6ec8e6b36c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a702b403e8ea0c49795224eb85cf7f75db5931bdec53aacacabf2de3d737f809"
   end
 
   depends_on "go" => :build

@@ -6,6 +6,11 @@ class NagaCli < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/gfx-rs/naga.git", branch: "master"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "5b2a425164a8b6531c39abe2ed61a8d4e68e4cc81ec55e35ebd0ae5c410d6f60"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "cdf4bdd0201d8e49ad56e2482767ea9a435f09928e08862a378aabc5fab04f4c"

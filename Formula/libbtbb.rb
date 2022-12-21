@@ -11,22 +11,31 @@ class Libbtbb < Formula
   head "https://github.com/greatscottgadgets/libbtbb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "2904d63b321c2a3b6810b42f9d8bbf865925a757b7248a4d9466ebcca87d21ed"
-    sha256 cellar: :any,                 arm64_big_sur:  "fe9f1a04a88665e9be1e82b96bf38fcf29734f7f4989a78a924c2c1ca710f26b"
-    sha256 cellar: :any,                 monterey:       "338757b7693248b93fba7d0e47534d7927ccc0cf9fb66d4c1d2b914205d13389"
-    sha256 cellar: :any,                 big_sur:        "46b4667061bf40d6c0416eb7f1f132883a8ea070097ad5fa4f1a9da6c54b25cc"
-    sha256 cellar: :any,                 catalina:       "3efe27e4f6d3b39e53a23c1be7fabd0edf7eca5f3ce3c29a1cbba6ccd7d0df41"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b21af3849528f1de05897c38033ca05ecaf0ab075a517e5b94727e66385e24ae"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "36c467509eec45be4a17cb6c9146f56866f2b6a3f41c08166404f39944fa4621"
+    sha256 cellar: :any,                 arm64_monterey: "1b9b2c8f1895afb52212f2564b5e538e7e2e17c58ed669015dd3e2f7ba668997"
+    sha256 cellar: :any,                 arm64_big_sur:  "045cb3192c8dd4f487e972da2222a3ace4b93ab7b538cf61dd5b93836b2e1c17"
+    sha256 cellar: :any,                 ventura:        "f0eecd7ea2b13216116d2c810367c42ec5172ff556d1330898b9f120263688d2"
+    sha256 cellar: :any,                 monterey:       "f74c9cd2853b7fcfbdcf288265e5a77032b085bdb9b07edf75ba32daf3cc4f44"
+    sha256 cellar: :any,                 big_sur:        "351fdb32609b85096a959d4511430584d3b5fef71f207e092cfb6e1007dd2488"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "022b75cccc7cfc9ea9e18a5efb7c5bda3286d154d2952b2b0109530d509d2a39"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make", "install"
-    end
+    # setuptools>=60 prefers its own bundled distutils, which breaks the installation
+    ENV["SETUPTOOLS_USE_DISTUTILS"] = "stdlib"
+
+    # Work around Homebrew's "prefix scheme" patch which causes non-pip installs
+    # to incorrectly try to write into HOMEBREW_PREFIX/lib since Python 3.10.
+    site_packages = prefix/Language::Python.site_packages("python3.11")
+    inreplace "python/pcaptools/CMakeLists.txt", "${OUTPUT} install ", "\\0 --install-lib=#{site_packages} "
+
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
     rewrite_shebang detected_python_shebang, bin/"btaptap"
   end
 

@@ -1,8 +1,8 @@
 class AwsVault < Formula
   desc "Securely store and access AWS credentials in development environments"
   homepage "https://github.com/99designs/aws-vault"
-  url "https://github.com/99designs/aws-vault/archive/v6.6.0.tar.gz"
-  sha256 "c9973d25047dc2487f413b86f91ccc4272b385fea3132e397c3a921baa01c885"
+  url "https://github.com/99designs/aws-vault/archive/v6.6.1.tar.gz"
+  sha256 "0b87b2f07b1d57ee392a79f3232aa659c07bf500c0531e6d888dab3977b44112"
   license "MIT"
 
   livecheck do
@@ -11,15 +11,13 @@ class AwsVault < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d3c89b705062010d9f6667bccf0fff48fd5f4d8ed1a285a2a5d3f5071fe6bd07"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0b4e2c997cfd3b046c6f59f8c44c9238b0366f3def9af6e072d1d61e873b22b9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2e2b8fd4d15fb66317a03419359508261edaed5bb01d050b245908b9267c33c"
-    sha256 cellar: :any_skip_relocation, ventura:        "103be27e74361dc49cfef28552ba619741ac25c1559fde0334f9de394abfa308"
-    sha256 cellar: :any_skip_relocation, monterey:       "91b9630e814878adc85e7357dde03cf5d6753f943a736c1697a1044ec65cc0f0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e1e4af96ac99a2d4774d3dc30bccea11c8bb9eb8c93bbc60a069ca98106c617f"
-    sha256 cellar: :any_skip_relocation, catalina:       "92a1a53fc9431d199ed2ca1f7767e20cb93177141af52e80dbeb1c3b7afe4716"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e6a22003f48ddf6c493440af96839477efd25ca8e966437a8f8cac25e651c2a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "807421c456799d3d305da1591b1e2957562037d849c4bb279eae22f739e4daec"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe0cd7a47603900ab194048db74fbc12a66e0fb462614c07b22bd4a7a6f52630"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f8ec9c96a4a8d509cfb5371d98134c5f84de903a8f835049ace6aa56cc144d4"
+    sha256 cellar: :any_skip_relocation, ventura:        "964df8b2d0d2d23f4d172173e2a53a74b7442f8f134bb5357a88bf2b30b47555"
+    sha256 cellar: :any_skip_relocation, monterey:       "3b82f51058db80fc1bd16ecdcb70cf3f9d7b59635c4be72a83e4cb1e2e653165"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c5be4a8a1288b5806b6391f0f1e360c6be5f58942621d13289f87d3cb6fa5047"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84e0f059e2d152e8cc6028c694314803ee64014658a83472ac1f9a0486484ac4"
   end
 
   depends_on "go" => :build

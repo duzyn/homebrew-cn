@@ -1,7 +1,7 @@
 class Ponysay < Formula
   desc "Cowsay but with ponies"
   homepage "https://github.com/erkin/ponysay/"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
   revision 7
   head "https://github.com/erkin/ponysay.git", branch: "master"
 
@@ -17,20 +17,19 @@ class Ponysay < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57179206e3a4a0b5941e872ec6bc17c942eca54f9b9c53e91017171c727fd975"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf1695638d599e7bca5b59a6a1d15e4a9555fef2a64a8b57a680af46a578fbdd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "15d31809c411d0af2a1aa8d1d2590e061ab4cb9b9de0397e97be2ebbb01e1fc8"
-    sha256 cellar: :any_skip_relocation, ventura:        "304b8e189c94aa8122f7f2878185a0c9cd2869d7ff35857855256170296abc49"
-    sha256 cellar: :any_skip_relocation, monterey:       "919db1ea7b08a3bf90d2950e428bb845b0a490803b336c15aa55ee7470405897"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bde757a6e76ce24cf5f8b163e3c6046032ea486c25b707140c8eb0e117fe2148"
-    sha256 cellar: :any_skip_relocation, catalina:       "599a4e15aa4b45a57a2a49a1dd961ab92ea763fd176552ffa278a7f0f4908a92"
-    sha256 cellar: :any_skip_relocation, mojave:         "6c163cdc7026773234e757c83135d848ca2447e2e160d5d2fa12761e64bdda5a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d7c805cc2d40f173cd617bef3d846c6858564e398b595271f23436608ad6e36"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "02c08b336e498548b23192de0e1fb91f9acd63c56c1bc5d3128b680b78c49467"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5cd34a134f11b527838ccc5efeca9cc880af360706c58807956b1f4e5677f1bd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fe930dcefbd56d918a49219076728d073a5aae1488b9aff703ff6fa3e2695468"
+    sha256 cellar: :any_skip_relocation, ventura:        "6f2049df606cba06f2591dae3a2ce085e9ff0c5a3dcd36b2e25035ec9b6ac8f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "2ffadbb803a343031c9579f03813d0f116150893a87dcde90480239baae42344"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e6ddef5171a1455ebf3bf897b7b6e3dc4fc91bdea0b778b87de63ab6dc01ceb2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71f0cb0d260f51fe6234cc2451d8abe69b869f463a26cd6bd22221151a051612"
   end
 
   depends_on "gzip" => :build
   depends_on "coreutils"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "texinfo" => :build
@@ -42,7 +41,7 @@ class Ponysay < Formula
            "--prefix=#{prefix}",
            "--cache-dir=#{prefix}/var/cache",
            "--sysconf-dir=#{prefix}/etc",
-           "--with-custom-env-python=#{Formula["python@3.10"].opt_bin}/python3.10",
+           "--with-custom-env-python=#{Formula["python@3.11"].opt_bin}/python3.11",
            "install"
   end
 

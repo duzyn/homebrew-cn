@@ -12,19 +12,18 @@ class Omniorb < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "a007d51613913a6441b90856096fbe7ce68f284cfb485a92289244b8bb88be25"
-    sha256 cellar: :any,                 arm64_monterey: "0e05e6e0d23e598d7b23e89ddb58230369933dee00d389c56f56777e396c1687"
-    sha256 cellar: :any,                 arm64_big_sur:  "1de446edfd905f9d455fc68bd4ea4e645ad5d1458f9f6011a29076f2737b0084"
-    sha256 cellar: :any,                 ventura:        "ec7e5af33f76b4720bfc116c616b3c861b793c136c12b5de71d1c37adc275390"
-    sha256 cellar: :any,                 monterey:       "a3deb94051db3a410b6035a3ea14b72df42e5ba9a9e37f34b7a3fcca8c484e5c"
-    sha256 cellar: :any,                 big_sur:        "18881ad0bf3a710e26a80c40fe35175c6affbbeb41f237b234d1529be7bd6300"
-    sha256 cellar: :any,                 catalina:       "07d60469609804fa434497a100bbbf22a24e3473ffd18931524eee975530fdff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a297fb5833f049ad78e4c613c51a6077fea5ebf153b2014790d2d2edf891f31"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "a308bc4486945c18bad8b0796a7dd86a2d3c7721e156f22dd6ab1e9ce51d9a54"
+    sha256 cellar: :any,                 arm64_monterey: "8cef87c6d73af069fafd91f2ca931523817322736586289e5088b856c527ea21"
+    sha256 cellar: :any,                 arm64_big_sur:  "ba9bb9a6529143c3693da1f7a74cd64732e14ef6ed864298eaa284e6e6b01606"
+    sha256 cellar: :any,                 ventura:        "6f6618da8505b338a4abf668311713636d7e5c27f6ef3c1c16e34d7508d417b3"
+    sha256 cellar: :any,                 monterey:       "6492666d50cc8f9a7293fc56200d3b4c2a7d77f0c0d08331ee63c783751c7ba3"
+    sha256 cellar: :any,                 big_sur:        "d9509e89052992d107acb49321970b248435f0e9f6d353bc7ad19c8a34a886e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "238a916ca3cc0effcc4b5374c88e0d2749ee0b548b4345cc6c684d1fc6ef2507"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "bindings" do
     url "https://downloads.sourceforge.net/project/omniorb/omniORBpy/omniORBpy-4.2.4/omniORBpy-4.2.4.tar.bz2?use_mirror=nchc"
@@ -32,7 +31,7 @@ class Omniorb < Formula
   end
 
   def install
-    ENV["PYTHON"] = python3 = which("python3.10")
+    ENV["PYTHON"] = python3 = which("python3.11")
     xy = Language::Python.major_minor_version python3
     inreplace "configure",
               /am_cv_python_version=`.*`/,

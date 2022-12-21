@@ -11,14 +11,14 @@ class Suricata < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0e132e5120dab6747abdab31c098d14afe7fb4372e8639a2d0c9e9b71033f19b"
-    sha256 arm64_monterey: "f6bba507bece50bc56d8995bc00369c4e30d85156bbf5cbb7fe95af7f5105126"
-    sha256 arm64_big_sur:  "32d9efc6fb46f897b9fa19909faa2fa57bc41fd821413ea7de7fcfa82622f6bb"
-    sha256 ventura:        "01f4f4eb7ea55be7c66ea4c45f30be5d7d5aa52434c9e45a820b4f4bfdb0bfcb"
-    sha256 monterey:       "8600dfa9367fa03e9a6fafeeb308e1e231fb5e3be79add2aa8cf40e3ce367b5c"
-    sha256 big_sur:        "e1b683285578bce6e93bbdfc0ff7943f3be2d12295af4974becfdee77d004fe6"
-    sha256 catalina:       "ced864e6364efecb07fe97dce1f5cb4efcf17db57c97d6c141df7a95aa71d513"
-    sha256 x86_64_linux:   "487ca07ddbfae1e396ff9353b6ba2b4803f54a1d549d57349aa81b8b3364d9df"
+    rebuild 1
+    sha256 arm64_ventura:  "b44b931e92576744d41bcf2d56a032756c0e598df5ec91ad88a41ae802746dba"
+    sha256 arm64_monterey: "54b31e8ed41e4a7b0393ac92756c78071598e375e5d4e05ab12171cc930209fb"
+    sha256 arm64_big_sur:  "aaa09cea15038f44049984def0233c38c4113d429a334e059b03da982b41b5f4"
+    sha256 ventura:        "c92e6b5b13829a4488d28520c387a26954d79e2a9f2cd621c13d4899305d4039"
+    sha256 monterey:       "c61a3c2247d304d022766d9192bccec95823b26852aec2f56580e8555522fa0a"
+    sha256 big_sur:        "4f64f5dbe1acf76afd72edb4ee4cfda8b68f0c9bc37b753172062b9a031e93e8"
+    sha256 x86_64_linux:   "8c802684f70f9164e199797f805fca059bcfd4d69e1d941df9211f76b192db7f"
   end
 
   depends_on "pkg-config" => :build
@@ -30,7 +30,7 @@ class Suricata < Formula
   depends_on "nspr"
   depends_on "nss"
   depends_on "pcre"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
 
   uses_from_macos "libpcap"

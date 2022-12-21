@@ -1,20 +1,19 @@
 class Sqlcipher < Formula
   desc "SQLite extension providing 256-bit AES encryption"
   homepage "https://www.zetetic.net/sqlcipher/"
-  url "https://github.com/sqlcipher/sqlcipher/archive/v4.5.2.tar.gz"
-  sha256 "6925f012deb5582e39761a7d4816883cc15b41851a8e70b447c223b8ef406e2a"
+  url "https://github.com/sqlcipher/sqlcipher/archive/v4.5.3.tar.gz"
+  sha256 "5c9d672eba6be4d05a9a8170f70170e537ae735a09c3de444a8ad629b595d5e2"
   license "BSD-3-Clause"
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "26df5e279136a5843e9f7058becbf454e2cd7e3c84fa155aadf345abfa1a625d"
-    sha256 cellar: :any,                 arm64_monterey: "3485f63912e36d01ecbf4dea5ea11ba0595f5a0d758fe2e50a734da28749429c"
-    sha256 cellar: :any,                 arm64_big_sur:  "6a61b33f89fe6517ade5304062b75a4b7fc0e788feeab7e425a29aa437a1f70c"
-    sha256 cellar: :any,                 ventura:        "ee001fbdb88863ed67e9dcbd38fe3c3b835b778a40587aa460ea8eebe057268f"
-    sha256 cellar: :any,                 monterey:       "28953e908487a25f6e502c299398206639f4542b469b772f85df48d8a578fa44"
-    sha256 cellar: :any,                 big_sur:        "9341a568923722c7583fc717037d63aefe941f1d7060c632da4ff2e8fb95a5bd"
-    sha256 cellar: :any,                 catalina:       "af5bdb1de84f318ba76ce36f25cc2fe7efbd79798ab06bdc84861ca994a78611"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40c96980b21b40050833f9db489bf0ae8f4b8bf4b2a711a5f40237be9b727ecf"
+    sha256 cellar: :any,                 arm64_ventura:  "0b2668a28a983e347db6939d5b07a870455a6d0873cc546cc698d7a8d35f0bf0"
+    sha256 cellar: :any,                 arm64_monterey: "483793504db8ae6a47e51cdbe0f670b6c5af72aeacfc8e868a382f3348f8ea58"
+    sha256 cellar: :any,                 arm64_big_sur:  "0534d8aef329ca3e58a2b02f881529dcadc669fc9dabc22f17de609edd67e883"
+    sha256 cellar: :any,                 ventura:        "748f7e34c361dd48f209fc3bf6c1d1c81111d5dcf94efde230e790aa278b34af"
+    sha256 cellar: :any,                 monterey:       "f3499d7164f0366d45b369e5937b6e5715a4830458a853abcd41fa72d81ea252"
+    sha256 cellar: :any,                 big_sur:        "fb3a3e66007caab833719d543ff4dc6e19db0c84df0a156a78fe36fc65efdac8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25a788e90948b13c89a754bd5d6b075bab0039dc7186c6d77cf2391ff23481fb"
   end
 
   depends_on "openssl@3"

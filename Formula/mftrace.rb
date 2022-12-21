@@ -12,14 +12,14 @@ class Mftrace < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "32fde76ddb6cf67c7811e56a89b45f1740ddff54b677c8e251d1dd56421f3b59"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e8466199e22f9463110acd4599057f136120eefd81d72dd4055a0b09dda48eeb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b0add7cd815e3752d182eebd26698daa34f99bc7a34a7441edc6f142ed354308"
-    sha256 cellar: :any_skip_relocation, ventura:        "eec33fe79864da672e825b96229a093b251502655ad3e00a61bf0dd1942f1ee8"
-    sha256 cellar: :any_skip_relocation, monterey:       "6aacf0e9c4cd21ca8abe71c97175b7c3173f9dabc6426c7ec4dc5b4174d56588"
-    sha256 cellar: :any_skip_relocation, big_sur:        "39e39a52a9cc3a4d96257cd13b8f70633583102ca73ca5984035ba8ac55a6892"
-    sha256 cellar: :any_skip_relocation, catalina:       "2282c664b45e2f701121b9c19059d14642eb0060a9c2973295ba084ba23d7e8d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd38a84142918b6630ccc5cdffedd471eade106be0d14ce1aab90b9d6d6db90e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d4db753d66ccd96f7b4272e100d47caa5175111850cc0da364bd452260ef6e31"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b471c3ba39bb586dc5dee6d154faabe0ea06f25fca76dbe48a3f11e884e02b12"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3507622b6f0bf74932c1104a1eb7f66aaa1ab238e28102f42f93186b2ce6d7d1"
+    sha256 cellar: :any_skip_relocation, ventura:        "aaf1973d2c4c5010044951ef5c5743f85b037f654fa6a9a0861137d849fb904c"
+    sha256 cellar: :any_skip_relocation, monterey:       "a353610085452f56bb18ddb4b1c3bff457f156a300f912f9d513cfb7fc6c1838"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2d1e02e4a47afe92b1862173c57b1bcf52ad3e423f59f554d93779340bd7a2a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "599c1dba64bc6e49ce1ad3a17f3e85d67d233b8a77d399d9e5b11bdae2bcdef8"
   end
 
   head do
@@ -29,7 +29,7 @@ class Mftrace < Formula
 
   depends_on "fontforge"
   depends_on "potrace"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "t1utils"
 
   # Fixed in https://github.com/hanwen/mftrace/pull/14

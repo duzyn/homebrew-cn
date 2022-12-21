@@ -1,19 +1,18 @@
 class K6 < Formula
   desc "Modern load testing tool, using Go and JavaScript"
   homepage "https://k6.io"
-  url "https://github.com/grafana/k6/archive/v0.41.0.tar.gz"
-  sha256 "9ded31c8e6a256e6bd1749f734f1a512b026184b0798f2c203b2cf82d1d9e107"
+  url "https://github.com/grafana/k6/archive/v0.42.0.tar.gz"
+  sha256 "a9bf8fb4a30de2da825a7427420cb32b33e6356e3069906f9e4ce9f764ee6372"
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c7d2ea81b3fbc1de2422d9d34c0a6563385847ee6930e864d6e381eb4fec372d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b517175c0d0119124edae6bea02c1e4399ad62deb1a27ad3413519366e7812d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "363aa6c32f151811537122c0b9d010f4109ec5ad30a4ce94e76fdf10050786a2"
-    sha256 cellar: :any_skip_relocation, ventura:        "e12e34c80ac4a6e3938fd6c76f35a8ee91f510e1f5de7d57c6a9816e40a0337e"
-    sha256 cellar: :any_skip_relocation, monterey:       "22d94dc3cf19e1c59ecfe22a1819e0a67e2380f31d39d14f233bd39ccf49af38"
-    sha256 cellar: :any_skip_relocation, big_sur:        "784d2e9be659d8f902318889264df95354e15d8b7048e28b186e36befa3d3f87"
-    sha256 cellar: :any_skip_relocation, catalina:       "540d8fa843dc40b20f4ae6964777fedeeaf0774ef4128efd3ab87b5d7420d802"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "722d53c93f0a7397e144d9f56f28006551a6e3d8106328168209b88e50cfac84"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7c2f49fba9dd5f0ae79e74466586919e1e47cc0174ad5e82e2dd7d0baaf945e6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "77969ef7cec7bf91dbf52584afcf0edd3a9cd0a28d18f57d5d9ad3e0c692c5ac"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "631ca4da67375a3e519853d2362a9b083a74fed939dfd74451718179f248970b"
+    sha256 cellar: :any_skip_relocation, ventura:        "19cd86afa195a221f05d3e176e7d0a5304693a0c2091fe0088213e463e200557"
+    sha256 cellar: :any_skip_relocation, monterey:       "e0d7532247b048e6729ff4e10581988fa7fb49716639952d139189d1a306a0ff"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c80a49da56b1a50e7698c5efdb3c9beb1d17a6e17a3acda1ddab8a0bfa8e082a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0229d4479c12245019f301fca18fb5d69a20e3783cfeb587b6538235d2f0be35"
   end
 
   depends_on "go" => :build
