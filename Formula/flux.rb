@@ -35,6 +35,11 @@ class Flux < Formula
   resource "pkg-config-wrapper" do
     url "https://github.com/influxdata/pkg-config/archive/v0.2.12.tar.gz"
     sha256 "23b2ed6a2f04d42906f5a8c28c8d681d03d47a1c32435b5df008adac5b935f1a"
+
+    livecheck do
+      url "https://ghproxy.com/raw.githubusercontent.com/influxdata/flux/v#{LATEST_VERSION}/go.mod"
+      regex(/pkg-config\s+v?(\d+(?:\.\d+)+)/i)
+    end
   end
 
   def install

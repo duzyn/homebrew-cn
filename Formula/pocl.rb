@@ -1,33 +1,40 @@
 class Pocl < Formula
   desc "Portable Computing Language"
   homepage "http://portablecl.org"
-  url "http://portablecl.org/downloads/pocl-3.0.tar.gz"
-  sha256 "a3fd3889ef7854b90b8e4c7899c5de48b7494bf770e39fba5ad268a5cbcc719d"
+  url "http://portablecl.org/downloads/pocl-3.1.tar.gz"
+  sha256 "82314362552e050aff417318dd623b18cf0f1d0f84f92d10a7e3750dd12d3a9a"
   license "MIT"
-  revision 1
   head "https://github.com/pocl/pocl.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "763c6c34815b02cb72f021f36a46203cf64be5d5910021a608c64e2be1e725a5"
-    sha256 arm64_monterey: "9d91bc69819fd1a381a63726b9caed1c78cfce71d0e81a246a5d6b374db19f59"
-    sha256 arm64_big_sur:  "99ab32bd6ad08f28cfdbd745cdfe057487bdacff01d7d7d1ad176c4230b21636"
-    sha256 ventura:        "66cf3d6626954b9517443e1f05b36bcf448db519e7465bb21c6d342f017f1875"
-    sha256 monterey:       "d857f7ebdf4d88658b79a34a2d71902b846ad421ce17be610d7f4ad5c4725e80"
-    sha256 big_sur:        "59b68f66eb1be4b844b161e59690d3dc6ccc65f6f91b34efa407014b2cd462ae"
-    sha256 catalina:       "9f63be32517ad9e49c8e00b2f664a44b5948263f703d086c9592c48b1374c3ad"
-    sha256 x86_64_linux:   "b784316a19030d4d04ffc96bdae8f018e2458731f3a5d71af261693943e571b9"
+    sha256 arm64_ventura:  "725592ecff117e6a5fc79f7320b1594a0ed47381bc7f10c07b692234404bff82"
+    sha256 arm64_monterey: "43648343bca02bc500617b33ef273b8f09f0f948ba162f09b7d03e2a5681506a"
+    sha256 arm64_big_sur:  "fabea7901cd3581c85a191ecaeba1455e0a472131ed71661ed7b89a0b2b37a7b"
+    sha256 ventura:        "27e4bfb8cc2b3449d7597c47dcfb6aa55a788a5ccaf9c9b076cb67ba5335ba17"
+    sha256 monterey:       "a4b106c0bd8f0b96fd87ea1bd80370c0808266aee56d2113c1f8317ed6691c0a"
+    sha256 big_sur:        "74dc0ea7f41310782790ed1a9e6432f4c361a72b91e14eca5a5adbed41ea47b5"
+    sha256 x86_64_linux:   "76eb5a19e08571701d59405ad080ccefb35bb671f96200a7084bd771918ee304"
   end
 
   depends_on "cmake" => :build
   depends_on "opencl-headers" => :build
   depends_on "pkg-config" => :build
   depends_on "hwloc"
-  depends_on "llvm@14"
+  depends_on "llvm"
   depends_on "ocl-icd"
+
+  fails_with :clang do
+    cause <<-EOS
+      .../pocl-3.1/lib/CL/devices/builtin_kernels.cc:24:10: error: expected expression
+               {BIArg("char*", "input", READ_BUF),
+               ^
+    EOS
+  end
 
   fails_with gcc: "5" # LLVM is built with GCC
 
   def install
+    ENV.llvm_clang if OS.mac?
     llvm = deps.map(&:to_formula).find { |f| f.name.match?(/^llvm(@\d+(\.\d+)*)?$/) }
 
     # Install the ICD into #{prefix}/etc rather than #{etc} as it contains the realpath

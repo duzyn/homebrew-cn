@@ -1,8 +1,8 @@
 class Hypre < Formula
   desc "Library featuring parallel multigrid methods for grid problems"
   homepage "https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods"
-  url "https://github.com/hypre-space/hypre/archive/v2.26.0.tar.gz"
-  sha256 "c214084bddc61a06f3758d82947f7f831e76d7e3edeac2c78bb82d597686e05d"
+  url "https://github.com/hypre-space/hypre/archive/v2.27.0.tar.gz"
+  sha256 "507a3d036bb1ac21a55685ae417d769dd02009bde7e09785d0ae7446b4ae1f98"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/hypre-space/hypre.git", branch: "master"
 
@@ -12,14 +12,13 @@ class Hypre < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "14aa580373f84b4943f5f469d10885dda3456c2b65fb078b2b0fc89195fb597e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb34dcf53251fd2ffe2a5918a575a378da809f0d2b00c4a2fc8ae254cd1d74db"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3ccc2b2ebe3c681ba0d9dba627d0f3136fc57fea98e161f3d592d409964a0146"
-    sha256 cellar: :any_skip_relocation, ventura:        "d4ea5729a783775ea4da0652bea541b638037f8700f96291bbb38ed555193da2"
-    sha256 cellar: :any_skip_relocation, monterey:       "bcc880194b5b725898e6fa4bfe2cf310df77a45110cba13a183fab383556a68b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4522eaf45a721751eae6bb6f2106e4c29cddf53e30f37a2521cb153e253a8788"
-    sha256 cellar: :any_skip_relocation, catalina:       "79a65fde33f9ebd9922a89ffeca1726239c7d8fca806c18ac9ddfc08312fe1eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41190897eaf962f023b84a42ea52d82390ac84bd888cc92d9bd68bb580016f68"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a6fc7983ef7856a66ce2f918624f271717beb27e63db86942e6b6f1b1d4c7cf9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "391465307d0b80730edb73313c16727560ed179abc68199da28fba2bd50d9c94"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2421848fcc0982cde3081d2416317877975a336b755bcc215943b28bafb260a"
+    sha256 cellar: :any_skip_relocation, ventura:        "327c45c4eca604c333f6be802f7455f83a146a00954a326e659670bd0505768c"
+    sha256 cellar: :any_skip_relocation, monterey:       "d61aa53e53ac0dd38fbb7fc3fd68b98a7d36f99447a2646a587c03c6a075aa83"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a22dfe4d9c409401c8ea1503fa0f5e91a9a95b13ee0d8b0876ab2354bb858cd8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2999be3899011969e428b548f39451762d56551f20dc933cf18eaec45c82c132"
   end
 
   depends_on "gcc" # for gfortran

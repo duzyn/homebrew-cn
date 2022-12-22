@@ -1,18 +1,18 @@
 class Tut < Formula
   desc "TUI for Mastodon with vim inspired keys"
   homepage "https://tut.anv.nu"
-  url "https://github.com/RasmusLindroth/tut/archive/refs/tags/1.0.28.tar.gz"
-  sha256 "6dbc41e0615e1e2a2e1d56ecf2a3a9f555bb39ab16fabc8f4a0cdc35735188bf"
+  url "https://github.com/RasmusLindroth/tut/archive/refs/tags/1.0.30.tar.gz"
+  sha256 "404f1d6647920fc32fab02c92ee23ab4a7e2c7507d535669c4e5a29075d480b1"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9301299267ad5f2c4b1a5fbd7a1045f437b906e536993f212cd56b658ed5009d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "36e431183b548bc81cbd26c1388cb4f637f8107647f42bc5ed3d065bd9cb6cb8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bd87af613abfb9d9a50749bb4fff379bc3668e7469f97b306c7c2aa159386906"
-    sha256 cellar: :any_skip_relocation, ventura:        "409d49cac69943814056e2d8e2f0a4602c485215da006ee2895b335c46550778"
-    sha256 cellar: :any_skip_relocation, monterey:       "84cd9780ff9e119a55ce0da32432301794c901313122dd043d9a8cda910e7506"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bc3e64e51e466ec34ac86e8a1995452c50974bc624e36c7bee3d38178bde2a29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b57307a8f945e83c85713a994900391b157a65fe283d92f270601bd40dca2c0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "55e4964d3876fd9270b4c138897ea8006938471e8ede0f108f324e0a045778a7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a25234819b5a69988f17cf340b4c1d7537cc7be62ab63213ad36d770442dcef"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "556beb9166fc5d6bcfdaaa67a42cec8329150c201f74fef9178e35e7eeba8749"
+    sha256 cellar: :any_skip_relocation, ventura:        "34fa8b7bf2bb3c4575de30b9cfb35dce4cbf7d7e576e41a09227bbe88667ffb7"
+    sha256 cellar: :any_skip_relocation, monterey:       "c8d92127147a345aa187821fd6730707b42b68632e9d48aa662f14146e219d8f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c23efc1a678a47cd9e769bda5a8455c2f68d0d003997e635fb2f564a32183020"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "874aadd4e63f7682a3f77f1ea1ca06a07ffa1d06e8fdf3eb1a8986e74473fbe7"
   end
 
   depends_on "go" => :build

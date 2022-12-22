@@ -32,6 +32,11 @@ class Luvit < Formula
     url "https://github.com/luvit/lit.git",
         tag:      "3.8.5",
         revision: "84fc5d729f1088b3b93bc9a55d1f7a245bca861d"
+
+    livecheck do
+      url "https://ghproxy.com/raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
+      regex(/LIT_VERSION=["']?(\d+(?:\.\d+)+)["']?$/i)
+    end
   end
 
   # To update this resource, check LUVI_VERSION in
@@ -46,6 +51,22 @@ class Luvit < Formula
     patch do
       url "https://github.com/luvit/luvi/commit/b2e501deb407c44a9a3e7f4d8e4b5dc500e7a196.patch?full_index=1"
       sha256 "be3315f7cf8a9e43f1db39d0ef55698f09e871bea0f508774d0135c6375f4291"
+    end
+
+    livecheck do
+      url "https://ghproxy.com/raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
+      regex(/LIT_VERSION=["']?(\d+(?:\.\d+)+)["']?$/i)
+      strategy :page_match do |page, regex|
+        lit_version = page[regex, 1]
+        next if lit_version.blank?
+
+        get_lit_page = Homebrew::Livecheck::Strategy.page_content(
+          "https://ghproxy.com/raw.githubusercontent.com/luvit/lit/#{lit_version}/get-lit.sh",
+        )
+        next if get_lit_page[:content].blank?
+
+        get_lit_page[:content][/LUVI_VERSION:-v?(\d+(?:\.\d+)+)/i, 1]
+      end
     end
   end
 

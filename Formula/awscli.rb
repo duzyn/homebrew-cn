@@ -3,19 +3,19 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/2.9.8.tar.gz"
-  sha256 "4a8aa1ec79a7c115a02213cb2e75160d24054106bb82b6e75ea0008df5810834"
+  url "https://github.com/aws/aws-cli/archive/2.9.9.tar.gz"
+  sha256 "9a93633233b0fba20d6917118e7f1928edadc69801388c48acdc1f6d521110c4"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6ad0c111c7ba3656cf97d42c1d01393344c041f4c01638f966eb82cb4f7d62c6"
-    sha256 cellar: :any,                 arm64_monterey: "0d77a48715777dda89ed7343cdf7822ea36f6beecad37654dfa0f4b9758046d8"
-    sha256 cellar: :any,                 arm64_big_sur:  "a8d45743ac5ae2824642b64386c32e559916c328c89238fdb2b1d28c199002fb"
-    sha256 cellar: :any,                 ventura:        "2e370eeca6a1ebe0ec4f07758708acd2f96e5b36b4ce00e70cb3f158690b7439"
-    sha256 cellar: :any,                 monterey:       "b9caa412eacf0ee775d3481ddb2538519a8e230b6d428dbd3c9d3f1373e99de1"
-    sha256 cellar: :any,                 big_sur:        "3432ba1f9075b31536c874594e94e3c5e8a01406ed45003e474a27cac476d7a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30d01b8b9e41060a410e64683f4a0cad2fb0480c0881a09059224d26c2e1f7b1"
+    sha256 cellar: :any,                 arm64_ventura:  "c4036cf30a1f86a293d319459869f83311aa1603ce2801d6a874730aab2b05e5"
+    sha256 cellar: :any,                 arm64_monterey: "a1b2f0c982a1e24240e8da625e3f1eeb89ba64495db8224b82130128b24df9f0"
+    sha256 cellar: :any,                 arm64_big_sur:  "8a077e52dba9131031cc66e2eff153a301ba28627017cabf607837b30455bda6"
+    sha256 cellar: :any,                 ventura:        "e4718c754685eb5fbfa66b41960c013fa2e43eb81826afe8fdba0cbfac1c775c"
+    sha256 cellar: :any,                 monterey:       "1eec177866ced8eaf5ac74f0f4ed674aebd9e8c61655645dab1ebbfe285bf6fa"
+    sha256 cellar: :any,                 big_sur:        "f65df5ba2de3ea0b84e735e45d041b5a77159c4b2c6cdb900f9045fffe2f3f7b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f9f71c96c430c36657b9992265a74c57d70e5140c0445aa039159eb49311544"
   end
 
   depends_on "cmake" => :build
@@ -31,8 +31,8 @@ class Awscli < Formula
   # 2. Ignore `six`. Update all other PyPI packages
 
   resource "awscrt" do
-    url "https://files.pythonhosted.org/packages/51/1f/4d9193f7b16d102c3c11d8edcb11ea741ac6562d8fcf4d1ae1aa223f197c/awscrt-0.14.0.tar.gz"
-    sha256 "3062d315cb16542fe04dd8239f2e8bc3238ee9045cd5070b915cf2ebbecbaaac"
+    url "https://files.pythonhosted.org/packages/3f/c2/c23a860956e8b8a815ad4c0d260d4ea393b33a1835b50303d006fd259f7e/awscrt-0.16.2.tar.gz"
+    sha256 "093e4a9c70db963de4341fcdb2e39848d03a2b23f693da8067cf796b06047434"
   end
 
   resource "cffi" do
@@ -46,8 +46,8 @@ class Awscli < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/6d/0c/5e67831007ba6cd7e52c4095f053cf45c357739b0a7c46a45ddd50049019/cryptography-38.0.1.tar.gz"
-    sha256 "1db3d807a14931fa317f96435695d9ec386be7b84b618cc61cfa5d08b0ae33d7"
+    url "https://files.pythonhosted.org/packages/e3/3f/41186b1f2fd86a542d399175f6b8e43f82cd4dfa51235a0b030a042b811a/cryptography-38.0.4.tar.gz"
+    sha256 "175c1a818b87c9ac80bb7377f5520b7f31b3ef2a0004e2420319beadedb67290"
   end
 
   resource "distro" do
@@ -86,13 +86,13 @@ class Awscli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
-    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
+    url "https://files.pythonhosted.org/packages/c2/51/32da03cf19d17d46cce5c731967bf58de9bd71db3a379932f53b094deda4/urllib3-1.26.13.tar.gz"
+    sha256 "c083dd0dce68dbfbe1129d5271cb90f9447dea7d52097c6e0126120c521ddea8"
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/25/9d/0acbed6e4a4be4fc99148f275488580968f44ddb5e69b8ceb53fc9df55a0/wcwidth-0.1.9.tar.gz"
-    sha256 "ee73862862a156bf77ff92b09034fc4825dd3af9cf81bc5b360668d425f3c5f1"
+    url "https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz"
+    sha256 "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"
   end
 
   def python3

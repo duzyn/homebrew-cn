@@ -34,6 +34,11 @@ class Influxdb < Formula
   resource "pkg-config-wrapper" do
     url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.2.11.tar.gz"
     sha256 "52b22c151163dfb051fd44e7d103fc4cde6ae8ff852ffc13adeef19d21c36682"
+
+    livecheck do
+      url "https://ghproxy.com/raw.githubusercontent.com/influxdata/influxdb/v#{LATEST_VERSION}/go.mod"
+      regex(/pkg-config\s+v?(\d+(?:\.\d+)+)/i)
+    end
   end
 
   # NOTE: The version/URL here is specified in scripts/fetch-ui-assets.sh in influxdb.
@@ -41,6 +46,11 @@ class Influxdb < Formula
   resource "ui-assets" do
     url "https://ghproxy.com/github.com/influxdata/ui/releases/download/OSS-v2.6.0/build.tar.gz"
     sha256 "e3a492886f7d22b88f6c0c852c6ff6dc6993a18b0dbde41dab6f66309072ba85"
+
+    livecheck do
+      url "https://ghproxy.com/raw.githubusercontent.com/influxdata/influxdb/v#{LATEST_VERSION}/scripts/fetch-ui-assets.sh"
+      regex(/UI_RELEASE=["']?OSS[._-]v?(\d+(?:\.\d+)+)["']?$/i)
+    end
   end
 
   def install

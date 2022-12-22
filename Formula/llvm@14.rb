@@ -12,15 +12,14 @@ class LlvmAT14 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "d1e73c4acd999c1aced08909135b69a08810ebdd6576dde2a9c08aedf1b750f8"
-    sha256 cellar: :any,                 arm64_monterey: "ba9b5f19cf6ed7846e6b5e9cbeb07263d2d2fb8a6c6523df05f5d3571cc1e84a"
-    sha256 cellar: :any,                 arm64_big_sur:  "6604d21b9f3cd98ca5648fb351b7267c71b874c3009d2077c31ace7435772e2e"
-    sha256 cellar: :any,                 ventura:        "ad7ff1bafe3e3c76a2725513674e6dc58a7d2a078d6bdacff748dd44f0cc6844"
-    sha256 cellar: :any,                 monterey:       "fe171bc50c83ef517768c493bd32ba19d0900cb4d40ae32a24ba832391605229"
-    sha256 cellar: :any,                 big_sur:        "938d244c32373ccef1ab8398ed1c60990b044f567a83e9926ce82dd797864d09"
-    sha256 cellar: :any,                 catalina:       "5cc0bd34950758c9a0ac1060f91ab166a2c8067094ab07a4e3bd9d5e2c1098e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fdca95c6df877e34cc8b000f56b72631e7624f0a3704b0171ecb0aece59fe1d"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "4ce14f420e0df7003c6f15c8d5f0f0123dc8d804f3cb1fd85eb820f40450a0a3"
+    sha256 cellar: :any,                 arm64_monterey: "9afda6898a1fde702df8fe875ed154d19966b12b2113cc1c9d8581f2a7513fd9"
+    sha256 cellar: :any,                 arm64_big_sur:  "ac7b2bdbc46e42b840c5736f79c0a4e0585d7c278dda6c9da65d23a6810b88ac"
+    sha256 cellar: :any,                 ventura:        "b41d61a75e05637b45cf7b97128bfc35f82b6a143b1972e068fda6fde6ea8aa8"
+    sha256 cellar: :any,                 monterey:       "027ca974ecddfcfc5bef43daa51274df20d390c3638501d89607dde4282f3f40"
+    sha256 cellar: :any,                 big_sur:        "fea4606122e05533ae971bf7e85b8458189b2052233e84faf1dde61adbf047e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5db4959f3492f118b28b3542ad399335bbb224307b85fc0d596eaedcda8cff4b"
   end
 
   # Clang cannot find system headers if Xcode CLT is not installed
@@ -32,7 +31,7 @@ class LlvmAT14 < Formula
   # We intentionally use Make instead of Ninja.
   # See: Homebrew/homebrew-core/issues/35513
   depends_on "cmake" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
 
   uses_from_macos "python" => :test
   uses_from_macos "libedit"
@@ -50,7 +49,7 @@ class LlvmAT14 < Formula
   fails_with gcc: "5"
 
   def install
-    python3 = "python3.10"
+    python3 = "python3.11"
 
     # The clang bindings need a little help finding our libclang.
     inreplace "clang/bindings/python/clang/cindex.py",

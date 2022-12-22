@@ -1,8 +1,8 @@
 class DosboxStaging < Formula
   desc "Modernized DOSBox soft-fork"
   homepage "https://dosbox-staging.github.io/"
-  url "https://github.com/dosbox-staging/dosbox-staging/archive/v0.79.1.tar.gz"
-  sha256 "43f23fd0a5cff55e06a3ba2be8403f872ae47423f3bb4f823301eaae8a39ac2f"
+  url "https://github.com/dosbox-staging/dosbox-staging/archive/v0.80.0.tar.gz"
+  sha256 "d4f6a4517402fba9bf81596a591e119062d26c7411c791eb0157cc6c89dfacdf"
   license "GPL-2.0-or-later"
   head "https://github.com/dosbox-staging/dosbox-staging.git", branch: "main"
 
@@ -14,14 +14,13 @@ class DosboxStaging < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "9b90bf8a0a8019fcf0dc4e3fdd55bb9785eee83846310b7a05805f803e5bbdf9"
-    sha256 arm64_monterey: "75cc3a72f4674ea537d12afad7fe9d14617ceb7f1108c01894f880954b3df1df"
-    sha256 arm64_big_sur:  "920b3320cb2f390130f7b58c1e16a13c515781f7de9211103d3cd89effea6f4c"
-    sha256 ventura:        "29e93115ee2d3b2a9b6578e9df0c29b37c0f63632a66c7464b31e61131ec60ad"
-    sha256 monterey:       "de5c5f3431504c34b844a7bd4eae17acdc3d9a7f060ddc92aa8e34512b055535"
-    sha256 big_sur:        "9968e4e15dc3618d1c317e09116ef6598520819834938d42a9e2cace23c78451"
-    sha256 catalina:       "e36de3ab5208617a4320803ebe82a451ba2eb68dd8a8cf979abcd09e48b308fa"
-    sha256 x86_64_linux:   "896b1cd20426b82af5611950a78fa9298adbb56b226de1bf07c9741455a4833a"
+    sha256 arm64_ventura:  "b00a29063432c1b0faf3b69b29c26f6e8b546f97ac369f84020f504faa8780cd"
+    sha256 arm64_monterey: "9651be9246f2adf83439b29be9bde3db1e5bed02e866daccdf75cbfc2e2cf0a2"
+    sha256 arm64_big_sur:  "3c2ee227b902fde137ec5cbd38bfb8c7c15863198816b9d385d3101c260050bf"
+    sha256 ventura:        "bb3d548fdf47d47db8e1087fb75a9535370c6eaeadbd1798ecd0c0180a97a102"
+    sha256 monterey:       "e8f79b90a0df3ccc62b52cfad2704ac06db9834ff4732bc44dd4b7a500c79b19"
+    sha256 big_sur:        "1804f6088cb72c504d1abf62c842dfa3692a77e720689316a3ce552f0e6d37f4"
+    sha256 x86_64_linux:   "70bfcc3f4a894c587f24dad63bc75fd8ac972f66709cfa2e900e3811188fc07e"
   end
 
   depends_on "meson" => :build
@@ -35,6 +34,7 @@ class DosboxStaging < Formula
   depends_on "mt32emu"
   depends_on "opusfile"
   depends_on "sdl2"
+  depends_on "sdl2_image"
   depends_on "sdl2_net"
   depends_on "speexdsp"
   uses_from_macos "zlib"
