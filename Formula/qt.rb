@@ -12,6 +12,7 @@ class Qt < Formula
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } },
     "LGPL-3.0-only",
   ]
+  revision 1
   head "https://code.qt.io/qt/qt5.git", branch: "dev"
 
   # The first-party website doesn't make version information readily available,
@@ -22,12 +23,13 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "5f036ee859ec0e5037ee10dcd9371198a32887060c1cbf6d437a75dea906ebcc"
-    sha256 cellar: :any, arm64_monterey: "283a55c5f91461622ea7da30172d63a468fa2d8ed3b0b3ad26087970fa319fc0"
-    sha256 cellar: :any, arm64_big_sur:  "a782303ee63adca035e3b1f1a3f778008948f583f8bfd56e9a7c416ca1559757"
-    sha256 cellar: :any, ventura:        "2eb54ffb89634311c1af04a40af61e3e255fc3c79c38b848cafdf743881f37bb"
-    sha256 cellar: :any, monterey:       "d5b67ae62a074b2680036364e42c701861dc898d70b398fb11ab3279ebe3fa39"
-    sha256 cellar: :any, big_sur:        "360676bb1d5699230d36ae9b54efc6391c0a78134c13af28cf3004d7c3f041de"
+    sha256 cellar: :any,                 arm64_ventura:  "7c2713a07938eb6f4855d5299be68beba727a9e667ad4bc2ab732b956a8f57a1"
+    sha256 cellar: :any,                 arm64_monterey: "eefb0269a8c57ee032d207da4a0bd5966bf9c6689189f7efa4977a4ec430e228"
+    sha256 cellar: :any,                 arm64_big_sur:  "0ab048a1a4c7f14e1e161e24cc8f3571177374c42ca80ed02ce74b08803fde22"
+    sha256 cellar: :any,                 ventura:        "9fcbedda08b23809a2905387df0da8cf0e21d2e9f6e3d9bf929f5cf42d939430"
+    sha256 cellar: :any,                 monterey:       "e9ec9917d664ac70e288bed351d4e17653ef3b765ab6278abf59b866771cd4e9"
+    sha256 cellar: :any,                 big_sur:        "8383696f0f673f5c150e68f0bb204dea33f2694403ea49703a0e9ef5d33b7559"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2bcc034ee7fca0174af5230a4572d71765e230aff83fdb3c322b3c8563235a7"
   end
 
   depends_on "cmake"      => [:build, :test]
@@ -47,6 +49,7 @@ class Qt < Formula
   depends_on "double-conversion"
   depends_on "freetype"
   depends_on "glib"
+  depends_on "harfbuzz"
   depends_on "hunspell"
   depends_on "icu4c"
   depends_on "jasper"
@@ -81,11 +84,10 @@ class Qt < Formula
     depends_on "alsa-lib"
     depends_on "at-spi2-core"
     # TODO: depends_on "bluez"
-    # TODO: depends_on "ffmpeg"
+    depends_on "ffmpeg"
     depends_on "fontconfig"
     depends_on "gstreamer"
     # TODO: depends_on "gypsy"
-    depends_on "harfbuzz"
     depends_on "libdrm"
     depends_on "libevent"
     depends_on "libice"
@@ -182,6 +184,7 @@ class Qt < Formula
       -testsdir share/qt/tests
 
       -no-feature-relocatable
+      -system-harfbuzz
       -system-sqlite
 
       -no-sql-mysql
@@ -211,16 +214,13 @@ class Qt < Formula
       # that cmake does not think $HOMEBREW_PREFIX/lib is the install prefix.
       cmake_args << "-DQT_BUILD_INTERNALS_RELOCATABLE_INSTALL_PREFIX=#{prefix}"
 
-      # Currently we have to use vendored ffmpeg because the chromium copy adds a symbol not
-      # provided by the brewed version.
-      # See here for an explanation of why upstream ffmpeg does not want to add this:
-      # https://www.mail-archive.com/ffmpeg-devel@ffmpeg.org/msg124998.html
       # The vendored copy of libjpeg is also used instead of the brewed copy, because the build
       # fails due to a missing symbol otherwise.
       # On macOS chromium will always use bundled copies and the QT_FEATURE_webengine_system_*
       # arguments are ignored.
       cmake_args += %w[
         -DQT_FEATURE_webengine_system_alsa=ON
+        -DQT_FEATURE_webengine_system_ffmpeg=ON
         -DQT_FEATURE_webengine_system_icu=ON
         -DQT_FEATURE_webengine_system_libevent=ON
         -DQT_FEATURE_webengine_system_libpng=ON
@@ -301,7 +301,7 @@ class Qt < Formula
 
     (testpath/"main.cpp").write <<~EOS
       #undef QT_NO_DEBUG
-      #include <QGuiApplication>
+      #include <QCoreApplication>
       #include <Qt3DCore>
       #include <QtQuick3D>
       #include <QImageReader>
@@ -314,7 +314,7 @@ class Qt < Formula
 
       int main(int argc, char *argv[])
       {
-        QGuiApplication app(argc, argv);
+        QCoreApplication app(argc, argv);
         QSvgGenerator generator;
         auto *handler = new QOAuthHttpServerReplyHandler();
         delete handler; handler = nullptr;

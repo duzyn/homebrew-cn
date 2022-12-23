@@ -1,30 +1,22 @@
 class Sispmctl < Formula
   desc "Control Gembird SIS-PM programmable power outlet strips"
   homepage "https://sispmctl.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/sispmctl/sispmctl/sispmctl-4.9/sispmctl-4.9.tar.gz?use_mirror=nchc"
-  sha256 "6a9ec7125e8c01bb45d4a3b56f07fb41fc437020c8dcd8c0f29ebb98dc55a647"
+  url "https://downloads.sourceforge.net/project/sispmctl/sispmctl/sispmctl-4.10/sispmctl-4.10.tar.gz?use_mirror=nchc"
+  sha256 "e648b6e87584330a0a693e7b521ebbc863608d6c97ef929063542b459d16bc6f"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "305de946ae0b0ccc8ed6b7703bf59730852904f209db2670771ccf1ea5fb8c0d"
-    sha256 arm64_monterey: "ed26829f844e176487911032144bdcefffac53d528b6613387060cdf804c3ce5"
-    sha256 arm64_big_sur:  "4e6492d30b2625b3c117b12ddf23d0e12e9cce5c9e0d7f2ae4806a0b9227154d"
-    sha256 ventura:        "3d58db866b5a5091b90713d63a9bafede0e43573970a8cee9bb99d2df717f0f6"
-    sha256 monterey:       "14bd73d5af83b488d1d629e61b30c5356b4a61cf60af92673af41d3269d1c9b0"
-    sha256 big_sur:        "3c5776d579886dae1c1c79dfbd00e0f62009b5b36b369ef5cb17866eeb48e54a"
-    sha256 catalina:       "ca5277017192e749e693430127f13263e8eb78bb37c462dc613ffaac8fd036c8"
-    sha256 mojave:         "751addc56782d7d36eabc1b244413c7e30db2674117ca4bdfa501a23882ff84d"
-    sha256 x86_64_linux:   "77b95926b04f52d79e6f11d5ba03276dac6eb74de675150341161b22709bfd64"
+    sha256 arm64_ventura:  "703696c8d81d060b03eac428e55f969b20a5cb7d72ed28ede86a9460a6703c80"
+    sha256 arm64_monterey: "47d8f6994c00729322c939a343d877f80ba60ce577f627c7d23f2853dea72988"
+    sha256 arm64_big_sur:  "8922a63bc4da5a8253bd46bffff33679aecb88ef8753cf72223b787e9b6d8b9d"
+    sha256 ventura:        "f896d3db8eaeaa158b685d466185cf65aebcfbf859fad00fffdd3d094724e73d"
+    sha256 monterey:       "3794182ad8e3aaf0d17027d79f70b4c242f036ec5f96423ccbddc5eda6ff674a"
+    sha256 big_sur:        "cec6faa6ed93cd4846494ed0c4e2e00972de9c74f823daadfe9020379d554157"
+    sha256 x86_64_linux:   "5b7a0961b12e493dc3ac5da1ff14914cd254abf7b98049ee8c08224afb22c881"
   end
 
   depends_on "pkg-config" => :build
   depends_on "libusb-compat"
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
 
   def install
     system "./configure", "--disable-dependency-tracking",

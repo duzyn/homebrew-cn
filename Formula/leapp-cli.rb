@@ -3,19 +3,18 @@ require "language/node"
 class LeappCli < Formula
   desc "Cloud credentials manager cli"
   homepage "https://github.com/noovolari/leapp"
-  url "https://registry.npmjs.org/@noovolari/leapp-cli/-/leapp-cli-0.1.26.tgz"
-  sha256 "79a91a7b03a1d775363a5e7f087c5b7e1739e5615059010980584558bed9c00f"
+  url "https://registry.npmjs.org/@noovolari/leapp-cli/-/leapp-cli-0.1.27.tgz"
+  sha256 "94291cf5dc98dad11a23eb91ed94df708a1b72e711d4a789c2535d355b49b46b"
   license "MPL-2.0"
 
   bottle do
-    sha256                               arm64_ventura:  "8589ddf349046392b61224a86ffafb2d42cf4ee200eceaabb690f0e218e0ddcb"
-    sha256                               arm64_monterey: "1c6f16311d8d8c00e9f88c8d820f552c74b75635e841023f8a75c5a762c95c48"
-    sha256                               arm64_big_sur:  "cb94ba081e1de43c04f6d3c33ee187914de411ea2b18910ffc1219b7e609e9a0"
-    sha256                               ventura:        "b76da685f8258cc8f75486c4ea9d1d513e53a858b9268fd5794d340aa44f9227"
-    sha256                               monterey:       "a4e8dc912bc1f20454c77d24d115a677ce8cbd35efb0edeb4239f08adb1c7577"
-    sha256                               big_sur:        "ac0d9c98fa704b9107daae532b64526f9c6b53cde9f68e0261d47597c43cb7a9"
-    sha256                               catalina:       "c601155bb75bf8d5f965e1f54dc764d64a0163516fd3985086696353cd83c822"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95274fcb45504c33656ee234f25c602a04d7df9646053b5158d8df3b09a77b2b"
+    sha256                               arm64_ventura:  "ed63cca1c920fef5802febac97d956ed3953253e43b4c8af58924885981b2440"
+    sha256                               arm64_monterey: "f4c4b3bf0ff431ab5b1319226102d51070f7b067e24b7dd326c2bb24b6116b24"
+    sha256                               arm64_big_sur:  "cfcb00f10ea4e13df0b214e4a3a121d14f06404b6326f37104daaca670ccd387"
+    sha256                               ventura:        "70af45f1994111995c3f38f733ccff54fa8f119a624372b2c6e6f88ad94c112d"
+    sha256                               monterey:       "c684b7964a07c2d9aef8657e92e0fde03714e3df743decead8ea4b8714aecec1"
+    sha256                               big_sur:        "b41bad0253ca27e5913d010ebf606962632adc4e2bce40353de5622eca71d300"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "612ff4adebe582302566af18ed7667631b83fc2e436a60e9d5a668329fc0b65f"
   end
 
   depends_on "pkg-config" => :build

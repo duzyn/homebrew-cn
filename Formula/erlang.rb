@@ -12,13 +12,14 @@ class Erlang < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5db6d91e3ad84b5900cd457fc1b13b10ab851b1d5b8336c7c0aa06f68cbbaad2"
-    sha256 cellar: :any,                 arm64_monterey: "8a620117e75d3d805005a08ce1fcf97bc754987a86d9745a3389f4fdf28a0a32"
-    sha256 cellar: :any,                 arm64_big_sur:  "2ffc2d7fbdc9c90c9933373bee8626fde0050754a3315f5aacb10c0a3999d5c9"
-    sha256 cellar: :any,                 ventura:        "920094404c98ac7075dedc5958e435486361028edee5d980a4968575c4e2a3c0"
-    sha256 cellar: :any,                 monterey:       "cd88c2822737ce33e434fb2eedef375483a11102bc9b514a37b97e9de8b10bb5"
-    sha256 cellar: :any,                 big_sur:        "b8226076b481dbbe9364a73fa83f561a4d7ba89bd55695fee31383abc1d9047d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f44eacc80d1248cc31c4da2a565e795b9c393621645aab96ce933753580c9219"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "37d912375212f286c839bcfd774ea7670e501652eea3dc83765f1aefa196aa9a"
+    sha256 cellar: :any,                 arm64_monterey: "532e2a650c862cb0766c423844a716c2c0726b7203956181d8e0b6331cf552b7"
+    sha256 cellar: :any,                 arm64_big_sur:  "04a7abbb560e4ffefbb8a7455c93fd36fe9eee7bc89518bf01805007fb2e2a0b"
+    sha256 cellar: :any,                 ventura:        "2fc528ecfa1c07dd81577573c204ebbb522a237d04bc8f0ae1096c1345972763"
+    sha256 cellar: :any,                 monterey:       "f704ed38fc962a8035cf1140133b86255c03347028e28f251cc9dc76e92451fc"
+    sha256 cellar: :any,                 big_sur:        "95544542d3892e2e03207487af72dee4d107e6cf951f49ceeca40907db38b9c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffa5e092f9ae72b0f5ee0577560a13996e9b55507c8638ee1dc171bf6af84870"
   end
 
   head do
@@ -30,6 +31,7 @@ class Erlang < Formula
   end
 
   depends_on "openssl@1.1"
+  depends_on "unixodbc"
   depends_on "wxwidgets" # for GUI apps like observer
 
   resource "html" do
@@ -56,6 +58,7 @@ class Erlang < Formula
       --enable-smp-support
       --enable-threads
       --enable-wx
+      --with-odbc=#{Formula["unixodbc"].opt_prefix}
       --with-ssl=#{Formula["openssl@1.1"].opt_prefix}
       --without-javac
     ]
@@ -71,7 +74,7 @@ class Erlang < Formula
     system "make", "install"
 
     # Build the doc chunks (manpages are also built by default)
-    system "make", "docs", "DOC_TARGETS=chunks"
+    ENV.deparallelize { system "make", "docs", "DOC_TARGETS=chunks" }
     ENV.deparallelize { system "make", "install-docs" }
 
     doc.install resource("html")

@@ -1,20 +1,18 @@
 class Scrcpy < Formula
   desc "Display and control your Android device"
   homepage "https://github.com/Genymobile/scrcpy"
-  url "https://github.com/Genymobile/scrcpy/archive/v1.24.tar.gz"
-  sha256 "e3054ad453ac577b941f8df0eabc94e842affc6e1d10ba8d21cededfa2eacc73"
+  url "https://github.com/Genymobile/scrcpy/archive/v1.25.tar.gz"
+  sha256 "dfecc9dcffd45540bef88a7e346d37bead3665a5c868a5a95c5ec7bfed43ad07"
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "7c9893c55d2ab4aa52726d18cfd70f8693b37078d968676c649ec2b55d5986d9"
-    sha256 arm64_monterey: "47d05857b4a23bed97eab4d80397de5f715f7cf6bd3a2540502257556301dc1c"
-    sha256 arm64_big_sur:  "9b605a35272fbc97501a42fb4fe36ff4e905c93024960164cd25b3c9c67cc754"
-    sha256 ventura:        "d2868b912b3b7ddaabc6538d609ba84024711f7f73fc611573e82cd871d9c276"
-    sha256 monterey:       "2833aad9c0d864e65b856c5ba851ac693c8976c9a764676c01771988db5ab32d"
-    sha256 big_sur:        "b91ae2ece8a03a940b137eff536787d70b355ae1ac8d644d02a87c0c6584e442"
-    sha256 catalina:       "99ef49bd7345805aba38a7b054eae73ba556862c8fdea6f4014642f761589dd9"
-    sha256 x86_64_linux:   "1340efc7dec46c1d6b2fc1d51741a5ad7b197323f831d8095eaf324b99706437"
+    sha256 arm64_ventura:  "2cc4c088a3947f8f5de8117c905dd930bb770ce1f57d3fae6341575a8f7f324e"
+    sha256 arm64_monterey: "56a8daf6290556a5d1f6a5e9fa3ed25a60b198e7141e7df58781b1387c35c44e"
+    sha256 arm64_big_sur:  "8a8c6f4013eecd32c0a7eef691f087f85e75df6e24768588ea59874ba4cb6686"
+    sha256 ventura:        "1c1502eb5267ac6d39c40e1f83ebe51dc797e3e9657dc8e88f39c4c5145ed08b"
+    sha256 monterey:       "9612404cadb3c56fb9e7c231b948eff51bcbe2947b0fd310c0bdd693dbbbd488"
+    sha256 big_sur:        "4a0e604cccb0fb270944747557056dcc5dc78a1304876b63c6b89dce085b3c5e"
+    sha256 x86_64_linux:   "d62deca07d0e14a8ee1126547735142f5766a9acf00383c1c2cdd6ae19017fff"
   end
 
   depends_on "meson" => :build
@@ -27,8 +25,8 @@ class Scrcpy < Formula
   fails_with gcc: "5"
 
   resource "prebuilt-server" do
-    url "https://ghproxy.com/github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-server-v1.24"
-    sha256 "ae74a81ea79c0dc7250e586627c278c0a9a8c5de46c9fb5c38c167fb1a36f056"
+    url "https://ghproxy.com/github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-server-v1.25"
+    sha256 "ce0306c7bbd06ae72f6d06f7ec0ee33774995a65de71e0a83813ecb67aec9bdb"
   end
 
   def install

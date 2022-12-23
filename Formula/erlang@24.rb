@@ -12,19 +12,20 @@ class ErlangAT24 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "7273be648fb66da6e16c14401718c55d4dce5036255f1a1c9332aadf4094eac3"
-    sha256 cellar: :any,                 arm64_monterey: "7204baf7dfac19528154a198740865287309c6a49747035f6b2882bdf1faa3f3"
-    sha256 cellar: :any,                 arm64_big_sur:  "748164a050aad8cda86ecd8e09298e1c4a938139a765b69a8966fb6380e47a81"
-    sha256 cellar: :any,                 ventura:        "3cc93a7d95f27cf4dcccf1e0b08daef94e9a833b782b2f52738881c26d799d40"
-    sha256 cellar: :any,                 monterey:       "27c7839fb92e8a2b632389b421b853e9a056f026154d9f89536f6f47e81d6853"
-    sha256 cellar: :any,                 big_sur:        "02e174dae9ddfad29b4e15018d553bc01653999ed616fe98b9b51f0d3f35ac14"
-    sha256 cellar: :any,                 catalina:       "1bccce2c64fa688445d3494f08cb187925023912f67453fa8a98e65d8cbff0ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23c7900632db360ab713df778ac0d8db276428c0989ed1908f1b04e279cacb6f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "eaabf75d9c9a57137c478bd1de82f6c7a236f0abcac889787827cabee69174b4"
+    sha256 cellar: :any,                 arm64_monterey: "85ee696b9ef60dc586b7a1c722f5385b7c8bfc7bea8fb6a4581c346a7d3fd6b4"
+    sha256 cellar: :any,                 arm64_big_sur:  "85ac822b8f17236a324a8d8439fba06c363d1b59ecf6f5dcbaf3456a55abfe74"
+    sha256 cellar: :any,                 ventura:        "ad7a3563a55c3f4d90f975bd803cd7b8b4b9a78bb9bf012954efadb559b87fd9"
+    sha256 cellar: :any,                 monterey:       "5a032ed7e3bc13c38f0a0432490745508b3f938a1c126f1c180646ded6a1d9ab"
+    sha256 cellar: :any,                 big_sur:        "eed954cb643e66df118e7616cafa2102e344a7531ac8c68d7f7de0716a545c47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fdaafb682a61c8d17fbfec7150ec41a0faeaef8dace58adc0efc2498b854cc36"
   end
 
   keg_only :versioned_formula
 
   depends_on "openssl@3"
+  depends_on "unixodbc"
   depends_on "wxwidgets" # for GUI apps like observer
 
   resource "html" do
@@ -50,6 +51,7 @@ class ErlangAT24 < Formula
       --enable-smp-support
       --enable-threads
       --enable-wx
+      --with-odbc=#{Formula["unixodbc"].opt_prefix}
       --with-ssl=#{Formula["openssl@3"].opt_prefix}
       --without-javac
     ]
@@ -65,7 +67,7 @@ class ErlangAT24 < Formula
     system "make", "install"
 
     # Build the doc chunks (manpages are also built by default)
-    system "make", "docs", "DOC_TARGETS=chunks"
+    ENV.deparallelize { system "make", "docs", "DOC_TARGETS=chunks" }
     ENV.deparallelize { system "make", "install-docs" }
 
     doc.install resource("html")

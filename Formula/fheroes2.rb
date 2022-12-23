@@ -1,8 +1,8 @@
 class Fheroes2 < Formula
   desc "Free Heroes of Might and Magic II is a recreation of HoMM2 game engine"
   homepage "https://ihhub.github.io/fheroes2/"
-  url "https://github.com/ihhub/fheroes2/archive/0.9.21.tar.gz"
-  sha256 "863e78cd239b577068957843d5926fccf72c8bfd0531522cc242040f3108341c"
+  url "https://github.com/ihhub/fheroes2/archive/1.0.0.tar.gz"
+  sha256 "80468b4eaf128ac5179a3416a02e2a2ef4ab34d90876b179fccd8d505f950440"
   license "GPL-2.0-or-later"
   head "https://github.com/ihhub/fheroes2.git", branch: "master"
 
@@ -12,14 +12,13 @@ class Fheroes2 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "6a73e94c8df18177f049d3785ef4e28a0267b91472ebcac0d146bb131eca7399"
-    sha256 arm64_monterey: "e67d12fdc4e5f8373bcdf8594f8b568bb597dd72979c07b13c242c2ef6743abb"
-    sha256 arm64_big_sur:  "e0b060803bc67b57b82957c0cf8522c051725a56daab79b459c98d9b873be54e"
-    sha256 ventura:        "b978a8e383c0e6281d1df10de85c1d8801dbf556e03b6d278b4e0cf14d69012e"
-    sha256 monterey:       "0d6035e9935f6cdae70763d9ead23e85120633edc51789dc4b42007f2f4d2567"
-    sha256 big_sur:        "a279a685c019074c94626ed1d600f7f7b9b961a6c2194f793a5e30de8241fb12"
-    sha256 catalina:       "2aeeb745b4259d6da07077738d970e81a3a321f56ac7acc2ed91fc24a4275b32"
-    sha256 x86_64_linux:   "d956e5e5e27acae5b567741dbfeee3a768cd4abd5fc48f8bc9f306db5452c767"
+    sha256 arm64_ventura:  "c370f68227460b6038f6ce326a22f0c4dae664818145b9b565e373f611d7fb23"
+    sha256 arm64_monterey: "5fd524d749d1d9c4551b2d70a6d5abd6769ee047ea378e5c96a3255a827a9f70"
+    sha256 arm64_big_sur:  "10218362a884296c3181a3fabefe8a879e7770fc297e3c465fca430b9f0ccbda"
+    sha256 ventura:        "0bc3e6ecc76307fa5f903ffbea9b5c009805ca699a93b5b3931817551029baf7"
+    sha256 monterey:       "d93d39c5ba9b28ab470886e73df5caf5c7147399d2e8dc8fadd4a57e523abad7"
+    sha256 big_sur:        "6145db19d865c581f63869e84c508d3bb988d03868e804e2abcdf56bfdca3ac5"
+    sha256 x86_64_linux:   "905ebe3dd3eb53e04b9c4dbef976a2fbfcc084d1e206cfbeabcd2524f936b365"
   end
 
   depends_on "cmake" => :build
@@ -43,6 +42,9 @@ class Fheroes2 < Formula
   end
 
   test do
-    assert_match "help", shell_output("#{bin}/fheroes2 -h 2>&1")
+    io = IO.popen("#{bin}/fheroes2 2>&1")
+    io.any? do |line|
+      /fheroes2 engine, version:/.match?(line)
+    end
   end
 end
