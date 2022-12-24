@@ -1,8 +1,8 @@
 class GstPluginsGood < Formula
   desc "GStreamer plugins (well-supported, under the LGPL)"
   homepage "https://gstreamer.freedesktop.org/"
-  url "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.20.4.tar.xz"
-  sha256 "b16130fbe632fa8547c2147a0ef575b0140fb521065c5cb121c72ddbd23b64da"
+  url "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.20.5.tar.xz"
+  sha256 "e83ab4d12ca24959489bbb0ec4fac9b90e32f741d49cda357cb554b2cb8b97f9"
   license "LGPL-2.0-or-later"
   head "https://gitlab.freedesktop.org/gstreamer/gst-plugins-good.git", branch: "master"
 
@@ -12,13 +12,13 @@ class GstPluginsGood < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "96eb78c30845c6bf6dd91b34f97a8795774e05a955d13d15a9a07e2c51a93ccf"
-    sha256 arm64_monterey: "e3e036bb54e0d187b6e911c038a05b176f0b26248cdd0966642a83f62394e1c7"
-    sha256 arm64_big_sur:  "60a4939ccd188ae2f2eb1135edd2b2916b635c26bc59d5c6515c819701910ead"
-    sha256 ventura:        "88810322dca5efc14628d79f5947e55c19446ba29001ec52e155f67cc5498d09"
-    sha256 monterey:       "f0872dc4d4918d46bca159ab436de3f89e3870978ebd33a569ac3bc0eeccf259"
-    sha256 big_sur:        "279d0e78e80e1f786e81984226280e1c97af5feb523844fbc3df5b33018bc3c2"
-    sha256 x86_64_linux:   "8e24010f500339741c6d890d52450069390740f6b6d116186d05d132f6da5aa9"
+    sha256 arm64_ventura:  "a1aa81cabe957c407d7679ac939d5f31048582c42f252bda08f87a4b7d140c71"
+    sha256 arm64_monterey: "3c80e9ed3b66a12ff3dae5eaafc67571ef8f861bb24fe6d45590c42105019686"
+    sha256 arm64_big_sur:  "81448a48c9779399c79a24a8e8d1818f25bf6b40b8b04503aced3a9a86b9d4cc"
+    sha256 ventura:        "ec4d435e3b81e762fe1f01c131ce4da5b90b6bd6e13194ef8ffb798a8fcd05a8"
+    sha256 monterey:       "b6e786de63649e1713a28edfc8b57fd56cd892b9d4e4b40cbb74124fa5887863"
+    sha256 big_sur:        "d9dcaadfaa3bf955efa0ef4fa521204c3164e35ea02aae0dd18e0217f09256ea"
+    sha256 x86_64_linux:   "1dbbe80d68b14b1b1c080dfc04280b990ce76e246b6be2f6f98c512df1ebd548"
   end
 
   depends_on "meson" => :build

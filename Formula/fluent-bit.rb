@@ -1,8 +1,8 @@
 class FluentBit < Formula
   desc "Fast and Lightweight Logs and Metrics processor"
   homepage "https://github.com/fluent/fluent-bit"
-  url "https://github.com/fluent/fluent-bit/archive/v2.0.6.tar.gz"
-  sha256 "363e8c0bb9331b85abdc69b33a8c77de0a78557fe61734ea6026ea8d28863d85"
+  url "https://github.com/fluent/fluent-bit/archive/v2.0.8.tar.gz"
+  sha256 "8ff5566389033669feabc9c69a5c6f417dad5c8b066454388e6a706507262acf"
   license "Apache-2.0"
   head "https://github.com/fluent/fluent-bit.git", branch: "master"
 
@@ -12,14 +12,13 @@ class FluentBit < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "76c1074094b3391c4ac6154c9c7c9266465e1850338e543b59d4091e6ff004ac"
-    sha256 arm64_monterey: "af77ea7a9f86ecd7c9a6ea61d5b1ca9667ba1670c82e27d3fc7a8ee36bb60479"
-    sha256 arm64_big_sur:  "2e8ac5ace779e4b62eeaee48a6c33ca25513aad9c4a34d4965c9a0469ed7b66d"
-    sha256 ventura:        "f32d9112e1d6c6bc433ea722c5169b2ff946230287a9eeff4cfa30a495111cf2"
-    sha256 monterey:       "0ed077898bdefa34e2381b0985bb704635b85090486f5b25d461a37b427ea10c"
-    sha256 big_sur:        "319dfc9d55d49da8f0ec69c1f1e9db37078b19d3c2d5b324b523af25cfb1149d"
-    sha256 catalina:       "a14ed08902a2b1c3a305736b5fc317d008eb2dc27ed6b855e562f96589dbaad0"
-    sha256 x86_64_linux:   "57147259e5f5ed6cc368aa5e509b8d174edd24b7f432116be376f9b782682367"
+    sha256 arm64_ventura:  "ddc00f0733b1f64ce2f19d85ea8e3e077ea3b6db03d515618846957e1dc04b68"
+    sha256 arm64_monterey: "69cc9cfaaaa60550ccf87008fe7e37e0a4c44614b9e54804e4f63b9f5fff9f59"
+    sha256 arm64_big_sur:  "c4cbb9d4becf2ab47a93c40d4e7520670f490aa38c9d3b74b7bd1377a251b27e"
+    sha256 ventura:        "dffa4b23bbb6b339e02d454a84fa66d2dca374300f1e5ffb73057ba62c54d705"
+    sha256 monterey:       "581d20b020b93db2b0f82d1ae6e78ada2caa542f2ccac81c63c5cf61c3e588dd"
+    sha256 big_sur:        "20517b9560edf3e14c50fe069009828e1170312be3ed9504573b2ea2a87bccea"
+    sha256 x86_64_linux:   "81152634fe381e4060c2c598ffe338a23637589b73a37dd5b2bf6a45a02d3f9e"
   end
 
   depends_on "bison" => :build

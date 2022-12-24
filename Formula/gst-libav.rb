@@ -1,8 +1,8 @@
 class GstLibav < Formula
   desc "GStreamer plugins for Libav (a fork of FFmpeg)"
   homepage "https://gstreamer.freedesktop.org/"
-  url "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.20.4.tar.xz"
-  sha256 "04ccbdd58fb31dd94098da599209834a0e7661638c5703381dd0a862c56fc532"
+  url "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.20.5.tar.xz"
+  sha256 "b152e3cc49d014899f53c39d8a6224a44e1399b4cf76aa5f9a903fdf9793c3cc"
   license "LGPL-2.1-or-later"
   head "https://gitlab.freedesktop.org/gstreamer/gst-libav.git", branch: "master"
 
@@ -12,13 +12,13 @@ class GstLibav < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "68a158c5361724ddee7652ff73329a462fe2739bbb7d1ae34b17971f0e31783f"
-    sha256 cellar: :any, arm64_monterey: "a1eb99674d0c4d6611c0822764e9e2cb7835c24c5aec060e4536ec2deecb90e1"
-    sha256 cellar: :any, arm64_big_sur:  "ee0a769cf947704b402f9de6b301dcab7a9d9df41f52a505e3c3fa0a4e0a8e82"
-    sha256 cellar: :any, ventura:        "79056f909e53becc8f909b4235e43951630bc18f0dec175e157fe828c589aa8d"
-    sha256 cellar: :any, monterey:       "0b432b068dac62127f67c628acff2cf401f1a786198f13d6e9ecd0116684ea90"
-    sha256 cellar: :any, big_sur:        "0fd39dc6d2e527d4735deade5e7fa6a67f589e63e889bfbe27e9aa924a661d31"
-    sha256               x86_64_linux:   "5492b4ce5ea6833a284a9caabbb2dc0f6e600e5fc6268aecbba1e16537733342"
+    sha256 cellar: :any, arm64_ventura:  "23c142bd81ba559fe56a97adfabee71b2ca28523cd8990bc146349a534b48c22"
+    sha256 cellar: :any, arm64_monterey: "450645a9b02cda7287e555f7daa1efb458b27cf5cf3e9876dfeb05057bf8d6d1"
+    sha256 cellar: :any, arm64_big_sur:  "3c70052bddc8fc42bb1974687565c9bf8dffbcc1aa6d4e9734211f45eb8e0574"
+    sha256 cellar: :any, ventura:        "a198a59edf7ae7e56d282d83bac641769064f2fb2b870a4eebf4d9b23aec3284"
+    sha256 cellar: :any, monterey:       "e6871e72ec94c91cd1d30ba8d5bf4fac6ba8837de1a3c604b5f336a0bb7f7b27"
+    sha256 cellar: :any, big_sur:        "d1151394b763d7f288e53a0840171d5150714726582aa3e4d0f6dbc0c45f4d66"
+    sha256               x86_64_linux:   "ffc41092c742044ac33e9af5b14e605128bc7fc3ae57ab79370483a3f44b95d8"
   end
 
   depends_on "meson" => :build

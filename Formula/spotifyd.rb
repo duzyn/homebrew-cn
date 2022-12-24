@@ -1,8 +1,8 @@
 class Spotifyd < Formula
   desc "Spotify daemon"
   homepage "https://github.com/Spotifyd/spotifyd"
-  url "https://github.com/Spotifyd/spotifyd/archive/v0.3.2.tar.gz"
-  sha256 "d1d5442e6639cde7fbd390a65335489611eec62a1cfcba99a4aba8e8977a9d9c"
+  url "https://github.com/Spotifyd/spotifyd/archive/v0.3.4.tar.gz"
+  sha256 "c14df2499fa192cae5b6ade16c5cea70d29a5e977928dab283fa1fc12a3184df"
   license "GPL-3.0-only"
   head "https://github.com/Spotifyd/spotifyd.git", branch: "master"
 
@@ -12,14 +12,13 @@ class Spotifyd < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_monterey: "1108e828b2ed18a151143e3dc3dacdc0460efce76f56eba5d50fdf60bfbe06ae"
-    sha256 cellar: :any,                 arm64_big_sur:  "fe8f92ca3a00fc2b8dc28a6c6d868c49f0febbe26ad818755045af763102e04f"
-    sha256 cellar: :any,                 monterey:       "0666848f95b581365fa2563736f2226ae55e6c169d4efd446c3bcebc2028525e"
-    sha256 cellar: :any,                 big_sur:        "027e2994c8471dcde0b06ceda61c07166fa9083d3a08f4056ba986be37f21db0"
-    sha256 cellar: :any,                 catalina:       "b2a8c0dffe45b557509e6a70a47d9cd96c6222cdd2ab2d44c7366806ba3d7721"
-    sha256 cellar: :any,                 mojave:         "2c047d9f19710edd8795e14351e36aac051c5f9397e262f4199cf9beffe1483b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "804c7e8e5855f5082734c558606c650c6004ea4e9cfc11d342f5d802cca0c1b4"
+    sha256 cellar: :any,                 arm64_ventura:  "b92d7d114bfe738a57c9c4284d6a312fd8f3ba2a0d44218020f3e5f716834b1a"
+    sha256 cellar: :any,                 arm64_monterey: "f793e1e8cb7fd679cd5c9ec60cf73856ff5b9f7f4a76cf4b164cd92e0b0882e8"
+    sha256 cellar: :any,                 arm64_big_sur:  "ccc7f7fe6e4ae88ae96ae74bf9baad7d47830be43402fb9d686ddfec8f0d59e5"
+    sha256 cellar: :any,                 ventura:        "1d944210d57b183d8d2a2826789afb82421a95ef7437be9e69aa46daf550449e"
+    sha256 cellar: :any,                 monterey:       "5d43646e1a07cd5d5f63c7c0e3de2715f4b628908d1d48da329b1b4a6fcaaf31"
+    sha256 cellar: :any,                 big_sur:        "2e72cfea42555845a7fd16aef8bef293fca0156072cfab80e19ccd4c7d056596"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1636dfcdb9652e50f923dbc251dfb878dec8fddeef997beac892f41c436fc698"
   end
 
   depends_on "pkg-config" => :build
@@ -42,6 +41,6 @@ class Spotifyd < Formula
   test do
     cmd = "#{bin}/spotifyd --username homebrew_fake_user_for_testing \
       --password homebrew --no-daemon --backend portaudio"
-    assert_match "Authentication failed", shell_output(cmd, 101)
+    assert_match "Bad credentials", shell_output(cmd)
   end
 end

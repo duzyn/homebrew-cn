@@ -1,8 +1,8 @@
 class GstRtspServer < Formula
   desc "RTSP server library based on GStreamer"
   homepage "https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html"
-  url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.20.4.tar.xz"
-  sha256 "88d9ef634e59aeb8cc183ad5ae444557c5a88dd49d833b9072bc6e1fae6a3d7d"
+  url "https://gstreamer.freedesktop.org/src/gst-rtsp-server/gst-rtsp-server-1.20.5.tar.xz"
+  sha256 "ba398a7ddd559cce56ef4b91f448d174e0dccad98a493563d2d59c41a2ef39c5"
   license "LGPL-2.0-or-later"
 
   livecheck do
@@ -11,13 +11,13 @@ class GstRtspServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "23fd0c66480ad245cce6785b1b7fedf3ebb947b5d65cf7642a23d3a281dd894e"
-    sha256 cellar: :any, arm64_monterey: "751a8c5d2f1186e1383c96f57b1b919607158548643b357c5bc2bc0745b5ddd6"
-    sha256 cellar: :any, arm64_big_sur:  "f225c54ede1e22e013974656eb8c513a1341765cd57923bb693b0e922c024d9f"
-    sha256 cellar: :any, ventura:        "a3774dcfba5791270bbfc058f77de49749c042cd8d2c2c8cfc512265109166a1"
-    sha256 cellar: :any, monterey:       "9c0f7ddd940d9deebb5a980c34577c587f3f94a5b83270fca6f34ea31f2d98a9"
-    sha256 cellar: :any, big_sur:        "aebf8008df27ff754f3d128c2a96a3e5a15a16888bb7ed3b90c766cef88b2cdb"
-    sha256               x86_64_linux:   "1c02e0712c03cce73eb3cdd1e55d0573f9f280e4bfb8f25987c95679caa8e366"
+    sha256 cellar: :any, arm64_ventura:  "692806bdb19705282ef6bf717e02b93adc94a9058304a40d0e68666270dd9e4b"
+    sha256 cellar: :any, arm64_monterey: "b650527ebf1bbb38e41097204711c0cccbe11fa31fd451a118faec2920c79879"
+    sha256 cellar: :any, arm64_big_sur:  "840b92c864f83bb0134bb60a9c7bc91b3ed0609b7cb80f57924198eade5dfe63"
+    sha256 cellar: :any, ventura:        "98b228b7d0899134764fe25bc3579b97d430deb71cbc27e39b8fc6c497961c96"
+    sha256 cellar: :any, monterey:       "8e9724b507f0db001b8c969021fe3aee82e4557c9fd5a4b81f39ff2eb97e2122"
+    sha256 cellar: :any, big_sur:        "ecc0b1ada06392646aa1ee7f5240fad8e700856786d6f6fab57c47f462c25ece"
+    sha256               x86_64_linux:   "3295fc435b4e0137381d33e67e2955866d281045906fb705d0dcc438a26ee74a"
   end
 
   depends_on "gobject-introspection" => :build

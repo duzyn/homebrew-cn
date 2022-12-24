@@ -3,21 +3,22 @@ class Vineyard < Formula
 
   desc "In-memory immutable data manager. (Project under CNCF)"
   homepage "https://v6d.io"
-  url "https://ghproxy.com/github.com/v6d-io/v6d/releases/download/v0.11.2/v6d-0.11.2.tar.gz"
-  sha256 "59d17e31563cf5c161bd5385389baf5a924061f144dcd1743a5c4fd78b8c6ff4"
+  url "https://ghproxy.com/github.com/v6d-io/v6d/releases/download/v0.11.3/v6d-0.11.3.tar.gz"
+  sha256 "18befb052270d5cfd1280db571b9dbdeb876d988d308d7cee1deb5ddde0121a0"
   license "Apache-2.0"
 
   bottle do
-    sha256 arm64_ventura:  "ee09d4d02b4cb31264df48671d555d948cad60a37d58d13447a4931045cc4c70"
-    sha256 arm64_monterey: "59c1a7dcf598f0561a3bce9db04004965df716c5e01f2391e13c65c8a250c195"
-    sha256 arm64_big_sur:  "c6be39d52c839beb3ab4d6360d901809276934c0524630b88154aa671f7a9db2"
-    sha256 ventura:        "fe544a1afea77dce9f01f458104909b951b967d49de90666258caa18903a2cd9"
-    sha256 monterey:       "2ccc441346581d152551c9aa63c375aed035c8f6c50ead1c759f5ee1e21d0a87"
-    sha256 big_sur:        "2c958df6181b489f2c327e65b973833b298bcb1a83271fa3401a456cd49f8eb0"
-    sha256 x86_64_linux:   "39e639bf271f5a9dfaf63b8298325ff440bab0689ddd490824cdd33b87f70879"
+    sha256 arm64_ventura:  "18e15854094ac71799d83dd723fa962b2da781d9a72168caac0dd947a45a8d54"
+    sha256 arm64_monterey: "8d5a76c0f7b2b52b3ce14457aaae9a12dc2d650c2f06ae3af04524f43b873f5c"
+    sha256 arm64_big_sur:  "25948c1ef148df3f69fbb0324942384b39a15303d174644dca6b96564f9b182c"
+    sha256 ventura:        "ca0bdbe7948dfab6ee86ff4ccd1bece3a593a8b619ba78b9a39eba6535fe3de1"
+    sha256 monterey:       "f6dbd6b5040dfc9c6b5b546c9f17fbdbbc0fa5f6a926e80e38f9cfdaa83acb03"
+    sha256 big_sur:        "0dce7d6fb3ad4506d7123ec6a97461fb7203ea301f2ad4ea819e2f93195d18af"
+    sha256 x86_64_linux:   "b10bcfddfe4a9cf0df81c0d8bfebb6972205b82cd6d287d5fc0b1b7a5c5fb6a3"
   end
 
   depends_on "cmake" => :build
+  depends_on "llvm" => :build
   depends_on "python@3.10" => :build
   depends_on "apache-arrow"
   depends_on "boost"
@@ -26,7 +27,6 @@ class Vineyard < Formula
   depends_on "gflags"
   depends_on "glog"
   depends_on "libgrape-lite"
-  depends_on "llvm"
   depends_on "nlohmann-json"
   depends_on "open-mpi"
   depends_on "openssl@1.1"
@@ -47,6 +47,7 @@ class Vineyard < Formula
                     "-DUSE_EXTERNAL_TBB_LIBS=ON",
                     "-DUSE_EXTERNAL_NLOHMANN_JSON_LIBS=ON",
                     "-DBUILD_VINEYARD_TESTS=OFF",
+                    "-DUSE_LIBUNWIND=OFF",
                     "-DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"].opt_prefix}",
                     *std_cmake_args
     system "cmake", "--build", "build"

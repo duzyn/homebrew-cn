@@ -13,19 +13,20 @@ class Mimirtool < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8798e09032fbf45a36306fc67f743c8503d25000a088394d1c7758fafd210d14"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f47c139d6d29ea5dee2a234f924d9a42cc182727bc4bfd411e5a09723648de95"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ecdea14e495f78412e95c11c1c0d3964f6874bb1971311cf442e6378f93b25b"
-    sha256 cellar: :any_skip_relocation, ventura:        "6d1c79274c95d2b7172e7eaf27a4c228ffdc8e2b48c01cf3e50c04c7824fc970"
-    sha256 cellar: :any_skip_relocation, monterey:       "7a0d2b44eb7185ff06bd2d4d1293fc7e5c3afe2970ac3c0b3a88f855206571ad"
-    sha256 cellar: :any_skip_relocation, big_sur:        "485799543f5fc60af10fe3ed84db7c9836c281830024053df0868cc09034ae55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7d30d8e358fe89099739d49ab75dcee73ae49e69f478ebb5f3fef9a43d6c221"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5b52e8915e04c0d174a2eab443ee2dcada73fe01a8c3454e3e78e5f6e5e1c624"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c12f4f48e17cff5977558083e02145caa4ae27e623c5aa1f1a8585bb49059c5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "803ca2e2cde3f36fb62ea4a0d7d8048d4e946d15d1b9e7b04c9db620beff8ac0"
+    sha256 cellar: :any_skip_relocation, ventura:        "23e61f68c02eaf2753b1e020403e26a129f39bacea96d33425a41725809fd1ba"
+    sha256 cellar: :any_skip_relocation, monterey:       "ca44ba45ff5409b332378329a594a902160f6b17fc79115c1c7fedb54424b0da"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c568c2e4923350f6bc6cd54f751d101b0d8bba3b756eb14789d5e9c3ee5d2df0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d99cf86eb8ab8fbffbff8bdb5f4b6fd00858f82bcd3bd99ff9efabe452422328"
   end
 
   depends_on "go" => :build
 
   def install
-    system "make", "BUILD_IN_CONTAINER=false", "cmd/mimirtool/mimirtool"
+    system "make", "BUILD_IN_CONTAINER=false", "GENERATE_FILES=false", "cmd/mimirtool/mimirtool"
     bin.install "cmd/mimirtool/mimirtool"
   end
 

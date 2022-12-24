@@ -1,26 +1,10 @@
 class DsdaDoom < Formula
   desc "Fork of prboom+ with a focus on speedrunning"
   homepage "https://github.com/kraflab/dsda-doom"
+  url "https://github.com/kraflab/dsda-doom/archive/refs/tags/v0.25.0.tar.gz"
+  sha256 "caad205a35a6339f3a73019b17818c214de4f3b7822fcc2350e7cae63a044b8b"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/kraflab/dsda-doom.git", branch: "master"
-
-  stable do
-    url "https://github.com/kraflab/dsda-doom/archive/refs/tags/v0.24.3.tar.gz"
-    sha256 "d4cfc82eea029068329d6b6a2dcbe0b316b31a60af12e6dc5ad3e1d2c359d913"
-
-    # Patch for Linux builds
-    patch do
-      url "https://github.com/kraflab/dsda-doom/commit/1af0987c190f183d870b6b44aaab670d777df7fe.patch?full_index=1"
-      sha256 "800eca74126d991a7490b37e403778a6b2ea764abd7ed4648d48db2d2ccf42da"
-    end
-
-    # Patch allowing to set a custom location for dsda-doom.wad
-    patch do
-      url "https://github.com/kraflab/dsda-doom/commit/40e29a41b39341a579767b5a88030cdf90f31429.patch?full_index=1"
-      sha256 "21bc7241ff81db9138f4c7a7cfdfd80f1de6fa4789a501f215f3c876463de256"
-    end
-  end
 
   livecheck do
     url :stable
@@ -28,14 +12,13 @@ class DsdaDoom < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "461e2bb2b2fd6de72decda0c33d83349cb9c613a646d6c59d4d6d1263b42552c"
-    sha256 arm64_monterey: "8d5d4bc7d38e1a1f5eb9a7bfd452bc7554579af004024268e5dae60ed7351316"
-    sha256 arm64_big_sur:  "6990524cfec0e271877e469ca890be0fda1d1d9ecc8e902651654a8fa5f4f934"
-    sha256 ventura:        "78fc51616af111d7715f3802fd929b8d32f81c105ffada9278a7b23398b45349"
-    sha256 monterey:       "4465fe819a918ae2e4db6b28c0abd3ce4de4c80464f3287627536ae6ab7a2459"
-    sha256 big_sur:        "5d94ace0be85ba85fcfe1bbb8c40ef401165f43c98c08aa199204a5cd0a7da2b"
-    sha256 catalina:       "4c25430d4653d99c1dd136a795a2c3bf9033047b1ce8660ba9514abdaa4643a8"
-    sha256 x86_64_linux:   "fd221840a8e56a5dee645291ab99dfbe7c3e82085fb84ae32e75b8aa64656056"
+    sha256 arm64_ventura:  "13852708b6d504453371019b0de56627a10da952c26fcfedd2bd9adfb41c1ea9"
+    sha256 arm64_monterey: "42a9a7243b89072a9df2f95187c369eefcc3da81edb60512861da260fed180ea"
+    sha256 arm64_big_sur:  "a42a79ec59a1ef54b8c3725de5fbdb70239e437e38d83691646b6e0be2a4a838"
+    sha256 ventura:        "58419807b8d176fde62fa58e60b04cc1e853607f5b65449b52b8e6990ae5bb53"
+    sha256 monterey:       "2be15e042049ed8334ca75594e621c5d5dc38446e7fb02e8981bbdb6dfb5a8c0"
+    sha256 big_sur:        "0c986114529b7e1a52f6eb8bd519b30e3bf443c4dd1f30a196b1efe22ff1b0e2"
+    sha256 x86_64_linux:   "b26ba3da87d7bcedd6996f29b6fbab7013e9a3e223bf27ef654aa97c9876cb1f"
   end
 
   depends_on "cmake" => :build

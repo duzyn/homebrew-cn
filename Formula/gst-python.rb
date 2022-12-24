@@ -1,8 +1,8 @@
 class GstPython < Formula
   desc "Python overrides for gobject-introspection-based pygst bindings"
   homepage "https://gstreamer.freedesktop.org/modules/gst-python.html"
-  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.20.4.tar.xz"
-  sha256 "5eb4136d03e2a495f4499c8b2e6d9d3e7b5e73c5a8b8acf9213d57bc6a7bd3c1"
+  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.20.5.tar.xz"
+  sha256 "27487652318659cfd7dc42784b713c78d29cc7a7df4fb397134c8c125f65e3b2"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,13 +11,13 @@ class GstPython < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0aa72dc7195f547c39798a1c67b60ef93859364fd1cc0ca26e2c5b09de48895f"
-    sha256 arm64_monterey: "bc688b37f9e322aad1220e1b8224878134631fb26fe7ebe8d85e68e8ceedefbf"
-    sha256 arm64_big_sur:  "ff1862926c906426bb95dd517360b3b232b94ea06551b405df005d536771002a"
-    sha256 ventura:        "6df34c0c80ec7387d77b3a2c54c23b1baa2d9ec521a4b57237af3a61fba57801"
-    sha256 monterey:       "50ca198accf4076231df60b0fbb014b272b79c1541078303f7bf4e031878444d"
-    sha256 big_sur:        "e09a7c9030649452515dad14a484015599c2995532bbb9aceed7791c85c1537c"
-    sha256 x86_64_linux:   "89ac1bffbc7d622e935d39f905c160c9a520e1619b40e21e91e07b666cfdd524"
+    sha256 arm64_ventura:  "73f7fbdf9d81c21a7a510b2a48468dd43f8bf5ef83fb4d9214a0371fb9df3daf"
+    sha256 arm64_monterey: "507f2bc2a38e1703eadff87c0ef62137122992b42f0353290a183e3d8b7274d9"
+    sha256 arm64_big_sur:  "1b8eee708cb5ebd7593676fc363caf347285f61f11b7a28aab6ddc4177e51c5d"
+    sha256 ventura:        "6ef8dc182ea5e05942028a0064c8537a52682a6256dee8fd25da35c815524a43"
+    sha256 monterey:       "7f62d747a6c1923ad2f838682eadfbbd4e6abe3bed9818d2a2bb0159d7929168"
+    sha256 big_sur:        "62579fb7951f823f0dddbb6f4a79262ea7039153ff1918826c27080f66ad4422"
+    sha256 x86_64_linux:   "4794069a94e3f736f21c22aec9765eda2af3ea9ab129c9da4063022647c8994b"
   end
 
   depends_on "meson" => :build

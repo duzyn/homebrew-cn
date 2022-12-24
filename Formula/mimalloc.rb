@@ -1,8 +1,8 @@
 class Mimalloc < Formula
   desc "Compact general purpose allocator"
   homepage "https://github.com/microsoft/mimalloc"
-  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v2.0.7.tar.gz"
-  sha256 "f23aac6c73594e417af50cb38f1efed88ef1dc14a490f0eff07c7f7b079810a4"
+  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v2.0.9.tar.gz"
+  sha256 "4a29edae32a914a706715e2ac8e7e4109e25353212edeed0888f4e3e15db5850"
   license "MIT"
 
   livecheck do
@@ -11,13 +11,13 @@ class Mimalloc < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3628509c807ce90ddbd4f31002a9457e8f517bc8a752a1f40a2831e93f9eea5a"
-    sha256 cellar: :any,                 arm64_monterey: "b59c78d2b01ae6199bfe1d1dad6f5bbdc08a7322c4b66314ecdae1abffb06140"
-    sha256 cellar: :any,                 arm64_big_sur:  "269def3ed2318340f1d60695d4928261cb37c809d0535707af1cfd3effa48022"
-    sha256 cellar: :any,                 ventura:        "0ced178e11021557b80b1757f50f0eb7d2df234cc13b80b280d2ab566bf76a57"
-    sha256 cellar: :any,                 monterey:       "00ca941816ee794e5cb573ec832e4391d716d1b6e708d48a89ec940a4a5386f9"
-    sha256 cellar: :any,                 big_sur:        "a2e3579c97a035bfdf4e611c8a6cef68fa5e56dcb770047adb2c73f1839f1fed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95113a19ace175085e8bc78020b42243c375cb36e76624d947c6e7a336db396e"
+    sha256 cellar: :any,                 arm64_ventura:  "1bf1120e8812645cadebf4c92996d85d1b8009f58403c653d69e4da78a9ae259"
+    sha256 cellar: :any,                 arm64_monterey: "e207c935a04d622ca0b6c596e63c8c0069d11f7db6dda0a4c837ee7928c680af"
+    sha256 cellar: :any,                 arm64_big_sur:  "fc13bbdb901db573f4ab7d9f015ee830007276ef67b89352c65141345a77e5d5"
+    sha256 cellar: :any,                 ventura:        "6b54f4338b1666c4e61bcc8f09ea35a6957078a6202bf1f8a806b2fa2ccb0546"
+    sha256 cellar: :any,                 monterey:       "3f06858520cb0cf131ba12c747309ad965722160909f4fa76540bb4906c19c9b"
+    sha256 cellar: :any,                 big_sur:        "bc23c9bbbe1bc651b4775743af56ea5560a42bff4b0a5695a4d927e8c661955b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "33ce5deb809b4a863fd0ff3d57d1184a97a1cebf413125d16f029767abd9c801"
   end
 
   depends_on "cmake" => :build

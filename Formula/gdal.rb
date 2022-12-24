@@ -1,8 +1,8 @@
 class Gdal < Formula
   desc "Geospatial Data Abstraction Library"
   homepage "https://www.gdal.org/"
-  url "http://download.osgeo.org/gdal/3.6.0/gdal-3.6.0.tar.xz"
-  sha256 "f7afa4aa8d32d0799e011a9f573c6a67e9471f78e70d3d0d0b45b45c8c0c1a94"
+  url "http://download.osgeo.org/gdal/3.6.1/gdal-3.6.1.tar.xz"
+  sha256 "68f1c03547ff7152289789db7f67ee634167c9b7bfec4872b88406b236f9c230"
   license "MIT"
 
   livecheck do
@@ -11,13 +11,13 @@ class Gdal < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "304ae53da0f58717968108fd0954e505ba6c0ceac796f2a73680462bde66e244"
-    sha256 arm64_monterey: "6c56b6a3357a7469dbcc734aa9d9986fe02ec5b10fb5c115d4142856d101d2f0"
-    sha256 arm64_big_sur:  "8c170834628981b839c3b8ec8b8237d34d08ad0ae03b010f1f072e38d7f0ee15"
-    sha256 ventura:        "4194f540b67ba64f358e0a0d355132c69e27542004db787a7c05e5f188119175"
-    sha256 monterey:       "239e28458448dc50cd4d7ee7119b6a1d8c0a2807f16ba19976eaa7bdc8e1678c"
-    sha256 big_sur:        "afa1902f5e69c25f59876d85915baeaa2af3df8df74dbf8bf619fab1d16eb0c6"
-    sha256 x86_64_linux:   "d0ba3e8b774392d316f8415191c4d6f91a07a0d1337dbda6402c126488cc62ca"
+    sha256 arm64_ventura:  "0d8d8a1456c387895b74de0b09b62f8bdaa582a764154d94feefd88dcd8cdce3"
+    sha256 arm64_monterey: "4fe3a40599cbfb49e4b711520dc14247726887afcecb79e403e3a74d27ae1d44"
+    sha256 arm64_big_sur:  "ab34db9823d44c712eb01994d36b25cf5fcb4f2b4cf479ae84d731f56adabc3c"
+    sha256 ventura:        "ed6a428b3a1a93dce566a20f9c622922be4a59cc5dcdddb85290cfc4e43b1e07"
+    sha256 monterey:       "586d2ad1eea2a61b5c18accb43fa9d8c647ce4db8ca423c7b369bafedc4f688a"
+    sha256 big_sur:        "35b2ab24a3780e42ab926493eb45d896de0d8952f4a2c80d348e806488c8f94f"
+    sha256 x86_64_linux:   "bdbd5a7c4f5edcede0bb0b0eaf3c408b74eed215cdab367652b67815d5f68c3f"
   end
 
   head do
@@ -53,7 +53,7 @@ class Gdal < Formula
   depends_on "pcre2"
   depends_on "poppler"
   depends_on "proj"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "sqlite"
   depends_on "unixodbc"
   depends_on "webp"
@@ -73,35 +73,24 @@ class Gdal < Formula
   fails_with gcc: "5"
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install
-    args = [
-      "-DENABLE_PAM=ON",
-      "-DCMAKE_INSTALL_RPATH=#{lib}",
-    ]
-    args.concat(std_cmake_args)
-    args_no_python = args.dup << "-DBUILD_PYTHON_BINDINGS=OFF"
+    # Work around Homebrew's "prefix scheme" patch which causes non-pip installs
+    # to incorrectly try to write into HOMEBREW_PREFIX/lib since Python 3.10.
+    inreplace "swig/python/CMakeLists.txt",
+              /(set\(INSTALL_ARGS "--single-version-externally-managed --record=record.txt")\)/,
+              "\\1 --install-lib=#{prefix/Language::Python.site_packages(python3)})"
 
-    mkdir "build" do
-      # First, build without Python to avoid a Linux issue where the
-      # Python bindings are installed in the wrong path
-      # See https://github.com/Homebrew/homebrew-core/pull/116073#issuecomment-1320875424
-      system "cmake", "..", *args_no_python
-      system "make"
-      system "make", "install"
-
-      # Next, reconfigure with Python and manually run the python build
-      args_with_python = args.dup << "-DBUILD_PYTHON_BINDINGS=ON"
-      system "cmake", "..", *args_with_python
-      system "make"
-
-      # Build Python bindings
-      cd "swig/python" do
-        system python3, *Language::Python.setup_install_args(prefix, python3)
-      end
-    end
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DBUILD_PYTHON_BINDINGS=ON",
+                    "-DPython_EXECUTABLE=#{which(python3)}",
+                    "-DENABLE_PAM=ON",
+                    "-DCMAKE_INSTALL_RPATH=#{lib}",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
