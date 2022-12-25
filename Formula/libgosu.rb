@@ -1,19 +1,19 @@
 class Libgosu < Formula
   desc "2D game development library"
   homepage "https://libgosu.org"
-  url "https://github.com/gosu/gosu/archive/v1.4.4.tar.gz"
-  sha256 "d9df31f365fdbe74c6727d19c91e43cc643e884b317b4f37c625cd6fbd0b2a1e"
+  url "https://github.com/gosu/gosu/archive/v1.4.5.tar.gz"
+  sha256 "051fe5954b14273cf370d94dabad42abe63af95c4f86009b98efd6bf47540c0b"
   license "MIT"
   head "https://github.com/gosu/gosu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0902566a746f1e47c0ef4cde5ce17e0a7ae35d45046de3da8fd8e64ddb37336a"
-    sha256 cellar: :any,                 arm64_monterey: "a9f9077b8cb8abed67b40c080db2fe3ad15b9b22bf35c991359d4cd79b9c83a6"
-    sha256 cellar: :any,                 arm64_big_sur:  "35577bae46c25a270b1f203e9754a0ad0fe84f81fe8a47c227dc747aa32e2dc6"
-    sha256 cellar: :any,                 ventura:        "59dc269d9dbff95365dd55d12061fc49a43e02cb12220f8842354fea69681f3e"
-    sha256 cellar: :any,                 monterey:       "d6195bed2e82548d1599078bb7078699e309c3985d7bba36aaacf1709d7d72a5"
-    sha256 cellar: :any,                 big_sur:        "8eba000174e16aef2bb897e2f5f5b8a8b2570d63503a55e52d902fe82d32b266"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ca4d46f26434a5064f82e091ba85c6798f4293166873b93ea93d30616711be7"
+    sha256 cellar: :any,                 arm64_ventura:  "3faddbf628295fbbd1bd4c3efa1ae5c082002695d4592c0394332c201cea1231"
+    sha256 cellar: :any,                 arm64_monterey: "9df80df6a55866654a63ba86f19b635ccda5bb3a38f835d0694a8afefa3191e1"
+    sha256 cellar: :any,                 arm64_big_sur:  "4d627075f586692786b2c01b589090e1ff47f6b2ce9ced252c5206e22f0d0ca5"
+    sha256 cellar: :any,                 ventura:        "1d549d8dcb7546a056935123c8c072ec880044d85617610f66dd7e0ae8635b43"
+    sha256 cellar: :any,                 monterey:       "2b4e38af9b2b791731c1e79550f3ad7c45187286ce03582a31afafbcb7900ee4"
+    sha256 cellar: :any,                 big_sur:        "2444114e3d70c6d55894a3e98dc308d4be9284942f58af1c75c5e1c2753a8047"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7dc955e8fd596caa0204ee4734a5c3d01bfee7e937d83d26e48ab6099fceaa0"
   end
 
   depends_on "cmake" => :build

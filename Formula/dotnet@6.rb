@@ -1,9 +1,10 @@
 class DotnetAT6 < Formula
   desc ".NET Core"
   homepage "https://dotnet.microsoft.com/"
+  # Source-build tag announced at https://github.com/dotnet/source-build/discussions
   url "https://github.com/dotnet/installer.git",
-      tag:      "v6.0.111",
-      revision: "b3bb659a9d244d5abf8a796ac33b42922074fc38"
+      tag:      "v6.0.112",
+      revision: "d311a58ee178e4084d570ae5203e22c1e5e174b7"
   license "MIT"
 
   # https://github.com/dotnet/source-build/#support
@@ -24,13 +25,13 @@ class DotnetAT6 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4c47770a26a3f7b9a8e51516da26d1c3415c2c67fd51df62e2a8e63c4f0b71e8"
-    sha256 cellar: :any,                 arm64_monterey: "15f6544ea8c423295820c459e86fc3e8c6d464cafd5abfb200cf9f710031dc5a"
-    sha256 cellar: :any,                 arm64_big_sur:  "2be891e1b8ec95b350f603598a1cfda4c3d58893b450a02f776ca308915ad824"
-    sha256 cellar: :any,                 ventura:        "86448a6cbf2c23b316ac1c50892e90ce1dd072fe3c898113fa54fc0f54e3e493"
-    sha256 cellar: :any,                 monterey:       "51d954f1e7c35277d19fbafd24071c9d89537a8f91e8751d6387c138e56e34a7"
-    sha256 cellar: :any,                 big_sur:        "a6c5b2f0c555d02e8dce1d0b914b0b791078bce370c1cd44cbca0f57fd1ccbe0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37a779906cef166c69ecb7b2d374924ff7460cd5f63377991daff417a0ce6007"
+    sha256 cellar: :any,                 arm64_ventura:  "b5d9676a1d4b5d42d0b4831509e77aee0dc93c45c9f082a6e788ff172724753f"
+    sha256 cellar: :any,                 arm64_monterey: "1052800d9cb17b99aee70e84faaf101400091b7cf75dcf763a84dbb87628bb9d"
+    sha256 cellar: :any,                 arm64_big_sur:  "6ea99d6cd6145517e4cd20147bf0f6c9b577d6a87646f400d0ee4e57c980bd17"
+    sha256 cellar: :any,                 ventura:        "f6b309c9afb1d070c072e0e438c424ddd3340ffd55049e7953431671889f17b8"
+    sha256 cellar: :any,                 monterey:       "6c801399a627e2e216956641b99c22a33db2d7f30c929b6eabbefff15cd1a218"
+    sha256 cellar: :any,                 big_sur:        "1b4c2eb93b464a3ef1186e53a3a17ce29cb6b01f54417ed93435901133cbd50a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5b34cc637bc77fe38c18d3a638999bd75d43b1384d82106fa4cb13e4657e8c7"
   end
 
   keg_only :versioned_formula
@@ -126,7 +127,8 @@ class DotnetAT6 < Formula
       rename_patch = "0001-Rename-NuGet.Config-to-NuGet.config-to-account-for-a.patch"
       (Pathname("src/nuget-client/eng/source-build-patches")/rename_patch).unlink if OS.mac?
 
-      system "./prep.sh", "--bootstrap"
+      prep_args = (OS.linux? && Hardware::CPU.intel?) ? [] : ["--bootstrap"]
+      system "./prep.sh", *prep_args
       system "./build.sh", "--clean-while-building"
 
       libexec.mkpath

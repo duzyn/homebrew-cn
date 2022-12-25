@@ -1,18 +1,17 @@
 class Stubby < Formula
   desc "DNS privacy enabled stub resolver service based on getdns"
   homepage "https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby"
-  url "https://github.com/getdnsapi/stubby/archive/v0.4.2.tar.gz"
-  sha256 "1525934e8e6b476edc4e5668c566705e99927336db58aee20c1643517fc064ed"
+  url "https://github.com/getdnsapi/stubby/archive/v0.4.3.tar.gz"
+  sha256 "99291ab4f09bce3743000ed3ecbf58961648a35ca955889f1c41d36810cc4463"
   license "BSD-3-Clause"
   head "https://github.com/getdnsapi/stubby.git", branch: "develop"
 
   bottle do
-    sha256 arm64_monterey: "8dae5616a15ae8b79386da0bd2faff4a2b55c790f13c427cce9c74b85b9d50a6"
-    sha256 arm64_big_sur:  "7501e035287e7410f00b09c6a36951d0b0510085f3401687a84a62eb61da69d2"
-    sha256 monterey:       "54e6f97cdc8e0d26bcf5567509f3a53661c01e773489073fb3b9cba4bd7ebe17"
-    sha256 big_sur:        "59c635a262c65f3e19ee9fd8791e7686e93a14a17b3e7329971f50637c538bfb"
-    sha256 catalina:       "52208414687d233e96e3938eda73feb5d8aa4e7601789db9276ff0cbc1ed791f"
-    sha256 x86_64_linux:   "aedb813029fcafa50af6bdd12eb6a8299bee1d71f59a0c5d41b1b02921fbc0d6"
+    sha256 arm64_monterey: "9505f36ee4654adb527badc196224a2ea8969b0ed984b6e06732ef5c25571dce"
+    sha256 arm64_big_sur:  "b2492e874a5dc3c235cde5dff8eb7c6e10dfb3eb52bcb12d86cc36fc8865ce92"
+    sha256 monterey:       "bd4eadc1f1ffd5675c17c038ffc02202cfc024e3cb1da5ae27b67bb98479b5ea"
+    sha256 big_sur:        "47c88d9d9bfac6b2cff05fad0f9a94883e4dfe7f7eacfad5c32ed6a425038478"
+    sha256 x86_64_linux:   "7dd5aef38ee748eb4ea4fd8b29cda8f67becb8a2679932f0126b5a443709e23d"
   end
 
   depends_on "cmake" => :build

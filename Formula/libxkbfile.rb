@@ -1,19 +1,18 @@
 class Libxkbfile < Formula
   desc "X.Org: XKB file handling routines"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libxkbfile-1.1.1.tar.gz"
-  sha256 "87faee6d4873c5631e8bb53e85134084b862185da682de8617f08ca18d82e216"
+  url "https://www.x.org/archive/individual/lib/libxkbfile-1.1.2.tar.xz"
+  sha256 "b8a3784fac420b201718047cfb6c2d5ee7e8b9481564c2667b4215f6616644b1"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "d168e608eb86d667cb38159b7a1d8a7075dc2a27452ddd01a79e98f774768373"
-    sha256 cellar: :any,                 arm64_monterey: "ee43a751acb1d2368c2002d81b87c71c4729a34aa95c18540071cd1b2eaf1f8b"
-    sha256 cellar: :any,                 arm64_big_sur:  "e33a381dd6b30b86920adbbd64c48e18e2cc549bcab25a6c8f40c72705fd8fc2"
-    sha256 cellar: :any,                 ventura:        "662adb077f1619cb46c95aac21cc79bfa34c2334a12998de7a1f5ebe6302565e"
-    sha256 cellar: :any,                 monterey:       "4d0447b062d2b7a25314138c27c7541101d494ee3ea366905bcbbe1265cdadb5"
-    sha256 cellar: :any,                 big_sur:        "d03791354356b615e28d6764beb46ec25eb02b5400f9ab44afc9344886997f03"
-    sha256 cellar: :any,                 catalina:       "f9ee4cdf0be6c785c3a1eef84490cfb3f9caabb0f838d38a3369c2493fed825c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e7e9fc16f4f7a6c9b2f5457fd231e5c7ad89ebaab966daa83b21fecfa2be3896"
+    sha256 cellar: :any,                 arm64_ventura:  "e2cbf7af5949030dc34f0f5455a44bfef5e50c5afcbbdc1673bec74dd5b697d2"
+    sha256 cellar: :any,                 arm64_monterey: "34962587b3ec814acd64923999bf674f967df17d496a94b1f6c8f7bb64fbfe93"
+    sha256 cellar: :any,                 arm64_big_sur:  "fca001e0512c2d31aa35ab88e6982efce346f42b47a1e4dee9734862964d81ad"
+    sha256 cellar: :any,                 ventura:        "d53617fd18e769ab6d06447b823f7f81222240321ef17defcd0864cb46f350ef"
+    sha256 cellar: :any,                 monterey:       "6aed9a4272cfe403b8ef41e3ec0bcaf8ef0554f5a48ca8ce1463a0e08bce215a"
+    sha256 cellar: :any,                 big_sur:        "a6d7eb43abf1d93a421730d1bce87ee69bbda96ac5e178666601e17dba43b4bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3166f0fa93d14f16172692130da99c9400601f46a831bd75ca7a9e7fd8d08ba9"
   end
 
   depends_on "pkg-config" => :build

@@ -3,21 +3,19 @@ class Supervisor < Formula
 
   desc "Process Control System"
   homepage "http://supervisord.org/"
-  url "https://files.pythonhosted.org/packages/b3/41/2806c3c66b3e4a847843821bc0db447a58b7a9b0c39a49b354f287569130/supervisor-4.2.4.tar.gz"
-  sha256 "40dc582ce1eec631c3df79420b187a6da276bbd68a4ec0a8f1f123ea616b97a2"
+  url "https://files.pythonhosted.org/packages/ce/37/517989b05849dd6eaa76c148f24517544704895830a50289cbbf53c7efb9/supervisor-4.2.5.tar.gz"
+  sha256 "34761bae1a23c58192281a5115fb07fbf22c9b0133c08166beffc70fed3ebc12"
   license "BSD-3-Clause-Modification"
   head "https://github.com/Supervisor/supervisor.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e8eb69708ed6b2df4573ef41288d3a16b48540c4436508f8d513050e0e9d9671"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e8eb69708ed6b2df4573ef41288d3a16b48540c4436508f8d513050e0e9d9671"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e8eb69708ed6b2df4573ef41288d3a16b48540c4436508f8d513050e0e9d9671"
-    sha256 cellar: :any_skip_relocation, ventura:        "67f3ae8029a4eadc49e9dde99abe66221f6a380f86991ecd4f386dd350d67c5e"
-    sha256 cellar: :any_skip_relocation, monterey:       "67f3ae8029a4eadc49e9dde99abe66221f6a380f86991ecd4f386dd350d67c5e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "67f3ae8029a4eadc49e9dde99abe66221f6a380f86991ecd4f386dd350d67c5e"
-    sha256 cellar: :any_skip_relocation, catalina:       "67f3ae8029a4eadc49e9dde99abe66221f6a380f86991ecd4f386dd350d67c5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "caee84afcfdf07a9c03f4db8981bc9b9c9f29dd61032e4717adb4fc5a6da81fd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "30c5d30e66ec6a8f15adf002cac89c2a5692eefa54e1ea4626e0a29d956b6c38"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "30c5d30e66ec6a8f15adf002cac89c2a5692eefa54e1ea4626e0a29d956b6c38"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "30c5d30e66ec6a8f15adf002cac89c2a5692eefa54e1ea4626e0a29d956b6c38"
+    sha256 cellar: :any_skip_relocation, ventura:        "21d219b124dff18019063b8cd125c4548ede2110107897c5a6adf419322c1b5b"
+    sha256 cellar: :any_skip_relocation, monterey:       "21d219b124dff18019063b8cd125c4548ede2110107897c5a6adf419322c1b5b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "21d219b124dff18019063b8cd125c4548ede2110107897c5a6adf419322c1b5b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adef8866166ae6da259889ee8645fdbdbeed275b34392b0f63aed98ed067010b"
   end
 
   depends_on "python@3.11"

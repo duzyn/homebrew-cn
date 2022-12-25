@@ -1,22 +1,22 @@
 class Freeipmi < Formula
   desc "In-band and out-of-band IPMI (v1.5/2.0) software"
   homepage "https://www.gnu.org/software/freeipmi/"
-  url "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.9.tar.gz"
-  mirror "https://ftpmirror.gnu.org/freeipmi/freeipmi-1.6.9.tar.gz"
-  sha256 "f25e1c35f3d0f1b5a99cc31ecc2353ca83ed46a15163842fba870127dc9c8206"
+  url "https://ftp.gnu.org/gnu/freeipmi/freeipmi-1.6.10.tar.gz"
+  mirror "https://ftpmirror.gnu.org/freeipmi/freeipmi-1.6.10.tar.gz"
+  sha256 "fce4a1e401b6189c103d2b1203261d0bfbf45985c6f3fa44c51b186b13fe7a7d"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "ef8ba5632bf9e5c0face497e01e4707080ce7d8be3682bb9632e1948d4dd7f3c"
-    sha256 arm64_monterey: "247f80609bc18e42e708a1ed4a3009450b3eeac788fe56bae0bb1a95fb220545"
-    sha256 arm64_big_sur:  "c10f92144bc24391fa7b0c35cc3ef2cea428c7feba13a6d66ac9a46b1f67b874"
-    sha256 ventura:        "435f4cec01a924518ef11ba4ad97921609941cc51bdb7392f5b274b7ffbcbbf9"
-    sha256 monterey:       "e5ea92942763199ad1e53b7ebf95418466ff707e851e10914c2ed9a490e2f950"
-    sha256 big_sur:        "961dddefca891df95335bffcca5e6bdc7c6e906ea6ecf77f48be8fa14d833a6d"
-    sha256 catalina:       "5d14764fbabda846afaf0ea7d7cd662aaadded927ff71961367a7ca139bbcefa"
-    sha256 x86_64_linux:   "98b8c41ab586aa9ffbe28356dc3da20251d58925fcdac865fa90edae7e158dba"
+    sha256 arm64_ventura:  "49668adaf966f1af503e4f612615d45f5d376abccd9d66428ca9dbeb21020f78"
+    sha256 arm64_monterey: "0b1f4ff5e7d3a55464a2fa059ac7f23bdc43051a7df6ecafe49f1dfb95833155"
+    sha256 arm64_big_sur:  "2dbc659ce5d464a950ee96519777b21934dbd13a1af071a27316b70af05552ea"
+    sha256 ventura:        "82e08449d2df553f0ab475768755f393ebb8dc1940c0aeafb221863e767efc77"
+    sha256 monterey:       "e619cd689cf79cbfee94d8808febe6acdf6f39b5446a27e3c74be8d048edc9d2"
+    sha256 big_sur:        "39b2817bc31c4eaacddb10eb5ed645684537fa2aa568df840753eb7e711a5851"
+    sha256 x86_64_linux:   "7e39faf9884060fa6f1babb4acf2e72dcbc4cb5cefee4c0fe52d708c776a1e11"
   end
 
+  depends_on "texinfo" => :build
   depends_on "libgcrypt"
 
   on_macos do

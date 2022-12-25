@@ -1,31 +1,36 @@
 class Xmake < Formula
   desc "Cross-platform build utility based on Lua"
   homepage "https://xmake.io/"
-  url "https://ghproxy.com/github.com/xmake-io/xmake/releases/download/v2.7.3/xmake-v2.7.3.tar.gz"
-  sha256 "3e71437ad2a59d1fbbc9fba75ab4ca8d428c49beefcce86c11f6c4710dd4b6f2"
+  url "https://ghproxy.com/github.com/xmake-io/xmake/releases/download/v2.7.4/xmake-v2.7.4.tar.gz"
+  sha256 "d490ff8825fa53fe5abfb549310cb54a2dfef1ebd3f82e24548483772994e06a"
   license "Apache-2.0"
   head "https://github.com/xmake-io/xmake.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "69c4e0fcd501004a3bb9c4c6768aaeb2900b8f9a94909bdcfaed474f11d16d16"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5e68ab0c7020405208a0c07b4ebb5b8dfa092bb43a00e87b095475ec0bf78c0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c2e87cb7617acfa6247adce8c071e1ae248d675c60bef0e9c347687b988a239"
-    sha256 cellar: :any_skip_relocation, ventura:        "f362db6902ebaa03484d4bb881855d3519767483ff5c3c01916d15e0a6f8d628"
-    sha256 cellar: :any_skip_relocation, monterey:       "8f005b7219f20c128a09ccb34971969b4dee91e171b2092a5a541e7fcc70e56f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a29f5aa5ccc8915c509b0bf7e14516068da31c235567bc006563d27ddb0389a4"
-    sha256 cellar: :any_skip_relocation, catalina:       "59c4d0d56d5324e688e447bf8df0f1f68c941740e7c0b7d4b1cc4bb72488f9da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "021e6fc970023ba98e0619477f94199b853ef2c7b38f9c19796212b1882c6203"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4c5d401ffb6484fc2bef8ff27507a95183edc0a613ff8f4ce5a1390eaf4933ec"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7cc480b234eb2a5831ea98cf216d62ef529d3423afcb9b669279ee71cc9521b9"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "356a400a3cd194d59005cc6b9e573d6b0893eea36f07e059cc14ba58fc3f6d06"
+    sha256 cellar: :any_skip_relocation, ventura:        "e446ce0af41f7c1201f731adc9d92da44151e1035075b508601f27ffa02894dc"
+    sha256 cellar: :any_skip_relocation, monterey:       "e1df716e53e395f90b780598ebe5abeb2a921ec570680ec0d8b30970fde1dbb2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f16c5abbc006bce0bd41c1953f498fdc30ce56ddabe92940cd26dddd636ec681"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2da4513f8a093cf99c0b4120dba3c9c0539ff36a3b1780e6d1d313a09f0a96f2"
   end
 
   on_linux do
     depends_on "readline"
   end
 
+  patch do
+    url "https://ghproxy.com/github.com/xmake-io/xmake/releases/download/v2.7.4/configure.diff"
+    sha256 "fa46107403b2ed062631c83009852130b5641eaf703589230c6daea428a13bf5"
+  end
+
   def install
     ENV["XMAKE_ROOT"] = "y" if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
+    system "./configure"
     system "make"
-    system "make", "install", "prefix=#{prefix}"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do

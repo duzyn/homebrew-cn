@@ -1,8 +1,8 @@
 class Kakoune < Formula
   desc "Selection-based modal text editor"
   homepage "https://github.com/mawww/kakoune"
-  url "https://ghproxy.com/github.com/mawww/kakoune/releases/download/v2021.11.08/kakoune-2021.11.08.tar.bz2"
-  sha256 "aa30889d9da11331a243a8f40fe4f6a8619321b19217debac8f565e06eddb5f4"
+  url "https://ghproxy.com/github.com/mawww/kakoune/releases/download/v2022.10.31/kakoune-2022.10.31.tar.bz2"
+  sha256 "fb317b62c9048ddc7567fe83dfc409c252ef85778b24bd2863be2762d4e4e58b"
   license "Unlicense"
   head "https://github.com/mawww/kakoune.git", branch: "master"
 
@@ -12,15 +12,13 @@ class Kakoune < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e9230676c948aea9dcdcf9d82e9e39f246fac3fbf748c5b0ac1afc5eeae363a0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5092de013e5a673a4d1e5f0576ad48ad98175f75269c3860e906fd4ddb16ea0f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6702288ef929636e9cca45f49d59bd2bdfc48b62a163163d3186bb32560f4e28"
-    sha256 cellar: :any_skip_relocation, ventura:        "384f7e3e2727618d24481d437c017558c37531d4ef29bf2800055b5cd895b028"
-    sha256 cellar: :any_skip_relocation, monterey:       "402fb3821ccb65bab8d917d70c69aa372b59f0649b30b1655794a4e1b7495a94"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bae4c38b2ddae7663e0edb080b8725fd4811cd90823d7c26610726b26caf0155"
-    sha256 cellar: :any_skip_relocation, catalina:       "0620ffadba67da01ce4944c7514533aa1b2591a5ef006e33a196624c68e3035d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac5e0f28176c38db9527cb6b7cf0f560e43e5d8cffd0e33eb00ca4bc4cd0f7a2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6433e00227d299986ab1bbff1c41c9bcf8ddbaee825085ff3ab62cde72e377c7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f31a1765a53309f42bdef042c82b8510aacdeed47e4b5563457c6a2e91fad7b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ca17ff96ac28cdf3aa24317f6ddce22859c82087bff76d06a1f911948fca3c0"
+    sha256 cellar: :any_skip_relocation, ventura:        "ea0a3df04f0d8ad2ba262d0208ba8910e5cd728bd13044c39387601f0f401d04"
+    sha256 cellar: :any_skip_relocation, monterey:       "bee2f0c9c8d1f57f366d4d3452f9bf0d73e30509a651258d877311dd2733f4fd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4d49c03712e4b2e60d2ef91e14afa838552b4877e5a42121d6147443c307380b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "606496e883548440a2813b00e3639212da5d3aa11a52d4fd9ae180d373197fc5"
   end
 
   depends_on macos: :high_sierra # needs C++17

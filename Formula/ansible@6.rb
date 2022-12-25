@@ -1,27 +1,31 @@
-class Ansible < Formula
+class AnsibleAT6 < Formula
   include Language::Python::Virtualenv
 
   desc "Automate deployment, configuration, and upgrading"
   homepage "https://www.ansible.com/"
-  url "https://files.pythonhosted.org/packages/05/cd/d5c46caa5d8c6c11ebad76accd2cec355a10ba80c71780ecdf0bc6748a62/ansible-7.1.0.tar.gz"
-  sha256 "1e47238c4aa9e68c0c5367a3fd707ba6c3949b4aaf912b06440ad78dd2bf018d"
+  url "https://files.pythonhosted.org/packages/f5/8c/a4e46c1621e6f95559bb59a28cd62f817581c3d591db1353496f6a80eebd/ansible-6.7.0.tar.gz"
+  sha256 "c188f3ac8a8583794aadcff0bea87895ead58c19d6f244cd0c342562706e176c"
   license "GPL-3.0-or-later"
-  head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f3e48c6b09484c73f239a0871f260c9714ec57116627b83e68f4e45838302f05"
-    sha256 cellar: :any,                 arm64_monterey: "7f829852bbdec944d7de131573eb0e472a2e949e9600570ebc261a006df9666d"
-    sha256 cellar: :any,                 arm64_big_sur:  "ec3c9492ec6adf599a6a66cfcf484279c6cd0fb1659a7981ebd645a8a5f13c55"
-    sha256 cellar: :any,                 ventura:        "ba40cce19d947e7fa071b03b425a9c04a8fba59a46c32d92e9fd873969df3852"
-    sha256 cellar: :any,                 monterey:       "929009dff5a0ebc9d4e43f7831fd35bf47b89602677defbb282bdf15362fd154"
-    sha256 cellar: :any,                 big_sur:        "b7dfc8145f86b62c411cf4152e6ac071fabedd7fcac2d1022407562243165cc0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "63e2d40c579a01db6d3d3c51ca58f576afa33e3487947f7925a57f1f340abfa6"
+    sha256 cellar: :any,                 arm64_ventura:  "4eef44d32ee4a9bf33589d86636eba0d32cec5827f601bda54abc9f4b2de5279"
+    sha256 cellar: :any,                 arm64_monterey: "aa37bda45dd7bae690b7be3043f7c1018fe1c8ea39eb3bc8adee4e533bc852df"
+    sha256 cellar: :any,                 arm64_big_sur:  "831da82b09e7673adc5554e423bf7571c954a4a16923fc26075104591026525a"
+    sha256 cellar: :any,                 ventura:        "abe382530dadfa29070b4606b204ad9cfe2842d0e89c2d7cee54ad2d63c71314"
+    sha256 cellar: :any,                 monterey:       "0620043ecc0b1242a0f2b9962226c826f995222a7f274236c8a48a82d038f485"
+    sha256 cellar: :any,                 big_sur:        "4b72dc1b4477a5e28f4875871405617ea4c1e7097acfc48539ff606b1ef5ecd3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4798045e9dd2987d57190c3835c7dd673560b418acbce956148346f4c877ffa"
   end
+
+  keg_only :versioned_formula
+
+  # https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#ansible-community-package-release-cycle
+  deprecate! date: "2022-12-24", because: :unmaintained
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "openssl@1.1"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
   depends_on "pyyaml"
   depends_on "six"
 
@@ -53,8 +57,8 @@ class Ansible < Formula
 
   # Automatically updated resources
   resource "ansible-core" do
-    url "https://files.pythonhosted.org/packages/1b/7f/7df9a9e05b562ce846b19621da23e6fc009996e838b94c1cb8e5f734a816/ansible-core-2.14.1.tar.gz"
-    sha256 "589257f2560fffd5d4465352cd4504e2cbfc418ba49e0c4265cd54e16070c938"
+    url "https://files.pythonhosted.org/packages/68/c9/ddab83ed69c3ce120af4f064bc56976442e4d1d595a787131e4b14cf6468/ansible-core-2.13.7.tar.gz"
+    sha256 "a9d5f942ff0dcbeec3d7183a898ea4f656d233d6055d4bc8e22e37b013b1881a"
   end
 
   resource "apache-libcloud" do
@@ -563,7 +567,7 @@ class Ansible < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.11")
+    venv = virtualenv_create(libexec, "python3.10")
     # Install all of the resources declared on the formula into the virtualenv.
     resources.each do |r|
       # ansible-core provides all ansible binaries
@@ -592,7 +596,7 @@ class Ansible < Formula
     EOS
     (testpath/"hosts.ini").write [
       "localhost ansible_connection=local",
-      " ansible_python_interpreter=#{Formula["python@3.11"].opt_bin}/python3.11",
+      " ansible_python_interpreter=#{Formula["python@3.10"].opt_bin}/python3.10",
       "\n",
     ].join
     system bin/"ansible-playbook", testpath/"playbook.yml", "-i", testpath/"hosts.ini"

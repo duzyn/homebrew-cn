@@ -1,23 +1,26 @@
 class Libdeflate < Formula
   desc "Heavily optimized DEFLATE/zlib/gzip compression and decompression"
   homepage "https://github.com/ebiggers/libdeflate"
-  url "https://github.com/ebiggers/libdeflate/archive/v1.14.tar.gz"
-  sha256 "89e7df898c37c3427b0f39aadcf733731321a278771d20fc553f92da8d4808ac"
+  url "https://github.com/ebiggers/libdeflate/archive/v1.15.tar.gz"
+  sha256 "58b95040df7383dc0413defb700d9893c194732474283cc4c8f144b00a68154b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e5ee2ffedd51e64581e9bf9bdcc99ef750f7749310584b08a2192cf31b63874b"
-    sha256 cellar: :any,                 arm64_monterey: "324ee7719635c163f1d5fb751a577cf58c0798990982284a047ad8009605bd98"
-    sha256 cellar: :any,                 arm64_big_sur:  "58846f6a35bb709a379aaa0935a3cba7c2a1152496c0ffb3faa92b3e0dcdf684"
-    sha256 cellar: :any,                 ventura:        "b4dadf1d9a1f74a83ece22380554b9512d7a491384cbd5e995cb555364e1426a"
-    sha256 cellar: :any,                 monterey:       "28b420821d6358bf36e4f8be76774bddb04a20b2167f866204df77d12c78680e"
-    sha256 cellar: :any,                 big_sur:        "7c28cefed63f6a4c68c8a923665b4450ea672ca3b83b80bb4a08f3b27e21e0c9"
-    sha256 cellar: :any,                 catalina:       "d0c47d6630933b8c68d2c2c94bd8be47c942f9a96c149e0bb8ddd81cb9e04edd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8ef64ef6bc47bce68ba644f57f598dfbae1b0112ddf477c02facf691ef4dfb8c"
+    sha256 cellar: :any,                 arm64_ventura:  "7dc0140e44b0136c450b54c3a8b13db56431a6b17243de7ad37e381524c46035"
+    sha256 cellar: :any,                 arm64_monterey: "0f84e1bf6e816ed42aaa21d31f3b288d862c93149eb1b555d70861dd3c1bfc8f"
+    sha256 cellar: :any,                 arm64_big_sur:  "0b770077d5233cf5d497cc4db13544fc50592d1d6e92b318a42a905a21790c52"
+    sha256 cellar: :any,                 ventura:        "7a069b2b4c05461e13e4c57789341f0460ce7cf588944bd851fb146d75e0eeec"
+    sha256 cellar: :any,                 monterey:       "c2d5e46d1af9656d226c143efec29865b124575f272faae1351d7b871d518262"
+    sha256 cellar: :any,                 big_sur:        "45f61f7a6c1c95e2dba2d318d10b0f6bc69ce8bf6b938f3e08078a681567379d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c03412f5482e1353b30224ef9b135e00fc7578c3e88f4bea55c50cffceb53b0"
   end
 
+  depends_on "cmake" => :build
+
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

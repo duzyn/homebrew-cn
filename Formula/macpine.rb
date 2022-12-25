@@ -6,6 +6,20 @@ class Macpine < Formula
   license "Apache-2.0"
   head "https://github.com/beringresearch/macpine.git", branch: "main"
 
+  livecheck do
+    url :stable
+    regex(/^v?\.?(\d+(?:\.\d+)*)$/i)
+    strategy :git do |tags, regex|
+      tags.map do |tag|
+        version = tag[regex, 1]
+        next if version.blank?
+
+        # Naively convert tags like `v.01` to `0.1`
+        tag.match?(/^v\.?\d+$/i) ? version.chars.join(".") : version
+      end
+    end
+  end
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "17724ae6ba9ff82b9d55cb7d51f0fa5641fa568569c27350083c6d88dbe2dcd8"

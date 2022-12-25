@@ -3,21 +3,19 @@ class Doc8 < Formula
 
   desc "Style checker for Sphinx documentation"
   homepage "https://github.com/PyCQA/doc8"
-  url "https://files.pythonhosted.org/packages/75/8b/6df640e943a1334bebaf96e0017911763d882748e8b8fd748f109c8c3279/doc8-1.0.0.tar.gz"
-  sha256 "1e999a14fe415ea96d89d5053c790d01061f19b6737706b817d1579c2a07cc16"
+  url "https://files.pythonhosted.org/packages/a1/b5/63a2f2ceba95be5cc15813fd310d560264e8662dbd7495669a1e26d59026/doc8-1.1.1.tar.gz"
+  sha256 "d97a93e8f5a2efc4713a0804657dedad83745cca4cd1d88de9186f77f9776004"
   license "Apache-2.0"
   head "https://github.com/PyCQA/doc8.git", branch: "main"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a35e6213f12f7da625eae2c78b59b2bf03da6a94efdba67cec7125425769ba02"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2bf743768fd3cb7d32c36f339c09602db87a4add2f53bc5517d56f5a4d5fde0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "834c488f7fa94a9fc92b5622e91af6fc02bc0fb8161074040e3936e66de7622b"
-    sha256 cellar: :any_skip_relocation, ventura:        "a3b0019d1a05ee56b56e2d3ff9d9f9bed34b2e9bcc0fdff0d15ac99983c4053d"
-    sha256 cellar: :any_skip_relocation, monterey:       "e0ac76ac677bac9f95f7923eef4eb4f6f3599377dfc59cd1f889b59ac3d5d8e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ba07a0233f03adc42b62e7db510355177b89d5fcfaa44c221b2ceb8495da14b3"
-    sha256 cellar: :any_skip_relocation, catalina:       "73bd19e07cb54c1267411ccb3621c0b82f0c8e82aa0976bde51a8a05adf67596"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8838360ce692d41c55ba7847ea8cff057c975719c3843348cdeab57f0441bc0c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "894235ad2cded34e1072772a8df17f42432e6e8dcb9aff59d252c78f7ddd3fe7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c91549a8ebe1453a0f98a575c0543c3d60a1411634b39d799d4d0da3d3b0780"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fc2acb3dce64a72ebbadd46bf579d3484c700d133de53ef306f1ff9ef56732d0"
+    sha256 cellar: :any_skip_relocation, ventura:        "844310402007a53b10c4af06a289ad096097156d165c27b62885726cebf32fba"
+    sha256 cellar: :any_skip_relocation, monterey:       "cc36ed9318a5ed8aa742e270dd7f6c63efc7d28984390f21790fb217ab779cc5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "970258070670b9bda9a05ef6549a032eb42dd3d105c76f9399eb73eadd7610e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81cb6a88c01fa3565eaea21f3ce16d52cca08d078c435e635220f07180bf2102"
   end
 
   depends_on "docutils"
