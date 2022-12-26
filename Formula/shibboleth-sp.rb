@@ -1,8 +1,8 @@
 class ShibbolethSp < Formula
   desc "Shibboleth 2 Service Provider daemon"
   homepage "https://wiki.shibboleth.net/confluence/display/SHIB2"
-  url "https://shibboleth.net/downloads/service-provider/3.3.0/shibboleth-sp-3.3.0.tar.bz2"
-  sha256 "f175bd0dc695a8b7cbe78f6156b14f7f407e1742d045d9a8e3f2cf1078c04704"
+  url "https://shibboleth.net/downloads/service-provider/3.4.0/shibboleth-sp-3.4.0.tar.bz2"
+  sha256 "e7994be1105bc8683949fd11030a685fffc64cd6fa6d3e80c41bd078b05d5909"
   license "Apache-2.0"
 
   livecheck do
@@ -11,14 +11,13 @@ class ShibbolethSp < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "a8457f23f8cc4caf6bd5ae8dcd12ed596049669077521c41077540fe9d2ce380"
-    sha256 arm64_monterey: "e90f7108926a0492b61d482442ca3363e01fe4ee0a5030d3d5128ee7bce62c04"
-    sha256 arm64_big_sur:  "3627b9b94793331278c868f3f50c0feb832db68545ee689445efcb17e56abd99"
-    sha256 ventura:        "ea6dbd1660a92e82ad5ee36839ef72de30ea44f5f50dad828da005a2055336f9"
-    sha256 monterey:       "3c5fddd0234a1d201aebf7cda85223212e0e3ccbded613e3258cc014d2811c0d"
-    sha256 big_sur:        "6adfa5b54297937bf4bc1a5abba4f57dd5bca91647c3b9cac9a0b7a86c8ca444"
-    sha256 catalina:       "82e21f772932a9edbbefc1288e26e6537b23cbb74dc7eb6d8c814486157789c9"
-    sha256 x86_64_linux:   "53dbce9a0a34d7a61083ba1130c3699d0c0657a6552c16df84b4c07b25a35ce8"
+    sha256 arm64_ventura:  "02732d1e0fceb8355fb7ee196d834dd33232374db66f13bf78b5475b7a11bf37"
+    sha256 arm64_monterey: "a250892c2cdd08ba37230ca61f2d9d9cdb3d61c5300991aae6db1bb4c61544ac"
+    sha256 arm64_big_sur:  "1c560ef6e9233dfb527cf85ce6e419b168b58b9c07b358efa160ed92de848128"
+    sha256 ventura:        "5f7956100cfe411cc9fd4b6f2cfedeef39893e30844354ac5c825e4ff8ba4a12"
+    sha256 monterey:       "1cc0e826c460ca137b4bda20563615f2a4999bb5ac2d8e618d308d653cd29886"
+    sha256 big_sur:        "af5a8fa10ea9e4d9990ba641e8e3ad080e54d31264ad6eb1d93240bbb1d5068b"
+    sha256 x86_64_linux:   "03ba8592aab7f9315a596ce39d37cb1e319db400ea7098dcf876c8327e4815ba"
   end
 
   depends_on "apr" => :build

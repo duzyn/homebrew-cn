@@ -1,24 +1,19 @@
 class XmlSecurityC < Formula
   desc "Implementation of primary security standards for XML"
   homepage "https://santuario.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=santuario/c-library/xml-security-c-2.0.2.tar.bz2"
-  mirror "https://archive.apache.org/dist/santuario/c-library/xml-security-c-2.0.2.tar.bz2"
-  sha256 "39e963ab4da477b7bda058f06db37228664c68fe68902d86e334614dd06e046b"
+  url "https://www.apache.org/dyn/closer.lua?path=santuario/c-library/xml-security-c-2.0.4.tar.bz2"
+  mirror "https://archive.apache.org/dist/santuario/c-library/xml-security-c-2.0.4.tar.bz2"
+  sha256 "c83ed1b7c0189cce27a49caa81986938e76807bf35597e6056259af30726beca"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "612e935f497f5c06a6af3ded70fd674e54c396cdfaec46a82a357069c742f88b"
-    sha256 cellar: :any,                 arm64_monterey: "236db0ab6ac9199864f10dae316b32f1574b9f21162975f6f4e887b2edb3e799"
-    sha256 cellar: :any,                 arm64_big_sur:  "5ac142618a6c4f97bd5c1b554a69a9668f36e1b462910d9eaae8b8f3556fcbec"
-    sha256 cellar: :any,                 ventura:        "458056e602d8f97e8dac35d821865bf430eaa7ecb1472caae3238bdb251a2a51"
-    sha256 cellar: :any,                 monterey:       "3a0c1493e7bc7822a8b3fddb5f4ebe0f0246b40d1c093094d5321303acd17113"
-    sha256 cellar: :any,                 big_sur:        "ed512d0c411b694e5835b4b33338e9e347ceea4e564a5caeecc9e41e26b5fc53"
-    sha256 cellar: :any,                 catalina:       "ce0f62697cff7004fa7498ebc0dcc917206be09847847fa2ec31285b81ed04ce"
-    sha256 cellar: :any,                 mojave:         "eec2216263c3bb21b52418d18232034aacc69335d3e14624225627fe5364347c"
-    sha256 cellar: :any,                 high_sierra:    "5ee66d19898cd50085e90392313d3a1f45204bd111f32019251af89ee84f1ca5"
-    sha256 cellar: :any,                 sierra:         "bd1e4d4b5768f869d28850ad440e32d417f6db5d182c6049afc87575bb36ccc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b46c9746eebe86f9b8914ff605e857977c5c664c83a66f53f17331f5c03b9049"
+    sha256 cellar: :any,                 arm64_ventura:  "44e619c0775264474da5fac0a3b7a76c169b9440654e8ce206f77e4a89e22d41"
+    sha256 cellar: :any,                 arm64_monterey: "8c02de297010d750925ab642739e56c514af13100a6d4893923ea074e389a876"
+    sha256 cellar: :any,                 arm64_big_sur:  "f9006574dd2cf981840b09296014164bda200753726c46f946483dacbb015042"
+    sha256 cellar: :any,                 ventura:        "1b7278375b07bc250e636698e4acbb2bf49011b49886f87afb41cfa38e253029"
+    sha256 cellar: :any,                 monterey:       "74905e5b09e2f9c88206c2d4a967018e9424a54cd67e7734f7d87f385e1477eb"
+    sha256 cellar: :any,                 big_sur:        "53f03034f650807fa91a96153c82854582aef1eef8caeab601703c46d354a752"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7c52a6310c4a117dbde92b4486d20434b644524daf533a259697ee125bd8bad"
   end
 
   depends_on "pkg-config" => :build

@@ -7,8 +7,8 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   stable do
-    url "https://mesa.freedesktop.org/archive/mesa-22.3.0.tar.xz"
-    sha256 "644bf936584548c2b88762111ad58b4aa3e4688874200e5a4eb74e53ce301746"
+    url "https://mesa.freedesktop.org/archive/mesa-22.3.1.tar.xz"
+    sha256 "3c9cd611c0859d307aba0659833386abdca4c86162d3c275ba5be62d16cf31eb"
 
     patch do
       url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/f0a40cf7d70ee5a25639b91d9a8088749a2dd04e/mesa/fix-build-on-macOS.patch"
@@ -17,13 +17,13 @@ class Mesa < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0ee197a6b33084712c28a0c301459c5b32fcf4ded6549dad3db3c9427ffcc8f3"
-    sha256 arm64_monterey: "ddd377f1027b8ea1c6198e276e66aecf5b28669c46a3972bb0eb5a859fb29c65"
-    sha256 arm64_big_sur:  "ba60c4a68d1619b475fe103fd6461e19977a0be7d5165c9b673f30a724b46d37"
-    sha256 ventura:        "26cb5f6e6216568dccd7ead8607059178f2857e88383c52baa528a4c5c6c66bf"
-    sha256 monterey:       "9deff26e1f7f672384bc4f45b77f8098fdeefd0459afa5b033f550b8f2eb0145"
-    sha256 big_sur:        "da8555800d3a5c1c8f0834fb2d076ae918dd39482dcaf9bafd31e8a7d5cc9b07"
-    sha256 x86_64_linux:   "4d26c18b5827c1097bd502a005c97efe4eda1f081096a9ce9070133b962dcf53"
+    sha256 arm64_ventura:  "3c4aa9a758e3438d51d662d28ab81ef9bf5ae061ed27d1b66f785b9da7552a58"
+    sha256 arm64_monterey: "f7fab0436d127b1b95d06999483661102bfbf4ca1adbbfd3716c38245fcb658e"
+    sha256 arm64_big_sur:  "71211f7472d1cad5d6afa36f589de42068fe1c55809ac25f14a764239ab212e0"
+    sha256 ventura:        "bf7474be76c322b07c1559a07523d5d739ddb5c42151f94fcf2ee6a4ffd0286c"
+    sha256 monterey:       "578f512fcc1ee3a2e131bf35e248f264cac3d8b6a1cc1e3f95c310a6b12a4e51"
+    sha256 big_sur:        "a3cc02119ae9630ff84c254dbd9a0e85905da8aaf0333bdad54df07b0ab5ce99"
+    sha256 x86_64_linux:   "c187824e8c4f540722f5f8f4690c657e02646e227358c9a798db291dabfffd8b"
   end
 
   depends_on "bison" => :build # can't use form macOS, needs '> 2.3'

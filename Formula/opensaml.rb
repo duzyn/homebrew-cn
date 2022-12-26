@@ -4,6 +4,7 @@ class Opensaml < Formula
   url "https://shibboleth.net/downloads/c++-opensaml/3.2.1/opensaml-3.2.1.tar.bz2"
   sha256 "b402a89a130adcb76869054b256429c1845339fe5c5226ee888686b6a026a337"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url "https://shibboleth.net/downloads/c++-opensaml/latest/"
@@ -11,14 +12,13 @@ class Opensaml < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "35496d4d3dccfdd70c66ef467813d3063812425933bd56c7546f4c5ea0daf4e9"
-    sha256 cellar: :any,                 arm64_monterey: "e6a5d7caddd133a1b4533322a9c2be90a6793f7f88da3727e9de3e84c5b3b4bd"
-    sha256 cellar: :any,                 arm64_big_sur:  "647a2ea6d83c6241687d510a287ba2f1c66d39e81c27662f5e3de493a39313cb"
-    sha256 cellar: :any,                 ventura:        "1b776b27bea4605592a95336032703823beed2de18b090559dd4ccbc1f22acea"
-    sha256 cellar: :any,                 monterey:       "7088fd876aaca086bb9d4caf6e1a1fb20d13f1852eddaa8d02b20b9d59cc759a"
-    sha256 cellar: :any,                 big_sur:        "9f5d89872645f58df8fc02bf425b310df6353c43940a0df4d7d0cfd20e48afd2"
-    sha256 cellar: :any,                 catalina:       "0a96d46a06f13d8f5a2a0552f28a38122417ac9668a5ac7e261f0d3cef36a5f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96605b6bbff2f833df39964dced755d4f059713833c9be5456295dd07073b37a"
+    sha256 cellar: :any,                 arm64_ventura:  "59c471816035a2f47ef027372917f6e5f00bde0f52be611a093d2776186a17b4"
+    sha256 cellar: :any,                 arm64_monterey: "b54f6321b30636a85766bf79106da3fe6e6bd62a8175bbf33e2f4ffaa59e0092"
+    sha256 cellar: :any,                 arm64_big_sur:  "3ac7e8b8d17a3fae75013ab5d3816a0825e5135b332be9fa232458bfd6d8f0e3"
+    sha256 cellar: :any,                 ventura:        "fa48153d9e27c658e81878c800a691934d23070e4215d3582bf8225bf851756d"
+    sha256 cellar: :any,                 monterey:       "d3cc32efd39b792501474e1b9c2fe49052fe0e37d5741c1b3b12889e49fb2425"
+    sha256 cellar: :any,                 big_sur:        "bec1ebc0632d0234f4365a13175e9079d93f1bf7853af6016438dd62fbd04b19"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73cd63ee414c783833b7b055dcb6a0301db0844da0ba759a1a7f2933547c6cb1"
   end
 
   depends_on "pkg-config" => :build

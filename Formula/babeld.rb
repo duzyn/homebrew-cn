@@ -1,8 +1,8 @@
 class Babeld < Formula
   desc "Loop-avoiding distance-vector routing protocol"
   homepage "https://www.irif.fr/~jch/software/babel/"
-  url "https://www.irif.fr/~jch/software/files/babeld-1.10.tar.gz"
-  sha256 "a5f54a08322640e97399bf4d1411a34319e6e277fbb6fc4966f38a17d72a8dea"
+  url "https://www.irif.fr/~jch/software/files/babeld-1.12.1.tar.gz"
+  sha256 "9ab59d7ac741f3630df23f9c3b67c60294d8b34ab622398f9b89773a878ecb1e"
   license "MIT"
   head "https://github.com/jech/babeld.git", branch: "master"
 
@@ -12,15 +12,19 @@ class Babeld < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2e81f4648a955d600aa2ada9e09a9031dbdf0d93e4a7d1940cfec7600a546561"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d3c9af084ef57a2e4a8b2dd3c65e2f411e5b2f40a7cc53a8ad974d4b9b9445e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84bd566d6b25d9b9a5f76c444c555fba9349457f09736d033903f9fbe576babf"
-    sha256 cellar: :any_skip_relocation, ventura:        "db6aef11ea73201f2765de7b3f2214fb1396d3dd68622bdb52f8d248495b7c5b"
-    sha256 cellar: :any_skip_relocation, monterey:       "f5bd4719e5e8d62233f68e9febd680173e23a40b13c584cc15d67f60d3709194"
-    sha256 cellar: :any_skip_relocation, big_sur:        "63a4e1edb9625b5f3e11df84a840979330b0bd3af8d77dec25fe09e92698719f"
-    sha256 cellar: :any_skip_relocation, catalina:       "b6906565df2c7862dd7979ef3599414bc59f0b78b05b0e3a9dbf411ab29fad83"
-    sha256 cellar: :any_skip_relocation, mojave:         "a59602b1643b95845ab9d1b6ecd68d1231ee825ac68fadb577e93d85b9b99ac9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b16202cbd6574ce354938e5e66b47efcb0b0b33e53a9b3affbce2c419efa9725"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fc426ca2675ff81cf0a36bce7e830a01471eb3689f77940ba18a890c5177944f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13037d03bd5527bb13d13997f8111b34c4033108aeaf0c893530b75129491456"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31c29f829e6523fab89daf2eb092fa48abc7bbb3395b8a9b2f25919ee12165b2"
+    sha256 cellar: :any_skip_relocation, ventura:        "6dc926128e3c43dab097b491e7bf81af73ba69caeecaf7b2ede264d70a8a0d58"
+    sha256 cellar: :any_skip_relocation, monterey:       "12e48ee7897ff4639dc1ff8ba91e98db8cf46bade5fea51d4cb982a44c7941d3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "271635240ac971459752fdeebc5177a9020daa15fa5f1d6d58e696fab6c550ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8b34878106cd3d0cce9727157896340b5823dfdfcd00d0123a22c2041378a0de"
+  end
+
+  # patch IN6_IS_ADDR_MULTICAST is not defined on macOS
+  patch do
+    url "https://github.com/jech/babeld/commit/fbb31080862aca1d0afb599edbcb2b25ac79b79c.patch?full_index=1"
+    sha256 "0f1308c2f21b64ec38b79f37782217ff21e8de85e1eaabd047fdd801b83dfa3f"
   end
 
   def install

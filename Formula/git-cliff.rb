@@ -1,19 +1,18 @@
 class GitCliff < Formula
   desc "Highly customizable changelog generator"
   homepage "https://github.com/orhun/git-cliff"
-  url "https://github.com/orhun/git-cliff/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "c77b7b38edae80b3a66c96f15d0bc3eaaa0bc55e1d3fbc8187c55070306188c1"
+  url "https://github.com/orhun/git-cliff/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "57321d1b1787f601b76347bcc981fbaf7d6a923a6fc1191a5360b6d72079186d"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "520d602d1ebe507fd6af954eea3fce839da952ca62efa173eb8d03a254b9cffa"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a42d519e73b38680943ac5ad8a857ca1bb528f548f3acd0f72a0a96e079cce52"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8fcc0775ca9c464e3911ed5c5e37f3556c855a76f89e0df25644f6b3d92b327a"
-    sha256 cellar: :any_skip_relocation, ventura:        "f9e8b8b1244bc2f30e75d893c5a50206bbbb1b025981d2c9a8dc87dd421c79e7"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c3609864b7adb01b483c23a5a299048f72b9635b21dc4b593ce80e0720e435c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c39b13006dac7ad2ecb330165c8c9230c117495455202467559d47cf2e3007cf"
-    sha256 cellar: :any_skip_relocation, catalina:       "c60405d0c481be31f6291c9831aca690fc90f1baf61532fb9e894299b358c36d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4eff6f3d0bec0970501db19f74b3d0b35a70562859f8e19019c5488549a44ab8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c1741f6e597cc8405caac261c7c4bd46ddb50ba628e34c8afcba9ee26af9a741"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "26de2d156fffc3e1b411533be30f5eb89974260f0874d169de91cc4c81943516"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1cff3a8df9fc05dc9fe6aedde72d456e5a7f39477287c9bbc755b58f116061d2"
+    sha256 cellar: :any_skip_relocation, ventura:        "e33adc758d105fe69e0812846cee86f53d61f7e657da3cacaeea1dbd29d1916a"
+    sha256 cellar: :any_skip_relocation, monterey:       "b4606b9c79cd304635d4105e151efd454d54811fa039ffb2c7f3a619818188fa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5475d8065a4a34b2074d5f4f05b1616153680225e85fc271a0374578a20c70d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8f5da6008832f634cce1381b8773d2b7ce8122c0e61b4dfee80e48d04dee319"
   end
 
   depends_on "rust" => :build

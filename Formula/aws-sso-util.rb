@@ -9,32 +9,32 @@ class AwsSsoUtil < Formula
   head "https://github.com/benkehoe/aws-sso-util.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "644061e3b2149f86fffa3d191326d054a85e341c1c9edd373485a622f4d8ddfa"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcd9c76459e9fd7e96e53e84a4b26f845b27c87b24d4a55146716bc85db201c3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0b2420f4ea6bb3a13d35672db645031fc3a4770c215b49e9fd018118e4642bb8"
-    sha256 cellar: :any_skip_relocation, ventura:        "3ade2ba8d4684edda7d8bd76af958537bfe3dc92b535047a94103d3220a86422"
-    sha256 cellar: :any_skip_relocation, monterey:       "3596886db39bb8ec8d88bc161d913d31a32d05166f93a65393843a9ecc9225b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "db5eb1bd65c0c06f5d534235f133c18fd2892034598193104bcabf695c0b4fcd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aef2aaa71e70de99b18828a65103208d1c0449db3f12fcacd28166c03674d5cc"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f2d51350cbbbcf8933d30ea157006ccfede3902784c7d6cfb29598f3c65a0ce7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "da33f75ef0541d1ffe48ecc66727319cfe49f1f32dd5f5494b88d60347ea9faa"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b38be720c754ede85fedad1ec4c7a3de3ac2b0b9177efa7d6e65922ad2b8eca0"
+    sha256 cellar: :any_skip_relocation, ventura:        "abd58e457502d85beda81b800f51a321af737d54fcb83a1ef330a6a5cf997f1d"
+    sha256 cellar: :any_skip_relocation, monterey:       "59dc8d854e9101315ce41d9fa09439605094ad7da4de9a3e4ae635757291f216"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0a54b5a434ab6512f00ad15484d6c8b5fe77b56d8cf5efdc1968e769f88f2792"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fcda01f9fda6172a561fe6e0f8252a2bfad1b88ad205f6dafd2e927ba7c3abf"
   end
 
-  depends_on "rust" => :build
   depends_on "python@3.11"
   depends_on "six"
 
-  on_linux do
-    depends_on "pkg-config" => :build
-  end
-
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/1a/cb/c4ffeb41e7137b23755a45e1bfec9cbb76ecf51874c6f1d113984ecaa32c/attrs-22.1.0.tar.gz"
-    sha256 "29adc2665447e5191d0e7c568fde78b21f9672d344281d0c6e1ab085429b22b6"
+    url "https://files.pythonhosted.org/packages/21/31/3f468da74c7de4fcf9b25591e682856389b3400b4b62f201e65f15ea3e07/attrs-22.2.0.tar.gz"
+    sha256 "c9227bfc2f01993c03f68db37d1d15c9690188323c067c641f1a35ca58185f99"
   end
 
   resource "aws-error-utils" do
     url "https://files.pythonhosted.org/packages/4e/7b/622c18e41b17935ac72f4f7b8775e18fe6dd6ecca0d1068fd95f5cbd91f9/aws-error-utils-1.3.0.tar.gz"
     sha256 "188159a8897552408dc3545aed55b49a12532cbde841aad0490e2b93a1275cfc"
+
+    # Use poetry_core backend to avoid unnecessary cmake and rust build dependencies.
+    # Remove when release uses aws-error-utils>=2.6.
+    # Backport of https://github.com/benkehoe/aws-error-utils/commit/f23a4bb8703e8ffabf1d008e04495572cc12d4ee
+    patch :DATA
   end
 
   resource "aws-sso-lib" do
@@ -43,13 +43,13 @@ class AwsSsoUtil < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/90/8a/bd891775c4948f2ae5d8dd9af13f6d0a085bc82dc7608abf474691558eb1/boto3-1.26.25.tar.gz"
-    sha256 "e0ba3620feb430e31926270ea3dc0bb94df55a0fd2b209bd91f7904f2f2166ef"
+    url "https://files.pythonhosted.org/packages/2d/07/d0427a01e4bf4b00bd72eadc795587e22c5be064aba0aa1b60d9d2d9f1c5/boto3-1.26.37.tar.gz"
+    sha256 "82b790b1dabd0746b028d2013b5d4d636a41f3aaf25520081f4c173cb6eb395d"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/5e/d5/503f88cc4ccf6881db110c31257c1aa5270c59aad0be6e807a6520db0b71/botocore-1.29.25.tar.gz"
-    sha256 "a204140c9d7adadf3919d8024d79278f1865a20c869e4f216eaea599ca3a1743"
+    url "https://files.pythonhosted.org/packages/c2/27/b2343f0676d636e7dbf9daf9a51422fc1f28116f4842c274c9ad43aa5aec/botocore-1.29.37.tar.gz"
+    sha256 "3afa4fec9f7713caa05116563b38f81bec7bd20585d517155484d3f25efab5aa"
   end
 
   resource "certifi" do
@@ -140,3 +140,17 @@ class AwsSsoUtil < Formula
     assert_equal expected, (testpath/"config").read
   end
 end
+
+__END__
+diff --git a/pyproject.toml b/pyproject.toml
+index e130aed..e60f2ac 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -25,5 +25,5 @@ pytest = "^5.4.2"
+ pylint = "*"
+
+ [build-system]
+-requires = ["poetry>=0.12"]
+-build-backend = "poetry.masonry.api"
++requires = ["poetry_core>=1.0.0"]
++build-backend = "poetry.core.masonry.api"
