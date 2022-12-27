@@ -8,17 +8,17 @@ class Waybackpy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6b6d17e9bfb4e1f90f2daddefcb17ae0bd9c82c8f654961a15f2c13a98870c1c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "79e87c92ff4985b256447d0ca7bd699fb4df8b204ece99189e49e235aac18cbc"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11b989acd04645a2f19d7e03d08c3d6d26b85e1be257157d806277104204dd85"
-    sha256 cellar: :any_skip_relocation, ventura:        "2bb76dc670ab4c289b1c9eb6845dfe9db09b27821b6476b558078bec219a0229"
-    sha256 cellar: :any_skip_relocation, monterey:       "83a9011013ab8c19a18def73a89443d32825b19a8511638ea18aa2723b08b678"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b87cdf6a11c5c03affe1c186c4778482956c4b1964ab47834193c2786474569e"
-    sha256 cellar: :any_skip_relocation, catalina:       "b0ab0c34fe4b41deb32948c04851a4211c92d1debc0bbef6d297840229b0f0d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ffb457c20e944760b8ecd3f95112969835814a34dba2685cb035ab163b3a41d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "203d0696cda06d03a3f0b909a10a4241308e807aa172b9cb116959957e30189f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0a99fd25b6c9efbcfcf9713d5df5f837d504cf75c5821b70a393899b93565d5c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b7e37f1a14753480fa41e0565de432f3d1fc6cc4a9dc3b6f310bd96b9c0d90c5"
+    sha256 cellar: :any_skip_relocation, ventura:        "8c90b9b262f58114a07ef869f0e3c24782abdda330f08da78c04ef4824ec5a7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "c0af8229a0cc143daab0d884b4ca7e486fe00caad22264705ddd94594b09cae0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "786d6e6760ca75a613d324b36b22d7ed8e9ff1581b61f7ff4d74feaf0e772064"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a49fd06be723daa5d3216efe791fc6be5606f7ba3abd85feaa55550431d6f131"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"

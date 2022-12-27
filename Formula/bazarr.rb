@@ -11,13 +11,14 @@ class Bazarr < Formula
   head "https://github.com/morpheus65535/bazarr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "191075c049ec2090616c698d31cc0560535871154b795cb82caddfd9d6e4f6dc"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b9eb2e9016fc21e59ef8b006cba0b9e7a55ea2e84b374c0fdf4cf61ae5daf147"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7f3947958f831acef279c21ed4f0c2d3c80393f5d72296f2b7f3c9c35ab93b00"
-    sha256 cellar: :any_skip_relocation, ventura:        "cf2f8e9b53ea8f2dfcc1f6cd50f9654255e507dd0dd9258e5d900ba2089e34c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "140d97b5cb92f3c32cfe1396bfbad2b30eafba6a8cdd705d13ecc2dea44a6d64"
-    sha256 cellar: :any_skip_relocation, big_sur:        "053078f4502732e1641d395d608fe5705cccaa451db325a56365ddd4da837ac7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4251de38404c2bdc75ad5670e2833d0676a6c919eac9dafb5ea0876a08bf3818"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ee1e9c2217ba231bab3415553169f05eb967e4a95e188409bb5146573e1e1197"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8d1799068b8dbf5ae6160ad75d7f61b573d5d5711f2af597ea67d1d698a68fd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5ed9cab5d1486872761e0b0201ff420084811ad3ec1db112eff02e5567295e55"
+    sha256 cellar: :any_skip_relocation, ventura:        "5746d5a830c23966132a3ea7c81d817545ace92f9fc6827e398b1e530b6aa7b9"
+    sha256 cellar: :any_skip_relocation, monterey:       "89b5e52241594d4388d15b90c1f38ec238956a0dd9855b6b579355b1e8c1e69d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e5f72c872c3c73aeb391f55cd1e721f655f7ef4a2750aacf2e14defc4610cff6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b0592eac170c27e128e9e2ed8aee0df2dc168d8f9e0dfb471866c77292d4193"
   end
 
   depends_on "node" => :build
@@ -25,7 +26,7 @@ class Bazarr < Formula
   depends_on "gcc"
   depends_on "numpy"
   depends_on "pillow"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "unar"
 
   uses_from_macos "libxml2"
@@ -43,8 +44,8 @@ class Bazarr < Formula
   end
 
   def install
-    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages("python3.10")
-    venv = virtualenv_create(libexec, "python3.10")
+    ENV.prepend_create_path "PYTHONPATH", libexec/Language::Python.site_packages("python3.11")
+    venv = virtualenv_create(libexec, "python3.11")
 
     venv.pip_install resources
 

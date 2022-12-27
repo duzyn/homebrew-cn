@@ -11,20 +11,20 @@ class Lilv < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "c986a7ef565703a73a347fd30f5c095ce342117eb0e576589640bedf44ca8329"
-    sha256 cellar: :any, arm64_monterey: "4decf4b455a9a6eae21225c9f68b6931986dd5c1adea46bc4a613a6f64dbe763"
-    sha256 cellar: :any, arm64_big_sur:  "21967730569ea51c23bde4abc11506bd129d75f487b7db91d7c3ea0ff5337b4c"
-    sha256 cellar: :any, ventura:        "395268f073201265f85ed8505891d0a2fd8604012bb890349f351ff436173ea6"
-    sha256 cellar: :any, monterey:       "63960f9c0f9681bd01d1b9395c527efc75d5f107bf0b1d32da2e212cefdcc258"
-    sha256 cellar: :any, big_sur:        "8d96843caf94b8b6334b90a66bea767cfaafbcd8953de9477d629853db7de86b"
-    sha256 cellar: :any, catalina:       "42c2c260885d3a2449570770f3fd5316e6c47938d5c779bb6fc743d6d7a572ed"
-    sha256               x86_64_linux:   "7547251e3a416eeb2df444485d64bdc8be59e24c3821751ff32984de7d8fd97d"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "130b4e53fd8079fc21e38a76b8e313a63e2812c195066f46bfaddc665dbdb50b"
+    sha256 cellar: :any, arm64_monterey: "b5582d65b08f1ba6287b1257e9338e8b4aa54d04d25909630313a04511c3c2f1"
+    sha256 cellar: :any, arm64_big_sur:  "a82cc9f0fad3d3200eab9747d3aefa9e74dcbeb8a8fea5af89bb8dcd6ce65e78"
+    sha256 cellar: :any, ventura:        "8281ac099bcec8c94bd4c6a55a8398b180854125f4626ef8bdf484a36726d82c"
+    sha256 cellar: :any, monterey:       "4eb1cd9188565a4ebcbc2f15e6f2c5a4ccc4e4b86fe6728448e06723cd73fffb"
+    sha256 cellar: :any, big_sur:        "0c615040bed3ee0cdc6d7cc99868c62a51e9febfeefa9ffefd26694bd8a3a09d"
+    sha256               x86_64_linux:   "2b32ee9b947c597d1ec17d2095121ac09035bd73d3da3f01e414171fec955f85"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "libsndfile"
   depends_on "lv2"
   depends_on "serd"
@@ -32,7 +32,7 @@ class Lilv < Formula
   depends_on "sratom"
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install

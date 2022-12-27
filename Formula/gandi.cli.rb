@@ -9,21 +9,20 @@ class GandiCli < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "289a1fdea826d6a8e7d1e52ff54a0c6c78c035e10984eee3d225ddb8e7c18a81"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a51b821358228a6eda89d5871ed61a576d29157751c94f31fb9dab31dcbe5a59"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f92e3816c8cb90e68025ff5cf626d5f7e0c4077bf759a6dc36336e6288200145"
-    sha256 cellar: :any_skip_relocation, ventura:        "7573394b60505d7b1330449251a4b36891ca5fb60fbb71b820fec61c403d7b1b"
-    sha256 cellar: :any_skip_relocation, monterey:       "85d5158ef37b4b330e2603d2dca062b38c68291a9e6e798f8a67b10c176a9a81"
-    sha256 cellar: :any_skip_relocation, big_sur:        "11e62f36fadd38cc20d2e178abaf7ba5bbe34595c5c51229e0b0c7fc3813a714"
-    sha256 cellar: :any_skip_relocation, catalina:       "612bd7ab8250d396f355bdb48c3a71a615b23c6631512721a1e76507484d8365"
-    sha256 cellar: :any_skip_relocation, mojave:         "80259a08cef78b9e5b4197a589b592e88a061586edad0a60eb7af495e567fbc3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1285c7114f0dea5d293a775ce67fd4a87e0e0550715091781c3dfce578760ac1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ce1f8294b2f45dd75225a93241d94d2bae8bf8adbf4d228dd30e1751797a87f6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eb16519dc3f206c2af1de48a0b81fca854bca655291f67146940f0e3558f2f00"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8df1ad0c5ef9f749b4084c4031f3619964db740f0ad43cad5dafa2b794737b49"
+    sha256 cellar: :any_skip_relocation, ventura:        "150df3899afab045028b3463416bbcb3e6802711255e5c7800faa01d7f6aba7b"
+    sha256 cellar: :any_skip_relocation, monterey:       "86268b7df7927a754674c7a64db72363bed1b6990e289c3692e7440337e5f5d9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bef38c97c708cbb52c3683e5cdd8fdd9f3f96cd8150374f5a81458721e3d0e11"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "94ad4ab88f30cb72e6fee7a8343caa8e8951250724f62785c754c74fdd2335fa"
   end
 
   # https://github.com/Gandi/gandi.cli#gandi-cli
   deprecate! date: "2022-11-05", because: :deprecated_upstream
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/6d/78/f8db8d57f520a54f0b8a438319c342c61c22759d8f9a1cd2e2180b5e5ea9/certifi-2021.5.30.tar.gz"

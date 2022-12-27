@@ -7,20 +7,20 @@ class EasyTag < Formula
   revision 8
 
   bottle do
-    sha256 arm64_ventura:  "72ce2bc677b377d13e8471b64419c8329325a01824e27a0830ea8c456c23006c"
-    sha256 arm64_monterey: "ca7de92bfc1f678e343fa737d0abe7d4cf1a160368be111b660ace255f1361ff"
-    sha256 arm64_big_sur:  "fd1e0926e653a9eaa1b63a161dbe7ae0eae3e171e620f950ddcde775ddf5bb3f"
-    sha256 ventura:        "e3b1222734bbb17b705ccb07a9c29072c0a5e1409668dc63ae74b36d6f1117e0"
-    sha256 monterey:       "e571ff28075c32f8000077ee72c8dc42e3c2f6672c49529f839654d714b1b2c5"
-    sha256 big_sur:        "8b8a031780716d40c2fe94d3aeb99af65cfc76332c2b84abbe0f8b605884f167"
-    sha256 catalina:       "ec5fc6eadc609d57416fc3dcdfe43bdc040d8551ff06d667ced1a3c75a84ba2e"
-    sha256 x86_64_linux:   "81469f87d139ffb0926e2ee2e296708d46cf9cfc3af77c2f28db80bfac9c0c14"
+    rebuild 1
+    sha256 arm64_ventura:  "2842fbc4cf1533ae7f7734797839ef1658526719b4050a4293f9cbe57af6b88d"
+    sha256 arm64_monterey: "62610eeb362c3239309e9559cf01632f86c4c3b55b119aec1c4b8f79fbd5ce9d"
+    sha256 arm64_big_sur:  "b9e4f4fb767f1bcacaa1fa4f527814681d92ce47d7d091f22e3bb506f7e4c3f7"
+    sha256 ventura:        "d79741edf9f1f7351596ee388e1fc4b80f0e817f66b1f63303ae7c33e99dfbb6"
+    sha256 monterey:       "e07457b1fe81c61d43908dae2964dba03e56631e4788f1546c194079c7be2ddb"
+    sha256 big_sur:        "51c76274e95501746d8f92476e2d9d9fe4163b00f2750ba9e703e8b4e8c0f670"
+    sha256 x86_64_linux:   "2990dcdd7b0c5eb9c23aa7bb3af2720d8ead25ef00ae9d2f6edf5004d32526e1"
   end
 
   depends_on "intltool" => :build
   depends_on "itstool" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "adwaita-icon-theme"
   depends_on "flac"
   depends_on "gtk+3"

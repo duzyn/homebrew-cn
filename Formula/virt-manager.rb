@@ -10,13 +10,13 @@ class VirtManager < Formula
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura:  "93eb5424928236ce254f84db4737117b347d7840d402b141e0d6b005b1dd6454"
-    sha256 cellar: :any, arm64_monterey: "c849b4b56579ed58b9173b5afe169c2e36c824f612de88aaa455b1c159af5912"
-    sha256 cellar: :any, arm64_big_sur:  "7bb68e96770ce58ddf4b8e573c39eb6c3a3e80ac99b4691552924b985e7a0c54"
-    sha256 cellar: :any, ventura:        "7d3cf797e1dc14df47ccdb0c98ed12bbca6813c39794869737066d7393e9ac14"
-    sha256 cellar: :any, monterey:       "f9247264bf9ecbc83b23ea2a3628794cde26f5545e2f7c08ecfbd79d561f0005"
-    sha256 cellar: :any, big_sur:        "157111370a8a92b2bd00da9d32398756dc2411006627a969510870e0d078c6ca"
+    rebuild 2
+    sha256 cellar: :any, arm64_ventura:  "7efcee6673cb651ddfa14098dae935a6354832dcb878551127c7f4b089414960"
+    sha256 cellar: :any, arm64_monterey: "d124494001e6bbe1bca7cc92e2613683f3abd04777ebfb2c2c09eb094a32dd0f"
+    sha256 cellar: :any, arm64_big_sur:  "fcbf43252d0725e5161e26ccc588a76563f39bb4389aa5a06544c45187a7110a"
+    sha256 cellar: :any, ventura:        "c5357cb29c18118b370b5b72750bdc9f7e05d91fd46adf59385791448d6d5c6e"
+    sha256 cellar: :any, monterey:       "af95f618cb10b92f775f5cc44ea97cbbebc549591cc6d0d85d6fffca4a1e4504"
+    sha256 cellar: :any, big_sur:        "efad14930b9b70527ff25ca784f59797f75bb8877784595f4b1d8b62e0634ae6"
   end
 
   depends_on "docutils" => :build
@@ -34,7 +34,7 @@ class VirtManager < Formula
   depends_on "osinfo-db"
   depends_on "py3cairo"
   depends_on "pygobject3"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "spice-gtk"
   depends_on "vte3"
 
@@ -71,7 +71,7 @@ class VirtManager < Formula
   end
 
   def install
-    python = "python3.10"
+    python = "python3.11"
     venv = virtualenv_create(libexec, python)
     venv.pip_install resources
 

@@ -8,14 +8,14 @@ class Ocrmypdf < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ac9fe2a5bbf80ff0b9e9e1a8b47d6746413a925c49311b8cf90bbc1a9240fc1d"
-    sha256 cellar: :any,                 arm64_monterey: "ad68c95dde311e0cd98fbdccff1122a2f82f54a176b4a7d9844cef74c7bfe2e6"
-    sha256 cellar: :any,                 arm64_big_sur:  "f738d5205a18bf9a5a91613c2922a24049fe37db38175c882942312b9bf30c20"
-    sha256 cellar: :any,                 ventura:        "64150b27dbacc2e694250fe3d0cfdaf02eecd35b7fa35a6e22bf7ed761c96c51"
-    sha256 cellar: :any,                 monterey:       "5ee482841861f096e51417c042cca6e4d77fb9669b16a25611b19abc6c55aa14"
-    sha256 cellar: :any,                 big_sur:        "c2c13315fa9acc24e876601d1273133ac410710f62887567bf2ff7f385985419"
-    sha256 cellar: :any,                 catalina:       "95ab975af5160b9f2dfd2a92c0e519c2fc17ee0143164026876ddb10a17218a6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5aa6a32acaa09315707d7081d9824d8d7ab1f32357b080596ca2492cac2bbd66"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "03d31e054e15d078eff43a9b65e22e123968b0bbc22af6dcb0c9e84820867e34"
+    sha256 cellar: :any,                 arm64_monterey: "c1b7751ec6034951c51ef48e3edaa0d65b6d135a843d074f2f6a62bf150ee8fe"
+    sha256 cellar: :any,                 arm64_big_sur:  "5fefdffbfffb7481f20db2f6a512419e64f929c32ff35e468c9fd32719a60e0b"
+    sha256 cellar: :any,                 ventura:        "fd90ec7f13362c14776b762e2834d0dc91f68665f94a103d693da6d42d47be5c"
+    sha256 cellar: :any,                 monterey:       "04bea09a746fae4b175b257f211e5805a4da94e185fe799b32f972d98dc60aa5"
+    sha256 cellar: :any,                 big_sur:        "7793fa1bec863d0bb676d4686c56577aaa0679a6c3fd23695b6684e5eeeb4ecf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cf835e1a1dcada1ffda34383f9e99887050feb2047faea08eade5461383393e"
   end
 
   depends_on "pkg-config" => :build
@@ -27,7 +27,7 @@ class Ocrmypdf < Formula
   depends_on "pillow"
   depends_on "pngquant"
   depends_on "pybind11"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "qpdf"
   depends_on "tesseract"
   depends_on "unpaper"
@@ -119,7 +119,7 @@ class Ocrmypdf < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3.11")
     resource("reportlab").stage do
       (Pathname.pwd/"local-setup.cfg").write <<~EOS
         [FREETYPE_PATHS]

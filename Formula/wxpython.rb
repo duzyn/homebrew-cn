@@ -8,21 +8,21 @@ class Wxpython < Formula
   license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "1cdbafe9c9ffac660ad1a6bcc508c7ad76589a809bea0bcdb17e92c28661ff71"
-    sha256 cellar: :any, arm64_monterey: "f9a20a76b190163dac2af2f1813e8e39dd9f637ead5453acdf415c5f2551dc13"
-    sha256 cellar: :any, arm64_big_sur:  "6e5b449ee672e78a72d700d78dcf9d11c65eaaa657c9369979dceb7eeb245761"
-    sha256 cellar: :any, ventura:        "387be150b988621c79e7866f36a82247617545cc27c78e794b4d18113185749c"
-    sha256 cellar: :any, monterey:       "6aef2edb2894f75c23c859edd6db7bd308d6420f4680ce32839b7904b425d382"
-    sha256 cellar: :any, big_sur:        "3914f0cc1a1a67431e76c7ca793e5b3bf48ccbf98cb24f9476c8518ea87f3b43"
-    sha256 cellar: :any, catalina:       "561959e711b0801d74c68ee2333bd5905e160923ca49a3e2f0dceaf3c80cf534"
-    sha256               x86_64_linux:   "a6475f2a2407b5e4bfba19394cb89360cd783b63a9e37eab653989aa18671b6d"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "9cf04be9fe96667a6243e0b6e0b9c34f1f15e86f83e817bd7d3d7dbec997e9b5"
+    sha256 cellar: :any, arm64_monterey: "1999911bf51dd73f60c0adc99a3278fa573152a1535de68ef9553cc478ee5a66"
+    sha256 cellar: :any, arm64_big_sur:  "fc912d301dc9e189cb9415d0401213e23ce43752dbe1eef499a02cd4154e3334"
+    sha256 cellar: :any, ventura:        "4f8b6ad5e9a3645c207d07b2c8b67fba06cc830932a8503c9cfefc76120ddd28"
+    sha256 cellar: :any, monterey:       "2fa4ada01a2f338678543fbac2f1acd148b257aa84a9735914f27d9a8a4fea7b"
+    sha256 cellar: :any, big_sur:        "981eb95dcd1bc38c7f2a1999858c729b9ceef686f3e066c234bb11312640b115"
+    sha256               x86_64_linux:   "5e3bfb9bd3e427fbd65d5b0e565aa7ee6f31c2eab1e3447a0c4b813b664a3d7a"
   end
 
   depends_on "doxygen" => :build
   depends_on "sip" => :build
   depends_on "numpy"
   depends_on "pillow"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
   depends_on "wxwidgets"
 
@@ -41,7 +41,7 @@ class Wxpython < Formula
 
   def install
     ENV["DOXYGEN"] = Formula["doxygen"].opt_bin/"doxygen"
-    python = "python3.10"
+    python = "python3.11"
     system python, "-u", "build.py", "dox", "touch", "etg", "sip", "build_py",
                    "--release",
                    "--use_syswx",
@@ -55,7 +55,7 @@ class Wxpython < Formula
   end
 
   test do
-    python = Formula["python@3.10"].opt_bin/"python3.10"
+    python = Formula["python@3.11"].opt_bin/"python3.11"
     output = shell_output("#{python} -c 'import wx ; print(wx.__version__)'")
     assert_match version.to_s, output
   end

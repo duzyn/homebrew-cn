@@ -10,13 +10,14 @@ class PetscComplex < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "67ed50c4f0660780349b139c32e469027418b5ff6395d53aa631b72e9ef29b09"
-    sha256 arm64_monterey: "7b989d35bdf7e533ad7e2b0500f26c2514187b4bce6bf63e27998eb81d22ccef"
-    sha256 arm64_big_sur:  "b9f11138a58f7ded905e12693e280afff24b2a167018638ad047153143ceeb7a"
-    sha256 ventura:        "59c81939d34c480cb97a0af0c631c210ac5d1894f6e49fce3756dae4aa69cd74"
-    sha256 monterey:       "6c5b974116ac79ca5a97d418dd3d515d661811040d2a82f0aae1a178338498db"
-    sha256 big_sur:        "3b5e8ab261e0813893402157a2ebd784b0548c9bce21885942655724ca544cdb"
-    sha256 x86_64_linux:   "705e20464d1a83b510b43ed16a134c9e855b4e8d247c21a2af500ab6fba48ee3"
+    rebuild 1
+    sha256 arm64_ventura:  "ada91b1d5e0c63e1be55688050ba63251b171fc6ce64781e2a688ec96d93b243"
+    sha256 arm64_monterey: "01950e650dc9556ce1b11e7665aac287899b712182bab0252146ba0cd94b25c2"
+    sha256 arm64_big_sur:  "ab6e44394432ce7e272d710d3b693dc618a071326a728becd641c980b672eab4"
+    sha256 ventura:        "0a5fb06dc2e07cb9202db7ad824d39f91363c409f26095e5ec6c4f927b828ec0"
+    sha256 monterey:       "cd40b2daa326e8f285665a617ccb6418735902332dc48d0fcb9d43f57882dd4d"
+    sha256 big_sur:        "8bef2d618c5b327880509fa77ef67b830b455303f870811e9e85a55e4813143c"
+    sha256 x86_64_linux:   "e2280983209caa4b708a28353c385b4ee383347a6565f6d14b3d5fa56cfe40b1"
   end
 
   depends_on "hdf5"
@@ -25,7 +26,7 @@ class PetscComplex < Formula
   depends_on "netcdf"
   depends_on "open-mpi"
   depends_on "openblas"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "scalapack"
   depends_on "suite-sparse"
 

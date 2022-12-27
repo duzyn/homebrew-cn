@@ -9,21 +9,21 @@ class Eralchemy < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "27a2f33a19f3f7c4607889118aa894c36d71767bc3a89ac83f26d4c131cd6ea3"
-    sha256 cellar: :any,                 arm64_monterey: "b6d4cb1be8dbc27afb9b6c6db6de4e74b53df3616be44eb297d269baa3e0aa1a"
-    sha256 cellar: :any,                 arm64_big_sur:  "b00010ac117e4132bc096868a9f19756b61622a925e3651900518268e88957a7"
-    sha256 cellar: :any,                 ventura:        "33951e33765e406752c58ba828416b020f07cb9a79bc28564a3a3c11ba51431d"
-    sha256 cellar: :any,                 monterey:       "123aeeadfe90378d56c1682ae5c3fb5011b9e0fe4cd4ced344da8c78af9b81a6"
-    sha256 cellar: :any,                 big_sur:        "68f658eb8bb7a7c2a85a328445b10aa44e1b00e8090129089f143de22f0cea57"
-    sha256 cellar: :any,                 catalina:       "e666bece0ef21146cba70ca4a723bcd30964adb1f4ef1a45a5b68e5a630e4dca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "abd00f4df6d6b75f3adc4ea2e19859a660ea59ad5e9bb7b048a89fea5825ba78"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "90c54e151e6f6a65d761bc571c32ef9add975cff7503efa7a24a725e8fd3da8d"
+    sha256 cellar: :any,                 arm64_monterey: "ecbfa57048711bf1cbfd0f67f55e1bd7f8b13fae8302826dcd794a8c4010ec01"
+    sha256 cellar: :any,                 arm64_big_sur:  "0a9a6d6ce98d3d19315ec3cb0e810a14aba6feff359c3ae54e83c9b93caa94e0"
+    sha256 cellar: :any,                 ventura:        "c3b0e88597a3e45526fde52fa0f819b6394ccc40d205a9b3ce23e09069addaaa"
+    sha256 cellar: :any,                 monterey:       "65b851f69ab987e5d8cc2182c136fdfc39b45fcc2ceaa9dbcf5eec84e2267edc"
+    sha256 cellar: :any,                 big_sur:        "0cbb8202c92ed769fc0ad59c2355ecafaa5a07e3b1d2c98394f2af55c76fd4cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1360dcd9c43951db50971b9942b62043d45165a7dddc8c5205c57d1490170665"
   end
 
   depends_on "pkg-config" => :build
   depends_on "graphviz"
   depends_on "libpq"
   depends_on "openssl@1.1"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "psycopg2" do
     url "https://files.pythonhosted.org/packages/fd/ae/98cb7a0cbb1d748ee547b058b14604bd0e9bf285a8e0cc5d148f8a8a952e/psycopg2-2.8.6.tar.gz"
@@ -46,7 +46,7 @@ class Eralchemy < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3.11")
     venv.pip_install resources.reject { |r| r.name == "er_example" }
     venv.pip_install_and_link buildpath
   end

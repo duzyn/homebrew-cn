@@ -14,14 +14,15 @@ class Spades < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, monterey:     "45b237f7a9c3ee0e0f0db024dba8f9077d93502e3a451d9c203e28357efe6a1a"
-    sha256 cellar: :any_skip_relocation, big_sur:      "a06c2ba0482096b9dc88db4cb010026d4d4653052513cfc848bf42a4ea392a0c"
-    sha256 cellar: :any_skip_relocation, catalina:     "68f170145b2359a752ac08f50a2b374baf87a724f581060c1798b3bcbd6f01f0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3b0f86d7df758b572e3560d59da2acebd70874ba0a30139b2b826ce567a2b490"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, ventura:      "04556a71583e8f9a32f8eb0e68509156ceb41f801c7c67311ed5abee49c673fd"
+    sha256 cellar: :any_skip_relocation, monterey:     "20789d391cc248d051c8370922326ed590944aaf6bbdd822ae9ba506f73cfdbb"
+    sha256 cellar: :any_skip_relocation, big_sur:      "57f9773581ada2f7410f4b8a75e987fdb1571a95e32361780efdbec29edb9217"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba08213dc4deed3d1ddc56d1a6a7c449c782f8eb1d5bc25fd8e6d50f356edb64"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   uses_from_macos "bzip2"
   uses_from_macos "ncurses"

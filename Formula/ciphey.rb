@@ -9,14 +9,14 @@ class Ciphey < Formula
   revision 2
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "a7c547b2f72a57eadfec07abb1e39223216eda3759acc91a76f3813d2e0e5fd4"
-    sha256 cellar: :any,                 arm64_monterey: "8549423a0b8f5dbae34104539e9ae4a02ee373153b1be5e51e6fb19b0e2f5d65"
-    sha256 cellar: :any,                 arm64_big_sur:  "c274722247b6a42d5d841f6aa0ff1f849f4d4f47883a93c06728a6b4136fb07f"
-    sha256 cellar: :any,                 monterey:       "e324b009c010fd48f6d1cc742bd99fcce19bc233501d46cc9b9e82bb09a317e4"
-    sha256 cellar: :any,                 big_sur:        "72e540064c7254d0e035b5ea05160b845aff94bc2a68871381315c219fda76ca"
-    sha256 cellar: :any,                 catalina:       "81c331bdaf8ff4a1a8e9cc0632a3efb293ec14ebd1c1f3d1fc46f1f7ab19a12f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1911d9ca626a6fc6b0be8b4c65ef77a4904a018a650e434b857918e6d1baa60f"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "01287da8ac6fdcaac8ed57c344a877a2e93161134afffb19acb68005893f5f19"
+    sha256 cellar: :any,                 arm64_monterey: "4e496032ec2e94b23510fc6597f885cde969ee7d565ddf08f821939ae5fc4d05"
+    sha256 cellar: :any,                 arm64_big_sur:  "13cf807bc3ebe78b7247ccd884fa057c7fe4b3b27933f64950a11b3cf7b93e5d"
+    sha256 cellar: :any,                 ventura:        "1061ff3b3d7ebdacb711614c62c7faf13d05b2fce8270ed5a821a9e268fbd327"
+    sha256 cellar: :any,                 monterey:       "ce8a3bb467e046201edf29fb1ff72407017d27cf63a00bbd48212cf49763993f"
+    sha256 cellar: :any,                 big_sur:        "1a79f9377aaf5ba37e48c75ec85b2da71b77fea6bbf2ba28bc29a35f735f52a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6bda45c4b064f6b6bc38f8423a7a1c2b49ad11fb613e36df33f186637ce528b5"
   end
 
   depends_on "boost" => :build
@@ -24,7 +24,7 @@ class Ciphey < Formula
   depends_on "poetry" => :build
   depends_on "swig" => :build
   depends_on "libyaml"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
 
   on_linux do
@@ -169,7 +169,7 @@ class Ciphey < Formula
   end
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install

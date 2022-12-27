@@ -8,21 +8,20 @@ class OrganizeTool < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "756fc29231ad1c8f308ee0b2f92ea47c59165767e4e686c58d0fa12a8ce8f01d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd4200f30ffadbe37f90227762064f21b83290df7b27b5a48c3d23699ea4e87d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "371c5ad233362931903b33df7eac359366a3026784ef6ccb01fcdaaf90b8cca8"
-    sha256 cellar: :any_skip_relocation, ventura:        "f78d30830e904aed36d542a086f64b64f7e5a324f9b706cb7b485e5c4d7758a6"
-    sha256 cellar: :any_skip_relocation, monterey:       "663766a3bc1331ee2d21eaed5c300bcbbdf8e8e0f6b75e18a6751afbaad25290"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b41ce406bb75c97fc8155af671a6c9156ce954160070ed21c836aa691ca9b9e6"
-    sha256 cellar: :any_skip_relocation, catalina:       "295d42141511cc4379e6407a060b8f4b9f4004713b7a19d9cf694bc8383fabbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "40b49df117ed7262556ec5247017874c499baf664e2d3f82eaca9a46c1612a9b"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e743e2c82e800ba3b7373922afbdaf37b92ef914fac3767d4e85523a068ed876"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "008e3e92d26913fb599ce0d940c533039c2dbd0e97e7490e952080a62dc4ce2e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9d84cd1e40ee50029aa037d45e5d78c86a9859b82fde2caae666c504e5a79018"
+    sha256 cellar: :any_skip_relocation, ventura:        "7f3b4ab25187f9226eec8c859a78a177e18fc7a7f0059a177a31eb9cbc038f10"
+    sha256 cellar: :any_skip_relocation, monterey:       "44a1669f4476b6c61dca27601ad5593811797053e34a806b65c2a2aa6e3da813"
+    sha256 cellar: :any_skip_relocation, big_sur:        "968cccc0730921ce26df6a7e4974d6fb1a77c52f6e6a935f3e50da173ab4ca46"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "065a5a465a094371fc84033efb14e049df48f3db8dd3c80e66cb21049d0adae3"
   end
 
   depends_on "freetype"
   depends_on "openjpeg"
   depends_on "pygments"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
 
@@ -87,7 +86,7 @@ class OrganizeTool < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3.11")
     dependencies = resources.map(&:name).to_set
     if OS.linux?
       # `macos-tags` and its dependencies are only needed on macOS

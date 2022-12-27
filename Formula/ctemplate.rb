@@ -8,21 +8,20 @@ class Ctemplate < Formula
   head "https://github.com/olafvdspek/ctemplate.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "2d9ca0bd9eed0b2c8beb26822d3da0a59c9a818cf6288d2737ccd090d5e7431c"
-    sha256 cellar: :any,                 arm64_monterey: "fc6f772b98ecb4ac32af2525fb14e00e78d3869965b0b2cef4e9052ae7920f15"
-    sha256 cellar: :any,                 arm64_big_sur:  "4857a36c04ea358a584ccc4bf814cf14ea132f719044982bba4295ca3bee54ce"
-    sha256 cellar: :any,                 ventura:        "64a6958f3a69142eb06780025183147a59f602862f961a80f89b5f37b164a4ca"
-    sha256 cellar: :any,                 monterey:       "1186d9da15756058d715022d75e654ddf8c30573f79490a6d945ba3501e651d9"
-    sha256 cellar: :any,                 big_sur:        "5e2edf873c559dbe6fee25404fb5f73dd0237358d553384c65284db99c1e1aeb"
-    sha256 cellar: :any,                 catalina:       "03716a690ca0715b4832e3cbc95441a3e9765c36b277a33f85ac7806469d9928"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0782447bd58da47c13e2c3fc367e616addbe434c4fef762daea8bf6ea0b85626"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_ventura:  "ee9935e535f7fc5ad36e78a17cdfa370dd804442065fb9d71f42939042b9a239"
+    sha256 cellar: :any,                 arm64_monterey: "60926618dc8939dee2953a3eed541ffbcda70ae70ea9e4811de4c635f351c3dc"
+    sha256 cellar: :any,                 arm64_big_sur:  "229589ee690294f135322334b902cacb32c86b9be7775320920300f8716d2a2a"
+    sha256 cellar: :any,                 ventura:        "8395eba52adc92de5ec11316fd65082dba1f5c934750cd86d7ec68ab7c40251d"
+    sha256 cellar: :any,                 monterey:       "3403981879581767866598b52b148046e46362102620c6220a06464add516197"
+    sha256 cellar: :any,                 big_sur:        "d47aa3297f5e44511790bb0fb1bf4e7eb5d37c599b9c9b661133d68f821b7048"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "376a70935eec4f3f5965bcd0b39603f25459b8995d12d124c3ab10184e15f3ae"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
 
   fails_with gcc: "5"
 

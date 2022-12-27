@@ -7,19 +7,20 @@ class Chapel < Formula
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   bottle do
-    sha256 arm64_ventura:  "e51cb39f28cf347f72b1ec2f05c74af9f0f3f4272d977aac489ba785f0fb9a79"
-    sha256 arm64_monterey: "cbfe50dc7f2fd6fe962378f8cbfabbe7ad4488a581d74c85ce29255cf14afa73"
-    sha256 arm64_big_sur:  "09261fe1b84ec271feac68d6da2ec0048f7b9fb73d3f0a17101e7d16acf0763e"
-    sha256 ventura:        "623949fa32c6bf31a7210e552d0dc65939817f7d261f9d167925ca6b5ffd0820"
-    sha256 monterey:       "229f681a694385448cdb7d7c5a46163c477a39f064a945c1ff74efe30eba7a82"
-    sha256 big_sur:        "7062a499e10d338ae265101feaf0a81f71f0e712c9fc7235e2f6ffb784e0bdd9"
-    sha256 x86_64_linux:   "4a89d208b5cb191266b3be9cf79ded54b397502621cb706c1a54af950045f620"
+    rebuild 1
+    sha256 arm64_ventura:  "8334d9cce471a9bacfbe8552ead3d28d730e7af0c96c036d47f23679b41aa18a"
+    sha256 arm64_monterey: "8f39f5b62a3c929c9e666279adc377f6f1427e3d17be7fc80a0744a6f061229e"
+    sha256 arm64_big_sur:  "4bc63c52fb948046a29604fdda5b16943c3e3af8de56cb668c1560f2d68b2503"
+    sha256 ventura:        "629240cca25b97de4712b70ca3c12dc2b45cf491f79bf3db76ecdb9e39be6e81"
+    sha256 monterey:       "c13b6f38cc00a193ee94983c3e512e329b4f33358263feaa84a9dec24595015d"
+    sha256 big_sur:        "8170472696b28130225bb6436d07157af4fee7874b4833806a6c0aead3013b73"
+    sha256 x86_64_linux:   "d8c10f52877206a51e095ec1cf3d515b90cdc4c168f34d777e5e7ea154f642eb"
   end
 
   depends_on "cmake"
   depends_on "gmp"
   depends_on "llvm@14"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   # LLVM is built with gcc11 and we will fail on linux with gcc version 5.xx
   fails_with gcc: "5"
@@ -36,8 +37,8 @@ class Chapel < Formula
 
   def install
     # Always detect Python used as dependency rather than needing aliased Python formula
-    python = "python3.10"
-    # It should be noted that this will expand to: 'for cmd in python3.10 python3 python python2; do'
+    python = "python3.11"
+    # It should be noted that this will expand to: 'for cmd in python3.11 python3 python python2; do'
     # in our find-python.sh script.
     inreplace "util/config/find-python.sh", /^(for cmd in )(python3 )/, "\\1#{python} \\2"
 

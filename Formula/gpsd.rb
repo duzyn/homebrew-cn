@@ -12,18 +12,18 @@ class Gpsd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "5ab821af7843c11f7c3478b1ec38272c4eff0d6a1e074fb06bf0bbad97768e9d"
-    sha256 cellar: :any,                 arm64_monterey: "9ee32da6d1a4cebc72344070d1f446a95e62446253453426a227a784a9986a2a"
-    sha256 cellar: :any,                 arm64_big_sur:  "538fd1fc7101ca412dea133b318cabe4111708bb8b64d6fc14e74e92ec334d79"
-    sha256 cellar: :any,                 ventura:        "15f28de95d7d78a035d172b8f509d389f7cd998f46472dffc0cd79f2233369ab"
-    sha256 cellar: :any,                 monterey:       "fb3def1aeef8ecbc9e771bdcce032a808bcdaeaa72f48511c3a3d61baa6b5a72"
-    sha256 cellar: :any,                 big_sur:        "771bb0164955c209ec3bfd4cc1801da5a4ca44feffdc493192906b39d245e833"
-    sha256 cellar: :any,                 catalina:       "dfeda18cdf0234e2d2b3d8cc4146f3a1ba5f923b26cfdd8f4e97f6a1d72e3492"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b8f2870eb113ea890064d3011f1508869211a0dc2679cf41c02aff5fe7e9022"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "06658d0d79459f49d320f9c5cd89c159d979a7ea43e0a49e97b2acdce21def28"
+    sha256 cellar: :any,                 arm64_monterey: "729646bc7da324d0eb385e9451701b1e3e666bf41c11724d15477e0cd6126b8b"
+    sha256 cellar: :any,                 arm64_big_sur:  "6cb7c26d22552777bad28ec383bf993c682854687c856a225e317dd5fece4414"
+    sha256 cellar: :any,                 ventura:        "98971343311c1469b7ea36eaf3985ed53dc5357c046406e1687acf757ae3d0e1"
+    sha256 cellar: :any,                 monterey:       "8dfb353b286cd249ae131079e85c86cffaed3cd50510c8041608c15e13ff6dae"
+    sha256 cellar: :any,                 big_sur:        "73f277426ffdbe38dfacb5f6966ce3f06a1ec97079ba27b442658b9feefbb082"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e980b52d7a54229cc06224f7b158ba867be367a105c0780cb8839adb974390ec"
   end
 
   depends_on "asciidoctor" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "scons" => :build
 
   uses_from_macos "ncurses"

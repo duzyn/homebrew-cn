@@ -8,14 +8,14 @@ class Handbrake < Formula
   head "https://github.com/HandBrake/HandBrake.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9c43a4e34f777a4c26fe6c415abac2f803522abf083ded04d830c247b0fe9118"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4046c86ec7f3bee73f9ca050dbc3338e61aa9a48e1d08e28a2b78e6c2d574506"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "96ffdb5a88e0c04e281c11d6c16543950ccf4ad6355f621822ddc5c58f0558af"
-    sha256 cellar: :any_skip_relocation, ventura:        "55b5028b010ccd747b76081208c519904fc6366b1652b566f004d2740404ead4"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ebce80e9b5b7149aa18b19eef3657a84a04bab20dafd521e3658fcb90a2a0df"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e13914d989020a6592a40c08dcd10fc4288db93abafa1b9fbba3b54628a3e78d"
-    sha256 cellar: :any_skip_relocation, catalina:       "7d4c30c6b4be84e80b3f2333e44e951805e38a0b3b76c05dd0968f9f58b0a697"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e88d97354c37e76b8eb86afa2300a22b409ac0a41810d5e15039234974710760"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aa8e854fe56f002bf523b1e325d12e5019855c568e3a7de2acb29ba52b32d2ee"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4fa42fc0b58463e6cd070c33b8b3bb244e7c6410e73dbe0e5ebec7f0bbe1bcd7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "29d00fbf281c0a89cddac44850a91cf4b8b5c38e5d60dca8d814c4cba84f251f"
+    sha256 cellar: :any_skip_relocation, ventura:        "023e9574369dbd22713401cb6321fa63750210042a928d53272ad355bff32742"
+    sha256 cellar: :any_skip_relocation, monterey:       "c522892f41010d47ebd987b763ee064875b2cd12731df17145bc148b75b7651a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "be259af1ca277a94651a9eb34f6cd9b17c0e7ecaa61d8d4173f4472cd29e6181"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb626a6155639c58074f5fe87eaacaeb18357908d1c3ad255bc30687d8b5950f"
   end
 
   depends_on "autoconf" => :build
@@ -26,7 +26,7 @@ class Handbrake < Formula
   depends_on "nasm" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on xcode: ["10.3", :build]
   depends_on "yasm" => :build
 

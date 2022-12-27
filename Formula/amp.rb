@@ -8,15 +8,14 @@ class Amp < Formula
   head "https://github.com/jmacdonald/amp.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7318b0f8536a81b08e98f80f1bc409758122aaad61fd38ff09f4540fb0b5a3b2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2a76be7ab5cd8388905d353c50f2a8b760b6b9082f3a715ba481f2d4ae8d622e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dc1fe0166588fb8770bef1b17d88d2c818fe24167604833f799fc7e75c118bee"
-    sha256 cellar: :any_skip_relocation, ventura:        "a2efcbff4e557ec7e2060838a7925ae8908955fc1b5306245ef5caa11dd83550"
-    sha256 cellar: :any_skip_relocation, monterey:       "b7c26461404cfb029ccd3b90180a70821d1a028c24a550143916c293fa105e30"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f95b210ee770d8909bb5190c504658b818b307f909b82f8df3ec87f2a5e55e57"
-    sha256 cellar: :any_skip_relocation, catalina:       "81535aa6c50a8b0dab7386bc7efbd6fe6307724b95fc18bfff51e1ebf5c30730"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57b03b886d4061d7eafac7dd9f72a15c6f2ce356883eb4fb76afd278fd24c2f7"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9d19e2cc1f1bdc9cf5372a8af26514dcd2bce4945d15bb983c2f42925fe2172e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae421ef5b240a2fa442897dc594c237a77b7f72de3d8566cb3e99776552b62bc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "82e8807dab0c43b84aaf807c0e458214e70705333f55a67b31ead8eb78d4dd5b"
+    sha256 cellar: :any_skip_relocation, ventura:        "667e2486099549c5d67c2d22e03619b957c196cf3b9d07c3fcec00590698f7ee"
+    sha256 cellar: :any_skip_relocation, monterey:       "b6b628ccf34ed9277b22f908d57ea12ffca9f4f71af25be554548e20e7e55783"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a0813560d9c8739aee6559aae7c0166ce425db267dec97139007ba0a2e62caff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d1dc1298c845079321d6456053f16d4716c726b55da1c891e11107115acdd0d2"
   end
 
   depends_on "cmake" => :build
@@ -25,7 +24,7 @@ class Amp < Formula
   uses_from_macos "zlib"
 
   on_linux do
-    depends_on "python@3.10" => :build
+    depends_on "python@3.11" => :build
     depends_on "libxcb"
   end
 

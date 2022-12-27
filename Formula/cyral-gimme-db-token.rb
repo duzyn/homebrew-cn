@@ -8,15 +8,14 @@ class CyralGimmeDbToken < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "6d25345463d0c2932be0a23a31fd3e1861bea45358d1dafee19a2fecfdb009e2"
-    sha256 cellar: :any,                 arm64_monterey: "0b28ffa9ac0704e75f0b09fc30a3040a7fed22bca81d45a11618aced477a0708"
-    sha256 cellar: :any,                 arm64_big_sur:  "8db9650eb0f4b71e5f654e2882f9b161ef6e6a283f6b4ea527fddf052d3fc7e0"
-    sha256 cellar: :any,                 ventura:        "411e839bf44b075c519c8dac4642f9b01bcf99887bf96c06635b8a80d5928232"
-    sha256 cellar: :any,                 monterey:       "951f4f9252816b0c85f5ff120c8cde10d55b8b604e4ce6bc301eb9a4381b2740"
-    sha256 cellar: :any,                 big_sur:        "90883ea1be8e6b62b80e88994026c16974d976aee235dc660022ca1e9f63b136"
-    sha256 cellar: :any,                 catalina:       "4f438f8fc840756c10f1f38b9cbf6fe41d9370b4337d082f8e3eba2c1de4e6c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27f95a29f042afe65d24c0bdad74d8470d4054e888a45b4ae8d0b4fd274e6a0a"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "bc877b9568fdeda909ccc4187760bbeb02c3567269e95f3537d8aee472f8e164"
+    sha256 cellar: :any,                 arm64_monterey: "f4a3f972cf49ca27292f585083229e94d5c79c30c506d054894cec18872aceea"
+    sha256 cellar: :any,                 arm64_big_sur:  "044f09cab926119833653f3ea2d23ea37dba5e5242f70dce1d17f77bd309e3a8"
+    sha256 cellar: :any,                 ventura:        "73015ad99174d2850ec08a18eab926a743a96d44d70fc21acacdbab4aaf9d7f7"
+    sha256 cellar: :any,                 monterey:       "a6871304bad5d9d78456f85940f6d85f98c50bc2b49d020183e3871913b3d3d5"
+    sha256 cellar: :any,                 big_sur:        "4c6322337b987ae8a5100ad0f98d563caa01760f641bdf26de26264122480a37"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "065ae3979c98d76f9254e35b1e1177c2cb97ac24632d2fa3c70fc894af8a8fb9"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -125,6 +124,9 @@ class CyralGimmeDbToken < Formula
     sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
   end
 
+  # patch to use latest poetry_core to fix build
+  patch :DATA
+
   def install
     virtualenv_install_with_resources
   end
@@ -137,3 +139,18 @@ class CyralGimmeDbToken < Formula
     assert_match "Error: Invalid value", shell_output("#{bin}/gimme_db_token unsupported 2>&1", 2)
   end
 end
+
+__END__
+diff --git a/pyproject.toml b/pyproject.toml
+index f88b284..e8b5fbd 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -28,6 +28,5 @@ flake8 = "^3.8.4"
+ [tool.poetry.scripts]
+ gimme_db_token = "gimme_db_token.__main__:run"
+ [build-system]
+-requires = ["poetry>=0.12"]
+-build-backend = "poetry.masonry.api"
+-
++requires = ["poetry_core>=1.0.0"]
++build-backend = "poetry.core.masonry.api"

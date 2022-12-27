@@ -11,20 +11,21 @@ class GstPython < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "73f7fbdf9d81c21a7a510b2a48468dd43f8bf5ef83fb4d9214a0371fb9df3daf"
-    sha256 arm64_monterey: "507f2bc2a38e1703eadff87c0ef62137122992b42f0353290a183e3d8b7274d9"
-    sha256 arm64_big_sur:  "1b8eee708cb5ebd7593676fc363caf347285f61f11b7a28aab6ddc4177e51c5d"
-    sha256 ventura:        "6ef8dc182ea5e05942028a0064c8537a52682a6256dee8fd25da35c815524a43"
-    sha256 monterey:       "7f62d747a6c1923ad2f838682eadfbbd4e6abe3bed9818d2a2bb0159d7929168"
-    sha256 big_sur:        "62579fb7951f823f0dddbb6f4a79262ea7039153ff1918826c27080f66ad4422"
-    sha256 x86_64_linux:   "4794069a94e3f736f21c22aec9765eda2af3ea9ab129c9da4063022647c8994b"
+    rebuild 1
+    sha256 arm64_ventura:  "6160154235951d7ff14e28b5b2e63ca46ad4c67cefb85878ec9f3235bd7dc353"
+    sha256 arm64_monterey: "f232d6369ff3182389abd14345eec7dd50e49c90666461f35e5bd34d1365fcef"
+    sha256 arm64_big_sur:  "6732658419661fa5e5eaa10f411c3200d26bc5b3717a6c69c5ec4c1e8619fd73"
+    sha256 ventura:        "9102414169ed31f48f8c0e3741ffa44760c411608f409dd094c728f1aa65dfe7"
+    sha256 monterey:       "7f5bbb9496be22f10fda37b1534f97cbd2f9b0a29a5681fd6d47661f7e3b28f4"
+    sha256 big_sur:        "7e9fbc50c5cc07f273dbe3a5a57c59e99dc50f58dd20d8fbb41c87da0c8828ce"
+    sha256 x86_64_linux:   "5dc205d0d1778992ca8ff8eacd08af2441fc78588cde6e0b3e94f9f06ee5e9f6"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "gst-plugins-base"
   depends_on "pygobject3"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   # See https://gitlab.freedesktop.org/gstreamer/gst-python/-/merge_requests/41
   patch do
@@ -33,7 +34,7 @@ class GstPython < Formula
   end
 
   def python3
-    which("python3.10")
+    which("python3.11")
   end
 
   def install

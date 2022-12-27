@@ -6,14 +6,14 @@ class Libpeas < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "e0c2f4f3d793b2cb31c147335b8b8a73a936b3a1c92716360906719e36d847ba"
-    sha256 arm64_monterey: "f31169f0a56251d8250a7aa3607e4d1dd48c713573af071f94ab53e5023571cf"
-    sha256 arm64_big_sur:  "ef7e7384713bc1ff69fe899f7ccc93c9650127a093d1e624b5c23db171ed7e1b"
-    sha256 ventura:        "e5519ec916ba85ceffbfe7a6f237eb8569e399d72ec933bc20e728c7387cf8de"
-    sha256 monterey:       "e392e3b05c1f5e86bed510ccf197282ad97a6d5ff4e2fb4cfa33b8656806ffb4"
-    sha256 big_sur:        "9ee9248b680889d1586a0593d5429d61c3d74bdf007135c0a0813133482ea2c3"
-    sha256 catalina:       "ec22a78bc5ec276e481be7c48418e6b47a9540cd3a3ee86e2b8bc33ad145df1a"
-    sha256 x86_64_linux:   "cbeeed81c14de0eca458731003ad9558f3b5bb1d159d40b217d3b7c5d1aa3f23"
+    rebuild 1
+    sha256 arm64_ventura:  "6c55f3faba5fd8041d403af6746948ce644ecd642fdec395c1864c8fb6cc1b6b"
+    sha256 arm64_monterey: "ae9194d2a8ed9a6a73b67f2c335013bc1c92fac1dc07df1b14786ac45724a5f6"
+    sha256 arm64_big_sur:  "d75fd0e883aa0871286a6bb92e538fc14aa52a26fe301d9322a4228340abdd74"
+    sha256 ventura:        "91dd8fe4c9b107fd84ad77b060fec01cdfaea39325035e1cd68061d102d3accc"
+    sha256 monterey:       "f49b5722a67a59138d7eead6bccfd6ccbff5b874467e0c7afb1c96816ddf63c1"
+    sha256 big_sur:        "228667efcb0e3f0e2a78a96a882cdecf63f2c8632e93a75a241e05b9a70aedb7"
+    sha256 x86_64_linux:   "b7879166a232ddb8b0cfe5080e440e86b47179e6a920e3f1d40fb44e0a54e54f"
   end
 
   depends_on "meson" => :build
@@ -24,7 +24,7 @@ class Libpeas < Formula
   depends_on "gobject-introspection"
   depends_on "gtk+3"
   depends_on "pygobject3"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     args = %w[

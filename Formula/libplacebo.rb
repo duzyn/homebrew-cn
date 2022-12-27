@@ -27,18 +27,19 @@ class Libplacebo < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "f836c0f2d72ee350cafc1ed9e3c7dcb0004ea8a5f23dc1a7b772a200a7ee6bb8"
-    sha256 cellar: :any, arm64_monterey: "82dfb4d29e647496897ec8f45e44e61574ead9e0d2e07e0d223d374286492807"
-    sha256 cellar: :any, arm64_big_sur:  "02d1c68e4e70cca3f800fbd457544f10f9311e3acb034d6f2323ed19af26b65a"
-    sha256 cellar: :any, ventura:        "c4972dfcf3c91aec6789ae40a131e15835e7f02a10f459db1b3058c225256c7b"
-    sha256 cellar: :any, monterey:       "739c011349ca2db7198d0089a0896e3b10c40ef8609273852e7385ef3aa98d49"
-    sha256 cellar: :any, big_sur:        "a668ac54f239149f53b810577d955a06a26211d91cb582f406cb9ed04f2306e0"
-    sha256               x86_64_linux:   "197511f3a746307cbf11249f9f26dd7ae47b8926bdb9843d6f3c89b75e7d571d"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "055dbd89e69f58447d39d65cd6fb5e4aa4a2d2578c2280e7e60f12051f76d39c"
+    sha256 cellar: :any, arm64_monterey: "ea1e01b89763e27a7219510b03fbe3ed4f17d513de51cea168cf59199abd2545"
+    sha256 cellar: :any, arm64_big_sur:  "9e3539489567f5417f49e2b70f38fa3a14be86e8ea6379b2b412069fe98e94e4"
+    sha256 cellar: :any, ventura:        "5ae33f34e0ae55c613f4c37040947fd482fc0e1f506593d4199b8227d832579b"
+    sha256 cellar: :any, monterey:       "7cbfbfe4985012f6b8753c3c0019a096518b75e28164879d6809ee2f97b706a3"
+    sha256 cellar: :any, big_sur:        "08dd1b8a4e5e6f2d56363953f5fb64675610bbf706d2e69b70a4cba6b51addc6"
+    sha256               x86_64_linux:   "970be798182521f9d044d5b26b6dfd7a92adc31b93f0686e0d5162ccccb98ce7"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "vulkan-headers" => :build
 
   depends_on "ffmpeg"

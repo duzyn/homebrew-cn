@@ -7,14 +7,14 @@ class Pytouhou < Formula
   head "https://hg.linkmauve.fr/touhou", using: :hg
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "eb665fc9191b06afba5629a7e1e9a7fbc4a30e1ddaf1d3b5f93ce0f58e77ebc8"
-    sha256 cellar: :any,                 arm64_monterey: "5b7880e24a56f914a2eba61055a67aeb2e3f4ad0ecd311c1b6e27295b748c926"
-    sha256 cellar: :any,                 arm64_big_sur:  "0911d15863c316fc09f7bf623932220fcce67ad4e16dbdb614a72f11d73df227"
-    sha256 cellar: :any,                 ventura:        "25b24da743ff5b61b271ad1a98f9a49326814c4bd8cd4e51875ee1bd8b5c1936"
-    sha256 cellar: :any,                 monterey:       "b973c7a742e8838a3f5bfd0ba94193c39bd81543d7a8d19f98f07713d30e4b4f"
-    sha256 cellar: :any,                 big_sur:        "d3e12e01e5b18f44435ae49ad65726fd71d72c0f9bdb0b54169dc2f1d894b2e0"
-    sha256 cellar: :any,                 catalina:       "d1b56e807242ae33bb7a577c2359daa5e233ad73e1e81dc4b642546eb93545a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72cd0dc9eba59afb98766c0554cf603688064ceed66bbec1ac199bd42ff8d469"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "5529fede19cacc4e69b69985db53991070de184c7a4d50adb7649264b9df7ef3"
+    sha256 cellar: :any,                 arm64_monterey: "b7da4dfc02540ed042b90827630e16026eeb6dbf0cc8e66657acf2e768a78776"
+    sha256 cellar: :any,                 arm64_big_sur:  "a967c785a6916c4930e9dcbc3418eba15f26242ef1988a9fbdd272059bd45bd9"
+    sha256 cellar: :any,                 ventura:        "aaa8b69e4983370a51fd4799b5605e4d073610011170e8332eb674e5b4a6ccf2"
+    sha256 cellar: :any,                 monterey:       "6a73d4bdbe1bf13e38d5a3a2ee5edbc6f41399894d28c5260d76ed7e02dbea8c"
+    sha256 cellar: :any,                 big_sur:        "68865e9179adfb70ee4b113563e577f09ef0fe1bdbe1fe6f226931fe407e7fda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb8bff86fc2cabba2ebc07150a44d8251dd66dc69168d0ad081c1c1ced81cda8"
   end
 
   depends_on "pkg-config" => :build
@@ -24,7 +24,7 @@ class Pytouhou < Formula
   depends_on "libepoxy"
   depends_on "py3cairo"
   depends_on "pygobject3"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "sdl2"
   depends_on "sdl2_image"
   depends_on "sdl2_mixer"
@@ -35,7 +35,7 @@ class Pytouhou < Formula
   patch :p0, :DATA
 
   def install
-    python = "python3.10"
+    python = "python3.11"
     ENV.prepend_path "PYTHONPATH", Formula["libcython"].opt_libexec/Language::Python.site_packages(python)
 
     # hg can't determine revision number (no .hg on the stage)

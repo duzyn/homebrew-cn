@@ -6,20 +6,20 @@ class Ispc < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "fae2e3b3e49e198d644de5d41d1072b1eec914de46023f59cb193cc24611e8ef"
-    sha256 cellar: :any,                 arm64_monterey: "a4cfc73e0e1cef6223f187f27ce34a503ceaa71dbed5d1a7e19763af2781b4de"
-    sha256 cellar: :any,                 arm64_big_sur:  "1dd45f53ecf4aed0641eccf04c30c9369ce77748d4d243f0dce23cc166ef853c"
-    sha256 cellar: :any,                 ventura:        "0d27a32c440fa6a4f065573cc681ca72b5710f7bdc09795631211b868d3495e5"
-    sha256 cellar: :any,                 monterey:       "f692c4a3b61a4118bfbef17d689801b8e602bf18b8ee6ce4ad8cb1a1a45b37f6"
-    sha256 cellar: :any,                 big_sur:        "b34d180813b2dec88159f38354f74c773814c0828a24cc10f81e0cd03ca9ab29"
-    sha256 cellar: :any,                 catalina:       "0efb592a2b306bf3cc1da19e5ea4455230ef1cb3699b0eb50acd15fea111698d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a9d579f863fb0da48795d2dd53df68de831b149f43a1281f26298bd893fc08f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "71d036db4d1c72e0d482b6319ae80b2f2b689d193206f062d0e5d5be79fba506"
+    sha256 cellar: :any,                 arm64_monterey: "ebbb9f84e98e02d9d48c8edbbcbc441ededec14a275a02dc50159442838d8d46"
+    sha256 cellar: :any,                 arm64_big_sur:  "2f0b43f9129c4f8612b6ec3733fa33a9481716f5c4fc64722a0484e2faf29490"
+    sha256 cellar: :any,                 ventura:        "c9acd44951ee26fde637a827891ca2723d40504e387836bac49652249a330743"
+    sha256 cellar: :any,                 monterey:       "74cc731b62d211f510f3186c9cfcac8f9115320e4c818d6e4a53fa3b337dc2df"
+    sha256 cellar: :any,                 big_sur:        "c767f2a66574d1f4ec414facdd0406f81e9efdda8be02ced32ab32a3c8732d36"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "568d7315e62e78e6556ce76831c39638034c0497eed5de3176c200d139324126"
   end
 
   depends_on "bison" => :build
   depends_on "cmake" => :build
   depends_on "flex" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "llvm@14"
 
   fails_with gcc: "5"

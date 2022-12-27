@@ -9,16 +9,16 @@ class SolcSelect < Formula
   head "https://github.com/crytic/solc-select.git", branch: "dev"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f060023b1506f1a282d4f0b91e1a691757680a7f2c858a965bb803ad324ee72"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "35e57e18ac37ca3b35f8dc1cc6b87f2c774521dabc2e9eac85362d1184e88dd3"
-    sha256 cellar: :any_skip_relocation, ventura:        "078f906ee71cf52cfe50aba5a0404f8d8063259e0072bea1223b63b4d3f92b61"
-    sha256 cellar: :any_skip_relocation, monterey:       "fec9c711e24f2aa6fd3ec6cb0c61548da8e1ad2497911a522ce2112548926eca"
-    sha256 cellar: :any_skip_relocation, big_sur:        "79cf18b7ac85a4f2685e532ddda52eefa5e28fdb916a87ce1269fcd11ac1c0b6"
-    sha256 cellar: :any_skip_relocation, catalina:       "c686f9825271685051660c84c6d48cf25b9b1109f8fe5de1e4d864d9acb2a7ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ae84608d9ae072e478662e7dd672d14ea8ef9b688feb33814b642346dfb774e"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a55f962a9c03772c6a1d4edee6ce5a2352d66a3a01412c300293e18f6d2bd79d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bab938bd7e4a232378ffea6255dd48234eebec4465d4330198c8a098aba6693a"
+    sha256 cellar: :any_skip_relocation, ventura:        "9aabde46ca59499ae107856ea8e33c0ef806aaa58da13772d1b7eba6c6dd19a7"
+    sha256 cellar: :any_skip_relocation, monterey:       "f539d2a03bd4ac11ff4ca3bd4decba2f6f9bd4b11b6a2e150c52663aaffb9486"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9878f267a773134af1a671cb3fdaa54accf767f32eddf68efc691905b8b46c98"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ceac03eb7e1ab4d3a4b1727b43d98290dfe68ffbffecf87b2489b43ee4fe3fb"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"

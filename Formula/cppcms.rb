@@ -12,21 +12,20 @@ class Cppcms < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "798b916777f03da4b2ce560a2097cdcb1922b7bd3ac2800478654c4e9cd513f8"
-    sha256 cellar: :any,                 arm64_monterey: "9a02f447ab6d82e0cf98c2a4aba48011974e6c6ae103cbe2e7c74890dac4d038"
-    sha256 cellar: :any,                 arm64_big_sur:  "67a1c9feafceea6cbbe96ab29fa05ee6032dfc839b691cb3e64f28ebd8e70d81"
-    sha256 cellar: :any,                 ventura:        "9b852a1493543e143f2561915b5f55ba9319695407af4d8f49cab73c850264a7"
-    sha256 cellar: :any,                 monterey:       "d4b7c10f3349b0d96a29f936e1e26c819b99229bb0e49b3b6856c786be168418"
-    sha256 cellar: :any,                 big_sur:        "4a343093b0050726543c1ca4e125460c5537efb7bb4c7ca24b475f8f33be12fe"
-    sha256 cellar: :any,                 catalina:       "a0d3cb27c298bf95e97b7cbd97329aacd6eb33239f21dfe9e3d91272d5ce5263"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1757391e77052508958f08bfe468e7168a6b8261f5022e9dd644de056e9079d"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_ventura:  "04c25a7fa717d8459910082d31c4c77592a948580c74c76fe6f8acb6cfc750e5"
+    sha256 cellar: :any,                 arm64_monterey: "9dde91368e8aa365794b238db7ea2b81a813e2c1cef36c3653b0cf20eff64491"
+    sha256 cellar: :any,                 arm64_big_sur:  "45d52949a574fb1c9f469fe8fbf7da863d471c4ebd29b11a4c9097e38dbffba3"
+    sha256 cellar: :any,                 ventura:        "abf6190b7e7e38b72f96e5ec2f08f55f5f5ebbaf89f994c5b2abacfdde805157"
+    sha256 cellar: :any,                 monterey:       "aa3cfee1882aacf75885cddcb9d78511a6d467f3afd8b674702accbbe738cbd2"
+    sha256 cellar: :any,                 big_sur:        "a13712969212fcca72e270d7490512782d6cce2da6112c916e11b4c0c7520ea1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd8b215d1f648697073f7c1e84d6cccb5f9d22330a8f13038bf82bcc64742270"
   end
 
   depends_on "cmake" => :build
   depends_on "openssl@1.1"
   depends_on "pcre"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     ENV.cxx11

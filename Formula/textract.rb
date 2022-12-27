@@ -8,21 +8,21 @@ class Textract < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2007bd7da5ca03c268cfcf10610e64eb36ccee294031eef8f959e659823c952a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0baef2f344bc42a1edeb6679e7d6a7e422a8c5f4e4c9c93e203da6570f104b63"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f91b5ffff75cb9575523132b4b4aa83c4a9bc8efa64fc22d970fff9b598bdd9f"
-    sha256 cellar: :any_skip_relocation, ventura:        "d3a91118a550dfd047763dfe71de2db889f399b93637fc880f3063ea588c1213"
-    sha256 cellar: :any_skip_relocation, monterey:       "f4008d4caa8c86bd2678b37d17a13709b85897024f097ba5ffb9b1a4d66cf7fe"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0c4a4e2154e9202c003926cdc09b8a876977ceadbb1f1fefd4cb867e19b92cba"
-    sha256 cellar: :any_skip_relocation, catalina:       "88c692dd230bf2b98a487c2cec5c63af85f3c0fb2e193812b9fa19d7891a0de5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0674c6e4214c822d29115436851341f8b97bf46b3dd000bd6c056a0f6d11ef7a"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a5f5c391f5615d5e4abb0f087a2cf5e579b0287966850854dc39b6ebbf183547"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f67ebdc7dcc9ee9adcec6105e16a8cc93c318381a2c5a66c6f25e86dbe0d83fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1f3082bd34fd108c69dc582d4c9aa0c3767f9ceaf436bbf66eaa089903de4da"
+    sha256 cellar: :any_skip_relocation, ventura:        "5d520a4c97bd11a66a0e000d34b739d39b33782066f79f4bdcf161b378797d20"
+    sha256 cellar: :any_skip_relocation, monterey:       "bbc1ba9f604222a44dd12258cb8a2749c230892c201c497bd0a5f89ac0252309"
+    sha256 cellar: :any_skip_relocation, big_sur:        "318532dfba7140276340128ada24a8e6790eaf2c8f40edf30893022f598b7a19"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f34dffd7f6facfcbc1ad72802cf799d6e0d8921a0a1151d397a922665935d067"
   end
 
   depends_on "antiword"
   depends_on "flac"
   depends_on "pillow"
   depends_on "poppler"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
   depends_on "swig"
   depends_on "tesseract"
@@ -138,7 +138,7 @@ class Textract < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3.11")
 
     # ebcdic is special
     venv.pip_install resources.reject { |r| r.name == "ebcdic" }
@@ -147,7 +147,7 @@ class Textract < Formula
     end
     # delete the flac binaries that SpeechRecognition installed;
     # the `flac` formula already provides them
-    rm libexec.glob("lib/python3.10/site-packages/speech_recognition/flac*")
+    rm libexec.glob("lib/python3.11/site-packages/speech_recognition/flac*")
 
     venv.pip_install_and_link buildpath
   end

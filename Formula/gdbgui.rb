@@ -9,16 +9,16 @@ class Gdbgui < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, ventura:      "a1a19a912dcb3cf7373ec726706c744543b7b5b1cc94d442874c2472a183989c"
-    sha256 cellar: :any_skip_relocation, monterey:     "41aa20f182812d4b36a9a3787248b2e6f2eb6bd280f4dec5b51765efce060bd6"
-    sha256 cellar: :any_skip_relocation, big_sur:      "0f053682295aea85e3b0b1c4ac395a06d681c42598c538c9b3ccd0ecbd8e4bd5"
-    sha256 cellar: :any_skip_relocation, catalina:     "e9caccd71e072398ff7ebaffcff9f00ceff86c6fe6230360b582683ea23929ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a1970650715f513ee5e7c51574f1cb698889df5a509ba79f208782fd5b5d6167"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, ventura:      "683c98de867e3e006a280dab3e7e20e58d48acdcb3e78c4c8fd91c9712e2fca9"
+    sha256 cellar: :any_skip_relocation, monterey:     "1031ee63ee031a396598dd8bc6b454c3d6f6645f8e9bd9d210ca5b77b2968ce3"
+    sha256 cellar: :any_skip_relocation, big_sur:      "077648f75054dcf02393cba046d54c7e50895bb69652a20baf24860c337235a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "24dd86450f85bf1912d652d357649fd68b8c4755b48b5dd74320668f8298086c"
   end
 
   depends_on arch: :x86_64 # gdb is not supported on macOS ARM
   depends_on "gdb"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "bidict" do
     url "https://files.pythonhosted.org/packages/bd/7c/83fbbc8568be511bc48704b97ef58f67ff2ab85ec4fcd1dad12cd2323c32/bidict-0.21.2.tar.gz"

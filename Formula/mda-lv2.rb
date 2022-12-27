@@ -11,20 +11,20 @@ class MdaLv2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "878794cec48804ac465d782dbdd033be34622ae33d5310a9a539188bb7167849"
-    sha256 cellar: :any,                 arm64_monterey: "132e996a5efb25179d000aee448ea80bf7bff90867220bda782ae068ae15f025"
-    sha256 cellar: :any,                 arm64_big_sur:  "aa4738708771c5af012719e2cc512e9def376eda125bd939c6034ce9cf1142d4"
-    sha256 cellar: :any,                 ventura:        "fcf4cef14d7e7c57cdbb973d791985569540e8a1b602e524e7230c759872293a"
-    sha256 cellar: :any,                 monterey:       "80fcaf1e645f453ade12c5e7e8ffdf2cae5ee95d3cae6ddd5fa57efbd965bac0"
-    sha256 cellar: :any,                 big_sur:        "494ce940685a3ac612e204f8c82958ea13f9c925dcbe35a1f0b8e6b7579b5fca"
-    sha256 cellar: :any,                 catalina:       "6b0c1734136d4bd4ac39b7cbd139c746d4997bb1042d76a8cbf326db3994f911"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4f388d9428a2a4eb69a156fa03476823f2203106c6b7e877c745ac4941bf227"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "6d241076e433268cb541caec4a74ee61aabaeb056717bf76cc219352895b7a08"
+    sha256 cellar: :any,                 arm64_monterey: "e780aa5e6c3d9374a120635996ee851a35191919eda1156ffdc5855bc5f927b4"
+    sha256 cellar: :any,                 arm64_big_sur:  "b57083c5363f020da2ff8f41756b63ff03800a82691c76141d3a48f5eabc2872"
+    sha256 cellar: :any,                 ventura:        "69214dc90ea0b35a252852a86d0060c496c5394e25704361f2fb4653cafed564"
+    sha256 cellar: :any,                 monterey:       "a07ff2fc6086254b1fd4d122505cea924a2501d2c45a458dbc3112b696cdfd67"
+    sha256 cellar: :any,                 big_sur:        "036d0587dc2d24728b21dcbf2b2d791aea14f12751ecb376d8517c997c863ba5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69241d7a0f0124ccae0386c423635981756703bd48d8471e0426a8572469b30a"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "sord" => :test
   depends_on "lv2"
 

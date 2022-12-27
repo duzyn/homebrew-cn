@@ -9,7 +9,8 @@ class Cryfs < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5cf540a20c6bba381ab58a3b2c4b09abe03d0807b972bc323cd11d4ea63e835b"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0922c592c2f886c38c5d5e6590d2f6d89d8d4089565559c05e2effc987c88eab"
   end
 
   head do
@@ -23,7 +24,7 @@ class Cryfs < Formula
   depends_on "libfuse@2"
   depends_on :linux # on macOS, requires closed-source macFUSE
   depends_on "openssl@1.1"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "range-v3"
   depends_on "spdlog"
 
@@ -35,7 +36,7 @@ class Cryfs < Formula
   end
 
   def install
-    python = "python3.10"
+    python = "python3.11"
     venv_root = buildpath/"venv"
 
     venv = virtualenv_create(venv_root, python)

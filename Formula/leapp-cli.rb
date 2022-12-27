@@ -8,17 +8,18 @@ class LeappCli < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256                               arm64_ventura:  "ed63cca1c920fef5802febac97d956ed3953253e43b4c8af58924885981b2440"
-    sha256                               arm64_monterey: "f4c4b3bf0ff431ab5b1319226102d51070f7b067e24b7dd326c2bb24b6116b24"
-    sha256                               arm64_big_sur:  "cfcb00f10ea4e13df0b214e4a3a121d14f06404b6326f37104daaca670ccd387"
-    sha256                               ventura:        "70af45f1994111995c3f38f733ccff54fa8f119a624372b2c6e6f88ad94c112d"
-    sha256                               monterey:       "c684b7964a07c2d9aef8657e92e0fde03714e3df743decead8ea4b8714aecec1"
-    sha256                               big_sur:        "b41bad0253ca27e5913d010ebf606962632adc4e2bce40353de5622eca71d300"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "612ff4adebe582302566af18ed7667631b83fc2e436a60e9d5a668329fc0b65f"
+    rebuild 1
+    sha256                               arm64_ventura:  "90e0c7f474f2434f11a09d522c3bf97838e4802910b32ab89c6de61cdb34c3ed"
+    sha256                               arm64_monterey: "91a40880308ed188fd1c742410ade897fd797f23e856685654393bf1246cebd2"
+    sha256                               arm64_big_sur:  "468bb07d55ea4ac76231e2ba68b645852faab78229f30326c66ddc8d03be1429"
+    sha256                               ventura:        "5939c17edece1adeb97ca719051c5d991bc74a8f712a57673d0350c8eab200ce"
+    sha256                               monterey:       "478ca3919d9ef5c0d89ca267871a067c7220b64f40a4ef4823b6c5568a48fae2"
+    sha256                               big_sur:        "79f5ae66c39096df00518bbc80ce2e2dbc02756430f9e2cc81f47055c09fb163"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "93b73da27b713c2bbed090f7dbd9b1b657db24988924bea325fbef60182f331e"
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "node"
 
   on_linux do

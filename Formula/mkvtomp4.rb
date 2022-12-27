@@ -10,20 +10,20 @@ class Mkvtomp4 < Formula
   head "https://github.com/gavinbeatty/mkvtomp4.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7333fbed74310c9608f8d766c9a081e3df47d7ddc82e17a677d9c850c2958d16"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a4d94026b3160bc225ef4d7b7ef96207371b72d5f3e380ceeccd74cb32a2edef"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a4d94026b3160bc225ef4d7b7ef96207371b72d5f3e380ceeccd74cb32a2edef"
-    sha256 cellar: :any_skip_relocation, ventura:        "e671faad69c54699d7212fabc4a69525e5e146e312adafb3b5a529265068ed26"
-    sha256 cellar: :any_skip_relocation, monterey:       "c43fc3241ef8e5a5f350a8ecb27f81d72970e3444435a2e18f9b75df005e2bab"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c43fc3241ef8e5a5f350a8ecb27f81d72970e3444435a2e18f9b75df005e2bab"
-    sha256 cellar: :any_skip_relocation, catalina:       "c43fc3241ef8e5a5f350a8ecb27f81d72970e3444435a2e18f9b75df005e2bab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f90f0a5599348e0ef6e1cab3658a290ce0176cc1426da1f8f5e2b733aa77353"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "40b20115a22f30e12c87b231eca95ab046e3b83e953b52b72cc854590c1d5b1e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "40b20115a22f30e12c87b231eca95ab046e3b83e953b52b72cc854590c1d5b1e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40b20115a22f30e12c87b231eca95ab046e3b83e953b52b72cc854590c1d5b1e"
+    sha256 cellar: :any_skip_relocation, ventura:        "b7cd942202d691603d7168598bbed297c48c231bc3ef6425483899d9b7229a4b"
+    sha256 cellar: :any_skip_relocation, monterey:       "b7cd942202d691603d7168598bbed297c48c231bc3ef6425483899d9b7229a4b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b7cd942202d691603d7168598bbed297c48c231bc3ef6425483899d9b7229a4b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9bf4126d40540e60ed5901ae61ed87bdd039abcc21d834165a882a3932bf925a"
   end
 
   depends_on "ffmpeg"
   depends_on "gpac"
   depends_on "mkvtoolnix"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   def install
     virtualenv_install_with_resources

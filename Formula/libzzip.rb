@@ -7,20 +7,19 @@ class Libzzip < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "9850e8c458ac96d12f9b48f1de1e3b5697533ae1be8727210737b42d547c18cb"
-    sha256 cellar: :any,                 arm64_monterey: "cf74798703189f3c2ecd72118e9e8693379ec1d9a1936ccc9be5cf333cce2d44"
-    sha256 cellar: :any,                 arm64_big_sur:  "a7c81a822e4814e69bc27ee09c6fc7e2bbafbaacdb0337b90406b3ac7d627645"
-    sha256 cellar: :any,                 ventura:        "cfd0f7bdbc338d26bcc7ffdd6bde1d518e23b270d08a28cb2d904fcd36b9d3c0"
-    sha256 cellar: :any,                 monterey:       "ecf9e88530bcb24d5f5b531834d3f45a3d6c424e93ec24132ac062114a6d04f7"
-    sha256 cellar: :any,                 big_sur:        "1a3322eea48b54ad64c93e36b3c61cdf3175b96d01b39a35f6a70cb9c079b92d"
-    sha256 cellar: :any,                 catalina:       "8c6c6c3bf2febfc90d54933e232cc64c5adbb3a8afcf7885725190c73ee5d350"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1ec7a63878216eebf0edda2089ab91a36c44928887f27e995299c75243e3cb6"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_ventura:  "ee5a0f4f19686b63534c718d9c61d75a2a3b1f2ef3b4bcd6be5615536cc84c5d"
+    sha256 cellar: :any,                 arm64_monterey: "ac7b8f35398634a9092daddca8a30508bfdb1925407f8c8f6fcdd6e69e43f9ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "e2594d07e6b05062c3c28341225052a5ca2f4bd3dc900fc20f3e94190273d548"
+    sha256 cellar: :any,                 ventura:        "5feaf45ca387319476e60f2e6bfd8ff2c9dda497df6c809186166e5af098bd22"
+    sha256 cellar: :any,                 monterey:       "7b2db8ae12f457c61a4191acf807936608aa4cb8b036560e534d83b50602fd67"
+    sha256 cellar: :any,                 big_sur:        "d7a969de7fb5d84796d73f5bda8c53fe044c2808caece9a5f6e20e40201c3860"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1faea53bbda32778a2056db47a71ea16c02c476382770fa2c928663fc869734a"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
 
   uses_from_macos "zip" => :test
   uses_from_macos "zlib"

@@ -10,19 +10,19 @@ class Folderify < Formula
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd3aeb5647cf823634c8d5ddeea89e3ea5f5a0c1d63953a26dcf47c2c14784b1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b35bc64a01041e596b159c71533eb632ad3d2a278b3f850d5bc2dea5ff5b542c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b9491bd61efa21a3fb11de4048bf3976549737f5519fa9c8707d3d29aa88495"
-    sha256 cellar: :any_skip_relocation, ventura:        "9a1ccdc83f2e7212e30c3bc8a9762a23b705c62e13d96cbc6a618f2462eb1c6f"
-    sha256 cellar: :any_skip_relocation, monterey:       "d494fd1ad63d3dbee0d088fea5ccaaea738f790a4c0017f60d1c9933cfa6dc57"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1c35e9f509ca6b82360b58f5ce7ddf8f08f2922ac88357e298846849400cab8a"
-    sha256 cellar: :any_skip_relocation, catalina:       "f77da3ff2274fcff4d3fec345b63f31d8d2eb21b9d59a59f1b9e236b3567fc3a"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f80bae8eede3de718f6827c8f079ba573ecc77849d29c080a5cdff10bed4f7c1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "37aedb692e39efba0f2da125fef6c5fa91d214d57a159067831d31fd03a73324"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9df72f0aa9b70c864d2bf24dae188f3be89b80b304798d9aa08bb92505a6652"
+    sha256 cellar: :any_skip_relocation, ventura:        "2ac11aa91e532e4118ef7860dd5cecfe903ced3d8b0c549374a4410424bb732f"
+    sha256 cellar: :any_skip_relocation, monterey:       "2ac11aa91e532e4118ef7860dd5cecfe903ced3d8b0c549374a4410424bb732f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9c0d30d913babe9c33ce461319a123c4cf6db2ca67329347440fec56c5c7102b"
   end
 
   depends_on xcode: :build
   depends_on "imagemagick"
   depends_on :macos
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "osxiconutils" do
     url "https://github.com/sveinbjornt/osxiconutils.git",
@@ -30,7 +30,7 @@ class Folderify < Formula
   end
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install

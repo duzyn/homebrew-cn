@@ -7,14 +7,14 @@ class Gexiv2 < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "3275166633eb10990eadcf90a08d6f1c2924692e84f86f7b7d3389250cb35d17"
-    sha256 cellar: :any, arm64_monterey: "12296a8bf2d516e6d586c3a06a5ea85310441bf110311834b4654db0b2b18460"
-    sha256 cellar: :any, arm64_big_sur:  "f974a143db8c40d1917ab50cc52e35329d50c73594205d2c0e1cc393bb573cc4"
-    sha256 cellar: :any, ventura:        "f4db63d52bb00046159bba26cde4e530a550c1d26d3eb4f46674587535b00f72"
-    sha256 cellar: :any, monterey:       "5baf8a5d48b15b71bd803a236189448441dda41addb39ec80380f3a5eba8ab4d"
-    sha256 cellar: :any, big_sur:        "35775760fc0e8bc389c960183d9202ae870e0987141020545d20d4b98205fd4f"
-    sha256 cellar: :any, catalina:       "87bc94b311f753a585dcd4703fe2c900c590daba7993298f2c9c9dd0c3ecfdbf"
-    sha256               x86_64_linux:   "480cdfc4363ba55560479ce216bd289326cc40833770757b80fbc42529633608"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "4acc296cbfbf2c39288b0bb622910e5e2f03ca0ad68e5d5f3af4fb503ae5bf68"
+    sha256 cellar: :any, arm64_monterey: "b6300eb15acf22cac3466956e449484911db0f9b67427829504216dcf39514f0"
+    sha256 cellar: :any, arm64_big_sur:  "a0506d0841fd0ce639b3a25d6f4fb4f822c9380cb79cc144b91f007249abe702"
+    sha256 cellar: :any, ventura:        "f5329234f64886acb9aad2e3fdbf01b774c6ae2b7a9f18cf88cfa3a57ad721da"
+    sha256 cellar: :any, monterey:       "5a8be246495cd20807578417ecbd8d9d758e234f1bd441e23acc1f52606eb2b4"
+    sha256 cellar: :any, big_sur:        "0a57239cb2d1492d0769602ce43b1b847bf0609443fe8666cf7ebd1e64bdc779"
+    sha256               x86_64_linux:   "d23162496ce910b7d2f4cd2f1e5721b75cd4346e5f6c77235ae549820a338164"
   end
 
   depends_on "gobject-introspection" => :build
@@ -22,13 +22,13 @@ class Gexiv2 < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "pygobject3" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "vala" => :build
   depends_on "exiv2"
   depends_on "glib"
 
   def install
-    site_packages = prefix/Language::Python.site_packages("python3.10")
+    site_packages = prefix/Language::Python.site_packages("python3.11")
 
     system "meson", *std_meson_args, "build", "-Dpython3_girdir=#{site_packages}/gi/overrides"
     system "meson", "compile", "-C", "build", "-v"

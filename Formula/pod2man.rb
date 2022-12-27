@@ -1,8 +1,8 @@
 class Pod2man < Formula
   desc "Perl documentation generator"
   homepage "https://www.eyrie.org/~eagle/software/podlators/"
-  url "https://archives.eyrie.org/software/perl/podlators-5.00.tar.xz"
-  sha256 "e0988b10795c75c50e5d04eba928b5500cf979e231f2c80d21ddf5f9d4c491ba"
+  url "https://archives.eyrie.org/software/perl/podlators-5.01.tar.xz"
+  sha256 "76260ab7e2b343b38351dff42f576f9cd61166d1ff5cc8e15c0f79f28d518e77"
 
   livecheck do
     url "https://archives.eyrie.org/software/perl/"
@@ -10,14 +10,13 @@ class Pod2man < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57e6c0e470b8138e4c14d74072a2a2fd18e6a1fd2cf5de274cbb6883b5e74c20"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "57e6c0e470b8138e4c14d74072a2a2fd18e6a1fd2cf5de274cbb6883b5e74c20"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "acfffaf34dca9ea5dabfc050f169fc1448361c0177cf80c97a6930dddd785789"
-    sha256 cellar: :any_skip_relocation, ventura:        "90cd0485e9d729fb4064e7e470c098e8a781d833d999a9b5ef7624106005f40d"
-    sha256 cellar: :any_skip_relocation, monterey:       "90cd0485e9d729fb4064e7e470c098e8a781d833d999a9b5ef7624106005f40d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f8e5c75883dca82a09d5c38e211a0e28f7a427d575de78a59093249b8fed53d4"
-    sha256 cellar: :any_skip_relocation, catalina:       "0e3dbd2c66fde6944e6493ca208720d45c55fe79ae271fb3dbc63e96f19871a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59fe8c67d225d8f1761783c2981fe0637045963897230875120f31fa01f0f155"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5fa74a3c4174f393da58ddf7d466629f1ebcb10c5b3f3ae8e50c676ffcc02e2a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5fa74a3c4174f393da58ddf7d466629f1ebcb10c5b3f3ae8e50c676ffcc02e2a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d769fcfbea533598b2366b7c608e764f911034fc89237cd2c8d0656474e945d0"
+    sha256 cellar: :any_skip_relocation, ventura:        "efda90db8dd0b7a04fa853e7aed0045049c408eb3bf798d0248b63cee60851e6"
+    sha256 cellar: :any_skip_relocation, monterey:       "efda90db8dd0b7a04fa853e7aed0045049c408eb3bf798d0248b63cee60851e6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b3709c2f1a523bfdc7666d7254062b6fe1a274b0bc1f1f33c07f0ca7a2b757f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8ff87ced43f638d9aab682367e0654a6f12ce4653b82647c17a38b0f9b44aff"
   end
 
   keg_only "perl ships with pod2man"

@@ -8,13 +8,14 @@ class Charmcraft < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "66ca8b62984655253ee5f1bc958c3384ee573d4207de2664db65d5b2a46e5c53"
-    sha256 cellar: :any,                 arm64_monterey: "328b5b1a05ed704f0738c2f7dbfc45831e9ec91a42b779bf6be66ae16afadc4f"
-    sha256 cellar: :any,                 arm64_big_sur:  "835d65661316718f178298b2aac7a05297adce97ff3faf432d7e844c01ea60b0"
-    sha256 cellar: :any,                 ventura:        "354d80f31c765991119a330f579c94bb5e33c8b405bc8d548cb803f1dbc3bfae"
-    sha256 cellar: :any,                 monterey:       "1d3edb0cf94641df087440762f257853144a65cd59e0502e2d32ae3cf103eb7c"
-    sha256 cellar: :any,                 big_sur:        "18d8d6a42c5a6fc4213192338b5ca881904701c2ea85f85f22a1c848660ec042"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "18a0ef25f51bbb6b3311cac582b9d55e5f30b0ef68f5c0f487c0b82b6eee8978"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "4af2e2bbe09f49349d9cc93191c398edaabb26c4e3c828d54016bfdde9396105"
+    sha256 cellar: :any,                 arm64_monterey: "0fb0c4b6d6163e2743be6d64c05d3e6700a567f2ecc36455c994a468b0642b89"
+    sha256 cellar: :any,                 arm64_big_sur:  "df038c86d46a004d04b665982a1e2290ab9713349545eeec399e256383f84aa7"
+    sha256 cellar: :any,                 ventura:        "b5df8a32a0fbad6cf3395af0ec00af1fad8b3fb6693e34255b05fc65accf3d97"
+    sha256 cellar: :any,                 monterey:       "63fdd35a654717ea6e85caf7175167259f3ece4ce4f7c810b58fbeb6cbbad825"
+    sha256 cellar: :any,                 big_sur:        "faf3615f9ee8203ce94e22d0a1bbbadb76a81ea92b8d84cdc33aae5a94fb9bfd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bfd80a40315da10040ecb460281d831adbd76481cd0b2d53c23d0d01de858925"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -22,7 +23,7 @@ class Charmcraft < Formula
   depends_on "libsodium"
   depends_on "python-tabulate"
   depends_on "python-typing-extensions"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
 

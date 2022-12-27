@@ -8,24 +8,24 @@ class YoutubeDlc < Formula
   head "https://github.com/blackjack4494/yt-dlc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b8410c4a3de8f1c17c230941f7945dad59a2ad222926f385cf2ad630a24f8a60"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
-    sha256 cellar: :any_skip_relocation, ventura:        "08365319abe96f8bc0399db2d88c054d4272c4ecbb8309206fadc7adefbec28e"
-    sha256 cellar: :any_skip_relocation, monterey:       "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
-    sha256 cellar: :any_skip_relocation, catalina:       "3b783d95acf80bf416f5914825a6526f20a1cf2efaf796c034e7b681c77cf14d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f1a851f379d37a98f7753ed90d6935b5075e02e19d62ae6f3584fdd9e377fa2"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "38a8a9b4b1185436c9243073fc6cf527c359591da3e9d27f8985b12e9f31cbb5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "38a8a9b4b1185436c9243073fc6cf527c359591da3e9d27f8985b12e9f31cbb5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7e44cfaae0a362478ac3a386fac50ba8910585dab6410ed8d6703794a26e5520"
+    sha256 cellar: :any_skip_relocation, ventura:        "7e44cfaae0a362478ac3a386fac50ba8910585dab6410ed8d6703794a26e5520"
+    sha256 cellar: :any_skip_relocation, monterey:       "7e44cfaae0a362478ac3a386fac50ba8910585dab6410ed8d6703794a26e5520"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7e44cfaae0a362478ac3a386fac50ba8910585dab6410ed8d6703794a26e5520"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1628852cf9f8a86297420a1aa6d1f17789fa630f4eeef4c3cf017f6ac9f10611"
   end
 
   deprecate! date: "2022-03-21", because: :unmaintained
 
   depends_on "pandoc" => :build
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   uses_from_macos "zip" => :build
 
   def install
-    system "make", "PYTHON=#{which("python3.10")}"
+    system "make", "PYTHON=#{which("python3.11")}"
     bin.install "youtube-dlc"
     bash_completion.install "youtube-dlc.bash-completion"
     zsh_completion.install "youtube-dlc.zsh"

@@ -6,19 +6,18 @@ class Cmark < Formula
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "f68923a956977da870dfc6bd1df9f3a3185a27ff76e1403f300cf3a44b188ace"
-    sha256 cellar: :any,                 arm64_monterey: "088cdde54f9999dc34fdcc788b85052c9b58db6b4379ab601cffa7a41d936c94"
-    sha256 cellar: :any,                 arm64_big_sur:  "69c90d2fad0777d9f38bcab5c57384907dad0695e4feeb8416fba20f22f900e2"
-    sha256 cellar: :any,                 ventura:        "229b0e74336b0b869206e30b7c53758a3f8e1bd88787f26c263493b2f64f8bf0"
-    sha256 cellar: :any,                 monterey:       "d48785695ca7b81ad1d36a7c97b032d8499a6025f8f230884e9ddaa816f46181"
-    sha256 cellar: :any,                 big_sur:        "458ddb5baf0452ffbeba28aa890836273ef1b880b5f729c0cc0466cd7e12ccd7"
-    sha256 cellar: :any,                 catalina:       "d5da6294f5f07fe987edab4b8c51a7b7a76a4e9c4c268635d1d08644f21a05fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1072f9aa1474190ea218ae7243ad432d71a3868edd55d19c6102d2e691a4ca1"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_ventura:  "bfa1d758eb00bf9693f42cb010065ff0154d99ecc9f54933db7d633d1a413860"
+    sha256 cellar: :any,                 arm64_monterey: "422041e7f5634ac51994edb5f7313782ad1de31b707b55eb6cf042a2a6020b02"
+    sha256 cellar: :any,                 arm64_big_sur:  "9b5b1fe680848c5c2daa8f6f636c4d926fffa87487003b30b1654f21459c12f1"
+    sha256 cellar: :any,                 ventura:        "aeba72c89d42c0f92b57054b0cb729830b9f04c544b6fc7ceef6a8074fc1adab"
+    sha256 cellar: :any,                 monterey:       "7844d321c93675aea242f5e1dc7c0e7c35c1970a3e9e0a8c3dbe0d36ae005a1c"
+    sha256 cellar: :any,                 big_sur:        "a62222cbcb8e767902d0be715b8dd43fd0b5588d1a8967a08276eb0ad116f0e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef97bf27186db785e00914f19fff87648efac9dc573a53e6a68a8e900b5c6a1c"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
 
   conflicts_with "cmark-gfm", because: "both install a `cmark.h` header"
 

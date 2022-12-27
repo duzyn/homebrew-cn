@@ -13,22 +13,22 @@ class Cryptominisat < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4ed00a60028407fdf43e94925600a48d17f17e25033699ab3a54f62bef5694fc"
-    sha256 cellar: :any,                 arm64_monterey: "a37911641a25c49ef4a4152531c93679f4c42694688d7695e84b31fd0f56df4a"
-    sha256 cellar: :any,                 arm64_big_sur:  "c30ac0d1f97c3138a1d75c8519718c38d9481237ef891a4aa9991de796db2927"
-    sha256 cellar: :any,                 ventura:        "59efec02543f565ec7edbc547b2162659f3a8802fe955d3257efa3affb038827"
-    sha256 cellar: :any,                 monterey:       "8432fed87a785122585fcbee69a3256fcb9c537cbd6d6a404d63226a5b15262e"
-    sha256 cellar: :any,                 big_sur:        "c4ff5942f8bfccf27d37065f8b010b72fca214641f20530ae4b95831e48d1826"
-    sha256 cellar: :any,                 catalina:       "ef55bbbfe712fe39128d4abbd1cf023a2b496b1e92029de0ea32ce5fb13914a2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b469605be2c28104303217c39f752079c51e887b245c306ff831ccb9051a62f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "f55031ebeb62eb54b08e6dc851bf0296d19d48b71e431f2eeb4a179590d0510e"
+    sha256 cellar: :any,                 arm64_monterey: "60015d38637dfee5ff04d9566ff52d17408cda515ee76a1cd01557c7a60ee3a3"
+    sha256 cellar: :any,                 arm64_big_sur:  "2bef2564da0b1b48add8b7bd153b3611abc839a1b555eb5ee70a290a5092f5eb"
+    sha256 cellar: :any,                 ventura:        "7bea27778e26209a1535f3b491979191e00c89f3b8710ab1bb74fc635e6ffb2e"
+    sha256 cellar: :any,                 monterey:       "b84162f9d9f5d1675fba871941bbe43f5a79558fde9928a7bfda8b1f7c0bd7a1"
+    sha256 cellar: :any,                 big_sur:        "23a2a2e8d087e591ae8702a98e1660b4ec3c407c4ded2822c7c9f27cb83b1035"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e26b0ba0ec4f574eae058ba3609e8c3bfb383a5a82fbf2ce23ef94e250266991"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "boost"
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install

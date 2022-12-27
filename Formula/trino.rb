@@ -13,12 +13,13 @@ class Trino < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1a0f1f82150a6d9a093c940a32c56c82eda585f8e7664d886cccfab59d5ed7cb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "7630a8bb10bbf459300a1d8d4c446916ece391938b27b6c92ff6ad4e6baf4cb3"
   end
 
   depends_on "gnu-tar" => :build
   depends_on "openjdk"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "trino-src" do
     url "https://github.com/trinodb/trino/archive/refs/tags/403.tar.gz", using: :nounzip

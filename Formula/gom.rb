@@ -6,21 +6,21 @@ class Gom < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "e28893dc7b44893c394b44710cfdcd49168fb5158f21a9525cd40c558258f2e3"
-    sha256 cellar: :any, arm64_monterey: "e73d7d2ba1908611f61a85f17abe510321743ca824007765d0cb4c6ec9a6bf30"
-    sha256 cellar: :any, arm64_big_sur:  "ac5b11b07edb669242f21ccb6101e2799221d1b27835b162332669ee0a2e485e"
-    sha256 cellar: :any, ventura:        "775b3f8ee8c727083fa227abc0a1f2c4197e5a3ed9e3218c61e30d0983be4f08"
-    sha256 cellar: :any, monterey:       "87d77af0920b14f4e1d0971559eb317237b2d09b3d2fc35819bbc0bcb474f3f7"
-    sha256 cellar: :any, big_sur:        "59e6101c892e9c91e17867e3f8d638be067b4b19e0160acc16126cc2a6dd32cc"
-    sha256 cellar: :any, catalina:       "fcdaca6fc63c78e7cef569c0ea13f72df16c31cfc8f04f3e3a04e8f64e578fe5"
-    sha256               x86_64_linux:   "4294c303be4c1644f12200a4760e57585a0d6186d4e42031b9d7e6e376f771e4"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "1db9a445a9ca871063b486b13569c1d40294fbc61bce2830b92bb464454a88fd"
+    sha256 cellar: :any, arm64_monterey: "b0d9c5cdb6be395f3a219b0a507a33083af49b45d67b09f53fd2a1f1854bd974"
+    sha256 cellar: :any, arm64_big_sur:  "177ec20f055b4dd60a520964535dda64c7ee7b398b01659b61b9c23044b0ff89"
+    sha256 cellar: :any, ventura:        "9e4fbb963c63ea9ce7eb29bcc44b92c0190bd0a4acdb33dce184cf25835ad7a7"
+    sha256 cellar: :any, monterey:       "8f54d9de185474a26c57d6252ded258e5964e51e4577409ab9dffa23c11d9f44"
+    sha256 cellar: :any, big_sur:        "ecf4e4b467ea8911a19be1f22291ca193e7733490a1dcce5641becc10979a63b"
+    sha256               x86_64_linux:   "985855caecd2a4af195101d0bf98fcb14553d83fbd490d40f29112b74d4394e9"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "gdk-pixbuf"
   depends_on "gettext"
   depends_on "glib"
@@ -28,7 +28,7 @@ class Gom < Formula
   uses_from_macos "sqlite"
 
   def install
-    site_packages = prefix/Language::Python.site_packages("python3.10")
+    site_packages = prefix/Language::Python.site_packages("python3.11")
 
     mkdir "build" do
       system "meson", *std_meson_args, "-Dpygobject-override-dir=#{site_packages}", ".."

@@ -17,13 +17,14 @@ class Mesa < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "3c4aa9a758e3438d51d662d28ab81ef9bf5ae061ed27d1b66f785b9da7552a58"
-    sha256 arm64_monterey: "f7fab0436d127b1b95d06999483661102bfbf4ca1adbbfd3716c38245fcb658e"
-    sha256 arm64_big_sur:  "71211f7472d1cad5d6afa36f589de42068fe1c55809ac25f14a764239ab212e0"
-    sha256 ventura:        "bf7474be76c322b07c1559a07523d5d739ddb5c42151f94fcf2ee6a4ffd0286c"
-    sha256 monterey:       "578f512fcc1ee3a2e131bf35e248f264cac3d8b6a1cc1e3f95c310a6b12a4e51"
-    sha256 big_sur:        "a3cc02119ae9630ff84c254dbd9a0e85905da8aaf0333bdad54df07b0ab5ce99"
-    sha256 x86_64_linux:   "c187824e8c4f540722f5f8f4690c657e02646e227358c9a798db291dabfffd8b"
+    rebuild 1
+    sha256 arm64_ventura:  "c422e07edf9d6c8e6cf0bda03fad16c5b489a21be6ce0e29855703fce1b4e04d"
+    sha256 arm64_monterey: "b16ba7ceb8754ee89e5bdc0e6c025dff9870f2c6974704ac85457420c6f57b64"
+    sha256 arm64_big_sur:  "c3920ab8be85c3944bf3dfdbc1a19e9595a0c65fd97fbd0b1b775ea7b3907b8f"
+    sha256 ventura:        "3a4d86156efac314b005f1ae75f183551ea183fe4ebe7f4a22a71a245a84e037"
+    sha256 monterey:       "2091bf9304f744b437cb6e7fd10d3613b10162bbc8afa03e67ce2186f92b4abf"
+    sha256 big_sur:        "49fc64220a8ed2c2de843f560507ee43796892baecf9e42499f7d2e14d0be577"
+    sha256 x86_64_linux:   "21233b1df81b6af6d7c3b0e66cbb68c068f257610428013869fc6e737b9b97d8"
   end
 
   depends_on "bison" => :build # can't use form macOS, needs '> 2.3'
@@ -31,7 +32,7 @@ class Mesa < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "pygments" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "xorgproto" => :build
 
   depends_on "expat"
@@ -87,7 +88,7 @@ class Mesa < Formula
 
   def install
     venv_root = buildpath/"venv"
-    venv = virtualenv_create(venv_root, "python3.10")
+    venv = virtualenv_create(venv_root, "python3.11")
 
     %w[Mako MarkupSafe].each do |res|
       venv.pip_install resource(res)

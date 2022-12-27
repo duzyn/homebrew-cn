@@ -9,14 +9,14 @@ class OnlykeyAgent < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c00e43816d08e4a35c6b368b7596e8e0a482012fe561adf6be6dc1249fbb364f"
-    sha256 cellar: :any,                 arm64_monterey: "f825dab0b498f6b2007308cfcff34d8de453926d0da7b8c514ec41afed5a7882"
-    sha256 cellar: :any,                 arm64_big_sur:  "32edc9902ffd6e1c674238ccd5a3d0038ae6c50a52c2ed31efebf99499836acc"
-    sha256 cellar: :any,                 ventura:        "45ac000acfc61c035025eead380496138ce0e1d7df54984d12cd8b8e654c2920"
-    sha256 cellar: :any,                 monterey:       "477402044416c31d1da81bc16a00714f85e590aaa266d283a7d8860f163ee69a"
-    sha256 cellar: :any,                 big_sur:        "eda9b51eded3e267f202fbe63b1d6e1bcb0d6ef83bf9c37193a95e9562d86c9e"
-    sha256 cellar: :any,                 catalina:       "fcd8858098a7eb886eb736ebe769366c2901dba9e7ffce25a0f140a14ef1c00a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9117a8670780f229f1e1ea0b655bdd1b8b60b563ab3236631fed150a4b65593"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "8b1478990f07e4167892411026984e2fbe4cd11ee205129af6b0bc4271a89524"
+    sha256 cellar: :any,                 arm64_monterey: "ecebecb45bd2c4dc5b1dd4b682482124738841c8268d2b2166549c165675fe71"
+    sha256 cellar: :any,                 arm64_big_sur:  "ed70622393e25248bf65f264f5d8d89a3f30a03a804b8f8f0c0fd7c23effd3fe"
+    sha256 cellar: :any,                 ventura:        "482790cf0417203e5185872b5805970becae48f3258491f2e5a487f5d94bc99d"
+    sha256 cellar: :any,                 monterey:       "b841e136896a3a1ae6dbdcee22e2c786b3dcf443e0eb33ebe018bed4436e09ec"
+    sha256 cellar: :any,                 big_sur:        "9c49e14b51e9f862585071f465dc576907114d63e3432bf4102b719708a6c43f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "164a0c8e281a9fefde4c2655b7486abc844e0e0ef5bc8c6b33bfb2d799f8b77f"
   end
 
   # https://docs.crp.to/onlykey-agent.html#installation
@@ -26,7 +26,7 @@ class OnlykeyAgent < Formula
   depends_on "libcython"
   depends_on "libusb"
   depends_on "openssl@1.1" # for cryptography
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
 
   resource "aenum" do
@@ -195,7 +195,7 @@ class OnlykeyAgent < Formula
   end
 
   def install
-    python3 = "python3.10"
+    python3 = "python3.11"
     # prevent "fatal error: libusb.h: No such file or directory" when building hidapi on linux
     ENV.append_to_cflags "-I#{Formula["libusb"].include}/libusb-1.0"
     # replacement for virtualenv_install_with_resources per https://docs.brew.sh/Python-for-Formula-Authors

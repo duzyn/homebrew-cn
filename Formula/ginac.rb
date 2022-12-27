@@ -11,16 +11,16 @@ class Ginac < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "9d60352a7f0404255579994bef0ce1495e2819f6335f40c46d08c956f0e60285"
-    sha256 cellar: :any,                 monterey:     "952b487955ae35fce8066b486f40c16d016db4014fc4fb7ade8bf2dcd9b6b681"
-    sha256 cellar: :any,                 big_sur:      "15e7374d43ad7edac36e9518b669da627a15a5e1a580be0e5a1701cea3136298"
-    sha256 cellar: :any,                 catalina:     "18993dacebeb61bc0143ff50ed72ad7ba2f4f000820e397e1f9fc075b04796d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5f3ca050e77efe63ad5f3a0327c14cac0ba7aa4a544da79b255cce5667b94cef"
+    rebuild 1
+    sha256 cellar: :any,                 ventura:      "d0d01875665d8758c7c368456a78c0efea7dbada82b24d1dd485501987148199"
+    sha256 cellar: :any,                 monterey:     "b2c0addbf423960718626d2794551a81aa0dd23b5dd51d8b3f649d7db76875e9"
+    sha256 cellar: :any,                 big_sur:      "bcacb74a4fb65f5acfeb189bfc1af3beca7b499118d1edc2df0ffb1dd0b3b16b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "78d5317a03a3245e1b603cc2c15251a6d660d9fab5cbddc3577b8d9dce9cee4f"
   end
 
   depends_on "pkg-config" => :build
   depends_on "cln"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "readline"
 
   def install

@@ -26,14 +26,14 @@ class Klee < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "638d60b7eef46f041ffffeae39a0e7f07757c421fca64f0e96ec377bf2dd3c45"
-    sha256 arm64_monterey: "72652c1a38180b7968574e054df3b358008efce1ea52122b3ddb570a8e763ad5"
-    sha256 arm64_big_sur:  "bf8d6948e59af26ca6da46ca3d0ed7d3def25a566d03130fd975e67c7de7a884"
-    sha256 ventura:        "477150560088d0f84d548c1c72097f27c22a94a3169a538235edfd618e2060af"
-    sha256 monterey:       "4cafb0953113c315d8192e8ac828b90f178d401fcf47c697524e9db90898dc04"
-    sha256 big_sur:        "055cc3545d7dc5affe40a69e998e33e1b0981ce8aacc5c1ab692665e37b0aed2"
-    sha256 catalina:       "6251ed9651c7109d3c09f136176b30df7bd99e6992db38788fa648bfe4399413"
-    sha256 x86_64_linux:   "38a68b9001974655d9d995bb06a464b4c5be5f27995668dbfc1618e6d9a7ec8b"
+    rebuild 1
+    sha256 arm64_ventura:  "0df70b3118b8400b43919f4f4164c4a824ab2808da1ee6a0229e203fc806237a"
+    sha256 arm64_monterey: "ff1484744cf2988dea68d5734f4b536a249b9dd50ecc9c8307b60096bf1a71d3"
+    sha256 arm64_big_sur:  "78a354ad5ce3ec8f36dbde3e5b7501f2166022aa9654666642260b82fe76635d"
+    sha256 ventura:        "675892a857e76870d320330ec3ba8e45cb69d3b99e6340c4f120c8c577c67068"
+    sha256 monterey:       "a875e602ad0b447ea83637ebac55103b2007b3867aa29a8fb121f1da7acd4b25"
+    sha256 big_sur:        "1f6d0a80dfc2e05ff91e971bc16b0dfc64d882deaa1ef06424353c88c7379cec"
+    sha256 x86_64_linux:   "16dd24f442b147420c04369891125483148147115899ae160f276a12d5645ff2"
   end
 
   depends_on "cmake" => :build
@@ -41,7 +41,7 @@ class Klee < Formula
   # LLVM 14 support in progress at https://github.com/klee/klee/pull/1477
   depends_on "llvm@13"
   depends_on "python-tabulate"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "sqlite"
   depends_on "stp"
   depends_on "wllvm"

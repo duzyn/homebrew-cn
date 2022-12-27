@@ -10,16 +10,17 @@ class Volatility < Formula
   head "https://github.com/volatilityfoundation/volatility3.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "43de3bc2bc05405b8e247e9fcd64cecd37d0535548f3562e55b9f44fb762442a"
-    sha256 cellar: :any,                 arm64_monterey: "cc93e32a4ee3ad7d1c8977d22069ef0bea138197a91ff0841bed691bf54a0fb1"
-    sha256 cellar: :any,                 arm64_big_sur:  "4f4f554627a116f505288bbcdb63c7bc2c93a77fb4e54d5b6ed61d6a44245267"
-    sha256 cellar: :any,                 ventura:        "1f4361f6a218d5ea1d0ecf2d196807c0cde19b2238e7e8808516e3f837c32117"
-    sha256 cellar: :any,                 monterey:       "414d6cae5aaa59d457696d89496a40190ea1c827f07382009efbff7ed59e9c8a"
-    sha256 cellar: :any,                 big_sur:        "7550e6c94464777b4b08285c27d2b4da818ce5d2e080d3f3f915dd37f4f8b2a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "587cba2f3949b88aac7f2866370acfd57513d204c4a455654ee5d2b023064a05"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "5eb86910bd938108a7988fd95b5fa6262e8e68a926d1b7eb68b52f170c37391a"
+    sha256 cellar: :any,                 arm64_monterey: "4acdf5b6ae70abb80ade5fd647ef84166f4f59514b1fa7c683959df15e4acd0d"
+    sha256 cellar: :any,                 arm64_big_sur:  "4f56832a907494eba0248c858a34a018a60811f1d930f7259e3d3bc5ac433462"
+    sha256 cellar: :any,                 ventura:        "12c2c803293597ded40374ebdec0318cbc60aeb3492360440e5a9236a6a04630"
+    sha256 cellar: :any,                 monterey:       "26ca70a1baaff8f4106b4781b434e828b8547dff66de6aab9f9599417f33f7ff"
+    sha256 cellar: :any,                 big_sur:        "ea5cf2c5fa52e0d9052ab87d191b0f3d0ae1816dcec97aea2a7357b95772fead"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7a70d3704a4d21200cfd5e47c69741c8d47a3c27e4595bcc0d73223a132dfe6"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "yara"
 
   # Extra resources are from `requirements.txt`: https://github.com/volatilityfoundation/volatility3#requirements

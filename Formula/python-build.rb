@@ -9,17 +9,17 @@ class PythonBuild < Formula
   head "https://github.com/pypa/build.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a21e7149828d16a64c9b1540b9c0dc989bddf1769843d78a74131ffeb36e0b2e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b4b0381d61627f33b73b1e21c3f89e745f80c616267ebfddfeb210d4024a678d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "57ff356c76d3ecbb2d41ce71f8421d9853e0cdf9fe97d61780f70b31b055d452"
-    sha256 cellar: :any_skip_relocation, ventura:        "6e01b3d27f694e49a168bb56e40176bd042ea3e8cce728974e7226cf59bff0c3"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f7fe9888547b102b7c0204c4439c2bd388329bff76d5be2398203ead2e8ced7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5a7a0233a8b16c3aff04fc517ac46b0474ab9c75c0eefb7e56f4db804f4e7d99"
-    sha256 cellar: :any_skip_relocation, catalina:       "3047c4c1f518addaab850e858ee2b59f39565a0ca701b4adb659d2e8b436feb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70dfe688fe0ca3c7851981d7c0bd93b8c4c18a62c9b63852eaea481beeab4e1f"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "627b7ce96d4cc4bb54072f1348a1159ce7bd93bd1909d72e0797e23822360729"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f4bad095b425f11e26daa8450d716d6d3d87a6b086fa93e746e42b2b5edca4e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f734c014c744750da9b3ff86252ccc04830b22219dadcc7705edb6e2426357cc"
+    sha256 cellar: :any_skip_relocation, ventura:        "3eef3b41a48887701c20d382613226d4b6066bf3e1149c0fe1adf1ab013b1542"
+    sha256 cellar: :any_skip_relocation, monterey:       "f687f81100265c55552369fa8da87af664b6a126570b7eb0cacc0f5d82f14eae"
+    sha256 cellar: :any_skip_relocation, big_sur:        "63acd4ceb75a08030b0be6868d99e5fb27f10397601161b107ef0be218a28601"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "547a0ff2639a4eddba12c058af02c73b1df8a63c46f316005c756a76fbb8a82d"
   end
 
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
