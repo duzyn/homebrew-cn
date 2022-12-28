@@ -1,8 +1,8 @@
 class Tree < Formula
   desc "Display directories as trees (with optional color/HTML output)"
   homepage "http://mama.indstate.edu/users/ice/tree/"
-  url "http://mama.indstate.edu/users/ice/tree/src/tree-2.0.4.tgz"
-  sha256 "b0ea92197849579a3f09a50dbefc3d4708caf555d304a830e16e20b73b4ffa74"
+  url "http://mama.indstate.edu/users/ice/tree/src/tree-2.1.0.tgz"
+  sha256 "0160c535bff2b0dc6a830b9944e981e3427380f63e748da96ced7071faebabf6"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -11,14 +11,13 @@ class Tree < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "58c55a2893660f39cd4d4942ac8a409ef7fb83c5042773cefce37fbe0e0c300c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa8eb457cd23554cbee29e9527287eb482a995d4b82a96e70c20424ea992394b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ff0bfbe9dcc7108e646741181900f1947d52dc60aee229fc9d834bee0ae3ac80"
-    sha256 cellar: :any_skip_relocation, ventura:        "276d130d97d33a4854b4a60c6fb25166dd0d1614b3d9bdea282b29ff0a4a5750"
-    sha256 cellar: :any_skip_relocation, monterey:       "189103af15d87e1f5fa07a47d4050d070629e99f299bad5dd9ed54c4289fdb73"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c96432f421c19d06bec2a01e0d789334a01db4c04a21ae058cb745203ea75f79"
-    sha256 cellar: :any_skip_relocation, catalina:       "f58be945558f3c5486581f71aeba7d9599227bfdd1c06651b3d3639cb655ecbf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8431d98c7898d6bab60b9d6a221f9cb694e35ce9f3ef0e094d6939eeb11ac2e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4488b659e08f179e364d7aab216a2b3ba5ca7b6fbdf6340b25d5cb82f9d144b9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7216dc9c7045dbc750c4d60f327c4576a48cde385e2644797aff03204a27707"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7197e3488411d6b4c2cdbfce381b6ec1bc1aa5f808be85184e18d50bfcc51a59"
+    sha256 cellar: :any_skip_relocation, ventura:        "7c41f6adcaae20c33bc99b7692bd82ef00a4f6fc7a469b120bf392956ab5d96b"
+    sha256 cellar: :any_skip_relocation, monterey:       "870fa02168b6959d6191cb6e339cfe871a95f6094e7bdce7d03bf7635ec58e92"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1064bfd862c2c4a33923fac8aa97de469179eaf0a963709ccc9731f4d2a37d9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "296287c122d9d2424de76e22498ca04050a08ca3ff595ed32c3ee9123c0b818f"
   end
 
   def install

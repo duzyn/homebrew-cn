@@ -7,7 +7,7 @@ class Mavsdk < Formula
       tag:      "v1.4.9",
       revision: "163601d81313d8e11a6c25559ef77bbd7338517a"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -15,14 +15,13 @@ class Mavsdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "feec9e38f4d22f9309ea319a59b13d791add7d497cc07f96d58626f9970bf948"
-    sha256 cellar: :any,                 arm64_monterey: "753b9a25853c911a35c4dc763b04ced28134d65ab073cbee90e23b975671576c"
-    sha256 cellar: :any,                 arm64_big_sur:  "95ece7c1f37ce55b84b4ccdce46ae7326c190cd626e61d1e6e6b155aaae4ef79"
-    sha256 cellar: :any,                 ventura:        "2997598f06b4be95e10c8b5f65bd7d4c6ffc18e7bd38d505296cd222e547f611"
-    sha256 cellar: :any,                 monterey:       "74b5bb3fc9e05a7cc94f193a62b1164a1e2cbf6582595683749e4e77f9b26ef7"
-    sha256 cellar: :any,                 big_sur:        "34d04e695486d97e8ac06eabdda839b23fe6cedabfc17d36e14f053313a57527"
-    sha256 cellar: :any,                 catalina:       "560ae18b34eb192628a1be20db35702fa9765ce07275895c78b266ec91bcccea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b3f77f54bc43f8993f63e01887a5d2ad8aa4d2fc3432e97a23b7ed280205db87"
+    sha256 cellar: :any,                 arm64_ventura:  "c700b2a605af49df3122bb4bc2c52a2e53188560b3c93e376ef99b348150051c"
+    sha256 cellar: :any,                 arm64_monterey: "724ce2d13cd8d099b1b06c923e73a6218aed728fd50a6038f635ed71ca595d2e"
+    sha256 cellar: :any,                 arm64_big_sur:  "259840031ddab2173417aae364aed184139dd73dcecd884c71634539ef4ea869"
+    sha256 cellar: :any,                 ventura:        "e61e4f0a97b059e82823eaa5fad9840263c3bff62fbdf9e72514326dfffaf06a"
+    sha256 cellar: :any,                 monterey:       "260cd71e9ccd3d3ae819270939b3570bbd54f2c9000b6a6141b120108cba58ab"
+    sha256 cellar: :any,                 big_sur:        "57b676e03a624a433e9bf84117ad518e6a851c17fe3249a3cef8a61c33df9eb3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa7ebf473ae866b7407dd2d4ad75b53a8947f755a50560e2a1741e28dcccc3e6"
   end
 
   depends_on "cmake" => :build

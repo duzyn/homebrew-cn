@@ -4,16 +4,16 @@ class Ipmitool < Formula
   url "https://github.com/ipmitool/ipmitool/archive/refs/tags/IPMITOOL_1_8_19.tar.gz"
   sha256 "48b010e7bcdf93e4e4b6e43c53c7f60aa6873d574cbd45a8d86fa7aaeebaff9c"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "eedcd4c1fce5ff3dabb6dc2ec82edb04d21a1d14d2174976719403e2b8c92f38"
-    sha256 arm64_monterey: "dd6910b46efcf9ff2c57a613204ef21f0c0c51a3aeea353d270824edc8e51d60"
-    sha256 arm64_big_sur:  "ead2f3d6123ca51af690637b4b9a9820bd2c3ce6d9ce2e837c3970fe6bafc2f0"
-    sha256 ventura:        "176c0d710be65afe8949ddb016bdf86c7829e476f06efc49a435001e6d73be8f"
-    sha256 monterey:       "c54b37fb1277bf5bea3be2ea71644864ab8abfbdbe9ab37e27b875116089d439"
-    sha256 big_sur:        "0cc29edd4db4889608169415905299c268dfd44698734a529fdf616b560097a3"
-    sha256 x86_64_linux:   "ed7f7643e9d022a4ebc674018b9ac1731c6bc03fbb3943d6d13e6820ea55a84e"
+    sha256 arm64_ventura:  "a3862eb5a4f8f401f21f61585a6a51fd5c08a6825876122179c3286b68843943"
+    sha256 arm64_monterey: "959def316be5f337341d13fd2225a7ebcafd775749d2fcde8ab23160de83e5c8"
+    sha256 arm64_big_sur:  "3e711528ae7df03c387e4a25093e202d846ec2c11ab26b85f581abf24c20b3c0"
+    sha256 ventura:        "d4b39179c103c299d23ca95a156f2ef009c37d335f9df30457a984b2579220a1"
+    sha256 monterey:       "05de9ad2b49826138bfa4c777358af766bce8d80c4aeef3c59d072d9e8240c4b"
+    sha256 big_sur:        "2e7da2c2ebe7ea60e20dd6aacfec261ac648a1eba952ea91536a0901bb4b6e05"
+    sha256 x86_64_linux:   "a0a993a436ef12c14707d60293d37233dd90e0e80909c461f262c19874951d32"
   end
 
   depends_on "autoconf" => :build
@@ -23,6 +23,13 @@ class Ipmitool < Formula
 
   on_linux do
     depends_on "readline"
+  end
+
+  # fix enterprise-number URL due to IANA URL scheme change
+  # remove in next release
+  patch do
+    url "https://github.com/ipmitool/ipmitool/commit/1edb0e27e44196d1ebe449aba0b9be22d376bcb6.patch?full_index=1"
+    sha256 "c7df82eeb6abf76439ca9012afdcef2e9e5ab5b44d4a80c58c7c5f2d8337bc83"
   end
 
   # Patch to fix build on ARM
@@ -37,12 +44,15 @@ class Ipmitool < Formula
     system "./configure", *std_configure_args,
                           "--mandir=#{man}",
                           "--disable-intf-usb"
-    system "make", "check"
     system "make", "install"
   end
 
   test do
-    # Test version print out
-    system bin/"ipmitool", "-V"
+    assert_match version.to_s, shell_output("#{bin}/ipmitool -V")
+    if OS.mac?
+      assert_match "No hostname specified!", shell_output("#{bin}/ipmitool 2>&1", 1)
+    else # Linux
+      assert_match "Could not open device", shell_output("#{bin}/ipmitool 2>&1", 1)
+    end
   end
 end

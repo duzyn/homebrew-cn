@@ -4,17 +4,15 @@ class PyqtAT5 < Formula
   url "https://files.pythonhosted.org/packages/e1/57/2023316578646e1adab903caab714708422f83a57f97eb34a5d13510f4e1/PyQt5-5.15.7.tar.gz"
   sha256 "755121a52b3a08cb07275c10ebb96576d36e320e572591db16cfdbc558101594"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_ventura:  "6953bbf53e0815b53c6972c436daa4d75ca1bbb1e2c6b0c437848ac875d40139"
-    sha256 cellar: :any,                 arm64_monterey: "e1351de5c10e0064a0e576002c59d3d69b7017275f0989f268cf1e419abd91df"
-    sha256 cellar: :any,                 arm64_big_sur:  "b3ef127911d0be14aa1917e53ad06365680c686fc148bccf0fd9d3e45ba5bed8"
-    sha256 cellar: :any,                 ventura:        "686dd9b8390b87a8df634484063174bbc1c0309f154f62dc19ff810e082cd28f"
-    sha256 cellar: :any,                 monterey:       "13ae8893173ea6a7ed64bd2d49ce50b3f9a52c45b6648cde607a7007a674ceaf"
-    sha256 cellar: :any,                 big_sur:        "090ad920ef00f85f92d5d6d5f9c66ab1d24fe43208a9cb33e15de26c9e171e4c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "731f5031b417d938f1497549ec1a652163671d69875ba38940e29255748eff6d"
+    sha256 cellar: :any, arm64_ventura:  "3e36ecd411d274f6c728ee7be982673d8a843795909a1e6a7294a9c287445292"
+    sha256 cellar: :any, arm64_monterey: "65d02cc59037ca2eb5dd5ac2d5e19fb46debba9a4b418764592b1cec2fdf0975"
+    sha256 cellar: :any, arm64_big_sur:  "054b7a3aac3ae4030c2989aca8120e97aa347ac8a8341add5b3358a298fda543"
+    sha256 cellar: :any, ventura:        "6f3b970bf51f05674d2d7e3a50aee7cd2fe8e68e36d2167781714579d9412d7a"
+    sha256 cellar: :any, monterey:       "d42f26eec225db2710a8e29939d04ab779b3487c7bc614db576c5d44110419c4"
+    sha256 cellar: :any, big_sur:        "08f088f6a293b8f0246afe3d25142e0d1faf43012d876bd500b979bdcdd9aca3"
   end
 
   depends_on "pyqt-builder" => :build

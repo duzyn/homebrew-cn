@@ -2,8 +2,8 @@ class Pytorch < Formula
   desc "Tensors and dynamic neural networks"
   homepage "https://pytorch.org/"
   url "https://github.com/pytorch/pytorch.git",
-      tag:      "v1.13.0",
-      revision: "7c98e70d44abc7a1aead68b6ea6c8adc8c554db5"
+      tag:      "v1.13.1",
+      revision: "49444c3e546bf240bed24a101e747422d1f8a0ee"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,15 +12,13 @@ class Pytorch < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "d57efe34670fa32cd8e01d805ad3464c6a19e2d8dd36e55cc63aac2f3a780c8e"
-    sha256 cellar: :any,                 arm64_monterey: "a12968f1df7070107bf6d271858a5a7415fe42c0b570ac1fc969cd2683cd6780"
-    sha256 cellar: :any,                 arm64_big_sur:  "8637fcdc0ed320f328f94625bcbb87769d2a6802734ff88d4ffd79b5b8a70da5"
-    sha256 cellar: :any,                 ventura:        "425ed374e5d21a1b299a9c4d7c391a4ef731868a7873124794019dbdf92527fb"
-    sha256 cellar: :any,                 monterey:       "d20c43be3d583b7fdae31c58e64549314066b8b5248dda130ce1ec83060e9412"
-    sha256 cellar: :any,                 big_sur:        "349d106bc09f3c83185278d191ddb13cccaa21349d797f408398e2940ea9b8d1"
-    sha256 cellar: :any,                 catalina:       "a61996b933e1dda4d5ae5519f89d5284d8e0054c95685fc2325a97b58c0dd5cb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f95437daa1de22c5e368ec54c568d99948d1ecac4ca0497de61726bfdead8d87"
+    sha256 cellar: :any,                 arm64_ventura:  "5139d39a8bc2e721af73787687fd57e2f39017960191f22de88038f4820bdd55"
+    sha256 cellar: :any,                 arm64_monterey: "7b04d178d047d55137f46cc164b47901699fcde6357b74f03334d02dc44d8c5a"
+    sha256 cellar: :any,                 arm64_big_sur:  "a29db0d739aa9849fbc4857b2847d1bc2e037fad7ac6fbfeae2a988d5f0d28ab"
+    sha256 cellar: :any,                 ventura:        "029a733db1b0c93e777abeca9f52c36727173d02be6b5d74e00c382566c47141"
+    sha256 cellar: :any,                 monterey:       "1a31ca6185596ee605c15ecfe00e2511c6e0391043905ca92b134cb0b07da1e6"
+    sha256 cellar: :any,                 big_sur:        "31cfa153c51968a39140ff49dc9944b3c6c86d7bcc6ba17b53cb0fc74cc1c8ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f176777a132f2a4130808106f812d620694cd89b5ee49036f8826a9eeba4bbff"
   end
 
   depends_on "cmake" => :build

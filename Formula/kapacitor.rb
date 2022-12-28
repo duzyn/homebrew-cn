@@ -1,11 +1,22 @@
 class Kapacitor < Formula
   desc "Open source time series data processor"
   homepage "https://github.com/influxdata/kapacitor"
-  url "https://github.com/influxdata/kapacitor.git",
-      tag:      "v1.6.5",
-      revision: "c6c917f3097573544574ae94b5ef955a15256772"
+
   license "MIT"
   head "https://github.com/influxdata/kapacitor.git", branch: "master"
+
+  stable do
+    url "https://github.com/influxdata/kapacitor.git",
+        tag:      "v1.6.5",
+        revision: "c6c917f3097573544574ae94b5ef955a15256772"
+
+    # build patch to upgrade flux so that it can be built with rust 1.66.0
+    # upstream PR, https://github.com/influxdata/kapacitor/pull/2738
+    patch do
+      url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/58a8918/kapacitor/1.6.5-flux.patch"
+      sha256 "6b03f69d4139ecfff128e7eac088b73b6b11ef395451e44ee33c2e7556661fa1"
+    end
+  end
 
   livecheck do
     url :stable
@@ -13,12 +24,14 @@ class Kapacitor < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e40884fc0f9453623c7acb5775d2e63500d81549f123fb2a48ac56a6534a31ad"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "270cac65a587f1d9be201f73951c905cca220b7f7ce807f1e17e0ad80668af66"
-    sha256 cellar: :any_skip_relocation, monterey:       "dc5738e2c215096b421ee41f7db720be7362fc3a7c0ee2f47e575a2e86f6a608"
-    sha256 cellar: :any_skip_relocation, big_sur:        "454fdcd9e6221286fb3b18a190ff01aed837d34c4748889c052189dbf4ad65ba"
-    sha256 cellar: :any_skip_relocation, catalina:       "f2f53c7ef7208fa54647a40531796db0c81ce672601ddff540e8d228f99169de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ed7adfefaa20584664fcef3e78c321adee86c99c1a8057c8ba22e21cc1d6390"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "62c05530b155bd534dcd90307e6b9a97fcd1362676445bc0be20742c9c84b6e5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c2d49decdd41316be57ddc4799601326dd6095e528166710f7bd2421481d524b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2d6d31bb54ed021f254369a6049979320c140433c158e89d1f9bccd192b444e2"
+    sha256 cellar: :any_skip_relocation, ventura:        "246319fc10189a78c5be006bb495bea5e7d12e0d9b38fd4d59d70fc630cfdd5a"
+    sha256 cellar: :any_skip_relocation, monterey:       "20165171837847b780947b538d4c57b36ef5a666cd7d0ec8a1e7e402a189ad5a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d410845651584e1963bf4d21fc273bc7af38a3c21eac2cb00cc06cbd9047697e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f15abe375947d818bb16a295faecdb42ee084dabc3b84b0d80af61935d602ab"
   end
 
   depends_on "go" => :build

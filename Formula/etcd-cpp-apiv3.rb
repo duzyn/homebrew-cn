@@ -4,17 +4,16 @@ class EtcdCppApiv3 < Formula
   url "https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3/archive/refs/tags/v0.2.9.tar.gz"
   sha256 "6874643b511a01656b4e4bc9805f911630963718f05807cbebc4b1c8bfb0fdc6"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c2ca7f7d6163bd00085cff6c638aaaeeab6d5c989ab5cfc2fc8cd1d5fa265207"
-    sha256 cellar: :any,                 arm64_monterey: "52d5d1efe7cea26e46fa2e6c480f975b608fdd286b9553ac1999e9bae9d9a1b5"
-    sha256 cellar: :any,                 arm64_big_sur:  "f43bc27d5097934575234a84b2ba06d3d5d7e99a82a20bcb80fdf847ad5ffeba"
-    sha256 cellar: :any,                 ventura:        "709fb5e6ec697880224ca2426b44d3886b0fd5fa9aeb1ad2be0c079f5c22f36d"
-    sha256 cellar: :any,                 monterey:       "5d6691e57d8e8b1c41c97e4b5bb8b69b39c984e4befb62f6075b78c893ca541e"
-    sha256 cellar: :any,                 big_sur:        "077dc3cb57e5caa7ab246f36f47dcec2104e952d10622708d0bcf393f4cfbf66"
-    sha256 cellar: :any,                 catalina:       "674d32fd9d883ebef3d1b13710cf68982c7c5b7c8d7a6eeb3fcb34e34e989e31"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "46c11b600e4eba310d11d07b5ca101b08bfab8bae3f70749ea280e41810c4c18"
+    sha256 cellar: :any,                 arm64_ventura:  "dba0bca072f1ba311ff407a0ea31360e1d20d3d7b8816429eabb65630347fb09"
+    sha256 cellar: :any,                 arm64_monterey: "79d67acef46cec73cd944b0dd0a61ef221039d3dd43b28b1a8cb1576683a796e"
+    sha256 cellar: :any,                 arm64_big_sur:  "0ed07b8475a2e7f90e8461538428d374c627babed503ae91815e9576f4282844"
+    sha256 cellar: :any,                 ventura:        "2a9a45c914536f48b65de3a638c1c1af42137abccc4853009d48bff53f72a9b6"
+    sha256 cellar: :any,                 monterey:       "5222a9b9a0164462a0477778134556ccc8229deb0981b04672c51095b29d9d79"
+    sha256 cellar: :any,                 big_sur:        "0333e1eb8999e77037f06ea0d18d0d2b4a36d23140c307d6a0516582fd916c76"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "537d2784d8fa29b8f7673086214c75d2392443acbdffe83669cd6b79cad382d3"
   end
 
   depends_on "cmake" => :build

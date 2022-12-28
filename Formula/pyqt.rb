@@ -4,17 +4,15 @@ class Pyqt < Formula
   url "https://files.pythonhosted.org/packages/b2/c9/266b12a9826452e387f0ff4f0b4bbd29e11d2de81a5f60c0975933b34e7f/PyQt6-6.4.0.tar.gz"
   sha256 "91392469be1f491905fa9e78fa4e4059a89ab616ddf2ecfd525bc1d65c26bb93"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "dd74b1403a2fecf21d5c971e3f3c806933f709ada16bbff2e932de2585a20874"
-    sha256 cellar: :any,                 arm64_monterey: "6373237ca91cfb86b5e31a491d43fa55afef94379d9a847a9ad4f4d5ee3f52fc"
-    sha256 cellar: :any,                 arm64_big_sur:  "171fb15a9d6d76cd2eddd244d687c403e66f291adbe40e734c795069e618f0b0"
-    sha256 cellar: :any,                 ventura:        "7aa823980c68d09760c99f771ad370e241c59db30f37af5a865635cd3804acf3"
-    sha256 cellar: :any,                 monterey:       "aa0fa1418472627c5d00e1d9dcb3a63db243b27601d818fc0984bb121f1d8fce"
-    sha256 cellar: :any,                 big_sur:        "2c9e14ab68ae0e0cdc7a3806d4d158f45883e07deb6489933c6df8fb8485b724"
-    sha256 cellar: :any,                 catalina:       "9ff0bf8055f3d1d0170959cda2a294cc49701a42eba35176c0bac65e785e4207"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f77124341477a0c2b065dceb69c2f82bbd8829e9df1089b7d9b4130cb1fc64c4"
+    sha256 cellar: :any, arm64_ventura:  "fd1773dedf980b58840d1d66fbe867b63c06bc7f61e00795305db6adf82cade1"
+    sha256 cellar: :any, arm64_monterey: "1efb502bba7dbec1a2f6c86e167714a9a2be18589af7cf9e9573492f833c3fe4"
+    sha256 cellar: :any, arm64_big_sur:  "973c1a7c7a224090192f9e4cf5e1d12c3df8685db3b22ea1262832f74ff8ea42"
+    sha256 cellar: :any, ventura:        "652ebd076fdb74aeff95d9986c74cb78fb658b3d1ee0780324f8d15a172670db"
+    sha256 cellar: :any, monterey:       "2b0eb83e40040268b47be2cc5116ce5be783dcbab9eb74f08c78c17370bfe312"
+    sha256 cellar: :any, big_sur:        "bc26595d591a92dfc503c9e90f488f8b16a3514292400541cae1cce775762c57"
   end
 
   depends_on "pyqt-builder" => :build
