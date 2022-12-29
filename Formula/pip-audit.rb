@@ -3,18 +3,18 @@ class PipAudit < Formula
 
   desc "Audits Python environments and dependency trees for known vulnerabilities"
   homepage "https://pypi.org/project/pip-audit/"
-  url "https://files.pythonhosted.org/packages/15/0d/25bda39ed4ee0f917fd2647a27df68780b6a772772a0bb4f69849d960c64/pip_audit-2.4.10.tar.gz"
-  sha256 "c5fd9e97b9c87902539524c96d526fa8c89bf6afc11313eb2b296c15f8cb37a2"
+  url "https://files.pythonhosted.org/packages/5c/af/fe405683296ed25d2a71c474594e6da8bc8685c269525c61c78128327439/pip_audit-2.4.11.tar.gz"
+  sha256 "d871c0ef9e8c4c5b76a8c399b45db9654d8727d856fe4ac9d31101c70e310a2a"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d7be562b52db979632ad0f549d2ebb2e9bc42f0bcd82d8938b9874a23369e65b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6dc2cbd15ca236450a86247580eb0530c3e6ce73ff457a83fde360acee759f8a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "12970a8c146f6ef941fd0313e35627bac95cd9e41bebb0a485631e2b2e489689"
-    sha256 cellar: :any_skip_relocation, ventura:        "a6f206cc9cd780d071751443856e8eaadb755fd9da7f93b37516ab9096ceb04a"
-    sha256 cellar: :any_skip_relocation, monterey:       "eca7b36aa5445204258a1424d6c6ffa25515ce151122cef5204c85a057f2f691"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a3f9fa83d41868d4299cfb6e2e61ee0522ae35e10b5bf30129dcdcdb252bb82c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f17b57d3c4cecc932acdb8bac08adf52277c26932f5ec1a19e92286a96ac4253"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b7c25baabdb80ec830f5f1b63bba24651159dc838253720059be66e0a6058521"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c8c57d7bccc35d97cb9e533031bc578330268e55ee7c81495e396ee815b2649a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f8183d0f81b3ead13d9e109f34317254d708551e4431dc541861cd79cf6b3b48"
+    sha256 cellar: :any_skip_relocation, ventura:        "246df120722ae3a4a9779646a7cd05f59698c18acda259559c4b1c5c893a27c0"
+    sha256 cellar: :any_skip_relocation, monterey:       "42d86c9d2cd53503c1cea8290eddf73b83f32c1369f014772eafc3fd4d6e0e78"
+    sha256 cellar: :any_skip_relocation, big_sur:        "14cfca7845c4979b18a819db4ae21d38af6e27f27478bcd404e4d175ca44a94d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2196fd33c32b192474b3fc9a6c1fbe78e680cc70e8b354043171e785ec28e41"
   end
 
   depends_on "pygments"
@@ -47,8 +47,8 @@ class PipAudit < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/d8/73/292d9ea2370840a163e6dd2d2816a571244e9335e2f6ad957bf0527c492f/filelock-3.8.2.tar.gz"
-    sha256 "7565f628ea56bfcd8e54e42bdc55da899c85c1abfe1b5bcfd147e9188cebb3b2"
+    url "https://files.pythonhosted.org/packages/0b/dc/eac02350f06c6ed78a655ceb04047df01b02c6b7ea3fc02d4df24ca87d24/filelock-3.9.0.tar.gz"
+    sha256 "7b319f24340b51f55a2bf7a12ac0755a9b03e718311dac567a0f4f7fabd2f5de"
   end
 
   resource "html5lib" do
@@ -72,8 +72,8 @@ class PipAudit < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
-    sha256 "dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"
+    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
+    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
   end
 
   resource "pip-api" do
@@ -82,8 +82,8 @@ class PipAudit < Formula
   end
 
   resource "pip-requirements-parser" do
-    url "https://files.pythonhosted.org/packages/b9/23/521b47a48e8d0a66e9cb15d25279381efbda8e2e474d04018d577e677c7b/pip-requirements-parser-32.0.0.tar.gz"
-    sha256 "5159b8a9485a5a0d0254a29c9bd8b8ce66db2eb9a1a0244c64dfce43f7f2ac90"
+    url "https://files.pythonhosted.org/packages/5e/2a/63b574101850e7f7b306ddbdb02cb294380d37948140eecd468fae392b54/pip-requirements-parser-32.0.1.tar.gz"
+    sha256 "b4fa3a7a0be38243123cf9d1f3518da10c51bdb165a2b2985566247f9155a7d3"
   end
 
   resource "pyparsing" do

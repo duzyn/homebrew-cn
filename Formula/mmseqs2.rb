@@ -8,14 +8,14 @@ class Mmseqs2 < Formula
   head "https://github.com/soedinglab/MMseqs2.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "69eddbc8bbd532b6b148040bce6674bc820be9c26f9fc823b64b6bfae173c8f9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "53e08229adba4c2ec39c92cb25e5a4b2ad1c752aa1db17e3dc98b0b833990e91"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "156945f3cc008daa1bab32387caf5549d494c324947d27bf854a078b551763fb"
-    sha256 cellar: :any_skip_relocation, ventura:        "382f39752114e7a76009376a4154a2a3214624878cb6948f8e6e2bdd853352dc"
-    sha256 cellar: :any_skip_relocation, monterey:       "fbf2cbc58838ccc85bab387fa504b97eedf276f4f85c8661491e657cb5fbfdd9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "09c83c072c409fe05bd901a1ea2fbef1bc0ee585219b13f92986619c5dbf0431"
-    sha256 cellar: :any_skip_relocation, catalina:       "59a314a3ef4f816a19e129675b492e57c92747f2f25f6d4434a8bd14b933d2b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "73a3864b001a5703da8513ae515ac4de292200e555ed234af60aeab647528d9c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "67ab6bae6d53d0ae65dd6a49f0d5dbe57eacf817ce7c0d684b8b54b845d1af61"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "17c64802df51661ae64fab38d1ef34d6fd5764b22fb0b9d741c5e67f713593f2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "efe40f0e8d4ffa862f09aec630203447d41f4d3a568e8639a7b9443367f7f2c1"
+    sha256 cellar: :any_skip_relocation, ventura:        "bfd8aa126d8adce2baa635fd49378f41f7016aef8a1d5f4039b5c8487ea330eb"
+    sha256 cellar: :any_skip_relocation, monterey:       "a204fe616c7f2daa544a27354cc2fdfa3d887a6fa7e5b46dd3b6082881bc0d41"
+    sha256 cellar: :any_skip_relocation, big_sur:        "89e1fcf1aad609ac81b1c6a739ae2f27eb507c374409a26f9a5b3ead1a4036a3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5915a38fefb90dd7ed9922354b9842a27c843536e318067937112b2f34959b29"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -69,7 +69,9 @@ class Mmseqs2 < Formula
   end
 
   def caveats
-    "MMseqs2 requires at least SSE4.1 CPU instruction support." if !Hardware::CPU.sse4? && !Hardware::CPU.arm?
+    on_intel do
+      "MMseqs2 requires at least SSE4.1 CPU instruction support." unless Hardware::CPU.sse4?
+    end
   end
 
   test do

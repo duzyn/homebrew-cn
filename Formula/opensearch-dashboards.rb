@@ -79,7 +79,6 @@ class OpensearchDashboards < Formula
     EOS
   end
 
-  plist_options manual: "opensearch-dashboards"
   service do
     run opt_bin/"opensearch-dashboards"
     log_path var/"log/opensearch-dashboards.log"

@@ -2,8 +2,8 @@ class Colima < Formula
   desc "Container runtimes on MacOS (and Linux) with minimal setup"
   homepage "https://github.com/abiosoft/colima/blob/main/README.md"
   url "https://github.com/abiosoft/colima.git",
-      tag:      "v0.5.1",
-      revision: "fc2ffc3175aa073ba724eb491ec851a154b894da"
+      tag:      "v0.5.2",
+      revision: "6b5b6fe0540e708f0c9d6e8919fab292c671fc72"
   license "MIT"
   head "https://github.com/abiosoft/colima.git", branch: "main"
 
@@ -13,13 +13,13 @@ class Colima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aba67ae748927b4b9c5308ce021c0a37ef1b724275446840f3b0fd1fd9fc90e5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f550554789f2c861bf2ecfe821c8592a0b6251dbea925016193302cc920d60e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d6cdfc0feeb51c26fe082316a44cf42aae115fe91f160227fb685521f308b516"
-    sha256 cellar: :any_skip_relocation, ventura:        "dda85b88aa79522167bdd0da49fc02868bc642755f8c66ee02cb0f3e5a76bbb0"
-    sha256 cellar: :any_skip_relocation, monterey:       "f6e25d74cd8f879b4eea097037fe16ac053f56f365afe2ee509ec6d84003cacf"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0c11211eb326c92923e17a6a5685c5ed369d037f9f98ed29d56bd3af8db91739"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30c20b6c6d7fe4f0acce1ed8fe3096a21d7f7e34e62e7b3f692b7af4b5de9862"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a4ade25de36986bdc514d90ff091638fe5797c3603b76173080109986295db11"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e07e057afdcc05b6dc4a4ac58ff19a89f1561e5f922bbfa45456a033ae63e70b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e4979ab219d11cb0e5d6b8c1787679ee6da3c88b875fb3f80173b1f42022d27c"
+    sha256 cellar: :any_skip_relocation, ventura:        "f5390dbd17ffb7c20d8868c9699b584ab9f00b3558184ffeaa450d12368697e1"
+    sha256 cellar: :any_skip_relocation, monterey:       "e6d84c79bfdff2a9485f53e408241c00c7ca9d98425fbda97347928c1db7fee7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "98c4349326d2c021175ad8c0d0f845539060c6efd707d00be68b0d05e6f23bed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82d8068df862a13166132196d3db51e144f3c45ecae29864dcd6d911e4a89d07"
   end
 
   depends_on "go" => :build

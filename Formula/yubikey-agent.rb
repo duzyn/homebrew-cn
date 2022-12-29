@@ -1,22 +1,19 @@
 class YubikeyAgent < Formula
   desc "Seamless ssh-agent for YubiKeys and other PIV tokens"
   homepage "https://filippo.io/yubikey-agent"
-  url "https://github.com/FiloSottile/yubikey-agent/archive/v0.1.5.tar.gz"
-  sha256 "724b21f05d3f822acd222ecc8a5d8ca64c82d5304013e088d2262795da81ca4f"
+  url "https://github.com/FiloSottile/yubikey-agent/archive/v0.1.6.tar.gz"
+  sha256 "f156d089376772a34d2995f8261d821369a96a248ab586d27e3be0d9b72d7426"
   license "BSD-3-Clause"
   head "https://github.com/FiloSottile/yubikey-agent.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f21dcc01bda26df3b7ba24520478c527cc0670f1da10f02eeff7e7a43dd1c9fa"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "be5cb10b00b668117f846d909914b119313ba79f9d0a7170c81b471f775aeed9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d00bf8d22edfe56f5352e59ff3c72d91e98dcf64d4acc3d1c7a5edbadd61402d"
-    sha256 cellar: :any_skip_relocation, ventura:        "aed889972c0513e793fb17d4750d0bba936463b9d710d142e6770f24ebf0e516"
-    sha256 cellar: :any_skip_relocation, monterey:       "d5c58965efe5beed36e7927edd81cf15446015ddf05a6e35dda1ad7e7c1b8ade"
-    sha256 cellar: :any_skip_relocation, big_sur:        "29df3472e1a5e57ed20f54cef3a5c4e87662e5c64f55338b01239741795447c3"
-    sha256 cellar: :any_skip_relocation, catalina:       "4e7259eeb5ddd924251e7c73f6ae6904804193e4fee4d49e95fc02f211d3ac2e"
-    sha256 cellar: :any_skip_relocation, mojave:         "bf031ee9b131fa3646b624bb6c84a0fc5b02f3abd6b693c5d5c488e58bb4e89c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb43a6764a9caa2c39fba8bdd5ebe79c677923b004f8c2280213bb4afc298d17"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "16fbb36f3bab79726c96cfc94dfda3aaabe290a8c72f5a73dba3d76cee916ee1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "028f45f8152045bbb98ddcac5ad41a554ee3a809e6e89cf76519b7b61e049243"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "408049a241d52174c985883c037422d9deac1596072a8aa6afdc59a1e4e8e437"
+    sha256 cellar: :any_skip_relocation, ventura:        "9f4df13a79a921345e33da19009cd6a15c0371cfbec2a69875072ecc14ad116a"
+    sha256 cellar: :any_skip_relocation, monterey:       "0908727c1be05e84776c37cbabdc38519882a1ddc9fe5faddfe60ecf9442bdc2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "16270ab84fc500f9ca17817fd35f783c5b272266e4abfaba79c8bc40e0a36cee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee44c531db48e87a1f5fdd6f06159d37b4ae2877d80440ca3e437fdb4ec80e58"
   end
 
   depends_on "go" => :build
@@ -26,13 +23,6 @@ class YubikeyAgent < Formula
   on_linux do
     depends_on "pkg-config" => :build
     depends_on "pinentry"
-  end
-
-  # Support go 1.17, remove when upstream patch is merged/released
-  # https://github.com/FiloSottile/yubikey-agent/pull/99
-  patch do
-    url "https://github.com/FiloSottile/yubikey-agent/commit/92e45828da1c33531f507625f41e3bdadfe3ee86.patch?full_index=1"
-    sha256 "605503152d3ea75072a98366994b65e4810c54e3dc690d8d47b9fb67ef47bd4d"
   end
 
   def install

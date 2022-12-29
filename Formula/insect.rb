@@ -3,19 +3,18 @@ require "language/node"
 class Insect < Formula
   desc "High precision scientific calculator with support for physical units"
   homepage "https://insect.sh/"
-  url "https://registry.npmjs.org/insect/-/insect-5.7.0.tgz"
-  sha256 "3add7ce952b0cbc4138986cbe0764767939f71ce4fb1898dd487f42ad17dbe09"
+  url "https://registry.npmjs.org/insect/-/insect-5.8.0.tgz"
+  sha256 "720a7d8d105882d6d6aea4030151cc7cc8284187ce29a87d746fa0a3d9b3f22e"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "12957ef1b3a3bbeec2445ae22d8277f82afd8fcea79dadf810cd78d0025d864c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a8a99e43f97ba135beb8299d903e8b37e932bb9bb38c8f7c0626fa7015b0099"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "96e11f28d24dd5050085aef60bbe72791ca77bebeeb8b1db91eb13960f43507c"
-    sha256 cellar: :any_skip_relocation, ventura:        "dd987cc15518b798f40733f7c6877a9c620b385fe0feff54a4caa98bc33529b4"
-    sha256 cellar: :any_skip_relocation, monterey:       "7aa86a55bde309754bb5c4118368f5a1def6a99e4752d94d55430d1fbd9f5c70"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e5a925fd6688be20cf8c5b931a6edb423bf3e7dbef8a3cfc4347c6ce86f0ab70"
-    sha256 cellar: :any_skip_relocation, catalina:       "e5a925fd6688be20cf8c5b931a6edb423bf3e7dbef8a3cfc4347c6ce86f0ab70"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c1883f188bed11649803d4732f861e8193cae22e6d165b65d569f22c8c55abd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6c45b0746941e58ef315325345b552c889a8391e3a4f917c32d712e87820f9cb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c45b0746941e58ef315325345b552c889a8391e3a4f917c32d712e87820f9cb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c45b0746941e58ef315325345b552c889a8391e3a4f917c32d712e87820f9cb"
+    sha256 cellar: :any_skip_relocation, ventura:        "f2d1f6e6a765d913729c210660f63e7270f276f35532ece2c543e9cb5a09dec7"
+    sha256 cellar: :any_skip_relocation, monterey:       "f2d1f6e6a765d913729c210660f63e7270f276f35532ece2c543e9cb5a09dec7"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f2d1f6e6a765d913729c210660f63e7270f276f35532ece2c543e9cb5a09dec7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82c85a64608e27ff98865741915e6cccfb1f4d6ee33d1a8e744acea979c764cb"
   end
 
   depends_on "node"

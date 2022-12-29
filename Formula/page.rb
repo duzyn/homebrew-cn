@@ -1,19 +1,19 @@
 class Page < Formula
   desc "Use Neovim as pager"
   homepage "https://github.com/I60R/page"
-  url "https://github.com/I60R/page/archive/v4.6.1.tar.gz"
-  sha256 "5de1939e72441bb6321facb4320f2f0d630447ee09824249490ae6af0ade6610"
+  url "https://github.com/I60R/page/archive/v4.6.2.tar.gz"
+  sha256 "8a3fe23e8460ef0549a44d5a8e67d16e87e96a00c6ac40b9365b6a2d406778a8"
   license "MIT"
   head "https://github.com/I60R/page.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "956e8692356de40852110fde336947eca13e690dca5458f1f375c95f6b8892e7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "999fb11ff1130980e9a2c2aad7509263e58e3aefeaedbbe16f9e29852d9b8a7c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a8e080aa31f2914be5c222914071e86fdf603807a2bbe442ab24afe5949b8db3"
-    sha256 cellar: :any_skip_relocation, ventura:        "8647bd3061b0112a979f0747651092ce04ed6ba13ea1e02b05210e03700e330c"
-    sha256 cellar: :any_skip_relocation, monterey:       "8eaef816defed3e1d33f129f10fc2de7229a3a90730cd16a55a6a67db855441c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fca4c6cc3a9917ccc83aa114b26244bf730222ab55650d310fe2a5fb063926b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "13be6b27179af519ca538bd9b6e61c9fa340fabf1c123048ab3d42df63443ff4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "009fb5f52405281bd8e0bc39ee9617c8d468d6da46ef9518604b976916b0d7a1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6f5ec8d9d1c1164ed62c3545fe5f567c7e68db21efe7e33d34af2879e1b94155"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "36daadd6a77f932fa1bd82f292b71380f677e83079cac1b1a0b85cce395e4808"
+    sha256 cellar: :any_skip_relocation, ventura:        "4e3f6358bf5fbd4b38b90c33f3415f838030a4df3caf6517f99a00b034dfec0b"
+    sha256 cellar: :any_skip_relocation, monterey:       "42ea36b8eda12ad56070d4b91167b159989850a4b11aa69d6847530956d5d158"
+    sha256 cellar: :any_skip_relocation, big_sur:        "71125dc37df4ef17b2aa24a6f039a35988c3ef9817634b6de8d83a8ff65d3a8b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27f7441fb37414346775ece63febdd4cc54903c5cba3a044a90b48c907b82876"
   end
 
   depends_on "rust" => :build
@@ -22,10 +22,10 @@ class Page < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    out_dir = Dir["target/release/build/page-*/out"].first
-    bash_completion.install "#{out_dir}/shell_completions/page.bash" => "page"
-    zsh_completion.install "#{out_dir}/shell_completions/_page"
-    fish_completion.install "#{out_dir}/shell_completions/page.fish"
+    asset_dir = Dir["target/release/build/page-*/out/assets"].first
+    bash_completion.install "#{asset_dir}/page.bash" => "page"
+    zsh_completion.install "#{asset_dir}/_page"
+    fish_completion.install "#{asset_dir}/page.fish"
   end
 
   test do

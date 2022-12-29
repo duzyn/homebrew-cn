@@ -1,8 +1,8 @@
 class Vice < Formula
   desc "Versatile Commodore Emulator"
   homepage "https://sourceforge.net/projects/vice-emu/"
-  url "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.7.tar.gz?use_mirror=nchc"
-  sha256 "35a673c7ce236b4297a887f3eb8e8e29fd44b14eea21929268ca4adec42bd446"
+  url "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.7.1.tar.gz?use_mirror=nchc"
+  sha256 "7e3811e6024db0698bfbc321bb324572446b8853d01b4073f09865957b0cab98"
   license "GPL-2.0-or-later"
   head "https://svn.code.sf.net/p/vice-emu/code/trunk/vice"
 
@@ -12,13 +12,13 @@ class Vice < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "2d2a5091508600895e131976680b7fa7271137a8d0c38e058bb41487da0e095c"
-    sha256 arm64_monterey: "94f93f6a27f46d2b23995d712570f80548875af3bbf3afe4fcda14c24d93a4c6"
-    sha256 arm64_big_sur:  "735adf7db037698c482dbbe905815a09cef67eb1a4dc1bfd5f6bf171ff721be2"
-    sha256 ventura:        "a6f66b5f468e818b1f4609d71459a1ee40336f83959d4ffd2a1ef246738eee71"
-    sha256 monterey:       "3441d023a175cd3c095691736f233e592b53aa24cbdb9e5c7ee69511fb13ac73"
-    sha256 big_sur:        "10419ceec6eb25e28d3e61e166890b73ed98d4daf36dd5f6675a59f777e8a542"
-    sha256 x86_64_linux:   "13a587182c1b95a97d2801804aac8df10c36953dcf2601c755d232fb1a47e0a3"
+    sha256 arm64_ventura:  "d0bf3eb28be9043f9116bed994770b9ddbcbda019f817d9f66d35f209baba8cd"
+    sha256 arm64_monterey: "90ac62deeed56227098a874eee92465bf5af63d87da03047e0d3a05fe951d46f"
+    sha256 arm64_big_sur:  "02279db7f16355ccfedda4ec76e9286d4062507c5bfb4d66e20d7fea13b9ce03"
+    sha256 ventura:        "faa7d0090d54fc2deff55e8142b67ccf2549955884b414b9bc3d21c9eec4feb2"
+    sha256 monterey:       "83eeb86d3252e8459bb677998a2ad2c6c78eec3d0524cea06585c1ff0120bfcc"
+    sha256 big_sur:        "178230a6fa6f45cf9961387f61be1d17c4496dc45c87c578fb524ad64fc55128"
+    sha256 x86_64_linux:   "387e1bcbcd567f98141f0789672f353059b0bf4f82226ee9802a016294494721"
   end
 
   depends_on "autoconf" => :build

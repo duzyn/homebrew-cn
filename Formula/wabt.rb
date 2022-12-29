@@ -2,8 +2,8 @@ class Wabt < Formula
   desc "Web Assembly Binary Toolkit"
   homepage "https://github.com/WebAssembly/wabt"
   url "https://github.com/WebAssembly/wabt.git",
-      tag:      "1.0.31",
-      revision: "366a86a119727bdc957c2bf988ebd835c3ddb256"
+      tag:      "1.0.32",
+      revision: "e5b042a72e6b6395e1d77901e7a413d6af87ae67"
   license "Apache-2.0"
 
   livecheck do
@@ -12,14 +12,13 @@ class Wabt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "be7e92f7458baf55703b6e9119b6ba05af5772c9f3c01df05cb2a9ce858e0778"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8b16aaac9b9f2eac3faf76ebd8c3bf06914a1ca8d86944c847cd37c92b0e9f38"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4c1c6e67b081a542434492b20ad4fca8008f4bf6983cb795ecb68d7c174563cf"
-    sha256 cellar: :any_skip_relocation, ventura:        "3766150ab2fa1770568f6dc3e3ce308b2a23dac037cc448a2204cd5ab909e4cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "fde02c2a3a1fce77bb1b31607d6d511db904795c8d42abe66be909a174686c4c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "be27de60808339887261a566771ef518af3f214809383e2664db06f145d483aa"
-    sha256 cellar: :any_skip_relocation, catalina:       "5b81a1ef75253368faf9ecd9107aca46387f8d8158acae795941aa716eaaa70e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7cc4758452fc3f94d38d05d11f5e44fd89d17dc011063f263d4e0fcfa17abb54"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1eb5c405ce9ce146c14d92cd28346d1dc96f50628c5465b262e2ce196b7ee7d1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d950aecc90cfb408b96b0e26d948d210f37555a65247e83392864c6f50f371d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ca2169fd646d31cc5d83627047322f24d0ca7ec822c722b01131ad43bf6a8254"
+    sha256 cellar: :any_skip_relocation, ventura:        "8764f33058349f6c7932b7a4e3a081f582dee2c8b8538467d1df8a441a9305ea"
+    sha256 cellar: :any_skip_relocation, monterey:       "c9c9ed4d30a4784b8f9372763fbd3854e4470a1df7d72275ded6889e0c8f5b3f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4a622dc5125000135392cce649bec1f6534a852a232b413bfc52f4470887b408"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a029ae780d4ae86f54fe39d0d52545d9b4f285409d8eaffc18abb66cec196944"
   end
 
   depends_on "cmake" => :build

@@ -1,20 +1,21 @@
 class Afflib < Formula
   desc "Advanced Forensic Format"
   homepage "https://github.com/sshock/AFFLIBv3"
-  url "https://github.com/sshock/AFFLIBv3/archive/v3.7.19.tar.gz"
-  sha256 "d358b07153dd08df3f35376bab0202c6103808686bab5e8486c78a18b24e2665"
-  revision 2
+  url "https://github.com/sshock/AFFLIBv3/archive/v3.7.20.tar.gz"
+  sha256 "7264d705ff53185f0847c69abdfce072779c0b907257e087a6372c7608108f65"
+  license all_of: [
+    "BSD-4-Clause", # AFFLIB 2.0a14 and before
+    :public_domain, # contributions after 2.0a14
+  ]
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "50d62d9c03fd0e7440d660bcb60a85e1b75e9c9249ab9dbb7049729f20d05fa1"
-    sha256 cellar: :any,                 arm64_monterey: "3e5919d12d9513c23e82822dd2ffd2947af505ed2f70ef1231e3355abe576faa"
-    sha256 cellar: :any,                 arm64_big_sur:  "6dd3ec1e1f3e71c9c57229dd23db7e6cfd7d1ce1ab06834f490597f5ba57ae13"
-    sha256 cellar: :any,                 ventura:        "7c9b57955330197f76b579d9f029f9daf80f66a45b3b2af19904d42d2f1e3cf0"
-    sha256 cellar: :any,                 monterey:       "b97d1449f77720b8893095c05b07a2a24af9744aaa4a5f120e500bec638ee924"
-    sha256 cellar: :any,                 big_sur:        "afe54b17929f33962a429e78e73aff41d8ea7c6c52d0e1a3fcdf41004a3a0de6"
-    sha256 cellar: :any,                 catalina:       "d6bececfde0fa878628d15954d4e3300f94be5f50a9e82493c1e96938ca885fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "39c23676a86073eb745c7437c2ae69de89b0c1672030a8f3c989b440f2b7a292"
+    sha256 cellar: :any,                 arm64_ventura:  "025c582f57102d59d8db4620a5107ec9f32b9ef260f8ad86ac507e175a240ccc"
+    sha256 cellar: :any,                 arm64_monterey: "b2b40e3adb07e9e900d388fd9bca24b40a9c53b9f78212fc6453b7bf220b61ea"
+    sha256 cellar: :any,                 arm64_big_sur:  "3c0ea59617618dcac80354ca75cd901e5d938fd29419105a491d72d0dc455d2c"
+    sha256 cellar: :any,                 ventura:        "6743bd1cf85500b947f145553c8b6c79c618a4f6e76c56d472874d20d7ace8be"
+    sha256 cellar: :any,                 monterey:       "16198534f0890d68d6bd0b311f7078d4b9075cabc578c1ed379c3b95cea81126"
+    sha256 cellar: :any,                 big_sur:        "38d2a76e3811b6d244c35521c858f17071f1ce6c9ba9725bb6a2c5125b6d3c9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e314fc4730bd8cd0beadab1a6b2c8bc1745ec24d9ce4cad4d13d72427d307455"
   end
 
   depends_on "autoconf" => :build

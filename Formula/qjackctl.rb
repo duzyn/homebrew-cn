@@ -1,8 +1,8 @@
 class Qjackctl < Formula
   desc "Simple Qt application to control the JACK sound server daemon"
   homepage "https://qjackctl.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.8/qjackctl-0.9.8.tar.gz?use_mirror=nchc"
-  sha256 "07cd9f0a876ac7b73c3b6e4ec08aae48652a81a771f0cbbef267af755a7f7de7"
+  url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.9/qjackctl-0.9.9.tar.gz?use_mirror=nchc"
+  sha256 "4c2a9f6a1c24c7e73fb6aaa801ef9fbc2d3a8d6ffb51a9a54a4a07140b12008a"
   license "GPL-2.0-or-later"
   head "https://git.code.sf.net/p/qjackctl/code.git", branch: "master"
 
@@ -12,14 +12,13 @@ class Qjackctl < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "611ddb4bce1209b10b53dbc2e898be56c298ef4eb364c02ca3c4b86f97e4ccfa"
-    sha256 arm64_monterey: "ae0dc29135764e483923c8b68ab2bc591e90dcf75e468bc46536871d561f58da"
-    sha256 arm64_big_sur:  "269e87d8ad4089315682ae72712c5237894308262179420977b6f7ab1dafce56"
-    sha256 ventura:        "1da8253aebc2b4e92e86e708573f4a9a373e398b902288597bf9d2ba573f4ead"
-    sha256 monterey:       "1c10210499c4fdc95ec7c68c1faa8d58102015ee31122a2c5901c31b7250c020"
-    sha256 big_sur:        "b0485a54fb9dcc3ffca4e775ea51af05772c929a62fbaae61df42774fe949e03"
-    sha256 catalina:       "b0ac3dc4132c0c4c018256dde8a01ab7e61d56d635b9e1801264571b314e4a86"
-    sha256 x86_64_linux:   "1ec75ff8b04ff01df9b479060dc69f8879282b1ecdb3e9ec1210fedccd840eae"
+    sha256 arm64_ventura:  "969d62e274f7b4dfb9dd10e752e69e9b109b947b7673d13d62c5dc2978059c8d"
+    sha256 arm64_monterey: "10966c283775575130aa0cbe9bfde61936e96e4f1651e8bbe78c360d36883644"
+    sha256 arm64_big_sur:  "723887155a39164ee86b0e3c27bf4593dd1707c132acfb4aff5377e3605e8f80"
+    sha256 ventura:        "0b70b75f53ba9521034699ecc77ca32aca29c3f886b3168b312aa3b75790ff2c"
+    sha256 monterey:       "8c4317142ad22188b9009671ad693e065ccdff265fd21ba6ecd5840ee705c2a9"
+    sha256 big_sur:        "92a4a2d0b93703b0b1327d8fe4ce75d8cdfc4fd12656d1d8133f7317953656df"
+    sha256 x86_64_linux:   "95e30dc63dff2c0fb29c4d5fe16f57baf812ef15f44485c08aaab3946245978f"
   end
 
   depends_on "cmake" => :build
