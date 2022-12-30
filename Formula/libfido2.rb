@@ -4,16 +4,16 @@ class Libfido2 < Formula
   url "https://github.com/Yubico/libfido2/archive/1.12.0.tar.gz"
   sha256 "813d6d25116143d16d2e96791718a74825da16b774a8d093d96f06ae1730d9c5"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1693534c09d366ff8c420e11fe483ce3ad4453d7864975b91585c559df881614"
-    sha256 cellar: :any,                 arm64_monterey: "2caf7758a5816420678d11fb81f0bef74837e12539c4c8be6d074d1a5b074d51"
-    sha256 cellar: :any,                 arm64_big_sur:  "a7cf0ef4f36cce15ab3b26b5681580d5af122b547f9b017ff7fda022517a0d2c"
-    sha256 cellar: :any,                 ventura:        "273a33cef92fcf44eb3661355becfa69477f92852d7ded6240577ebceb847374"
-    sha256 cellar: :any,                 monterey:       "130062c883742f34580c1ca5c63dca5215dae1ed6ff79c0f638be73daffd6ebf"
-    sha256 cellar: :any,                 big_sur:        "756ac14a01eb7e2162c100cc0b2ec6c310b33d00252f1a04144dd1d2f9a8b920"
-    sha256 cellar: :any,                 catalina:       "b7c9d561152606201046daf4c55aa743ada5c8f4fad36c27edd2e7964d897a7e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e518efa37cf76abee49f01988fe40a61396d207cf3b66fd62edc3e5f5d9847fd"
+    sha256 cellar: :any,                 arm64_ventura:  "ca05400dc7dd0481f41f2553fdf4f61a7a6e83b93d24cf75da9f466ab55b1ccc"
+    sha256 cellar: :any,                 arm64_monterey: "fc615aa6445386028c82143d7ca76da7e0d4ed4864362cad44c02400a6a8d6d7"
+    sha256 cellar: :any,                 arm64_big_sur:  "51bb36596d2a20c4fcbeb987215caa601e642ea75969890c12ecc295c549a715"
+    sha256 cellar: :any,                 ventura:        "6dc984c005f51e980e86adce21c21d204691d3ebed85882070e2ce4334ab618d"
+    sha256 cellar: :any,                 monterey:       "9ee46084c9843396ee98d7ebf66e19a7e90e0f85ef7aed5e6dfe52c7ff0c126d"
+    sha256 cellar: :any,                 big_sur:        "ea43b9c95bfc1f2452bf1d6e7de8efdb1861f2be94c385e5c0265070d6cdc22e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb31ba31a74cf54897d36af23acfce66e450df700a6a0eaa357f041f03704b16"
   end
 
   depends_on "cmake" => :build

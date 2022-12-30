@@ -1,19 +1,18 @@
 class Tbb < Formula
   desc "Rich and complete approach to parallelism in C++"
   homepage "https://github.com/oneapi-src/oneTBB"
-  url "https://github.com/oneapi-src/oneTBB/archive/refs/tags/v2021.7.0.tar.gz"
-  sha256 "2cae2a80cda7d45dc7c072e4295c675fff5ad8316691f26f40539f7e7e54c0cc"
+  url "https://github.com/oneapi-src/oneTBB/archive/refs/tags/v2021.8.0.tar.gz"
+  sha256 "eee380323bb7ce864355ed9431f85c43955faaae9e9bce35c62b372d7ffd9f8b"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e872d553d5c06d401f725fc6d9d6489cf888c66f7cc1cb1efffaf3640f79c100"
-    sha256 cellar: :any,                 arm64_monterey: "97c4b2a2c11ba82f58dd035f7a48e4a2ba15a619c84965345ec30848a9e0878d"
-    sha256 cellar: :any,                 arm64_big_sur:  "d2a5e661d1a86f8e3279399efd50d6c8696fb83ee9359856e0f0a6e8c72141d5"
-    sha256 cellar: :any,                 ventura:        "a094729f72f4d89bc7c5c1511fc92d9aa32282125dc08fad25c3921e79d02584"
-    sha256 cellar: :any,                 monterey:       "0f2c2a55a0ef29487183373986ee366db3dca5dc6ddac1622bf7c5f555cb9deb"
-    sha256 cellar: :any,                 big_sur:        "0a714ba09eb9717b540be7ca5b262cc9fd1300c1793817b265e66f1de37fa4f3"
-    sha256 cellar: :any,                 catalina:       "81857d93aaa85e0fd941274661d323c701e3201d218cccb7dcf9c2ff9d80c0bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f156f15d33d15b3213a01d4a803d3412df93d39dc3c28de03049e2ebf6b6b4b"
+    sha256 cellar: :any,                 arm64_ventura:  "59e5097745fcb230f5ffb58f94c3a4e7186f13b444d9f99011564b6d2a25a5f7"
+    sha256 cellar: :any,                 arm64_monterey: "744ee4be61f2d9d5639a4223396b335f0c18997aeadec0ec0394cd9c326ad5cc"
+    sha256 cellar: :any,                 arm64_big_sur:  "61ce53905c69e493c55e8dce00875a520565b914238cac13927a91d3541e10a6"
+    sha256 cellar: :any,                 ventura:        "a626b3de9bfa90769416efbf32b8907b43a24264ca00f1227bb3b5406b9bd311"
+    sha256 cellar: :any,                 monterey:       "54b62846d00669a11556f621ef0dbf562ed6c2ac53d6989da85feb24488b4fdf"
+    sha256 cellar: :any,                 big_sur:        "62b5ffa782502dd84e19da73849342cdf2c2fd928f73e6a9c0625a23e5881f35"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "145cf62f2cb65d54cd4d5747aa3c640ead388fb68501e7013437da85999e294e"
   end
 
   # If adding `hwloc` for TBBBind, you *must* add a test for its functionality.

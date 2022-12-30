@@ -1,8 +1,9 @@
 class Unicorn < Formula
   desc "Lightweight multi-architecture CPU emulation framework"
   homepage "https://www.unicorn-engine.org/"
-  url "https://github.com/unicorn-engine/unicorn/archive/2.0.1.tar.gz"
-  sha256 "0c1586f6b079e705d760403141db0ea65d0e22791cf0f43f38172d49497923fd"
+  url "https://github.com/unicorn-engine/unicorn/archive/2.0.1.post1.tar.gz"
+  version "2.0.1.post1"
+  sha256 "6b276c857c69ee5ec3e292c3401c8c972bae292e0e4cb306bb9e5466c0f14737"
   license all_of: [
     "GPL-2.0-only",
     "GPL-2.0-or-later", # glib, qemu
@@ -10,22 +11,17 @@ class Unicorn < Formula
   head "https://github.com/unicorn-engine/unicorn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c4b1c9fc5aa717c2c2fca307f30c0ace45db771d38316c9a711d20157e06f773"
-    sha256 cellar: :any,                 arm64_monterey: "9c3008bf2fcffaf16ed6ad3e6419a85c494ff725be673880c3ee8a3bb3521ba3"
-    sha256 cellar: :any,                 arm64_big_sur:  "f48491de90d3fa69c91ba1136a9f0c024a6e2d4ab6c0b7c5de476d0c534b56f0"
-    sha256 cellar: :any,                 ventura:        "7d3d7650e7ba1589a979338ba66ecc12d2d89bc81e000c0da9a45d3b5e7daf70"
-    sha256 cellar: :any,                 monterey:       "a73d5bb66602ec714ff8f292fb7bbf9e274220f0251c91cb68e948f7463c3a2a"
-    sha256 cellar: :any,                 big_sur:        "859db47d54b2b8af4419765f68cc39b22110f1934bdeb0c59e774f7b2fe77b4b"
-    sha256 cellar: :any,                 catalina:       "b06bdfa3516c07d3203fa5182318145743ad7aa3ff8e69b362fd08b6b7e0baca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7471dee211f51d19b357866fc48756aa1810ec1940bf72c990dc19ea350f666"
+    sha256 cellar: :any,                 arm64_ventura:  "4c9ea5656b2834aaa6a4fecd8bfc55ebc0b5fdd9f8ae360dca4ada9d25d7a484"
+    sha256 cellar: :any,                 arm64_monterey: "fc3a7ffad1c200b9dbb4eeb843d06eb9b6edf8313d42b38c9ca58f23e70810cc"
+    sha256 cellar: :any,                 arm64_big_sur:  "3ca1e960e66e83079c74b602e268db6f634cbd9c44ea52f18da8e71c29f67a43"
+    sha256 cellar: :any,                 ventura:        "475d61a10d43ec74d07defb155d2ae5c53422d2fd4f9c3dd09f7fbaef3b6b4c5"
+    sha256 cellar: :any,                 monterey:       "37bdc2d1067fe898c5455cdb0c0d2a2b94b5f8190d41352ebf661716352d5ae4"
+    sha256 cellar: :any,                 big_sur:        "cfd01c643cfc2283b4e973ba0208bbed3ee081408796c7a95059ed98f758900d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f45a8a230a4a63c46fc1d9a63e4d3a8ea33e6448051200bb202c23081efc96f2"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-
-  # upstream issue, https://github.com/unicorn-engine/unicorn/issues/1730
-  # build patch ref, https://github.com/NixOS/nixpkgs/pull/199650
-  patch :DATA
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DUNICORN_SHARE=yes"
@@ -82,25 +78,3 @@ class Unicorn < Formula
     system testpath/"test1"
   end
 end
-
-__END__
-diff --git a/tests/unit/endian.h b/tests/unit/endian.h
-index 5bc86308..b455899e 100644
---- a/tests/unit/endian.h
-+++ b/tests/unit/endian.h
-@@ -54,6 +54,7 @@
-    || defined(_POWER) || defined(__powerpc__) \
-    || defined(__ppc__) || defined(__hpux) || defined(__hppa) \
-    || defined(_MIPSEB) || defined(_POWER) \
-+   || defined(__ARMEB__) || defined(__AARCH64EB__) \
-    || defined(__s390__)
- # define BOOST_BIG_ENDIAN
- # define BOOST_BYTE_ORDER 4321
-@@ -63,6 +64,7 @@
-    || defined(_M_ALPHA) || defined(__amd64) \
-    || defined(__amd64__) || defined(_M_AMD64) \
-    || defined(__x86_64) || defined(__x86_64__) \
-+   || defined(__ARMEL__) || defined(__AARCH64EL__) \
-    || defined(_M_X64) || defined(__bfin__)
-
- # define BOOST_LITTLE_ENDIAN

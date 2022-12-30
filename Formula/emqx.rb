@@ -1,27 +1,27 @@
 class Emqx < Formula
   desc "MQTT broker for IoT"
   homepage "https://www.emqx.io/"
-  url "https://github.com/emqx/emqx/archive/refs/tags/v5.0.12.tar.gz"
-  sha256 "dde5c374f6701e46e26e5835bcc0a74ba312d8a349ad89d2e48498cbaa83ce1b"
+  url "https://github.com/emqx/emqx/archive/refs/tags/v5.0.13.tar.gz"
+  sha256 "e6645725f77ca75826cbf3249c09e4f569875dac15cfd51cf1260dad173f9de3"
   license "Apache-2.0"
   head "https://github.com/emqx/emqx.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "2ba049891bbe5c750cb7ff453f391d7b63fa603e262b983937ae864a18f26f2f"
-    sha256 cellar: :any, arm64_monterey: "1e8cd100d410321e1409c98c9697ce8303cf3d8bfc48f3fbc66e572c17e26109"
-    sha256 cellar: :any, arm64_big_sur:  "b9aadbe8e98aa3cb05ccb04fb452738cde49dba34e2204fa681115bdad8664ec"
-    sha256 cellar: :any, ventura:        "511f7aebeb02ab09108969746c6c55ed4f1964eea501bcb48a2c363180a08af2"
-    sha256 cellar: :any, monterey:       "0758997447bfe912077984f373d09bf2beb085cd2658412e733c0131aba20056"
-    sha256 cellar: :any, big_sur:        "8da2df84f5d1137a32d28f1ea0d0022ad83c9bdc41ff11a9cc122f1549df4439"
-    sha256               x86_64_linux:   "a9328b1798d0fd0a635dd783992ef372701a1f9e17b9ef24f401ec752d558594"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura:  "f4a2a0ebc36c54c1f28430cef90111f2065d6a5a5afb1dba2faa76e19aff75ff"
+    sha256 cellar: :any, arm64_monterey: "39bc38439d90c4f8996486f3670ea7fa03c55ba7d9ec77ae8883a0a37db9e016"
+    sha256 cellar: :any, arm64_big_sur:  "5f23a80fe9dc573249f05107d126fcea9bb7e5b4967102f7d88a2d2b2423af8f"
+    sha256 cellar: :any, ventura:        "3e567fa206d8902b594212a7731681a2563a388342ec0fe39f1ee28c6e2ec530"
+    sha256 cellar: :any, monterey:       "c3489f61cfc029cb67bf71d44dc10b6b7b5da8f4bdc60c038f26254a20fc9b9d"
+    sha256 cellar: :any, big_sur:        "8ef41cfd62f64c4f002166b2ce1ae56718f0d8cc84a5c342e6a8c52c06b2fec2"
+    sha256               x86_64_linux:   "3cb82600e4876682dbdaddc3d5de4a99fdd1aa5087019cbcfed3a1871130e0fa"
   end
 
   depends_on "autoconf"  => :build
   depends_on "automake"  => :build
+  depends_on "ccache"    => :build
   depends_on "cmake"     => :build
   depends_on "coreutils" => :build
-  # emqx cannot be built with Erlang/OTP 25 as of v5.0.11,
-  # but the support is in the works and is coming soon
   depends_on "erlang@24" => :build
   depends_on "freetds"   => :build
   depends_on "libtool"   => :build

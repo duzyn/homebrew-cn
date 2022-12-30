@@ -1,8 +1,8 @@
 class GnustepMake < Formula
   desc "Basic GNUstep Makefiles"
   homepage "http://gnustep.org"
-  url "https://ghproxy.com/github.com/gnustep/tools-make/releases/download/make-2_9_0/gnustep-make-2.9.0.tar.gz"
-  sha256 "a0b066c11257879c7c85311dea69c67f6dc741ef339db6514f85b64992c40d2a"
+  url "https://ghproxy.com/github.com/gnustep/tools-make/releases/download/make-2_9_1/gnustep-make-2.9.1.tar.gz"
+  sha256 "c3d6e70cf156b27e7d1ed2501c57df3f96e27488ce2f351b93e479c58c01eae7"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -14,15 +14,13 @@ class GnustepMake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "766a6f8d245162ae284da0da2ffd00216c6df677e4455a67796173f4ac6fe474"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "45930b2ff42fd3d595f0bda8fa1c5a59489038e7242e447a4251d01f80a49557"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f16315c14cfbdab197ea1562749d533ebbf19435b848a8173ae7c3ed08502968"
-    sha256 cellar: :any_skip_relocation, ventura:        "56bf7011e1da8ca1fff98f5f71ea0264c5d0ef1eb91d4d51a884367aefee166a"
-    sha256 cellar: :any_skip_relocation, monterey:       "caed84d95fbd7da54554e30aee0cfbcd46c7693011226b2904d51b97dc499986"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b0a74dcdffdd9331348c0215f53967dcd4ecd9b2f8c2fdbdff32f27c288136af"
-    sha256 cellar: :any_skip_relocation, catalina:       "3fb00ffefe165c26880819f9d670468d5c874a055792a0a2b25ca47e4dcad43a"
-    sha256 cellar: :any_skip_relocation, mojave:         "449a586b8998cc6e5e45ffde3f518c5352cf5e31bd126b102d1597d4b76d6985"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3fc8fa046eb3a370ecc6c263bba63257c570e9bad92bd2658fdea54c247f311"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d8b2be52f02e912123ea77dc5bd124b4cf676a54e9f407fbd24a2e3cf6bc69b5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5375368d0320a9dadef26b991bbe13f42185b0a323c2e5f63c4f92ffff4fb284"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1b5dcd8f14b0c75cc0ab39976d039e40e09f5ba96497f5a003f0619a418445f1"
+    sha256 cellar: :any_skip_relocation, ventura:        "10fc832bb2ed14f89ef375382bbb10817a17aaacc14823d160c4b1215dee1023"
+    sha256 cellar: :any_skip_relocation, monterey:       "d5eaeea37e11ab64679bf1a0a095cb2a23bfc09bbb5ee4c46cb6237ae3729327"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d15883f03187ecca56b9d9903ce558a44335e679e4edfe7fac9ad4a607ce0776"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65fbc54bf35fbb9925304725019be7f9dba0551359a845b11a05708a160e260f"
   end
 
   def install

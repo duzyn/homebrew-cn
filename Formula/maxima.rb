@@ -4,7 +4,7 @@ class Maxima < Formula
   url "https://downloads.sourceforge.net/project/maxima/Maxima-source/5.46.0-source/maxima-5.46.0.tar.gz?use_mirror=nchc"
   sha256 "7390f06b48da65c9033e8b2f629b978b90056454a54022db7de70e2225aa8b07"
   license "GPL-2.0-only"
-  revision 7
+  revision 8
 
   livecheck do
     url :stable
@@ -12,14 +12,13 @@ class Maxima < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "61ba66f0e484b4aaa1115bd28188c64e2eab6827530b0927aeaf47bff1e31a6c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b56557a4d3a27cceb548fa4341885fb15c28c9df21987a2e8ae8b81495309720"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85b39fa1a991853758490bbbe500b94a243145bd14e87a8aaac64e73f45272e1"
-    sha256 cellar: :any_skip_relocation, ventura:        "483fbe0a31d79ee37da05e597a5c97d177b377f5d6fa1e304b089b2277f69f93"
-    sha256 cellar: :any_skip_relocation, monterey:       "e8112c54d0f612c0a406b15e32a25e6bb14aa5fa209383822cc69da24b9e722b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c800d29837cf469187752ddfa92c1bd4c5309c5b135c2a07d0283c0e46f47767"
-    sha256 cellar: :any_skip_relocation, catalina:       "140e327eb5177416f846bd132435e5b294f75879cfed65acd7fa005b42312fa7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61246ba5d9498c1fab9f06b71c1b6ccc0d8ad2a13b6a3408053190f1e7b768b9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "22c47b19ca6d456890d991e52c76473e8fa8c457280619cd5ab747ecfc6d3983"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "04e1064642d37fd2e74384b6dea73ef7c6f16be79fcb0846ef51a125be6b7c15"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "fd2cf7c9fe4d7de64df7b58dedd74e9b8db09a9d8ac0e31806e2713afd438e61"
+    sha256 cellar: :any_skip_relocation, ventura:        "31529bd77f03ec89d779da2bb7358a9011e133f7ac3c832af2baf8aff7a227c1"
+    sha256 cellar: :any_skip_relocation, monterey:       "3542fd101e5d7f591dc98fb9413442b1cc4ee3df8f69a91c5ab53a6af20eb1a0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d5dbd1a9fb984dd67ac763b590fbb7a36904e655ce037d106b270620f9bd9d14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d76b88e53b18c6bd3a653ece525fdcda55e262f6fe27d4c7dbb4fc33645c1dcf"
   end
 
   depends_on "gawk" => :build

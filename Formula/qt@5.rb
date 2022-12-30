@@ -8,16 +8,16 @@ class QtAT5 < Formula
   mirror "https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.15/5.15.7/single/qt-everywhere-opensource-src-5.15.7.tar.xz"
   sha256 "8a71986676a3f37a198a9113acedbfd5bc5606a459b6b85816d951458adbe9a0"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6862997c7ed6e467d3fefc277e116b8549e0e4c8c03d72fa4220e8e09aa1c98f"
-    sha256 cellar: :any,                 arm64_monterey: "c63014e2be32bff361f16f56459a048b9149c567e789b2ad070f0baf24af3a95"
-    sha256 cellar: :any,                 arm64_big_sur:  "764b2b1164e8b3666ee45e7867c8b7370a8f893e109dd6818afe7803ce932b0d"
-    sha256 cellar: :any,                 ventura:        "5c370a6cd0df84c365650b12d3b8e724a0ddff7a6eafe9e3c9c112db3e37b82f"
-    sha256 cellar: :any,                 monterey:       "a2defa1620680b91453086ae87132b7f75f35d2444cfc79f6f459593471024ec"
-    sha256 cellar: :any,                 big_sur:        "79717cb3b3a03ca2fc7bb1beefd974c6053a94e8298903708035620ad6d5a830"
-    sha256 cellar: :any,                 catalina:       "bcff7bff3dc04516c7456ccbd330ab37c53af0107c9f877b37646422ce2d66e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0d76c81f6604a3fa576bbaaf6712cf0e539607559ccdec74473168e300233ea"
+    sha256 cellar: :any,                 arm64_ventura:  "839df853c3d9394cad3e64dbcc2120be50e0058e190e1e2d114cea8ce172722f"
+    sha256 cellar: :any,                 arm64_monterey: "28d11cf3224fde1b2e3a33efc41331916fe70c8c521622fe52d2fe23707c3c77"
+    sha256 cellar: :any,                 arm64_big_sur:  "414367bee52b71a3e7e794a7fe3a6dfa8cc332d63f9bbcda2560bd8393209b42"
+    sha256 cellar: :any,                 ventura:        "263808ad6edbcfa61e492395f1fce15a55bf1537e1b7c875b046182ef0ece85d"
+    sha256 cellar: :any,                 monterey:       "94e22bfa50e57dc607b6bdb5575be1683517fb21caf0226b03a2454a39a0bc56"
+    sha256 cellar: :any,                 big_sur:        "929a659c84bc79b29a45b09e50dc37e5adc180c71f67f905bbd0c5488354ff50"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d5604919b4a46d1b66ff268857934356525d6b1c1964e3410eec372d6cb335a7"
   end
 
   keg_only :versioned_formula

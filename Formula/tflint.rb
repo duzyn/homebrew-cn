@@ -1,19 +1,19 @@
 class Tflint < Formula
   desc "Linter for Terraform files"
   homepage "https://github.com/terraform-linters/tflint"
-  url "https://github.com/terraform-linters/tflint/archive/v0.44.0.tar.gz"
-  sha256 "21629f4cfe3348020dea7b850ae5e003091f8f19fd621a1bd7a5e4fe4517ec79"
+  url "https://github.com/terraform-linters/tflint/archive/v0.44.1.tar.gz"
+  sha256 "079e5f25cf18c33f9b3ac69942b5f8b5de917c41dcfd6039ca9faad739a7613e"
   license "MPL-2.0"
   head "https://github.com/terraform-linters/tflint.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f29d60a3fa3125c7e870f85da7dc9075e7cd06e74ecee3e47f70852870651369"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c009c0b4bcd7a549f4e80923d50b1a635875486daad784ae1ae39892584814f7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "40ac4b8d88978d185d7b751a3d4600c36b5d90394564a5e6a43dc1dcb86c120d"
-    sha256 cellar: :any_skip_relocation, ventura:        "cd79d321bd949a747d328e45d97a9d58799cc89daad967f8e89489346afd2a41"
-    sha256 cellar: :any_skip_relocation, monterey:       "586e6a6c980f34665e93860e4607ed98ef35282538a8c26f16fe81808a2550e5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f069261cb36151b1e595253967445845bd1a419bf69abea8cd13a120af54fbce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53c94f76fb79715911c62c2cc81b3e786128fd09e87ebc16dd8fe196b3cb1273"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6b0cab2478fc3d86f52e39c7ca572b89eb9f83dbf27a5d468c437158b1fc8780"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dda00780c069cd586a5e952f67b6de6864d8162054336dbcb46d67210e083fbe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e69cac4e4a609b1acf60ff1bd3e022fa517a4627f65568cda39bd05dd245b3ba"
+    sha256 cellar: :any_skip_relocation, ventura:        "a2a7fa30998326c123311379bab3870134ea5b126c50eed3d9d4608128a5141b"
+    sha256 cellar: :any_skip_relocation, monterey:       "199f80835635c05bbed2bde3a2a04dd377655172af7e569cd57c3814018763eb"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0d6d209f8acbd4baf3c23c07528bdc236607eb91d0bd422e3bba3671eb429143"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ecbbfd03bd533369ecee25c70163160e8f2326458fdfad681ad5f338bad32a1a"
   end
 
   depends_on "go" => :build

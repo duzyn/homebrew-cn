@@ -1,21 +1,19 @@
 class Handbrake < Formula
   desc "Open-source video transcoder available for Linux, Mac, and Windows"
   homepage "https://handbrake.fr/"
-  url "https://ghproxy.com/github.com/HandBrake/HandBrake/releases/download/1.5.1/HandBrake-1.5.1-source.tar.bz2"
-  sha256 "3999fe06d5309c819799a73a968a8ec3840e7840c2b64af8f5cdb7fd8c9430f0"
+  url "https://ghproxy.com/github.com/HandBrake/HandBrake/releases/download/1.6.0/HandBrake-1.6.0-source.tar.bz2"
+  sha256 "7f23c76038b7bf329089d0eb33c14898400fcc0426e310e87dc11e538c103cda"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/HandBrake/HandBrake.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aa8e854fe56f002bf523b1e325d12e5019855c568e3a7de2acb29ba52b32d2ee"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4fa42fc0b58463e6cd070c33b8b3bb244e7c6410e73dbe0e5ebec7f0bbe1bcd7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "29d00fbf281c0a89cddac44850a91cf4b8b5c38e5d60dca8d814c4cba84f251f"
-    sha256 cellar: :any_skip_relocation, ventura:        "023e9574369dbd22713401cb6321fa63750210042a928d53272ad355bff32742"
-    sha256 cellar: :any_skip_relocation, monterey:       "c522892f41010d47ebd987b763ee064875b2cd12731df17145bc148b75b7651a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "be259af1ca277a94651a9eb34f6cd9b17c0e7ecaa61d8d4173f4472cd29e6181"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb626a6155639c58074f5fe87eaacaeb18357908d1c3ad255bc30687d8b5950f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8037827d84b9216fcd72a6035d2da154d27e2750052428f10d8fc9f9f2ffa355"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a83a7108a84b2316fc334819d80e1277c96b7f1f421c650cf473ae113b5c9b2f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "851f45d030bcc6b6493d9fe3b2c4a25e5dfa7babf0b091c02bd9190389fe66bc"
+    sha256 cellar: :any_skip_relocation, ventura:        "7e716b18c29d347c42ce5970dc3901a4b637931f3e574ef54c677fc35de804b9"
+    sha256 cellar: :any_skip_relocation, monterey:       "e2cc5bc6858a8cce319d79674ce9a778352a91fa3bb61d99b3bf2de14fc3d2ac"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f02b15ff874f73babe3df810886bf2729bf8ec01472d098a728b8e652b78d74a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "97d6a828d69f3ad69b29d0f6f91fd517ccdae591c36531803e0639c65772da1f"
   end
 
   depends_on "autoconf" => :build

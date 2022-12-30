@@ -3,18 +3,18 @@ class Tox < Formula
 
   desc "Generic Python virtualenv management and test command-line tool"
   homepage "https://tox.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/ac/ee/3115a77ce5af5ac0c5262bee45bdc2d36c02cad13723d7cec970270ccb59/tox-4.0.19.tar.gz"
-  sha256 "31d95663dc66f8d53fdf0825f1fc931404b1db5380482c5449628f49db767047"
+  url "https://files.pythonhosted.org/packages/eb/c7/6831965f66c9bd3234862787bbb8801384bcd1bdd9ce9c407a3b2dace840/tox-4.1.0.tar.gz"
+  sha256 "a8008a8e647465e284ec1575093918e78b01140b8fdf176504c3f5cc986dfb57"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "68abf398611dd5f00c5187bd0dc578517e2e91c04e74c206062240e9b5e67b93"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "181135aa5f9b8988328f4c6dfc5f595fb845974e6c34ce7b279209b6a852f505"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "517b0594f3ae0cf8016d197141cf87dbfdb6cb44c2b26c777ec0ec8760c615b2"
-    sha256 cellar: :any_skip_relocation, ventura:        "ba2b9d15382fc473325afd8beaa88303583d71f49d0802db42d6761139599b97"
-    sha256 cellar: :any_skip_relocation, monterey:       "1c61ae475601f8cd5ad8931e6525e83338ff989ffffd07a645fca3de93858ab5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2a03d89cc8f8e9979f4b690b020cc5c2f188f9120f30ec38d854233fc47e73a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3663bf8c69df50b3662314e0b6e2835f7d0e64ad643a19c332abab9b77f5823e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2e81ec5f90a3b81cdd84e8708e28b7610674d5fe07c0bc88b0f698793385dbb4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c66cc0a1b80ed1f54e9df2d3801675e0dbef26747e52b85891c26f9527a3b69"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3ae56bdd692ccf37f2aed6267bdad201c67552a06c0599892e67533de6e1ae0d"
+    sha256 cellar: :any_skip_relocation, ventura:        "eeefc01147bb682dc9f8db143c314389749b813e328f417a468dc01a041d9adf"
+    sha256 cellar: :any_skip_relocation, monterey:       "cc1a5adb5825f244e68beb89d52247ec142e7732052e18c39dd963091af9a534"
+    sha256 cellar: :any_skip_relocation, big_sur:        "32d5e67ffbff1e7c0278c0bec4705605aab9827359e77ef4fbefbb7babc008e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "677e5cffae1c64f86c3dc3f039ac923f3529d620e3b2cf61080b241e0d383391"
   end
 
   depends_on "python@3.11"
@@ -51,8 +51,8 @@ class Tox < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/62/a3/e4dd832d7ab2dcc68787421ed2cd64562b267c7b6e2a04ebd0e9ad6d271e/platformdirs-2.6.1.tar.gz"
-    sha256 "e13f076e0f725f1beb58e7d26f80eff94099941740d3c664db03efecd6561271"
+    url "https://files.pythonhosted.org/packages/cf/4d/198b7e6c6c2b152f4f9f4cdf975d3590e33e63f1920f2d89af7f0390e6db/platformdirs-2.6.2.tar.gz"
+    sha256 "e1fea1fe471b9ff8332e229df3cb7de4f53eeea4998d3b6bfff542115e998bd2"
   end
 
   resource "pluggy" do
