@@ -6,21 +6,21 @@ class Ipython < Formula
   url "https://files.pythonhosted.org/packages/82/2b/026af47da09998404f51064d328f5f1f68c78829082d2945be489343fde6/ipython-8.7.0.tar.gz"
   sha256 "882899fe78d5417a0aa07f995db298fa28b58faeba2112d2e3a4c95fe14bb738"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/ipython/ipython.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "359fd48f88b24aa9c923f57a1011d06989354ca6f9a92911cb71177768c29895"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bb403185699cdaeacf0ef295c38a89416e5bc1980c050005e4e63f3b4f050868"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b943cff64833f6b3b533bb3359969e89d605c78f0725e27de5a858a452fa1d70"
-    sha256 cellar: :any_skip_relocation, ventura:        "11a67e0e2181be258cfbd618cb9ed9033b6190cf6d3115a4eaec07bab0b75aa3"
-    sha256 cellar: :any_skip_relocation, monterey:       "c2ea6f5a3130dad732927077f541feb4a38f4cd310b37e92608581b32b215a76"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c15371b0547ea850dc339cd43f6a99a39083dbc06cf6b3aef46afdfa593e8082"
-    sha256 cellar: :any_skip_relocation, catalina:       "c86425fd6f908fba08066cf13b36129f196873885c410df4854de33eec43c5d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e586285226ad8fc26c162c306f608e3188fb747b46ccaa5a8967c98afbad8f01"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4c470b3aaba3f50057721c174b4f09f7d416159c705d125573ad97b3a5f519d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c5d7ebdf16f98be2f73949ea736e2a95013563ab11039d8a8d1a3728e4e4673"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce87d1fb2ae3f77f13089bb941f6017e79615f5e3def000a58d41f693d0b1102"
+    sha256 cellar: :any_skip_relocation, ventura:        "d42d2a5f89ca899190a166887761a29cb7ab6e6e0b6e5fa37674e67bd6f0932e"
+    sha256 cellar: :any_skip_relocation, monterey:       "a55642ff3ef2719e31d41009ed258c048e976d4536b36d57735a369394bd1b37"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7201ec8c38ebe616847e20a9fa32cda48902ff8da45b795aa0b76aae302f2c16"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0294916a3c5de27e0a7a87ba56c68172e33c95d286e2b760974d3a1a2c33c007"
   end
 
   depends_on "pygments"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
 
   resource "appnope" do
@@ -29,8 +29,8 @@ class Ipython < Formula
   end
 
   resource "asttokens" do
-    url "https://files.pythonhosted.org/packages/ff/b9/40d8b5f23c59def4f4a67a807e899e00200db11f63b4ac9bde5838b709de/asttokens-2.1.0.tar.gz"
-    sha256 "4aa76401a151c8cc572d906aad7aea2a841780834a19d780f4321c0fe1b54635"
+    url "https://files.pythonhosted.org/packages/c8/e3/b0b4f32162621126fbdaba636c152c6b6baec486c99f48686e66343d638f/asttokens-2.2.1.tar.gz"
+    sha256 "4622110b2a6f30b77e1473affaa97e711bc2f07d3f10848420ff1898edbe94f3"
   end
 
   resource "backcall" do
@@ -74,8 +74,8 @@ class Ipython < Formula
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/c4/6e/6ff7938f47981305a801a4c5b8d8ed282b58a28c01c394d43c1fbcfc810b/prompt_toolkit-3.0.33.tar.gz"
-    sha256 "535c29c31216c77302877d5120aef6c94ff573748a5b5ca5b1b1f76f5e700c73"
+    url "https://files.pythonhosted.org/packages/fb/93/180be2342f89f16543ec4eb3f25083b5b84eba5378f68efff05409fb39a9/prompt_toolkit-3.0.36.tar.gz"
+    sha256 "3e163f254bef5a03b146397d7c1963bd3e2812f0964bb9a24e6ec761fd28db63"
   end
 
   resource "ptyprocess" do
@@ -94,8 +94,8 @@ class Ipython < Formula
   end
 
   resource "traitlets" do
-    url "https://files.pythonhosted.org/packages/dd/a8/278742d17c9e95ccb0dcb86ae216df114d2166d88e72f42b60a7b58b600b/traitlets-5.5.0.tar.gz"
-    sha256 "b122f9ff2f2f6c1709dab289a05555be011c87828e911c0cf4074b85cb780a79"
+    url "https://files.pythonhosted.org/packages/56/48/0eb99357330a02974d537be8e4096bc58cfac1089e3153570119ccea7a40/traitlets-5.8.0.tar.gz"
+    sha256 "6cc57d6dc28c85d5365961726ffd19b538739347749e13ebe34e03323a0e8f84"
   end
 
   resource "wcwidth" do
@@ -104,7 +104,7 @@ class Ipython < Formula
   end
 
   def install
-    python3 = "python3.10"
+    python3 = "python3.11"
     venv = virtualenv_create(libexec, python3)
     res = resources.reject { |r| r.name == "appnope" && OS.linux? }
     venv.pip_install res

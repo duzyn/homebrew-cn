@@ -7,8 +7,8 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   stable do
-    url "https://mesa.freedesktop.org/archive/mesa-22.3.1.tar.xz"
-    sha256 "3c9cd611c0859d307aba0659833386abdca4c86162d3c275ba5be62d16cf31eb"
+    url "https://mesa.freedesktop.org/archive/mesa-22.3.2.tar.xz"
+    sha256 "c15df758a8795f53e57f2a228eb4593c22b16dffd9b38f83901f76cd9533140b"
 
     patch do
       url "https://ghproxy.com/raw.githubusercontent.com/Homebrew/formula-patches/f0a40cf7d70ee5a25639b91d9a8088749a2dd04e/mesa/fix-build-on-macOS.patch"
@@ -17,14 +17,13 @@ class Mesa < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "c422e07edf9d6c8e6cf0bda03fad16c5b489a21be6ce0e29855703fce1b4e04d"
-    sha256 arm64_monterey: "b16ba7ceb8754ee89e5bdc0e6c025dff9870f2c6974704ac85457420c6f57b64"
-    sha256 arm64_big_sur:  "c3920ab8be85c3944bf3dfdbc1a19e9595a0c65fd97fbd0b1b775ea7b3907b8f"
-    sha256 ventura:        "3a4d86156efac314b005f1ae75f183551ea183fe4ebe7f4a22a71a245a84e037"
-    sha256 monterey:       "2091bf9304f744b437cb6e7fd10d3613b10162bbc8afa03e67ce2186f92b4abf"
-    sha256 big_sur:        "49fc64220a8ed2c2de843f560507ee43796892baecf9e42499f7d2e14d0be577"
-    sha256 x86_64_linux:   "21233b1df81b6af6d7c3b0e66cbb68c068f257610428013869fc6e737b9b97d8"
+    sha256 arm64_ventura:  "22f323f27ab54bf69b10a010748b28a5eb795992c56bf1e64dc5870dffeab947"
+    sha256 arm64_monterey: "73921ffcfec73929de1afa74cfd3093bf78481a647af65d547a1a061bbbcd7bb"
+    sha256 arm64_big_sur:  "e36b060fd479ece9725591e193c363eb60f696b4e93559e2e8b262e7f7125036"
+    sha256 ventura:        "1d3e6ce8daba002911f3d5b86e8a7e23ec20c172c7fa5eb0d05f7cce7cc010fb"
+    sha256 monterey:       "effda2b201f06c41600d33b716f633a0cdb50713a02bc7021da103523efab75a"
+    sha256 big_sur:        "8ed5e50a31eaaa87400f0bcdd8a4d21379d20a010ce9cba7812664de04390600"
+    sha256 x86_64_linux:   "9a19b1ae604b54976e49fda756fd4e2842a461eee05bad4cea112b2db296cfdd"
   end
 
   depends_on "bison" => :build # can't use form macOS, needs '> 2.3'

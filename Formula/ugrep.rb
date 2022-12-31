@@ -1,19 +1,18 @@
 class Ugrep < Formula
   desc "Ultra fast grep with query UI, fuzzy search, archive search, and more"
   homepage "https://github.com/Genivia/ugrep"
-  url "https://github.com/Genivia/ugrep/archive/v3.9.2.tar.gz"
-  sha256 "3416267ac5a4dd2938ca91e7bd91db958d65510c9fd33b221f067bd3c6b3fc6a"
+  url "https://github.com/Genivia/ugrep/archive/v3.9.3.tar.gz"
+  sha256 "d0b6d772cfe75ef28e15932ddd4d177c897625be45da20fd3b27658bb0cf1194"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 arm64_ventura:  "32998ad357de246d98c7f04317e540bb20631848b3867d97d7d70361ef04f57a"
-    sha256 arm64_monterey: "c02e298d5858fd7aa8d8307cb52c29c086e360ba2b219d71a1d7c59a27ba6ddc"
-    sha256 arm64_big_sur:  "154cd0420579b2e0203a3b6dfd44943d9eb125e2adf2037bbf90113e3fe0dbe4"
-    sha256 ventura:        "a83296acd870e799b6fd6d9b0927a758cf201cd4a8c021cbd5a68935a2bd3e0f"
-    sha256 monterey:       "b1a2c618f1f404372ac838d0a4fe890233111e3118290629bcafa65578dbb682"
-    sha256 big_sur:        "81d7214cdfaec0060179bb3f02e24edb45f390c0f4bf0bbe5f4a05dd30b36477"
-    sha256 catalina:       "db2e8624cfde4ee3d23007b365377b9d545d6f26a3b91ca28c8d9861b0259ba3"
-    sha256 x86_64_linux:   "411ab9ae62e0647f2bcc42fbbb3cffcc256349bce98eec656992a4ef4369c3a0"
+    sha256                               arm64_ventura:  "d7adac1572381e25bd3a120e70bdea33d9322f141f23e44aa70cdd01bf44686e"
+    sha256                               arm64_monterey: "171adcea631cd7225d75d2fff7dcbf09e4361170787413cf1b5a4b58b23dcf65"
+    sha256                               arm64_big_sur:  "3ccfad955e934e0fb0661ab45b89cd85dca859a87b064daf8c267a3716c87a19"
+    sha256                               ventura:        "2397331a26be262186f3d6c2773951e0aca35a6039af23b07cd7daa6c3e45ed5"
+    sha256                               monterey:       "b46b4c59d7a66a9f48e6ea14fa5c76127dc5b7dbc1341ef7ee38df4fbcad2406"
+    sha256                               big_sur:        "26051bc9cd3994f869891226f7f9d901a246a3bc43e135de74273ed94dd6208b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "28fc1fc5a5ddf69365061cea0a8c646a58796fb5ff2cf8e5258418ff6366f5c1"
   end
 
   depends_on "pcre2"

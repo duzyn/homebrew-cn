@@ -13,17 +13,18 @@ class Mbedtls < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "34339731ff914e54f43da25f27009496cffb6c79f54616d77efbbd73203d75fa"
-    sha256 cellar: :any,                 arm64_monterey: "f2723318e1b708f85d899274beb09014605d433bc13ad1614c5f3dcd2e44d315"
-    sha256 cellar: :any,                 arm64_big_sur:  "164a8fb70c2e5033ef82692cffdc7f19fbd7ddcc03c04bbb70bc8dc63759389e"
-    sha256 cellar: :any,                 ventura:        "1e16bf397c8cf8b2b97e0a9bfe528faed102bb3b0c0244875ec567c1c004db1d"
-    sha256 cellar: :any,                 monterey:       "ea763278788d0f2327259335266f4a7acb8855b58c7cce2c5674655440dcfb64"
-    sha256 cellar: :any,                 big_sur:        "72c46972acb5b431cbcca78089e3dc06a593c774c5195b9ae408b821d71410cd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e69e5ac71eb61eed22a88d193c757946c0acf568aebb27f5eea27ad3720b73de"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "75fae44abe3175d39a82a1c138459ea33fa6e6b62ef515f14271967a07f3824a"
+    sha256 cellar: :any,                 arm64_monterey: "68f6114531bdd17099a5d221920ef82ac358b5678c456f8d167b9405e5b31e70"
+    sha256 cellar: :any,                 arm64_big_sur:  "7a1b70f3d34628213b037c908777aca1a67ffb24cda8121abfc1f95cd11396b7"
+    sha256 cellar: :any,                 ventura:        "7c0052d3fa0e301750d84e9a7b04a4b1162807f24adca123ada45f20e60d4359"
+    sha256 cellar: :any,                 monterey:       "dd2c1c332beceb70c109653b2ce23561bd8d8b3cd057e3c73638847f01e7b6ea"
+    sha256 cellar: :any,                 big_sur:        "87e14b2db21d3a1f97c00e9b725d5b6ae29f7a3d3afb72b7f017c7af5d33ce72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7837ee52a3ab9f96358106e9fdd881d753ee82e97312c3b8be667e743708e3ec"
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
 
   def install
     inreplace "include/mbedtls/mbedtls_config.h" do |s|
@@ -35,7 +36,7 @@ class Mbedtls < Formula
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DUSE_SHARED_MBEDTLS_LIBRARY=On",
-                    "-DPython3_EXECUTABLE=#{which("python3.10")}",
+                    "-DPython3_EXECUTABLE=#{which("python3.11")}",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",
                     "-DGEN_FILES=OFF",
                     *std_cmake_args

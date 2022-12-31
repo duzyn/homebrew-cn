@@ -10,17 +10,16 @@ class Jupyterlab < Formula
     "BSD-3-Clause",
     "MIT", # semver.py
   ]
+  revision 1
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_ventura:  "d8553aac2ecc7efa00334b40a8c9268c2740ae491029703249c62297d7368bb6"
-    sha256 cellar: :any,                 arm64_monterey: "c431d4513a62e9e7a39195c22b4f0c0175443240d000a60bc27db72810e813b9"
-    sha256 cellar: :any,                 arm64_big_sur:  "68dc6899b92312b92607ed9286c491008e1fb63ce8f6684d9576849d9afce5bf"
-    sha256 cellar: :any,                 ventura:        "3ca1369092fecfa2759361d750967500bb6bc9c2d28a3384425f3bb9f8d4aa76"
-    sha256 cellar: :any,                 monterey:       "341d1b3c42e3310405981fc79aed64d62efa731e6f27491dd8f5b9eb4e58025f"
-    sha256 cellar: :any,                 big_sur:        "3b0f7c5af61e8a1529d66fd0aa4fff74911c3db3b078032958a4ec37120bbc08"
-    sha256 cellar: :any,                 catalina:       "bc9594564c41553d785ed2904f6f2df998d1de757fcd7e7436e2e88d688a6c48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ad28827fde7f094afa93f42dbad48f7f285b4a1905cc93205c0763f139eb8477"
+    sha256 cellar: :any,                 arm64_ventura:  "ef65d66d25c30bf53e3f985ca3a7b7255c4108617b7434db12d745efe51a25fd"
+    sha256 cellar: :any,                 arm64_monterey: "a2b5567a0b9e52dbf9d831eacef29239aee3413d7ffd9283f612298e2870434e"
+    sha256 cellar: :any,                 arm64_big_sur:  "90ee222a6dd1fa54a315cf00bd5eb606ff82d86db9a7dc8fbbfbaa916dce300a"
+    sha256 cellar: :any,                 ventura:        "c188c10ad42309481202268c3fc20f5f75dd32db78007c221fc4351b9fd1a07f"
+    sha256 cellar: :any,                 monterey:       "c0db45836ee1c296c1fc414793647f2b7c5330f0f79f6e52ea211171ddbdc75e"
+    sha256 cellar: :any,                 big_sur:        "fbaeee46942d4c0d22733926874a0b91bbf7de3c7631b1340ea4406fe428c13a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "00737c799921ba3b0f07e4d8429e572a1640e5b209b66e5a71f177c222d4a280"
   end
 
   depends_on "hatch" => :build
@@ -29,7 +28,7 @@ class Jupyterlab < Formula
   depends_on "node"
   depends_on "pandoc"
   depends_on "pygments"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "six"
   depends_on "zeromq"
 
@@ -318,7 +317,7 @@ class Jupyterlab < Formula
   end
 
   def python3
-    "python3.10"
+    "python3.11"
   end
 
   def install

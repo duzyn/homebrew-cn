@@ -2,16 +2,16 @@ class Bartycrouch < Formula
   desc "Incrementally update/translate your Strings files"
   homepage "https://github.com/FlineDev/BartyCrouch"
   url "https://github.com/FlineDev/BartyCrouch.git",
-      tag:      "4.14.0",
-      revision: "03c3816a39ac2d82fe9a2f2efc84949a1e50165d"
+      tag:      "4.14.1",
+      revision: "6632e30cae5733e04a3d04aaa2afed25c04606a1"
   license "MIT"
   head "https://github.com/FlineDev/BartyCrouch.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "5a311ab6b5dcc5207d783d613f2435b1d38247d2d67bb929e6a071c5f3d24b28"
-    sha256 cellar: :any, arm64_monterey: "43dba96a5a6c96a5a04d677da4055658ac3c9c8af53c7d76c94fe1f12a5fb182"
-    sha256 cellar: :any, ventura:        "18dabbc4f3dbed4f368989134994412d03dfd5456bded2efd8c6f67bbe8e7601"
-    sha256 cellar: :any, monterey:       "904848becdca34aeda73e79878654d02d937db7d2403d345d34d2a04c6cef120"
+    sha256 cellar: :any, arm64_ventura:  "9421271d8884da77f16c587f8e84e599aacefa24e909d95252202fd781230642"
+    sha256 cellar: :any, arm64_monterey: "d110fb2436af1d8fee08b80c8225fe8039f9d780e406d15b5b2ae9c1438bcf18"
+    sha256 cellar: :any, ventura:        "e6a46387a66389eabfe0d3d0404f8cdf7a1971972f19530d31a33ceae7d40e39"
+    sha256 cellar: :any, monterey:       "3e3ec5de221db1d736b4ef1e8e61b7b12c9a72be8638429ddbe9ca3fe1ceacbd"
   end
 
   depends_on xcode: ["14.0", :build]
