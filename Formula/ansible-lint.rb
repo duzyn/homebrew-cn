@@ -3,18 +3,18 @@ class AnsibleLint < Formula
 
   desc "Checks ansible playbooks for practices and behaviour"
   homepage "https://github.com/ansible/ansible-lint/"
-  url "https://files.pythonhosted.org/packages/eb/c7/93776a1c44fe66dc95867d636abee201144920b34633f6aa115f43680889/ansible-lint-6.10.1.tar.gz"
-  sha256 "24f15b61af52bc22b05d008f9eb7662f1cf42ab74008da9f89af71fc540ccfa4"
+  url "https://files.pythonhosted.org/packages/48/fc/adb3e2fa2f31dae785d1a3602a2792fc657953e1bf0f5d36d0aa98201441/ansible-lint-6.10.2.tar.gz"
+  sha256 "e228449ac2f10d1c16df35c4769282b529ac1fe2b50767333fad1c85a62df671"
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5676082843b825370c299fc8734374f7391716f35d1629d21bc662d26a48607f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "51477ac26b253605665956b4b6c50db52e4dda9a70b7edd4946dced1f42093fe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d528d8111df20432ea4bb8d1cc8c6f6db43ef5e0ed58ee27e5e3b2d78716527c"
-    sha256 cellar: :any_skip_relocation, ventura:        "48935530f81e281bacbf68f9857348687e763e46dbc88081c3602c34d0e11be0"
-    sha256 cellar: :any_skip_relocation, monterey:       "2f8dab21768fdb4fc89ad974defcabfadf0b64f907e4b71a01ee5f7225a4a781"
-    sha256 cellar: :any_skip_relocation, big_sur:        "87faf9fb1ebfad6e936a6fd6a46af4ee0093cd7baa2103cf95a2cf536ffbe3e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8550e4177a7ee1cb4962ead2c272b3d72f97aa43a6222a77841634f878488516"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4c57176a634957642c835ce1aa7c604ee9af74d61b72a6e39617d8e8d838596a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2911bf2113eb941266760ab9ccecaaaf7e41db089be137e461d332d3595a011"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "628b53e86eb80ad6e274d3c7413774a9725dd14ef1b817263c241fbb2fb39f5c"
+    sha256 cellar: :any_skip_relocation, ventura:        "056279c9bc571c6c5dab9698c8e52f389e594f9f79ff81680501cacef238ccf3"
+    sha256 cellar: :any_skip_relocation, monterey:       "a3f641175a73e5e591b0a0008e847a011b920c64ec6a5d954491b9e5658fe58d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "cf8cc25a7642bf04a45caced845979af933e8e30fe8f89b0ea8a9e046b1e0572"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ecd40aa3522ff19b5d36ec629c599653f42b766419a52a2117ea96637777d1b"
   end
 
   depends_on "pkg-config" => :build
