@@ -3,20 +3,19 @@ class Ipython < Formula
 
   desc "Interactive computing in Python"
   homepage "https://ipython.org/"
-  url "https://files.pythonhosted.org/packages/82/2b/026af47da09998404f51064d328f5f1f68c78829082d2945be489343fde6/ipython-8.7.0.tar.gz"
-  sha256 "882899fe78d5417a0aa07f995db298fa28b58faeba2112d2e3a4c95fe14bb738"
+  url "https://files.pythonhosted.org/packages/f5/39/89664d8c3e4dfb0a73862cbbff8eb4028a1e3d4305da80ab0a493848ed9b/ipython-8.8.0.tar.gz"
+  sha256 "f3bf2c08505ad2c3f4ed5c46ae0331a8547d36bf4b21a451e8ae80c0791db95b"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/ipython/ipython.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4c470b3aaba3f50057721c174b4f09f7d416159c705d125573ad97b3a5f519d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c5d7ebdf16f98be2f73949ea736e2a95013563ab11039d8a8d1a3728e4e4673"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ce87d1fb2ae3f77f13089bb941f6017e79615f5e3def000a58d41f693d0b1102"
-    sha256 cellar: :any_skip_relocation, ventura:        "d42d2a5f89ca899190a166887761a29cb7ab6e6e0b6e5fa37674e67bd6f0932e"
-    sha256 cellar: :any_skip_relocation, monterey:       "a55642ff3ef2719e31d41009ed258c048e976d4536b36d57735a369394bd1b37"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7201ec8c38ebe616847e20a9fa32cda48902ff8da45b795aa0b76aae302f2c16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0294916a3c5de27e0a7a87ba56c68172e33c95d286e2b760974d3a1a2c33c007"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fb09836dd44b816d6d87e4d6534e227e12fef9badfceb512bcc08f5ada786404"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "924adc0949e435df166cfe75929c929b85b2fc405b26734b9843c0a9d6d8c92f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c416539d50ea181823cbd5355abf65f610afbb61c062d799527c4b4b4796c5b6"
+    sha256 cellar: :any_skip_relocation, ventura:        "7abdc037185d0d303db54828f250394e4503bc947dc16c5d53695c8b1b3bef1c"
+    sha256 cellar: :any_skip_relocation, monterey:       "ff58f114157cf3f95a50e144849b520a704eed679e086399a52771454cfce3db"
+    sha256 cellar: :any_skip_relocation, big_sur:        "fcdcee4bfd90d82cec424d3483097958344cff88b78b1233aca0dfff7a1ab215"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fc64982f915afaedbd5482464e1e95bdfa1f1ce56939a9f37315a1a3cabc387"
   end
 
   depends_on "pygments"

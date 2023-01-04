@@ -3,19 +3,19 @@ class Toot < Formula
 
   desc "Mastodon CLI & TUI"
   homepage "https://toot.readthedocs.io/en/latest/index.html"
-  url "https://files.pythonhosted.org/packages/1d/3c/0aed6404debf32916cfea60012c0e07a75b3ade1cf8a3a2fb88fb5f6eee7/toot-0.33.0.tar.gz"
-  sha256 "07cc6f05e06019222d0527bc1333437950c65f5e063c16d6d0b31112d7a2e307"
+  url "https://files.pythonhosted.org/packages/93/4a/d66f9ed2791fa978ba07843f1175a9634799b505296078f30e40ce4495eb/toot-0.33.1.tar.gz"
+  sha256 "63fc083c4991fb6d9734df2c5cc2c5c5130370f506ef44b6ff2cd3799fd4f16c"
   license "GPL-3.0-only"
   head "https://github.com/ihabunek/toot.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1b338815578c2d6c6a28330619eef01c0e78181ef258e2f9f6e683af1a067d0d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7ca44a10ff2f245282a5a853770881cdc05de7ab232968b6a075bc07cf8ed8d7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "06596f086d4f89736b931fe7f4e730c76a780bffa051157c3c51449ea9122984"
-    sha256 cellar: :any_skip_relocation, ventura:        "f5475819e1aa3c57de667e4782e175dbfe6aef301ea8c7d984ad50e25c32bc13"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ede92f26e1ce10cc97fac002a065322331bbc6faa1775b529256edf6821beff"
-    sha256 cellar: :any_skip_relocation, big_sur:        "eb1058021b844331854055eeaadc3130f32988cb7bf18833e7d61b68b86e712d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb830b9110d4b96c6939b82183fab11dde9d97599eebf928039a2f0d675026ed"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9f0de5d75682a3c28ffdd6eb2599ac7ddc2933741ed243b87544d68e647750d8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6a58ab22ae0f2eb2c8310e156ba8a1148e4d9f8feee24704a263e62595a2e6da"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "583c804bf85e5b82c467c4ef42c1714af73b56057322246d76886387dfd2fefd"
+    sha256 cellar: :any_skip_relocation, ventura:        "5df468660735054c3c11b744c870d8bd239c69e142016c2373931b7211a474e9"
+    sha256 cellar: :any_skip_relocation, monterey:       "d9a73566d8ccc8cad636871716f48f9429b28fc65db7c6013818b9e8acec6642"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b805c2775ac4b7f408d98f59d2ebd2868a76b0419a69fd47d0e5d3a8db81c0b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79878a4b5e8c336d68fcf86e178abb1f0540186b1f0a6df830a5c5b80fd7e905"
   end
 
   depends_on "python@3.11"

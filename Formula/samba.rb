@@ -14,21 +14,29 @@ class Samba < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "d7b51d4816df689e904b47e7127c569dc30010d7f468eb0ee1a5ea61d38732dc"
-    sha256 arm64_monterey: "71e0287b92be4b6a1bf59b39a44bc1797d0c6df3a41ab4cfe289431097d4c765"
-    sha256 arm64_big_sur:  "1d9c5c45dc7416eaa9be0274c142a4d419306340a234e8f90f68af012f8ed281"
-    sha256 ventura:        "d8a57c488cc1b878e55fa95b75b049d5c6780678f2d885adca92d41cb2035b31"
-    sha256 monterey:       "0114b662e6bf42af9560647e00bd058e9da57406349b1bba49dd7bcaa9012a34"
-    sha256 big_sur:        "13749c6d7d2a3f79f33d6ca8b98000e255cf50b191b36ead4c82ba8ff335f780"
-    sha256 x86_64_linux:   "f97c1ddf6a5dde556437655a11003015aec5acaa74a55bf702e68732d625454f"
+    rebuild 1
+    sha256 arm64_ventura:  "051b24e4afef1632447fed0407decbc44efc12f4cf6d8144231666c42c4faa25"
+    sha256 arm64_monterey: "c6e18e3f22acea130e83f11eebd51d85b7b594a9d371891257b0a130bbfe31ff"
+    sha256 arm64_big_sur:  "a9ba7054523b3b13fc6aeb0444a9a816e43cc8c7e1eacbe516d3e2cbd189673c"
+    sha256 ventura:        "6111c8adac57188bb113b552e73290f2e6c222cb055bdbd93400a1f14f595847"
+    sha256 monterey:       "4a2fce95e7847202c650b426aa9b8dc76878955032bbb6782c0c23c67d583de4"
+    sha256 big_sur:        "c42ecd9a4092379993fca623ce6f8632745c39819075f8488d25735bd5972da9"
+    sha256 x86_64_linux:   "0a9271342edc28f7cc7531b8297808fc9f52bc21c246c7bf38c3ef398dfe2839"
   end
 
+  depends_on "cmocka" => :build
+  depends_on "pkg-config" => :build
   # configure requires python3 binary to be present, even when --disable-python is set.
   depends_on "python@3.11" => :build
   depends_on "gnutls"
+  # icu4c can get linked if detected by pkg-config and there isn't a way to force disable
+  # without disabling spotlight support. So we just enable the feature for all systems.
+  depends_on "icu4c"
   depends_on "krb5"
   depends_on "libtasn1"
+  depends_on "popt"
   depends_on "readline"
+  depends_on "talloc"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
@@ -62,6 +70,7 @@ class Samba < Formula
     end
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/private" if OS.linux?
     system "./configure",
+           "--bundled-libraries=NONE,ldb,tdb,tevent",
            "--disable-cephfs",
            "--disable-cups",
            "--disable-iprint",

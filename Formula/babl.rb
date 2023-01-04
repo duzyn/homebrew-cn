@@ -13,19 +13,21 @@ class Babl < Formula
   end
 
   bottle do
-    sha256                               arm64_ventura:  "84568f1aef9f12ea0b0a17985cdcd48d7b592882b1cbe1242b37b54211e4469f"
-    sha256                               arm64_monterey: "d2db35d55cad4608af300198c59743726ea50e179de77d7d7d9786dc85a49dec"
-    sha256                               arm64_big_sur:  "926919275642427848e680b805cc2e0d8ae13aae618d2a9daa5be9f6b2be265c"
-    sha256                               ventura:        "0b6056b98919e2ba5302a3679bc7e38d991ec53a37d300b344410f563fa8f4e9"
-    sha256                               monterey:       "5a0c71b38f144754e54ef692fcf3e93aaecd5cdc2d1dc1b90ef5045f39d71182"
-    sha256                               big_sur:        "4aa16bf88b8c731c37a96d56ef60ceb1a754a31f563e857618bc18e72a825176"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81a74b8ead443e96eaea886db4d376261d15d43eaa2da1b1c099a3badaabf6c3"
+    rebuild 1
+    sha256                               arm64_ventura:  "ec28930e1eaff7a52959fe9e14dbc493da41cedff4c4a3ac6532685722c13f38"
+    sha256                               arm64_monterey: "5f334080ec288a84258cdcd1b69c8bb287dff718011cdafca075308f3b53fe6f"
+    sha256                               arm64_big_sur:  "24240a100f9f4c23f4a02747e618b6092d044e54fb7bc2439613aa97d02b48a2"
+    sha256                               ventura:        "74bbb9d876a09bb994e2600ae4cd46628d1dfbaf4cb1ce8878eac4cf147effd7"
+    sha256                               monterey:       "363334a6b72fcf78c5381d061254239105b35b8e88213db5ea16b67f212ffde5"
+    sha256                               big_sur:        "121d78f34e0b6c400988a3a2e2ddc50dd9db14d0d2c97832d88b7b227bec375d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1018eb7224cdc4b96dda18e3e5b9262dc711c50a5c9c533f5210a0e7503d7238"
   end
 
-  depends_on "glib" => :build # for gobject-introspection
-  depends_on "gobject-introspection" => :build
+  depends_on "glib" => :build # to add to PKG_CONFIG_PATH for gobject-introspection
+  depends_on "gobject-introspection" => [:build, :test]
   depends_on "meson" => :build
   depends_on "ninja" => :build
+  depends_on "pcre2" => :build # to add to PKG_CONFIG_PATH for glib
   depends_on "pkg-config" => :build
   depends_on "vala" => :build
   depends_on "little-cms2"
@@ -50,5 +52,7 @@ class Babl < Formula
     EOS
     system ENV.cc, "-I#{include}/babl-0.1", testpath/"test.c", "-L#{lib}", "-lbabl-0.1", "-o", "test"
     system testpath/"test"
+
+    system Formula["gobject-introspection"].opt_bin/"g-ir-inspect", "--print-typelibs", "--print-shlibs", "Babl"
   end
 end

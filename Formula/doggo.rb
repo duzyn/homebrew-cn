@@ -1,25 +1,22 @@
 class Doggo < Formula
   desc "Command-line DNS Client for Humans"
   homepage "https://doggo.mrkaran.dev/"
-  url "https://github.com/mr-karan/doggo/archive/refs/tags/v0.5.4.tar.gz"
-  sha256 "81815c4b1230109d2ec5767dccb4a486468b214d3f3fa9ac7ed41463e01260cf"
+  url "https://github.com/mr-karan/doggo/archive/refs/tags/v0.5.5.tar.gz"
+  sha256 "7ba1340ce46566ca8fa1565ef261519dee5b1c7007aea97eb1f9329f8a3f0403"
   license "GPL-3.0-or-later"
   head "https://github.com/mr-karan/doggo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "18598501942207300a2e1fd00b1eeb7598ffe1a7b845b4da00961186b775da74"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "047bdd261712857f6c8cf8644b33670da8fbfb83035589e06924e675f41a8617"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "47203457278798c08c74e6e048f036e8ef1a3579c329a43de903f270374f16e8"
-    sha256 cellar: :any_skip_relocation, ventura:        "8793447c84f6e5287443988d865abea3b6551c8dc4cc986895b6a8a132a41917"
-    sha256 cellar: :any_skip_relocation, monterey:       "16e3025df96d2b684e0c946b089f63ead6876552213c23ccf04e0e0791880b75"
-    sha256 cellar: :any_skip_relocation, big_sur:        "56d48773f860eea3955bec5939c04e5dd1cb30ffdc5774711b0cb09c461b6c60"
-    sha256 cellar: :any_skip_relocation, catalina:       "6bbf6b52c703cd3ae160011c5d3df3d26baf39d08c4748be596bf5dd47782cd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "656758ccedb107018e5cba479e134d17295fa939771162d8d2e001738dec89eb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1b52a39277350522f9bf6e5d466942c488b4ff28451470a4514163f1f0c1c621"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e9efde0974a3c99bc20547bb46a859e1bc16e7a9fe51258203901ae527f2e9f8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0fa71c6ad80aa231c5a8ccac33dee9c37a9d83c18f144cfb48d3effab814ff3c"
+    sha256 cellar: :any_skip_relocation, ventura:        "fa45db6b6ca4c7923fdef34b82aa54444ecfc6277379a4e5c1bebff788cf5dee"
+    sha256 cellar: :any_skip_relocation, monterey:       "14c0702c87d0245c5d5ad8b238bad6325ed1c580a4819e838f42e85caf74b439"
+    sha256 cellar: :any_skip_relocation, big_sur:        "c57cdbc88339c9d7291ca80b7f066693303dfee95959cf138f33633a0a68a51f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc720679ba537b8b881624652d13b1753a5f59b78dfb91930214e7b50f3b6e46"
   end
 
-  # Required lucas-clemente/quic-go >= 0.28
-  # Try to switch to the latest go on the next release
-  depends_on "go@1.18" => :build
+  depends_on "go" => :build
 
   def install
     ldflags = %W[

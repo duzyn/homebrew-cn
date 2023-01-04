@@ -7,20 +7,22 @@ class Firefoxpwa < Formula
   head "https://github.com/filips123/PWAsForFirefox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f5a6c1a2828e0eedf2df621b2a4a6db789250530e80c1ae871cace36fe1b59ab"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "25b6287e640d793241c6207dd780bf2ad4d8cb53e8c14a24f536377bd623a385"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1439fdb596a7f7b5fba11f924bb1eef9f1129e30aa2bf1d157208a017985890a"
-    sha256 cellar: :any_skip_relocation, ventura:        "dc01c62cede8658ea0d6b6ade7fbe22d509ce00c86aa9d1a7b55a1949da2ee24"
-    sha256 cellar: :any_skip_relocation, monterey:       "694bb1f491448fa23f5623eb7d930e97b0527b79a158663618b3deca6723e322"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a5f60b07334ceb536d57b0e90e76fbbe890cfbe5a4745b09346c2ebcc5ebe9d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "995e373aad1569d4473c3bad7afc5c50bbe5c94258595061d7146af7a83c4997"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "841744949be4519b5aed3cb45dc95c2143ae4e10b4142e62871880781806bf33"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "73c44df3190c2ade1901fe3fdbcde02cef20c97bc4a4e783f3fdb76346fa8ba3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ba1a078be7e769e1bc91f62798412d998c3064017c3e181ab427a164dfab90b8"
+    sha256 cellar: :any_skip_relocation, ventura:        "9dd6a60d73d792cd46b20c72b22b6481d088a517cfa4a2a6eb39f44b4cfa3b0e"
+    sha256 cellar: :any_skip_relocation, monterey:       "8aa832650a1bf76fd6a1fb374ee1635ab1a4585513ecfa79f4ced7a53aaec9c8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "4f660812d69174bd75312d9702617deea2214e66b7fe401850c77045f75d0eb5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76ac098bd881dc420017eb74d5e8347b507ee39b990260308ca3cf787b638ca8"
   end
 
   depends_on "rust" => :build
 
   on_linux do
     depends_on "pkg-config" => :build
-    depends_on "openssl@1.1"
+    depends_on "bzip2" # not used on macOS
+    depends_on "openssl@3"
   end
 
   def install

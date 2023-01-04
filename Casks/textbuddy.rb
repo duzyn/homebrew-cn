@@ -1,6 +1,6 @@
 cask "textbuddy" do
-  version "1.3.0,24"
-  sha256 "26ee19e8a9c03644711136203bb5d0167ff760216406904ad3fb1b120859a76f"
+  version "1.4.0,25"
+  sha256 "25bcb79eb20957d7c78bbee0a12641f773e4d667bbdb307dd68dc0b9e6ebf58a"
 
   url "https://get.retina.studio/textbuddy/textbuddy_#{version.csv.second}.zip"
   name "TextBuddy"
@@ -13,7 +13,7 @@ cask "textbuddy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "TextBuddy.app"
 
