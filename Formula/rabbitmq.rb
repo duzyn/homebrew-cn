@@ -11,7 +11,8 @@ class Rabbitmq < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e030728f8496dfb8a40d73fa14dce5d744e18c4114daeaef0188102917429738"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "74417b767ca4fa475218cb707a44c368296cef93990e806d17eed13b4d955a53"
   end
 
   depends_on "python@3.11" => :build
@@ -67,6 +68,7 @@ class Rabbitmq < Formula
       NODE_IP_ADDRESS=127.0.0.1
       NODENAME=rabbit@localhost
       RABBITMQ_LOG_BASE=#{var}/log/rabbitmq
+      PLUGINS_DIR="#{opt_prefix}/plugins:#{HOMEBREW_PREFIX}/share/rabbitmq/plugins"
     EOS
   end
 

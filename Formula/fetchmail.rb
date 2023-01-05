@@ -1,8 +1,8 @@
 class Fetchmail < Formula
   desc "Client for fetching mail from POP, IMAP, ETRN or ODMR-capable servers"
   homepage "https://www.fetchmail.info/"
-  url "https://downloads.sourceforge.net/project/fetchmail/branch_6.4/fetchmail-6.4.34.tar.xz?use_mirror=nchc"
-  sha256 "c3bdded1b5ce236960bd1ceeee3f3257220ed99c3eec84a5d76bb5618e3258d4"
+  url "https://downloads.sourceforge.net/project/fetchmail/branch_6.4/fetchmail-6.4.35.tar.xz?use_mirror=nchc"
+  sha256 "7b0b56cbc0fca854504f167795fab532d5a54d5a7d3b6e3e36a33f34a0960a01"
   license all_of: [
     "LGPL-2.1-or-later",
     "ISC",
@@ -17,14 +17,13 @@ class Fetchmail < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "0e72f8a593bce8f6b70ad0f865587e79bf2eac97170d0db4726aa4aa6bb81641"
-    sha256 cellar: :any, arm64_monterey: "6c2e7623eb53d17c633555b5cdb0659061cb0b0bad7af40252ddcec2aba3a45d"
-    sha256 cellar: :any, arm64_big_sur:  "50772adf604e9205c592503137467f95ae53cb04722baed139899e1ed6a86211"
-    sha256 cellar: :any, ventura:        "997cb4d44910e0f88c6b8b8e72a7e25f83b2b8abdd95b9e7d208d499d57afa56"
-    sha256 cellar: :any, monterey:       "ce494d0f16574c490c6e06cc1019934413f629674eac8c4f241c8326fbf8e5cb"
-    sha256 cellar: :any, big_sur:        "031dc3c1d190d75404ae239491861e194ea0c5bd660823585d56f41b56e36ae8"
-    sha256 cellar: :any, catalina:       "748117a27ec5bb18475ecc9707dc350e030eba647a160b00d720d6f6512dd215"
-    sha256               x86_64_linux:   "7b01de3652afe1f7ac3adeaf61d92c6fb9002883afb2030267f563890925a7f2"
+    sha256 cellar: :any, arm64_ventura:  "2cfc6f1ee53f355a792c44f9ad1acf3ce441630f7243207bf5b0ffdfe6bcbf9b"
+    sha256 cellar: :any, arm64_monterey: "8942bda75bacb4325eb047e95bc080c4b14ad674e0ea2029f596824bbded67a7"
+    sha256 cellar: :any, arm64_big_sur:  "22adb075c1d00d7dba56ce716735dd60aa8e5621d1fb62f36ced3c8debb5d9fd"
+    sha256 cellar: :any, ventura:        "bcdfc06a8c6278d3f3ca7c5b7d4b40b6dad9f7dc00f96b6dc11c4661e70b8cf4"
+    sha256 cellar: :any, monterey:       "a52c55d1e1b88b4cc6bae0f3901dc1bdc4a172b242bec7cf357866ccf9cbed2a"
+    sha256 cellar: :any, big_sur:        "f34117d5c78375fdbb26cd3a7cf735178d8bcc5c2ed62b4244055969344b1ab0"
+    sha256               x86_64_linux:   "54c64b2799e17784f65473db0fe096967533d694beab4b81365e9c96a0cd608f"
   end
 
   depends_on "openssl@3"

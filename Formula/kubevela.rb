@@ -2,19 +2,19 @@ class Kubevela < Formula
   desc "Application Platform based on Kubernetes and Open Application Model"
   homepage "https://kubevela.io"
   url "https://github.com/kubevela/kubevela.git",
-      tag:      "v1.6.5",
-      revision: "18639ccbae6062929e9f2cabc19795678f22f007"
+      tag:      "v1.6.6",
+      revision: "b24b52b65129e25bfdeb87026a500e0b50541a64"
   license "Apache-2.0"
   head "https://github.com/kubevela/kubevela.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1c2ef5e8dde960139a307d2c8551247a02397fe7bf26d5dc33e043c62fa426b1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c2ef5e8dde960139a307d2c8551247a02397fe7bf26d5dc33e043c62fa426b1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c2ef5e8dde960139a307d2c8551247a02397fe7bf26d5dc33e043c62fa426b1"
-    sha256 cellar: :any_skip_relocation, ventura:        "4e6f654635bbd0e464303d75e647e0d18cde88d6e71cb06829973c466268985a"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e6f654635bbd0e464303d75e647e0d18cde88d6e71cb06829973c466268985a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4e6f654635bbd0e464303d75e647e0d18cde88d6e71cb06829973c466268985a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22d45566474011ea34567519864e34f0ae9ad5d9bb71fe63d3549bbf922f3f0d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5e01ec69a89fcb3d309949aa8652683dde1cbb7ebe11eb5231da2dcb3400f5d2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5e01ec69a89fcb3d309949aa8652683dde1cbb7ebe11eb5231da2dcb3400f5d2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5e01ec69a89fcb3d309949aa8652683dde1cbb7ebe11eb5231da2dcb3400f5d2"
+    sha256 cellar: :any_skip_relocation, ventura:        "54267f6357249f6430c25b757af3be3aacbd7515cf22f70e69538efef9f311e4"
+    sha256 cellar: :any_skip_relocation, monterey:       "54267f6357249f6430c25b757af3be3aacbd7515cf22f70e69538efef9f311e4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "54267f6357249f6430c25b757af3be3aacbd7515cf22f70e69538efef9f311e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0307f907df083eb5515dd9dc4d3542ab57cec0f49c5fddad28251ad1fba29d1"
   end
 
   depends_on "go" => :build

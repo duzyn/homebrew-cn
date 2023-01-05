@@ -4,16 +4,16 @@ class Wget < Formula
   url "https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz"
   sha256 "5726bb8bc5ca0f6dc7110f6416e4bb7019e2d2ff5bf93d1ca2ffcc6656f220e5"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "fb2b2297226438cf2e9af9f1cf94f450730fc515eace8e21dd2db03700e77629"
-    sha256 arm64_monterey: "fc83eec77acee50d2d7ce3bb0cca08d80acccc148e909921de42e57dd5fc7f3d"
-    sha256 arm64_big_sur:  "a0c491ae7de2b722320efa94704567e36f3a0bd04bd946b1431ecbd1bcbfb899"
-    sha256 ventura:        "e7c2473d1ad12f24fcfa2a2de2eea915e478f5b0204c153daa00b7d3f440b7ab"
-    sha256 monterey:       "aa706c58ae7e97abf91be56e785335aff058c431f9973dffac06aacbea558497"
-    sha256 big_sur:        "b90e0d7a4319ccdb18ee0c2ed097e9cddeeceaaf70dc0a785d96b4ba69dbeb54"
-    sha256 catalina:       "2aadef5aae81ecdd7e28bc9a776adcf0eaa393edae904e0c69740a442b7a3e69"
-    sha256 x86_64_linux:   "b6f20b1f4da03b9ee6a42f9305ee015eae7f80afea198e405c0b775eb2333de1"
+    sha256 arm64_ventura:  "a205f83efcbd5cfe22e70261f2b8afdca71cb172222ee3106bb44bc3512414ca"
+    sha256 arm64_monterey: "d1f955187691ad37ede6c33a1eabcd9f25b2f9841fc51ca3422a6cd8e830bd64"
+    sha256 arm64_big_sur:  "ea51216e20e8e7e8d13370c54f2282d7bbf472af73550a685cd7bbf78ed9af89"
+    sha256 ventura:        "24d0f69261b578a8f7c80130cf695a78b9b0a554405d63a30ad7d36c487ce789"
+    sha256 monterey:       "6f17f29657928ecbd76873ef55ee572414650dfc431c28e0587351532b251ae7"
+    sha256 big_sur:        "e33bd34193575636ee2b7cc761821e316d475947b95280a296069324ee31f44f"
+    sha256 x86_64_linux:   "47534590ea4e6468e74fe5945d28ab87510efab485490a132f7fb3bd02686e5d"
   end
 
   head do

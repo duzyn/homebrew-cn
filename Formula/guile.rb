@@ -2,7 +2,7 @@ class Guile < Formula
   desc "GNU Ubiquitous Intelligent Language for Extensions"
   homepage "https://www.gnu.org/software/guile/"
   license "LGPL-3.0-or-later"
-  revision 3
+  revision 4
 
   stable do
     url "https://ftp.gnu.org/gnu/guile/guile-3.0.8.tar.xz"
@@ -21,13 +21,13 @@ class Guile < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "b72ef2808657d18e2307fb7d91d131ad86435714090e915c98cde94ddcc1fbc7"
-    sha256 arm64_monterey: "6990bfe4b7bd85e77f186a58c7134bf71c6879d1abeb9a9ccadf79ed08644a8f"
-    sha256 arm64_big_sur:  "68597781baa169a4d4bd4e6b183110bc83bdd10be8d9c91c5dd817cf561397e1"
-    sha256 ventura:        "a7474a97c56efce6ad5427c0777a32e871d2316a74158a0370e372d3b001f3b4"
-    sha256 monterey:       "d2e8968022b33acab8c3368ac748650f566929acbbf4c2717b9aee1f987486b8"
-    sha256 big_sur:        "599370380e1bd9cad5e3824a65385f77d798987fe6ff10c134b4cd1c07fb4bd4"
-    sha256 x86_64_linux:   "1664725ee652cf1e06226a440a0175875f592be861bb70c7310a8048e8517cdd"
+    sha256 arm64_ventura:  "48357e0f3887432c278fc30c2b85c598c4e696ae0ca0be7666438b14d73479cf"
+    sha256 arm64_monterey: "a2318872c5d2c61bc078cc6bb9baf188052a669481908230a9f7a214161de981"
+    sha256 arm64_big_sur:  "2df409e1621d404500811fb4a05da8b1574a7b15c429bfc77545b2ce06c5b7ab"
+    sha256 ventura:        "176e59c17769821509bc216f0344abaef0a02ee95b8ed8309f1ed5b98e796e12"
+    sha256 monterey:       "0f06358bf9c4c00cb9f346b1f8959157143ed8dc460f496cce523582851f5787"
+    sha256 big_sur:        "57763df1905d84eb09785df36cdb7341e4fda5c25489457fa9b37d9cdc904510"
+    sha256 x86_64_linux:   "10cee80e4a2db3936da4010b891f995e857bf06af986b0f362b1a62f3fda1534"
   end
 
   head do

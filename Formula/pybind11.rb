@@ -1,8 +1,8 @@
 class Pybind11 < Formula
   desc "Seamless operability between C++11 and Python"
   homepage "https://github.com/pybind/pybind11"
-  url "https://github.com/pybind/pybind11/archive/v2.10.2.tar.gz"
-  sha256 "93bd1e625e43e03028a3ea7389bba5d3f9f2596abc074b068e70f4ef9b1314ae"
+  url "https://github.com/pybind/pybind11/archive/v2.10.3.tar.gz"
+  sha256 "5d8c4c5dda428d3a944ba3d2a5212cb988c2fae4670d58075a5a49075a6ca315"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,13 +11,13 @@ class Pybind11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4b3810ded62b758601cb4ef8edb2e5278248d95564a471e3962718bfe9ce246f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b3810ded62b758601cb4ef8edb2e5278248d95564a471e3962718bfe9ce246f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b3810ded62b758601cb4ef8edb2e5278248d95564a471e3962718bfe9ce246f"
-    sha256 cellar: :any_skip_relocation, ventura:        "4e994495e47c6db7e2b97fb589bc4261052428f2799a53c3debc3b8c915d56df"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e994495e47c6db7e2b97fb589bc4261052428f2799a53c3debc3b8c915d56df"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4e994495e47c6db7e2b97fb589bc4261052428f2799a53c3debc3b8c915d56df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b3810ded62b758601cb4ef8edb2e5278248d95564a471e3962718bfe9ce246f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "37e2d3a955f5f035ef12400bfd58bcd43f7a233e9267379f9fc7fa8bedbe3d48"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "37e2d3a955f5f035ef12400bfd58bcd43f7a233e9267379f9fc7fa8bedbe3d48"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "37e2d3a955f5f035ef12400bfd58bcd43f7a233e9267379f9fc7fa8bedbe3d48"
+    sha256 cellar: :any_skip_relocation, ventura:        "8434ebb7e19d4c4ded007b167460089c0f5c17a1d05093a93e1e63abcf843f2f"
+    sha256 cellar: :any_skip_relocation, monterey:       "8434ebb7e19d4c4ded007b167460089c0f5c17a1d05093a93e1e63abcf843f2f"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8434ebb7e19d4c4ded007b167460089c0f5c17a1d05093a93e1e63abcf843f2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37e2d3a955f5f035ef12400bfd58bcd43f7a233e9267379f9fc7fa8bedbe3d48"
   end
 
   depends_on "cmake" => :build

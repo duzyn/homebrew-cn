@@ -1,11 +1,20 @@
 class Ledger < Formula
   desc "Command-line, double-entry accounting tool"
   homepage "https://ledger-cli.org/"
-  url "https://github.com/ledger/ledger/archive/v3.2.1.tar.gz"
-  sha256 "92bf09bc385b171987f456fe3ee9fa998ed5e40b97b3acdd562b663aa364384a"
   license "BSD-3-Clause"
   revision 10
   head "https://github.com/ledger/ledger.git", branch: "master"
+
+  stable do
+    url "https://github.com/ledger/ledger/archive/v3.2.1.tar.gz"
+    sha256 "92bf09bc385b171987f456fe3ee9fa998ed5e40b97b3acdd562b663aa364384a"
+
+    # Add compatibility for Python 3.10 and later. Remove in the next release
+    patch do
+      url "https://github.com/ledger/ledger/commit/c66ca93b2e9d8db82d196f144ba60482fb92d716.patch?full_index=1"
+      sha256 "eaa8ec87f6abe2dc6a5c8530cc49856872037f1463ab2e98f037e2b263841478"
+    end
+  end
 
   livecheck do
     url :stable
@@ -13,21 +22,21 @@ class Ledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "62a789e94eaaae38c4411a313dd7bb782790a8c39f6a52e662d5b7b97df4e6f1"
-    sha256 cellar: :any,                 arm64_monterey: "6ee63ad79bacfc3c3dca62bfd2afddbcbefc1621265adeb6f4ac33d5b7987ccf"
-    sha256 cellar: :any,                 arm64_big_sur:  "4bf8abe81a38cb217b280187e679ebaa6c61960ac84de3a79a3be00f623d98b9"
-    sha256 cellar: :any,                 ventura:        "8c6c9063ea08e1b405a70cbaa4d12cd2068dbf7233e0a3f9ff75dc4b149802e5"
-    sha256 cellar: :any,                 monterey:       "4cd298ab7b1df2014a045c1fe0eff8d0787fb5bfde0b9e29015cff3183e60c66"
-    sha256 cellar: :any,                 big_sur:        "f3df57ec7e9bb1c266406a25a7ccd9c477ffaf52ece04eab735cbd68060f2653"
-    sha256 cellar: :any,                 catalina:       "be65d6f0c4324d44de6be95e903c82f98d90a624b84975ec1a139fd8c67e0d54"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd3c33796a13d85404cb97a53e4262b7fe7e78b9bf11ac66f31c1d5fb4745700"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "ca32c1dd2b126b3bccc39df580521ddc44dca54d2bb705b25f72a832565d204f"
+    sha256 cellar: :any,                 arm64_monterey: "bd27554bb2573470cd09a1de662eadc37c6f8c93aab40a61eb6d810f017c8105"
+    sha256 cellar: :any,                 arm64_big_sur:  "b7a4b5aeac4418d4a44799b7401f55e6ee4c70a107798f4ba7b434cf18166c5f"
+    sha256 cellar: :any,                 ventura:        "099b8829436ba8b9a5a829ef1dc278549263aed187855ad1fda159121014485c"
+    sha256 cellar: :any,                 monterey:       "2784429160f1a542e957672dd32c45a77b62a2f80a16884c63a36ccf01cde44f"
+    sha256 cellar: :any,                 big_sur:        "e152d44b03f66daad7445c15b8475d87ec1f8b8440622932881e92ee2f9be919"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59400e2c576b65415fa26f044d5152142449611294c3ba6d914f837f471607c8"
   end
 
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "gmp"
   depends_on "mpfr"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
 
   uses_from_macos "libedit"
 
@@ -45,7 +54,7 @@ class Ledger < Formula
 
   def install
     ENV.cxx11
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
+    ENV.prepend_path "PATH", Formula["python@3.11"].opt_libexec/"bin"
 
     args = %W[
       --jobs=#{ENV.make_jobs}

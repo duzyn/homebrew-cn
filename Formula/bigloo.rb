@@ -5,6 +5,7 @@ class Bigloo < Formula
   version "4.4c-4"
   sha256 "4ed71a86c6d762c35352e9f04871a11fe90fa5dbc974e728a86d9e8229d7c70f"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url "https://www-sop.inria.fr/indes/fp/Bigloo/download.html"
@@ -12,11 +13,10 @@ class Bigloo < Formula
   end
 
   bottle do
-    sha256 ventura:      "095c3aab439429ab386196a1fc1cb5d490b89881964ec7900e45b55528486e28"
-    sha256 monterey:     "5584d706ebdcabd22decf7b6c21437f518f02b42b93290c9d6e2f2cccbc578cb"
-    sha256 big_sur:      "c960e247b0ea8492e1afde1fd02e76723651a4cd05fd5d4cd5ce4f8b653e09fb"
-    sha256 catalina:     "2f33fa4caac94d93c2657a8d670fd4256876bcd15e20b4cff6cc2526bc2ee03a"
-    sha256 x86_64_linux: "c02ce6371b839fe6910178f12668da807b581b72d251327ea9c2f4e635f52860"
+    sha256 ventura:      "132cbc50298f9755eaff46f16fb25c1a38fccc4e298f5403cd73cee32f48bdce"
+    sha256 monterey:     "9482d0f4029d4750e9570974ed9a31570c02cb14479236e33ddf7f51aeaa884b"
+    sha256 big_sur:      "131a99cb61120cddbf1658ba95b9385063c308fab3bca31f5afa91bdc46643fc"
+    sha256 x86_64_linux: "da0b8a6b0e185036a0874a3d00f59052c0c5a813641f8e265d123503fff0c71a"
   end
 
   depends_on "autoconf" => :build

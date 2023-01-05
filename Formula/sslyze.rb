@@ -4,6 +4,7 @@ class Sslyze < Formula
   desc "SSL scanner"
   homepage "https://github.com/nabla-c0d3/sslyze"
   license "AGPL-3.0-only"
+  revision 1
 
   stable do
     url "https://files.pythonhosted.org/packages/7f/48/4181eae25c2e32d9599619af8927a6d1ce60f5650656a870de1c02e065aa/sslyze-5.0.6.tar.gz"
@@ -21,11 +22,10 @@ class Sslyze < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "d81ee867f174d4144e144d798d92f9cdc464ce3164b3635a3cbd361a2509b0fc"
-    sha256 cellar: :any,                 monterey:     "8c9705e48bc5dcd23cf78f925d416782e47adb687a7d0c580a35925f713dc46c"
-    sha256 cellar: :any,                 big_sur:      "b15c5c21597aa7636e9da942066202fa20665748eb7b9f2749f8a82cbcbb7864"
-    sha256 cellar: :any,                 catalina:     "b7dde235a7f6b9260dac25eaa2532be7fdad6732b6368a28e894819da9f2ffff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "a8a4aad7653517e395e1ecabcb363258bc18cb80db11110c3bfea72f4f9c9ccb"
+    sha256 cellar: :any,                 ventura:      "38acf0c42f583e91bbd6ec84fe703d5e4cf8aab421b57199e9e101456b6229ed"
+    sha256 cellar: :any,                 monterey:     "6ea1d7be48009eae12ea4bc9e882d48eec64cfc2b5d142224ae1cfb4425647e4"
+    sha256 cellar: :any,                 big_sur:      "29c2995eeff0568f428516a5996c15c7b05e2d959a9cfa07b9cdc582d72d8df7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "112719465d19393e7bf1b77b616ba12076f824ea233097b63ca72118aa4b74ce"
   end
 
   head do
@@ -41,7 +41,7 @@ class Sslyze < Formula
   depends_on arch: :x86_64 # https://github.com/nabla-c0d3/nassl/issues/83
   depends_on "openssl@1.1"
   depends_on "python-typing-extensions"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   uses_from_macos "libffi", since: :catalina
 
   resource "cffi" do
@@ -70,7 +70,7 @@ class Sslyze < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.10")
+    venv = virtualenv_create(libexec, "python3.11")
     venv.pip_install resources.reject { |r| r.name == "nassl" }
 
     ENV.prepend_path "PATH", libexec/"bin"

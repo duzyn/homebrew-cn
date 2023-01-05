@@ -13,18 +13,18 @@ class C7n < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e2588778651d9750db0d4a157dfd6f840d7428ad59d1250a713581264126013b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1dfd9dbadea53154da624e4121713029f53f0dedfc3e37ce5c01b40c0812ccee"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9627bc996a39baf040de3f0b584cbfed03d548f692a4c6ffa5f2634f115d85e1"
-    sha256 cellar: :any_skip_relocation, ventura:        "8f56fa2dacc5eb3ad43991df495b93bf39af6f33e08afe1ee6bcea49423fadcc"
-    sha256 cellar: :any_skip_relocation, monterey:       "c44ae48614dd9a85d920009a4fc0ed49912330e0b8087b4084cbe8c90a02a1ac"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e2980e901049f44805fcf93ffea384edd4e4c1a38de219993a1aa752bd1351d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d3e389699a15f37406c722f88c836ad7f96663f96929b3ed641d6e89a486c84"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "67ccf2905f6eabd8d44e0a6339071266628ac24d118c37ea03039de50d41cdfe"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f5d1dfd1a0348e94d372806bcc5a5dae026cd7a0222a8227370442aa32f0575"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2c3879dfe498c7f363bc61fc0de1ab706a292402eac24491a3f0ef1a1628085f"
+    sha256 cellar: :any_skip_relocation, ventura:        "a3695803f6678d91d28d8486a47d6834029731ee027a5d06ed6abca0fa32da09"
+    sha256 cellar: :any_skip_relocation, monterey:       "21793e8f4b8a4c11cb87b99ca2dde05cfcebdf1fd9f7c0c42e7178cefb70a66d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5330280c0ebb9f5baf0b8a443a188ac55fccda29b9a7f51b65c405e164a8445b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "009e430788185c7c8e20c945aeb9d8b2ccaa94a730a6a81cea1ed7d7b981ee17"
   end
 
-  depends_on "jsonschema"
   depends_on "python-tabulate"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
 
@@ -33,14 +33,19 @@ class C7n < Formula
     sha256 "6372ad78c89d662035101418ae253668445b391755cfe94ea52f1b9d22425b20"
   end
 
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/21/31/3f468da74c7de4fcf9b25591e682856389b3400b4b62f201e65f15ea3e07/attrs-22.2.0.tar.gz"
+    sha256 "c9227bfc2f01993c03f68db37d1d15c9690188323c067c641f1a35ca58185f99"
+  end
+
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/fb/62/9920814ada419367cfea333fd440f8e7951ef5b0404325e66a6ad3d56b40/boto3-1.26.30.tar.gz"
-    sha256 "13ba1d98ab5e2591be2dd19c779d67aa4210f126a827c9a376532ace435d8df9"
+    url "https://files.pythonhosted.org/packages/f0/14/b6546142dbae744f5a288b63e0ad1c6a30049d6f99ecfa8611bc9ef10305/boto3-1.26.42.tar.gz"
+    sha256 "4cfd7e05e4033dbca2cc59bcfdafbdaef9d83dc3c0448917569b301d85766d9d"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/6d/36/b08a5873f03f1462975d891245a5966caee248d04d718d47681b24ab1e7d/botocore-1.29.30.tar.gz"
-    sha256 "9364417f53842167f8bcf72b9ab3c78457c7df613051101952b2470d9de7ea31"
+    url "https://files.pythonhosted.org/packages/0e/1c/b7862ffb26cc9ceb2bba2aa85363b18cc305c936cbf6fa2e47fd3942e107/botocore-1.29.42.tar.gz"
+    sha256 "d05c62f64e76194c40f598f5f7c804ec50d9820e9f03f6e0198558e4ace167c4"
   end
 
   resource "docutils" do
@@ -49,13 +54,23 @@ class C7n < Formula
   end
 
   resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/32/5a/e0d75c8010295ae6746f379f5324bc726076dfc426548bfa6f0763fce870/importlib_metadata-5.1.0.tar.gz"
-    sha256 "d5059f9f1e8e41f80e9c56c2ee58811450c31984dfa625329ffd7c0dad88a73b"
+    url "https://files.pythonhosted.org/packages/90/07/6397ad02d31bddf1841c9ad3ec30a693a3ff208e09c2ef45c9a8a5f85156/importlib_metadata-6.0.0.tar.gz"
+    sha256 "e354bedeb60efa6affdcc8ae121b73544a7aa74156d047311948f6d711cd378d"
   end
 
   resource "jmespath" do
     url "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b41201936b7fa7ba7b5702dbef42922193f05c8976cd6/jmespath-1.0.1.tar.gz"
     sha256 "90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+  end
+
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/36/3d/ca032d5ac064dff543aa13c984737795ac81abc9fb130cd2fcff17cfabc7/jsonschema-4.17.3.tar.gz"
+    sha256 "0f864437ab8b6076ba6707453ef8f98a6a0d512a80e93f8abdb676f737ecb60d"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/bf/90/445a7dbd275c654c268f47fa9452152709134f61f09605cf776407055a89/pyrsistent-0.19.3.tar.gz"
+    sha256 "1a2994773706bbb4995c31a97bc94f1418314923bd1048c6d964837040376440"
   end
 
   resource "python-dateutil" do
@@ -80,11 +95,6 @@ class C7n < Formula
 
   def install
     virtualenv_install_with_resources
-
-    # we depend on jsonschema, but that's a separate formula, so install a `.pth` file to link them
-    site_packages = Language::Python.site_packages("python3.10")
-    jsonschema = Formula["jsonschema"].opt_libexec
-    (libexec/site_packages/"homebrew-jsonschema.pth").write jsonschema/site_packages
   end
 
   test do
