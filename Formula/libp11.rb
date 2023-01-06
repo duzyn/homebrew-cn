@@ -11,14 +11,14 @@ class Libp11 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0b843830831f3d40c2bc05cee086209403d332df6e69f6a08ad7bb9b9e86cb3a"
-    sha256 cellar: :any,                 arm64_monterey: "7ff9bf5bc261f57e6396cf4db40d78fe76d8abef845b67bc6000b38b1308f34c"
-    sha256 cellar: :any,                 arm64_big_sur:  "fb06eacdf6bdb6f8af71706a81aa5e70fdaaf6f4b8ca0fe285c0687ef9d4cb6f"
-    sha256 cellar: :any,                 ventura:        "0dc75a7beb4af4db7767365658bc3b657d60548ac684d3ab3d79928150e91694"
-    sha256 cellar: :any,                 monterey:       "58f4862ac40d50e7083ad99703f0302d9ba1269744c82263ea2e6aced957d6a4"
-    sha256 cellar: :any,                 big_sur:        "cc2abf1c58255ebcd610a694e4c45496c6471d31a5fc917c98b15bc6e10fd4d8"
-    sha256 cellar: :any,                 catalina:       "62236e2ad57894cc392306c0e4c1becff52b8054bb88baa65e01431babc8884e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "409cb2e2ff0a554ca1ae763da1065fe9fc499668d305457cd4dc24be09032fbf"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "11713444dbf087edd87fc04858797938ec4d4fada46c4c3eac7e7dc6d0ac891b"
+    sha256 cellar: :any,                 arm64_monterey: "b5b73420ecd69a357cc8592e118adb85e2071d689fa7b9d45578051b0b05d18b"
+    sha256 cellar: :any,                 arm64_big_sur:  "17e248e27821ac929a5e8d13d6b5e70dafa8106987cb867cd8e7c02ed8b6385f"
+    sha256 cellar: :any,                 ventura:        "47298110be110bd8bb81e720725b3afaf470a3cb5aed809b7f253bcf3d0c2118"
+    sha256 cellar: :any,                 monterey:       "e34a9f8f5e18a7729b6970e14b421e203015dc576e9eab187a7142575e7a670e"
+    sha256 cellar: :any,                 big_sur:        "8fd62e64790b4eeb4d706f25c1a0d5760e852908f603478032553101002968b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48fcd4d18d7fb24d1adba6b902a102ad0de908b6f1e007eb7d07a8ab123ef3af"
   end
 
   head do
@@ -29,20 +29,20 @@ class Libp11 < Formula
 
   depends_on "pkg-config" => :build
   depends_on "libtool"
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
 
   def install
     system "./bootstrap" if build.head?
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
+    system "./configure", *std_configure_args,
+                          "--disable-silent-rules",
                           "--with-enginesdir=#{lib}/engines-1.1"
     system "make", "install"
     pkgshare.install "examples/auth.c"
   end
 
   test do
-    system ENV.cc, pkgshare/"auth.c", "-I#{Formula["openssl@1.1"].include}",
-                   "-L#{lib}", "-L#{Formula["openssl@1.1"].lib}",
+    system ENV.cc, pkgshare/"auth.c", "-I#{Formula["openssl@3"].include}",
+                   "-L#{lib}", "-L#{Formula["openssl@3"].lib}",
                    "-lp11", "-lcrypto", "-o", "test"
   end
 end

@@ -1,18 +1,18 @@
 class Gedit < Formula
   desc "GNOME text editor"
   homepage "https://wiki.gnome.org/Apps/Gedit"
-  url "https://download.gnome.org/sources/gedit/44/gedit-44.0.tar.xz"
-  sha256 "82e6b33d8957cc19e30dba10402585f98d2e25e76a9be97ead83418103074502"
+  url "https://download.gnome.org/sources/gedit/44/gedit-44.1.tar.xz"
+  sha256 "0462378d7284ccf8cd4782a4d1ff902c5dc2b81dffcd40285ad543f5945d8fda"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_ventura:  "f58b14d65e5624180d727789c9be7bf9a4ef8fa57fc9f0bb89ce59d1ed31bf93"
-    sha256 arm64_monterey: "875897bb86f21a3fad15ac64ce54146d1d6a6924a8e474232693ef3006f8ac6a"
-    sha256 arm64_big_sur:  "e6191bb28a2e853fc46a3728ab05f7eaf0d45e58f461b5f7a5128c4ba682d9c4"
-    sha256 ventura:        "13383599ba97394dbc5114d69183166778e58c8b96c41790efd089f50ee42864"
-    sha256 monterey:       "eb0eb89603a43969303610398364c0cb0b53f4abed1d974ca0d3c43145498208"
-    sha256 big_sur:        "7313ac3f28ec871dc349ee34d1bd747cf9006bbf0a576a1bb82c88a97bed8135"
-    sha256 x86_64_linux:   "7d107899fdb6bcf2d6c8e892d2a265bc1dbaf4e432c44fa8269320b244959754"
+    sha256 arm64_ventura:  "de832d8fb0b0248d19e07c69ed39adffd59968fd48cd0c14033a85387713ee1a"
+    sha256 arm64_monterey: "aad806aa20f386b697e27d02e842a5aa5fec007a30d4067f84be1f43595e4357"
+    sha256 arm64_big_sur:  "cd69203dfe0a8bed0f00542d2ddb9286a645424b5022cb2ecc4729c96dc97e7f"
+    sha256 ventura:        "6b4d031aaeb367eb24c7adbea442dcbb3b9b29bc062bcc49dd7f00a06a66379a"
+    sha256 monterey:       "e565dd03ea823cfd5cbfedf58aa5aca391d0821a57435f99d9915ef8706e6431"
+    sha256 big_sur:        "4e230308e50adfccc7a6357a9f7c457b2145c31cc076c61b4434d87ac48c044b"
+    sha256 x86_64_linux:   "8eb36b2f3a46162a5b17a9cc4466f68d2471cc27a3ce0cef27c139029b4bd283"
   end
 
   depends_on "docbook-xsl" => :build
@@ -39,13 +39,6 @@ class Gedit < Formula
   depends_on "libxml2"
   depends_on "pango"
   depends_on "tepl"
-
-  # Fix for macOS build failure
-  # Remove in next release
-  patch do
-    url "https://gitlab.gnome.org/GNOME/gedit/-/commit/b648d64c1492c187000e92377a390e65d7ddadf5.diff"
-    sha256 "672f75fe5788534ebf9092fd7506913afa5631710084b0efd232a036ef16c3b5"
-  end
 
   def install
     ENV["DESTDIR"] = "/"

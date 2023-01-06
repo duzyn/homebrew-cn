@@ -1,19 +1,18 @@
 class Cntb < Formula
   desc "Contabo Command-Line Interface (CLI)"
   homepage "https://github.com/contabo/cntb"
-  url "https://github.com/contabo/cntb/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "1af41e2fe3d8d5341d32b4f01e65120a717c6e198d0752d08850451088a0e528"
+  url "https://github.com/contabo/cntb/archive/refs/tags/v1.3.2.tar.gz"
+  sha256 "6c4f3fc8a1bd2dacf9bb068f9f882ccc04a24b867cdf804cb6a6c71d6f624f56"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c79c0342a41e05d0156138e3ae07d86efab733218a577f7c28cc0469f6d0fbdd"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ad5d04fedb6154609c4a2f49a72c56e6551e5916701b389646b28c8eec6c23d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "007cfe569350db8f10571c991f5eea1acf98da6521661f21615014f6af87eda7"
-    sha256 cellar: :any_skip_relocation, ventura:        "ff4fa0e8be6dd896e77f8f2c04bcad034223b1a9396a7461c1bae963a361fcec"
-    sha256 cellar: :any_skip_relocation, monterey:       "a20cbb20de85fdcf327468cb0a9c12d55c8e81c927aeb2b6a84e87804eed6bfd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cf61bf25fcbd2b82347a492af2f0c3ba75b11b158cc5558be8714d05ca4f46e5"
-    sha256 cellar: :any_skip_relocation, catalina:       "5c1de210607773772626774a46f6b1e6664fc929e399c34a4fb34b5bd71b982c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb9359bbfe014be23d55e6944a9cba1efb685714768a27e977847e115387a46a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "54ec070413b9c5bdf3bfed9164a07d0429837e6c5fd5afde34f55acdcdd16f49"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cdd01eebeea75376c9eb9b6172e498edd2f6b7888798cc998dfe9c7caced9578"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2e3b69f24c1877ab7b232021047a5d7353270985624541b6c750b590cb2f6694"
+    sha256 cellar: :any_skip_relocation, ventura:        "98ff00e188035b288ba997d47c24acb964a92ad3069336be7fc7fff84bcfd21f"
+    sha256 cellar: :any_skip_relocation, monterey:       "93317a2449532e64d492deb9d5a66d4114ae74ab953f18d413a41c51a4f6bfba"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7d98f3c1163baf9ef0524ee0c75eaeb0884f76c654f1d451f32646d826fc6cfd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "089887c966c07d9b2f81f107a7e20c18fe97dfde5e9a67db2c077f5d8cbc9056"
   end
 
   depends_on "go" => :build

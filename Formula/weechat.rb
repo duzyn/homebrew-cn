@@ -7,14 +7,14 @@ class Weechat < Formula
   head "https://github.com/weechat/weechat.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 arm64_ventura:  "f1ea6c50ba3c3dfbc58005c37106de92115afaee632c61b9103892239ce36551"
-    sha256 arm64_monterey: "540376a4064b7bc874b8df0fc4b337a8d527e422396561e791f473df0820ef9f"
-    sha256 arm64_big_sur:  "9be093b738588fe3e928e2f58396787bc2beeffb9e1f85032b1659e8b830ef56"
-    sha256 ventura:        "5ffbaa90b8a56f9092d19e10872d60055f7112028b62a2c061e82c26ef8b4648"
-    sha256 monterey:       "4349087b698ed8380bc028ce5ef555b12679e0af6a08d72240d442f81a078b70"
-    sha256 big_sur:        "70f76462cd9e24a619475437175d195d8fe56a4febc7deaf68ff6bc16910b7de"
-    sha256 x86_64_linux:   "f18a6c85fa0f462e55e345fe3ff614d541f718fd4c6d8669a0f0b11dfdf4fdff"
+    rebuild 2
+    sha256 arm64_ventura:  "7e6a3c6240984ee418e232be90cd663119797e3a831bc175f3d3078b8f8835a7"
+    sha256 arm64_monterey: "3c7ec077b0032959b68a2e65cf3760c4c4d1b36534fa585c3b3ba35d130ad846"
+    sha256 arm64_big_sur:  "dacd747d7fc7a385df569a1041b08fe3bd564b1fb8aa23daac2a1dbe51434004"
+    sha256 ventura:        "838e080cdb91c6fabe1ae9064f6a76af76b2062178b1c86367164bf683328229"
+    sha256 monterey:       "65b27bd0faadb076b3553745d79bd16a7943be9cd690b19171f02d00cab63e35"
+    sha256 big_sur:        "3c702ecd6c99d74d3d894b6c7dd7caaf168712d5fa6fe4449d5284b6eabaae70"
+    sha256 x86_64_linux:   "910f20e9130def634c5ef9783618c21b03b1a5c3a5c0cc35d5a9c7a8bda4f2e4"
   end
 
   depends_on "asciidoctor" => :build
@@ -27,19 +27,20 @@ class Weechat < Formula
   depends_on "lua"
   depends_on "ncurses"
   depends_on "perl"
-  depends_on "python@3.10"
+  depends_on "python@3.11"
   depends_on "ruby"
   depends_on "zstd"
 
   uses_from_macos "curl"
   uses_from_macos "tcl-tk"
 
-  on_macos do
-    depends_on "libiconv"
-  end
-
   def install
-    args = std_cmake_args + %W[
+    python3 = "python3.11"
+    pyver = Language::Python.major_minor_version python3
+    # Help pkg-config find python as we only provide `python3-embed` for aliased python formula
+    inreplace "cmake/FindPython.cmake", " python3-embed ", " python-#{pyver}-embed "
+
+    args = %W[
       -DENABLE_MAN=ON
       -DENABLE_GUILE=OFF
       -DCA_FILE=#{Formula["gnutls"].pkgetc}/cert.pem
@@ -50,10 +51,9 @@ class Weechat < Formula
     # Fix system gem on Mojave
     ENV["SDKROOT"] = ENV["HOMEBREW_SDKROOT"]
 
-    mkdir "build" do
-      system "cmake", "..", *args
-      system "make", "install", "VERBOSE=1"
-    end
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

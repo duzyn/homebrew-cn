@@ -3,18 +3,18 @@ class Prowler < Formula
 
   desc "Open Source Security tool to perform Cloud Security best practices"
   homepage "https://prowler.pro/"
-  url "https://github.com/prowler-cloud/prowler/archive/refs/tags/3.0.1.tar.gz"
-  sha256 "d050e1ff138f3361186ae81124fd823e6e1b2f0dc4b2516a47388641ef150559"
+  url "https://github.com/prowler-cloud/prowler/archive/refs/tags/3.0.2.tar.gz"
+  sha256 "5888bfe35ade2ce4884a526d0ac8050878de40718295d456253cbbffa65b294f"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6880220073753e1db4cd36539c4a10ab164e559158a5d09a0bb8b84dc5f0c9bd"
-    sha256 cellar: :any,                 arm64_monterey: "6f16d480b7e9729cfd68e7e02119931fadd48826ee1543cd999166c711fdc8ad"
-    sha256 cellar: :any,                 arm64_big_sur:  "1cae08ab8a22fbc4bfc845e59dbb86a311d276b408ba15af53cd17392ef5179d"
-    sha256 cellar: :any,                 ventura:        "d37b991db4d461c680988225f808d1bb17540017bd934f299308b919406a4c77"
-    sha256 cellar: :any,                 monterey:       "da9c366d9824b1ff9b66771ffe00655cdbd9e6d68ba4019ce36c33da3d68d161"
-    sha256 cellar: :any,                 big_sur:        "0d23da71141abe7557c3cb086f2c3d59b34f1bc91b5c99f823b0a34adf34f18e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "563b0700c49ba760b2990499a091eb2593dd61220d41a3301a5638e1bc30b973"
+    sha256 cellar: :any,                 arm64_ventura:  "2a4f01f277de82b5f0519ab42ea57cb31090fcfd5497b27065fd55fb84176599"
+    sha256 cellar: :any,                 arm64_monterey: "94751e924ac914afd4d6c959c2423af71267adaa4de307b25b85e636283a4b28"
+    sha256 cellar: :any,                 arm64_big_sur:  "bf819c5acaf4598c0581889ed60d30f4ea1458c007596ac298a8e95b8b5c51e6"
+    sha256 cellar: :any,                 ventura:        "89706ec29da9ac97cc637ee86c6884a818d9ec4649d44194f60870b6876c9cb7"
+    sha256 cellar: :any,                 monterey:       "36a18f3b72270049126a7ec842c7638e34bd04c4e03dd3fbe611bda18eb57475"
+    sha256 cellar: :any,                 big_sur:        "18e8a3a02dc491c4df9cc81dd15fbd67d43575e768fd4500242867ed1295e525"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f74214ae1bfef058d23b11434dace3878453b968ec192840e994f82a51a456f7"
   end
 
   depends_on "rust" => :build # for cryptography

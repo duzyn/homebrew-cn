@@ -1,8 +1,8 @@
 class TektoncdCli < Formula
   desc "CLI for interacting with TektonCD"
   homepage "https://github.com/tektoncd/cli"
-  url "https://github.com/tektoncd/cli/archive/v0.28.0.tar.gz"
-  sha256 "f8f53870f1a16625e19e679c123372961f17958c7ff3ab65c33015032c414c38"
+  url "https://github.com/tektoncd/cli/archive/v0.29.0.tar.gz"
+  sha256 "ac3a979cdcdbc42354d0245cba0a4ac4ebc5f332bcf90685dda941a28a224682"
   license "Apache-2.0"
 
   livecheck do
@@ -11,14 +11,13 @@ class TektoncdCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cf4bd29c4357e99df4edecf761c5fd4c41999d3c00490e8b6f58d885a2dd3242"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fad5f915d0c89ff1675e96812893b9c3907bb8c139e0cbfa8935905bd96f308c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "394394649fbf1aed03fa12c640a942aa02017628f168c256dea59a147b0ca59c"
-    sha256 cellar: :any_skip_relocation, ventura:        "37c2ef6f6b461990bb741ae5a98dd5a7f9201897d23777671d431d0f62e8d0ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "a22b88e572afe7b20b665d6c84dac8a2f3346783d663d0589fe1be9372717425"
-    sha256 cellar: :any_skip_relocation, big_sur:        "36a569fbf8dc43a58457a8c903d359323444c91c97aa5c60ea1210e9241fbaa5"
-    sha256 cellar: :any_skip_relocation, catalina:       "cf07680315f35bf4159b182b22f165ce43f89a4761871f1563c71f9e979a775c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d3bab952da50d5018abfe1c8de9a5bcc2ec046757aa353e30ea8067de64e2d0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "db99ad614b3d13716199a50e0f76754e89b4cabe3df39fe07bf96ca859333d13"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "170e62ae0e4abb03b93d714c4d6b25960397e59e9d1ec8202e9d6468a5d09a2a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9414914cc9c446d9f7ff089df232cc44bf8d05dea4a9f23b8f72fa8d88fad375"
+    sha256 cellar: :any_skip_relocation, ventura:        "6588b455beb7f0bfe3d07a9afe00c1a7f8cb68a7c2a5e4b2f16e94dccfb1f285"
+    sha256 cellar: :any_skip_relocation, monterey:       "60155a4c5b22aeedef8c6b0de5b2026580ee01d00ca122dbc40bf711dee561e0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "29f864d69fbff5bc9eb28a0a2cff47a3ea63c10f79c82b90a9e1362420879ddf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "942a628b79ec084a7805c6acffeeba5b78e3ab3796310d960bc092b4c73ac85b"
   end
 
   depends_on "go" => :build
