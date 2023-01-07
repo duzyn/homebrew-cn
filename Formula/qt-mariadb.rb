@@ -1,8 +1,8 @@
 class QtMariadb < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.4/6.4.1/submodules/qtbase-everywhere-src-6.4.1.tar.xz"
-  sha256 "532ad71cc0f9c8f7cb92766c47bc3d23263c60876becd9053802f9727af24fae"
+  url "https://download.qt.io/official_releases/qt/6.4/6.4.2/submodules/qtbase-everywhere-src-6.4.2.tar.xz"
+  sha256 "a88bc6cedbb34878a49a622baa79cace78cfbad4f95fdbd3656ddb21c705525d"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
 
   livecheck do
@@ -10,12 +10,13 @@ class QtMariadb < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "b245ac49719c25ab6b53d3debc95162f43ca8f878333f7ebf5559147317dd45a"
-    sha256 cellar: :any, arm64_monterey: "4fe49638189c8b381f9bd30fa16d1a09d1c6a38caa1b1f2bb5af0ca6bc614719"
-    sha256 cellar: :any, arm64_big_sur:  "2c5cc9ea81aa5e236eff8482049846be0e188ee46d050cc912cf0e4d8512b33a"
-    sha256 cellar: :any, ventura:        "a9f979fee5c2634babee5ffa63fd0910b0c05886d952c31d4b8e869359ca63a4"
-    sha256 cellar: :any, monterey:       "19b33ff78c6d1926cf53e39e7754cc82a957202633b40388f98774fc222fb72f"
-    sha256 cellar: :any, big_sur:        "073ede071aef586d87ed32f4004de458857e398d27025e97ad67f090cadceb76"
+    sha256 cellar: :any,                 arm64_ventura:  "e9347450cc230f93d76152d547c8b0fdbc2ce7c05b34555dc91edd261af50636"
+    sha256 cellar: :any,                 arm64_monterey: "7df870d5fb84dbe567e4ec65578032195cc4d32a10987d3d260ed15442f04b88"
+    sha256 cellar: :any,                 arm64_big_sur:  "a85a9187aa78a4c56275e0c3d62deac4f531c44af1238e09eb795c6a49bb4634"
+    sha256 cellar: :any,                 ventura:        "ee8bb5cf0f8936003a57077ad370d494c35f615fca637352f890bab8dd8e69ca"
+    sha256 cellar: :any,                 monterey:       "7c887683b95840a02e5c67dd6a245fe1b645d107b23dd2e3cd13b75a07fed34b"
+    sha256 cellar: :any,                 big_sur:        "fca5e3a8b172cde04108ccee8177210a7c091e86a9ec60bd6bb63417bea071bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "03926f475add0f2628f9dbfcda38f298d6a2b547aa0c9914f10b4b3870838d21"
   end
 
   depends_on "cmake" => [:build, :test]

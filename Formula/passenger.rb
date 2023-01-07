@@ -4,16 +4,17 @@ class Passenger < Formula
   url "https://ghproxy.com/github.com/phusion/passenger/releases/download/release-6.0.16/passenger-6.0.16.tar.gz"
   sha256 "f2a4e9d718e62cc4aca5f03ed461cca14eb0c383d2bd96f47cebcc40b619873a"
   license "MIT"
+  revision 1
   head "https://github.com/phusion/passenger.git", branch: "stable-6.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0530d88e1bfb10c3ab7c3bc20bed926117a83dcf234176ea855f0d8ecb6b883d"
-    sha256 cellar: :any,                 arm64_monterey: "ccd14adb88052d8b57c53208db1af3e9fdea130e3fbdc6559ab671982fc323a6"
-    sha256 cellar: :any,                 arm64_big_sur:  "1ddd2dc4815701074805ce4200339050fbffd2da0fe0263381cfc0a5ae07fab6"
-    sha256 cellar: :any,                 ventura:        "591107e61af265eea23de509e28b6be07056d197c4610f57021153f7dc47c85d"
-    sha256 cellar: :any,                 monterey:       "3fc42d7a84fe245612b8afe8bd8d5c4cfddd1e68456e236ba173ad9b9a5a7022"
-    sha256 cellar: :any,                 big_sur:        "752bb485c6a9d6cbffef16abe5a631e3ee48b18a18244568640dbd16a35c3d83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09db4ff74f39cdcdc2c4a1a3b5c616735574c67aa844572cdff48bdf167ed5ff"
+    sha256 cellar: :any,                 arm64_ventura:  "edb5c8d94569c932c9cf7e164a1c11bb87e81c68997bb46c066d11e32fd7b650"
+    sha256 cellar: :any,                 arm64_monterey: "de3e03a9a40e4239092faf19293202192374871c73b2e28f6caffb6d0fe74bd3"
+    sha256 cellar: :any,                 arm64_big_sur:  "608b5e5215c6bf8330b85af91a7bfff315824719285d299a0463408318c93cd4"
+    sha256 cellar: :any,                 ventura:        "60ebadb635e30a048e81e4a20f3b3b2c5738b2f21f092fd8bfe03b4dcb4823ce"
+    sha256 cellar: :any,                 monterey:       "fe35f8a353b495b477377582fce7e2b84baebe5ceeb47b0a15d00acebcb7bda8"
+    sha256 cellar: :any,                 big_sur:        "90c1d3511b97e8e2061f5f5743991a04e807b4dae19dc1abdaffe0f64da150c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01786b3c6b4280892e36f298285980d2e54a2771c73e577cbf5ca846a3f38e44"
   end
 
   depends_on "httpd" => :build # to build the apache2 module
@@ -27,6 +28,10 @@ class Passenger < Formula
   uses_from_macos "curl"
   uses_from_macos "libxcrypt"
   uses_from_macos "ruby", since: :catalina
+
+  # Fix compatibility with Ruby 3.2.
+  # Remove after next 6.0.17 release.
+  patch :DATA
 
   def install
     if MacOS.version >= :mojave && MacOS::CLT.installed?
@@ -150,3 +155,30 @@ class Passenger < Formula
     system "#{Formula["nginx"].opt_bin}/nginx", "-t", "-c", testpath/"nginx.conf"
   end
 end
+__END__
+diff --git a/src/ruby_native_extension/extconf.rb b/src/ruby_native_extension/extconf.rb
+index 95964c5f1..09c820d51 100644
+--- a/src/ruby_native_extension/extconf.rb
++++ b/src/ruby_native_extension/extconf.rb
+@@ -24,7 +24,7 @@
+ 
+ # Apple has a habit of getting their Ruby headers wrong, so if we are building using system ruby we need to patch things up, sierra & mojave both did this.
+ # eg https://openradar.appspot.com/46465917
+-if RUBY_PLATFORM =~ /darwin/ && !File.exists?(RbConfig::CONFIG["rubyarchhdrdir"])
++if RUBY_PLATFORM =~ /darwin/ && !File.exist?(RbConfig::CONFIG["rubyarchhdrdir"])
+   RbConfig::CONFIG["rubyarchhdrdir"].sub!(RUBY_PLATFORM.split('-').last, Dir.entries(File.dirname(RbConfig::CONFIG["rubyarchhdrdir"])).reject{|d|d.start_with?(".","ruby")}.first.split('-').last)
+ end
+ 
+diff --git a/src/ruby_supportlib/phusion_passenger/platform_info/operating_system.rb b/src/ruby_supportlib/phusion_passenger/platform_info/operating_system.rb
+index de17c072a..ecc24b710 100644
+--- a/src/ruby_supportlib/phusion_passenger/platform_info/operating_system.rb
++++ b/src/ruby_supportlib/phusion_passenger/platform_info/operating_system.rb
+@@ -247,7 +247,7 @@ def self.supports_lfence_instruction?
+     memoize :supports_lfence_instruction?, true
+ 
+     def self.requires_no_tls_direct_seg_refs?
+-      return File.exists?("/proc/xen/capabilities") && cpu_architectures[0] == "x86"
++      return File.exist?("/proc/xen/capabilities") && cpu_architectures[0] == "x86"
+     end
+     memoize :requires_no_tls_direct_seg_refs?, true
+ 

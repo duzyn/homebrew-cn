@@ -1,19 +1,19 @@
 class Pc6001vx < Formula
   desc "PC-6001 emulator"
   homepage "http://eighttails.seesaa.net/"
-  url "https://eighttails.up.seesaa.net/bin/PC6001VX_4.1.0_src.tar.gz"
-  sha256 "e37eb6653916b585bd58dea005f56861a613140798d0ed6cb27fe3abd260c4f5"
+  url "https://eighttails.up.seesaa.net/bin/PC6001VX_4.1.1_src.tar.gz"
+  sha256 "b40a74082c07a695bb6dc396dc721b88ce147f593e112f75b2a501eb49ca0e7b"
   license "LGPL-2.1-or-later"
   head "https://github.com/eighttails/PC6001VX.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "24155252dc8d0f4b00371c05666b9fa76de2e229032ec04302ed0b5192b6aee7"
-    sha256 cellar: :any,                 arm64_monterey: "c0cbac6f2cd0c3063674306c424450f65c7a36478455e7fcea4aa2e44d6f1ece"
-    sha256 cellar: :any,                 arm64_big_sur:  "17a69e4daafd969882c6ef315642bdee8da00b2268dfb5f10160860b19f9df93"
-    sha256 cellar: :any,                 ventura:        "510b615d4892a2075614824946e3a9621b4c58ee62d69984cc175cba407fee75"
-    sha256 cellar: :any,                 monterey:       "8b4a43990882fa596522f1599c3997775ceaf5eb1b7f6e99abb7a68744287f77"
-    sha256 cellar: :any,                 big_sur:        "bb6041257e554a20254f85fe53860c67bada971a50dc9410f33679a83081c141"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12d8823e7cb59f3c87511de642a5902a0b825b129f2b7fe5adc08f7f9a80e8f5"
+    sha256 cellar: :any,                 arm64_ventura:  "649de03f90a9db655b03c52689fc386ccd3dd10e88f3f21241fcfdc274eba318"
+    sha256 cellar: :any,                 arm64_monterey: "476c4fc3b81404f38036f02a0eeb4200b32c530c892eacd05408cb64734d5225"
+    sha256 cellar: :any,                 arm64_big_sur:  "232b2ba6a248cb7cc72fbb03dab6e4d119f6d73e1d50dbcef5e7a39637cea889"
+    sha256 cellar: :any,                 ventura:        "fe152db03a0e1eed77cd1cc2a1dfed0405544695a74c173f5bd0c410702751c0"
+    sha256 cellar: :any,                 monterey:       "8b6188c14c9bf5eb3231752ce12130f5f2937912e187ea81031bdd16e516dac5"
+    sha256 cellar: :any,                 big_sur:        "a21480c22b0a60062d419a5086432cafc6874cadd99e791d16ddf26334067f12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d953826b1cd36e4bcb00aab2ff059b6576255c5f18a5d288ac23c9f25fbcb0bd"
   end
 
   depends_on "pkg-config" => :build

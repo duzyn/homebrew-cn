@@ -1,24 +1,30 @@
 class I2pd < Formula
   desc "Full-featured C++ implementation of I2P client"
   homepage "https://i2pd.website/"
-  url "https://github.com/PurpleI2P/i2pd/archive/2.44.0.tar.gz"
-  sha256 "b653c845ac7a16fefab2ace78e3ae496c12b05304bb66e41e776071635d4e070"
+  url "https://github.com/PurpleI2P/i2pd/archive/2.45.0.tar.gz"
+  sha256 "4050c0a38fda06a76defbd2721f468f5b09889ed7b6b5a7e207e4659d300738f"
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "428523046ee5eb138bf0d745c7adc20604a2b8348dfd37952226c09ef717db6c"
-    sha256 cellar: :any,                 arm64_monterey: "e2a7c0001e541b027b7b969c417aa07fe66b979cd42f4f91ff94d545d92ed608"
-    sha256 cellar: :any,                 arm64_big_sur:  "fd309abd53ba63105aa276b5b5d27d561095057d9c71da25ae8fb2b1e0464933"
-    sha256 cellar: :any,                 ventura:        "5b203af6f4a7a871b49b2da92261e179f557efdefa9190889c7b64dd0de6f816"
-    sha256 cellar: :any,                 monterey:       "7da92d874561d362b3fd66a2fd413a3464c86137fe94b1cd599925b752835617"
-    sha256 cellar: :any,                 big_sur:        "55b2608f0ab14401ea035344687c757c346714a5aee34d54909c9c0d7e0910c4"
-    sha256 cellar: :any,                 catalina:       "11a7435ef5962ba2fc2f8836faa5494fa9a80780e279df004d7045a77ad96bfe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe5ef7064d6ba3018e64288510c5d5fd59bafd79af8ef817d51177528f767286"
+    sha256 cellar: :any,                 arm64_ventura:  "450dd855164a0aba0ef2f5b7bf92a125a2017603c0e098ca6c08e0b36dbfa930"
+    sha256 cellar: :any,                 arm64_monterey: "2496a89b0db27dea198a7e00973aa4a18f63ef8427b377a79fcf6f7b0dc38ea6"
+    sha256 cellar: :any,                 arm64_big_sur:  "df0cc3ce1eb094265e6402070b82e5998f338d758bf78c842400fa7b307941f5"
+    sha256 cellar: :any,                 ventura:        "8c3a4ec9e24af0200ec0df40c0657f0e4ef30ec30babbe258db434af7c61b2c3"
+    sha256 cellar: :any,                 monterey:       "5c88eb38b3e0fb3360f964987d29db6f49ad6ba18759d5358c063d81e904a34c"
+    sha256 cellar: :any,                 big_sur:        "d84421e9669821d25ef3f9c14a7ff22286ba6fc30dac7460a234f157c49bf483"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b1f53ba9eecba99bd28998d5ab6d3132ea2da66d097c6f829796095bf44d4d5"
   end
 
   depends_on "boost"
   depends_on "miniupnpc"
   depends_on "openssl@3"
+
+  # Upstream issue ref: https://github.com/PurpleI2P/i2pd/issues/1836
+  # Remove in next release
+  patch do
+    url "https://github.com/PurpleI2P/i2pd/commit/acd6af709ee6371b3d0340d2c92cb86f6f4bcb97.patch?full_index=1"
+    sha256 "54343ce6a8cf970cd65c9b39c55b3fe15f28c3a1dc6dbc07df870ad8118cebc7"
+  end
 
   def install
     args = %W[

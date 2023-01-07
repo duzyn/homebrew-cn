@@ -5,15 +5,16 @@ class Licensed < Formula
       tag:      "3.9.1",
       revision: "31b44067a069b7601060af337d7c27571486728f"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 arm64_ventura:  "d20abc085408144616845a28c6cf6033ef2134d3ef86ea0781f3e5aac9560c80"
-    sha256 arm64_monterey: "baf0cc28c4a42a3a0cdd06cd340f5d8c77dd61ce1d02e2be841eeefe65947abf"
-    sha256 arm64_big_sur:  "7ec7afbd9e9ca667f56757e5e8cba8bf99725418f8dcede0c83410021483d956"
-    sha256 ventura:        "32474e1e05a1c6f4c40aca13b382cb0c971ef957bf278c244ce251bc61b9bf2d"
-    sha256 monterey:       "15af4a515958794628ea380eaa659419f5f3e009bc9a38c6099958583ebfd719"
-    sha256 big_sur:        "15aabae127bdacc1024b3fada7b873f3b04bd89b0723db7077b6dbff7920028a"
-    sha256 x86_64_linux:   "520a1c11b0a219b7225950d730d7abd05539b057a3a9caeb7d85af92ec9a8024"
+    sha256 arm64_ventura:  "efaf08c44f110ea08fca522ac01c85789086dd84ed3262fe8fce2339ae8eeaf4"
+    sha256 arm64_monterey: "b7774657eacd7c9da0140e2be65c34b5de92ee987c757f480390c8c160eca5f9"
+    sha256 arm64_big_sur:  "8e54bff74d65abb2b80335991d4efcc6897df333047b373f25c56bc3da94bf54"
+    sha256 ventura:        "2931fef0a37f4cb265bf108a90e1d8d30e9c5b9270796771746c91f36cb5d67c"
+    sha256 monterey:       "2c20fd0077070cd370df2b4c67c2a4c70d62443b449136420d7b6f5ad4b90c86"
+    sha256 big_sur:        "0af19841bc642180618b4b0a1538021dcae26d7673c085abf46ad64adabd7d4c"
+    sha256 x86_64_linux:   "8ea0d7b585dbf574ca78a72283b96f64cec993ae0c688f112461c41125140114"
   end
 
   depends_on "cmake" => :build

@@ -4,18 +4,17 @@ class Minizinc < Formula
   url "https://github.com/MiniZinc/libminizinc/archive/2.6.4.tar.gz"
   sha256 "f1f5adba23c749ddfdb2420e797d7ff46e72b843850529978f867583dbc599ca"
   license "MPL-2.0"
+  revision 1
   head "https://github.com/MiniZinc/libminizinc.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "1193b0a0333c98a90e740e7b83494bd2b2c594cdf58f78c330daee0ee5827206"
-    sha256 cellar: :any,                 arm64_monterey: "1e9b22bedeac1d802335797e45a482806b607aa20b1a38e406f10fcb0d933473"
-    sha256 cellar: :any,                 arm64_big_sur:  "4543525b1036daa085faff48d9ea158bcb029683f2b207be1f4c86832d1169b0"
-    sha256 cellar: :any,                 ventura:        "9fc9fde36a396fde4644334ae7a7f65d05febe1ba2162c7ae97768cd3b7b4fe9"
-    sha256 cellar: :any,                 monterey:       "08544ad457361b71dd8bb8b223d22e4c4ccbcb9dd544d5f706a50a177414ef8e"
-    sha256 cellar: :any,                 big_sur:        "90d6a2c51750101f1efc1797de6a0f127b797dda2f502e3673ac23c5ed012e76"
-    sha256 cellar: :any,                 catalina:       "8a9e1de8f0b12cda3283b4113ca6e948ef6ccfa1c70a422c009169c0291cf1f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bb570bd601da0bc9530ae31a44b3bb5817b00726813eaa6f13a75699227cbca"
+    sha256 cellar: :any,                 arm64_ventura:  "8ecf20964c1bb16869a8b3def93e4c58f1fada50f0a4c67d3e94c5d6e41651d8"
+    sha256 cellar: :any,                 arm64_monterey: "e667adcf77e2bbff8d970ec2910a069056883fd84bfb5e2a6d9fc03fb427e00d"
+    sha256 cellar: :any,                 arm64_big_sur:  "0896b3d82fd6c45026a8a0a1219f5131788a674d8813e477132f6ca4acf604e5"
+    sha256 cellar: :any,                 ventura:        "bbe98cdaf64fe39ec2e437d888b484c327bed1b57c4d8c19cb0dac012e3de88f"
+    sha256 cellar: :any,                 monterey:       "0b4f40579810053ec46b3dcbc6650b94ebfadc6b308c20b12e0c4915d5ff7ce6"
+    sha256 cellar: :any,                 big_sur:        "ddb4bb3b4b276f54ff8d499453f3a9066520ed0e33613df6496ec125200b0729"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7be4e8677937f67b7a309377e3a988ac17dd9d0c407e335d333cf17da1d0948"
   end
 
   depends_on "cmake" => :build

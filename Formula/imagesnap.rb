@@ -1,19 +1,17 @@
 class Imagesnap < Formula
   desc "Tool to capture still images from an iSight or other video source"
   homepage "https://github.com/rharder/imagesnap"
-  url "https://github.com/rharder/imagesnap/archive/0.2.14.tar.gz"
-  sha256 "6f77ae0200a0d1e342ab6e281a4d5363d8ef97b1b0e4f386d3e927f8dc727475"
+  url "https://github.com/rharder/imagesnap/archive/refs/tags/0.2.15.tar.gz"
+  sha256 "4cb3534f9193feb663b6cb8d43de3e8c1e3155057ad515fec8832c30f7b6996b"
   license :public_domain
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f363a0b9e1961f5cd6fc19b2b6bcfc6677399732723b6f686c33e338a746c26a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9cab0cdeac3bb6d67021107d754628c02cb22b1e1111049cf6cac6d4dfdd3859"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0b0e448b487416847f57dd541f031b3f35b369d43e0317293f99043ed60b820"
-    sha256 cellar: :any_skip_relocation, ventura:        "f2db93533cc9d42b1dd51004751626a4d0ba932bf2b12042a7ee1f7ba9312582"
-    sha256 cellar: :any_skip_relocation, monterey:       "acd11ffa88be2018f9fdad03371404284fb93d515dba7569b4219b8cb09dc37e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d388402a4c5cbbd2ffe370dcc792075688fa55baedcd093c00f02b262a3ca942"
-    sha256 cellar: :any_skip_relocation, catalina:       "29524d3af5547a05136b5cb91a73e596a4aaa64f5a9fb437207814240439a3b8"
-    sha256 cellar: :any_skip_relocation, mojave:         "58b490ef6922ecc4fbd89b66275417562ce18fb3b7107804117a75a56b006dc9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e01dfbebaf65a1205abbb47b938aa38f45aff14787b9ef5960ca4cacddbe5e73"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0683fa385f89f31a92f19329f134b79f1d097b7ce909bc6ecf4c6bc65562c9c4"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4750f08883ae1846a3f5168242228e9b3e6678b5f16fb19e43b20a4d4861c17f"
+    sha256 cellar: :any_skip_relocation, ventura:        "e5a9f0379ce4c9d831984b53c6f46c6d333dc949919b2a126ca9dee2ddebe441"
+    sha256 cellar: :any_skip_relocation, monterey:       "8f742d6ca025a27ee2f88509b25bf3871ff52bfa0c4874ee3145d8bdf9f96c83"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a551ce7a2043379202376d8f7395ca0019771c41ecc07d8823f819300cb445ca"
   end
 
   depends_on xcode: :build

@@ -2,8 +2,8 @@ class Vim < Formula
   desc "Vi 'workalike' with many additional features"
   homepage "https://www.vim.org/"
   # vim should only be updated every 50 releases on multiples of 50
-  url "https://github.com/vim/vim/archive/v9.0.1100.tar.gz"
-  sha256 "b115e67a42f4ac76839eab44d2844df0adda32f078dbba62b715ec8da162c00b"
+  url "https://github.com/vim/vim/archive/v9.0.1150.tar.gz"
+  sha256 "aaa03eaeb68e8ee39137c5ffb8d41b4cce58f53860724829aba6385454b98c69"
   license "Vim"
   head "https://github.com/vim/vim.git", branch: "master"
 
@@ -17,13 +17,13 @@ class Vim < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "39ab5c09f4c2b9ca561891b86c22b615399703e19e85ed3a3c33de22f804642e"
-    sha256 arm64_monterey: "ec4c12d2c351122a5aa11a38e126a94eea0c92fa7f956c262c8b455f3df36d47"
-    sha256 arm64_big_sur:  "c025ef645d6212495c325d1b625d8379dfb2eef480ae61ebb6577d27f9b94232"
-    sha256 ventura:        "17277639a764ef65ea17220bd32f40d00d01ed6743318f65c430c0f9755b24a2"
-    sha256 monterey:       "1427eb21c064a2c46a550f443320f03ddebcb6c9204eda7431d0f357807cb83b"
-    sha256 big_sur:        "582c7ee62696d42fd626c7d02baec7d8966e601313df7aa2ff9ff61b962f0e25"
-    sha256 x86_64_linux:   "e9aef20dfd931d1c582103e854ab21fbfec9e19c643e30df3f2767eccb12211a"
+    sha256 arm64_ventura:  "27b4e6c90ec728a08129d20de9d1d96751bbcc0542c075b044d8ecde698f2c91"
+    sha256 arm64_monterey: "5e5e1c4a5a9d47933f2c6fad5a1ccc8cf43de1d41d93a066c5dc565693ad9c6f"
+    sha256 arm64_big_sur:  "a24e5980d860fa55051a966e743061d740cb8d44446c14e6d054a80671393e63"
+    sha256 ventura:        "2bab3559a126371e19c3d9b3c2fab4105ef7d8ab8078e3979082d466204e5673"
+    sha256 monterey:       "ea5f55bdbe3a6bf5797ffd944c96d8c7eca9c0658e9bc6f1179d48599d0dc5c8"
+    sha256 big_sur:        "a3324cc214d44b3bcc399f5e55a319ad0a0942c122f987a35503785473f823c2"
+    sha256 x86_64_linux:   "2954594016aab653d1af5705ada2932d91ee8f0b3a6c285c1db9154c445e4bd3"
   end
 
   depends_on "gettext"
@@ -38,6 +38,12 @@ class Vim < Formula
 
   conflicts_with "macvim",
     because: "vim and macvim both install vi* binaries"
+
+  # fixes build issue with 9.0.1150, remove after next release
+  patch do
+    url "https://github.com/vim/vim/commit/5bcd29b84e4dd6435177f37a544ecbf8df02412c.patch?full_index=1"
+    sha256 "6d1ae23897088cc13b31ac22f268e74fa063364b7c9a892dbee32397d4d62faf"
+  end
 
   def install
     ENV.prepend_path "PATH", Formula["python@3.11"].opt_libexec/"bin"

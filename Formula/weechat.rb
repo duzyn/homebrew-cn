@@ -4,17 +4,17 @@ class Weechat < Formula
   url "https://weechat.org/files/src/weechat-3.7.1.tar.xz"
   sha256 "c311c9de9f5d87404b667e0c690959388295485bce986fac4ab934ebd43589aa"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/weechat/weechat.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 arm64_ventura:  "7e6a3c6240984ee418e232be90cd663119797e3a831bc175f3d3078b8f8835a7"
-    sha256 arm64_monterey: "3c7ec077b0032959b68a2e65cf3760c4c4d1b36534fa585c3b3ba35d130ad846"
-    sha256 arm64_big_sur:  "dacd747d7fc7a385df569a1041b08fe3bd564b1fb8aa23daac2a1dbe51434004"
-    sha256 ventura:        "838e080cdb91c6fabe1ae9064f6a76af76b2062178b1c86367164bf683328229"
-    sha256 monterey:       "65b27bd0faadb076b3553745d79bd16a7943be9cd690b19171f02d00cab63e35"
-    sha256 big_sur:        "3c702ecd6c99d74d3d894b6c7dd7caaf168712d5fa6fe4449d5284b6eabaae70"
-    sha256 x86_64_linux:   "910f20e9130def634c5ef9783618c21b03b1a5c3a5c0cc35d5a9c7a8bda4f2e4"
+    sha256 arm64_ventura:  "88a3f7fe6c40a891c1be89527f5020792825ffdc24d6507382f3fe1bff431aca"
+    sha256 arm64_monterey: "06e08f1ad27dfec1e0f696aeb5f8f2023b94ab615b738b224691319ab2d17893"
+    sha256 arm64_big_sur:  "998c2373d4655fb65d12866d3fc66243b353a7666b7e098f058053e0ae5f6352"
+    sha256 ventura:        "a12953c8321ffe668f2fbc386f087c25d0a64ae477c4d57c8a8fc428cdaf4f16"
+    sha256 monterey:       "7ccda4f0855c9815c75bda71f36a71811fdddf6a284db2740945b6b5e0358f9a"
+    sha256 big_sur:        "60da359c99aa6addded807268491c2f418dfdcfce276eaeb7d963f4f8517f397"
+    sha256 x86_64_linux:   "084cc8d8a91d8b1cdb387d7ae09c3e4a625909246d4fe9f67b056ed3d1ff84d4"
   end
 
   depends_on "asciidoctor" => :build
@@ -33,6 +33,13 @@ class Weechat < Formula
 
   uses_from_macos "curl"
   uses_from_macos "tcl-tk"
+
+  # Fix build with Ruby 3.2
+  # https://github.com/weechat/weechat/pull/1865
+  patch do
+    url "https://github.com/weechat/weechat/commit/49ce7be88e331b4b23a2b918138e6238a998a2f8.patch?full_index=1"
+    sha256 "14fce206fbda311e1e355e0d1504d347e801c92b4d1a3d30f564b8356b408ec5"
+  end
 
   def install
     python3 = "python3.11"

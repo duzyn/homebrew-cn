@@ -1,57 +1,43 @@
-class Ruby < Formula
+class RubyAT31 < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
+  url "https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.3.tar.gz"
+  sha256 "5ea498a35f4cd15875200a52dde42b6eb179e1264e17d78732c3a57cd1c6ab9e"
   license "Ruby"
-
-  stable do
-    url "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0.tar.gz"
-    sha256 "daaa78e1360b2783f98deeceb677ad900f3a36c0ffa6e2b6b19090be77abc272"
-
-    # Should be updated only when Ruby is updated (if an update is available).
-    # The exception is Rubygem security fixes, which mandate updating this
-    # formula & the versioned equivalents and bumping the revisions.
-    resource "rubygems" do
-      url "https://rubygems.org/rubygems/rubygems-3.4.2.tgz"
-      sha256 "619a61177dfbe219dd159f7790058b1829bcabcfc433727154600e337b31d01a"
-    end
-  end
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
-    regex(/href=.*?ruby[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/href=.*?ruby[._-]v?(3\.1(?:\.\d+)+)\.t/i)
   end
 
   bottle do
-    sha256 arm64_ventura:  "a6e42d4316b36bfdbd7677b33132240b1da967a8fbc3d400048907c93d90fcdf"
-    sha256 arm64_monterey: "4617eb7c595c406df74c98c8b26ca209ed14b2b3f70a434037204d15e6330858"
-    sha256 arm64_big_sur:  "6a02df3c6bb0dad4b2ca43d896e2cd1ac815b0099a0955c2daeb50d7ad67b34f"
-    sha256 ventura:        "88eaef6255d2c9994b35b29b2567a30e129ab9269790d267f6a6d77fbc1fc1ed"
-    sha256 monterey:       "c25553dfc94e95c5f082c179bbb4c26572d20636947560d6f6f82e3f1eff632e"
-    sha256 big_sur:        "5125d745c548d7e6eb9547a7da3dff42d36a5f8ed848085a90a96990477fa9c3"
-    sha256 x86_64_linux:   "f479b86f97091e02481e97f55b14801e384d0650cbad8443acab9fade0fce59c"
+    sha256 arm64_ventura:  "dbe12754b970de6f359f347247ac44ae874b9d2d4fc21a2478c334bc43d0d95f"
+    sha256 arm64_monterey: "d4bc0e6c8cb1551911f77c72528e3e6809108d703298740d91c114acc9d57ad3"
+    sha256 arm64_big_sur:  "7349c62917343f93663f338f66d5d4ff08ec8966c5f29fc18883b5944fa3baac"
+    sha256 ventura:        "5305aa9d3ab1ca358a7f35cf4fff111ea3563a55dcc96f1d0fad0d0f5d6ba2b2"
+    sha256 monterey:       "cf25de12b00a6f852f8aec1b8651cceba42dddbd13659b46e5780656cf0e73b8"
+    sha256 big_sur:        "d89a48d4f866402e0e6e8b5ab9427ff8c92e067fdba339f90171c5da8126531f"
+    sha256 x86_64_linux:   "987312eda9f52f1562be66337876d9092945747213340fb2c795de63f36cf738"
   end
 
-  head do
-    url "https://github.com/ruby/ruby.git", branch: "master"
-    depends_on "autoconf" => :build
-    depends_on "bison" => :build
-    depends_on "rust" => :build
-  end
+  keg_only :versioned_formula
 
-  keg_only :provided_by_macos
-
-  depends_on "autoconf" => :build
-  depends_on "bison" => :build
   depends_on "pkg-config" => :build
-  depends_on "rust" => :build
   depends_on "libyaml"
   depends_on "openssl@1.1"
   depends_on "readline"
 
-  uses_from_macos "gperf"
   uses_from_macos "libffi"
   uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
+
+  # Should be updated only when Ruby is updated (if an update is available).
+  # The exception is Rubygem security fixes, which mandate updating this
+  # formula & the versioned equivalents and bumping the revisions.
+  resource "rubygems" do
+    url "https://rubygems.org/rubygems/rubygems-3.3.26.tgz"
+    sha256 "9b17a53a000a599926cf1ef19e9d2a35f87b436ae6500225eebe55db320dc68c"
+  end
 
   def api_version
     Utils.safe_popen_read("#{bin}/ruby", "-e", "print Gem.ruby_api_version")
@@ -69,8 +55,6 @@ class Ruby < Formula
     # TODO: Remove this workaround when the following PR is merged/resolved:
     #       https://github.com/Homebrew/brew/pull/12508
     inreplace "tool/mkconfig.rb", /^(\s+val = )'"\$\(SDKROOT\)"'\+/, "\\1"
-
-    system "./autogen.sh" if build.head?
 
     paths = %w[libyaml openssl@1.1 readline].map { |f| Formula[f].opt_prefix }
     args = %W[
@@ -107,8 +91,6 @@ class Ruby < Formula
 
     # A newer version of ruby-mode.el is shipped with Emacs
     elisp.install Dir["misc/*.el"].reject { |f| f == "misc/ruby-mode.el" }
-
-    return if build.head? # Use bundled RubyGems for --HEAD (will be newer)
 
     # This is easier than trying to keep both current & versioned Ruby
     # formulae repeatedly updated with Rubygem patches.

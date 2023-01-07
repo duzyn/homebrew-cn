@@ -3,8 +3,8 @@ class Qt < Formula
 
   desc "Cross-platform application and UI framework"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.4/6.4.1/single/qt-everywhere-src-6.4.1.tar.xz"
-  sha256 "e20b850b6134098a7f2e7701cfddfb213c6cf394b9e848e6fbc5b0e89dcfcc09"
+  url "https://download.qt.io/official_releases/qt/6.4/6.4.2/single/qt-everywhere-src-6.4.2.tar.xz"
+  sha256 "689f53e6652da82fccf7c2ab58066787487339f28d1ec66a8765ad357f4976be"
   license all_of: [
     "BSD-3-Clause",
     "GFDL-1.3-no-invariants-only",
@@ -12,7 +12,6 @@ class Qt < Formula
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } },
     "LGPL-3.0-only",
   ]
-  revision 2
   head "https://code.qt.io/qt/qt5.git", branch: "dev"
 
   # The first-party website doesn't make version information readily available,
@@ -23,20 +22,20 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6d6a048257bbc8db2ee55819ef9febe1c2b3419ce1062d965931d7a26f925dbf"
-    sha256 cellar: :any,                 arm64_monterey: "289260f6e284bc820f0b2732ab7791b3e6ae60ef76e579eaa371fee767611622"
-    sha256 cellar: :any,                 arm64_big_sur:  "ee948149141c5f5a6206e48b523181137c0a742cc5c31e363a47f331cc90f5ce"
-    sha256 cellar: :any,                 ventura:        "32c9691af38780229033a2543bae915a1c7ebd5152f3f376abe2aa8cdb7ea8e1"
-    sha256 cellar: :any,                 monterey:       "4338f8a43c3e9a8c629ced0e79cf3092c74f586cfd1df0805b52b4bb5e2cf1d1"
-    sha256 cellar: :any,                 big_sur:        "b66e1f9a3a4d335d1b621a85ace57f699f078dd543812e7e9d216d4e114348cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1505fc47c6bdb170bffed88232ed733d5e7d0d34b0f85dd4adb3e786e874ad07"
+    sha256 cellar: :any,                 arm64_ventura:  "0f15fdc398cb8b54600483ff4a3ba10e6d50ce236239faa84904da4265dc8314"
+    sha256 cellar: :any,                 arm64_monterey: "84ccfd0213cb47004d66a9a2f9d563091c370dd12180bca0bc571a64763a7d2a"
+    sha256 cellar: :any,                 arm64_big_sur:  "802ad97dd111eefee63093126f01bad87996c61eb978d09841e31362729b1684"
+    sha256 cellar: :any,                 ventura:        "1697ac5c6ff89bb24873bba10b3a8016e661e1b9d466d19f709a81745473e576"
+    sha256 cellar: :any,                 monterey:       "f0abc566520d6949106c8eaab13eb1d5c1cea1faa1d14a7557281359f340748f"
+    sha256 cellar: :any,                 big_sur:        "c0e19c004ab5aecad8e79a23cd5eb476f884a93831e8d511c0a7abfc0a1ed9b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f5d80ad5fe8655d47d52b55f785c211c382b7600d2028796b9e0367625450a1"
   end
 
   depends_on "cmake"      => [:build, :test]
   depends_on "ninja"      => :build
   depends_on "node"       => :build
   depends_on "pkg-config" => :build
-  depends_on "python@3.10" => :build
+  depends_on "python@3.11" => :build
   depends_on "six" => :build
   depends_on "vulkan-headers" => [:build, :test]
   depends_on xcode: :build
@@ -136,16 +135,8 @@ class Qt < Formula
     directory "qtbase"
   end
 
-  # Fix Linux build with CMake versions >= 3.25
-  # remove in next release
-  patch do
-    url "https://github.com/qt/qtwebengine/commit/240e71877865ed07e4c8d5bd4553aa0772c2adf4.patch?full_index=1"
-    sha256 "8fb13bfc7aac50084e1c533955564a1819bbb25b544ebccd05b99e24527c7b80"
-    directory "qtwebengine"
-  end
-
   def install
-    python = "python3.10"
+    python = "python3.11"
     # Install python dependencies for QtWebEngine
     venv_root = buildpath/"venv"
     venv = virtualenv_create(venv_root, python)

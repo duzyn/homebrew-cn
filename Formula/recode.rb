@@ -1,21 +1,21 @@
 class Recode < Formula
   desc "Convert character set (charsets)"
   homepage "https://github.com/rrthomas/recode"
-  url "https://ghproxy.com/github.com/rrthomas/recode/releases/download/v3.7.12/recode-3.7.12.tar.gz"
-  sha256 "4db1c9076f04dbaa159726f5000847e5e5a83aec8e5c64f8ca04383f6cda12d5"
+  url "https://ghproxy.com/github.com/rrthomas/recode/releases/download/v3.7.13/recode-3.7.13.tar.gz"
+  sha256 "22bbdf79725a59f4d84c3dad63a911c5e8f443f109443c032cad564900b6b733"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "260c86f943187dfd054e94e290e8fa5b798e13afc40741c72238cdef6694a9ba"
-    sha256 cellar: :any,                 arm64_monterey: "ca950e0f4e50459a5aa6800dc411c1ccde64865cac4e740de65a5019639d822b"
-    sha256 cellar: :any,                 arm64_big_sur:  "69206a0503a2d1780ff9ccc8eaebf6adf94b4018bb0efb4cd983f7f5a3d07ce6"
-    sha256 cellar: :any,                 ventura:        "43b4d871639d2eb18d03a3e24bcd4920e35a9c5f8072d0ef30b9c54f6ee5f588"
-    sha256 cellar: :any,                 monterey:       "76bf51e5a583a21bad1f24ea1b4c5ce568974a732c99861d1fa0a31213146e81"
-    sha256 cellar: :any,                 big_sur:        "020a78f27f0275d0fc8c0621ea5b21a6f6ef6ff8279fdcafa401f316cb078c01"
-    sha256 cellar: :any,                 catalina:       "f57a3d106020c93f0ba9e713cddbf50dfc5a1e86efe25dce36060ee16cd0eeb0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "365bd66e439e5592ee482547354c758279ed085413efd9eb926db2beddb3d32e"
+    sha256 cellar: :any,                 arm64_ventura:  "36b3e395da0fa0dc36f82798e1cb1f993115dc05bd3fc23cfec2fce6d4a50f55"
+    sha256 cellar: :any,                 arm64_monterey: "9de3695ef53d184456f3447e703d358bade6bcdf506a21dfee8d2d30ff381672"
+    sha256 cellar: :any,                 arm64_big_sur:  "2ce7b2c21ae41e9d86dd967aeeca28d61827db5a2aa5de0fbbcf613461228249"
+    sha256 cellar: :any,                 ventura:        "a313db5487582d69f4086a633a3f0c1223e2ed5250ef15a7f2d490c4fd25cfef"
+    sha256 cellar: :any,                 monterey:       "c112fcae93ad14b4728c31cd2e5b6e0ffd3a2305caac0f8d5859d0571cc97f35"
+    sha256 cellar: :any,                 big_sur:        "284ca96c22d0bff8ba5164f42df49524db62bdba3eff8cc87d5d759ecfb11946"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9a0c4df1ad61f8427d75b9454142d15a88d2af7b642d03784c55e6b89fce29c0"
   end
 
+  depends_on "help2man" => :build
   depends_on "libtool" => :build
   depends_on "python@3.11" => :build
   depends_on "gettext"

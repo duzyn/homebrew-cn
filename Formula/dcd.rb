@@ -2,19 +2,19 @@ class Dcd < Formula
   desc "Auto-complete program for the D programming language"
   homepage "https://github.com/dlang-community/DCD"
   url "https://github.com/dlang-community/DCD.git",
-      tag:      "v0.15.1",
-      revision: "4c426d73d1a7e8428a66eddd4fb98cc70ab1cff8"
+      tag:      "v0.15.2",
+      revision: "4946d49abdc35810254151923bab30fb3cc2c004"
   license "GPL-3.0-or-later"
   head "https://github.com/dlang-community/dcd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "36ee6bdaefd057942dcc2a5a4d387df5d47bb09e487edc80c1240078735250f9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d52547750440908fc8f1646034117ef4b5525b70e20ecda8cf2c2ce5ca1d988"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "485932b715aca6f2933b3de52fad0ae62f810f54074a188fc0dca169e386a854"
-    sha256 cellar: :any_skip_relocation, ventura:        "43c016c67b3a697c9e0a3cd75d7de70d697424b13009a37e3864fd077260b90b"
-    sha256 cellar: :any_skip_relocation, monterey:       "0893ea92f8fac15b65c5898cb3b3f460e5939a0d1c4445689a962b0956b18079"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ab5cd04e3819d96d32178bed4ffb845b4bfe12e0f6d55f97ba165863fc058fb6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a203585eb808b95325695dd101f8d4dc7d637fa0055e93964b6c89372c0195f0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6b667329fc26ff55eba9b62027200818deef9378c15f5524e0031f35d471bf9e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1007cccd0a4c996e5a5515f978eefb67e57598d372ba7e43467d1c2220c80920"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b6ce58f93e86c4d23bbb23da6acb37c31d707cc2da062b9c541ff6ea65b303c6"
+    sha256 cellar: :any_skip_relocation, ventura:        "6c9cb410387c80d7d596bb925cf90cc0d1dfc8c0f9d3780b0ad1302540352265"
+    sha256 cellar: :any_skip_relocation, monterey:       "70550825ebf34833947ca9e7bcb9ec03292d6ecbf77e6691d4791eaadc4218ea"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5711120e29181ce752e1616c5777eea9864ac15d6583dc634aa3a9d9f47de647"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "658abefb0b260e852fb16078e353b453929f6f04fa8af8f636ed2d5e2aa89fca"
   end
 
   on_macos do

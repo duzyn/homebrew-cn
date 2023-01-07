@@ -3,20 +3,18 @@ class Folderify < Formula
 
   desc "Generate pixel-perfect macOS folder icons in the native style"
   homepage "https://github.com/lgarron/folderify"
-  url "https://files.pythonhosted.org/packages/68/03/a4834a40d95a0bc2debdbad7e0e1bf909a95ff68c0a64098ea52f6ccb794/folderify-2.3.1.tar.gz"
-  sha256 "0927c9453dc8efb6ea4addb0eee2711528152045f22d411c9de1e7f45621f06c"
+  url "https://files.pythonhosted.org/packages/11/cc/d8a2f0610f5c6ec9a876d692ceca1ead7f3d783bd57d6476794fd039cdd7/folderify-2.3.2.tar.gz"
+  sha256 "de59077ce0c8f00fe06a30156fc0f3df2d8f608036e09be7354ca6a50e66ccc1"
   license "MIT"
-  revision 1
   head "https://github.com/lgarron/folderify.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f80bae8eede3de718f6827c8f079ba573ecc77849d29c080a5cdff10bed4f7c1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "37aedb692e39efba0f2da125fef6c5fa91d214d57a159067831d31fd03a73324"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e9df72f0aa9b70c864d2bf24dae188f3be89b80b304798d9aa08bb92505a6652"
-    sha256 cellar: :any_skip_relocation, ventura:        "2ac11aa91e532e4118ef7860dd5cecfe903ced3d8b0c549374a4410424bb732f"
-    sha256 cellar: :any_skip_relocation, monterey:       "2ac11aa91e532e4118ef7860dd5cecfe903ced3d8b0c549374a4410424bb732f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9c0d30d913babe9c33ce461319a123c4cf6db2ca67329347440fec56c5c7102b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9b7b3a757b796c9187214e29f0c9869b336e6e8f940c525793c831acf35a07ce"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fb543760ad4756b93cbc0faaf2cabbbaa8f6a6368f1b2ce2d0e022ed68387ce0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "aed264df86c7e14cca63a144f882f8396f7b1b27caedcc4f67e228d79a64e443"
+    sha256 cellar: :any_skip_relocation, ventura:        "3b049af3264f7be4537400b18936d84780a9588f20db1c05a5d41f447556cc9b"
+    sha256 cellar: :any_skip_relocation, monterey:       "3b049af3264f7be4537400b18936d84780a9588f20db1c05a5d41f447556cc9b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "894af8d22b7b79072bfe71a9c30891052a133e3850c8632b4499ccd28ef36bee"
   end
 
   depends_on xcode: :build

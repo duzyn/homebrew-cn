@@ -1,8 +1,8 @@
 class NodeAT18 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v18.12.1/node-v18.12.1.tar.xz"
-  sha256 "4fa406451bc52659a290e52cfdb2162a760bd549da4b8bbebe6a29f296d938df"
+  url "https://nodejs.org/dist/v18.13.0/node-v18.13.0.tar.xz"
+  sha256 "fd4ac562e01d172896e3a959bd59552dbf647331c90d726f8d3471683dd3da68"
   license "MIT"
 
   livecheck do
@@ -11,14 +11,13 @@ class NodeAT18 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "2bf34d35dae54f4d6035aed07423a42e803efbcfce8f29f3fd01d74518a01f85"
-    sha256 cellar: :any,                 arm64_monterey: "6c1c1cf91bcaf70002531e6f29ed7b30b28dab4b197d6eb2f401b863b803ca2c"
-    sha256 cellar: :any,                 arm64_big_sur:  "8babdc71177ced262407f0e05bf951050b3c26f5f2a55aa8195635019e273506"
-    sha256 cellar: :any,                 ventura:        "46bc8300ca83d75435ea10597acec3b8695e688c2b04a2969e60266745bcff58"
-    sha256 cellar: :any,                 monterey:       "86177e9684caa0c024a4c8cdb478148b5e9ea0e699a1a31fc555beef63bd2ced"
-    sha256 cellar: :any,                 big_sur:        "f261760bbd78db651bc9a2756695db3e44cd4b8edf6a8fda25f88de77f2dea37"
-    sha256 cellar: :any,                 catalina:       "6c09a8e9bc2bbc96e2508a36881f6a15df5cf4cd476371fc8fd120eca1efea3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4237c87c7a25490dcdb1c56d8ae5024478394349a9eb4be00d6da5320cd3959f"
+    sha256 arm64_ventura:  "bf7802faf18c8372d1002910211f764b4e00b66fbaae5a7ba90d692c0de2f0d4"
+    sha256 arm64_monterey: "dca410f052307040f847a43daddee0cbcffec70be322647ce4e7002aea1d64df"
+    sha256 arm64_big_sur:  "1aa888106d1efe72d29208dfaf24cfd69377dfd01307edc458fd8997a228a33f"
+    sha256 ventura:        "b1da563c7df6cd7fe385e2abe4445e6771d6eb89c9cf8980a1b911fbfc306c90"
+    sha256 monterey:       "b4946cb8f3978403e8a32080217dbebb59fe3767c5e59f3416032da25b79ae8b"
+    sha256 big_sur:        "44d1a2ec07f3846f6b94f01511981c841a86bbb7254b3b8d58885e009e795e4d"
+    sha256 x86_64_linux:   "c1feb1d6f7f7f287a129a42612b45ea6af8810a0ec2fda86ab8ddbd71a94dd3e"
   end
 
   keg_only :versioned_formula

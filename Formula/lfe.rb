@@ -1,18 +1,19 @@
 class Lfe < Formula
   desc "Concurrent Lisp for the Erlang VM"
   homepage "https://lfe.io/"
-  url "https://github.com/lfe/lfe/archive/v2.1.0.tar.gz"
-  sha256 "5554f9fec066963a6d79c8cd5f6b6eff0d1f0397425331fd88dcae9907756b66"
+  url "https://github.com/lfe/lfe/archive/v2.1.1.tar.gz"
+  sha256 "e5abacd57dc2f357dda46d8336a40046be806f5c6776f95612676c4b45f6d56b"
   license "Apache-2.0"
   head "https://github.com/lfe/lfe.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab1ebda0a11eae1ac2f12f33d7ffdbf119db51582ea2ec631c6c505cf9147013"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "37df9827bf1c4652dc1bf580189d858b710eba37c411c86356a3284e4e4a21e7"
-    sha256 cellar: :any_skip_relocation, ventura:        "009a77d5e1e12ed074a4d4077e1f2d6dd7b4f9341e865eb938f3664691532042"
-    sha256 cellar: :any_skip_relocation, monterey:       "5a884633e2e5ba246256acb584ab0e984bb8b2fa806e2d717397a031cd795772"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1e7ccd17a1e88c32b63defbaee55f314b48c3833f7b04638ba7da9557519c1ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e3bb17753cd2332c3a10ae24c24b7effd60e2db32bb7e97793c643410b70c619"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "50da79beba25a27df6107df9e91c9b84c9e6d08f249c04d2f1b5a56bb9543878"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "23f734b4f3fae509e64dd688622f07b1ea11da38afaa6435161be3635d7d5224"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3786b6b4dd0d82bcee94553a785150beecbd199f9b10970198d210762534d0e3"
+    sha256 cellar: :any_skip_relocation, ventura:        "e0c610ccb996502cd4e0359eea2d95494b5ba53337e1d58be61ed15299f39538"
+    sha256 cellar: :any_skip_relocation, monterey:       "ae61c904ed305804cb8de9c7f79e45129959068177e619d69e06d5d5e23a1c33"
+    sha256 cellar: :any_skip_relocation, big_sur:        "e583f87a9f632a56d0d18c9be268702aa1f9f3226edb96cc8dcc52fbdc0cbd5e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b9e674ffdffed2e4ef6e5a9e4d4aa9a3d8c1275a703c3b55b150f4d00dd09247"
   end
 
   depends_on "emacs" => :build

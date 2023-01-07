@@ -13,21 +13,23 @@ class MitScheme < Formula
   end
 
   bottle do
-    sha256 monterey:     "5c002d0841ffabfabe64e02901fc9c79815115348fd388da23b9040f04c5ed42"
-    sha256 big_sur:      "2a010afbf69c03bf7da5e45077bf76a1cce13d96748fa6c4c9d4ff74a87674cc"
-    sha256 catalina:     "f1f056a425dddbc394caa899e1eab404163b7404ea07f3673850e5fb2ce78aaa"
-    sha256 mojave:       "f3b91a23b3e924b1cd560b59a87cf64350a232579390adf35661d9d6cec3b4bc"
-    sha256 x86_64_linux: "ed4f56aa490d6965f7de9840277d50ced6e8f1e69a07889af434ccac24d414af"
+    rebuild 1
+    sha256 monterey:     "4ca9936e7e9d596a0de4a5a8dd77b7a1d76e94a905651926d64ab2ba02bc42c8"
+    sha256 big_sur:      "671d6531ccb7cbc34863bec18fc27c5be3792e955c9dcff569f3e7d61b8dac3f"
+    sha256 x86_64_linux: "5129eed815f93a963cbca4761637d8d056cf5d6d853fe6feb08c9b53e5f18d36"
   end
 
   # Has a hardcoded compile check for /Applications/Xcode.app
   # Dies on "configure: error: SIZEOF_CHAR is not 1" without Xcode.
   # https://github.com/Homebrew/homebrew-x11/issues/103#issuecomment-125014423
   depends_on xcode: :build
-  depends_on "openssl@1.1"
 
   uses_from_macos "m4" => :build
   uses_from_macos "ncurses"
+
+  on_macos do
+    depends_on arch: :x86_64 # No support for Apple silicon: https://www.gnu.org/software/mit-scheme/#status
+  end
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "texinfo" => :build
@@ -77,11 +79,9 @@ class MitScheme < Formula
     inreplace "microcode/configure" do |s|
       s.gsub! "/usr/local", prefix
 
-      if OS.mac?
-        # Fixes "configure: error: No MacOSX SDK for version: 10.10"
-        # Reported 23rd Apr 2016: https://savannah.gnu.org/bugs/index.php?47769
-        s.gsub!(/SDK=MacOSX\$\{MACOS\}$/, "SDK=MacOSX#{MacOS.sdk.version}")
-      end
+      # Fixes "configure: error: No MacOSX SDK for version: 10.10"
+      # Reported 23rd Apr 2016: https://savannah.gnu.org/bugs/index.php?47769
+      s.gsub!(/SDK=MacOSX\$\{MACOS\}$/, "SDK=MacOSX#{MacOS.sdk.version}") if OS.mac?
     end
 
     inreplace "edwin/compile.sh" do |s|

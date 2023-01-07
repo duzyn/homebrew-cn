@@ -4,22 +4,22 @@ class NagiosPlugins < Formula
   url "https://ghproxy.com/github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.2/nagios-plugins-2.4.2.tar.gz"
   sha256 "5b2769ae3d05559ea76ee296e73cf6e99e7175ad1e7ab3a7582c4a36d4ae3f47"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/nagios-plugins/nagios-plugins.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "f2729b87cb23d5ad37af39e0b4696dd818c9520507b2d1528d42649ca06fb44d"
-    sha256 cellar: :any, arm64_monterey: "c0fe6bd13cc6fa25c154597a0bb66d245bae9a31c0b7d3f049dedd6d862fe5a6"
-    sha256 cellar: :any, arm64_big_sur:  "04f19ceb18f70237980d02e1147c03388a3e84e963427bba51f7c4437b1ed265"
-    sha256 cellar: :any, ventura:        "c040f9db0325edfac6fc13f7f9ac08acd96f3a4592fe6006b93bf74e8e802e3f"
-    sha256 cellar: :any, monterey:       "7106bc2245c818a345caff133b70650336ce8024859986852874b3b539d1c3fe"
-    sha256 cellar: :any, big_sur:        "9f5eba9244658bf95874d96c807f1a6f1decc7e201a8be8f8ba247fbcef4688a"
-    sha256 cellar: :any, catalina:       "48b56d823d578b7e7076dfb5c9c58dc58d5f9a1147b8ba6ae8937f0142d504fe"
-    sha256               x86_64_linux:   "3eb6d87ae49cde9604837cf5479f36237364c92a1d10e9ee78175398934795bf"
+    sha256 cellar: :any, arm64_ventura:  "63ee1204cec7047eed4b5918b050f7c4b967c3da5e16870ed9bea02a05555d97"
+    sha256 cellar: :any, arm64_monterey: "52a9da57c6482d6db104d60111b65232e4c634328ed22d2ee37ccc02c850e6c5"
+    sha256 cellar: :any, arm64_big_sur:  "966e9d28573f5e197ce9dae6f86ad5459a3af4aef54380b0639649925bac39a4"
+    sha256 cellar: :any, ventura:        "5160ba69a59c03858756ef81c665cb5df1e9357e8cd6c5c1f21e1414f4248d60"
+    sha256 cellar: :any, monterey:       "59d48c969aafa22d69f8aff8761c41784f97cb09bc93ca99c897239ba2f77344"
+    sha256 cellar: :any, big_sur:        "3086d491e7bb155e149fcf7cf8266f249ff34776e0e42d53a02fc7f9fc0bd865"
+    sha256               x86_64_linux:   "06553b8d5727460be7a4b20a52ac714d4a5cc2997c7c779b660eee4ed117653a"
   end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
 
   on_linux do
     depends_on "bind"
@@ -32,7 +32,7 @@ class NagiosPlugins < Formula
       --disable-dependency-tracking
       --prefix=#{libexec}
       --libexecdir=#{libexec}/sbin
-      --with-openssl=#{Formula["openssl@1.1"].opt_prefix}
+      --with-openssl=#{Formula["openssl@3"].opt_prefix}
     ]
 
     system "./tools/setup" if build.head?

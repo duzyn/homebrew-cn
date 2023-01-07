@@ -4,6 +4,7 @@ class Nagios < Formula
   url "https://downloads.sourceforge.net/project/nagios/nagios-4.x/nagios-4.4.9/nagios-4.4.9.tar.gz?use_mirror=nchc"
   sha256 "0e793f3f3654f10961db34950a0c129240cc80222119175552d7e322a9ba4334"
   license "GPL-2.0-only"
+  revision 1
 
   livecheck do
     url :stable
@@ -11,20 +12,19 @@ class Nagios < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0637ec5ac33730cfe9e01e8796ff24bf4ba69aa8487bde4c457999e9958ce61d"
-    sha256 arm64_monterey: "689b180a922aa24bce6cd47e85bd7e09f415217b94b93619b90078677e131088"
-    sha256 arm64_big_sur:  "b285d96affcdae36672b789bb3e6fb5d6e8155d34cd500542e4e4196e4452973"
-    sha256 ventura:        "43cae1695d0d079a4935db9baef3409b0746cadef009a36e359ccc10af6ecddb"
-    sha256 monterey:       "8c0d9035ed0a74b33d2d33f1448e3b0393afce8d1d80b2a91188367ff2e8ea0c"
-    sha256 big_sur:        "a6a423daa32f7a08789b904d83bec0673d2574ee8c891b422974e131fc69f6ea"
-    sha256 catalina:       "cc3e0037b069eee5e7819d32861872dad58869cae36939fe546b6624e321fb0c"
-    sha256 x86_64_linux:   "ed8a37f74ff55e3e0cf1d5d454b5966d51d07408181588aa6f774b58710e4bc6"
+    sha256 arm64_ventura:  "7db0695bbae427961a1822dc5304b4402d904da918c0b098972844ba124ce220"
+    sha256 arm64_monterey: "c2bcde07a56fb7115522c01e901137e570829879e2d3dbc248f35348ac7e05d1"
+    sha256 arm64_big_sur:  "fd35798f4d1300888264d7946ef2007c050c562122d6ee83e04f355455a5d6ee"
+    sha256 ventura:        "112abc2955c0d88b27d249f08cb6bc1d998815f16389d88c0786f4c20eb1172e"
+    sha256 monterey:       "ebdd3e0f05804ee1c0b014bfe4da8137926e7c87f560f2adfe11c7a397ebdad4"
+    sha256 big_sur:        "bb335ee0d104300f3f998a738e7d4ff8c8525df42a7beb3ad6e855a6372e1b49"
+    sha256 x86_64_linux:   "0ebd2f195770a874487bb13a52be1b8fe18d909ef3cc7e881e0debe267a3ed1a"
   end
 
   depends_on "gd"
   depends_on "libpng"
   depends_on "nagios-plugins"
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
 
   uses_from_macos "unzip"
 
@@ -65,7 +65,7 @@ class Nagios < Formula
       "--with-nagios-group='#{group}'",
       "--with-command-user=#{user}",
       "--with-httpd-conf=#{share}",
-      "--with-ssl=#{Formula["openssl@1.1"].opt_prefix}",
+      "--with-ssl=#{Formula["openssl@3"].opt_prefix}",
       "--disable-libtool",
     ]
     args << "--with-command-group=_www" if OS.mac?

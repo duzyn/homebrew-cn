@@ -7,16 +7,18 @@ class GoTask < Formula
   head "https://github.com/go-task/task.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0b8bff10c1c176b9051e22a880c3db111d16e63982c6db5f2cbe29f9f4ec45af"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "faff8e6d0d3552bce4f89a29eabd492cc2ad22694db6d9c15e5aa78b3fbf7e41"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1932ad59a5927d4552005fe71aea3c4bbd2deb46810df321c8c6095c365c5336"
-    sha256 cellar: :any_skip_relocation, ventura:        "102da2d7f8bf18efc7aa164db3c7ae50bb85166eacfcf29eab0be888a47a15ba"
-    sha256 cellar: :any_skip_relocation, monterey:       "21667c89808136f6199bb5877b0e5d06bd6789e7bf3a81961ca6705348b98872"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c36f14936d99b2f1ee0e431f6cdd63785d258fc59472b50b1e2614505f1cde76"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bd80e734c7da2f823878c9d4ad2d58d82caaf656ca92b7b5657f3afa2a3653eb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dd4dcca80a5be220e942fa67361cbdaf3e78e7b05f91d0cfe3ca5e7bd5efb020"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f35cea3b9f910c47c305adf17addddc82e4ee853193479d83fb93ebf3d562b28"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "955a7dec15f39a697c67dadd95acfdd394915015fe8a004b4044a99402f0f3e5"
+    sha256 cellar: :any_skip_relocation, ventura:        "5bea8d432d54894d5660b30a6ce2068f191e1040807dcf3cdaeee2f090cd446a"
+    sha256 cellar: :any_skip_relocation, monterey:       "e028880e831747508a9d3d040545e77bc857b94e7050445c6842a54bf8479637"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d0cfa544c8e9d0442e702a208cc4624636f1e49ddc12c1d764d14d2fbe384830"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58aede0ef072489959ed3c65cc1b8ae5b681da9aed7e7d75e35bcd6d76de9eef"
   end
 
   depends_on "go" => :build
+  conflicts_with "task", because: "both install `task` binaries"
 
   def install
     ldflags = %W[

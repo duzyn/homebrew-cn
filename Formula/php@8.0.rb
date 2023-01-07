@@ -2,9 +2,9 @@ class PhpAT80 < Formula
   desc "General-purpose scripting language"
   homepage "https://www.php.net/"
   # Should only be updated if the new version is announced on the homepage, https://www.php.net/
-  url "https://www.php.net/distributions/php-8.0.26.tar.xz"
-  mirror "https://fossies.org/linux/www/php-8.0.26.tar.xz"
-  sha256 "0765bfbe640dba37ccc36d2bc7c7b7ba3d2c3381c9cd4305f66eca83e82a40b3"
+  url "https://www.php.net/distributions/php-8.0.27.tar.xz"
+  mirror "https://fossies.org/linux/www/php-8.0.27.tar.xz"
+  sha256 "f942cbfe2f7bacbb8039fb79bbec41c76ea779ac5c8157f21e1e0c1b28a5fc3a"
   license "PHP-3.01"
 
   livecheck do
@@ -13,14 +13,13 @@ class PhpAT80 < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "c199d7d93ecce56bc52f05c06d8c01d362bdc9989177687c8274c6f25cdf64be"
-    sha256 arm64_monterey: "3211fdc214983eb1eadb57f237e9095e87c85e74ce5f9e79f1c9230148edeb8c"
-    sha256 arm64_big_sur:  "0db5bc644a6ffd9451e9aca4098167e0018714a01ee89cc2db3dee6f4d6ef188"
-    sha256 ventura:        "85457a49595add83643ccd8ef09c551578143cc80aee47d9fbc7e202947e37fe"
-    sha256 monterey:       "29395f23a26f925787fcf3be98f51266f8ae4e454c7567d31779a8dab783f50a"
-    sha256 big_sur:        "768bf7dc8937c9da628a67d80fb0c47e301456e61bf9d644c214f9f0b860c0ee"
-    sha256 catalina:       "d5f058e987041d8de8489a2ebf91aa185dcc10e1ef9e69887812a5d89254e45f"
-    sha256 x86_64_linux:   "7e6c2fd497afd30108d4dd62e23f1b5f60485bf03b50c67251c3c2a0c91c531c"
+    sha256 arm64_ventura:  "aef7abce73f68d4d7cda1dc26d54dd2fd12b3cbbe2c899c5f643971c86a00ee8"
+    sha256 arm64_monterey: "81f606ea5243127f9400c10b40af2338e114c6e08dfb8f03ace33864603a184e"
+    sha256 arm64_big_sur:  "310de791dcce259ef7e325e3dae4b0be5aac86a5858e398f7e9ce890529a871c"
+    sha256 ventura:        "e48f2bf789509c8b88fb93073c10325e0984e3c61f6bfe3b82819480016d9978"
+    sha256 monterey:       "2203e58a44235acf6944128895591e1e2e94975c1860e21d03109c7805b59b2a"
+    sha256 big_sur:        "7f8357cb0dbdfd0187d8a749eac9d41e0ad0f048e8c45f8f74805b80d676c08a"
+    sha256 x86_64_linux:   "3e90e2000fdf6a25a37d2a9531310c4e7a3bf3a4e242fb49bea6ee0a077906ef"
   end
 
   keg_only :versioned_formula

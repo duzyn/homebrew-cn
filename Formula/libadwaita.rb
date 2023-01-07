@@ -1,8 +1,8 @@
 class Libadwaita < Formula
   desc "Building blocks for modern adaptive GNOME applications"
   homepage "https://gnome.pages.gitlab.gnome.org/libadwaita/"
-  url "https://download.gnome.org/sources/libadwaita/1.2/libadwaita-1.2.0.tar.xz"
-  sha256 "322f3e1be39ba67981d9fe7228a85818eccaa2ed0aa42bcafe263af881c6460c"
+  url "https://download.gnome.org/sources/libadwaita/1.2/libadwaita-1.2.1.tar.xz"
+  sha256 "326f142a4f0f3de5a63f0d5e7a9de66ea85348a4726cbfd13930dcf666d22779"
   license "LGPL-2.1-or-later"
 
   # libadwaita doesn't use GNOME's "even-numbered minor is stable" version
@@ -14,20 +14,19 @@ class Libadwaita < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "84bd7cb9a13af48ae0ff68568e26e85b2bbe69fbd4c5964c246711b8226c1bea"
-    sha256 arm64_monterey: "0792a3db924c5a33c1b6849ccc2f3cac1b168e4267025084001af8a532bc40bf"
-    sha256 arm64_big_sur:  "25c1f762056fc685c92eaf58e51237973d5afa96047997aac1ec867fc1fac33e"
-    sha256 ventura:        "dd18b3b331d34f114f783f818ab534b3fcd129e2803cc347cfa8365e3260eea1"
-    sha256 monterey:       "c0e552e7f8bb80a296e8064daf7951fcd427ee4eb2dd3a69d9f97ddd322e665b"
-    sha256 big_sur:        "558aabf74bf246f77c325ddc0d50012f4b5006873612929d56724805cc434c7a"
-    sha256 catalina:       "61c581548b0093b670535f7cd41c52a3addadafb810683897235d7eebd4ce8c3"
-    sha256 x86_64_linux:   "ab32954b42d20ceeaa2444477146842a4b67731a30030c2b18e42e7b83530680"
+    sha256 arm64_ventura:  "9db1460faf1cc8266a0f13c8294b170d846e7512a6ace62026d5ca7c640cb0a0"
+    sha256 arm64_monterey: "d909dfd2586415138caea0f2b10329db7594149c8aea5f929ecf76ef832fcf82"
+    sha256 arm64_big_sur:  "832452f785166f98c3f5a7c1cc59d092969798cb9d714d3dcb4c53a421e60868"
+    sha256 ventura:        "e7b55558cd6a97c5693a8c9ed43c2a000f06810fe6604533bb46662fb63fd468"
+    sha256 monterey:       "811f8e0e8a02a50bec50d8bcc0cb7a83d1e465bfdd5f90d56aec085e34ab9c0a"
+    sha256 big_sur:        "b0df701b7b5040bcd65c060aaab97ef3e2ebde28cc2c4e41764cd4db89e35214"
+    sha256 x86_64_linux:   "af2ba8cfcd2daf6b7a3bf6179f4d34d5106ead47ba06cfa1ff0d0e305d6abd46"
   end
 
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkg-config" => [:build, :test]
   depends_on "sassc" => :build
   depends_on "vala" => :build
   depends_on "gtk4"

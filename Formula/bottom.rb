@@ -1,19 +1,19 @@
 class Bottom < Formula
   desc "Yet another cross-platform graphical process/system monitor"
   homepage "https://clementtsang.github.io/bottom/"
-  url "https://github.com/ClementTsang/bottom/archive/0.7.0.tar.gz"
-  sha256 "54b5118499afe5935cd95ce42174288f0f50a67d6051fb160ac25ff60124800f"
+  url "https://github.com/ClementTsang/bottom/archive/0.7.1.tar.gz"
+  sha256 "9d92688cceabac54ac47b7edcea3f858931b8f69661afb0d11dddc0bad5d3584"
   license "MIT"
   head "https://github.com/ClementTsang/bottom.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f1ff37a97a0798737e38ce3f1dfc8b7f3667ec28e400d799a5e11a338984dd35"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a06a086763f5d9eb759035614c87f326ad5a77f7070465da9c4f2148ae7ae7fd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e957ae292d89de8535f92d870260529c84889e1559e7bf2ca33ac206e38a0bab"
-    sha256 cellar: :any_skip_relocation, ventura:        "8c4edf12a6e344ff622550a269a1185361e2de56971781d91ed8121efd87b091"
-    sha256 cellar: :any_skip_relocation, monterey:       "abe1c56d2a1a949284b716baefb0bb15a5262097ab4b8e52b30145204d7d22d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f91e743720c1b39e586315b2a1311931a1f81ebda6841b2c8306c19e3ae20620"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0185270c1a21c94b1e0a81474d573f4284dad735ef1868a95a9850cffbc727f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b79ed696553f9a85390ee4f45f3555306259ea5656cd98f9376620e45bd3a79c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2382c02baa05f338df9bc720a7319fc4e37bc489b453349ea131523839aede0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46157f3a5ed4cd8de8ce6a69d2351d541878d2da6028848f94a4a78d5705bea7"
+    sha256 cellar: :any_skip_relocation, ventura:        "e669ff64ef5510b25daff197dc7d87755d01fc055769452dfeaad20bbcce07a3"
+    sha256 cellar: :any_skip_relocation, monterey:       "921216b193d93fc8943786a231359b61356f325a222b11ae39fad78f5aeaf048"
+    sha256 cellar: :any_skip_relocation, big_sur:        "eb8b854edbf795437eb67f5f9147e497ba6bd2062cf14055628cebcf92ce9020"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8e7b2bd33adc65df53c323952e8779797c1aae39932e84056d32bafea25aedf"
   end
 
   depends_on "rust" => :build

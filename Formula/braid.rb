@@ -5,16 +5,16 @@ class Braid < Formula
       tag:      "v1.1.8",
       revision: "d7391f2585fc86a8057d88de248ddc082eb8fa1b"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9b87226e335b4bbf5ab6db80f4ae502c64849bdb1a3e93c0d40b954a7b8729f7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b87226e335b4bbf5ab6db80f4ae502c64849bdb1a3e93c0d40b954a7b8729f7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ef6c996ced958c4fbf1782ab4dbfdb7ce1fd4109253dd86b338978876b29a312"
-    sha256 cellar: :any_skip_relocation, ventura:        "9b87226e335b4bbf5ab6db80f4ae502c64849bdb1a3e93c0d40b954a7b8729f7"
-    sha256 cellar: :any_skip_relocation, monterey:       "9b87226e335b4bbf5ab6db80f4ae502c64849bdb1a3e93c0d40b954a7b8729f7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ef6c996ced958c4fbf1782ab4dbfdb7ce1fd4109253dd86b338978876b29a312"
-    sha256 cellar: :any_skip_relocation, catalina:       "ef6c996ced958c4fbf1782ab4dbfdb7ce1fd4109253dd86b338978876b29a312"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f41f9bcb623db022eb830f348a1fe7f408332d4ef8d41e90aca6701da7476ccd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1f812921245ed9f606c0c85a5f273595e8ee4b7e5cfa30af32c3a32c2c90eda6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f812921245ed9f606c0c85a5f273595e8ee4b7e5cfa30af32c3a32c2c90eda6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d39767d622cef094cfd56b7e86ab83e8975c706c32701f5edfadca31e6f19c63"
+    sha256 cellar: :any_skip_relocation, ventura:        "1f812921245ed9f606c0c85a5f273595e8ee4b7e5cfa30af32c3a32c2c90eda6"
+    sha256 cellar: :any_skip_relocation, monterey:       "1f812921245ed9f606c0c85a5f273595e8ee4b7e5cfa30af32c3a32c2c90eda6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1f812921245ed9f606c0c85a5f273595e8ee4b7e5cfa30af32c3a32c2c90eda6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb31b2bfc672d9373c433dc352e2cdafe8f08a2c3760b5bc49cd16b7a9e7a08a"
   end
 
   uses_from_macos "ruby", since: :high_sierra

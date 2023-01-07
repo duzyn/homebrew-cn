@@ -4,29 +4,32 @@ class Mailcatcher < Formula
   url "https://github.com/sj26/mailcatcher/archive/refs/tags/v0.8.2.tar.gz"
   sha256 "3bf200ab3b2926d3747a462afd68dce5a28a11fe8d2834ce929c99c90d4192d3"
   license "MIT"
+  revision 1
 
   bottle do
-    sha256                               arm64_ventura:  "767b2931a3c17d8c96a2468051f06061a8196fe270b6b6bb15d805820bf37f6d"
-    sha256                               arm64_monterey: "3be13e4d6da19162bc7d70f201185fdb3f7dcd1b6207d632df446a3adc9b27dc"
-    sha256                               arm64_big_sur:  "f1a3d77e3f95325952f78a408eba5e08b125b962f47a12265afd80489458f077"
-    sha256                               ventura:        "866f5a5e8ed7b4ae7c6f9f436d22e38dfd3d0d5fbe4ffd895b31934c2d1c709c"
-    sha256                               monterey:       "d33f530eef6e1f7455c7d2dd36fcf75472a709f76118da99d82d207034b6f484"
-    sha256                               big_sur:        "4f8ffd6afc2180fb12b59fda6ff9346ff2bbf6e6e10e685286cb161f706179b6"
-    sha256                               catalina:       "5bb1102c3a30c01a72f6b6a44ef0d19c35f434b32960cce7b2a3aa19c4ccbf20"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c27e2ce76bc1ea4b0d32f40e36a429eaf375a2dd7bc8bcc1e0a80240589720ee"
+    sha256                               arm64_ventura:  "44bbcc45b8d55befe3798a0806467e07134e9a712b3223509898ba4506336250"
+    sha256                               arm64_monterey: "83f3a9836315b4a067c7c562394cad3362ebda644b4231c415161b29d8c064f2"
+    sha256                               arm64_big_sur:  "7dd8ce41e87aef5c67dbd0322c0dc8b08ee7273f3d94e683369a3ab961a21b23"
+    sha256                               ventura:        "23cd4c9e9ddeab59fee3b75b6fd0826888f6dbd678af72f1c833640c2b49350b"
+    sha256                               monterey:       "5ba53dec35e23eeb9f538279285b00981367d40c75d5d82804399a3d40a5ff39"
+    sha256                               big_sur:        "3ba96086225d34d2c4d18533efed3443d7e96f2840aae0a92b364eb0ab0f8004"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b2746ba9e11748d69917be2f4e6f0868ad1430e9a2e814939e0bee0336055251"
   end
 
   depends_on "pkg-config" => :build
+  depends_on "libyaml"
 
+  uses_from_macos "xz" => :build
   uses_from_macos "curl" => :test
   uses_from_macos "expect" => :test
   uses_from_macos "netcat" => :test
   uses_from_macos "libffi"
-  uses_from_macos "ruby"
   uses_from_macos "sqlite"
 
   on_linux do
     depends_on "node" => :build
+    # Not compatible with Ruby 3.2+ yet
+    depends_on "ruby@3.1"
   end
 
   resource "bundler" do

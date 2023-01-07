@@ -5,17 +5,16 @@ class Vroom < Formula
       tag:      "v1.12.0",
       revision: "d3abd6b22fe4afc0daa64d6b905911999b12dcdd"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "ddab10f636ee55c86ccce4d23e847281753f5c0c472f50c79da99382d9834698"
-    sha256 cellar: :any,                 arm64_monterey: "1495ca27a49a728916039d42c97f86f95d793f624cf3f8aa7eddf282a84c0f87"
-    sha256 cellar: :any,                 arm64_big_sur:  "707ac7ece7545ed7818a66524c5efb19fe4d0fe14fd67fe1add5c2ec3d3bd451"
-    sha256 cellar: :any,                 ventura:        "132bcd3a81b61e5c0e8fcaa2cd047b2ec6109286893c1fdc69a65cad933c9b66"
-    sha256 cellar: :any,                 monterey:       "167d61c9e3cbbe0ee0318f810c69a317e91a02333041bf8474f946d67640d672"
-    sha256 cellar: :any,                 big_sur:        "eb61354f6427688d143431e2e5b71a1d4af65f86d3ed5e2a88ef2bab70b4e48c"
-    sha256 cellar: :any,                 catalina:       "b3932899fd64627e5fe686bdd356f7fcdab4dafcc330642b92c9d49e3ffa7c85"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72332ff619680bb368ff0472869c18dda1cf59b52b7b514d27c35171b8a5f3c7"
+    sha256 cellar: :any,                 arm64_ventura:  "100102d237bd1f14a8f314566a1f376dfaa4ecc01623c88b3e73995c2d719253"
+    sha256 cellar: :any,                 arm64_monterey: "9ca47afbb1e4142af64bbecaa643665fad5dd99ec5f20e2b2992493a2ff72564"
+    sha256 cellar: :any,                 arm64_big_sur:  "2ff5616dc30f3b1b3c156ae82ffcd087a7b61b154d34fa3f74a28e0478006928"
+    sha256 cellar: :any,                 ventura:        "466aa2c5724f5c1caf4c6572db769f376ef1924f24d378d2f0f5cfe9fee63c1e"
+    sha256 cellar: :any,                 monterey:       "64029dcf891aced663a440a6d130c3ea81ba7f78ab11230b777839715d15c889"
+    sha256 cellar: :any,                 big_sur:        "76adf4c08ed0b6c4e656a0a7c45a5a4864262a685f457c8095677d56f6ac9de7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "01ca65f2877c8f580604418a3de4ec82d2f1b9dba12b9db5e50da84285041fc9"
   end
 
   depends_on "cxxopts" => :build
@@ -23,7 +22,7 @@ class Vroom < Formula
   depends_on "rapidjson" => :build
   depends_on "asio"
   depends_on macos: :mojave # std::optional C++17 support
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
 
   fails_with gcc: "5"
 
