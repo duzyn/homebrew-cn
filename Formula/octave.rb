@@ -5,15 +5,16 @@ class Octave < Formula
   mirror "https://ftpmirror.gnu.org/octave/octave-7.3.0.tar.xz"
   sha256 "a508ee6aebccfa68967c9e7e0a08793c4ca8e4ddace723aabdb8f71ad34d57f1"
   license "GPL-3.0-or-later"
+  revision 2
 
   bottle do
-    sha256 arm64_ventura:  "4cea8dcaac698ec5fc2e67c7aac70c057b229160984e5ee119967486e2b735ad"
-    sha256 arm64_monterey: "1ded732d4ae215ae8bb4f29d71380dafddd35fc95ac95510caf57fe4f17184ee"
-    sha256 arm64_big_sur:  "55ad0b58f4cc4420c2dd216e1505fd750bedc1bdebee5449656311ee4f373ef6"
-    sha256 ventura:        "61d3a8c93bf9a55e1420ab232d360b27cbb6c91f324cb73d7ef0e204b64736b2"
-    sha256 monterey:       "0b1e554cd8120526b224275a60ed9adfb007bef3340a91d2f92d849977f5f7dc"
-    sha256 big_sur:        "d6478685eeab67e5193bc695d3651eaffbd4cea0c7705fddf896b9723331f122"
-    sha256 x86_64_linux:   "d265f4e8b03f96649ba8bb9e96b77468000dfa9b0eb6435fe99e20b513cf7f6c"
+    sha256 arm64_ventura:  "06f78c69007f530b2b69f0a8388e7056696421dd6a5b4d78d73f36c1f972ca4a"
+    sha256 arm64_monterey: "748e5dc86679b9bc66c0755431b7e80a42c54924098f90a429e02b73e26683b4"
+    sha256 arm64_big_sur:  "de05a64424f4687e7e77a21602e2dea82832597d204f6b0b664265255d9ce3c3"
+    sha256 ventura:        "e0bf6c0948f402b7f2e6a938f103d6d111ef961406176f0ef4a8236075904378"
+    sha256 monterey:       "23c21ec21f432cb75d7e52620d650d6f0a0083f80c06493b9b687ce413526667"
+    sha256 big_sur:        "d784dd85c17f6103437b830e4603994a83b12d1a082cfff7208662e5c218a828"
+    sha256 x86_64_linux:   "0c60fcafc350652ffe00df56cef5e2d92d8ae18f134f1a6ca3beb3e2313bbe5f"
   end
 
   head do
@@ -80,6 +81,9 @@ class Octave < Formula
     inreplace "src/mkoctfile.in.cc",
               /%OCTAVE_CONF_OCT(AVE)?_LINK_(DEPS|OPTS)%/,
               '""'
+
+    # SUNDIALS 6.4.0 and later needs C++14 for C++ based features
+    ENV.append "CXXFLAGS", "-std=c++14"
 
     # Qt 5.12 compatibility
     # https://savannah.gnu.org/bugs/?55187

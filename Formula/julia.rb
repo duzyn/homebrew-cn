@@ -2,20 +2,23 @@ class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
   # Use the `-full` tarball to avoid having to download during the build.
+  #
+  # TODO: Use system `suite-sparse` when `julia` supports v6.
+  # Issue ref: https://github.com/JuliaLang/julia/issues/47884
   url "https://ghproxy.com/github.com/JuliaLang/julia/releases/download/v1.8.3/julia-1.8.3-full.tar.gz"
   sha256 "52b6895a9d4ad2fe36db261ee8c4c8cc9212b837a12f93002faaf537a2151f50"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
+  revision 1
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "794c8c84ff5af6cacddfd1e2d21bbd75e58a7db3a8067febf2267ac03d33004b"
-    sha256 cellar: :any,                 arm64_monterey: "39497bbc88892b78c088dfc964e2ae45b4a9de4c23c709e6f2c57bb6af6d630d"
-    sha256 cellar: :any,                 arm64_big_sur:  "0ec78d6237bfcaf949837b17c7b0272c092099962bbc5f1b61d860aa8921d184"
-    sha256 cellar: :any,                 ventura:        "aeb36f848410fb10dc42c97d802537c3a08ac9492b9015d580de954ad236fdbf"
-    sha256 cellar: :any,                 monterey:       "21a48a9bec95e8833a54905600d250e10dd6e24a92744f647b0609164adda8b4"
-    sha256 cellar: :any,                 big_sur:        "4db49186abe3476d8567a1b3f6f6fb75c79c7449aba78a29c6326283010c85b2"
-    sha256 cellar: :any,                 catalina:       "3e9aadde6cc9dd6c9110d6dd6b5ab25e2555aff206b08ecd195038577e8df5c9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c212ceba09d589373ccde32079af1d772bf18d2cd23b6db7c9500aaf61c6622"
+    sha256 cellar: :any,                 arm64_ventura:  "c90ce7101d2ab444eafc38fd473519a53dd474f6c9f23ed0d5e2b10405b09d20"
+    sha256 cellar: :any,                 arm64_monterey: "73f6643266d96413fa71c2efc0c0c597dfd82e4dc4de9da7bdbca3ce72f29871"
+    sha256 cellar: :any,                 arm64_big_sur:  "6dba3219907f42c74cd7badf26996edeaf6a77c3f3ff209a40bc35604a92e388"
+    sha256 cellar: :any,                 ventura:        "de8125e742afd9119f12bd1d6d0066221ed2e57dc80f7ed56f322cbf8211037b"
+    sha256 cellar: :any,                 monterey:       "c06ed6071c0b7b7d88ceeb20cc843171e19825779c656ec536ded5d26c28ff97"
+    sha256 cellar: :any,                 big_sur:        "5a759dac3854b7e8036c691914b2f874ec6d660a98064b20ab633b035f632fe8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b875cffce265ca443eb2f3a0695e168530f7ee32717fad90500969f1c848cf1"
   end
 
   depends_on "cmake" => :build # Needed to build LLVM
@@ -32,7 +35,7 @@ class Julia < Formula
   depends_on "openlibm"
   depends_on "p7zip"
   depends_on "pcre2"
-  depends_on "suite-sparse"
+  # TODO: depends_on "suite-sparse"
   depends_on "utf8proc"
 
   uses_from_macos "perl" => :build
@@ -69,7 +72,7 @@ class Julia < Formula
       USE_SYSTEM_LAPACK=1
       USE_SYSTEM_GMP=1
       USE_SYSTEM_MPFR=1
-      USE_SYSTEM_LIBSUITESPARSE=1
+      USE_SYSTEM_LIBSUITESPARSE=0
       USE_SYSTEM_UTF8PROC=1
       USE_SYSTEM_MBEDTLS=1
       USE_SYSTEM_LIBSSH2=1

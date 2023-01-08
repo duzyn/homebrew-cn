@@ -3,20 +3,19 @@ class NicotinePlus < Formula
 
   desc "Graphical client for the Soulseek file sharing network"
   homepage "https://nicotine-plus.github.io/nicotine-plus/"
-  url "https://files.pythonhosted.org/packages/ca/10/5c244a661fdc18e5ddfa9eaec244fb6fdd4f7e77a125636907851185b0a7/nicotine-plus-3.2.7.tar.gz"
-  sha256 "39ee271ee6eb86c6abaad3f0b33332bf78be6cf270245a2f53a4760735007f32"
+  url "https://files.pythonhosted.org/packages/33/42/09d44ca8a6ee8eb9982e6e289bcc4523cbd8f2290decc3a07655c1a22bfd/nicotine-plus-3.2.8.tar.gz"
+  sha256 "48e1bcda9483f3d2228f8c4ff6fe68f1b61898c354d54b1358726997b926b283"
   license "GPL-3.0-or-later"
   head "https://github.com/Nicotine-Plus/nicotine-plus.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b6b130f107b367173db41569066a2f22ed78ae86ab0be8bc4b37fba6f5bd8032"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b6b130f107b367173db41569066a2f22ed78ae86ab0be8bc4b37fba6f5bd8032"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b6b130f107b367173db41569066a2f22ed78ae86ab0be8bc4b37fba6f5bd8032"
-    sha256 cellar: :any_skip_relocation, ventura:        "5adb9741d2fea95d0551e029070b45b72eea27ce84adfca7dc97c3d4ebb1056f"
-    sha256 cellar: :any_skip_relocation, monterey:       "5adb9741d2fea95d0551e029070b45b72eea27ce84adfca7dc97c3d4ebb1056f"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5adb9741d2fea95d0551e029070b45b72eea27ce84adfca7dc97c3d4ebb1056f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd6c703853effbc147cf7224f9ae418bf12a2435a023999202b51d70c78ba835"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "11c8055c72c63005533bdd885725c718c4d6aea8bde08bdea26a8ec38ecd06d5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "11c8055c72c63005533bdd885725c718c4d6aea8bde08bdea26a8ec38ecd06d5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11c8055c72c63005533bdd885725c718c4d6aea8bde08bdea26a8ec38ecd06d5"
+    sha256 cellar: :any_skip_relocation, ventura:        "95a7c7afc6f11ded4c371e399742eca04623ac03da325bcf79c8a0abc9b60eea"
+    sha256 cellar: :any_skip_relocation, monterey:       "95a7c7afc6f11ded4c371e399742eca04623ac03da325bcf79c8a0abc9b60eea"
+    sha256 cellar: :any_skip_relocation, big_sur:        "95a7c7afc6f11ded4c371e399742eca04623ac03da325bcf79c8a0abc9b60eea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "712f9afcae609467ad05974c0e63fad110a43676dc63bb6e73784ef5e3e71c8e"
   end
 
   depends_on "adwaita-icon-theme"

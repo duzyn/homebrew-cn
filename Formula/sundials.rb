@@ -1,8 +1,8 @@
 class Sundials < Formula
   desc "Nonlinear and differential/algebraic equations solver"
   homepage "https://computing.llnl.gov/projects/sundials"
-  url "https://ghproxy.com/github.com/LLNL/sundials/releases/download/v6.3.0/sundials-6.3.0.tar.gz"
-  sha256 "89a22bea820ff250aa7239f634ab07fa34efe1d2dcfde29cc8d3af11455ba2a7"
+  url "https://ghproxy.com/github.com/LLNL/sundials/releases/download/v6.5.0/sundials-6.5.0.tar.gz"
+  sha256 "4e0b998dff292a2617e179609b539b511eb80836f5faacf800e688a886288502"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,14 +11,13 @@ class Sundials < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "a80a97085d63d65189d9d266ceb5941566ea011a840f2d0a74a2ed0cfc36aa87"
-    sha256 cellar: :any,                 arm64_monterey: "7589b240ea07145c55f634100f00204fd3918c1632d3d4e6f8edc97dacc830f4"
-    sha256 cellar: :any,                 arm64_big_sur:  "68630220962300923d5a63a6d135364add46bd058c1651f9e7a43bafa8ef7029"
-    sha256 cellar: :any,                 ventura:        "6f8021b99b9258ef5f0cafac1d910eb93fa4b3975c03469118417b3e5a02cceb"
-    sha256 cellar: :any,                 monterey:       "18e9d07618cc03ee9373c0d38c43fcc7e7576a4ecb7dffa64eed8d54637f97ea"
-    sha256 cellar: :any,                 big_sur:        "754766b19dc7345f378d3125978705348cfc04bd1cfe27f99862c5b657b17d29"
-    sha256 cellar: :any,                 catalina:       "735b7d4cba622ebfebd63f44484eeb1fb05fc2009f1f4dbc7cb75da6158cb815"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43d5d8fe571749bcbc7981b58e9829c2574a05372dc3e9ef806972f26262038a"
+    sha256 cellar: :any,                 arm64_ventura:  "3a4acc4f7c00b60ea532287baf4c1e472677fc133fded0b8f141abb28d8cce21"
+    sha256 cellar: :any,                 arm64_monterey: "bddd45f9878edc4e15e81e47338f8651509a7b21fe96c6c524486bea725060e3"
+    sha256 cellar: :any,                 arm64_big_sur:  "f5c24b74aa603bf847d92410b1dc09635fac2d129f54809315fa83e7b4e5b36a"
+    sha256 cellar: :any,                 ventura:        "a2ec79fc5c534824d06c78ceb27f82d40167875714de95dad8b3bffd2c191f55"
+    sha256 cellar: :any,                 monterey:       "5a467f62fac80e5c7500081b90783fdec403f116ec00e5b519fef912dea76ddd"
+    sha256 cellar: :any,                 big_sur:        "1abd29bb4275e316e8f31e5269b2e525442eba0e13447170be55ebf9d0261a91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "07ba35bfcf4afa2139794d08034c151fd6ce689b13519a9be3917383dcac6c40"
   end
 
   depends_on "cmake" => :build
@@ -28,22 +27,20 @@ class Sundials < Formula
   depends_on "suite-sparse"
 
   uses_from_macos "libpcap"
-  uses_from_macos "m4"
 
   def install
     blas = "-L#{Formula["openblas"].opt_lib} -lopenblas"
-    args = std_cmake_args + %W[
+    args = %W[
       -DBUILD_SHARED_LIBS=ON
       -DKLU_ENABLE=ON
       -DKLU_LIBRARY_DIR=#{Formula["suite-sparse"].opt_lib}
       -DKLU_INCLUDE_DIR=#{Formula["suite-sparse"].opt_include}
       -DLAPACK_ENABLE=ON
-      -DBLA_VENDOR=OpenBLAS
       -DLAPACK_LIBRARIES=#{blas};#{blas}
       -DMPI_ENABLE=ON
     ]
 
-    system "cmake", "-S", ".", "-B", "build", *args
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 

@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v19.3.0/node-v19.3.0.tar.xz"
-  sha256 "d3189574ef9849c713822e7f31de7a1b9dd8a2c6b5fc78ddb811aaa259a22b1e"
+  url "https://nodejs.org/dist/v19.4.0/node-v19.4.0.tar.xz"
+  sha256 "020541d670f528bd03ba0b92a1d0c46d6850982175a72f2aa557aefeda31b261"
   license "MIT"
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -12,13 +12,13 @@ class Node < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "20cdbd3baf3f64d56f94219e6651a76140424b90664b6787162f2267bb908165"
-    sha256 arm64_monterey: "ffc0cf0a5e3dc983f159a902a270a64cec1ab2830f2a8924d40379fe5adb351a"
-    sha256 arm64_big_sur:  "606c36fe955671b141ea6d6d846ae47f886c43a4b9c656bc0e98829388186d0d"
-    sha256 ventura:        "107f4a4160d9f87fefc3c413193625918f6439e629f02fef72debc50ae4a9712"
-    sha256 monterey:       "f1ad6dc2e40e38bfdfbb7f82fa35e133049b01f60c0f339dc2cbdacf68790013"
-    sha256 big_sur:        "1e396fa1297ed9e047c2d9eff13498a603f5643070309e60b891e36c2689a2d7"
-    sha256 x86_64_linux:   "95ef71c5e896043291001ae8de0e62beca4c9e9974b62722d39c47328fe6d356"
+    sha256 arm64_ventura:  "9cbe7ed5378e54632f880951f72fd28e414773a44053ee972eae95f737f5039a"
+    sha256 arm64_monterey: "0cbeaa131842a53954c314572d6d1c3b61c2aa5a133ebce8dd6a95411fd362d4"
+    sha256 arm64_big_sur:  "f01e8af2e083596dc2db3930c10833118004879583054883f1e0050baa5de0a5"
+    sha256 ventura:        "c3d6c18f5c780db00f0b7b21434e52d4e6eee370fc6813ce293a79f5b9f00f24"
+    sha256 monterey:       "65fc41c43c860527c90436b222657b0252042d6bcac34a1730c72686f71d4e02"
+    sha256 big_sur:        "9418ef38b4d15614af0da0b50d8be58c05b5cc6acc549db52980909b5900489b"
+    sha256 x86_64_linux:   "bf2eb5282898b366f6572039720c9138984f777be91fc17c231c4248beb1d069"
   end
 
   depends_on "pkg-config" => :build

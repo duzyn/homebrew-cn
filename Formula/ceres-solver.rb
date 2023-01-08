@@ -4,7 +4,7 @@ class CeresSolver < Formula
   url "http://ceres-solver.org/ceres-solver-2.1.0.tar.gz"
   sha256 "f7d74eecde0aed75bfc51ec48c91d01fe16a6bf16bce1987a7073286701e2fc6"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
   head "https://ceres-solver.googlesource.com/ceres-solver.git", branch: "master"
 
   livecheck do
@@ -13,15 +13,13 @@ class CeresSolver < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "4854064146581d467e76483acf43e32cac3870cd0d9d12b7ac2bf7b3b7924806"
-    sha256 cellar: :any,                 arm64_monterey: "8853908633eb208b01f8c837f25f21d26e7ab25467989a1e41d8fb169818a9e3"
-    sha256 cellar: :any,                 arm64_big_sur:  "c2248770066bdb4efaed2e8cdd28665d2b250b0f22323e3fb081e78ebfc5e558"
-    sha256 cellar: :any,                 ventura:        "c79050cc85fd6502a13f1b6077cd0bf570a908b3cd4890cc990ffce16dff4e5f"
-    sha256 cellar: :any,                 monterey:       "5ec1c84cbbae986126cb0876f46bd74621ff9b1a562ac60e5ae4bcc69c893468"
-    sha256 cellar: :any,                 big_sur:        "4904e364045a99496a2a299221b4a333088a988265cca04af91c05df89c8091a"
-    sha256 cellar: :any,                 catalina:       "ad19523c11bb9c90599c32ac22af103a96b29b77b046065fd1cc3c93c518e419"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa7039f64b965c7c0f5e028da2a445b9a98dd80c043bb6b2257675c839a3d146"
+    sha256 cellar: :any,                 arm64_ventura:  "8afc4d9240edc07cb3c89f975fd4f6ef81a1f0aa76b888623592a65f6ed5ebbc"
+    sha256 cellar: :any,                 arm64_monterey: "cb33938e1c8cc0a54239906f22d27d8f2a56d0ec166cc9e8c07ebf315f0f4d25"
+    sha256 cellar: :any,                 arm64_big_sur:  "7b24d21ff3863a23a9b9545e9c0a15122782e0d2afda33598342b5e98504a668"
+    sha256 cellar: :any,                 ventura:        "19400316cec033c482cef38c75a49e96c1f6bb25011af650a8bf041964a9553b"
+    sha256 cellar: :any,                 monterey:       "eb467cbb1fd2960b32c4ee445c9d9e4be8c17ef3ccf15180cb671a5d15b082e9"
+    sha256 cellar: :any,                 big_sur:        "cedfd01c68b1139b07c67a1084e614bb7988757e76821d1c88543a8580be6f52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f7f96c61a999be519b46c3020b5a7bcdbf030f22c5ff6fe8ba57e02231d21a6b"
   end
 
   depends_on "cmake" => [:build, :test]

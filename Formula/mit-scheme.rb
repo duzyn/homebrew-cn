@@ -1,9 +1,9 @@
 class MitScheme < Formula
   desc "MIT/GNU Scheme development tools and runtime library"
   homepage "https://www.gnu.org/software/mit-scheme/"
-  url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/11.2/mit-scheme-11.2.tar.gz"
-  mirror "https://ftpmirror.gnu.org/gnu/mit-scheme/stable.pkg/11.2/mit-scheme-11.2.tar.gz"
-  sha256 "0859cb03a7c841d2dbc67e374cfee2b3ae1f95f6a1ee846d8f5bad39c7e566a1"
+  url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/12.1/mit-scheme-12.1.tar.gz"
+  mirror "https://ftpmirror.gnu.org/gnu/mit-scheme/stable.pkg/12.1/mit-scheme-12.1.tar.gz"
+  sha256 "5509fb69482f671257ab4c62e63b366a918e9e04734feb9f5ac588aa19709bc6"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -13,10 +13,9 @@ class MitScheme < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 monterey:     "4ca9936e7e9d596a0de4a5a8dd77b7a1d76e94a905651926d64ab2ba02bc42c8"
-    sha256 big_sur:      "671d6531ccb7cbc34863bec18fc27c5be3792e955c9dcff569f3e7d61b8dac3f"
-    sha256 x86_64_linux: "5129eed815f93a963cbca4761637d8d056cf5d6d853fe6feb08c9b53e5f18d36"
+    sha256 monterey:     "bae1d2a271efb27c40b785490cb77ae62a2ad2856c49169df4ca4b6fa5d15a77"
+    sha256 big_sur:      "e53230ae27dc40a7b3a4ed54dfe9e905b60a605f5693e5fdbea513f4a5f12b35"
+    sha256 x86_64_linux: "84fc2e7429a15a8a894e39b4edfe042e4ddc404ef517896bcf63c8ee0c97bbed"
   end
 
   # Has a hardcoded compile check for /Applications/Xcode.app
@@ -37,12 +36,12 @@ class MitScheme < Formula
 
   resource "bootstrap" do
     on_intel do
-      url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/11.2/mit-scheme-11.2-x86-64.tar.gz"
-      sha256 "7ca848cccf29f2058ab489b41c5b3a101fb5c73dc129b1e366fb009f3414029d"
+      url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/12.1/mit-scheme-12.1-x86-64.tar.gz"
+      sha256 "8cfbb21b0e753ab8874084522e4acfec7cadf83e516098e4ab788368b748ae0c"
     end
     on_arm do
-      url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/11.2/mit-scheme-11.2-aarch64le.tar.gz"
-      sha256 "49679bcf76c8b5896fda8998239c4dff0721708de4162dcbc21c88d9688faa86"
+      url "https://ftp.gnu.org/gnu/mit-scheme/stable.pkg/12.1/mit-scheme-12.1-aarch64le.tar.gz"
+      sha256 "708ffec51843adbc77873fc18dd3bafc4bd94c96a8ad5be3010ff591d84a2a8b"
     end
   end
 

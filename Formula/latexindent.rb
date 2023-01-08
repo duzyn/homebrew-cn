@@ -1,18 +1,18 @@
 class Latexindent < Formula
   desc "Add indentation to LaTeX files"
   homepage "https://latexindentpl.readthedocs.io"
-  url "https://github.com/cmhughes/latexindent.pl/archive/V3.20.tar.gz"
-  sha256 "d2e96faf99a99e10a03f177ff9caf2d8e3f75b1ab84839dffb6e169fc8126c90"
+  url "https://github.com/cmhughes/latexindent.pl/archive/V3.20.1.tar.gz"
+  sha256 "d0378f37e7b172fe548b9b17d22556514cb34b0fc4ebb35dcd42b1448747ca92"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "443f6cae55c1caf7402d6e1c516fdb355640d5d00dfb83acda52e4a930a03899"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5077fe1740278c8e3fdc452e483e428963f1c5a74377d8c08f9773629d08384f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "474ada72420a6e86d58e0079c08b4d2e7dca3c7be17bf125e17716dd521dae7e"
-    sha256 cellar: :any_skip_relocation, ventura:        "0980bbddd9e8286366a17bef44afdff71bb35160e9ac3b038ec0c6a66c5d334f"
-    sha256 cellar: :any_skip_relocation, monterey:       "e9b80f4e486e23601d2659b40067fcc191a044c04845bfd29530cc8c8b00a88e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b2f60ad4c046660149a75111b9727690a293b44f4dc0cbab7629fa2b8329cefa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4af405323b429a6e2dcf5846d29cf168ab586fec25d3efb0d8ee06eff24c884"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2c9415c504410ec4c3609c4292cebb2fc820b691d1526914e5c41d94a81c3b36"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "da1d9dd4a47429ac6d1f4762d8e495e2358bb61a4a49b25862ab808afb45eddd"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "31e56aa6d0f0e062903e0af4604c1bf4f0826ab23bb169b6386020056f27ef56"
+    sha256 cellar: :any_skip_relocation, ventura:        "55f0a3548ee26b177b97c7177954daf41288747a7bd9ba35a0b81639208c65af"
+    sha256 cellar: :any_skip_relocation, monterey:       "9dc9b4786abaf560320ef50b4fdcb98e562775d99ab1ba9056020086c1b0f3b2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dd48a8fe5364578c97a6fbda02ff43d303766cf5edeef7e20c712d01dabd5f70"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8cc98a577ddcc2a8ce97bf5e25d962802c40b0d8fda80fb1040a2a10b3679933"
   end
 
   depends_on "perl"
@@ -115,8 +115,8 @@ class Latexindent < Formula
   end
 
   resource "Params::ValidationCompiler" do
-    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-ValidationCompiler-0.30.tar.gz"
-    sha256 "dc5bee23383be42765073db284bed9fbd819d4705ad649c20b644452090d16cb"
+    url "https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-ValidationCompiler-0.31.tar.gz"
+    sha256 "7b6497173f1b6adb29f5d51d8cf9ec36d2f1219412b4b2410e9d77a901e84a6d"
   end
 
   resource "Role::Tiny" do

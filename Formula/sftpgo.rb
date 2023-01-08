@@ -1,19 +1,18 @@
 class Sftpgo < Formula
   desc "Fully featured SFTP server with optional HTTP/S, FTP/S and WebDAV support"
   homepage "https://github.com/drakkan/sftpgo"
-  url "https://ghproxy.com/github.com/drakkan/sftpgo/releases/download/v2.4.2/sftpgo_v2.4.2_src_with_deps.tar.xz"
-  sha256 "363e087599654385a6f8a4ffcf42b458301bc0c74b8aa35e13cc886b19948d19"
+  url "https://ghproxy.com/github.com/drakkan/sftpgo/releases/download/v2.4.3/sftpgo_v2.4.3_src_with_deps.tar.xz"
+  sha256 "964c9696940438695f15cd0dbb1d5712b28f4e410d0f9e3f0544297b6aae633f"
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 arm64_ventura:  "14fc18cbbfb2caf6cc91129657fbd4d345d2d430c40dd3f640c2c3f23ca01d69"
-    sha256 arm64_monterey: "5c2afa12b2e2a4b5571e92b99f99261f1192d9dc2d5291b38beac1abacccbdf5"
-    sha256 arm64_big_sur:  "0516d81cff9f16b15ef9ecd18bd3b1f8a72cf362966e33eb67af696bec29d0f9"
-    sha256 ventura:        "4923cc09c2ad86013b6112b412243c73451a9aa106f8cb038d0080ef0de3d204"
-    sha256 monterey:       "27ee3b4d9ae84cc7af7cff96f17d093879d62332dc8bc0dbad36461d75649ed1"
-    sha256 big_sur:        "ea92b96cd0ce50dfb3cc30a511bf20c6837ee515a603e40b811ae6e765428f4d"
-    sha256 catalina:       "b2a048ad4c292bf28d7a67a65d9ec13436f4c4944ff53f5ab4c4dc3fd7921182"
-    sha256 x86_64_linux:   "d1c900cbf7c8e1ae72414203b22983e036c1e7575b8a9fed9c2794ac3da0fabb"
+    sha256 arm64_ventura:  "6898c4baf4c867d16ff36744bcbf75c73293b242a53c6ddb7f1f8db9497167aa"
+    sha256 arm64_monterey: "2d60280325a64059ff1fd1142a8a95e53a312e7673f65400549c5fd96be58f50"
+    sha256 arm64_big_sur:  "f47a01e057a0129135d3f7f1161cba3da29cbd11d2c71cffc3d29a90ba1ceaeb"
+    sha256 ventura:        "002729711b5c4680b32ddc64f6ce51285bba4bc283ecf053b46521c261b08d03"
+    sha256 monterey:       "2d48a02728ce09981ba3f92a1dd2042d2585ad2a28d97788439e7977f6615d3c"
+    sha256 big_sur:        "e69584ececa2d551378ff57a1bd688690a807dfe3a5efb4741d7c659f3e098c9"
+    sha256 x86_64_linux:   "9d7f992e82f099fbfb9dac82d2df66c342cfa2cde105f2672c124184745d770a"
   end
 
   depends_on "go" => :build

@@ -1,18 +1,18 @@
 class Keploy < Formula
   desc "Testing Toolkit creates test-cases and data mocks from API calls, DB queries"
   homepage "https://keploy.io"
-  url "https://github.com/keploy/keploy/archive/refs/tags/v0.7.11.tar.gz"
-  sha256 "25f612f1d691bfb9d7c9892c39c4a4f475c823d1022d25278e2d5ddf0341fc59"
+  url "https://github.com/keploy/keploy/archive/refs/tags/v0.7.12.tar.gz"
+  sha256 "8fd95b1736687e38c036bac03af8ebbc91029985dde1296441328c825d28510e"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c5760ea9aa9eb17a6dca401738db476770781efd1ba60ef9fa5c66ab713bf004"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ef91283572fef3ba8ec05de34cf29e92308a9091cf8a1eaed02c5df519936de8"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "09f8cdecd9247671b61aabcb7a5e6aeb757ea83aa1fda4b147095e1b68d949d4"
-    sha256 cellar: :any_skip_relocation, ventura:        "25ca34502d45be82745c82fbecf626912c1e455c3d2988704abe039dd0767eeb"
-    sha256 cellar: :any_skip_relocation, monterey:       "b9c723ccfe0bac5f671f339c252dedff8758ee2796702a893b9d5c58867b89d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e54c4953931345fe9250d424e497d6a42cc0d9f4bfe98549b8cd0bc697573b76"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5152c9864792875964d9b8091f236b934921b6c91ed655211cc3ddfa8290c7a5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0307d54eb48fd1519908ded1b2a532070c4a4fbcc964eeba96ca6d78d4e8762a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea1524b61561bc081682e9cad537d108722f7bc2d4354dffbe6a114bb4c923ca"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c32bcd7b3b183621aaa1609f3939837f004090ab087462ab9aca1b795434bac"
+    sha256 cellar: :any_skip_relocation, ventura:        "a0d3c6617c62ca6825967c0efb9168160ef90d0b3498a68d7ce1d9cd123bcbf6"
+    sha256 cellar: :any_skip_relocation, monterey:       "ed20bc914036b3a89f833b432fa92a51f67cb3267b778636c6095b79b8d7eb56"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8f580ddb771d1a5070b9ec6fb042126d23e3fb29ea8b5a682db31bef00b533d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6e26aac71939353ebe99c1f340a594c53c9116c0a224164614032de6c854489"
   end
 
   depends_on "gatsby-cli" => :build
@@ -43,7 +43,7 @@ class Keploy < Formula
 
     output = ""
     PTY.spawn(env, executable) do |r, _w, pid|
-      sleep 1
+      sleep 2
       Process.kill("TERM", pid)
       begin
         r.each_line { |line| output += line }

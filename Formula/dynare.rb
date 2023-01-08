@@ -2,6 +2,7 @@ class Dynare < Formula
   desc "Platform for economic models, particularly DSGE and OLG models"
   homepage "https://www.dynare.org/"
   license "GPL-3.0-or-later"
+  revision 1
 
   # Remove when patch is no longer needed.
   stable do
@@ -31,12 +32,12 @@ class Dynare < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "a9ac6537251c1086eb3ab5921a8b2ec73216e9618ae32e9eb3d3afb275000bf1"
-    sha256 cellar: :any, arm64_monterey: "8be89f7d4db802d28315a38c6fe0f9559d56359de35ec513f5ee7fa741634b40"
-    sha256 cellar: :any, arm64_big_sur:  "b24e5e0bcacd8d83c17d1af520b38519e1d93968ffcf86bee2737a6a1ee21655"
-    sha256 cellar: :any, ventura:        "5e7b62ab69c574f4cca43164b3d346d2a3bef7e4e1ea88f3acedfd22a7d25640"
-    sha256 cellar: :any, monterey:       "04fd734bddc5e529703dd37c7078c1d4c7085369f449cdccd276eba8a01ab8a6"
-    sha256 cellar: :any, big_sur:        "000899dc1e95beb0d775243815386703dc3c30b267f37e37f734a0b59dc369f6"
+    sha256 cellar: :any, arm64_ventura:  "18f41b1b71aba36c41bd229669799b1177810129b535a7154f7ffa89b68323ab"
+    sha256 cellar: :any, arm64_monterey: "64050f105099d26d0c4f30044c8dfc5db120412834e4c468df1938527d73d738"
+    sha256 cellar: :any, arm64_big_sur:  "228ab3ac62a474c364c75264e9ff0f422a8c0a2109b54fd5d3cb5af92d6dec1e"
+    sha256 cellar: :any, ventura:        "cc903d3d92c8062b7cb9aa926acadd14ce9b38c96cbfeeffff77b558ffae9aeb"
+    sha256 cellar: :any, monterey:       "a0f568b16f52ad3e3e5d78464c3b79b198a1c66ebd6cd055c37cacb6e52253f1"
+    sha256 cellar: :any, big_sur:        "e71b23235de5d766724e362ac18e049fd0e555ab5e27a27b46eb67203bec447a"
   end
 
   head do

@@ -3,18 +3,18 @@ require "language/node"
 class Kubevious < Formula
   desc "Detects and prevents Kubernetes misconfigurations and violations"
   homepage "https://github.com/kubevious/cli"
-  url "https://registry.npmjs.org/kubevious/-/kubevious-1.0.50.tgz"
-  sha256 "dda2cbcd4e6339991f28f536ceed3c5f8384ca6a9e0a29769c20e55431896499"
+  url "https://registry.npmjs.org/kubevious/-/kubevious-1.0.51.tgz"
+  sha256 "5163aef46bdc665c8d0fb17dd3b231bf3108552ba5799e2fac4f1481065707d7"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "70f6a059d461507a1e89ee54fa64062df51dec8caba13db9f12cada7423eb265"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "72d6098f7d58764d221971d14a53e1e70e27f63bbe6085681db7e1f185507efd"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c97b0b94ad3276078945b863c2913fd1afb0841f45ea04b98647c4aa4a405774"
-    sha256 cellar: :any_skip_relocation, ventura:        "40895775e5abdc340073956a95e3c4f76554bfd19cdf5bbc7883ff95754a258f"
-    sha256 cellar: :any_skip_relocation, monterey:       "46958cd5981466fabb5420296671508e8cb8a05398816eda0011c0ee15f9b6be"
-    sha256 cellar: :any_skip_relocation, big_sur:        "d342abc08e030c28103802c7b651ce6ed3aa7c523aa378bf0360eeae63db218e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04eab87615b081ab4f04d83ce83afddfc2babf5f05d05ed7120c1132288cd6d5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d381a64e9159d6301a29f50d7e5de11781d5efdd7979b7e0feafc6c144dab723"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b245fe8e9c1e9a82b162a4fa6e8de74dbbd0703925644c1ac954aa5f6bedbb48"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0c44ca6ceefa3e70031b6e0a687288e681bb625839acba5f7eeba7ea97dcad1d"
+    sha256 cellar: :any_skip_relocation, ventura:        "4a621843d650cae56b160ca5b3e92c5489885f8f636d77d828539469736561e5"
+    sha256 cellar: :any_skip_relocation, monterey:       "4e7a75204ab017e645a67ec567bc41ecde16eaf541f1e2e85c343ab4db75e5fa"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ecb8ce127fb305f074484b102b974cf8a91d775bd5da3e999591c09755e3bd9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1808b09ddbf384644a3d6f13e25e5a005a9d06ad39720fa933c559a4eeea54a5"
   end
 
   # upstream issue to track node@18 support

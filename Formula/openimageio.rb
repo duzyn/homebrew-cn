@@ -4,6 +4,7 @@ class Openimageio < Formula
   url "https://github.com/OpenImageIO/oiio/archive/v2.4.7.1.tar.gz"
   sha256 "fd298f71e44c6776863db4b37c4a1388dba0d2eb37378afea95ab07a7cd6ecd4"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/OpenImageIO/oiio.git", branch: "master"
 
   livecheck do
@@ -13,13 +14,13 @@ class Openimageio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "abb7788503d45d6a3ed60f34c9412ca74a23e656514c8aec254b0f506184be5c"
-    sha256 cellar: :any,                 arm64_monterey: "5f9958d20263e42df8fd566c7cb5be96a3d69015665a5bf5ad8a18849f78138f"
-    sha256 cellar: :any,                 arm64_big_sur:  "654b187c02ddcd8865c24ad26c820864695690df732abab7fd0560afd9aeb453"
-    sha256 cellar: :any,                 ventura:        "28b1e84a84505f01c6cd8aec9416320b69cb044255e378a197340a449dd678dd"
-    sha256 cellar: :any,                 monterey:       "9ef0a0e36a812902d8789dd1d2f975950ecaf4205da5357bfc35e143dfb475fd"
-    sha256 cellar: :any,                 big_sur:        "42b681b535b3d65ccc2c12028881f6065444250f2a5aac11ab0f74c5029b26b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08b1fa694a4257d5b828e5f46453194bd4d476a847b4b086252d3c8edcb65860"
+    sha256 cellar: :any,                 arm64_ventura:  "de6ae87df482c4fcd7c09e05c027e2c378133572df88e580984bdd50e7d17157"
+    sha256 cellar: :any,                 arm64_monterey: "59f498bacc249b5045e34f2da9e51ea91f0061176fc682e0c8aff0941a436c80"
+    sha256 cellar: :any,                 arm64_big_sur:  "f6fdcb6d0032e5dd4b43a618a2983c9c8ca1073d7b8772743eb721fbe2b4400f"
+    sha256 cellar: :any,                 ventura:        "22e0b351d699d82241cbbead348bbbd5e001b6310fc65325c10499cfc9dbec98"
+    sha256 cellar: :any,                 monterey:       "d250f9f1b83f47abcf39018e2987b2d190989ec7f18d482e3ecf175bdf02612d"
+    sha256 cellar: :any,                 big_sur:        "2fb299bdfcb6ea1a09d700901818ec902f59f15c192e1931af1ed9f56be94484"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d9552ff87eba548746ff1142599e221bf6d2ac701c09ffd5d8efca79421dc83"
   end
 
   depends_on "cmake" => :build
