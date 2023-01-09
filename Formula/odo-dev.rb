@@ -2,19 +2,19 @@ class OdoDev < Formula
   desc "Developer-focused CLI for Kubernetes and OpenShift"
   homepage "https://odo.dev"
   url "https://github.com/redhat-developer/odo.git",
-      tag:      "v3.4.0",
-      revision: "b8662ef743e66b410b8ee01db686636dd0f99e7d"
+      tag:      "v3.5.0",
+      revision: "b98c4e2f5c6c7c456406331d7a07557cf2101a05"
   license "Apache-2.0"
   head "https://github.com/redhat-developer/odo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0f25dbff0fdb72021b3be177f537d78dabbacf5ceff47ce1948c5b819a342662"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "63a392a11d195c26694a87b890b13e7b65a37ad5f4d0de3cc5d34fb52bb9bddb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "32f133d239bf5ff8a9f75d503fe1e87f538ce0ef43f7f261c421c77be3f30bfe"
-    sha256 cellar: :any_skip_relocation, ventura:        "ccaaa6cd6fcbb74b99228553d3c061b043f8f07b2948ebc43ba7bbdb17520790"
-    sha256 cellar: :any_skip_relocation, monterey:       "e7752db58c05e66e324526b14fb3dd2be0133a4f9393f32395016ce14657f55a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "deefedaf77e77cfb7d625c7c43a93014287d9d3f3fa83713bf39e761f159c547"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "38232e334b0ebbdd651924027b4ff6e7878ec248ae86a968327763b3264c2c02"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c70f33d350379c5fce13dff31cd14cf5e9e2a20a187c8c5e4cef2fb9f087c5f9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c86fbce2de11da7aa85149bfa034e25fe746a55ccf5285aad198f368423ba6f5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8101b01b0a528decec5bd3e706b70820048e55a8d702de7f2acb0bdb77712d51"
+    sha256 cellar: :any_skip_relocation, ventura:        "0d81f1c33e5e0cff9aa3d7f8bbe14c778f2239377dc5b0e89104336257f9b689"
+    sha256 cellar: :any_skip_relocation, monterey:       "9188801fdb091d3d66d979d1ac38cde77b4e2d841fca7e8c962dba95e0360397"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b4b0ccc63312a0fd568cc914a47b73ce0717c6fb85174b6d31bc8c81bef1627f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0b6bdd1e031af7563a9ce8b4d5c5dbcb08201aea11fce33cad13c0ec5291c12"
   end
 
   depends_on "go" => :build

@@ -3,21 +3,19 @@ class Liquidctl < Formula
 
   desc "Cross-platform tool and drivers for liquid coolers and other devices"
   homepage "https://github.com/liquidctl/liquidctl"
-  url "https://files.pythonhosted.org/packages/7d/61/e3cfc5e1cb8f711a6da0fe813a01c01b793c594a401c3c579fc0a0e41027/liquidctl-1.11.1.tar.gz"
-  sha256 "278c1aca8d891bfe8e0c164dfe6651261a0423b29f9c24cef060c3613f2a4fd7"
+  url "https://files.pythonhosted.org/packages/b1/25/b7a9f1410baa06f2257296f4229016e4aa2a1fecf318a428cd82437fa7a6/liquidctl-1.12.0.tar.gz"
+  sha256 "639e62d8845cd8d3718941e7894865f9c06abfc2826546606335e30f607d6fc3"
   license "GPL-3.0-or-later"
   head "https://github.com/liquidctl/liquidctl.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "08e91b45f02230e2f68085948d0347885928a201dd76eaefa8a45c6cf585024b"
-    sha256 cellar: :any,                 arm64_monterey: "2e4d32355b850474b22f0ae10650aa4b0c7f30d67f1c7e19650e3b1cb84289ed"
-    sha256 cellar: :any,                 arm64_big_sur:  "01ecf2c0c0e1e7188ad1575b4c23a8f8ee8a451962e03aca6933bcd2b920670c"
-    sha256 cellar: :any,                 ventura:        "61b662d85adfb9ec71b3316f9ee46d7990aaf2d1d6f9137888f9ea1823316578"
-    sha256 cellar: :any,                 monterey:       "b4ae93e1d49e54faf34dc20d1996ab7c7c3eb7a29a727b369efc19b5e337082b"
-    sha256 cellar: :any,                 big_sur:        "da2240aac8bc91eecf49a7f720292b40c040e5ac1fc934d91894ea084314d537"
-    sha256 cellar: :any,                 catalina:       "4484eba32f98ce6545461d1739bd0d62df0c93c9425ba6a2229e00c5f8598b53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e7ac28769ffee2ef0c394d52a9bb3c8e97dc18922c7eb218e6e1a6dd7d40d71"
+    sha256 cellar: :any,                 arm64_ventura:  "2adad97b9098cf585537b788dd87153642559de3b2ec5fc858688f4392a53e49"
+    sha256 cellar: :any,                 arm64_monterey: "48033c659a3f9768dc797d4d65fdf0500265c0c0b6bd013b2a998ec25568f7ab"
+    sha256 cellar: :any,                 arm64_big_sur:  "e46c65919d9d50f93d29cf09e091376b844c3ffa2242ee5ee33c64c2a15c87e4"
+    sha256 cellar: :any,                 ventura:        "21dfbac95a50dab244fead84dae4a757a9c6bbf50a9e708c17e7a2b39c7a51a2"
+    sha256 cellar: :any,                 monterey:       "a2d51fe7e69d02621540f1d606147f24050c49ded57f3fddd80cfd5ac173ae41"
+    sha256 cellar: :any,                 big_sur:        "d1fdbc9932715ebeb050571213b1df5b3fc5578fd528a1a333d024b9c63ecf08"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0770fe7ae3123957f054ac117d61e61c66519b830aa477aa0e21498f1588dab"
   end
 
   depends_on "hidapi"

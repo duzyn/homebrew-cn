@@ -1,9 +1,9 @@
 class Libopenmpt < Formula
   desc "Software library to decode tracked music files"
   homepage "https://lib.openmpt.org/libopenmpt/"
-  url "https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.6.6+release.autotools.tar.gz"
-  version "0.6.6"
-  sha256 "6ddb9e26a430620944891796fefb1bbb38bd9148f6cfc558810c0d3f269876c7"
+  url "https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.6.7+release.autotools.tar.gz"
+  version "0.6.7"
+  sha256 "2174ac0f5a148ba684db768a47edf783eff9084fbca5fef6c997501643100163"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,14 +12,13 @@ class Libopenmpt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "6b12d801cc1c4746a6eb7f15407b733d8396ec258696a26f71d5aae2abc15d00"
-    sha256 cellar: :any,                 arm64_monterey: "2955f9a5f52dc6a003ad3c2800f1258167d07488386e146fa7503220d2fb77a4"
-    sha256 cellar: :any,                 arm64_big_sur:  "b1cb3909d998bc05e41976de735f83aa15b43848ba4aa5304d7cd512b7b127c1"
-    sha256 cellar: :any,                 ventura:        "8a3ec0b3cd549a9354e393527bdd0389962cd90ef055d41f192a4694c71f7ecd"
-    sha256 cellar: :any,                 monterey:       "f2ff766711aaf89f9d7c45e71f1c6dfaf60ceaee2cf561dfd1baf7a13146a2ba"
-    sha256 cellar: :any,                 big_sur:        "2e53000dcb09f90d5862515855ee7a7496d12f2bba6f931e66bb5d6191575f10"
-    sha256 cellar: :any,                 catalina:       "4f0734db9d7bae065f76bf280681a69706b2472ac874b9be1550278506f4fd3f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96fc9cbf713f0691acf07dbc7500ceaa6af7090ab2dd98a6e524fdbbb5867636"
+    sha256 cellar: :any,                 arm64_ventura:  "d86d4d9035dd7d841e28cbf0440fd6f4870ae8ccb2b9959bf6e65ae76079166e"
+    sha256 cellar: :any,                 arm64_monterey: "af23ef86afe4ab8c1349f458d9c81b69e91e1e84fe1b063aa3d1124cac9f97a6"
+    sha256 cellar: :any,                 arm64_big_sur:  "6cab66f1fe661c02ca369ab208b8a5feaf5bb2b22fff105a25098f5ef2a71b3b"
+    sha256 cellar: :any,                 ventura:        "d39af97b0e6acc83fb2f88b6c895bd08d2b1522f712fa9991e08d9b16eaf6194"
+    sha256 cellar: :any,                 monterey:       "cf958410dc4a8c683c9e7ffa53fa3b9a7cdd6ad1db99a1a1332d02200c699411"
+    sha256 cellar: :any,                 big_sur:        "d1251bab7029da431d5eecb3812898ace9cc83b9b386b4aaeaeb4e26cbfc9071"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc339310ff0416fb3f21190c74898992c6859b96a2a9639abf8d9b6d54d567f2"
   end
 
   depends_on "pkg-config" => :build

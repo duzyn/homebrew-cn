@@ -1,18 +1,18 @@
 class GitCliff < Formula
   desc "Highly customizable changelog generator"
   homepage "https://github.com/orhun/git-cliff"
-  url "https://github.com/orhun/git-cliff/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "57321d1b1787f601b76347bcc981fbaf7d6a923a6fc1191a5360b6d72079186d"
+  url "https://github.com/orhun/git-cliff/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "6a59923f76a636094c7ae6849dcac444e815af4c876745ae251a499e99b58acb"
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c1741f6e597cc8405caac261c7c4bd46ddb50ba628e34c8afcba9ee26af9a741"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "26de2d156fffc3e1b411533be30f5eb89974260f0874d169de91cc4c81943516"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1cff3a8df9fc05dc9fe6aedde72d456e5a7f39477287c9bbc755b58f116061d2"
-    sha256 cellar: :any_skip_relocation, ventura:        "e33adc758d105fe69e0812846cee86f53d61f7e657da3cacaeea1dbd29d1916a"
-    sha256 cellar: :any_skip_relocation, monterey:       "b4606b9c79cd304635d4105e151efd454d54811fa039ffb2c7f3a619818188fa"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5475d8065a4a34b2074d5f4f05b1616153680225e85fc271a0374578a20c70d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8f5da6008832f634cce1381b8773d2b7ce8122c0e61b4dfee80e48d04dee319"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9dd717ba4b671985e3de4b3a5a50d4c311b3cfc67b78a4d3afa78cff787c1d6c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e7a570a05b74c31c0525cdd19c1d2729053c36b9133a4fddb364703ce8d53fa8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "85d03af85ad34b59a96777f0e546a491749822177db3a63bd03813f02ade5008"
+    sha256 cellar: :any_skip_relocation, ventura:        "570dd888952cb29d7e7b72f848fceceb48004ef50f9fce69caec979cddb8e30a"
+    sha256 cellar: :any_skip_relocation, monterey:       "17562afc8380d63a80d984f6a80470bcb88422c89f58c75bd7b1e0429996f374"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1ba3c9ad3c068fd6b16fdc69218ebfe824eae044eefd01a9e8dac28a1bc6ce3e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1123490dc0fcd99b7dde8996111776fd66ec862be1bc5557c2bb4e771611730b"
   end
 
   depends_on "rust" => :build

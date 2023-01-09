@@ -11,13 +11,14 @@ class Aptos < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "40434b61e99cf9114a3715851d01c09edaa94b814f89864d57a18d00a8e0c4e9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "edd6dcf9d627746a910d324422085eb4b06cdab654789a03b37133cd4868633c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d9568107514168afc41e73bd3fd0fc45a6a9891a289857831f8ee027fb339676"
-    sha256 cellar: :any_skip_relocation, ventura:        "d7289b5efca029aaa95328319ccf1d8a4813c7828f366314e569993eeeaf0003"
-    sha256 cellar: :any_skip_relocation, monterey:       "ba58e1eb3398c725207ce9d6251d29b549cde32644c3d622cd286b86c7896576"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3e2431a6316b8f0ffa4db75758fcdd9dea162fdfb3dbff56f5e405bcbea4fedc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "925113b4967ed9d3da78cd12745b1282198694a7f8c11d75b8c41451f8eff4b5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4567cfb78d06bcbe404c68beee9e1417b38eff99d4f555715bfcf6880191feb7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13e08cb42c171f4bd63d1db2abff538e23ee6d56dda95d17a74683695ca88b7a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ee5355bb044d07877b12341f214a074af9d7a18ca8c079ee2deb4ec73253272d"
+    sha256 cellar: :any_skip_relocation, ventura:        "23544d0482551e4b67a3ec8dc51cbbec8d1117945e01e4ef1a725476faa954f1"
+    sha256 cellar: :any_skip_relocation, monterey:       "94a7e3fd045127c6c611ba8480cf90b632ecf2d243f511e7fb16198f48723a94"
+    sha256 cellar: :any_skip_relocation, big_sur:        "dd892d123ece9875e56a17efb013f39e71382c3a2574a9c858e1917f1dbc82a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c385a80852019d610a6cab6935c277cecfd03c4b619b3b055a6899449808804a"
   end
 
   depends_on "cmake" => :build
@@ -26,6 +27,7 @@ class Aptos < Formula
 
   on_linux do
     depends_on "pkg-config" => :build
+    depends_on "zip" => :build
     depends_on "openssl@3"
     depends_on "systemd"
   end
@@ -34,8 +36,8 @@ class Aptos < Formula
     system "#{Formula["rustup-init"].bin}/rustup-init",
       "-qy", "--no-modify-path", "--default-toolchain", "1.64"
     ENV.prepend_path "PATH", HOMEBREW_CACHE/"cargo_cache/bin"
-    system "cargo", "install", *std_cargo_args(path: "crates/aptos")
-    bin.install "target/release/aptos"
+    system "./scripts/cli/build_cli_release.sh", "homebrew"
+    bin.install "target/cli/aptos"
   end
 
   test do
