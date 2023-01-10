@@ -1,19 +1,19 @@
 class Fb303 < Formula
   desc "Thrift functions for querying information from a service"
   homepage "https://github.com/facebook/fb303"
-  url "https://github.com/facebook/fb303/archive/v2023.01.02.00.tar.gz"
-  sha256 "260cdac75d109ef042f6de145082f7b80d367b9947c2eb4f09446568efab9564"
+  url "https://github.com/facebook/fb303/archive/v2023.01.09.00.tar.gz"
+  sha256 "674e870c69f0110acc92dde582f1979d745a8a523bcd46d671fb317b3e86175f"
   license "Apache-2.0"
   head "https://github.com/facebook/fb303.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "7c1abffa56ef4a29872c192b01090fea9758268051bf18367577b305aa4d3943"
-    sha256 cellar: :any,                 arm64_monterey: "c379bc98acb6e24b54427fd90869c7549fe0266c7c74ee0c8f21d1ff7bd4ea6d"
-    sha256 cellar: :any,                 arm64_big_sur:  "9dc6c25de659f38a473a160163f9aa767cce05bf2a21c7e0a088bc292b321524"
-    sha256 cellar: :any,                 ventura:        "d091d36ca2176025b01014398c7b011e5e5dc11eba2306888ebd5688648fc617"
-    sha256 cellar: :any,                 monterey:       "f6d4bd2b0fb5aaf0197b8320833badc52c53bbd0edd8a0216a75b3e20ed0e6aa"
-    sha256 cellar: :any,                 big_sur:        "8c241a9081e58d9b3b96650d89f26eb2c0550e67edf4bc9ed17d6559cd6215a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "622b0819e5fe7f97e25d7a2750314fead46ee9dd86ff02340a36e41f4a190188"
+    sha256 cellar: :any,                 arm64_ventura:  "2a560826673e4b773856ff4fc80f40fb53ba162d20d9fb3c0a966abc9c1d1bf0"
+    sha256 cellar: :any,                 arm64_monterey: "087baba00ce5aed063e4456a185281611ed1a33b7457731b7a95689ac91bf0db"
+    sha256 cellar: :any,                 arm64_big_sur:  "d4d516cf6373a0a9ab57324a4547ee4a145db852c68df85390924a6f8bd8a508"
+    sha256 cellar: :any,                 ventura:        "8d49af3e1f39ca55a45c9ac61d597ed937a0a615521ea2e8cd886dd31df051bc"
+    sha256 cellar: :any,                 monterey:       "5b8e3edc9cd35286bab4916f7a25a7a497f0a40365032012ff112d463aef3081"
+    sha256 cellar: :any,                 big_sur:        "642bad1ba739e12daee964218711af548cb8d4827f027303dcbb9a349cfa5621"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a99631d8c5dc062e45898b1add0e1684dd014dad1eb63fcbe1aba65e2941fc2e"
   end
 
   depends_on "cmake" => :build

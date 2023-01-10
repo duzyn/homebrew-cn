@@ -4,12 +4,12 @@ class Crystal < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/1.6.2.tar.gz"
-    sha256 "fbbff8f975a2627ac3f42208362365668fb08a33637f424e0c2c0e51b1f37cfa"
+    url "https://github.com/crystal-lang/crystal/archive/1.7.0.tar.gz"
+    sha256 "f49682fc79e4a71e2682189a1aaa95406b1ba21f8e2a0bcecdcd311acdc4b251"
 
     resource "shards" do
-      url "https://github.com/crystal-lang/shards/archive/v0.17.1.tar.gz"
-      sha256 "cfae162980ef9260120f00ba530273fc2e1b595906b6d39db0cd41323f936e03"
+      url "https://github.com/crystal-lang/shards/archive/v0.17.2.tar.gz"
+      sha256 "ca3963512db8316b3624c0fba57f803419d67502416fe44938a27aa616cf9d70"
     end
   end
 
@@ -19,15 +19,13 @@ class Crystal < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_ventura:  "5ac90eee05b2d136eb07cbe8ada3406714c046902b4461bfb1ba35ad00aadd2c"
-    sha256 cellar: :any,                 arm64_monterey: "7619f85e4cda3f6a4318fdbfca48b9d951bd34d292e88c36e8d80889f81d15f3"
-    sha256 cellar: :any,                 arm64_big_sur:  "9f147fcb39669a2cb2a951c4f2a425571808706d9c41e438cf6452c2ccee2400"
-    sha256 cellar: :any,                 ventura:        "9d6a2fc1f841e3ef093ccf405443c6c4026657773f82746adfc0c0cfab866806"
-    sha256 cellar: :any,                 monterey:       "5a0290cf901a728d0c353e2544cc4c73cbeb0f698f25d9f89f5f09de2875ac1f"
-    sha256 cellar: :any,                 big_sur:        "c78e5642b4bcae672ad6af7472719883350e70251307c8655f6af566eaf6eb97"
-    sha256 cellar: :any,                 catalina:       "707755f9d35c7a318f029716e716af42b652795d69f14accebf51ac2ee101266"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04935a3dbeb60ec7d1364f8e424679b2190e81584093781276ef516f1e016aeb"
+    sha256 cellar: :any,                 arm64_ventura:  "2b4353e816ea1cb43fe4d5940c91e46034f70744d623a816ba14968cf629c84b"
+    sha256 cellar: :any,                 arm64_monterey: "9b82183fec331855c96bd7f6e9aad75d11754003cbc64123ee5229239fa392dc"
+    sha256 cellar: :any,                 arm64_big_sur:  "2613ddedc42898626648cceaeb61652fda554586e73a1515b81830375bf8db8c"
+    sha256 cellar: :any,                 ventura:        "6f94aff081f6c9bdab4b1373445fcd08ba6823614dca824a476774141dc70897"
+    sha256 cellar: :any,                 monterey:       "9f63d00a2f9b7048e8519867c3da20976f688c8938aee7eb8faa8ea22f1d24e7"
+    sha256 cellar: :any,                 big_sur:        "ad640f8989cc3db87fb0094ee284c7cf02fa4a7879b4467cad516b4a2dddac33"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "80550da59c05d55e5eeb1c9d334898ecef265c6ede2b13f481a3086c9c08a59b"
   end
 
   head do
@@ -55,9 +53,11 @@ class Crystal < Formula
 
   fails_with gcc: "5"
 
-  # Every new crystal release is built from the previous one. The exceptions are
-  # when crystal make a minor release (only bug fixes). Reason is because those
-  # bugs could make the compiler from stopping compiling the next compiler.
+  # It used to be the case that every new crystal release was built from a
+  # previous release, except patches. Crystal is updating its policy to
+  # allow 4 minor releases of compatibility unless otherwise explicited.
+  # Therefore, the boot version should have the MINOR component be
+  # between the current minor - 4 and current minor - 1.
   #
   # See: https://github.com/Homebrew/homebrew-core/pull/81318
   resource "boot" do

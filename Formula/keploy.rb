@@ -1,18 +1,18 @@
 class Keploy < Formula
   desc "Testing Toolkit creates test-cases and data mocks from API calls, DB queries"
   homepage "https://keploy.io"
-  url "https://github.com/keploy/keploy/archive/refs/tags/v0.7.12.tar.gz"
-  sha256 "8fd95b1736687e38c036bac03af8ebbc91029985dde1296441328c825d28510e"
+  url "https://github.com/keploy/keploy/archive/refs/tags/v0.7.13.tar.gz"
+  sha256 "26bbe7f8fd0a05e9f094c8390b4c1eedcc3e07340ced35d346f4fea99e181c05"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0307d54eb48fd1519908ded1b2a532070c4a4fbcc964eeba96ca6d78d4e8762a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea1524b61561bc081682e9cad537d108722f7bc2d4354dffbe6a114bb4c923ca"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6c32bcd7b3b183621aaa1609f3939837f004090ab087462ab9aca1b795434bac"
-    sha256 cellar: :any_skip_relocation, ventura:        "a0d3c6617c62ca6825967c0efb9168160ef90d0b3498a68d7ce1d9cd123bcbf6"
-    sha256 cellar: :any_skip_relocation, monterey:       "ed20bc914036b3a89f833b432fa92a51f67cb3267b778636c6095b79b8d7eb56"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8f580ddb771d1a5070b9ec6fb042126d23e3fb29ea8b5a682db31bef00b533d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6e26aac71939353ebe99c1f340a594c53c9116c0a224164614032de6c854489"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b9b153d1d6b044211cb762fe76f61acf95b864a38801b415e7522fd552671170"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7f9c129ac41deb2a8b14d5ea46e0236ac552baf4caf1b98b76a8f6981c1ba66"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2bbf9305bb622eb10f89a2b2f4e51344bd527867e507d9a719f8cb904f76ac5"
+    sha256 cellar: :any_skip_relocation, ventura:        "1347e0f5eab06d5f9d9f70c46a8af7e4b4cff5eabd2919403887854b7e4a510d"
+    sha256 cellar: :any_skip_relocation, monterey:       "6bd23d6aeecdb9b1804496803c6851966a18d46d139e655c853a90cb10c07a3d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a12a36ca88345250c0ae79c55ff2202d2f6490b47bdfc442001282588b9d690a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a4c3300da056a2d05e613364477ecf4568e8aa47beec95afc231259734b8e17"
   end
 
   depends_on "gatsby-cli" => :build

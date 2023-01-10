@@ -34,13 +34,15 @@ class Buildkit < Formula
       -X github.com/moby/buildkit/version.Package=github.com/moby/buildkit
     ]
 
-    system "go", "build", "-mod=vendor", "-trimpath",
-      "-ldflags", ldflags.join(" "), "-o", bin/"buildctl", "./cmd/buildctl"
+    system "go", "build", "-mod=vendor", *std_go_args(ldflags: ldflags, output: bin/"buildctl"), "./cmd/buildctl"
 
     doc.install Dir["docs/*.md"]
   end
 
   test do
-    shell_output("#{bin}/buildctl --addr unix://dev/null --timeout 0 du 2>&1", 1)
+    assert_match "make sure buildkitd is running",
+      shell_output("#{bin}/buildctl --addr unix://dev/null --timeout 0 du 2>&1", 1)
+
+    assert_match version.to_s, shell_output("#{bin}/buildctl --version")
   end
 end
