@@ -1,8 +1,8 @@
 class Groonga < Formula
   desc "Fulltext search engine and column store"
   homepage "https://groonga.org/"
-  url "https://packages.groonga.org/source/groonga/groonga-12.1.0.tar.gz"
-  sha256 "a4b53589f726f237eaafd8d032335b71c369ac3cfab99f7335c5d127920139d7"
+  url "https://packages.groonga.org/source/groonga/groonga-12.1.1.tar.gz"
+  sha256 "a49b93ef5655c5a94a9f5d371182482f1a75a61364e415155b69a951d1372c45"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,13 +11,13 @@ class Groonga < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "e12cccf164d9e565cd3843d774846df00914d9af32b8a57881e16635f4e1a321"
-    sha256 arm64_monterey: "012ffa1ccaca3883ac7f6e8dd14d8de429035ae05a3e20d132e3110459d84c89"
-    sha256 arm64_big_sur:  "0217a9f338f6beab585b2d569ea5957ed1da4bbe0c0fa0d6efdb313e6432ad29"
-    sha256 ventura:        "d9e692f877a17f1e090bef5df0811062c9458a3d097b1dd562f6476d78f58018"
-    sha256 monterey:       "19771e5e4ab1933e6708192b7fa42fb261f03951a8a31a078e9c37ce6a1f1578"
-    sha256 big_sur:        "de3ff95ce498883ee9b543714a8a965211cce103aa91b802369ccec387152b02"
-    sha256 x86_64_linux:   "1dfc9da82e4b8a96034b4f3466c9a891cff3ed7088f646bd607b2c8e21f1f615"
+    sha256 arm64_ventura:  "6aee6bc7db77164816ce0534e6afaf7341920bfc1590770f01bcc4a6b9abbf02"
+    sha256 arm64_monterey: "2d6f56c78d01ebc5c6f70d894fd4f196ea1f067bf71c86b3692b6f7ad4d46caf"
+    sha256 arm64_big_sur:  "9852143c70b08e192164c54648e2460bb7a1f89d37d8ee8150319a1122676449"
+    sha256 ventura:        "a343a80849bfb9aa2a04f26b2569fc63b48109854f22278ce3cddcc9b68ac470"
+    sha256 monterey:       "7a83f1fdacfee5d8b626f9f1b977fa7536d4da55fb339fccd02c9ddfc7efe4e1"
+    sha256 big_sur:        "4834f74fc7569258fa8122d9e7f78bc3997e104f8f49a074554e4e2388f9eff8"
+    sha256 x86_64_linux:   "8533eea74f729bb1aab61e8e13dade6ad555895dad4858982f12a77a603a33a6"
   end
 
   head do
@@ -45,8 +45,8 @@ class Groonga < Formula
   link_overwrite "lib/pkgconfig/groonga-normalizer-mysql.pc"
 
   resource "groonga-normalizer-mysql" do
-    url "https://packages.groonga.org/source/groonga-normalizer-mysql/groonga-normalizer-mysql-1.1.9.tar.gz"
-    sha256 "5e70fa226c7469094bc625829b990dfe6d482f8f1110d7177d3594296dd1632d"
+    url "https://packages.groonga.org/source/groonga-normalizer-mysql/groonga-normalizer-mysql-1.2.1.tar.gz"
+    sha256 "c8d65bfaf45ea56326e4fec24a1e3818fef9652b2ab3a2ad9b528b7a1a00c0cc"
   end
 
   def install

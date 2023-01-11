@@ -6,16 +6,17 @@ class LinodeCli < Formula
   url "https://github.com/linode/linode-cli/archive/refs/tags/v5.27.2.tar.gz"
   sha256 "2f16c5507d4a6673c3185d5ad3744d27448de25c96f32bd7ffa82e3647c0e898"
   license "BSD-3-Clause"
-  head "https://github.com/linode/linode-cli.git", branch: "master"
+  head "https://github.com/linode/linode-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f7aadeea34f7eeceaeb8bb1e189d15927223e50c373d58b5131ee4edfced34b2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b74c9c86c2a207ed86b1a4ac2f0902889e56de4abae159546a7a3546b90e6414"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1e91e85145366255b0bca6c3865f7b48b054d113bae6f1a92c6c8ca5a3e1ca3d"
-    sha256 cellar: :any_skip_relocation, ventura:        "9e655c1d7d302885dcab64f4558c55a097b3eaf5109cdbd1711b5c4746daddd1"
-    sha256 cellar: :any_skip_relocation, monterey:       "4f3da1c90405695b16e04c279455e0f638def66fb9467b7772203391b2662691"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b304cdfe69965172d98c3c660c5047c228b31657549e5879fea3c3b3c6c1491f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "427183c90166888476456b74f740845a2741e25504c8acf988fd9922802f4ef0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "85bbe40c0dbda216b5ce2cf72747df73488fb2c131a72525109ea6f5f418a961"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ccd2a8db8083d57742b25a297b90f0c552941368e63c2e3fdf0fed2b2793bd3c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c8854b4ebf813b31f7100f59c0a198613b607c6893e342e5591a777d22202d33"
+    sha256 cellar: :any_skip_relocation, ventura:        "a1b13ea0253b3f21250470067f5917449c7372a581c57ac3dec9d9b74d271c2c"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd46d8b156547ceaac6008ebd6a59fcbcf1cd9e755bd334147d2aeb2a25b6f64"
+    sha256 cellar: :any_skip_relocation, big_sur:        "6bb889b39d25aac1d2a92b8bdce144a5e21ed6bdcb03a7b9268745cdbfe71fd5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "983ae351275c8622c8a501f2ad867d242c481ded3ba16a29684fb45c83feddd4"
   end
 
   depends_on "openssl@1.1"

@@ -21,6 +21,8 @@ class CloudflareWrangler < Formula
 
   uses_from_macos "zlib"
 
+  conflicts_with "cloudflare-wrangler2", because: "both install `wrangler` binaries"
+
   def install
     system "cargo", "install", *std_cargo_args
   end

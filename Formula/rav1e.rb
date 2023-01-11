@@ -5,13 +5,13 @@ class Rav1e < Formula
   head "https://github.com/xiph/rav1e.git", branch: "master"
 
   stable do
-    url "https://github.com/xiph/rav1e/archive/v0.6.2.tar.gz"
-    sha256 "8fe8d80bc80a05ee33113c0ee19779d9c57189e5434c8e1da8f67832461aa089"
+    url "https://github.com/xiph/rav1e/archive/v0.6.3.tar.gz"
+    sha256 "660a243dd9ee3104c0844a7af819b406193a7726614a032324557f81bb2bebaa"
 
     # keep the version in sync
     resource "Cargo.lock" do
-      url "https://ghproxy.com/github.com/xiph/rav1e/releases/download/v0.6.2/Cargo.lock"
-      sha256 "5f1f34a269322b8ec6c6432d6b928c72da254e16e65a0c8f81fe252367a99ba5"
+      url "https://ghproxy.com/github.com/xiph/rav1e/releases/download/v0.6.3/Cargo.lock"
+      sha256 "f22049598eb6f9948b4d852850eeb48c1236a7a068692db85cbfe72b94498581"
     end
   end
 
@@ -21,13 +21,13 @@ class Rav1e < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b5b1726d8ecf856dcde35e86ea1c20cd7c939472a43043a7210e5a5c21b34241"
-    sha256 cellar: :any,                 arm64_monterey: "a23010337ff70bc45e14acb95ba75852bc41d53f782e4c44214af53ee993fb33"
-    sha256 cellar: :any,                 arm64_big_sur:  "c258c744d8328bfaa0ecb2cccb4402f4edc01068d511ce30f966c215e03fc69e"
-    sha256 cellar: :any,                 ventura:        "d4a0f84349768b4b5e59964b45667d86130131066c4f5065ee975d1a09cebc8c"
-    sha256 cellar: :any,                 monterey:       "d73eab7e675cc5e66c6848fd5bce15c86e72bc1f4b9ccbd2fb59722b186b30d3"
-    sha256 cellar: :any,                 big_sur:        "285df3feec091df6671e9d97b1128c657c65b2eb03d27507c9195372303a6fd8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e599778a54e84996d31d2123da123582f7770f88f5ccba9322fb2171c10499c"
+    sha256 cellar: :any,                 arm64_ventura:  "70f9829400b585aa9a8a3006e849ea6cb3682c01776cbf24d2c8459dae1f22d4"
+    sha256 cellar: :any,                 arm64_monterey: "087c194b06a45901f399ac381cdcd50bd61d790b22d9dd40c1c25a4ee70c4e42"
+    sha256 cellar: :any,                 arm64_big_sur:  "83fda9d2fc3eda6588b2239968fb5f79a3594140ed573adc102f8591f5edf010"
+    sha256 cellar: :any,                 ventura:        "2b4a320e18cb3a43a2f3e1dfcc3c18388e398bbc27766afed8a11c6a06cb33af"
+    sha256 cellar: :any,                 monterey:       "f88c6fd1c9cbe20be25f4441c3693c94ffc963defb8f08a8225d60f7310419eb"
+    sha256 cellar: :any,                 big_sur:        "5c7dd4ac66c0c4aec4a6541b83d1550197bebae069cacfa7d137928e384e48a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82f681bf8323e27304aaabdfb089c99a06b7e0d8feadbca373679ae9cff52a51"
   end
 
   depends_on "cargo-c" => :build
