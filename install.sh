@@ -24,22 +24,10 @@ export HOMEBREW_NO_INSTALL_FROM_API=True
 export HOMEBREW_BREW_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/brew"
 export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/homebrew-core"
 export HOMEBREW_BOTTLE_DOMAIN="https://ghproxy.com/https://github.com/homebrew/homebrew-bottles"
-# 其他镜像
-# 阿里云
-# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.aliyun.com/homebrew/brew.git"
-# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.aliyun.com/homebrew/homebrew-core.git"
-# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
-# 清华大学
-# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 export HOMEBREW_PIP_INDEX_URL="https://mirrors.aliyun.com/pypi/simple/"
 
 # 添加本应用库
 brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/https://github.com/duzyn/homebrew-cn
-
-cd "$(brew --repo duzyn/cn)"
-git config pull.rebase true
 
 # 保存配置到 `.zshrc` 或 `.bash_profile`
 tee "$SCRIPT_DIR/config" &>/dev/null <<"EOF"
@@ -48,15 +36,6 @@ export HOMEBREW_NO_INSTALL_FROM_API=True
 export HOMEBREW_BREW_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/brew"
 export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/homebrew-core"
 export HOMEBREW_BOTTLE_DOMAIN="https://ghproxy.com/https://github.com/homebrew/homebrew-bottles"
-# 其他镜像
-# 阿里云
-# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.aliyun.com/homebrew/brew.git"
-# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.aliyun.com/homebrew/homebrew-core.git"
-# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew/homebrew-bottles"
-# 清华大学
-# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 export HOMEBREW_PIP_INDEX_URL="https://mirrors.aliyun.com/pypi/simple/"
 EOF
 
