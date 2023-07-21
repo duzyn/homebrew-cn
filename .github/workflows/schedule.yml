@@ -1,0 +1,42 @@
+on:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-core'
+        fetch-depth: 1
+        path: 'homebrew-core'
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-cask'
+        fetch-depth: 1
+        path: 'homebrew-cask'
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Homebrew/homebrew-cask-versions'
+        fetch-depth: 1
+        path: 'homebrew-cask-versions'
+    - name: Update buckets
+      shell: bash
+      run: |
+        bash ./update.sh
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git checkout --orphan latest_branch
+        git add --all
+        git commit -am "Updated $(date)"
+        git branch -D main
+        git branch -m main
+        git push -f origin main
