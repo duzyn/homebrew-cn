@@ -34,9 +34,6 @@ jobs:
         bash ./update.sh
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git checkout --orphan latest_branch
         git add --all
         git commit -am "Updated $(date)"
-        git branch -D main
-        git branch -m main
         git push -f origin main
