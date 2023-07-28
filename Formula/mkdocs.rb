@@ -3,18 +3,18 @@ class Mkdocs < Formula
 
   desc "Project documentation with Markdown"
   homepage "https://www.mkdocs.org/"
-  url "https://files.pythonhosted.org/packages/b0/ef/49b4427e5eec761b77a3c3c421d3fd63010e2798b7401dc0fa2b875ef6b5/mkdocs-1.4.3.tar.gz"
-  sha256 "5955093bbd4dd2e9403c5afaf57324ad8b04f16886512a3ee6ef828956481c57"
+  url "https://files.pythonhosted.org/packages/25/5e/7d964ebde9937a965d457f5656e443165b42ff53c6ae5c2afde650b0f338/mkdocs-1.5.0.tar.gz"
+  sha256 "ff54eac0b74bf39a2e91f179e2ac16ef36f0294b9ab161c22f564382b30a31ae"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7952ae1c19f40a7358d26242a6d59360cd6a4e53d4c283916df946429e60fd55"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b33ced87429d41415c699df66e4ae51014343b96b858a69b087e6d4c95d30f62"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3e73ff84e05e3558b89afdf70cf696977104c64c8ded497f929abfbc96893a1"
-    sha256 cellar: :any_skip_relocation, ventura:        "7b8136177b22f39f81a41e0c0e7a8ee202af024ec67b93bfb9fee25aa9631b99"
-    sha256 cellar: :any_skip_relocation, monterey:       "50dea1afbdb13c217a2d481bedf70bbbab31e0f990c90544b9ee95667d29e85b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4f441dcae92a7ceb05a4b43cb0b22c7485867c9c11b0b0298bbcd4e9280c8a00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "99abc36cc8a7a80084f8258d5955d20774b20bca50c33cd1a8b279bc38571ab1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b5f04e07e8e2f70b1a80f6fd6ec642506f75857bcd901997958f02fd347c27fc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9bbdad6ad93fe9382c9f7bd2cb6960557d41c792f0589a90ae76b0bb2e44c958"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "709ec745fe08d8701044ac5fa3dfe4a0d55b1a05b5a3cb5f450e0e8b862f6aaf"
+    sha256 cellar: :any_skip_relocation, ventura:        "e47106b3f1cd3d8c2b14dab0372e8238e2aa879739c17f768b87df3068e5d026"
+    sha256 cellar: :any_skip_relocation, monterey:       "15a2ee2e948af21d3e75179a05cbc9c3c2f1110f2394f76e7ab35d66da107259"
+    sha256 cellar: :any_skip_relocation, big_sur:        "79e7b344730e8637820248d188b3f2b28b7e8414e3919da58df5e6d69dd4df14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "490b62cfeb353cb2ede6d779960b9e68f42ae02f36d659d662b3f54f21cdb44f"
   end
 
   depends_on "python@3.11"
@@ -22,8 +22,8 @@ class Mkdocs < Formula
   depends_on "six"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/72/bd/fedc277e7351917b6c4e0ac751853a97af261278a4c7808babafa8ef2120/click-8.1.6.tar.gz"
+    sha256 "48ee849951919527a045bfe3bf7baa8a959c423134e1a5b98c05c20ba75a1cbd"
   end
 
   resource "ghp-import" do
@@ -37,13 +37,13 @@ class Mkdocs < Formula
   end
 
   resource "markdown" do
-    url "https://files.pythonhosted.org/packages/d6/58/79df20de6e67a83f0d0bbfe6c19bb82adf68cdf362885257eb01099f930a/Markdown-3.3.7.tar.gz"
-    sha256 "cbb516f16218e643d8e0a95b309f77eb118cb138d39a4f27851e6a63581db874"
+    url "https://files.pythonhosted.org/packages/87/2a/62841f4fb1fef5fa015ded48d02401cd95643ca03b6760b29437b62a04a4/Markdown-3.4.4.tar.gz"
+    sha256 "225c6123522495d4119a90b3a3ba31a1e87a70369e03f14799ea9c0d7183a3d6"
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/95/7e/68018b70268fb4a2a605e2be44ab7b4dd7ce7808adae6c5ef32e34f4b55a/MarkupSafe-2.1.2.tar.gz"
-    sha256 "abcabc8c2b26036d62d4c746381a6f7cf60aafcc653198ad678306986b09450d"
+    url "https://files.pythonhosted.org/packages/6d/7c/59a3248f411813f8ccba92a55feaac4bf360d29e2ff05ee7d8e1ef2d7dbf/MarkupSafe-2.1.3.tar.gz"
+    sha256 "af598ed32d6ae86f1b747b82783958b1a4ab8f617b06fe68795c7f026abbdcad"
   end
 
   resource "mergedeep" do
@@ -54,6 +54,16 @@ class Mkdocs < Formula
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/b9/6c/7c6658d258d7971c5eb0d9b69fa9265879ec9a9158031206d47800ae2213/packaging-23.1.tar.gz"
     sha256 "a392980d2b6cffa644431898be54b0045151319d1e7ec34f0cfed48767dd334f"
+  end
+
+  resource "pathspec" do
+    url "https://files.pythonhosted.org/packages/95/60/d93628975242cc515ab2b8f5b2fc831d8be2eff32f5a1be4776d49305d13/pathspec-0.11.1.tar.gz"
+    sha256 "2798de800fa92780e33acca925945e9a19a133b715067cf165b8866c15a31687"
+  end
+
+  resource "platformdirs" do
+    url "https://files.pythonhosted.org/packages/a1/70/c1d14c0c58d975f06a449a403fac69d3c9c6e8ae2a529f387d77c29c2e56/platformdirs-3.9.1.tar.gz"
+    sha256 "1b42b450ad933e981d56e59f1b97495428c9bd60698baab9f3eb3d00d5822421"
   end
 
   resource "python-dateutil" do
