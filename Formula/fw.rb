@@ -1,18 +1,18 @@
 class Fw < Formula
   desc "Workspace productivity booster"
   homepage "https://github.com/brocode/fw"
-  url "https://ghproxy.com/https://github.com/brocode/fw/archive/refs/tags/v2.16.1.tar.gz"
-  sha256 "2d77ce6673e48dd8f20ee42d8a64a0cbe648d51b837cb930b69c3707718659c2"
+  url "https://ghproxy.com/https://github.com/brocode/fw/archive/refs/tags/v2.17.1.tar.gz"
+  sha256 "9b87924c5384c65f7012ae545d40e550f830fdf1b3e75bbbde5f9b4bd64aab86"
   license "WTFPL"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f490215245c841b4ccfa7eb370646e68805ea39150cc532afa60d7fd2d385f8f"
-    sha256 cellar: :any,                 arm64_monterey: "624030601c29a9ba5cb367f511e5a97aa22e7b1b6a2001a0d270aa0591b7cf95"
-    sha256 cellar: :any,                 arm64_big_sur:  "b42ebd783c65e67bdcde6a75290b3a1a5a7e524233e68c159593ee49d97330bf"
-    sha256 cellar: :any,                 ventura:        "4e4be06e0dcdd98cc129f39ef34f412f281a7c0789952277f03dbe9a2b4b4776"
-    sha256 cellar: :any,                 monterey:       "3c8a65fb6b409756fcf593bc5f7159c816234710c9bee001b6d2566b814a7e9b"
-    sha256 cellar: :any,                 big_sur:        "1ae14483fb0a840ce08643f5907030b6d6bf4c443e74e9838aa967a9e2b7c6b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "822b5e2fe18cfe7402dad4c25305d1994e83a5e98ba6a5ede0b289d436039128"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "13c029efb1090dd4fcf1a15087e35ffddcfd53833066cf3024ac07a7fccf73da"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b6f7ccf8695f125669af21a167f04682de8b06bc59ed0449f25f014747777d6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "682e2015dae56e1b1d8bd901d4b22797e8957fba1f43644b9a1c2d3dbaaaaa2f"
+    sha256 cellar: :any_skip_relocation, ventura:        "324e0456a01ae8991c19c03be19ac8522bd382583bc1d541c7a3e36710a3e127"
+    sha256 cellar: :any_skip_relocation, monterey:       "46cc3b2ed9cf8ba4ba031e2fddbe5692be73ef1033e1792987edbdc07644adf0"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ea5da33052b73031a05f00e3e357f15824f5e2e39251b1cc65af4118f893f449"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bda9d01cd469e187a55c2dae61108572942305cd763ceeecdf97e4d09e3cd7ea"
   end
 
   depends_on "rust" => :build
@@ -21,7 +21,7 @@ class Fw < Formula
   uses_from_macos "zlib"
 
   resource "fw.1" do
-    url "https://ghproxy.com/https://github.com/brocode/fw/releases/download/v2.16.1/fw.1"
+    url "https://ghproxy.com/https://github.com/brocode/fw/releases/download/v2.17.0/fw.1"
     sha256 "b19e2ccb837e4210d7ee8bb7a33b7c967a5734e52c6d050cc716490cac061470"
   end
 
