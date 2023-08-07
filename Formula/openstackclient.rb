@@ -9,13 +9,14 @@ class Openstackclient < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "af3feaa17f0c0453aa29f7ce7762c2dd0f208cf591e0a624517c46f6b9b9b75c"
-    sha256 cellar: :any,                 arm64_monterey: "ca061dfca42860ea9dc7761beb1cf1d61e0f83a5695ce47ffdf707e481d8f587"
-    sha256 cellar: :any,                 arm64_big_sur:  "3b73cc6d0ea96ba13a706bbb5b55ed1145c2fb6a7159bce54e5f360d40fe06ea"
-    sha256 cellar: :any,                 ventura:        "644e8e14319e4896d42372b9dfb49e2eed21304f3842f682311bb3d7af7788a1"
-    sha256 cellar: :any,                 monterey:       "efcf022b146c2d46ea825b7400cde1ee10730922c47725ab56500dd53fcd32b5"
-    sha256 cellar: :any,                 big_sur:        "6f7ee46ff723b5c0715cab7ff75160ab71a6e21a22f6fd63e3a6514c1953b4bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e06072c1d0b1e997b744f5d293b0de54641306788d5c5a4e99f4a269822b4fe"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "5aa27f2b4dbfb72cad60d57273e6f91f7da42a3a755d754158c9a3c8cc361b9b"
+    sha256 cellar: :any,                 arm64_monterey: "073cb1b7bb47015c718b95b510ed108e96c7061ba9c18f4dbf83e42048c703ef"
+    sha256 cellar: :any,                 arm64_big_sur:  "8af375b6936eeb7a68ccfe7942a741b7b88698c8423f32a0871b262bf7ec9b3f"
+    sha256 cellar: :any,                 ventura:        "59f5491abd9fb215702786c6a325860647b8a7e3bf0f3d8a5634482a7b52ba28"
+    sha256 cellar: :any,                 monterey:       "70a5b12316e1f5040da347bdc7029a31596f1b3a8b5b90a5977cc0d0e1cb57ca"
+    sha256 cellar: :any,                 big_sur:        "6ca7bc3fafe7e02b60a7a663b59778b1a4c1028ab865ec8a586805ad41ce5b51"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76967b258dc336d915fe0b5a22a8faf0c8fb73039db32a579b713a90e113a1d8"
   end
 
   # `pkg-config`, `rust`, and `openssl@3` are for cryptography.
@@ -25,6 +26,7 @@ class Openstackclient < Formula
   depends_on "cffi"
   depends_on "openssl@3"
   depends_on "pycparser"
+  depends_on "python-certifi"
   depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
@@ -47,11 +49,6 @@ class Openstackclient < Formula
   resource "babel" do
     url "https://files.pythonhosted.org/packages/ba/42/54426ba5d7aeebde9f4aaba9884596eb2fe02b413ad77d62ef0b0422e205/Babel-2.12.1.tar.gz"
     sha256 "cc2d99999cd01d44420ae725a21c9e3711b3aadc7976d6147f622d8581963455"
-  end
-
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/98/98/c2ff18671db109c9f10ed27f5ef610ae05b73bd876664139cf95bd1429aa/certifi-2023.7.22.tar.gz"
-    sha256 "539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082"
   end
 
   resource "charset-normalizer" do

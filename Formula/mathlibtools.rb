@@ -9,13 +9,14 @@ class Mathlibtools < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "4be61163faa8d906a8865dab1c64305ab532f1c48b6e166ff0b23ae9586a2ba5"
-    sha256 cellar: :any,                 arm64_monterey: "7cd146ea7ab897cb16c15cb7b2e470bc88fefafc0795a82c9b538a3b6ea7953c"
-    sha256 cellar: :any,                 arm64_big_sur:  "e19880342911249a6a455465c38f5c682c85265f329cdc022b2ebc8157d445a2"
-    sha256 cellar: :any,                 ventura:        "adacc10f09d13362188bf69e8dd8b6cb2eabdb66001efb00bf68fb212ffd764c"
-    sha256 cellar: :any,                 monterey:       "84515239ae7261749aa4cdb9d306aee7aa108690126b3589e50e910e5ad05f82"
-    sha256 cellar: :any,                 big_sur:        "b7d1377253e12429c034a5cbd8696a42696ae3b6f5f840838ed3796c9715f6ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "376f733c91932034e6db8b65f26bd55c2935c98f0048987ec46dcfe10aba143b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "c5b52b44dfb4423778d2113af440c3c50bbbaeced1e0d9b15342fcc15edc5e6d"
+    sha256 cellar: :any,                 arm64_monterey: "02cf6eca5c1852ccc9adfcd7ffc90176625c3b3cbb38fa348420619c8bff9a0c"
+    sha256 cellar: :any,                 arm64_big_sur:  "e3d0af239c34c60b1e1e721758119d5768e8e4858793770f181412a1dcbea81d"
+    sha256 cellar: :any,                 ventura:        "7e6c412d9dbc012eaeac72a08a4ae97dc468e12a3bb7a15c819e21850bea289d"
+    sha256 cellar: :any,                 monterey:       "8483301c1adc68f2d2bb74955f6b293f9e1705a0944fd3c1b62799cad8451840"
+    sha256 cellar: :any,                 big_sur:        "cfa09a5cc73b20e307426db706ee034449f58a6d26ce1e5416d2e2347b8d6b63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e51e9bd89cba9e43a169a5f4589701d9dc256d11b8b9e2f44adc941c5c1c5e26"
   end
 
   # `pkg-config`, `rust`, and `openssl@3` are for cryptography.
@@ -24,6 +25,7 @@ class Mathlibtools < Formula
   depends_on "lean" => :test
   depends_on "cffi"
   depends_on "openssl@3"
+  depends_on "python-certifi"
   depends_on "python@3.11"
   depends_on "pyyaml"
   depends_on "six"
@@ -31,11 +33,6 @@ class Mathlibtools < Formula
   resource "atomicwrites" do
     url "https://files.pythonhosted.org/packages/87/c6/53da25344e3e3a9c01095a89f16dbcda021c609ddb42dd6d7c0528236fb2/atomicwrites-1.4.1.tar.gz"
     sha256 "81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11"
-  end
-
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/98/98/c2ff18671db109c9f10ed27f5ef610ae05b73bd876664139cf95bd1429aa/certifi-2023.7.22.tar.gz"
-    sha256 "539cc1d13202e33ca466e88b2807e29f4c13049d6d87031a3c110744495cb082"
   end
 
   resource "charset-normalizer" do

@@ -8,13 +8,14 @@ class OnlykeyAgent < Formula
   license "LGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "40cefa92f0d5c4731e68f3644ed709866812c183f918a38fca4942d4c94ad9b2"
-    sha256 cellar: :any,                 arm64_monterey: "01b73aa8e25376582594d4608f3df654a205c6a031e23f473983c50a0bf2ac91"
-    sha256 cellar: :any,                 arm64_big_sur:  "d24c00449096e9bcbd0697886351764cef17ebad83434c105b30275030ddb36d"
-    sha256 cellar: :any,                 ventura:        "a63443d6312052864fedd6442f0fe3d635cc717ac240e2b8ee9ceec9287eb46b"
-    sha256 cellar: :any,                 monterey:       "e33a66c8ddb49421e02750bd37aed93d4432b04d0207032fc0ec5ca3161d3059"
-    sha256 cellar: :any,                 big_sur:        "cad154b6b2d1f8535d61ad9f86e4e90e14a618b47ef031f7777a3f73851c9299"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4fa6463dc8d9ea868c623543a0b6d545bdc4ed2eb1d2621ed481ec1313a5175d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "10e32ee3d9eb220331ef7496e190a44b177d22324a5ad2afce39e86275647bc2"
+    sha256 cellar: :any,                 arm64_monterey: "7c055130103c137facc40c03233661ce75e5b35730259c435f09641ca7a2aa66"
+    sha256 cellar: :any,                 arm64_big_sur:  "55a2de9377341a27d8e7490296ae436d7b0c018e77057b3b1e7e8142d8209975"
+    sha256 cellar: :any,                 ventura:        "cc036fba4e522b6ef5654fc09bb0535cebe5a5ed9d9d69cf7fb9f9d616fac028"
+    sha256 cellar: :any,                 monterey:       "d8bd48a4f847711cb9828a57c2d930bebba855f1ff689381422aa8d1bfde643b"
+    sha256 cellar: :any,                 big_sur:        "8091b7fc189ac6fa79a536bc171d73f927f201fc80e7b0ee954f5c7dde29d352"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b1af29496a04c9b1fe6e61d167ffa7299c2c898ea6a953b134dc62144dbbad1"
   end
 
   # `pkg-config`, `rust`, and `openssl@3` are for cryptography.
@@ -29,6 +30,7 @@ class OnlykeyAgent < Formula
   depends_on "libusb"
   depends_on "openssl@3"
   depends_on "pycparser"
+  depends_on "python-certifi"
   depends_on "python@3.11"
   depends_on "six"
 
@@ -45,11 +47,6 @@ class OnlykeyAgent < Formula
   resource "bech32" do
     url "https://files.pythonhosted.org/packages/ab/fe/b67ac9b123e25a3c1b8fc3f3c92648804516ab44215adb165284e024c43f/bech32-1.2.0.tar.gz"
     sha256 "7d6db8214603bd7871fcfa6c0826ef68b85b0abd90fa21c285a9c5e21d2bd899"
-  end
-
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/93/71/752f7a4dd4c20d6b12341ed1732368546bc0ca9866139fe812f6009d9ac7/certifi-2023.5.7.tar.gz"
-    sha256 "0f0d56dc5a6ad56fd4ba36484d6cc34451e1c6548c61daad8c320169f91eddc7"
   end
 
   resource "charset-normalizer" do
