@@ -3,21 +3,19 @@ class Lexicon < Formula
 
   desc "Manipulate DNS records on various DNS providers in a standardized way"
   homepage "https://github.com/AnalogJ/lexicon"
-  url "https://files.pythonhosted.org/packages/68/64/2b492a6170ee1d90b3998d3de0f9fbd7eddb914a87ae0e0d511469b5e277/dns_lexicon-3.12.0.tar.gz"
-  sha256 "13eec59c2d9364288e88506f7d2dc5c295e9d15f0ddce3137535490669bdb5ff"
+  url "https://files.pythonhosted.org/packages/09/79/fbc54f9399a5861d625ba5db9ea26f182b904b07b63569dcfda95be62fa8/dns_lexicon-3.13.0.tar.gz"
+  sha256 "38e1db9f325e6dc92e8e5c80da24f1e15ab59598a67911e7aad987c2ff3456f6"
   license "MIT"
-  revision 4
   head "https://github.com/AnalogJ/lexicon.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f9fa6a74958edee6795ba942abd4ea0a7b2c0f5c3583603362d4c0b03464ded2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3e4c3b23f882214ce9b021febf6d9061884a38a8962f4eb8888dbe3698ff93b"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "293e58fbf639c1a7798be2c9de146f05d44b89c9f8ecd96536713128a09b187a"
-    sha256 cellar: :any_skip_relocation, ventura:        "3c56d25b58d3c7bf71159b434cba7713b39a2944c3979e90efbf966c11a8c2f1"
-    sha256 cellar: :any_skip_relocation, monterey:       "94e56d981b09a195be215cf118df78ac379975e94597cdc690f6274c35d3b8cb"
-    sha256 cellar: :any_skip_relocation, big_sur:        "97bf98b9fc792dd42411a33abf31eb4e83d8f1e2668ab7294164f3b3eb5bb481"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "415985439eeba9f59ecb258735d414f8d6b4ca9e8efabc22e06d1123c1c5e5f4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "628f4cf0523dd8e2c8ac910f96060f5e4b83d5fe6718af4e5d624b0c771b2fe2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "30b2d89b0f064b6f753f1aedc0e3cdd35268988bcc7b1ad8696032d35f0fa3ab"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "45763730eb43e538acb0a0ac064715ada754f721d00928db31a8c68765288b11"
+    sha256 cellar: :any_skip_relocation, ventura:        "eba16b2398a504b0ffe198dd17b94da02b973e467a7147b41ee4a37122bde450"
+    sha256 cellar: :any_skip_relocation, monterey:       "00ce7941f48bfa343e8a44f1aa032e41b95e522eafb92c1a78b21d5062a99c60"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8833513e120a317215581d5d5e32aab622ffb3b9ef722034972b915e10fa2276"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "65a5a57f42bc17f4ccc5cd8ab61f541b795bbc86bf640ae018464741f9998247"
   end
 
   depends_on "cffi"
@@ -43,13 +41,13 @@ class Lexicon < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/1b/f9/889e0c7d07bc5616d193d63b9600145d2d83f21a09fca40be078ef9323eb/boto3-1.28.17.tar.gz"
-    sha256 "90f7cfb5e1821af95b1fc084bc50e6c47fa3edc99f32de1a2591faa0c546bea7"
+    url "https://files.pythonhosted.org/packages/44/0c/b3146986fc4ea93b5d4fa3097417a1ae3a215ac54745fc28ffe390d2accc/boto3-1.28.21.tar.gz"
+    sha256 "0ad6932b2469f4fa4e63f4baf8508ccc1b1bc215b9c835df73505aa85210fc27"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/54/ce/3aced9653aa3b81aeda70574f342cd3014ecc36aff6a20e74c767f92864f/botocore-1.31.17.tar.gz"
-    sha256 "396459065dba4339eb4da4ec8b4e6599728eb89b7caaceea199e26f7d824a41c"
+    url "https://files.pythonhosted.org/packages/5a/ef/af6816f51dd07c8013686806a33ed80e878b714fb87a015d8315ba4c28c7/botocore-1.31.21.tar.gz"
+    sha256 "9a13736b16aea3f16829b00edfb2c656fee72ecbfe5eb396cc2f8632e31fd524"
   end
 
   resource "charset-normalizer" do
@@ -118,8 +116,8 @@ class Lexicon < Formula
   end
 
   resource "oci" do
-    url "https://files.pythonhosted.org/packages/4d/6b/507039f4c049e1270bb783c10e4b2a90f880d442e802c29368e2cb15fce5/oci-2.109.0.tar.gz"
-    sha256 "f44d3e5212dfc903bcca1dd0811379924709c1a2ada9341e6ca51b320ddac6e4"
+    url "https://files.pythonhosted.org/packages/86/b9/25b5017604c03d2922eb420e83262838d884aed9f35d080c75dd480e1014/oci-2.110.0.tar.gz"
+    sha256 "4503b781dcc74b62a538a963bfd3198e6f1513eb0e0fa3e7d4ed03132df0f1dd"
   end
 
   resource "platformdirs" do
