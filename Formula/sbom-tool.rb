@@ -1,16 +1,16 @@
 class SbomTool < Formula
   desc "Scalable and enterprise ready tool to create SBOMs for any variety of artifacts"
   homepage "https://github.com/microsoft/sbom-tool"
-  url "https://ghproxy.com/https://github.com/microsoft/sbom-tool/archive/refs/tags/v1.3.2.tar.gz"
-  sha256 "93663e975abbc2e9a010bc955c6c984a7bd5451cab2c23be6446755764af1ef4"
+  url "https://ghproxy.com/https://github.com/microsoft/sbom-tool/archive/refs/tags/v1.3.3.tar.gz"
+  sha256 "629925dc56fa02661e378a38bb55981c652eff4acf01747f27210ec073b2b200"
   license "MIT"
   head "https://github.com/microsoft/sbom-tool.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, ventura:      "7c27aeb0cc343d7c38aaffa1b04488b385b2236d2da9b957a5ea9e7a4346fb55"
-    sha256 cellar: :any_skip_relocation, monterey:     "7c27aeb0cc343d7c38aaffa1b04488b385b2236d2da9b957a5ea9e7a4346fb55"
-    sha256 cellar: :any_skip_relocation, big_sur:      "7c27aeb0cc343d7c38aaffa1b04488b385b2236d2da9b957a5ea9e7a4346fb55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d3bd12ae1efa11135123a95197f06e864a1671f2cf7927ac6e947ae6cdd3f55b"
+    sha256 cellar: :any_skip_relocation, ventura:      "d061f9ec47134282f9814d65391108a6f4fe3379a6bcf8286ec73f62c3cf36e5"
+    sha256 cellar: :any_skip_relocation, monterey:     "d061f9ec47134282f9814d65391108a6f4fe3379a6bcf8286ec73f62c3cf36e5"
+    sha256 cellar: :any_skip_relocation, big_sur:      "d061f9ec47134282f9814d65391108a6f4fe3379a6bcf8286ec73f62c3cf36e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9a9cdb6cf5adb55a097a1a68e3c1b513ff7e6e937680dc76b0c60dcf4521cb43"
   end
 
   depends_on "dotnet" => :build
