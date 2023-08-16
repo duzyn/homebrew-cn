@@ -33,7 +33,7 @@ cp -r ./homebrew-cask/Casks/* ./Casks/
 cp -r ./homebrew-cask-versions/Casks/* ./Casks/
 rm -rf ./homebrew-core ./homebrew-cask ./homebrew-cask-versions
 
-for file in ./Formula/*.rb ./Casks/*.rb; do
+for file in ./Formula/**/*.rb ./Casks/**/*.rb; do
     perl -pi -e 's#(github\.com/.+/releases/download)#ghproxy.com/https://\1#g;
                  s#(raw\.githubusercontent\.com)#ghproxy.com/https://\1#g;
                  s#(github\.com/.+/raw)#ghproxy.com/https://\1#g;
