@@ -1,7 +1,7 @@
 class Igraph < Formula
   desc "Network analysis package"
   homepage "https://igraph.org/"
-  url "https://github.com/igraph/igraph/releases/download/0.10.6/igraph-0.10.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/igraph/igraph/releases/download/0.10.6/igraph-0.10.6.tar.gz"
   sha256 "99bf91ee90febeeb9a201f3e0c1d323c09214f0b5f37a4290dc3b63f52839d6d"
   license "GPL-2.0-or-later"
 

@@ -1,7 +1,7 @@
 class Lsyncd < Formula
   desc "Synchronize local directories with remote targets"
   homepage "https://github.com/lsyncd/lsyncd"
-  url "https://github.com/lsyncd/lsyncd/archive/release-2.3.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/lsyncd/lsyncd/archive/release-2.3.1.tar.gz"
   sha256 "fc19a77b2258dc6dbb16a74f023de7cd62451c26984cedbec63e20ff22bcbdd8"
   license "GPL-2.0-or-later"
 
@@ -86,7 +86,7 @@ class Lsyncd < Formula
       xnu_headers.values.last # Fallback
     end
     resource "xnu" do
-      url "https://github.com/apple-oss-distributions/xnu/archive/refs/tags/#{tarball}"
+      url "https://ghproxy.com/https://github.com/apple-oss-distributions/xnu/archive/refs/tags/#{tarball}"
       sha256 checksum
     end
   end

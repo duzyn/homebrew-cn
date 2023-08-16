@@ -1,7 +1,7 @@
 class PgCron < Formula
   desc "Run periodic jobs in PostgreSQL"
   homepage "https://github.com/citusdata/pg_cron"
-  url "https://github.com/citusdata/pg_cron/archive/refs/tags/v1.5.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/citusdata/pg_cron/archive/refs/tags/v1.5.2.tar.gz"
   sha256 "6f7f0980c03f1e2a6a747060e67bf4a303ca2a50e941e2c19daeed2b44dec744"
   license "PostgreSQL"
 

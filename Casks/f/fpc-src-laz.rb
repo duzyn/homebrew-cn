@@ -2,7 +2,7 @@ cask "fpc-src-laz" do
   version "3.2.2-20210709,2.2.6"
   sha256 "c0ed6b9261679ba040cdf07f4f5d13d915184a4164b1addf5a81e19b0738e87a"
 
-  url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version.csv.second}/fpc-src-#{version.csv.first}-macosx.dmg",
+  url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version.csv.second}/fpc-src-#{version.csv.first}-macosx.dmg?use_mirror=nchc",
       verified: "sourceforge.net/lazarus/"
   name "Pascal compiler source files for Lazarus"
   desc "Pascal compiler source files for Lazarus"

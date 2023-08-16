@@ -1,7 +1,7 @@
 class Typedb < Formula
   desc "Strongly-typed database with a rich and logical type system"
   homepage "https://vaticle.com/"
-  url "https://github.com/vaticle/typedb/releases/download/2.21.0/typedb-all-mac-2.21.0.zip"
+  url "https://ghproxy.com/https://github.com/vaticle/typedb/releases/download/2.21.0/typedb-all-mac-2.21.0.zip"
   sha256 "0794a9ba19cbe5ae88bd70e0df6114ee6ada036834c388aa1972916ac1c67ad1"
   license "AGPL-3.0-or-later"
 

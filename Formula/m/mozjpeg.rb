@@ -1,7 +1,7 @@
 class Mozjpeg < Formula
   desc "Improved JPEG encoder"
   homepage "https://github.com/mozilla/mozjpeg"
-  url "https://github.com/mozilla/mozjpeg/archive/v4.1.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/mozilla/mozjpeg/archive/v4.1.3.tar.gz"
   sha256 "f6ce89f616b30c498d1fb3b0f0940914557d8393a79c9e7aafff72032446bca0"
   license "BSD-3-Clause"
 

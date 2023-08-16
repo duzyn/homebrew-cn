@@ -1,7 +1,7 @@
 class M1ddc < Formula
   desc "Control external displays (USB-C/DisplayPort Alt Mode) using DDC/CI on M1 Macs"
   homepage "https://github.com/waydabber/m1ddc"
-  url "https://github.com/waydabber/m1ddc/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/waydabber/m1ddc/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "884b65910e69915db29182363590d663a1a6d983e13ca5c41a74209058084c44"
   license "MIT"
   head "https://github.com/waydabber/m1ddc.git", branch: "main"

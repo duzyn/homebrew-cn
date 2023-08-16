@@ -2,7 +2,7 @@ cask "keka" do
   version "1.3.2"
   sha256 "b57ae7e7b6adf56ce56cb6eaf4c05c494948dd2ff35dceacaf94d7d845cec747"
 
-  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
   name "Keka"
   desc "File archiver"

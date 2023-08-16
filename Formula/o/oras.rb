@@ -1,7 +1,7 @@
 class Oras < Formula
   desc "OCI Registry As Storage"
   homepage "https://github.com/oras-project/oras"
-  url "https://github.com/oras-project/oras/archive/refs/tags/v1.0.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/oras-project/oras/archive/refs/tags/v1.0.1.tar.gz"
   sha256 "c0750d1837c449232ad8459dea55a7c660d822ce2d17a8a7882bfc3518b01646"
   license "Apache-2.0"
 

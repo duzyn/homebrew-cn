@@ -1,7 +1,7 @@
 class PythonAT37 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.7.17/Python-3.7.17.tar.xz"
+  url "https://npmmirror.com/mirrors/python/3.7.17/Python-3.7.17.tar.xz"
   sha256 "7911051ed0422fd54b8f59ffc030f7cf2ae30e0f61bda191800bb040dce4f9d2"
   license "Python-2.0"
 
@@ -63,7 +63,7 @@ class PythonAT37 < Formula
   # ourselves.
   # https://bugs.python.org/issue42504
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/c4bc563a8d008ebd0e8d927c043f6dd132d3ba89/python/big-sur-3.7.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/c4bc563a8d008ebd0e8d927c043f6dd132d3ba89/python/big-sur-3.7.patch"
     sha256 "67c99bdf0bbe0a640d70747aad514cd74602e7c4715fd15f1f9863eef257735e"
   end
 

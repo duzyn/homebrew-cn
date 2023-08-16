@@ -5,7 +5,7 @@ cask "go-shiori" do
   sha256 arm:   "6563b360479d4a184d364f4677b8504752f5a0452774917d1806b6e681b6161a",
          intel: "28871878ac6a24e68458453711caa386c181fe55c22af247448b42ab73816592"
 
-  url "https://github.com/go-shiori/shiori/releases/download/v#{version}/shiori_#{version}_Darwin_#{arch}.tar.gz"
+  url "https://ghproxy.com/https://github.com/go-shiori/shiori/releases/download/v#{version}/shiori_#{version}_Darwin_#{arch}.tar.gz"
   name "Shiori"
   desc "Shiori is a simple bookmarks manager written in the Go language"
   homepage "https://github.com/go-shiori/shiori"

@@ -1,7 +1,7 @@
 class IpinfoCli < Formula
   desc "Official CLI for the IPinfo IP Address API"
   homepage "https://ipinfo.io/"
-  url "https://github.com/ipinfo/cli/archive/ipinfo-3.0.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/ipinfo/cli/archive/ipinfo-3.0.1.tar.gz"
   sha256 "93d494510e903c032b9081ce84df3d97ec765d7e297b2b7bc7633606f520adaf"
   license "Apache-2.0"
 

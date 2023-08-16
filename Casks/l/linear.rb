@@ -2,7 +2,7 @@ cask "linear" do
   version "1.5"
   sha256 "a449b498e552fcc9de0f42a360f894d26e1796ce44ab1dc150fc87acab10a9c2"
 
-  url "https://github.com/mikaa123/linear/releases/download/#{version}/linear.zip",
+  url "https://ghproxy.com/https://github.com/mikaa123/linear/releases/download/#{version}/linear.zip",
       verified: "github.com/mikaa123/linear/"
   name "Linear"
   desc "Ruler app with web-development in mind"

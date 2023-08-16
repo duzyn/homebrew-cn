@@ -5,7 +5,7 @@ cask "hepta" do
   sha256 arm:   "cde129b38786bad10026416ffdb3f640a5000a29946be99596201d5c010bd830",
          intel: "6bdd7e12cac1c72fdd24bf4cac63f9d297b1a1d6172e157e64823092962cf71e"
 
-  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
+  url "https://ghproxy.com/https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
       verified: "github.com/heptameta/project-meta/"
   name "Hepta"
   desc "Note-taking tool for visual learning"

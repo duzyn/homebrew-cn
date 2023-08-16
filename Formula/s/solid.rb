@@ -1,7 +1,7 @@
 class Solid < Formula
   desc "Collision detection library for geometric objects in 3D space"
   homepage "https://github.com/dtecta/solid3/"
-  url "https://github.com/dtecta/solid3/archive/ec3e218616749949487f81165f8b478b16bc7932.tar.gz"
+  url "https://ghproxy.com/https://github.com/dtecta/solid3/archive/ec3e218616749949487f81165f8b478b16bc7932.tar.gz"
   version "3.5.8"
   sha256 "e3a23751ebbad5e35f50e685061f1ab9e1bd3777317efc6912567f55259d0f15"
   license any_of: ["GPL-2.0-only", "QPL-1.0"]

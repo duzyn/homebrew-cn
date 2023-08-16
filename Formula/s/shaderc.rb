@@ -4,7 +4,7 @@ class Shaderc < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/google/shaderc/archive/refs/tags/v2023.6.tar.gz"
+    url "https://ghproxy.com/https://github.com/google/shaderc/archive/refs/tags/v2023.6.tar.gz"
     sha256 "e40fd4a87a56f6610e223122179f086d5c4f11a7e0e2aa461f0325c3a0acc6ae"
 
     resource "glslang" do

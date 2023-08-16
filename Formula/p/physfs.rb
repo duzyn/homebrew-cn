@@ -1,7 +1,7 @@
 class Physfs < Formula
   desc "Library to provide abstract access to various archives"
   homepage "https://icculus.org/physfs/"
-  url "https://github.com/icculus/physfs/archive/refs/tags/release-3.2.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/icculus/physfs/archive/refs/tags/release-3.2.0.tar.gz"
   sha256 "1991500eaeb8d5325e3a8361847ff3bf8e03ec89252b7915e1f25b3f8ab5d560"
   license "Zlib"
   head "https://github.com/icculus/physfs.git", branch: "main"

@@ -39,7 +39,7 @@ class Freedink < Formula
 
   # Patch for recent SDL
   patch :p0 do
-    url "https://raw.githubusercontent.com/openbsd/ports/fc8b95c6/games/freedink/game/patches/patch-src_input_cpp"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/openbsd/ports/fc8b95c6/games/freedink/game/patches/patch-src_input_cpp"
     sha256 "fa06a8a87bd4f3977440cdde0fb6145b6e5b0005b266b19c059d3fd7c2ff836a"
   end
 

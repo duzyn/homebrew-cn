@@ -4,11 +4,11 @@ class Crystal < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/1.9.2.tar.gz"
+    url "https://ghproxy.com/https://github.com/crystal-lang/crystal/archive/1.9.2.tar.gz"
     sha256 "1e2e6974b0e2e152e5fae5388415ddb7e192378c8ac215c6f386fdaf9018e54f"
 
     resource "shards" do
-      url "https://github.com/crystal-lang/shards/archive/v0.17.3.tar.gz"
+      url "https://ghproxy.com/https://github.com/crystal-lang/shards/archive/v0.17.3.tar.gz"
       sha256 "6512ff51bd69057f4da4783eb6b14c29d9a88b97d35985356d1dc644a08424c7"
     end
   end
@@ -61,14 +61,14 @@ class Crystal < Formula
     version boot_version
 
     on_macos do
-      url "https://github.com/crystal-lang/crystal/releases/download/#{boot_version.major_minor_patch}/crystal-#{boot_version}-darwin-universal.tar.gz"
+      url "https://ghproxy.com/https://github.com/crystal-lang/crystal/releases/download/#{boot_version.major_minor_patch}/crystal-#{boot_version}-darwin-universal.tar.gz"
       # version boot_version
       sha256 "432c2fc992247f666db7e55fb15509441510831a72beba34affa2d76b6f2e092"
     end
 
     on_linux do
       on_intel do
-        url "https://github.com/crystal-lang/crystal/releases/download/#{boot_version.major_minor_patch}/crystal-#{boot_version}-linux-x86_64.tar.gz"
+        url "https://ghproxy.com/https://github.com/crystal-lang/crystal/releases/download/#{boot_version.major_minor_patch}/crystal-#{boot_version}-linux-x86_64.tar.gz"
         # version boot_version
         sha256 "a475c3d99dbe0f2d5a72d471fa25e03c124b599e47336eed746973b4b4d787bc"
       end
@@ -77,7 +77,7 @@ class Crystal < Formula
 
   # Check version in `shard.lock` in shards repo.
   resource "molinillo" do
-    url "https://github.com/crystal-lang/crystal-molinillo/archive/refs/tags/v0.2.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/crystal-lang/crystal-molinillo/archive/refs/tags/v0.2.0.tar.gz"
     sha256 "e231cf2411a6a11a1538983c7fb52b19e650acc3338bd3cdf6fdb13d6463861a"
   end
 

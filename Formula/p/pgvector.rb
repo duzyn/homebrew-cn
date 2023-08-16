@@ -1,7 +1,7 @@
 class Pgvector < Formula
   desc "Open-source vector similarity search for Postgres"
   homepage "https://github.com/pgvector/pgvector"
-  url "https://github.com/pgvector/pgvector/archive/v0.4.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/pgvector/pgvector/archive/v0.4.4.tar.gz"
   sha256 "1cb70a63f8928e396474796c22a20be9f7285a8a013009deb8152445b61b72e6"
   license "PostgreSQL"
 

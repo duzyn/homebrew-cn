@@ -1,7 +1,7 @@
 class Drafter < Formula
   desc "Native C/C++ API Blueprint Parser"
   homepage "https://apiblueprint.org/"
-  url "https://github.com/apiaryio/drafter/releases/download/v5.1.0/drafter-v5.1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/apiaryio/drafter/releases/download/v5.1.0/drafter-v5.1.0.tar.gz"
   sha256 "b3f60d9e77ace0d40d32b892b99852d3ed92e2fd358abd7f43d813c8dc473913"
   license "MIT"
   head "https://github.com/apiaryio/drafter.git", branch: "master"

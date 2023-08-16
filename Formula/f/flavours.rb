@@ -1,7 +1,7 @@
 class Flavours < Formula
   desc "Easy to use base16 scheme manager that integrates with any workflow"
   homepage "https://github.com/Misterio77/flavours"
-  url "https://github.com/Misterio77/flavours/archive/refs/tags/v0.7.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/Misterio77/flavours/archive/refs/tags/v0.7.1.tar.gz"
   sha256 "207002728cc270d92f4cd437384925e767c611d30520ec8a29816dfe600d7f61"
   license "MIT"
   head "https://github.com/Misterio77/flavours.git", branch: "master"

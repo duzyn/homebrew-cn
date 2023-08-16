@@ -1,7 +1,7 @@
 class Luvit < Formula
   desc "Asynchronous I/O for Lua"
   homepage "https://luvit.io"
-  url "https://github.com/luvit/luvit/archive/2.18.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/luvit/luvit/archive/2.18.1.tar.gz"
   sha256 "b792781d77028edb7e5761e96618c96162bd68747b8fced9a6fc52f123837c2c"
   license "Apache-2.0"
   revision 2
@@ -33,27 +33,27 @@ class Luvit < Formula
         revision: "84fc5d729f1088b3b93bc9a55d1f7a245bca861d"
 
     livecheck do
-      url "https://raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
       regex(/LIT_VERSION=["']?(\d+(?:\.\d+)+)["']?$/i)
     end
   end
 
   # To update this resource, check LUVI_VERSION in
-  # https://github.com/luvit/lit/raw/$(LIT_VERSION)/get-lit.sh
+  # https://ghproxy.com/https://github.com/luvit/lit/raw/$(LIT_VERSION)/get-lit.sh
   resource "luvi" do
     url "https://github.com/luvit/luvi.git",
         tag:      "v2.12.0",
         revision: "5d1052f11e813ff9edc3ec75b5282b3e6cb0f3bf"
 
     livecheck do
-      url "https://raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/luvit/luvit/#{LATEST_VERSION}/Makefile"
       regex(/LIT_VERSION=["']?(\d+(?:\.\d+)+)["']?$/i)
       strategy :page_match do |page, regex|
         lit_version = page[regex, 1]
         next if lit_version.blank?
 
         get_lit_page = Homebrew::Livecheck::Strategy.page_content(
-          "https://raw.githubusercontent.com/luvit/lit/#{lit_version}/get-lit.sh",
+          "https://ghproxy.com/https://raw.githubusercontent.com/luvit/lit/#{lit_version}/get-lit.sh",
         )
         next if get_lit_page[:content].blank?
 
@@ -72,7 +72,7 @@ class Luvit < Formula
   # Needed for OpenSSL 3 support. Remove when the `luvi`
   # resource has a new enough version as a submodule.
   resource "lua-openssl" do
-    url "https://github.com/zhaozg/lua-openssl/releases/download/0.8.3-1/openssl-0.8.3-1.tar.gz"
+    url "https://ghproxy.com/https://github.com/zhaozg/lua-openssl/releases/download/0.8.3-1/openssl-0.8.3-1.tar.gz"
     sha256 "d8c50601cb0a04e2dfbd8d8e57f4cf16a4fe59bdca8036deb8bc26f700f2eb8c"
   end
 

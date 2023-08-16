@@ -2,8 +2,8 @@ cask "lynkeos" do
   version "3.5"
   sha256 "b41f286e4adb8db578e975e65d842a79cd50bcf91dffb4a8885364d7f3fe7a45"
 
-  url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip",
-      verified: "downloads.sourceforge.net/lynkeos/"
+  url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip?use_mirror=nchc",
+      verified: "downloads.sourceforge.net/lynkeos/?use_mirror=nchc"
   name "Lynkeos"
   desc "Astronomical webcam image processing software"
   homepage "https://lynkeos.sourceforge.io/"

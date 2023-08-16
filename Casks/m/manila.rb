@@ -2,7 +2,7 @@ cask "manila" do
   version "1.0.1"
   sha256 "269e11c4f069293f3cd8b93f96f127ef3b62014983f7685efa9e50200796e43c"
 
-  url "https://github.com/neilsardesai/Manila/releases/download/v#{version}/Manila.zip"
+  url "https://ghproxy.com/https://github.com/neilsardesai/Manila/releases/download/v#{version}/Manila.zip"
   name "Manila"
   desc "Finder extension for changing folder colors"
   homepage "https://github.com/neilsardesai/Manila#readme"

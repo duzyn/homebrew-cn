@@ -43,14 +43,14 @@ class Podman < Formula
 
   resource "gvproxy" do
     on_macos do
-      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.7.0.tar.gz"
+      url "https://ghproxy.com/https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.7.0.tar.gz"
       sha256 "e526b8bf568a5145f4f265a8d450483be27c82717e60f4f22902589a78f68e1f"
     end
   end
 
   resource "catatonit" do
     on_linux do
-      url "https://github.com/openSUSE/catatonit/archive/refs/tags/v0.1.7.tar.gz"
+      url "https://ghproxy.com/https://github.com/openSUSE/catatonit/archive/refs/tags/v0.1.7.tar.gz"
       sha256 "e22bc72ebc23762dad8f5d2ed9d5ab1aaad567bdd54422f1d1da775277a93296"
 
       # Fix autogen.sh. Delete on next catatonit release.
@@ -63,14 +63,14 @@ class Podman < Formula
 
   resource "netavark" do
     on_linux do
-      url "https://github.com/containers/netavark/archive/refs/tags/v1.7.0.tar.gz"
+      url "https://ghproxy.com/https://github.com/containers/netavark/archive/refs/tags/v1.7.0.tar.gz"
       sha256 "b0ed7d80fd96ef2af88e7a001d91024919125e5842d9772de94648044630e116"
     end
   end
 
   resource "aardvark-dns" do
     on_linux do
-      url "https://github.com/containers/aardvark-dns/archive/refs/tags/v1.7.0.tar.gz"
+      url "https://ghproxy.com/https://github.com/containers/aardvark-dns/archive/refs/tags/v1.7.0.tar.gz"
       sha256 "6ee7dfa8bab8040b917959a2f57f25496ad036a2d933c6225114e2c1e68bab0b"
     end
   end

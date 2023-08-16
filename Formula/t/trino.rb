@@ -27,7 +27,7 @@ class Trino < Formula
   depends_on "python@3.11"
 
   resource "trino-src" do
-    url "https://github.com/trinodb/trino/archive/refs/tags/412.tar.gz", using: :nounzip
+    url "https://ghproxy.com/https://github.com/trinodb/trino/archive/refs/tags/412.tar.gz", using: :nounzip
     sha256 "20474865f2426048019c981d5bbefe18583549de4bc9b6cfbc2d6403283bc3b5"
   end
 

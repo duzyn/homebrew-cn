@@ -2,7 +2,7 @@ class Ispc < Formula
   desc "Compiler for SIMD programming on the CPU"
   homepage "https://ispc.github.io"
   # TODO: Check if we can use unversioned `llvm` at version bump.
-  url "https://github.com/ispc/ispc/archive/v1.20.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/ispc/ispc/archive/v1.20.0.tar.gz"
   sha256 "28a1de948fb8b6bbe81d981a4821306167c64c305e839708423abb6322cf3b22"
   license "BSD-3-Clause"
 

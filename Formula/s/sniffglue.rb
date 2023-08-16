@@ -1,7 +1,7 @@
 class Sniffglue < Formula
   desc "Secure multithreaded packet sniffer"
   homepage "https://github.com/kpcyrd/sniffglue"
-  url "https://github.com/kpcyrd/sniffglue/archive/v0.15.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/kpcyrd/sniffglue/archive/v0.15.0.tar.gz"
   sha256 "ac30c0748a4247d2a36b82d623e88863480c300d3f6bbbdc303077240a8292c5"
   license "GPL-3.0-or-later"
 
@@ -27,7 +27,7 @@ class Sniffglue < Formula
   end
 
   resource "homebrew-testdata" do
-    url "https://github.com/kpcyrd/sniffglue/raw/163ca299bab711fb0082de216d07d7089c176de6/pcaps/SkypeIRC.pcap"
+    url "https://ghproxy.com/https://github.com/kpcyrd/sniffglue/raw/163ca299bab711fb0082de216d07d7089c176de6/pcaps/SkypeIRC.pcap"
     sha256 "bac79a9c3413637f871193589d848697af895b7f2700d949022224d59aa6830f"
   end
 

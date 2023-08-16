@@ -1,7 +1,7 @@
 class Gcem < Formula
   desc "C++ compile-time math library"
   homepage "https://gcem.readthedocs.io/en/latest/"
-  url "https://github.com/kthohr/gcem/archive/refs/tags/v1.17.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/kthohr/gcem/archive/refs/tags/v1.17.0.tar.gz"
   sha256 "74cc499e2db247c32f1ce82fc22022d22e0f0a110ecd19281269289a9e78a6f8"
   license "Apache-2.0"
 

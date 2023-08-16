@@ -2,8 +2,8 @@ cask "xampp7" do
   version "7.4.33-0"
   sha256 "25e198875d734f510dde7a3d3b85762b6a8b7bf50c2272a116a68a6acb9b19f8"
 
-  url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-installer.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/xampp/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-installer.dmg",
+      verified: "downloads.sourceforge.net/xampp/"
   name "XAMPP"
   desc "Apache distribution containing MySQL, PHP 7, and Perl"
   homepage "https://www.apachefriends.org/index.html"

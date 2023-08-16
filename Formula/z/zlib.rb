@@ -2,7 +2,7 @@ class Zlib < Formula
   desc "General-purpose lossless data-compression library"
   homepage "https://zlib.net/"
   url "https://zlib.net/zlib-1.2.13.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.13/zlib-1.2.13.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/libpng/zlib/1.2.13/zlib-1.2.13.tar.gz?use_mirror=nchc"
   mirror "http://fresh-center.net/linux/misc/zlib-1.2.13.tar.gz"
   mirror "http://fresh-center.net/linux/misc/legacy/zlib-1.2.13.tar.gz"
   sha256 "b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30"

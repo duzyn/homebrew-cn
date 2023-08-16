@@ -30,7 +30,7 @@ class Usbutils < Formula
   conflicts_with "lsusb", because: "both provide an `lsusb` binary"
 
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9ef20debdfb9995fec347e401f2b5eb7b6c76f07/usbutils/portable.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/9ef20debdfb9995fec347e401f2b5eb7b6c76f07/usbutils/portable.patch"
     sha256 "645cf353cd2ce0c0ee4f8c4129c3b39488c23d0ab13f4cfdef07f55f23381933"
   end
 

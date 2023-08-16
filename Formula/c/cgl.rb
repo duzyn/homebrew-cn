@@ -1,7 +1,7 @@
 class Cgl < Formula
   desc "Cut Generation Library"
   homepage "https://github.com/coin-or/Cgl"
-  url "https://github.com/coin-or/Cgl/archive/releases/0.60.7.tar.gz"
+  url "https://ghproxy.com/https://github.com/coin-or/Cgl/archive/releases/0.60.7.tar.gz"
   sha256 "93b30a80b5d2880c2e72d5877c64bdeaf4d7c1928b3194ea2f88b1aa4517fb1b"
   license "EPL-2.0"
 
@@ -26,7 +26,7 @@ class Cgl < Formula
   depends_on "osi"
 
   resource "coin-or-tools-data-sample-p0033-mps" do
-    url "https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.12/p0033.mps"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.12/p0033.mps"
     sha256 "8ccff819023237c79ef32e238a5da9348725ce9a4425d48888baf3a0b3b42628"
   end
 

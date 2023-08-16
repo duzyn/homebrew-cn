@@ -5,7 +5,7 @@ class Nut < Formula
   revision 1
 
   stable do
-    url "https://github.com/networkupstools/nut/releases/download/v2.8.0-signed/nut-2.8.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/networkupstools/nut/releases/download/v2.8.0-signed/nut-2.8.0.tar.gz"
     sha256 "c3e5a708da797b7c70b653d37b1206a000fcb503b85519fe4cdf6353f792bfe5"
 
     # fix build failure

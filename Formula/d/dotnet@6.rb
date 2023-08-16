@@ -61,7 +61,7 @@ class DotnetAT6 < Formula
   # TODO: Remove once script is fixed.
   # Issue ref: https://github.com/dotnet/install-scripts/issues/318
   resource "dotnet-install.sh" do
-    url "https://raw.githubusercontent.com/dotnet/install-scripts/dac53157fcb7e02638507144bf5f8f019c1d23a8/src/dotnet-install.sh"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/dotnet/install-scripts/dac53157fcb7e02638507144bf5f8f019c1d23a8/src/dotnet-install.sh"
     sha256 "e96eabccea61bbbef3402e23f1889d385a6ae7ad84fe1d8f53f2507519ad86f7"
   end
 
@@ -76,7 +76,7 @@ class DotnetAT6 < Formula
   # TODO: Remove once backport PR is merged and available in a release
   # PR ref: https://github.com/dotnet/installer/pull/14816
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/f206f7a45b330cce79e6bfe9116fccd93b0d3ed8/dotnet/aspnetcore-version.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f206f7a45b330cce79e6bfe9116fccd93b0d3ed8/dotnet/aspnetcore-version.patch"
     sha256 "00103452e2f52831c04007f1b7f9fcd5ecddf0671943657104f0ac8d3a9ca613"
   end
 

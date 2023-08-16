@@ -5,7 +5,7 @@ cask "pritunl" do
   sha256 arm:   "76229bfd257c95b4c783f6712417975b493392422102a8718a14a1396d0b19b8",
          intel: "fe1b7e81fefcb5d478d9a89404c474fed4630e5f61182bca2811810700f701bb"
 
-  url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl#{arch}.pkg.zip",
+  url "https://ghproxy.com/https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl#{arch}.pkg.zip",
       verified: "github.com/pritunl/pritunl-client-electron/"
   name "Pritunl"
   desc "OpenVPN client"

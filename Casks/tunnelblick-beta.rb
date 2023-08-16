@@ -2,7 +2,7 @@ cask "tunnelblick-beta" do
   version "4.0.0beta08,5880"
   sha256 "8a9659a8f4589dced31c6f1a2cc8a9052bbd7ae54add723d19cbf66db46e660d"
 
-  url "https://ghproxy.com/https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.csv.first}/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg",
+  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.csv.first}/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"
   name "Tunnelblick"
   desc "Free and open source graphic user interface for OpenVPN"

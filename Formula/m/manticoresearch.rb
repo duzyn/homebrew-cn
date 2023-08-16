@@ -1,7 +1,7 @@
 class Manticoresearch < Formula
   desc "Open source text search engine"
   homepage "https://www.manticoresearch.com"
-  url "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/6.0.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/6.0.4.tar.gz"
   sha256 "5081f4f60152d041f14fdaf993f4cc67b127e76c970b58db9bc9532cd1325d8a"
   license "GPL-2.0-only"
   revision 2

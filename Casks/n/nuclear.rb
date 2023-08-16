@@ -2,7 +2,7 @@ cask "nuclear" do
   version "0.6.30"
   sha256 "206daca8686562def115c969209ac13700138f918fa82dedb3a0f1eb8b1c1935"
 
-  url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}.dmg",
       verified: "github.com/nukeop/nuclear/"
   name "Nuclear"
   desc "Streaming music player"

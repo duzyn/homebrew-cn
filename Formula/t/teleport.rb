@@ -1,7 +1,7 @@
 class Teleport < Formula
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://gravitational.com/teleport"
-  url "https://github.com/gravitational/teleport/archive/refs/tags/v13.3.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/gravitational/teleport/archive/refs/tags/v13.3.2.tar.gz"
   sha256 "f0b2e4a24e7d6fc4c73e8b3fd90b34b839669ab1358a649efc29e24fc9ba3bcc"
   license "Apache-2.0"
   head "https://github.com/gravitational/teleport.git", branch: "master"

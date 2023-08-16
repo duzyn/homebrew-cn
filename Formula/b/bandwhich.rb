@@ -1,7 +1,7 @@
 class Bandwhich < Formula
   desc "Terminal bandwidth utilization tool"
   homepage "https://github.com/imsnif/bandwhich"
-  url "https://github.com/imsnif/bandwhich/archive/0.20.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/imsnif/bandwhich/archive/0.20.0.tar.gz"
   sha256 "4bbf05be32439049edd50bd1e4d5a2a95b0be8d36782e4100732f0cc9f19ba12"
   license "MIT"
 
@@ -23,7 +23,7 @@ class Bandwhich < Formula
   # upstream issue, https://github.com/imsnif/bandwhich/issues/258
   # upstream PR, https://github.com/imsnif/bandwhich/pull/259
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/96bfb409db46dfe53b76da7682ddcf650af45921/bandwhich/0.20.0.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/96bfb409db46dfe53b76da7682ddcf650af45921/bandwhich/0.20.0.patch"
     sha256 "ea446f63c9e766ab9c987c83f1ca5f6759175df4e2b3e377604fd87a2b0b26de"
   end
 

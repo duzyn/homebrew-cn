@@ -1,7 +1,7 @@
 class BatExtras < Formula
   desc "Bash scripts that integrate bat with various command-line tools"
   homepage "https://github.com/eth-p/bat-extras"
-  url "https://github.com/eth-p/bat-extras/archive/refs/tags/v2023.06.15.tar.gz"
+  url "https://ghproxy.com/https://github.com/eth-p/bat-extras/archive/refs/tags/v2023.06.15.tar.gz"
   sha256 "8a4dbf5b09c11ce1ad605118c73cbf6635ec2b07b5723f9a02417ba10da1ef14"
   license "MIT"
 

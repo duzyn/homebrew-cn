@@ -1,7 +1,7 @@
 class NumpyAT116 < Formula
   desc "Package for scientific computing with Python"
   homepage "https://www.numpy.org/"
-  url "https://github.com/numpy/numpy/releases/download/v1.16.6/numpy-1.16.6.zip"
+  url "https://ghproxy.com/https://github.com/numpy/numpy/releases/download/v1.16.6/numpy-1.16.6.zip"
   sha256 "e5cf3fdf13401885e8eea8170624ec96225e2174eb0c611c6f26dd33b489e3ff"
   license "BSD-3-Clause"
   revision 1

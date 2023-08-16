@@ -2,7 +2,7 @@ cask "logdna-agent" do
   version "2.2.2"
   sha256 "033077ff2acd4e3f7eacab5c94b07db459d50d788be62a8a091ffa9cb759e41d"
 
-  url "https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent-#{version}.pkg",
+  url "https://ghproxy.com/https://github.com/logdna/logdna-agent/releases/download/#{version}/logdna-agent-#{version}.pkg",
       verified: "github.com/logdna/logdna-agent/"
   name "LogDNA Agent"
   desc "Agent streams from log files to your LogDNA account"

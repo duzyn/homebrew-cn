@@ -1,7 +1,7 @@
 class Ps2eps < Formula
   desc "Convert PostScript to EPS files"
   homepage "https://github.com/roland-bless/ps2eps"
-  url "https://github.com/roland-bless/ps2eps/archive/refs/tags/v1.70.tar.gz"
+  url "https://ghproxy.com/https://github.com/roland-bless/ps2eps/archive/refs/tags/v1.70.tar.gz"
   sha256 "cd7064e3787ddb79246d78dc8f76104007a21c2f97280b1bed3e7d273af97945"
   license "GPL-2.0-or-later"
 

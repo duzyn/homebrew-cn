@@ -12,7 +12,7 @@ cask "openemu-experimental" do
     sha256 "8b91fecfb0fd58ffc03abca00d6df2c519c396b955072c6c209d53018f921cf7"
   end
 
-  url "https://ghproxy.com/https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}-experimental.zip",
+  url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}-experimental.zip",
       verified: "github.com/OpenEmu/OpenEmu/"
   name "OpenEmu"
   desc "Retro video game emulation"

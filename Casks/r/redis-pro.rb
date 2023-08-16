@@ -2,7 +2,7 @@ cask "redis-pro" do
   version "2.5.2"
   sha256 "45adfeb225a795740060ee43d31c3b0a34542416941cbd60f84c1c51c22e1ca0"
 
-  url "https://github.com/cmushroom/redis-pro/releases/download/#{version}/redis-pro.dmg"
+  url "https://ghproxy.com/https://github.com/cmushroom/redis-pro/releases/download/#{version}/redis-pro.dmg"
   name "redis-pro"
   desc "Redis desktop"
   homepage "https://github.com/cmushroom/redis-pro"

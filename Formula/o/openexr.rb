@@ -1,7 +1,7 @@
 class Openexr < Formula
   desc "High dynamic-range image file format"
   homepage "https://www.openexr.com/"
-  url "https://github.com/AcademySoftwareFoundation/openexr/archive/v3.1.10.tar.gz"
+  url "https://ghproxy.com/https://github.com/AcademySoftwareFoundation/openexr/archive/v3.1.10.tar.gz"
   sha256 "6e0fd3f0eb1cb907bd3593830ea2b3431b85f22a6f18f99f8cfa099fec70067d"
   license "BSD-3-Clause"
 
@@ -29,7 +29,7 @@ class Openexr < Formula
   link_overwrite "lib/libIlmThread.so"
 
   resource "homebrew-exr" do
-    url "https://github.com/AcademySoftwareFoundation/openexr-images/raw/f17e353fbfcde3406fe02675f4d92aeae422a560/TestImages/AllHalfValues.exr"
+    url "https://ghproxy.com/https://github.com/AcademySoftwareFoundation/openexr-images/raw/f17e353fbfcde3406fe02675f4d92aeae422a560/TestImages/AllHalfValues.exr"
     sha256 "eede573a0b59b79f21de15ee9d3b7649d58d8f2a8e7787ea34f192db3b3c84a4"
   end
 

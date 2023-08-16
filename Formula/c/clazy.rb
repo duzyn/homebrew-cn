@@ -1,7 +1,7 @@
 class Clazy < Formula
   desc "Qt oriented static code analyzer"
   homepage "https://www.kdab.com/"
-  url "https://download.kde.org/stable/clazy/1.11/src/clazy-1.11.tar.xz"
+  url "https://mirrors.ustc.edu.cn/kde/stable/clazy/1.11/src/clazy-1.11.tar.xz"
   sha256 "66165df33be8785218720c8947aa9099bae6d06c90b1501953d9f95fdfa0120a"
   license "LGPL-2.0-or-later"
   revision 2

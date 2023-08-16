@@ -36,7 +36,7 @@ class Wxpython < Formula
   # TODO: Try to use Homebrew `doxygen` at next release.
   resource "doxygen" do
     url "https://doxygen.nl/files/doxygen-1.9.6.src.tar.gz"
-    mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.6/doxygen-1.9.6.src.tar.gz"
+    mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.6/doxygen-1.9.6.src.tar.gz?use_mirror=nchc"
     sha256 "297f8ba484265ed3ebd3ff3fe7734eb349a77e4f95c8be52ed9977f51dea49df"
   end
 

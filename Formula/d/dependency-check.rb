@@ -1,7 +1,7 @@
 class DependencyCheck < Formula
   desc "OWASP dependency-check"
   homepage "https://owasp.org/www-project-dependency-check/"
-  url "https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.1/dependency-check-8.3.1-release.zip"
+  url "https://ghproxy.com/https://github.com/jeremylong/DependencyCheck/releases/download/v8.3.1/dependency-check-8.3.1-release.zip"
   sha256 "9f2e272d270f2b23d3c29870f372acedcce9befb1c884407edab9576d1423eb1"
   license "Apache-2.0"
 

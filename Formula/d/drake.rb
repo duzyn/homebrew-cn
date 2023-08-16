@@ -1,7 +1,7 @@
 class Drake < Formula
   desc "Data workflow tool meant to be 'make for data'"
   homepage "https://github.com/Factual/drake"
-  url "https://github.com/Factual/drake/archive/refs/tags/1.0.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/Factual/drake/archive/refs/tags/1.0.3.tar.gz"
   sha256 "49c22b84f4059c1af905f92e276ac8a7aa80a8c236aca4c06df9b6c676b2cff7"
   license "EPL-1.0"
   head "https://github.com/Factual/drake.git", branch: "develop"
@@ -15,7 +15,7 @@ class Drake < Formula
   depends_on "openjdk@8"
 
   resource "jar" do
-    url "https://github.com/Factual/drake/releases/download/1.0.3/drake.jar"
+    url "https://ghproxy.com/https://github.com/Factual/drake/releases/download/1.0.3/drake.jar"
     sha256 "c9c5b109a900b6f30257425feee7a4e05ef11cc34cf227b04207a2f8645316af"
   end
 

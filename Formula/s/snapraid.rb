@@ -1,7 +1,7 @@
 class Snapraid < Formula
   desc "Backup program for disk arrays"
   homepage "https://www.snapraid.it/"
-  url "https://github.com/amadvance/snapraid/releases/download/v12.2/snapraid-12.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/amadvance/snapraid/releases/download/v12.2/snapraid-12.2.tar.gz"
   sha256 "9d30993aef7fd390369dcaf422ac35f3990e8c91f0fb26151f5b84ccb73d3e01"
   license "GPL-3.0"
 

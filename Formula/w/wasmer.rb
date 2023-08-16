@@ -1,7 +1,7 @@
 class Wasmer < Formula
   desc "Universal WebAssembly Runtime"
   homepage "https://wasmer.io"
-  url "https://github.com/wasmerio/wasmer/archive/refs/tags/v4.1.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/wasmerio/wasmer/archive/refs/tags/v4.1.1.tar.gz"
   sha256 "84dd57c798bd8041a1adb1aa65aacccdb11687b64f0e134ef7a5b61fa44ab2f3"
   license "MIT"
   head "https://github.com/wasmerio/wasmer.git", branch: "master"

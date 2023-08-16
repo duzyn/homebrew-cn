@@ -2,7 +2,7 @@ cask "gutenprint" do
   version "5.3.3"
   sha256 "6dd810482845604a1e17fc3aef48a03d178798c14fe6f106a443f5af14022519"
 
-  url "https://downloads.sourceforge.net/gimp-print/gutenprint-#{version.major_minor}/#{version}/gutenprint-#{version}.dmg"
+  url "https://downloads.sourceforge.net/gimp-print/gutenprint-#{version.major_minor}/#{version}/gutenprint-#{version}.dmg?use_mirror=nchc"
   name "Gutenprint"
   desc "Drivers for various printers for use with CUPS and GIMP"
   homepage "https://gimp-print.sourceforge.net/"

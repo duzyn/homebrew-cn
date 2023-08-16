@@ -5,7 +5,7 @@ cask "chatall" do
   sha256 arm:   "6019f7836a585fd06b98a2c8718b2d17c4d71b48799ccb061772de7aab2f4046",
          intel: "e3c160a950116c1c4b1f47452eb0d5d879364590722cc241ca29b92f34d5818e"
 
-  url "https://github.com/sunner/ChatALL/releases/download/v#{version}/ChatALL-#{version}-mac-#{arch}.dmg"
+  url "https://ghproxy.com/https://github.com/sunner/ChatALL/releases/download/v#{version}/ChatALL-#{version}-mac-#{arch}.dmg"
   name "ChatALL"
   desc "Concurrently chat with ChatGPT, Bing Chat, Bard, Claude, ChatGLM and more"
   homepage "https://github.com/sunner/ChatALL"

@@ -2,7 +2,7 @@ cask "batteries" do
   version "2.2.8"
   sha256 "f7fce2db2466fa46afd30fcc09ca0269ee7727583776355b376aa409fb39c191"
 
-  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
+  url "https://ghproxy.com/https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
       verified: "github.com/ronyfadel/BatteriesReleases/"
   name "Batteries"
   desc "Track all your devices' batteries"

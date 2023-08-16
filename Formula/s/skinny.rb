@@ -1,7 +1,7 @@
 class Skinny < Formula
   desc "Full-stack web app framework in Scala"
   homepage "https://skinny-framework.github.io"
-  url "https://github.com/skinny-framework/skinny-framework/releases/download/4.0.1/skinny-4.0.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/skinny-framework/skinny-framework/releases/download/4.0.1/skinny-4.0.1.tar.gz"
   sha256 "2382ba97f799bfc772ee79b2c084c63a1278ddd89de8dacd4ba6433f41294812"
   license "MIT"
 

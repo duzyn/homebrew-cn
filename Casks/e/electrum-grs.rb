@@ -2,7 +2,7 @@ cask "electrum-grs" do
   version "4.4.4"
   sha256 "d3f912d12b6468bdebcd63353d785cabd5efe19a36627439fac05f67e0fe37f9"
 
-  url "https://github.com/groestlcoin/electrum-grs/releases/download/v#{version}/electrum-grs-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/groestlcoin/electrum-grs/releases/download/v#{version}/electrum-grs-#{version}.dmg",
       verified: "github.com/groestlcoin/electrum-grs/"
   name "Electrum-GRS"
   desc "Groestlcoin thin client"

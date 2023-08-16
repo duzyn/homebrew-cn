@@ -1,7 +1,7 @@
 class Kustomizer < Formula
   desc "Package manager for distributing Kubernetes configuration as OCI artifacts"
   homepage "https://github.com/stefanprodan/kustomizer"
-  url "https://github.com/stefanprodan/kustomizer/archive/refs/tags/v2.2.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/stefanprodan/kustomizer/archive/refs/tags/v2.2.1.tar.gz"
   sha256 "bba48e2eed5b84111c39b34d9892ffc9f0575b6f6470d50f832f47ff6417bf03"
   license "Apache-2.0"
   head "https://github.com/stefanprodan/kustomizer.git", branch: "main"

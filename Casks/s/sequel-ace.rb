@@ -2,7 +2,7 @@ cask "sequel-ace" do
   version "4.0.7,20050"
   sha256 "c936a3d87be11b018a07f62a681918583dc1f60a67fca4be8e84f1a34cad0623"
 
-  url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.csv.first}-#{version.csv.second}/Sequel-Ace-#{version.csv.first}.zip"
+  url "https://ghproxy.com/https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.csv.first}-#{version.csv.second}/Sequel-Ace-#{version.csv.first}.zip"
   name "Sequel Ace"
   desc "MySQL/MariaDB database management"
   homepage "https://github.com/Sequel-Ace/Sequel-Ace"

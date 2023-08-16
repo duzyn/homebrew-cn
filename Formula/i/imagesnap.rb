@@ -1,7 +1,7 @@
 class Imagesnap < Formula
   desc "Tool to capture still images from an iSight or other video source"
   homepage "https://github.com/rharder/imagesnap"
-  url "https://github.com/rharder/imagesnap/archive/refs/tags/0.2.16.tar.gz"
+  url "https://ghproxy.com/https://github.com/rharder/imagesnap/archive/refs/tags/0.2.16.tar.gz"
   sha256 "103610515aae71fe1eea6bea15b2b48542f88042515d404fb4d0a18f44120a9a"
   license :public_domain
 

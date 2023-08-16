@@ -1,7 +1,7 @@
 class Snownews < Formula
   desc "Text mode RSS newsreader"
   homepage "https://sourceforge.net/projects/snownews/"
-  url "https://downloads.sourceforge.net/project/snownews/snownews-1.11.tar.gz"
+  url "https://downloads.sourceforge.net/project/snownews/snownews-1.11.tar.gz?use_mirror=nchc"
   sha256 "afd4db7c770f461a49e78bc36e97711f3066097b485319227e313ba253902467"
   license "GPL-3.0-only"
   revision 1

@@ -417,7 +417,7 @@ class Duplicity < Formula
   # Using GitHub tarball as requirements.txt is missing from PyPI tarball.
   # Issue ref: https://github.com/dropbox/stone/issues/266
   resource "stone" do
-    url "https://github.com/dropbox/stone/archive/refs/tags/v3.3.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/dropbox/stone/archive/refs/tags/v3.3.1.tar.gz"
     sha256 "dc5aff3fad1333188d4ddb4eee0a19d31e6262bb3cdf10c0bbdaeb309ff91a52"
   end
 

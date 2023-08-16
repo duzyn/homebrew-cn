@@ -1,7 +1,7 @@
 class Libbitcoin < Formula
   desc "Bitcoin Cross-Platform C++ Development Toolkit"
   homepage "https://github.com/libbitcoin/libbitcoin-system"
-  url "https://github.com/libbitcoin/libbitcoin-system/archive/v3.6.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/libbitcoin/libbitcoin-system/archive/v3.6.0.tar.gz"
   sha256 "5bcc4c31b53acbc9c0d151ace95d684909db4bf946f8d724f76c711934c6775c"
   license "AGPL-3.0-or-later"
   revision 8
@@ -32,7 +32,7 @@ class Libbitcoin < Formula
   depends_on "qrencode"
 
   resource "secp256k1" do
-    url "https://github.com/libbitcoin/secp256k1/archive/v0.1.0.13.tar.gz"
+    url "https://ghproxy.com/https://github.com/libbitcoin/secp256k1/archive/v0.1.0.13.tar.gz"
     sha256 "9e48dbc88d0fb5646d40ea12df9375c577f0e77525e49833fb744d3c2a69e727"
   end
 

@@ -1,7 +1,7 @@
 class F3d < Formula
   desc "Fast and minimalist 3D viewer"
   homepage "https://f3d-app.github.io/f3d/"
-  url "https://github.com/f3d-app/f3d/archive/refs/tags/v2.1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/f3d-app/f3d/archive/refs/tags/v2.1.0.tar.gz"
   sha256 "3e5e6c2c16da4d7ccce8b6e316ab8007592a2bc0fc11a513f1ebac8c7f0f95d2"
   license "BSD-3-Clause"
 

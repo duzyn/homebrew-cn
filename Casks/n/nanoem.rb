@@ -2,7 +2,7 @@ cask "nanoem" do
   version "34.9.0"
   sha256 "393395fbb96e7ee571ac93284a8e4eaa0a54b2900c64449c9d83d0e03377a701"
 
-  url "https://github.com/hkrn/nanoem/releases/download/v#{version}/nanoem-v#{version}-macos.zip"
+  url "https://ghproxy.com/https://github.com/hkrn/nanoem/releases/download/v#{version}/nanoem-v#{version}-macos.zip"
   name "nanoem"
   desc "Cross-platform MMD (MikuMikuDance) compatible implementation"
   homepage "https://github.com/hkrn/nanoem"

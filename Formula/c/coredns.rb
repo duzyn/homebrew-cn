@@ -5,7 +5,7 @@ class Coredns < Formula
   head "https://github.com/coredns/coredns.git", branch: "master"
 
   stable do
-    url "https://github.com/coredns/coredns/archive/v1.11.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/coredns/coredns/archive/v1.11.0.tar.gz"
     sha256 "967c12d2b170b7eb46314edf01013d1547932f62e963a68b5e57cc4c10f966b6"
 
     # quic-go patch for go 1.21.0

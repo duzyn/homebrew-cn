@@ -2,8 +2,8 @@ cask "gretl" do
   version "2023b"
   sha256 "307c0d6ae748c80f9a64f12c827523b6fd7ac32265cb94594afc8a5f45d71cda"
 
-  url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-intel.pkg",
-      verified: "downloads.sourceforge.net/gretl/"
+  url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-intel.pkg?use_mirror=nchc",
+      verified: "downloads.sourceforge.net/gretl/?use_mirror=nchc"
   name "gretl"
   desc "Software package for econometric analysis"
   homepage "https://gretl.sourceforge.io/"

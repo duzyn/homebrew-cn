@@ -1,7 +1,7 @@
 class Asnmap < Formula
   desc "Quickly map organization network ranges using ASN information"
   homepage "https://github.com/projectdiscovery/asnmap"
-  url "https://github.com/projectdiscovery/asnmap/archive/refs/tags/v1.0.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/projectdiscovery/asnmap/archive/refs/tags/v1.0.4.tar.gz"
   sha256 "e29eddad2a760f012e6b33973d199d7a7f8ae0b3af72c84359c426b1b0cf639f"
   license "MIT"
   head "https://github.com/projectdiscovery/asnmap.git", branch: "main"

@@ -1,7 +1,7 @@
 class Libgraphqlparser < Formula
   desc "GraphQL query parser in C++ with C and C++ APIs"
   homepage "https://github.com/graphql/libgraphqlparser"
-  url "https://github.com/graphql/libgraphqlparser/archive/0.7.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/graphql/libgraphqlparser/archive/0.7.0.tar.gz"
   sha256 "63dae018f970dc2bdce431cbafbfa0bd3e6b10bba078bb997a3c1a40894aa35c"
   license "MIT"
   revision 1

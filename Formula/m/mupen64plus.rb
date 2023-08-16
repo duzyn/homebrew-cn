@@ -1,7 +1,7 @@
 class Mupen64plus < Formula
   desc "Cross-platform plugin-based N64 emulator"
   homepage "https://www.mupen64plus.org/"
-  url "https://github.com/mupen64plus/mupen64plus-core/releases/download/2.5/mupen64plus-bundle-src-2.5.tar.gz"
+  url "https://ghproxy.com/https://github.com/mupen64plus/mupen64plus-core/releases/download/2.5/mupen64plus-bundle-src-2.5.tar.gz"
   sha256 "9c75b9d826f2d24666175f723a97369b3a6ee159b307f7cc876bbb4facdbba66"
   license "GPL-2.0-or-later"
   revision 5
@@ -31,7 +31,7 @@ class Mupen64plus < Formula
   end
 
   resource "rom" do
-    url "https://github.com/mupen64plus/mupen64plus-rom/raw/76ef14c876ed036284154444c7bdc29d19381acc/m64p_test_rom.v64"
+    url "https://ghproxy.com/https://github.com/mupen64plus/mupen64plus-rom/raw/76ef14c876ed036284154444c7bdc29d19381acc/m64p_test_rom.v64"
     sha256 "b5fe9d650a67091c97838386f5102ad94c79232240f9c5bcc72334097d76224c"
   end
 

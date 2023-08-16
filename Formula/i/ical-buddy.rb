@@ -1,7 +1,7 @@
 class IcalBuddy < Formula
   desc "Get events and tasks from the macOS calendar database"
   homepage "https://hasseg.org/icalBuddy/"
-  url "https://github.com/dkaluta/icalBuddy64/archive/refs/tags/v1.10.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/dkaluta/icalBuddy64/archive/refs/tags/v1.10.1.tar.gz"
   sha256 "aff42b809044efbf9a1f7df7598e9e110c1c4de0a4c27ddccde5ea325ddc4b77"
   license "MIT"
   revision 1

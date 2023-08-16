@@ -1,7 +1,7 @@
 class HapiFhirCli < Formula
   desc "Command-line interface for the HAPI FHIR library"
   homepage "https://hapifhir.io/"
-  url "https://github.com/hapifhir/hapi-fhir/releases/download/v6.6.2/hapi-fhir-6.6.2-cli.zip"
+  url "https://ghproxy.com/https://github.com/hapifhir/hapi-fhir/releases/download/v6.6.2/hapi-fhir-6.6.2-cli.zip"
   sha256 "b8b33345239ee955cda1847733d9b57d8d00cb68cb1cc5e134d1414e79d404f7"
   license "Apache-2.0"
 
@@ -22,7 +22,7 @@ class HapiFhirCli < Formula
   depends_on "openjdk"
 
   resource "homebrew-test_resource" do
-    url "https://github.com/hapifhir/hapi-fhir/raw/v5.4.0/hapi-fhir-structures-dstu3/src/test/resources/specimen-example.json"
+    url "https://ghproxy.com/https://github.com/hapifhir/hapi-fhir/raw/v5.4.0/hapi-fhir-structures-dstu3/src/test/resources/specimen-example.json"
     sha256 "4eacf47eccec800ffd2ca23b704c70d71bc840aeb755912ffb8596562a0a0f5e"
   end
 

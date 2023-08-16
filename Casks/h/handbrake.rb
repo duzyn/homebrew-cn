@@ -2,7 +2,7 @@ cask "handbrake" do
   version "1.6.1"
   sha256 "3af46b84c1101f1a7c098581c1070d47263563c49f327c3e4eb28040885e6863"
 
-  url "https://github.com/HandBrake/HandBrake/releases/download/#{version}/HandBrake-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/HandBrake/HandBrake/releases/download/#{version}/HandBrake-#{version}.dmg",
       verified: "github.com/HandBrake/HandBrake/"
   name "HandBrake"
   desc "Open-source video transcoder"

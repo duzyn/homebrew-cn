@@ -1,7 +1,7 @@
 class TremorRuntime < Formula
   desc "Early-stage event processing system for unstructured data"
   homepage "https://www.tremor.rs/"
-  url "https://github.com/tremor-rs/tremor-runtime/archive/refs/tags/v0.12.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/tremor-rs/tremor-runtime/archive/refs/tags/v0.12.4.tar.gz"
   sha256 "91cbe0ca5c4adda14b8456652dfaa148df9878e09dd65ac6988bb781e3df52af"
   license "Apache-2.0"
   head "https://github.com/tremor-rs/tremor-runtime.git", branch: "main"

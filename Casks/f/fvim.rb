@@ -2,7 +2,7 @@ cask "fvim" do
   version "0.3.543,g18454bc"
   sha256 "4e98f186d0a72b7c6b247a599231756709e282b93e0a7aced1e3d2729142fa0f"
 
-  url "https://github.com/yatli/fvim/releases/download/v#{version.csv.first}%2B#{version.csv.second}/fvim-osx-x64-v#{version.csv.first}+#{version.csv.second}.zip"
+  url "https://ghproxy.com/https://github.com/yatli/fvim/releases/download/v#{version.csv.first}%2B#{version.csv.second}/fvim-osx-x64-v#{version.csv.first}+#{version.csv.second}.zip"
   name "FVim"
   desc "GUI for the Neovim text editor"
   homepage "https://github.com/yatli/fvim"

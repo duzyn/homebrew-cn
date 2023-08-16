@@ -2,7 +2,7 @@ cask "hamsket-nightly" do
   version "0.6.5"
   sha256 "58d967060ff0a25dc35df3d22d58ef4c63142af9014b8fcb4aad3d7b906862ff"
 
-  url "https://ghproxy.com/https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket-#{version}.dmg"
+  url "https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket-#{version}.dmg"
   name "Hamsket"
   desc "Free and Open Source messaging and emailing app"
   homepage "https://github.com/TheGoddessInari/hamsket"

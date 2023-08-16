@@ -1,7 +1,7 @@
 class Scalaenv < Formula
   desc "Command-line tool to manage Scala environments"
   homepage "https://github.com/scalaenv/scalaenv"
-  url "https://github.com/scalaenv/scalaenv/archive/refs/tags/version/0.1.14.tar.gz"
+  url "https://ghproxy.com/https://github.com/scalaenv/scalaenv/archive/refs/tags/version/0.1.14.tar.gz"
   sha256 "82adc5edd81f1914fae321deea36123bc4d3a255e47afa857cbd8b093903530c"
   license "MIT"
   head "https://github.com/scalaenv/scalaenv.git", branch: "master"

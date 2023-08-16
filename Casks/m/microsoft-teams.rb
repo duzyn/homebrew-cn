@@ -9,9 +9,9 @@ cask "microsoft-teams" do
   homepage "https://teams.microsoft.com/downloads"
 
   # Microsoft releases multiple versions and builds of Teams, as listed here:
-  #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
+  #   https://ghproxy.com/https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
   # and here:
-  #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
+  #   https://ghproxy.com/https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
   #
   # We only track the "production build"/"Public (R4) build" version,
   # which agrees with the version reported by `livecheck`.

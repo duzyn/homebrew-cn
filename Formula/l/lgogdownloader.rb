@@ -1,7 +1,7 @@
 class Lgogdownloader < Formula
   desc "Unofficial downloader for GOG.com games"
   homepage "https://sites.google.com/site/gogdownloader/"
-  url "https://github.com/Sude-/lgogdownloader/releases/download/v3.11/lgogdownloader-3.11.tar.gz"
+  url "https://ghproxy.com/https://github.com/Sude-/lgogdownloader/releases/download/v3.11/lgogdownloader-3.11.tar.gz"
   sha256 "d8d015cce6e002876305517367dc006c332e4d492263173b58bfe5a94b057b09"
   license "WTFPL"
   revision 2

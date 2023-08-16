@@ -1,7 +1,7 @@
 class Mp3splt < Formula
   desc "Command-line interface to split MP3 and Ogg Vorbis files"
   homepage "https://mp3splt.sourceforge.net/mp3splt_page/home.php"
-  url "https://downloads.sourceforge.net/project/mp3splt/mp3splt/2.6.2/mp3splt-2.6.2.tar.gz"
+  url "https://downloads.sourceforge.net/project/mp3splt/mp3splt/2.6.2/mp3splt-2.6.2.tar.gz?use_mirror=nchc"
   sha256 "3ec32b10ddd8bb11af987b8cd1c76382c48d265d0ffda53041d9aceb1f103baa"
   license "GPL-2.0-or-later"
   revision 2

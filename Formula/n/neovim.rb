@@ -4,7 +4,7 @@ class Neovim < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/neovim/neovim/archive/v0.9.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/neovim/neovim/archive/v0.9.1.tar.gz"
     sha256 "8db17c2a1f4776dcda00e59489ea0d98ba82f7d1a8ea03281d640e58d8a3a00e"
 
     # Remove when `mpack` resource is removed.
@@ -12,7 +12,7 @@ class Neovim < Formula
 
     # Remove in 0.10.
     resource "mpack" do
-      url "https://github.com/libmpack/libmpack-lua/releases/download/1.0.10/libmpack-lua-1.0.10.tar.gz"
+      url "https://ghproxy.com/https://github.com/libmpack/libmpack-lua/releases/download/1.0.10/libmpack-lua-1.0.10.tar.gz"
       sha256 "18e202473c9a255f1d2261b019874522a4f1c6b6f989f80da93d7335933e8119"
     end
 
@@ -22,27 +22,27 @@ class Neovim < Formula
     # TODO: Consider shipping these as separate formulae instead. See discussion at
     #       https://github.com/orgs/Homebrew/discussions/3611
     resource "tree-sitter-c" do
-      url "https://github.com/tree-sitter/tree-sitter-c/archive/v0.20.2.tar.gz"
+      url "https://ghproxy.com/https://github.com/tree-sitter/tree-sitter-c/archive/v0.20.2.tar.gz"
       sha256 "af66fde03feb0df4faf03750102a0d265b007e5d957057b6b293c13116a70af2"
     end
 
     resource "tree-sitter-lua" do
-      url "https://github.com/MunifTanjim/tree-sitter-lua/archive/v0.0.17.tar.gz"
+      url "https://ghproxy.com/https://github.com/MunifTanjim/tree-sitter-lua/archive/v0.0.17.tar.gz"
       sha256 "8963fd0a185d786c164dfca3824941c7eaec497ce49a3a0bc24bf753f5e0e59c"
     end
 
     resource "tree-sitter-vim" do
-      url "https://github.com/neovim/tree-sitter-vim/archive/v0.3.0.tar.gz"
+      url "https://ghproxy.com/https://github.com/neovim/tree-sitter-vim/archive/v0.3.0.tar.gz"
       sha256 "403acec3efb7cdb18ff3d68640fc823502a4ffcdfbb71cec3f98aa786c21cbe2"
     end
 
     resource "tree-sitter-vimdoc" do
-      url "https://github.com/neovim/tree-sitter-vimdoc/archive/v2.0.0.tar.gz"
+      url "https://ghproxy.com/https://github.com/neovim/tree-sitter-vimdoc/archive/v2.0.0.tar.gz"
       sha256 "1ff8f4afd3a9599dd4c3ce87c155660b078c1229704d1a254433e33794b8f274"
     end
 
     resource "tree-sitter-query" do
-      url "https://github.com/nvim-treesitter/tree-sitter-query/archive/v0.1.0.tar.gz"
+      url "https://ghproxy.com/https://github.com/nvim-treesitter/tree-sitter-query/archive/v0.1.0.tar.gz"
       sha256 "e2b806f80e8bf1c4f4e5a96248393fe6622fc1fc6189d6896d269658f67f914c"
     end
   end

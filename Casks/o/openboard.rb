@@ -2,7 +2,7 @@ cask "openboard" do
   version "1.6.4"
   sha256 "7ed5d6a40b3ccf71a1c42c92d154b93be786890a9b81fc3903f137cd9a28c9bd"
 
-  url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
       verified: "github.com/OpenBoard-org/OpenBoard/"
   name "OpenBoard"
   desc "Interactive whiteboard application"

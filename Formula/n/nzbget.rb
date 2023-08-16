@@ -1,7 +1,7 @@
 class Nzbget < Formula
   desc "Binary newsgrabber for nzb files"
   homepage "https://nzbget.net/"
-  url "https://github.com/nzbget/nzbget/releases/download/v21.1/nzbget-21.1-src.tar.gz"
+  url "https://ghproxy.com/https://github.com/nzbget/nzbget/releases/download/v21.1/nzbget-21.1-src.tar.gz"
   sha256 "4e8fc1beb80dc2af2d6a36a33a33f44dedddd4486002c644f4c4793043072025"
   license "GPL-2.0-or-later"
   head "https://github.com/nzbget/nzbget.git", branch: "develop"
@@ -29,7 +29,7 @@ class Nzbget < Formula
   # Fix OpenSSL 3 compatibility
   # upstream PR ref, https://github.com/nzbget/nzbget/pull/793
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/56a864d/nzbget/openssl-3.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/56a864d/nzbget/openssl-3.patch"
     sha256 "7fd5e300c6ba456df20307a2d3de630e3cb6d5dfdc2662abd567190eb55ac3be"
   end
 

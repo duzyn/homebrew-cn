@@ -1,7 +1,7 @@
 class Mg < Formula
   desc "Small Emacs-like editor"
   homepage "https://github.com/ibara/mg"
-  url "https://github.com/ibara/mg/releases/download/mg-7.3/mg-7.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/ibara/mg/releases/download/mg-7.3/mg-7.3.tar.gz"
   sha256 "1fd52feed9a96b93ef16c28ec4ff6cb25af85542ec949867bffaddee203d1e95"
   license all_of: [:public_domain, "ISC", :cannot_represent]
   version_scheme 1

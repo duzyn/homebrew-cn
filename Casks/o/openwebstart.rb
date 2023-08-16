@@ -5,7 +5,7 @@ cask "openwebstart" do
   sha256 arm:   "104f2d83365074d05dd3788d80dc642e55fb568cb0b2ed3db78efa59a1016bd7",
          intel: "eecff527c1eced6b6cc0c9a79d1336c4b912c1653602a4de244bbda72e03913f"
 
-  url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos-#{arch}_#{version.dots_to_underscores}.dmg",
+  url "https://ghproxy.com/https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos-#{arch}_#{version.dots_to_underscores}.dmg",
       verified: "github.com/karakun/OpenWebStart/"
   name "OpenWebStart"
   desc "Tool to run Java Web Start-based applications after the release of Java 11"

@@ -5,7 +5,7 @@ cask "powershell-preview" do
   sha256 arm:   "207acb3ba85620c16a2a1951560ed20e0bb18b81be23924fc8bf994ba082b178",
          intel: "1f88999aeb5c56dcb9c2c209632dd113e9c372d5ffb4dce0d2e269ba907c823f"
 
-  url "https://ghproxy.com/https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
+  url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
   desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"

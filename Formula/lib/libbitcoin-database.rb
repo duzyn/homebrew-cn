@@ -1,7 +1,7 @@
 class LibbitcoinDatabase < Formula
   desc "Bitcoin High Performance Blockchain Database"
   homepage "https://github.com/libbitcoin/libbitcoin-database"
-  url "https://github.com/libbitcoin/libbitcoin-database/archive/v3.6.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/libbitcoin/libbitcoin-database/archive/v3.6.0.tar.gz"
   sha256 "d65b35745091b93feed61c5665b5a07b404b578e2582640e93c1a01f6b746f5a"
   license "AGPL-3.0"
   revision 2

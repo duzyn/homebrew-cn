@@ -1,7 +1,7 @@
 class Typical < Formula
   desc "Data interchange with algebraic data types"
   homepage "https://github.com/stepchowfun/typical"
-  url "https://github.com/stepchowfun/typical/archive/v0.9.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/stepchowfun/typical/archive/v0.9.6.tar.gz"
   sha256 "32d8a6b8ad8b7601fabf81f1bf66b4ac05e3f6f08e80ee59997409a43baac62b"
   license "MIT"
 

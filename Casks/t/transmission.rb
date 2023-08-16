@@ -2,7 +2,7 @@ cask "transmission" do
   version "4.0.3"
   sha256 "01c7806eda63a94116d8f8a6a280d1d284b5a975f12a734f8c126d6fb5671b19"
 
-  url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
       verified: "github.com/transmission/transmission/"
   name "Transmission"
   desc "Open-source BitTorrent client"

@@ -1,7 +1,7 @@
 class Sqls < Formula
   desc "SQL language server written in Go"
   homepage "https://github.com/lighttiger2505/sqls"
-  url "https://github.com/lighttiger2505/sqls/archive/refs/tags/v0.2.22.tar.gz"
+  url "https://ghproxy.com/https://github.com/lighttiger2505/sqls/archive/refs/tags/v0.2.22.tar.gz"
   sha256 "0f417123331b23a50b10f2724befc53aa82f44150cf84f28bfb885f768697a01"
   license "MIT"
   head "https://github.com/lighttiger2505/sqls.git", branch: "master"

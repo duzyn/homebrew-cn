@@ -1,7 +1,7 @@
 class Gotests < Formula
   desc "Automatically generate Go test boilerplate from your source code"
   homepage "https://github.com/cweill/gotests"
-  url "https://github.com/cweill/gotests/archive/refs/tags/v1.6.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/cweill/gotests/archive/refs/tags/v1.6.0.tar.gz"
   sha256 "f0236dbebd8a3fd19ec4260f490cb164240e1d518d3971b42872978f7a50c040"
   license "Apache-2.0"
 

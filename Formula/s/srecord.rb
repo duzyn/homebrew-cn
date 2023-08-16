@@ -1,7 +1,7 @@
 class Srecord < Formula
   desc "Tools for manipulating EPROM load files"
   homepage "https://srecord.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/srecord/srecord/1.64/srecord-1.64.tar.gz"
+  url "https://downloads.sourceforge.net/project/srecord/srecord/1.64/srecord-1.64.tar.gz?use_mirror=nchc"
   sha256 "49a4418733c508c03ad79a29e95acec9a2fbc4c7306131d2a8f5ef32012e67e2"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later"]
 
@@ -35,7 +35,7 @@ class Srecord < Formula
   # Use macOS's pstopdf
   patch do
     on_macos do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/srecord/1.64.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/srecord/1.64.patch"
       sha256 "140e032d0ffe921c94b19145e5904538233423ab7dc03a9c3c90bf434de4dd03"
     end
   end

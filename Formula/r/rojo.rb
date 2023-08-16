@@ -1,7 +1,7 @@
 class Rojo < Formula
   desc "Professional grade Roblox development tools"
   homepage "https://rojo.space/"
-  url "https://github.com/rojo-rbx/rojo/archive/refs/tags/v7.3.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/rojo-rbx/rojo/archive/refs/tags/v7.3.0.tar.gz"
   sha256 "849626d5395ccc58de04c4d6072c905880432c58bb2dc71ca27ab7f794b82187"
   license "MPL-2.0"
   head "https://github.com/rojo-rbx/rojo.git", branch: "master"

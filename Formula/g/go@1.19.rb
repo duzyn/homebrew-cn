@@ -1,13 +1,13 @@
 class GoAT119 < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.19.12.src.tar.gz"
+  url "https://mirrors.aliyun.com/golang/go1.19.12.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.19.12.src.tar.gz"
   sha256 "ee5d50e0a7fd74ba1b137cb879609aaaef9880bf72b5d1742100e38ae72bb557"
   license "BSD-3-Clause"
 
   livecheck do
-    url "https://go.dev/dl/"
+    url "https://mirrors.aliyun.com/golang/"
     regex(/href=.*?go[._-]?v?(1\.19(?:\.\d+)*)[._-]src\.t/i)
   end
 

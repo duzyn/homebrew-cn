@@ -1,7 +1,7 @@
 class Saldl < Formula
   desc "CLI downloader optimized for speed and early preview"
   homepage "https://saldl.github.io/"
-  url "https://github.com/saldl/saldl/archive/v41.tar.gz"
+  url "https://ghproxy.com/https://github.com/saldl/saldl/archive/v41.tar.gz"
   sha256 "fc9980922f1556fd54a8c04fd671933fdc5b1e6847c1493a5fec89e164722d8e"
   license "AGPL-3.0-or-later"
   head "https://github.com/saldl/saldl.git", branch: "master"
@@ -30,7 +30,7 @@ class Saldl < Formula
   # Use resource instead of patch since applying corrupts waf
   # https://github.com/saldl/saldl/pull/15
   resource "waf" do
-    url "https://raw.githubusercontent.com/saldl/saldl/360c29d6c8cee5f7e608af42237928be429c3407/waf"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/saldl/saldl/360c29d6c8cee5f7e608af42237928be429c3407/waf"
     sha256 "93909bca823a675f9f40af7c65b24887c3a3c0efdf411ff1978ba827194bdeb0"
   end
 

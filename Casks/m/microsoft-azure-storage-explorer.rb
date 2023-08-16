@@ -5,7 +5,7 @@ cask "microsoft-azure-storage-explorer" do
   sha256 arm:   "c885835974d768107c4eeeac00da436df7313c7806847cdb698250809f4c4936",
          intel: "34a7b1f2cbd32faebfbac4b9b14f37674c00187eda4f52d6f537fabe1c0c795e"
 
-  url "https://github.com/microsoft/AzureStorageExplorer/releases/download/v#{version}/StorageExplorer-darwin-#{arch}.zip",
+  url "https://ghproxy.com/https://github.com/microsoft/AzureStorageExplorer/releases/download/v#{version}/StorageExplorer-darwin-#{arch}.zip",
       verified: "github.com/microsoft/AzureStorageExplorer/"
   name "Microsoft Azure Storage Explorer"
   desc "Explorer for Azure Storage"

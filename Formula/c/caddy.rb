@@ -1,7 +1,7 @@
 class Caddy < Formula
   desc "Powerful, enterprise-ready, open source web server with automatic HTTPS"
   homepage "https://caddyserver.com/"
-  url "https://github.com/caddyserver/caddy/archive/v2.7.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/caddyserver/caddy/archive/v2.7.3.tar.gz"
   sha256 "ff73a9bd9968d63cae3d9f804d83e67759836a5331c9b13d04b30ebe86369722"
   license "Apache-2.0"
   head "https://github.com/caddyserver/caddy.git", branch: "master"
@@ -19,7 +19,7 @@ class Caddy < Formula
   depends_on "go" => :build
 
   resource "xcaddy" do
-    url "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.3.4.tar.gz"
+    url "https://ghproxy.com/https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.3.4.tar.gz"
     sha256 "5ff7b73c2601ceaf3fd1b3d92be49244523b9b98ee6127276d54c4df59a73d28"
   end
 

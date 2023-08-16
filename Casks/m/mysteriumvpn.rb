@@ -2,7 +2,7 @@ cask "mysteriumvpn" do
   version "10.14.4"
   sha256 "d82c2657c4ba550a93858a3b4658eb439b09ea9802da99e37b7367d5bf42e15f"
 
-  url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumVPN-#{version}-universal.dmg",
+  url "https://ghproxy.com/https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumVPN-#{version}-universal.dmg",
       verified: "github.com/mysteriumnetwork/mysterium-vpn-desktop/"
   name "Mysterium VPN"
   desc "VPN client"

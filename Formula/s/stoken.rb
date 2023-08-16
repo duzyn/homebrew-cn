@@ -1,7 +1,7 @@
 class Stoken < Formula
   desc "Tokencode generator compatible with RSA SecurID 128-bit (AES)"
   homepage "https://stoken.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/stoken/stoken-0.92.tar.gz"
+  url "https://downloads.sourceforge.net/project/stoken/stoken-0.92.tar.gz?use_mirror=nchc"
   sha256 "aa2b481b058e4caf068f7e747a2dcf5772bcbf278a4f89bc9efcbf82bcc9ef5a"
   revision 1
 

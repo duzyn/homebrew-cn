@@ -1,7 +1,7 @@
 class Chezscheme < Formula
   desc "Implementation of the Chez Scheme language"
   homepage "https://cisco.github.io/ChezScheme/"
-  url "https://github.com/cisco/ChezScheme/releases/download/v9.5.8a/csv9.5.8a.tar.gz"
+  url "https://ghproxy.com/https://github.com/cisco/ChezScheme/releases/download/v9.5.8a/csv9.5.8a.tar.gz"
   version "9.5.8a"
   sha256 "3e80ea08ae6fd336ffdda3fbbfa1ebcdda644670fa5bf6a5aa9100c82f381d52"
   license "Apache-2.0"

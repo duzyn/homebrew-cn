@@ -3,7 +3,7 @@ require "language/node"
 class Alexjs < Formula
   desc "Catch insensitive, inconsiderate writing"
   homepage "https://alexjs.com"
-  url "https://github.com/get-alex/alex/archive/11.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/get-alex/alex/archive/11.0.0.tar.gz"
   sha256 "a7ee0de4cdb8a651a377537e495799fbf77a316c817df0ce33b7836794eca618"
   license "MIT"
 

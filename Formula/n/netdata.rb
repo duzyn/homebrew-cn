@@ -1,7 +1,7 @@
 class Netdata < Formula
   desc "Diagnose infrastructure problems with metrics, visualizations & alarms"
   homepage "https://netdata.cloud/"
-  url "https://github.com/netdata/netdata/releases/download/v1.42.0/netdata-v1.42.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/netdata/netdata/releases/download/v1.42.0/netdata-v1.42.0.tar.gz"
   sha256 "10c5685ba184a348fb75d0ce2d011bf9227774a07de60197a81b04373d5ea333"
   license "GPL-3.0-or-later"
 
@@ -39,7 +39,7 @@ class Netdata < Formula
   end
 
   resource "judy" do
-    url "https://downloads.sourceforge.net/project/judy/judy/Judy-1.0.5/Judy-1.0.5.tar.gz"
+    url "https://downloads.sourceforge.net/project/judy/judy/Judy-1.0.5/Judy-1.0.5.tar.gz?use_mirror=nchc"
     sha256 "d2704089f85fdb6f2cd7e77be21170ced4b4375c03ef1ad4cf1075bd414a63eb"
   end
 

@@ -2,7 +2,7 @@ cask "mailtrackerblocker" do
   version "0.8.0"
   sha256 "cb7a836b1c2d7498752ca625cbb6b409ffaa2e4f182487bb85f98c4b2b2bde03"
 
-  url "https://github.com/apparition47/MailTrackerBlocker/releases/download/#{version}/MailTrackerBlocker.pkg",
+  url "https://ghproxy.com/https://github.com/apparition47/MailTrackerBlocker/releases/download/#{version}/MailTrackerBlocker.pkg",
       verified: "github.com/apparition47/MailTrackerBlocker/"
   name "MailTrackerBlocker"
   desc "Email tracker, read receipt and spy pixel blocker plugin for Apple Mail"

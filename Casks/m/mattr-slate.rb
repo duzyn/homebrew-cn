@@ -2,7 +2,7 @@ cask "mattr-slate" do
   version "1.2.0"
   sha256 "d409ccda9ed09f5647175f8834650e141a7375ced9665bf6af237525665d4966"
 
-  url "https://github.com/mattr-/slate/releases/download/v#{version}/Slate.zip"
+  url "https://ghproxy.com/https://github.com/mattr-/slate/releases/download/v#{version}/Slate.zip"
   name "Slate"
   homepage "https://github.com/mattr-/slate"
 

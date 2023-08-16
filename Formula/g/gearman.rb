@@ -1,7 +1,7 @@
 class Gearman < Formula
   desc "Application framework to farm out work to other machines or processes"
   homepage "http://gearman.org/"
-  url "https://github.com/gearman/gearmand/releases/download/1.1.20/gearmand-1.1.20.tar.gz"
+  url "https://ghproxy.com/https://github.com/gearman/gearmand/releases/download/1.1.20/gearmand-1.1.20.tar.gz"
   sha256 "2f60fa207dcd730595ef96a9dc3ca899566707c8176106b3c63ecf47edc147a6"
   license "BSD-3-Clause"
   revision 2

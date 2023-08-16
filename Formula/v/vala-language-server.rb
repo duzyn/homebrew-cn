@@ -1,7 +1,7 @@
 class ValaLanguageServer < Formula
   desc "Code Intelligence for Vala & Genie"
   homepage "https://github.com/vala-lang/vala-language-server"
-  url "https://github.com/vala-lang/vala-language-server/releases/download/0.48.7/vala-language-server-0.48.7.tar.xz"
+  url "https://ghproxy.com/https://github.com/vala-lang/vala-language-server/releases/download/0.48.7/vala-language-server-0.48.7.tar.xz"
   sha256 "a93e09497738144792466d0c5ccb1347583d84a9987b65b08f6aa5d5a1e3f431"
   license "LGPL-2.1-only"
 

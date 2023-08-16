@@ -2,7 +2,7 @@ cask "vorta" do
   version "0.8.11"
   sha256 "4dbbc7bd927a0f73985455f13221dc391a9af5cd63f3b4fee00149c12f2079f9"
 
-  url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
   name "Vorta"
   desc "Desktop Backup Client for Borg"
   homepage "https://github.com/borgbase/vorta"

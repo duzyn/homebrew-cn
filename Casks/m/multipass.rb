@@ -2,7 +2,7 @@ cask "multipass" do
   version "1.12.2"
   sha256 "c2994476746369935ff54258a2c764cb6e344f77f64cf09688d55a86245bcbf4"
 
-  url "https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
+  url "https://ghproxy.com/https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   name "Multipass"
   desc "Orchestrates virtual Ubuntu instances"
   homepage "https://github.com/canonical/multipass/"

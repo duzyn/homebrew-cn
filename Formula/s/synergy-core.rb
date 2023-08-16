@@ -1,7 +1,7 @@
 class SynergyCore < Formula
   desc "Synergy, the keyboard and mouse sharing tool"
   homepage "https://symless.com/synergy"
-  url "https://github.com/symless/synergy-core/archive/refs/tags/1.14.6.19-stable.tar.gz"
+  url "https://ghproxy.com/https://github.com/symless/synergy-core/archive/refs/tags/1.14.6.19-stable.tar.gz"
   sha256 "01854ec932845975cd81363bed8276b95c07a607050683fc1b74b7126199de79"
 
   # The synergy-core/LICENSE file contains the following preamble:

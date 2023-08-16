@@ -4,13 +4,13 @@ class Sysdig < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/draios/sysdig/archive/refs/tags/0.32.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/draios/sysdig/archive/refs/tags/0.32.0.tar.gz"
     sha256 "478c5667b0936af827b87357a785069350514fd503e3eea55e9092be7bd22853"
 
     # Update to value of FALCOSECURITY_LIBS_VERSION found in
     # https://github.com/draios/sysdig/blob/#{version}/cmake/modules/falcosecurity-libs.cmake
     resource "falcosecurity-libs" do
-      url "https://github.com/falcosecurity/libs/archive/refs/tags/0.11.3.tar.gz"
+      url "https://ghproxy.com/https://github.com/falcosecurity/libs/archive/refs/tags/0.11.3.tar.gz"
       sha256 "b4f9dc8c1612f4b14207d107bce323a0684dce0dbf018e5b846177992569367b"
     end
   end

@@ -1,7 +1,7 @@
 class Lsd < Formula
   desc "Clone of ls with colorful output, file type icons, and more"
   homepage "https://github.com/lsd-rs/lsd"
-  url "https://github.com/lsd-rs/lsd/archive/0.23.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/lsd-rs/lsd/archive/0.23.1.tar.gz"
   sha256 "9698919689178cc095f39dcb6a8a41ce32d5a1283e6fe62755e9a861232c307d"
   license "Apache-2.0"
 

@@ -2,7 +2,7 @@ cask "mtgaprotracker" do
   version "2.1.35"
   sha256 "f71552a5e97755adf705758c11147ab15b5adb145707daa5ca689da937e3ec40"
 
-  url "https://github.com/Razviar/mtgap/releases/download/v#{version}/mtgaprotracker.dmg",
+  url "https://ghproxy.com/https://github.com/Razviar/mtgap/releases/download/v#{version}/mtgaprotracker.dmg",
       verified: "github.com/Razviar/mtgap/"
   name "MTGA Pro Tracker"
   desc "Advanced Magic: The Gathering Arena tracking tool"

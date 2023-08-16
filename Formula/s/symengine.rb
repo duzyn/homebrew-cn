@@ -1,7 +1,7 @@
 class Symengine < Formula
   desc "Fast symbolic manipulation library written in C++"
   homepage "https://sympy.org"
-  url "https://github.com/symengine/symengine/releases/download/v0.10.1/symengine-0.10.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/symengine/symengine/releases/download/v0.10.1/symengine-0.10.1.tar.gz"
   sha256 "9c007c99e9633f5549a55fa7a66ebcbcf9e04092eb55f7bb781c22b9cf0570c4"
   license "MIT"
 

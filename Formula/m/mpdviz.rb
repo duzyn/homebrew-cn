@@ -3,7 +3,7 @@ require "language/go"
 class Mpdviz < Formula
   desc "Standalone console MPD visualizer"
   homepage "https://github.com/lucy/mpdviz"
-  url "https://github.com/lucy/mpdviz/archive/0.4.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/lucy/mpdviz/archive/0.4.6.tar.gz"
   sha256 "c34243ec3f3d91adbc36d608d5ba7082ff78870f2fd76a6650d5fb3218cc2ba3"
   license "MIT"
 

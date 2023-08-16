@@ -1,7 +1,7 @@
 class Libicns < Formula
   desc "Library for manipulation of the macOS .icns resource format"
   homepage "https://icns.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/icns/libicns-0.8.1.tar.gz"
+  url "https://downloads.sourceforge.net/project/icns/libicns-0.8.1.tar.gz?use_mirror=nchc"
   mirror "https://deb.debian.org/debian/pool/main/libi/libicns/libicns_0.8.1.orig.tar.gz"
   sha256 "335f10782fc79855cf02beac4926c4bf9f800a742445afbbf7729dab384555c2"
   license any_of: ["LGPL-2.0-or-later", "LGPL-2.1-or-later"]
@@ -22,7 +22,7 @@ class Libicns < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
     sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
   end
 

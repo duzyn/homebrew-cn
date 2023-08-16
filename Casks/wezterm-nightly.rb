@@ -2,7 +2,7 @@ cask "wezterm-nightly" do
   version :latest
   sha256 :no_check
 
-  url "https://ghproxy.com/https://github.com/wez/wezterm/releases/download/nightly/WezTerm-macos-nightly.zip",
+  url "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-macos-nightly.zip",
       verified: "github.com/wez/wezterm/"
   name "WezTerm"
   desc "GPU-accelerated cross-platform terminal emulator and multiplexer"

@@ -1,7 +1,7 @@
 class Libnsl < Formula
   desc "Public client interface for NIS(YP) and NIS+"
   homepage "https://github.com/thkukuk/libnsl"
-  url "https://github.com/thkukuk/libnsl/releases/download/v2.0.0/libnsl-2.0.0.tar.xz"
+  url "https://ghproxy.com/https://github.com/thkukuk/libnsl/releases/download/v2.0.0/libnsl-2.0.0.tar.xz"
   sha256 "2da075ef1893ebdfc5f074f83ac811873dc06fd5c62bc9a4729fd2e27a40341a"
   license "LGPL-2.1-or-later"
   revision 1

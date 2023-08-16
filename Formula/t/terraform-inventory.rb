@@ -1,7 +1,7 @@
 class TerraformInventory < Formula
   desc "Terraform State → Ansible Dynamic Inventory"
   homepage "https://github.com/adammck/terraform-inventory"
-  url "https://github.com/adammck/terraform-inventory/archive/v0.10.tar.gz"
+  url "https://ghproxy.com/https://github.com/adammck/terraform-inventory/archive/v0.10.tar.gz"
   sha256 "8bd8956da925d4f24c45874bc7b9012eb6d8b4aa11cfc9b6b1b7b7c9321365ac"
   license "MIT"
   head "https://github.com/adammck/terraform-inventory.git", branch: "master"

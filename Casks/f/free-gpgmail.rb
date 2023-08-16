@@ -16,7 +16,7 @@ cask "free-gpgmail" do
     sha256 "b633571b30a990e2a14bab0b9c6543c6e6f4dba172802ae1472d8a083e18d15b"
   end
 
-  url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
+  url "https://ghproxy.com/https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
   name "Free-GPGMail"
   desc "Apple Mail plugin for GnuPG encrypted e-mails"
   homepage "https://github.com/Free-GPGMail/Free-GPGMail"

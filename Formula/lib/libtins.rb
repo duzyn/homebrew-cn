@@ -1,7 +1,7 @@
 class Libtins < Formula
   desc "C++ network packet sniffing and crafting library"
   homepage "https://libtins.github.io/"
-  url "https://github.com/mfontanini/libtins/archive/v4.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/mfontanini/libtins/archive/v4.4.tar.gz"
   sha256 "ff0121b4ec070407e29720c801b7e1a972042300d37560a62c57abadc9635634"
   license "BSD-2-Clause"
   head "https://github.com/mfontanini/libtins.git", branch: "master"

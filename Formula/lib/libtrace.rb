@@ -1,7 +1,7 @@
 class Libtrace < Formula
   desc "Library for trace processing supporting multiple inputs"
   homepage "https://github.com/LibtraceTeam/libtrace"
-  url "https://github.com/LibtraceTeam/libtrace/archive/refs/tags/4.0.22-1.tar.gz"
+  url "https://ghproxy.com/https://github.com/LibtraceTeam/libtrace/archive/refs/tags/4.0.22-1.tar.gz"
   version "4.0.22"
   sha256 "5d2c76afef6b882dc8df1a8d73164f2b646068f10187731fb86f2a46df46ff0d"
   license "GPL-3.0-or-later"
@@ -36,7 +36,7 @@ class Libtrace < Formula
   uses_from_macos "libpcap"
 
   resource "homebrew-8021x.pcap" do
-    url "https://github.com/LibtraceTeam/libtrace/raw/9e82eabc39bc491c74cc4215d7eda5f07b85a8f5/test/traces/8021x.pcap"
+    url "https://ghproxy.com/https://github.com/LibtraceTeam/libtrace/raw/9e82eabc39bc491c74cc4215d7eda5f07b85a8f5/test/traces/8021x.pcap"
     sha256 "aa036e997d7bec2fa3d387e3ad669eba461036b9a89b79dcf63017a2c4dac725"
   end
 

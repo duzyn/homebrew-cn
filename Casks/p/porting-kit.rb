@@ -2,7 +2,7 @@ cask "porting-kit" do
   version "5.13.8"
   sha256 "c88e418f52bb867190a5f6c4ac42c1e2d991741c943f76df761a41e035306163"
 
-  url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting-Kit-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting-Kit-#{version}.dmg",
       verified: "github.com/vitor251093/porting-kit-releases/"
   name "Porting Kit"
   desc "Install games and apps compiled for Microsoft Windows"

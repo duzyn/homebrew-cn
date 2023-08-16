@@ -1,7 +1,7 @@
 class Datafusion < Formula
   desc "Apache Arrow DataFusion and Ballista query engines"
   homepage "https://arrow.apache.org/datafusion"
-  url "https://github.com/apache/arrow-datafusion/archive/refs/tags/29.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/apache/arrow-datafusion/archive/refs/tags/29.0.0.tar.gz"
   sha256 "25d72eb31c4e655f0fb21de8b7acfd2fd3d01046865973e0c6f3b9f5a816126a"
   license "Apache-2.0"
   head "https://github.com/apache/arrow-datafusion.git", branch: "master"

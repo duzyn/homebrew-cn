@@ -1,13 +1,13 @@
 class GoAT120 < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.20.7.src.tar.gz"
+  url "https://mirrors.aliyun.com/golang/go1.20.7.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.20.7.src.tar.gz"
   sha256 "2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597"
   license "BSD-3-Clause"
 
   livecheck do
-    url "https://go.dev/dl/"
+    url "https://mirrors.aliyun.com/golang/"
     regex(/href=.*?go[._-]?v?(1\.20(?:\.\d+)*)[._-]src\.t/i)
   end
 

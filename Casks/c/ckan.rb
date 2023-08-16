@@ -2,7 +2,7 @@ cask "ckan" do
   version "1.33.2"
   sha256 "f9bcef578eead3344d923368a80cd9fe91f58e4bdfd1e024702f24c9039b5dba"
 
-  url "https://github.com/KSP-CKAN/CKAN/releases/download/v#{version}/CKAN.dmg"
+  url "https://ghproxy.com/https://github.com/KSP-CKAN/CKAN/releases/download/v#{version}/CKAN.dmg"
   name "Comprehensive Kerbal Archive Network"
   desc "Mod management solution for Kerbal Space Program"
   homepage "https://github.com/KSP-CKAN/CKAN"

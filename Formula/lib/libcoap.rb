@@ -1,7 +1,7 @@
 class Libcoap < Formula
   desc "Lightweight application-protocol for resource-constrained devices"
   homepage "https://github.com/obgm/libcoap"
-  url "https://github.com/obgm/libcoap/archive/v4.3.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/obgm/libcoap/archive/v4.3.1.tar.gz"
   sha256 "074a71deca01e06d3acb00a1416d0fbeb87d130f40a3c0f6fda3a5c711855dca"
   license "BSD-2-Clause"
 

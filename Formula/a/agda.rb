@@ -8,7 +8,7 @@ class Agda < Formula
     sha256 "beacc9802c470e42bb0707f9ffe7db488a936c635407dada5d4db060b58d6016"
 
     resource "stdlib" do
-      url "https://github.com/agda/agda-stdlib/archive/v1.7.2.tar.gz"
+      url "https://ghproxy.com/https://github.com/agda/agda-stdlib/archive/v1.7.2.tar.gz"
       sha256 "d86a41b9d2e1d2e956ec91bdef9cb34646da11f50f76996761c9a1562c3c47a2"
     end
   end

@@ -1,7 +1,7 @@
 class Jless < Formula
   desc "Command-line pager for JSON data"
   homepage "https://jless.io/"
-  url "https://github.com/PaulJuliusMartinez/jless/archive/refs/tags/v0.9.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/PaulJuliusMartinez/jless/archive/refs/tags/v0.9.0.tar.gz"
   sha256 "43527a78ba2e5e43a7ebd8d0da8b5af17a72455c5f88b4d1134f34908a594239"
   license "MIT"
 

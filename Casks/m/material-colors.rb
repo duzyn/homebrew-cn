@@ -2,7 +2,7 @@ cask "material-colors" do
   version "2.0.3"
   sha256 "601465d533d93399c89fa2a135dba8d936cca239ff601d20195c44244a64053a"
 
-  url "https://github.com/romannurik/MaterialColorsApp/releases/download/v#{version}/MaterialColors-#{version}.zip"
+  url "https://ghproxy.com/https://github.com/romannurik/MaterialColorsApp/releases/download/v#{version}/MaterialColors-#{version}.zip"
   name "Material Colors for Mac"
   homepage "https://github.com/romannurik/MaterialColorsApp"
 

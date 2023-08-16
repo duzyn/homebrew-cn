@@ -2,7 +2,7 @@ cask "workman" do
   version "1.0"
   sha256 :no_check
 
-  url "https://github.com/workman-layout/Workman/archive/master.zip",
+  url "https://ghproxy.com/https://github.com/workman-layout/Workman/archive/master.zip",
       verified: "github.com/workman-layout/Workman/"
   name "Workman keyboard layout"
   desc "Alternative English keyboard layout"

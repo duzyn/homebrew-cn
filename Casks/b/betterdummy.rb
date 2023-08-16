@@ -2,7 +2,7 @@ cask "betterdummy" do
   version "1.1.24"
   sha256 "5d02657f3aa77017f5a94af16d042cef011094b58f19b4d0f4a79e090311cfb3"
 
-  url "https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.dmg"
   name "betterdummy"
   desc "Dummy Display for Apple Silicon Macs to achieve custom resolutions"
   homepage "https://github.com/waydabber/BetterDummy"

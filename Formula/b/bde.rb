@@ -1,7 +1,7 @@
 class Bde < Formula
   desc "Basic Development Environment: foundational C++ libraries used at Bloomberg"
   homepage "https://github.com/bloomberg/bde"
-  url "https://github.com/bloomberg/bde/archive/3.117.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/bloomberg/bde/archive/3.117.0.0.tar.gz"
   sha256 "7dcea8f13105df27f2207fc80e271f97314e763ee573ad936f9b8d7f076b57bb"
   license "Apache-2.0"
 
@@ -26,7 +26,7 @@ class Bde < Formula
   depends_on "pcre2"
 
   resource "bde-tools" do
-    url "https://github.com/bloomberg/bde-tools/archive/3.117.0.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/bloomberg/bde-tools/archive/3.117.0.0.tar.gz"
     sha256 "9f92f4c2cf1fc96d483743a367ed42f929dc0f41a6c0a8a8b7f72099bd52f28b"
   end
 

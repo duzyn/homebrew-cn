@@ -9,7 +9,7 @@ cask "ulbow" do
   homepage "https://eclecticlight.co/consolation-t2m2-and-log-utilities/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     regex(%r{/(\d+)/(\d+)/ulbow(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|

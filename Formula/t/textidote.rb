@@ -1,7 +1,7 @@
 class Textidote < Formula
   desc "Spelling, grammar and style checking on LaTeX documents"
   homepage "https://sylvainhalle.github.io/textidote"
-  url "https://github.com/sylvainhalle/textidote/archive/refs/tags/v0.8.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/sylvainhalle/textidote/archive/refs/tags/v0.8.3.tar.gz"
   sha256 "8c55d6f6f35d51fb5b84e7dcc86a4041e06b3f92d6a919023dc332ba2effd584"
   license "GPL-3.0-or-later"
   head "https://github.com/sylvainhalle/textidote.git", branch: "master"

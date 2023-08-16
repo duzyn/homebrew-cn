@@ -3,7 +3,7 @@ class Lensfun < Formula
 
   desc "Remove defects from digital images"
   homepage "https://lensfun.github.io/"
-  url "https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.3.tar.gz"
   sha256 "57ba5a0377f24948972339e18be946af12eda22b7c707eb0ddd26586370f6765"
   license all_of: [
     "LGPL-3.0-only",

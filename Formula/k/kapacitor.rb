@@ -12,7 +12,7 @@ class Kapacitor < Formula
     # build patch to upgrade flux so that it can be built with rust 1.66.0
     # upstream bug report, https://github.com/influxdata/kapacitor/issues/2769
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/38549b7/kapacitor/1.6.6.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/38549b7/kapacitor/1.6.6.patch"
       sha256 "32bba2e397d25afb7fed8128f5f924e0fd3368371b959b7ef2a68260f32110e4"
     end
   end
@@ -42,7 +42,7 @@ class Kapacitor < Formula
   # NOTE: The version here is specified in the go.mod of kapacitor.
   # If you're upgrading to a newer kapacitor version, check to see if this needs upgraded too.
   resource "pkg-config-wrapper" do
-    url "https://github.com/influxdata/pkg-config/archive/v0.2.12.tar.gz"
+    url "https://ghproxy.com/https://github.com/influxdata/pkg-config/archive/v0.2.12.tar.gz"
     sha256 "23b2ed6a2f04d42906f5a8c28c8d681d03d47a1c32435b5df008adac5b935f1a"
   end
 

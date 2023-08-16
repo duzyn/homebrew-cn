@@ -2,7 +2,7 @@ cask "rambox" do
   version "2.1.5"
   sha256 "0c95a556a929895ef648d646e3750166ea01722178a9824a4513b1ca0b41b782"
 
-  url "https://github.com/ramboxapp/download/releases/download/v#{version}/Rambox-#{version}-mac.zip",
+  url "https://ghproxy.com/https://github.com/ramboxapp/download/releases/download/v#{version}/Rambox-#{version}-mac.zip",
       verified: "github.com/ramboxapp/download/"
   name "Rambox"
   desc "Free and Open Source messaging and emailing app"

@@ -5,7 +5,7 @@ cask "temurin11" do
   sha256 arm:   "d023cb6055a142ee3f84d056316b52910a068019cce6fbf6535628d5697dfdcd",
          intel: "af9cc9c605430830a49a3f18f25fc429a2440e1cce6fc67c29e3747090a4360c"
 
-  url "https://ghproxy.com/https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
+  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
   name "Eclipse Temurin 11"
   desc "JDK from the Eclipse Foundation (Adoptium)"

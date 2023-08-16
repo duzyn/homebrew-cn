@@ -1,12 +1,12 @@
 class NodeAT18 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v18.17.1/node-v18.17.1.tar.xz"
+  url "https://npmmirror.com/mirrors/node/v18.17.1/node-v18.17.1.tar.xz"
   sha256 "f215cf03d0f00f07ac0b674c6819f804c1542e16f152da04980022aeccf5e65a"
   license "MIT"
 
   livecheck do
-    url "https://nodejs.org/dist/"
+    url "https://npmmirror.com/mirrors/node/"
     regex(%r{href=["']?v?(18(?:\.\d+)+)/?["' >]}i)
   end
 

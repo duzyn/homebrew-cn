@@ -1,12 +1,12 @@
 class NodeAT16 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v16.20.2/node-v16.20.2.tar.xz"
+  url "https://npmmirror.com/mirrors/node/v16.20.2/node-v16.20.2.tar.xz"
   sha256 "576f1a03c455e491a8d132b587eb6b3b84651fc8974bb3638433dd44d22c8f49"
   license "MIT"
 
   livecheck do
-    url "https://nodejs.org/dist/"
+    url "https://npmmirror.com/mirrors/node/"
     regex(%r{href=["']?v?(16(?:\.\d+)+)/?["' >]}i)
   end
 

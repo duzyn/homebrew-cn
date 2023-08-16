@@ -1,7 +1,7 @@
 class Embree < Formula
   desc "High-performance ray tracing kernels"
   homepage "https://embree.github.io/"
-  url "https://github.com/embree/embree/archive/v4.2.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/embree/embree/archive/v4.2.0.tar.gz"
   sha256 "b0479ce688045d17aa63ce6223c84b1cdb5edbf00d7eda71c06b7e64e21f53a0"
   license "Apache-2.0"
   head "https://github.com/embree/embree.git", branch: "master"

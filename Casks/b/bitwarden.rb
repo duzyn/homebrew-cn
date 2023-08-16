@@ -2,7 +2,7 @@ cask "bitwarden" do
   version "2023.7.1"
   sha256 "dc994336533c632f18a39ce7b36993caba7ff54841420689212edaffa5f81a77"
 
-  url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-universal.dmg",
+  url "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-universal.dmg",
       verified: "github.com/bitwarden/clients/"
   name "Bitwarden"
   desc "Desktop password and login vault"

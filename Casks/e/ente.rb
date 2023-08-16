@@ -2,7 +2,7 @@ cask "ente" do
   version "1.6.39"
   sha256 "3c7e5786c96936f9d1d30642868b504f0c28e0e3daa5c30d8f70d90cf46fc4d0"
 
-  url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}.dmg",
       verified: "github.com/ente-io/photos-desktop/"
   name "Ente"
   desc "Desktop client for Ente"

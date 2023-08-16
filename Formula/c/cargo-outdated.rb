@@ -1,7 +1,7 @@
 class CargoOutdated < Formula
   desc "Cargo subcommand for displaying when Rust dependencies are out of date"
   homepage "https://github.com/kbknapp/cargo-outdated"
-  url "https://github.com/kbknapp/cargo-outdated/archive/v0.13.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/kbknapp/cargo-outdated/archive/v0.13.1.tar.gz"
   sha256 "571910b0c44f0bcf0b6e5c24184247e4603f474c7bde5f0eaa1203ce802b4a4a"
   license "MIT"
   revision 1

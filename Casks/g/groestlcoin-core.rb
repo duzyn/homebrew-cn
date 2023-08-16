@@ -5,7 +5,7 @@ cask "groestlcoin-core" do
   sha256 arm:   "b2af74c8c8068f23b1a44facd100f99b45542260b88267b04aaa9df751db314f",
          intel: "2e8bbf60a10668e284d6f54b934cae62dedac993f926923a3fa630d5450b6656"
 
-  url "https://github.com/groestlcoin/groestlcoin/releases/download/v#{version}/groestlcoin-#{version}-#{arch}-apple-darwin.dmg",
+  url "https://ghproxy.com/https://github.com/groestlcoin/groestlcoin/releases/download/v#{version}/groestlcoin-#{version}-#{arch}-apple-darwin.dmg",
       verified: "github.com/groestlcoin/groestlcoin/"
   name "Groestlcoin Core"
   desc "Groestlcoin client and wallet"

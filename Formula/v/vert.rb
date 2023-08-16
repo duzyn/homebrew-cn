@@ -1,7 +1,7 @@
 class Vert < Formula
   desc "Command-line version testing"
   homepage "https://github.com/Masterminds/vert"
-  url "https://github.com/Masterminds/vert/archive/v0.1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/Masterminds/vert/archive/v0.1.0.tar.gz"
   sha256 "96e22de4c03c0a5ae1afb26c717f211c85dd74c8b7a9605ff525c87e66d19007"
   license "MIT"
 

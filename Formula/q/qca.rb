@@ -1,13 +1,13 @@
 class Qca < Formula
   desc "Qt Cryptographic Architecture (QCA)"
   homepage "https://userbase.kde.org/QCA"
-  url "https://download.kde.org/stable/qca/2.3.7/qca-2.3.7.tar.xz"
+  url "https://mirrors.ustc.edu.cn/kde/stable/qca/2.3.7/qca-2.3.7.tar.xz"
   sha256 "fee2343b54687d5be3e30fb33ce296ee50ac7ae5e23d7ab725f63ffdf7af3f43"
   license "LGPL-2.1-or-later"
   head "https://invent.kde.org/libraries/qca.git", branch: "master"
 
   livecheck do
-    url "https://download.kde.org/stable/qca/"
+    url "https://mirrors.ustc.edu.cn/kde/stable/qca/"
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 

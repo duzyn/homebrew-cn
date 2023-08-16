@@ -1,7 +1,7 @@
 class Qodem < Formula
   desc "Terminal emulator and BBS client"
   homepage "https://qodem.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/qodem/qodem/1.0.1/qodem-1.0.1.tar.gz"
+  url "https://downloads.sourceforge.net/project/qodem/qodem/1.0.1/qodem-1.0.1.tar.gz?use_mirror=nchc"
   sha256 "dedc73bfa73ced5c6193f1baf1ffe91f7accaad55a749240db326cebb9323359"
   license :public_domain
 

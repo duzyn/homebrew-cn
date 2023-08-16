@@ -34,7 +34,7 @@ class Mftrace < Formula
 
   # Fixed in https://github.com/hanwen/mftrace/pull/14
   resource "manpage" do
-    url "https://github.com/hanwen/mftrace/raw/release/1.2.20/gf2pbm.1"
+    url "https://ghproxy.com/https://github.com/hanwen/mftrace/raw/release/1.2.20/gf2pbm.1"
     sha256 "f2a7234cba5f59237e3cc1f67e395046b381a012456d4e6e9963673cf35d46fb"
   end
 

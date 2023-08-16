@@ -1,7 +1,7 @@
 class Coinutils < Formula
   desc "COIN-OR utilities"
   homepage "https://github.com/coin-or/CoinUtils"
-  url "https://github.com/coin-or/CoinUtils/archive/releases/2.11.9.tar.gz"
+  url "https://ghproxy.com/https://github.com/coin-or/CoinUtils/archive/releases/2.11.9.tar.gz"
   sha256 "15d572ace4cd3b7c8ce117081b65a2bd5b5a4ebaba54fadc99c7a244160f88b8"
   license "EPL-2.0"
   head "https://github.com/coin-or/CoinUtils.git", branch: "master"
@@ -25,7 +25,7 @@ class Coinutils < Formula
   depends_on "openblas"
 
   resource "homebrew-coin-or-tools-data-sample-p0201-mps" do
-    url "https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.11/p0201.mps"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.11/p0201.mps"
     sha256 "8352d7f121289185f443fdc67080fa9de01e5b9bf11b0bf41087fba4277c07a4"
   end
 

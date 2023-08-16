@@ -1,7 +1,7 @@
 class Pumba < Formula
   desc "Chaos testing tool for Docker"
   homepage "https://github.com/alexei-led/pumba"
-  url "https://github.com/alexei-led/pumba/archive/0.9.7.tar.gz"
+  url "https://ghproxy.com/https://github.com/alexei-led/pumba/archive/0.9.7.tar.gz"
   sha256 "844f600da305577db726cd2b97295608641a462a5e1c457de14af216e4540fe4"
   license "Apache-2.0"
   head "https://github.com/alexei-led/pumba.git", branch: "master"

@@ -2,7 +2,7 @@ cask "bluebubbles" do
   version "1.7.3"
   sha256 "82e9fbb7a108960867ab0457059c95b5c9c44a526dddc5f1961afefe17800d75"
 
-  url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}.dmg",
       verified: "github.com/BlueBubblesApp/bluebubbles-server/"
   name "BlueBubbles"
   desc "Server for forwarding iMessages"

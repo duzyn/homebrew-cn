@@ -5,7 +5,7 @@ cask "jupyterlab" do
   sha256 arm:   "ccc36ebc1860db64b28d60d2eac9106750dd5e266d647734d3f4ed90d9d65927",
          intel: "58f0a8e3fc8118fd19225d32c278e6d4d5f3da6a8ee93e0d8ecb9529a56e71fc"
 
-  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS-#{arch}.dmg"
+  url "https://ghproxy.com/https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS-#{arch}.dmg"
   name "JupyterLab App"
   desc "Desktop application for JupyterLab"
   homepage "https://github.com/jupyterlab/jupyterlab-desktop"

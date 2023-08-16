@@ -3,7 +3,7 @@ class FortranLanguageServer < Formula
 
   desc "Language Server for Fortran"
   homepage "https://github.com/hansec/fortran-language-server"
-  url "https://github.com/hansec/fortran-language-server/archive/refs/tags/v1.12.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/hansec/fortran-language-server/archive/refs/tags/v1.12.0.tar.gz"
   sha256 "5cda6341b1d2365cce3d80ba40043346c5dcbd0b35f636bfa57cb34df789ff17"
   license "MIT"
   head "https://github.com/hansec/fortran-language-server.git", branch: "master"

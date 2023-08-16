@@ -1,7 +1,7 @@
 class LibgeditAmtk < Formula
   desc "Actions, Menus and Toolbars Kit for GTK applications"
   homepage "https://gedit-technology.net"
-  url "https://github.com/gedit-technology/libgedit-amtk/archive/refs/tags/5.8.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/gedit-technology/libgedit-amtk/archive/refs/tags/5.8.0.tar.gz"
   sha256 "014d90bdc611ef855655c846a37341b8394db794b06344e07066b87c259b4f31"
   license "LGPL-3.0-or-later"
   head "https://github.com/gedit-technology/libgedit-amtk.git", branch: "main"

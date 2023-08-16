@@ -1,7 +1,7 @@
 class Expect < Formula
   desc "Program that can automate interactive applications"
   homepage "https://core.tcl-lang.org/expect/index"
-  url "https://downloads.sourceforge.net/project/expect/Expect/5.45.4/expect5.45.4.tar.gz"
+  url "https://downloads.sourceforge.net/project/expect/Expect/5.45.4/expect5.45.4.tar.gz?use_mirror=nchc"
   sha256 "49a7da83b0bdd9f46d04a04deec19c7767bb9a323e40c4781f89caf760b92c34"
   license :public_domain
   revision 2
@@ -36,7 +36,7 @@ class Expect < Formula
   # Appears to fix a segfault on ARM Ventura:
   # https://github.com/Homebrew/homebrew-core/pull/123513
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/49c39ceebb547fc1965ae2c8d423fd8c082b52a7/expect/headers.diff"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/49c39ceebb547fc1965ae2c8d423fd8c082b52a7/expect/headers.diff"
     sha256 "7a4d5c958b3e51a08368cae850607066baf9c049026bec11548e8c04cec363ef"
   end
 

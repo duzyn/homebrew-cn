@@ -1,7 +1,7 @@
 class Notify < Formula
   desc "Stream the output of any CLI and publish it to a variety of supported platforms"
   homepage "https://github.com/projectdiscovery/notify"
-  url "https://github.com/projectdiscovery/notify/archive/refs/tags/v1.0.5.tar.gz"
+  url "https://ghproxy.com/https://github.com/projectdiscovery/notify/archive/refs/tags/v1.0.5.tar.gz"
   sha256 "15824bee28cb9f3e74aa34559619fdceb865182fe12961d6c5cfc26db642b38c"
   license "MIT"
   head "https://github.com/projectdiscovery/notify.git", branch: "master"

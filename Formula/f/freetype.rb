@@ -1,7 +1,7 @@
 class Freetype < Formula
   desc "Software library to render fonts"
   homepage "https://www.freetype.org/"
-  url "https://downloads.sourceforge.net/project/freetype/freetype2/2.13.1/freetype-2.13.1.tar.xz"
+  url "https://downloads.sourceforge.net/project/freetype/freetype2/2.13.1/freetype-2.13.1.tar.xz?use_mirror=nchc"
   mirror "https://download.savannah.gnu.org/releases/freetype/freetype-2.13.1.tar.xz"
   sha256 "ea67e3b019b1104d1667aa274f5dc307d8cbd606b399bc32df308a77f1a564bf"
   license "FTL"

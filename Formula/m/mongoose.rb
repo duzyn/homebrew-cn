@@ -1,7 +1,7 @@
 class Mongoose < Formula
   desc "Web server build on top of Libmongoose embedded library"
   homepage "https://github.com/cesanta/mongoose"
-  url "https://github.com/cesanta/mongoose/archive/7.11.tar.gz"
+  url "https://ghproxy.com/https://github.com/cesanta/mongoose/archive/7.11.tar.gz"
   sha256 "cb2a746505827d3225abdb1c8d508950aa3d769abb0cda59065b1628608efb2e"
   license "GPL-2.0-only"
 

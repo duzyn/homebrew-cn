@@ -1,7 +1,7 @@
 class Czkawka < Formula
   desc "Duplicate file utility"
   homepage "https://github.com/qarmin/czkawka"
-  url "https://github.com/qarmin/czkawka/archive/refs/tags/6.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/qarmin/czkawka/archive/refs/tags/6.0.0.tar.gz"
   sha256 "32dc1d8a55bc3ce478246830a1f81679affa85735e69aa049fd83e30271e368f"
   license all_of: ["MIT", "CC-BY-4.0"]
 

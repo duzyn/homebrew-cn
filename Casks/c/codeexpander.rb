@@ -2,7 +2,7 @@ cask "codeexpander" do
   version "4.3.1"
   sha256 "d2288cf347f7c23f40e6f6ac92c3f077c1700d335c71509b52f935fdc0c0fb45"
 
-  url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
   name "CodeExpander"
   desc "Cloud synchronization development tool"
   homepage "https://github.com/oncework/codeexpander"

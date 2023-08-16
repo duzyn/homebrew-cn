@@ -1,7 +1,7 @@
 class LibomemoC < Formula
   desc "Implementation of Signal's ratcheting forward secrecy protocol"
   homepage "https://github.com/dino/libomemo-c"
-  url "https://github.com/dino/libomemo-c/archive/refs/tags/v0.5.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/dino/libomemo-c/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "03195a24ef7a86c339cdf9069d7f7569ed511feaf55e853bfcb797d2698ba983"
   license "GPL-3.0-only"
 

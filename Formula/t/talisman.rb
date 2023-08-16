@@ -1,7 +1,7 @@
 class Talisman < Formula
   desc "Tool to detect and prevent secrets from getting checked in"
   homepage "https://thoughtworks.github.io/talisman/"
-  url "https://github.com/thoughtworks/talisman/archive/refs/tags/v1.31.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/thoughtworks/talisman/archive/refs/tags/v1.31.0.tar.gz"
   sha256 "7f3a04e19381b00cde566627382b4cc0fcf9c5fc08722ea6b965d9fb3b0be7ed"
   license "MIT"
   version_scheme 1

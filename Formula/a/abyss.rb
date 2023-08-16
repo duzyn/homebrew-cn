@@ -1,7 +1,7 @@
 class Abyss < Formula
   desc "Genome sequence assembler for short reads"
   homepage "https://www.bcgsc.ca/resources/software/abyss"
-  url "https://github.com/bcgsc/abyss/releases/download/2.3.7/abyss-2.3.7.tar.gz"
+  url "https://ghproxy.com/https://github.com/bcgsc/abyss/releases/download/2.3.7/abyss-2.3.7.tar.gz"
   sha256 "ba37780e79ec3aa359b6003e383caef13479a87f4d0022af01b86398f9ffca1f"
   license all_of: ["GPL-3.0-only", "LGPL-2.1-or-later", "MIT", "BSD-3-Clause"]
 
@@ -43,7 +43,7 @@ class Abyss < Formula
   fails_with :clang # no OpenMP support
 
   resource "btllib" do
-    url "https://github.com/bcgsc/btllib/releases/download/v1.6.0/btllib-1.6.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/bcgsc/btllib/releases/download/v1.6.0/btllib-1.6.0.tar.gz"
     sha256 "4a122c1047785dc865b8c94063714667f8ca43b8a881754eebd96dbb44fd1c3f"
 
     # Fixes 'uint' was not declared in this scope

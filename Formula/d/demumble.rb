@@ -1,7 +1,7 @@
 class Demumble < Formula
   desc "More powerful symbol demangler (a la c++filt)"
   homepage "https://github.com/nico/demumble"
-  url "https://github.com/nico/demumble/archive/refs/tags/v1.2.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/nico/demumble/archive/refs/tags/v1.2.3.tar.gz"
   sha256 "5546681f1997da4363eba464be49c1cc0af865d335e5e0990097ace04c37bc9a"
   license "Apache-2.0"
   head "https://github.com/nico/demumble.git", branch: "main"

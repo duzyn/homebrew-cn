@@ -1,7 +1,7 @@
 class Alerter < Formula
   desc "Send User Alert Notification on macOS from the command-line"
   homepage "https://github.com/vjeantet/alerter"
-  url "https://github.com/vjeantet/alerter/archive/refs/tags/004.tar.gz"
+  url "https://ghproxy.com/https://github.com/vjeantet/alerter/archive/refs/tags/004.tar.gz"
   sha256 "c4c16735e1a57ce04a5acfa762bd44ab8ef10884308725ab886b984b1de17bfe"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Xurls < Formula
   desc "Extract urls from text"
   homepage "https://github.com/mvdan/xurls"
-  url "https://github.com/mvdan/xurls/archive/refs/tags/v2.5.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/mvdan/xurls/archive/refs/tags/v2.5.0.tar.gz"
   sha256 "552779a765de29e51ff01fe6c85a7d0389faae1b80d354332e7c69db232ee4ad"
   license "BSD-3-Clause"
   head "https://github.com/mvdan/xurls.git", branch: "master"

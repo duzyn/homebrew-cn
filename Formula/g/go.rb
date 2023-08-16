@@ -1,14 +1,14 @@
 class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.21.0.src.tar.gz"
+  url "https://mirrors.aliyun.com/golang/go1.21.0.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.21.0.src.tar.gz"
   sha256 "818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a"
   license "BSD-3-Clause"
   head "https://go.googlesource.com/go.git", branch: "master"
 
   livecheck do
-    url "https://go.dev/dl/"
+    url "https://mirrors.aliyun.com/golang/"
     regex(/href=.*?go[._-]?v?(\d+(?:\.\d+)+)[._-]src\.t/i)
   end
 

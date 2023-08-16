@@ -2,7 +2,7 @@ cask "rustdesk" do
   version "1.2.1"
   sha256 "e61daa5ff0ca4b28ced6a931c57190447b4206723e65398d387cdbae6ec0e934"
 
-  url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-x86_64.dmg",
+  url "https://ghproxy.com/https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-x86_64.dmg",
       verified: "github.com/rustdesk/rustdesk/"
   name "RustDesk"
   desc "Open source virtual/remote desktop application"

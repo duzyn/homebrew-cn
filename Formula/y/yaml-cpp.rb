@@ -1,7 +1,7 @@
 class YamlCpp < Formula
   desc "C++ YAML parser and emitter for YAML 1.2 spec"
   homepage "https://github.com/jbeder/yaml-cpp"
-  url "https://github.com/jbeder/yaml-cpp/archive/yaml-cpp-0.7.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/jbeder/yaml-cpp/archive/yaml-cpp-0.7.0.tar.gz"
   sha256 "43e6a9fcb146ad871515f0d0873947e5d497a1c9c60c58cb102a97b47208b7c3"
   license "MIT"
 

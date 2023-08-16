@@ -2,7 +2,7 @@ cask "caprine" do
   version "2.58.0"
   sha256 "46a2be7c9240b7d5be9bbce0e99608e8f10039add5d54c6ca6d1291b5aa389b8"
 
-  url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
   name "Caprine"
   desc "Elegant Facebook Messenger desktop app"
   homepage "https://github.com/sindresorhus/caprine"

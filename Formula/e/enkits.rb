@@ -1,7 +1,7 @@
 class Enkits < Formula
   desc "C and C++ Task Scheduler for creating parallel programs"
   homepage "https://github.com/dougbinks/enkiTS"
-  url "https://github.com/dougbinks/enkiTS/archive/refs/tags/v1.11.tar.gz"
+  url "https://ghproxy.com/https://github.com/dougbinks/enkiTS/archive/refs/tags/v1.11.tar.gz"
   sha256 "b57a782a6a68146169d29d180d3553bfecb9f1a0e87a5159082331920e7d297e"
   license "Zlib"
 

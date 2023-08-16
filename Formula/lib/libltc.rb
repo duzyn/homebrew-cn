@@ -1,7 +1,7 @@
 class Libltc < Formula
   desc "POSIX-C Library for handling Linear/Logitudinal Time Code (LTC)"
   homepage "https://x42.github.io/libltc/"
-  url "https://github.com/x42/libltc/releases/download/v1.3.2/libltc-1.3.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/x42/libltc/releases/download/v1.3.2/libltc-1.3.2.tar.gz"
   sha256 "0a6d42cd6c21e925a27fa560dc45ac80057d275f23342102825909c02d3b1249"
   license "LGPL-3.0"
 
@@ -24,7 +24,7 @@ class Libltc < Formula
   test do
     (testpath/"test.c").write <<~EOS
       // stripped-down copy of:
-      // https://raw.githubusercontent.com/x42/libltc/87d45b3/tests/example_encode.c
+      // https://ghproxy.com/https://raw.githubusercontent.com/x42/libltc/87d45b3/tests/example_encode.c
       #include <stdio.h>
       #include <stdlib.h>
       #include <string.h>

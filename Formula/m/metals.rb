@@ -1,7 +1,7 @@
 class Metals < Formula
   desc "Scala language server"
   homepage "https://github.com/scalameta/metals"
-  url "https://github.com/scalameta/metals/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/scalameta/metals/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "4ed800e189546ea8c97f7fd4c866fed85921ad8b6449f1c9aecd4d885bea3dce"
   license "Apache-2.0"
 

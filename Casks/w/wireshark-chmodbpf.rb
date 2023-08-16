@@ -5,7 +5,7 @@ cask "wireshark-chmodbpf" do
   sha256 arm:   "50a858f30e5db99206cbf56a74569d118d0f24026aa04546b4c87ae8f85dd24a",
          intel: "7ac1dcfc4a4c73fe20596385916382737bb1de5569e9b0790a7e6923432cd700"
 
-  url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
+  url "https://mirror.nju.edu.cn/wireshark//osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark-ChmodBPF"
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"

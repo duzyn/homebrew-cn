@@ -1,7 +1,7 @@
 class Openmama < Formula
   desc "Open source high performance messaging API for various Market Data sources"
   homepage "https://openmama.finos.org"
-  url "https://github.com/finos/OpenMAMA/archive/refs/tags/OpenMAMA-6.3.2-release.tar.gz"
+  url "https://ghproxy.com/https://github.com/finos/OpenMAMA/archive/refs/tags/OpenMAMA-6.3.2-release.tar.gz"
   sha256 "5c09b5c73467c4122fe275c0f880c70e4b9f6f8d1ecbaa1aeeac7d8195d9ffef"
   license "LGPL-2.1-only"
 

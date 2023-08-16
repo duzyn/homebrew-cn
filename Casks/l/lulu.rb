@@ -2,7 +2,7 @@ cask "lulu" do
   version "2.5.0"
   sha256 "e907bf8dccacd867c761065e6e52106bdd657846d7ecd7dcef08d6caf157d403"
 
-  url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
       verified: "github.com/objective-see/LuLu/"
   name "LuLu"
   desc "Open-source firewall to block unknown outgoing connections"

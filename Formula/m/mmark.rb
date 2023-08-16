@@ -1,7 +1,7 @@
 class Mmark < Formula
   desc "Powerful markdown processor in Go geared towards the IETF"
   homepage "https://mmark.miek.nl/"
-  url "https://github.com/mmarkdown/mmark/archive/v2.2.34.tar.gz"
+  url "https://ghproxy.com/https://github.com/mmarkdown/mmark/archive/v2.2.34.tar.gz"
   sha256 "0dd4152eb9fa95ee4f2766fb861a8d0a32884f634d8c843c420d0ed0c17f8eae"
   license "BSD-2-Clause"
 
@@ -18,7 +18,7 @@ class Mmark < Formula
   depends_on "go" => :build
 
   resource "homebrew-test" do
-    url "https://raw.githubusercontent.com/mmarkdown/mmark/v2.2.19/rfc/2100.md"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/mmarkdown/mmark/v2.2.19/rfc/2100.md"
     sha256 "0e12576b4506addc5aa9589b459bcc02ed92b936ff58f87129385d661b400c41"
   end
 

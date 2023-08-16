@@ -8,7 +8,7 @@ class Creduce < Formula
   # Remove when patches are no longer needed.
   stable do
     # TODO: Check if we can use unversioned `llvm` at version bump.
-    url "https://github.com/csmith-project/creduce/archive/refs/tags/creduce-2.10.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/csmith-project/creduce/archive/refs/tags/creduce-2.10.0.tar.gz"
     sha256 "de320cd83bd77ec1a591f36dd6a4d0d1c47a0a28d850a6ebd348540feeab2297"
 
     # Use shared libraries.

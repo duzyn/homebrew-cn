@@ -1,7 +1,7 @@
 class Libnl < Formula
   desc "Netlink Library Suite"
   homepage "https://github.com/thom311/libnl"
-  url "https://github.com/thom311/libnl/releases/download/libnl3_7_0/libnl-3.7.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/thom311/libnl/releases/download/libnl3_7_0/libnl-3.7.0.tar.gz"
   sha256 "9fe43ccbeeea72c653bdcf8c93332583135cda46a79507bfd0a483bb57f65939"
   license "LGPL-2.1-or-later"
 

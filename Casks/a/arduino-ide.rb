@@ -5,7 +5,7 @@ cask "arduino-ide" do
   sha256 arm:   "786d18416e80105c42105a1c2126c1a985d4ed6d3b34965fa85396f8466764c4",
          intel: "8b50e791ea6b6b9dca2501d6fbcb98d0e30ace934c8b278cfca53b43f90f1bcc"
 
-  url "https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_macOS_#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_macOS_#{arch}.dmg",
       verified: "github.com/arduino/arduino-ide/"
   name "Arduino IDE"
   desc "Electronics prototyping platform"

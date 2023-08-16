@@ -5,7 +5,7 @@ cask "captain" do
   sha256 arm:   "3528a42f3c355e8ebae7a1148106552902fdd251e8436ac628767f60a69aa94e",
          intel: "a9a52030eaf01f40e9f0664474e661f10040f5b03e509bfb10aabfae0e620688"
 
-  url "https://github.com/RickWong/Captain/releases/download/v#{version}/Captain-#{version}#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/RickWong/Captain/releases/download/v#{version}/Captain-#{version}#{arch}.dmg",
       verified: "github.com/RickWong/Captain/"
   name "Captain"
   desc "Manage Docker containers from the menu bar"

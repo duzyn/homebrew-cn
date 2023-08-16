@@ -1,7 +1,7 @@
 class C2rust < Formula
   desc "Migrate C code to Rust"
   homepage "https://github.com/immunant/c2rust"
-  url "https://github.com/immunant/c2rust/archive/refs/tags/v0.18.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/immunant/c2rust/archive/refs/tags/v0.18.0.tar.gz"
   sha256 "cf72bd59cac5ff31553c5d1626f130167d4f72eaabcffc27630dee2a95f4707e"
   license "BSD-3-Clause"
 

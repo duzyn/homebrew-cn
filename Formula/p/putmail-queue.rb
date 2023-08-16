@@ -1,7 +1,7 @@
 class PutmailQueue < Formula
   desc "Queue package for putmail"
   homepage "https://putmail.sourceforge.net/home.html"
-  url "https://downloads.sourceforge.net/project/putmail/putmail-queue/0.2/putmail-queue-0.2.tar.bz2"
+  url "https://downloads.sourceforge.net/project/putmail/putmail-queue/0.2/putmail-queue-0.2.tar.bz2?use_mirror=nchc"
   sha256 "09349ad26345783e061bfe4ad7586fbbbc5d1cc48e45faa9ba9f667104f9447c"
 
   livecheck do

@@ -5,7 +5,7 @@ cask "bloop" do
   sha256 arm:   "29b015815b8e755bc77426fdef878ce03cb8b6364245662e84b2d5b341b08afc",
          intel: "1d626d08b01689042fe28a936882708da92c9c487f36bfc063acadd164869b41"
 
-  url "https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
       verified: "github.com/BloopAI/bloop/"
   name "bloop"
   desc "Code search engine"

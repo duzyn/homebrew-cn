@@ -2,7 +2,7 @@ cask "bazecor" do
   version "1.3.2"
   sha256 "c462bfb1c637d79940108ccababe3499d3114ca566e32802133419a50176e0b0"
 
-  url "https://github.com/Dygmalab/Bazecor/releases/download/bazecor-#{version}/Bazecor-#{version}-x64.dmg",
+  url "https://ghproxy.com/https://github.com/Dygmalab/Bazecor/releases/download/bazecor-#{version}/Bazecor-#{version}-x64.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
   name "Bazecor"
   desc "Graphical configurator for Dygma Raise keyboards"

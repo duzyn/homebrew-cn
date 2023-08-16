@@ -2,7 +2,7 @@ cask "plugdata" do
   version "0.7.1"
   sha256 "fb294db389790196ca2c5a7a096a00bae5e77a4da3425f2d4e83d989f7ec909e"
 
-  url "https://github.com/timothyschoen/PlugData/releases/download/v#{version}/plugdata-macOS-Universal.pkg"
+  url "https://ghproxy.com/https://github.com/timothyschoen/PlugData/releases/download/v#{version}/plugdata-macOS-Universal.pkg"
   name "PlugData"
   desc "Plugin wrapper for PureData"
   homepage "https://github.com/timothyschoen/PlugData"

@@ -1,7 +1,7 @@
 class Clifm < Formula
   desc "Command-line Interface File Manager"
   homepage "https://github.com/leo-arch/clifm"
-  url "https://github.com/leo-arch/clifm/archive/refs/tags/v1.13.tar.gz"
+  url "https://ghproxy.com/https://github.com/leo-arch/clifm/archive/refs/tags/v1.13.tar.gz"
   sha256 "44eeba9416e2dea6d9b61cddb414471828d3a794fefc6b6e9fe3aa5445454120"
   license "GPL-2.0-or-later"
 

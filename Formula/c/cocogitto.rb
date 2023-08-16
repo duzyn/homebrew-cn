@@ -1,7 +1,7 @@
 class Cocogitto < Formula
   desc "Conventional Commits toolbox"
   homepage "https://github.com/cocogitto/cocogitto"
-  url "https://github.com/cocogitto/cocogitto/archive/refs/tags/5.4.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/cocogitto/cocogitto/archive/refs/tags/5.4.0.tar.gz"
   sha256 "93065217191d3e1739e6bca78b0b6de7d7dd1b5334229702fff9e84162060feb"
   license "MIT"
 

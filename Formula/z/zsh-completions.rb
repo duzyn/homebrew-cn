@@ -1,7 +1,7 @@
 class ZshCompletions < Formula
   desc "Additional completion definitions for zsh"
   homepage "https://github.com/zsh-users/zsh-completions"
-  url "https://github.com/zsh-users/zsh-completions/archive/0.34.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/zsh-users/zsh-completions/archive/0.34.0.tar.gz"
   sha256 "21b6c194b15ae3992f4c2340ab249aa326a9874d46e3130bb3f292142c217fe2"
   license "MIT-Modern-Variant"
   head "https://github.com/zsh-users/zsh-completions.git", branch: "master"

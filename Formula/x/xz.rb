@@ -4,7 +4,7 @@ class Xz < Formula
   desc "General-purpose data compression with high compression ratio"
   homepage "https://tukaani.org/xz/"
   # The archive.org mirror below needs to be manually created at `archive.org`.
-  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.4.4.tar.gz"
+  url "https://downloads.sourceforge.net/project/lzmautils/xz-5.4.4.tar.gz?use_mirror=nchc"
   mirror "https://tukaani.org/xz/xz-5.4.4.tar.gz"
   mirror "https://archive.org/download/xz-5.4.4/xz-5.4.4.tar.gz"
   mirror "http://archive.org/download/xz-5.4.4/xz-5.4.4.tar.gz"

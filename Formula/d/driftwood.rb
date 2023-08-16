@@ -1,7 +1,7 @@
 class Driftwood < Formula
   desc "Private key usage verification"
   homepage "https://trufflesecurity.com/"
-  url "https://github.com/trufflesecurity/driftwood/archive/refs/tags/v1.0.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/trufflesecurity/driftwood/archive/refs/tags/v1.0.1.tar.gz"
   sha256 "655e7f5841a97820adf11b608b41f88cc93953c8c5e1d497bdbd86e5662b2621"
   license "Apache-2.0"
   head "https://github.com/trufflesecurity/driftwood.git", branch: "main"

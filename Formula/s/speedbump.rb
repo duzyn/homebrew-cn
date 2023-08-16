@@ -1,7 +1,7 @@
 class Speedbump < Formula
   desc "TCP proxy for simulating variable, yet predictable network latency"
   homepage "https://github.com/kffl/speedbump"
-  url "https://github.com/kffl/speedbump/archive/refs/tags/v1.1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/kffl/speedbump/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "ab685094e2e78818921adc8705ab01c8d26719d11313e99b9638b84ebae38194"
   license "Apache-2.0"
   head "https://github.com/kffl/speedbump.git", branch: "master"

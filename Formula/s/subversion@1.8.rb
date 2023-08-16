@@ -36,7 +36,7 @@ class SubversionAT18 < Formula
   # Prevent "-arch ppc" from being pulled in from Perl's $Config{ccflags}
   # Prevent linking into a Python Framework
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/subversion@1.8/1.8.16.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/subversion@1.8/1.8.16.patch"
     sha256 "3d8bb24db773c713a1301986f71e018b7d0ff95425738964b575562841f8dc64"
   end
 

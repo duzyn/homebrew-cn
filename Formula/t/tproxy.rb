@@ -1,7 +1,7 @@
 class Tproxy < Formula
   desc "CLI tool to proxy and analyze TCP connections"
   homepage "https://github.com/kevwan/tproxy"
-  url "https://github.com/kevwan/tproxy/archive/refs/tags/v0.7.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/kevwan/tproxy/archive/refs/tags/v0.7.3.tar.gz"
   sha256 "b6b226525365f3ae510e34be9cb23831a61474959235c308b5cd9fc546aecda2"
   license "MIT"
   head "https://github.com/kevwan/tproxy.git", branch: "main"

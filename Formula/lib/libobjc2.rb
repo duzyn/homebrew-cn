@@ -1,7 +1,7 @@
 class Libobjc2 < Formula
   desc "Objective-C runtime library intended for use with Clang"
   homepage "https://github.com/gnustep/libobjc2"
-  url "https://github.com/gnustep/libobjc2/archive/refs/tags/v2.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/gnustep/libobjc2/archive/refs/tags/v2.1.tar.gz"
   sha256 "78fc3711db14bf863040ae98f7bdca08f41623ebeaf7efaea7dd49a38b5f054c"
   license "MIT"
 
@@ -23,7 +23,7 @@ class Libobjc2 < Formula
   fails_with :gcc
 
   resource "robin-map" do
-    url "https://github.com/Tessil/robin-map/archive/refs/tags/v1.0.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/Tessil/robin-map/archive/refs/tags/v1.0.1.tar.gz"
     sha256 "b2ffdb623727cea852a66bddcb7fa6d938538a82b40e48294bb581fe086ef005"
   end
 

@@ -1,7 +1,7 @@
 class WasmMicroRuntime < Formula
   desc "WebAssembly Micro Runtime (WAMR)"
   homepage "https://github.com/bytecodealliance/wasm-micro-runtime"
-  url "https://github.com/bytecodealliance/wasm-micro-runtime/archive/refs/tags/WAMR-1.2.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/bytecodealliance/wasm-micro-runtime/archive/refs/tags/WAMR-1.2.2.tar.gz"
   sha256 "d328fc1e19c54cfdb4248b861de54b62977b9b85c0a40eaaeb9cd9b628c0c788"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/bytecodealliance/wasm-micro-runtime.git", branch: "main"
@@ -24,7 +24,7 @@ class WasmMicroRuntime < Formula
   depends_on "cmake" => :build
 
   resource "homebrew-fib_wasm" do
-    url "https://github.com/wasm3/wasm3/raw/main/test/lang/fib.c.wasm"
+    url "https://ghproxy.com/https://github.com/wasm3/wasm3/raw/main/test/lang/fib.c.wasm"
     sha256 "e6fafc5913921693101307569fc1159d4355998249ca8d42d540015433d25664"
   end
 

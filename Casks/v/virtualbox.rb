@@ -2,7 +2,7 @@ cask "virtualbox" do
   version "7.0.10,158379"
   sha256 "de2a77c9154e90e6715573cf3fc140d56d582cba56072a06231a625cecc892bc"
 
-  url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
+  url "https://mirror.nju.edu.cn/virtualbox//#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
   name "Oracle VirtualBox"
   desc "Virtualizer for x86 hardware"
   homepage "https://www.virtualbox.org/"

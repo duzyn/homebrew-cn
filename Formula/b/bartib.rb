@@ -1,7 +1,7 @@
 class Bartib < Formula
   desc "Simple timetracker for the command-line"
   homepage "https://github.com/nikolassv/bartib"
-  url "https://github.com/nikolassv/bartib/archive/refs/tags/v1.0.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/nikolassv/bartib/archive/refs/tags/v1.0.1.tar.gz"
   sha256 "51ee91f0ebcdba8a3e194d1f800aab942d99b1be1241d9d29f85615a89c87e6e"
   license "GPL-3.0-only"
 

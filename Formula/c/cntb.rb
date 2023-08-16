@@ -1,7 +1,7 @@
 class Cntb < Formula
   desc "Contabo Command-Line Interface (CLI)"
   homepage "https://github.com/contabo/cntb"
-  url "https://github.com/contabo/cntb/archive/refs/tags/v1.4.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/contabo/cntb/archive/refs/tags/v1.4.6.tar.gz"
   sha256 "131c35bd31996d9545521f4c604fea8955ce1865e7ab58313faa786e79f3b034"
   license "GPL-3.0-only"
 

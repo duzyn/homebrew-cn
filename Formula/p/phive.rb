@@ -1,7 +1,7 @@
 class Phive < Formula
   desc "Phar Installation and Verification Environment (PHIVE)"
   homepage "https://phar.io"
-  url "https://github.com/phar-io/phive/releases/download/0.15.2/phive-0.15.2.phar"
+  url "https://ghproxy.com/https://github.com/phar-io/phive/releases/download/0.15.2/phive-0.15.2.phar"
   sha256 "2bb076753ec5d672f5e2f96a97a0fe7e8e9ec24a439eed00fd29ef942c7905f9"
   license "BSD-3-Clause"
 

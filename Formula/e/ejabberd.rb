@@ -1,7 +1,7 @@
 class Ejabberd < Formula
   desc "XMPP application server"
   homepage "https://www.ejabberd.im"
-  url "https://github.com/processone/ejabberd/archive/refs/tags/23.04.tar.gz"
+  url "https://ghproxy.com/https://github.com/processone/ejabberd/archive/refs/tags/23.04.tar.gz"
   sha256 "6ff1d41a1ff6261a0c846193647d8ec143e82142859bf1cfdc62299022ceb2ad"
   license "GPL-2.0-only"
   revision 1

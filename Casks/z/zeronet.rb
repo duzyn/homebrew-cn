@@ -2,7 +2,7 @@ cask "zeronet" do
   version "0.7.1"
   sha256 :no_check
 
-  url "https://github.com/HelloZeroNet/ZeroNet-dist/archive/mac/ZeroNet-dist-mac.zip",
+  url "https://ghproxy.com/https://github.com/HelloZeroNet/ZeroNet-dist/archive/mac/ZeroNet-dist-mac.zip",
       verified: "github.com/HelloZeroNet/ZeroNet-dist/"
   name "ZeroNet"
   homepage "https://zeronet.io/"

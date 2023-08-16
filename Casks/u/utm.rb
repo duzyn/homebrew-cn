@@ -2,7 +2,7 @@ cask "utm" do
   version "4.3.5"
   sha256 "6832237f84ea85222061a26e948e45817c65362675a9c358f93ca9efe4b91dcf"
 
-  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
+  url "https://ghproxy.com/https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
   name "UTM"
   desc "Virtual machines UI using QEMU"

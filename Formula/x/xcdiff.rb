@@ -17,7 +17,7 @@ class Xcdiff < Formula
   depends_on xcode: "14.1"
 
   resource "homebrew-testdata" do
-    url "https://github.com/bloomberg/xcdiff/archive/refs/tags/0.10.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/bloomberg/xcdiff/archive/refs/tags/0.10.0.tar.gz"
     sha256 "c093e128873f1bb2605b14bf9100c5ad7855be17b14f2cad36668153110b1265"
   end
 

@@ -1,7 +1,7 @@
 class Mbw < Formula
   desc "Memory Bandwidth Benchmark"
   homepage "https://github.com/raas/mbw/"
-  url "https://github.com/raas/mbw/archive/refs/tags/v2.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/raas/mbw/archive/refs/tags/v2.0.tar.gz"
   sha256 "557f670e13ff663086fe239e4184d8ca6154b004bd5fde2b0a748e5aa543c87f"
   license "GPL-3.0-or-later"
 

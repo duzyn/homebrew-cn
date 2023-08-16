@@ -1,13 +1,13 @@
 class PythonAT38 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.8.17/Python-3.8.17.tar.xz"
+  url "https://npmmirror.com/mirrors/python/3.8.17/Python-3.8.17.tar.xz"
   sha256 "2e54b0c68191f16552f6de2e97a2396540572a219f6bbb28591a137cecc490a9"
   license "Python-2.0"
   revision 1
 
   livecheck do
-    url "https://www.python.org/ftp/python/"
+    url "https://npmmirror.com/mirrors/python/"
     regex(%r{href=.*?v?(3\.8(?:\.\d+)*)/?["' >]}i)
   end
 

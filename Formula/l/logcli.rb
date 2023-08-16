@@ -1,7 +1,7 @@
 class Logcli < Formula
   desc "Run LogQL queries against a Loki server"
   homepage "https://grafana.com/loki"
-  url "https://github.com/grafana/loki/archive/v2.8.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/grafana/loki/archive/v2.8.4.tar.gz"
   sha256 "d594cb86866e2edeeeb6b962c4da3d1052ad9f586b666947eb381a9402338802"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/loki.git", branch: "main"
@@ -24,7 +24,7 @@ class Logcli < Formula
   depends_on "loki" => :test
 
   resource "testdata" do
-    url "https://raw.githubusercontent.com/grafana/loki/f5fd029660034d31833ff1d2620bb82d1c1618af/cmd/loki/loki-local-config.yaml"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/grafana/loki/f5fd029660034d31833ff1d2620bb82d1c1618af/cmd/loki/loki-local-config.yaml"
     sha256 "27db56559262963688b6b1bf582c4dc76f82faf1fa5739dcf61a8a52425b7198"
   end
 

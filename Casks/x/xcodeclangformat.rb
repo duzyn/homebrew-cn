@@ -2,7 +2,7 @@ cask "xcodeclangformat" do
   version "1.2.1"
   sha256 "efc9e926db308977d9ad1ce39925b5c3270eb05aec97a4ae988250d31619d97c"
 
-  url "https://github.com/mapbox/XcodeClangFormat/releases/download/v#{version}/XcodeClangFormat.zip"
+  url "https://ghproxy.com/https://github.com/mapbox/XcodeClangFormat/releases/download/v#{version}/XcodeClangFormat.zip"
   name "XcodeClangFormat"
   desc "Format code in Xcode with clang-format"
   homepage "https://github.com/mapbox/XcodeClangFormat"

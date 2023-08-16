@@ -1,7 +1,7 @@
 class Mame < Formula
   desc "Multiple Arcade Machine Emulator"
   homepage "https://mamedev.org/"
-  url "https://github.com/mamedev/mame/archive/mame0257.tar.gz"
+  url "https://ghproxy.com/https://github.com/mamedev/mame/archive/mame0257.tar.gz"
   version "0.257"
   sha256 "e3107012ce80bff10cef7cab6ad8290f97cf1bc978e67ae806aa1a0c100daaa2"
   license "GPL-2.0-or-later"

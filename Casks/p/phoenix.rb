@@ -2,7 +2,7 @@ cask "phoenix" do
   version "4.0.0"
   sha256 "174ebec4c7860d014d02441867721a14342521c0a9482a0fa8605f644b3a40b2"
 
-  url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
+  url "https://ghproxy.com/https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   name "Phoenix"
   desc "Window and app manager scriptable with JavaScript"
   homepage "https://github.com/kasper/phoenix/"

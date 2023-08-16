@@ -3,7 +3,7 @@ cask "v2rayx" do
   version "1.5.1"
   sha256 "007ec1de5c8f768eb7be42df1980a4998fbf953d29d6c80019bd826272855239"
 
-  url "https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
+  url "https://ghproxy.com/https://github.com/Cenmrev/V2RayX/releases/download/v#{version}/V2RayX.app.zip"
   name "V2RayX"
   desc "GUI for v2ray-core"
   homepage "https://github.com/Cenmrev/V2RayX"

@@ -2,7 +2,7 @@ cask "veusz" do
   version "3.6"
   sha256 "c23d7593724f5398747c6858bc99fdc950633631dfc8d9224730eed682ada8f6"
 
-  url "https://github.com/veusz/veusz/releases/download/veusz-#{version.major_minor}/veusz-#{version}-AppleOSX.dmg",
+  url "https://ghproxy.com/https://github.com/veusz/veusz/releases/download/veusz-#{version.major_minor}/veusz-#{version}-AppleOSX.dmg",
       verified: "github.com/veusz/veusz/"
   name "Veusz"
   desc "Scientific plotting application"

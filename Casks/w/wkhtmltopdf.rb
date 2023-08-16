@@ -2,7 +2,7 @@ cask "wkhtmltopdf" do
   version "0.12.6-2"
   sha256 "81a66b77b508fede8dbcaa67127203748376568b3673a17f6611b6d51e9894f8"
 
-  url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg",
+  url "https://ghproxy.com/https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg",
       verified: "github.com/wkhtmltopdf/packaging/"
   name "wkhtmltopdf"
   desc "HTML to PDF renderer"

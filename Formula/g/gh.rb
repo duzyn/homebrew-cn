@@ -1,7 +1,7 @@
 class Gh < Formula
   desc "GitHub command-line tool"
   homepage "https://github.com/cli/cli"
-  url "https://github.com/cli/cli/archive/v2.32.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/cli/cli/archive/v2.32.1.tar.gz"
   sha256 "1d569dc82eb6520e6a8959568c2db84fea3bbaab2604c8dd5901849d320e1eae"
   license "MIT"
 

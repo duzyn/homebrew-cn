@@ -1,7 +1,7 @@
 class Plog < Formula
   desc "Portable, simple and extensible C++ logging library"
   homepage "https://github.com/SergiusTheBest/plog"
-  url "https://github.com/SergiusTheBest/plog/archive/refs/tags/1.1.9.tar.gz"
+  url "https://ghproxy.com/https://github.com/SergiusTheBest/plog/archive/refs/tags/1.1.9.tar.gz"
   sha256 "058315b9ec9611b659337d4333519ab4783fad3f2f23b1cc7bb84d977ea38055"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Jbig2dec < Formula
   desc "JBIG2 decoder and library (for monochrome documents)"
   homepage "https://github.com/ArtifexSoftware/jbig2dec"
-  url "https://github.com/ArtifexSoftware/jbig2dec/archive/refs/tags/0.19.tar.gz"
+  url "https://ghproxy.com/https://github.com/ArtifexSoftware/jbig2dec/archive/refs/tags/0.19.tar.gz"
   sha256 "e81b787ad0b147a437a52d9ce7de1a8f429655e8aa030383b6b2dd8919373717"
   license "AGPL-3.0-or-later"
 
@@ -23,7 +23,7 @@ class Jbig2dec < Formula
   depends_on "libtool" => :build
 
   resource("test") do
-    url "https://github.com/apache/tika/raw/master/tika-parsers/src/test/resources/test-documents/testJBIG2.jb2"
+    url "https://ghproxy.com/https://github.com/apache/tika/raw/master/tika-parsers/src/test/resources/test-documents/testJBIG2.jb2"
     sha256 "40764aed6c185f1f82123f9e09de8e4d61120e35d2b5c6ede082123749c22d91"
   end
 

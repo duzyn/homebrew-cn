@@ -40,13 +40,13 @@ class RubyAT27 < Formula
 
   # Update the bundled openssl gem for compatibility with OpenSSL 3.
   resource "openssl" do
-    url "https://github.com/ruby/openssl/archive/refs/tags/v3.1.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/ruby/openssl/archive/refs/tags/v3.1.0.tar.gz"
     sha256 "3f099acd0b3bea791cbdde520f2d332a709bbd9144abcbe22189a20bac12c6de"
   end
 
   # Update the bundled digest gem for compatibility with the newer openssl gem.
   resource "digest" do
-    url "https://github.com/ruby/digest/archive/refs/tags/v3.1.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/ruby/digest/archive/refs/tags/v3.1.1.tar.gz"
     sha256 "27107e7a982ce090eb9d84f4fa2f0e537feb46389e5cdd50855f6b8f8531d280"
   end
 

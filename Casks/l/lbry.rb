@@ -2,7 +2,7 @@ cask "lbry" do
   version "0.53.9"
   sha256 "3769997e7cdb6e563a505c5f8375325ef26fc74318aea0defde711fc5fcfee5e"
 
-  url "https://github.com/lbryio/lbry-desktop/releases/download/v#{version}/LBRY_#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/lbryio/lbry-desktop/releases/download/v#{version}/LBRY_#{version}.dmg",
       verified: "github.com/lbryio/lbry-desktop/"
   name "LBRY Desktop"
   desc "Official client for LBRY, a decentralised file-sharing and payment network"

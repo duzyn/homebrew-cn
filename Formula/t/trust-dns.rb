@@ -1,7 +1,7 @@
 class TrustDns < Formula
   desc "Rust based DNS client, server, and resolver"
   homepage "https://github.com/bluejekyll/trust-dns"
-  url "https://github.com/bluejekyll/trust-dns/archive/refs/tags/v0.22.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/bluejekyll/trust-dns/archive/refs/tags/v0.22.1.tar.gz"
   sha256 "48debc51079b43a942f05f51dfd6d7ea900ed21f6db72e3136f100cb35263a15"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/bluejekyll/trust-dns.git", branch: "main"

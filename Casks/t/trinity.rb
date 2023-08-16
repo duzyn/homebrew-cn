@@ -2,7 +2,7 @@ cask "trinity" do
   version "1.6.2"
   sha256 "c37926a9612e8a8360490b6b924b1a2922a4374377e428f24b985f45de66ad68"
 
-  url "https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/iotaledger/trinity-wallet/releases/download/desktop-#{version}/trinity-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/trinity-wallet/"
   name "IOTA Trinity Wallet"
   desc "Cryptocurrency wallet"

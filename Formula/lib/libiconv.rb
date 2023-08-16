@@ -21,7 +21,7 @@ class Libiconv < Formula
   depends_on :macos # is not needed on Linux, where iconv.h is provided by glibc
 
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-utf8mac.diff"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/patches/9be2793af/libiconv/patch-utf8mac.diff"
     sha256 "e8128732f22f63b5c656659786d2cf76f1450008f36bcf541285268c66cabeab"
   end
 

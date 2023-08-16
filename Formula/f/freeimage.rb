@@ -1,7 +1,7 @@
 class Freeimage < Formula
   desc "Library for FreeImage, a dependency-free graphics library"
   homepage "https://sourceforge.net/projects/freeimage/"
-  url "https://downloads.sourceforge.net/project/freeimage/Source%20Distribution/3.18.0/FreeImage3180.zip"
+  url "https://downloads.sourceforge.net/project/freeimage/Source%20Distribution/3.18.0/FreeImage3180.zip?use_mirror=nchc"
   version "3.18.0"
   sha256 "f41379682f9ada94ea7b34fe86bf9ee00935a3147be41b6569c9605a53e438fd"
   license "FreeImage"
@@ -22,11 +22,11 @@ class Freeimage < Formula
 
   patch do
     on_macos do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/4dcf528/freeimage/3.17.0.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/4dcf528/freeimage/3.17.0.patch"
       sha256 "8ef390fece4d2166d58e739df76b5e7996c879efbff777a8a94bcd1dd9a313e2"
     end
     on_linux do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/696e313c1f89925a8d04f00282d3b6c204a64f48/freeimage/3.17.0-linux.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/696e313c1f89925a8d04f00282d3b6c204a64f48/freeimage/3.17.0-linux.patch"
       sha256 "537a4045d31a3ce1c3bab2736d17b979543758cf2081e97fff4d72786f1830dc"
     end
   end

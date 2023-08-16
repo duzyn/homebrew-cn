@@ -1,7 +1,7 @@
 class Joshuto < Formula
   desc "Ranger-like terminal file manager written in Rust"
   homepage "https://github.com/kamiyaa/joshuto"
-  url "https://github.com/kamiyaa/joshuto/archive/refs/tags/v0.9.5.tar.gz"
+  url "https://ghproxy.com/https://github.com/kamiyaa/joshuto/archive/refs/tags/v0.9.5.tar.gz"
   sha256 "14155a02cfeb0993a4906635a3c121589451e155e067d1c0d1673abdd1494ca8"
   license "LGPL-3.0-or-later"
   head "https://github.com/kamiyaa/joshuto.git", branch: "main"

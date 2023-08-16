@@ -1,7 +1,7 @@
 class Reaver < Formula
   desc "Implements brute force attack to recover WPA/WPA2 passkeys"
   homepage "https://github.com/t6x/reaver-wps-fork-t6x"
-  url "https://github.com/t6x/reaver-wps-fork-t6x/releases/download/v1.6.6/reaver-1.6.6.tar.xz"
+  url "https://ghproxy.com/https://github.com/t6x/reaver-wps-fork-t6x/releases/download/v1.6.6/reaver-1.6.6.tar.xz"
   sha256 "e329a0da0b6dd888916046535ff86a6aa144644561937954e560bb1810ab6702"
   license "GPL-2.0-or-later"
 

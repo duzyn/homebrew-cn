@@ -1,7 +1,7 @@
 class Minigraph < Formula
   desc "Proof-of-concept seq-to-graph mapper and graph generator"
   homepage "https://lh3.github.io/minigraph"
-  url "https://github.com/lh3/minigraph/archive/refs/tags/v0.20.tar.gz"
+  url "https://ghproxy.com/https://github.com/lh3/minigraph/archive/refs/tags/v0.20.tar.gz"
   sha256 "ef695e69d57bbc34478d7d3007e4153422ee2e3534e4f3fcbb8930cfaa5e1dc0"
   license "MIT"
 

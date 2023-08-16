@@ -2,7 +2,7 @@ class Libdvbcsa < Formula
   desc "Free implementation of the DVB Common Scrambling Algorithm"
   homepage "https://www.videolan.org/developers/libdvbcsa.html"
   url "https://get.videolan.org/libdvbcsa/1.1.0/libdvbcsa-1.1.0.tar.gz"
-  mirror "https://download.videolan.org/pub/videolan/libdvbcsa/1.1.0/libdvbcsa-1.1.0.tar.gz"
+  mirror "https://mirrors.aliyun.com/videolan/pub/videolan/libdvbcsa/1.1.0/libdvbcsa-1.1.0.tar.gz"
   sha256 "4db78af5cdb2641dfb1136fe3531960a477c9e3e3b6ba19a2754d046af3f456d"
   license "GPL-2.0-or-later"
   head "https://code.videolan.org/videolan/libdvbcsa.git", branch: "master"

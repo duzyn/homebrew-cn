@@ -1,7 +1,7 @@
 class GitBranchless < Formula
   desc "High-velocity, monorepo-scale workflow for Git"
   homepage "https://github.com/arxanas/git-branchless"
-  url "https://github.com/arxanas/git-branchless/archive/refs/tags/v0.7.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/arxanas/git-branchless/archive/refs/tags/v0.7.1.tar.gz"
   sha256 "90a69356573acd0984607749cc18706c5a2410e1d59b553df5271ad3e4147dbf"
   # dual license change would be available in v0.8.0+
   license "GPL-2.0-only"

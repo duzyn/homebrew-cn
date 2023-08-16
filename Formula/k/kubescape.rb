@@ -1,7 +1,7 @@
 class Kubescape < Formula
   desc "Kubernetes testing according to Hardening Guidance by NSA and CISA"
   homepage "https://github.com/kubescape/kubescape"
-  url "https://github.com/kubescape/kubescape/archive/refs/tags/v2.9.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/kubescape/kubescape/archive/refs/tags/v2.9.0.tar.gz"
   sha256 "683b735783a4c33d55ba67d22e0ff4c09b4bc66da56c138b59b23e6004ced349"
   license "Apache-2.0"
   head "https://github.com/kubescape/kubescape.git", branch: "master"
@@ -35,7 +35,7 @@ class Kubescape < Formula
   end
 
   test do
-    manifest = "https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml"
+    manifest = "https://ghproxy.com/https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml"
     assert_match "FAILED RESOURCES", shell_output("#{bin}/kubescape scan framework nsa #{manifest}")
 
     assert_match version.to_s, shell_output("#{bin}/kubescape version")

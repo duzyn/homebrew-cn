@@ -1,7 +1,7 @@
 class LibunwindHeaders < Formula
   desc "C API for determining the call-chain of a program"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/libunwind/archive/refs/tags/libunwind-201.tar.gz"
+  url "https://ghproxy.com/https://github.com/apple-oss-distributions/libunwind/archive/refs/tags/libunwind-201.tar.gz"
   sha256 "bbe469bd8778ba5a3e420823b9bf96ae98757a250f198893dee4628e0a432899"
   license "APSL-2.0"
 

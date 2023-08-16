@@ -3,7 +3,7 @@ class GitRemoteHg < Formula
 
   desc "Transparent bidirectional bridge between Git and Mercurial"
   homepage "https://github.com/felipec/git-remote-hg"
-  url "https://github.com/felipec/git-remote-hg/archive/refs/tags/v0.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/felipec/git-remote-hg/archive/refs/tags/v0.6.tar.gz"
   sha256 "1d49ffda290c8a307d32191655bdd85015e0e2f68bb2d64cddea04d8ae50a4bf"
   license "GPL-2.0"
   revision 1

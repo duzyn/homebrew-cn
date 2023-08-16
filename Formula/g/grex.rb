@@ -1,7 +1,7 @@
 class Grex < Formula
   desc "Command-line tool for generating regular expressions"
   homepage "https://github.com/pemistahl/grex"
-  url "https://github.com/pemistahl/grex/archive/v1.4.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/pemistahl/grex/archive/v1.4.2.tar.gz"
   sha256 "bdf8476433be13d2307fc2829cd68b15f71391f537adfc6d90d04092573d7bc4"
   license "Apache-2.0"
 

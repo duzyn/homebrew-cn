@@ -1,7 +1,7 @@
 class Wtf < Formula
   desc "Translate common Internet acronyms"
   homepage "https://sourceforge.net/projects/bsdwtf/"
-  url "https://downloads.sourceforge.net/project/bsdwtf/wtf-20230804.tar.gz"
+  url "https://downloads.sourceforge.net/project/bsdwtf/wtf-20230804.tar.gz?use_mirror=nchc"
   sha256 "855b93b2b9a5d69c50add2daf125968ba019a34eedeefc0a064fb07e27066e41"
   license :public_domain
 

@@ -1,7 +1,7 @@
 class Onioncat < Formula
   desc "VPN-adapter that provides location privacy using Tor or I2P"
   homepage "https://www.onioncat.org"
-  url "https://github.com/rahra/onioncat/archive/refs/tags/v4.11.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/rahra/onioncat/archive/refs/tags/v4.11.0.tar.gz"
   sha256 "75ff9eed332e97a9efb7999bbe48867d00e06ac20601cc72b87897d5b1859f99"
   license "GPL-3.0-only"
   head "https://github.com/rahra/onioncat.git", branch: "master"

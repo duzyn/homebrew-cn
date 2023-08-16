@@ -1,7 +1,7 @@
 class Ospray < Formula
   desc "Ray-tracing-based rendering engine for high-fidelity visualization"
   homepage "https://www.ospray.org/"
-  url "https://github.com/ospray/ospray/archive/refs/tags/v2.12.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/ospray/ospray/archive/refs/tags/v2.12.0.tar.gz"
   sha256 "268b16952b2dd44da2a1e40d2065c960bc2442dd09b63ace8b65d3408f596301"
   license "Apache-2.0"
   head "https://github.com/ospray/ospray.git", branch: "master"
@@ -27,12 +27,12 @@ class Ospray < Formula
   depends_on "tbb"
 
   resource "rkcommon" do
-    url "https://github.com/ospray/rkcommon/archive/refs/tags/v1.11.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/ospray/rkcommon/archive/refs/tags/v1.11.0.tar.gz"
     sha256 "9cfeedaccdefbdcf23c465cb1e6c02057100c4a1a573672dc6cfea5348cedfdd"
   end
 
   resource "openvkl" do
-    url "https://github.com/openvkl/openvkl/archive/refs/tags/v1.3.2.tar.gz"
+    url "https://ghproxy.com/https://github.com/openvkl/openvkl/archive/refs/tags/v1.3.2.tar.gz"
     sha256 "7704736566bf17497a3e51c067bd575316895fda96eccc682dae4aac7fb07b28"
 
     # Fix CMake install location.

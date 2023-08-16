@@ -1,7 +1,7 @@
 class Libpinyin < Formula
   desc "Library to deal with pinyin"
   homepage "https://github.com/libpinyin/libpinyin"
-  url "https://github.com/libpinyin/libpinyin/archive/2.8.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/libpinyin/libpinyin/archive/2.8.1.tar.gz"
   sha256 "42c4f899f71fc26bcc57bb1e2a9309c2733212bb241a0008ba3c9b5ebd951443"
   license "GPL-3.0-or-later"
 
@@ -28,7 +28,7 @@ class Libpinyin < Formula
   # The language model file is independently maintained by the project owner.
   # To update this resource block, the URL can be found in data/Makefile.am.
   resource "model" do
-    url "https://downloads.sourceforge.net/libpinyin/models/model19.text.tar.gz"
+    url "https://downloads.sourceforge.net/libpinyin/models/model19.text.tar.gz?use_mirror=nchc"
     sha256 "56422a4ee5966c2c809dd065692590ee8def934e52edbbe249b8488daaa1f50b"
   end
 

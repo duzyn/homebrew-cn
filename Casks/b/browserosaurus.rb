@@ -5,7 +5,7 @@ cask "browserosaurus" do
   sha256 arm:   "d512a49e3fca0b5d2aa00bb551eb5caf3ab774c521b749ecabde773d556f7458",
          intel: "7dedd002b873b0db268a8169550c91de4fad35d6d00de0902322a2495374117b"
 
-  url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
+  url "https://ghproxy.com/https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
   name "Browserosaurus"
   desc "Open-source browser prompter"
   homepage "https://github.com/will-stone/browserosaurus"

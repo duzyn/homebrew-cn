@@ -1,7 +1,7 @@
 class Sambamba < Formula
   desc "Tools for working with SAM/BAM data"
   homepage "https://lomereiter.github.io/sambamba/"
-  url "https://github.com/biod/sambamba/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/biod/sambamba/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "6992c5c29f7917e404dd2b32fff4e75e3655c27129053e5fa01cfabe1f4d071f"
   license "GPL-2.0-or-later"
 
@@ -21,7 +21,7 @@ class Sambamba < Formula
   uses_from_macos "zlib"
 
   resource "homebrew-testdata" do
-    url "https://raw.githubusercontent.com/biod/sambamba/f898046c5b9c1a97156ef041e61ac3c42955a716/test/ex1_header.sam"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/biod/sambamba/f898046c5b9c1a97156ef041e61ac3c42955a716/test/ex1_header.sam"
     sha256 "63c39c2e31718237a980c178b404b6b9a634a66e83230b8584e30454a315cc5e"
   end
 

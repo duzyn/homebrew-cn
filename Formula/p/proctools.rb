@@ -1,7 +1,7 @@
 class Proctools < Formula
   desc "OpenBSD and Darwin versions of pgrep, pkill, and pfind"
   homepage "https://proctools.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/proctools/proctools/0.4pre1/proctools-0.4pre1.tar.gz"
+  url "https://downloads.sourceforge.net/project/proctools/proctools/0.4pre1/proctools-0.4pre1.tar.gz?use_mirror=nchc"
   sha256 "4553b9c6eda959b12913bc39b6e048a8a66dad18f888f983697fece155ec5538"
 
   livecheck do
@@ -36,7 +36,7 @@ class Proctools < Formula
     "proctools-proctools.h" => "7c2ee6ac3dc7b26fb6738496fbabb1d1d065302a39207ae3fbacb1bc3a64371a",
   }.each do |name, sha|
     patch :p0 do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/f411d167/proctools/patch-#{name}.diff"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f411d167/proctools/patch-#{name}.diff"
       sha256 sha
     end
   end

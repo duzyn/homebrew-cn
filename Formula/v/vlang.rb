@@ -2,7 +2,7 @@ class Vlang < Formula
   desc "V programming language"
   homepage "https://vlang.io"
   # NOTE: Keep this in sync with V compiler below when updating
-  url "https://github.com/vlang/v/archive/refs/tags/0.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/vlang/v/archive/refs/tags/0.4.tar.gz"
   sha256 "4999f7dd5db57ff172a8db993e9558b1fd2e326c137468f35ff33962f487cf57"
   license "MIT"
 
@@ -31,7 +31,7 @@ class Vlang < Formula
         revision: "63e76fdbcc57a16ff7af10274ad916b4c4141220"
     on_big_sur :or_older do
       patch do
-        url "https://raw.githubusercontent.com/Homebrew/formula-patches/4a51a527e534534c3ddc6801c45d3a3a2c8fbd5a/vlang/vc.patch"
+        url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/4a51a527e534534c3ddc6801c45d3a3a2c8fbd5a/vlang/vc.patch"
         sha256 "0e0a2de7e37c0b22690599c0ee0a1176c2c767ea95d5fade009dd9c1f5cbf85d"
       end
     end

@@ -2,7 +2,7 @@ class Ncnn < Formula
   desc "High-performance neural network inference framework"
   homepage "https://github.com/Tencent/ncnn"
   # TODO: Check if we can use unversioned `protobuf` at version bump
-  url "https://github.com/Tencent/ncnn/archive/refs/tags/20230517.tar.gz"
+  url "https://ghproxy.com/https://github.com/Tencent/ncnn/archive/refs/tags/20230517.tar.gz"
   sha256 "71c1960e5fbbe68d2c3cf572cbf4dd08bb387ef20d2c560c074c5969c6b44bde"
   license "BSD-3-Clause"
   revision 1

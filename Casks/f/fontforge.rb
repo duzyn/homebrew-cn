@@ -2,7 +2,7 @@ cask "fontforge" do
   version "2023-01-01,a1dad3e"
   sha256 "b87479dbb8f8f9131ea37983aae63542f016aa182232be5c6a56976350b3ebfd"
 
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-#{version.csv.second}.app.dmg",
+  url "https://ghproxy.com/https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-#{version.csv.second}.app.dmg",
       verified: "github.com/fontforge/fontforge/"
   name "FontForge"
   desc "Font editor and converter for outline and bitmap fonts"

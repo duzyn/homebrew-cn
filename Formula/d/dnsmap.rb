@@ -1,7 +1,7 @@
 class Dnsmap < Formula
   desc "Passive DNS network mapper (a.k.a. subdomains bruteforcer)"
   homepage "https://github.com/resurrecting-open-source-projects/dnsmap"
-  url "https://github.com/resurrecting-open-source-projects/dnsmap/archive/refs/tags/0.36.tar.gz"
+  url "https://ghproxy.com/https://github.com/resurrecting-open-source-projects/dnsmap/archive/refs/tags/0.36.tar.gz"
   sha256 "f52d6d49cbf9a60f601c919f99457f108d51ecd011c63e669d58f38d50ad853c"
   head "https://github.com/resurrecting-open-source-projects/dnsmap.git", branch: "master"
 

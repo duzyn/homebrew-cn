@@ -25,7 +25,7 @@ class Crackpkcs < Formula
   depends_on "openssl@1.1"
 
   resource "cert.p12" do
-    url "https://github.com/crackpkcs12/crackpkcs12/raw/9f7375fdc7358451add8b31aaf928ecd025d63d9/misc/utils/certs/usr0052-exportado_desde_firefox.p12"
+    url "https://ghproxy.com/https://github.com/crackpkcs12/crackpkcs12/raw/9f7375fdc7358451add8b31aaf928ecd025d63d9/misc/utils/certs/usr0052-exportado_desde_firefox.p12"
     sha256 "8789861fbaf1a0fc6299756297fe646692a7b43e06c2be89a382b3dceb93f454"
   end
 

@@ -2,14 +2,14 @@ cask "eurkey" do
   version "1.2"
   sha256 :no_check
 
-  url "https://github.com/jonasdiemer/EurKEY-Mac/archive/master.zip",
+  url "https://ghproxy.com/https://github.com/jonasdiemer/EurKEY-Mac/archive/master.zip",
       verified: "github.com/jonasdiemer/EurKEY-Mac/"
   name "EurKEY keyboard layout"
   desc "Keyboard Layout for Europeans, Coders and Translators"
   homepage "https://eurkey.steffen.bruentjen.eu/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/jonasdiemer/EurKEY-Mac/master/EurKEY.keylayout"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/jonasdiemer/EurKEY-Mac/master/EurKEY.keylayout"
     regex(/EurKEY\s+v?(\d+(?:\.\d+)+)/i)
   end
 

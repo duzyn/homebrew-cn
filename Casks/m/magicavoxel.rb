@@ -2,7 +2,7 @@ cask "magicavoxel" do
   version "0.99.6.2"
   sha256 "4ee661e41da07f8c2b2b1c916bd1e18f7c5229900f30467eeea73ad74e861226"
 
-  url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-macos-10.15.zip",
+  url "https://ghproxy.com/https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-macos-10.15.zip",
       verified: "github.com/ephtracy/ephtracy.github.io/"
   name "MagicaVoxel"
   desc "8-bit 3D voxel editor and interactive path tracing renderer"

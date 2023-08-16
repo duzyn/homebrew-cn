@@ -3,7 +3,7 @@ class RuffLsp < Formula
 
   desc "Language Server Protocol implementation for Ruff"
   homepage "https://github.com/astral-sh/ruff-lsp"
-  url "https://github.com/astral-sh/ruff-lsp/archive/refs/tags/v0.0.35.tar.gz"
+  url "https://ghproxy.com/https://github.com/astral-sh/ruff-lsp/archive/refs/tags/v0.0.35.tar.gz"
   sha256 "49e2ce87b266c162056e65f121457f193956a6299360a87e45de623b5f697a09"
   license "MIT"
 

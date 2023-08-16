@@ -2,7 +2,7 @@ cask "vertcoin-core" do
   version "22.1"
   sha256 "50b485cf60d4f778bf4dedda1189cb83988fd814af93da8734568f79784e542c"
 
-  url "https://github.com/vertcoin-project/vertcoin-core/releases/download/v#{version}/vertcoin-#{version}-osx-signed.dmg",
+  url "https://ghproxy.com/https://github.com/vertcoin-project/vertcoin-core/releases/download/v#{version}/vertcoin-#{version}-osx-signed.dmg",
       verified: "github.com/vertcoin-project/vertcoin-core/"
   name "Vertcoin Core"
   desc "Vertcoin client and wallet"

@@ -2,7 +2,7 @@ cask "visualboyadvance-m" do
   version "2.1.6"
   sha256 "d9d13debc6f19eeba7cb729de75389e4e2f45bdf56bd68035c05fe3eb75abf2e"
 
-  url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-x86_64.zip",
+  url "https://ghproxy.com/https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-x86_64.zip",
       verified: "github.com/visualboyadvance-m/visualboyadvance-m/"
   name "Visual Boy Advance - M"
   desc "Game Boy Advance emulator"

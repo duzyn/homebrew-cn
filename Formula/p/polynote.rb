@@ -3,7 +3,7 @@ class Polynote < Formula
 
   desc "Polyglot notebook with first-class Scala support"
   homepage "https://polynote.org/"
-  url "https://github.com/polynote/polynote/releases/download/0.5.1/polynote-dist.tar.gz"
+  url "https://ghproxy.com/https://github.com/polynote/polynote/releases/download/0.5.1/polynote-dist.tar.gz"
   sha256 "e7715dd7e044cdf4149a1178b42a506c639a31bcb9bf97d08cec4d1fe529bf18"
   license "Apache-2.0"
 

@@ -1,7 +1,7 @@
 class Fantom < Formula
   desc "Object oriented, portable programming language"
   homepage "https://fantom.org/"
-  url "https://github.com/fantom-lang/fantom/releases/download/v1.0.79/fantom-1.0.79.zip"
+  url "https://ghproxy.com/https://github.com/fantom-lang/fantom/releases/download/v1.0.79/fantom-1.0.79.zip"
   sha256 "d70d706b55b65c2e9abd8c970448b4e7bd28d1243724dbdea9d0f3c0fa8d5e4c"
   license "AFL-3.0"
 

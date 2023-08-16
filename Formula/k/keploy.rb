@@ -3,7 +3,7 @@ require "language/node"
 class Keploy < Formula
   desc "Testing Toolkit creates test-cases and data mocks from API calls, DB queries"
   homepage "https://keploy.io"
-  url "https://github.com/keploy/keploy/archive/refs/tags/v0.9.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/keploy/keploy/archive/refs/tags/v0.9.1.tar.gz"
   sha256 "0e45207362bc17dd37e2efa8c881c72878525bca79ddfc45e6c242ea97fb12a1"
   license "Apache-2.0"
 
@@ -22,7 +22,7 @@ class Keploy < Formula
   depends_on "node"
 
   resource("ui") do
-    url "https://github.com/keploy/ui/archive/refs/tags/0.1.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/keploy/ui/archive/refs/tags/0.1.0.tar.gz"
     sha256 "d12cdad7fa1c77b8bd755030e9479007e9fcb476fecd0fa6938f076f6633028e"
   end
 

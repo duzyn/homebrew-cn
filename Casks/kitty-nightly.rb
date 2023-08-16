@@ -2,7 +2,7 @@ cask "kitty-nightly" do
   version :latest
   sha256 :no_check
 
-  url "https://ghproxy.com/https://github.com/kovidgoyal/kitty/releases/download/nightly/kitty-nightly.dmg"
+  url "https://github.com/kovidgoyal/kitty/releases/download/nightly/kitty-nightly.dmg"
   name "kitty-nightly"
   desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"

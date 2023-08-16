@@ -2,7 +2,7 @@ cask "nano" do
   version "25.1"
   sha256 "ef05a7d200685e3e20eea1235122abdea49f917b547e19cef4daff26020eeb6f"
 
-  url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
+  url "https://ghproxy.com/https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
       verified: "github.com/nanocurrency/nano-node/"
   name "Nano"
   desc "Local node for the Nano cryptocurrency"

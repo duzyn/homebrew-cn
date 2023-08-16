@@ -83,7 +83,7 @@ class AwsElasticbeanstalk < Formula
 
     # Build patch for cython 3+
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/99732fa/aws-elasticbeanstalk/docker-compose-pyyaml6.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/99732fa/aws-elasticbeanstalk/docker-compose-pyyaml6.patch"
       sha256 "5382d20b105a20fc6a30a0ac2cedbff290afb0eb769ef4824c3ec6ee54fd8015"
     end
   end

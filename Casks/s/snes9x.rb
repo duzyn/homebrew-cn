@@ -2,7 +2,7 @@ cask "snes9x" do
   version "1.62.3"
   sha256 "d2e71fad2c2ebdcf6b31a91d0a7f60e9df1799a1454a6b29bc2a089b9022cec7"
 
-  url "https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-Mac.zip",
+  url "https://ghproxy.com/https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-Mac.zip",
       verified: "github.com/snes9xgit/snes9x/"
   name "Snes9x"
   desc "Video game console emulator"

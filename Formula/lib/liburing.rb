@@ -1,7 +1,7 @@
 class Liburing < Formula
   desc "Helpers to setup and teardown io_uring instances"
   homepage "https://github.com/axboe/liburing"
-  url "https://github.com/axboe/liburing/archive/refs/tags/liburing-2.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/axboe/liburing/archive/refs/tags/liburing-2.4.tar.gz"
   sha256 "2398ec82d967a6f903f3ae1fd4541c754472d3a85a584dc78c5da2fabc90706b"
   license any_of: ["MIT", "LGPL-2.1-only"]
   head "https://github.com/axboe/liburing.git", branch: "master"

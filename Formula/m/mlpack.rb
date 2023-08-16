@@ -27,13 +27,13 @@ class Mlpack < Formula
   depends_on "graphviz"
 
   resource "stb_image" do
-    url "https://raw.githubusercontent.com/nothings/stb/3ecc60f/stb_image.h"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/nothings/stb/3ecc60f/stb_image.h"
     version "2.28"
     sha256 "38e08c1c5ab8869ae8d605ddaefa85ad3fea24a2964fd63a099c0c0f79c70bcc"
   end
 
   resource "stb_image_write" do
-    url "https://raw.githubusercontent.com/nothings/stb/1ee679c/stb_image_write.h"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/nothings/stb/1ee679c/stb_image_write.h"
     version "1.16"
     sha256 "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05"
   end

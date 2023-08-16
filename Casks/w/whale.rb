@@ -2,7 +2,7 @@ cask "whale" do
   version "2.4.0"
   sha256 "63857d17bf6d44c65215d729870737a17153f33c01605dc093626b7185731b02"
 
-  url "https://github.com/1000ch/whale/releases/download/v#{version}/Whale-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/1000ch/whale/releases/download/v#{version}/Whale-#{version}.dmg"
   name "Whale"
   desc "Unofficial Trello app :whale:"
   homepage "https://github.com/1000ch/whale"

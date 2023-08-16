@@ -1,7 +1,7 @@
 class LxiTools < Formula
   desc "Open source tools for managing network attached LXI compatible instruments"
   homepage "https://github.com/lxi-tools/lxi-tools"
-  url "https://github.com/lxi-tools/lxi-tools/archive/refs/tags/v2.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/lxi-tools/lxi-tools/archive/refs/tags/v2.6.tar.gz"
   sha256 "a36699387b40080ea9eb8b1abc14d843f5e7a33b3a62fcfedaea9cc54214bdc8"
   license "BSD-3-Clause"
 

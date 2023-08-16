@@ -1,7 +1,7 @@
 class WildflyAs < Formula
   desc "Managed application runtime for building applications"
   homepage "https://www.wildfly.org/"
-  url "https://github.com/wildfly/wildfly/releases/download/29.0.0.Final/wildfly-29.0.0.Final.tar.gz"
+  url "https://ghproxy.com/https://github.com/wildfly/wildfly/releases/download/29.0.0.Final/wildfly-29.0.0.Final.tar.gz"
   sha256 "8916d63a32bb4a7cbd9ac63dabe4ddd34acf04feec75c1e407e6eebfa78c37f0"
   license "LGPL-2.1-or-later"
 

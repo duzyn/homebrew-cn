@@ -8,7 +8,7 @@ cask "pictureview" do
   homepage "https://wl879.github.io/apps/picview/index.html"
 
   livecheck do
-    url "https://raw.githubusercontent.com/wl879/wl879.github.io/master/apps/picview/appcase.xml"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/wl879/wl879.github.io/master/apps/picview/appcase.xml"
     strategy :sparkle do |item|
       item.url[%r{/PictureView[._-]v?(\d+(?:\.\d+)+)\.dmg}i, 1]
     end

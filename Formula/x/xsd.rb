@@ -37,7 +37,7 @@ class Xsd < Formula
   #    list (xsd-users@codesynthesis.com). I have sent this patch there but have
   #    received no response (yet).
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/xsd/4.0.0.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/xsd/4.0.0.patch"
     sha256 "55a15b7a16404e659060cc2487f198a76d96da7ec74e2c0fac9e38f24b151fa7"
   end
 

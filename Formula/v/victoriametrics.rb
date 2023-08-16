@@ -1,7 +1,7 @@
 class Victoriametrics < Formula
   desc "Cost-effective and scalable monitoring solution and time series database"
   homepage "https://victoriametrics.com/"
-  url "https://github.com/VictoriaMetrics/VictoriaMetrics/archive/v1.93.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/VictoriaMetrics/VictoriaMetrics/archive/v1.93.0.tar.gz"
   sha256 "34bbd15ebdf6b27e6f2fd59f588cef8f0ef0eaa5b028f19dc92468f3d954c1e8"
   license "Apache-2.0"
 

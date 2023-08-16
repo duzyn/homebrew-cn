@@ -5,7 +5,7 @@ cask "min" do
   sha256 arm:   "812b9f44d8d705b6293eb5881dcec80fe43d378a18b7fd4f200ac0e53bc79e5f",
          intel: "425d0536caf4eb357ef7c0c961a547092e896f3e3d3129111155f5c00cd6302f"
 
-  url "https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip",
+  url "https://ghproxy.com/https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip",
       verified: "github.com/minbrowser/min/"
   name "Min"
   desc "Minimal browser that protects privacy"

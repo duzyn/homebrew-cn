@@ -1,7 +1,7 @@
 class Cppinsights < Formula
   desc "See your source code with the eyes of a compiler"
   homepage "https://cppinsights.io/"
-  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_0.9.tar.gz"
+  url "https://ghproxy.com/https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_0.9.tar.gz"
   sha256 "cebb6a062677ee3975ff757e4300a17f42e3fab6da02ad01f3f141fb91f09301"
   license "MIT"
 

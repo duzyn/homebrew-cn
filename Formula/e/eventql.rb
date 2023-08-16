@@ -1,7 +1,7 @@
 class Eventql < Formula
   desc "Database for large-scale event analytics"
   homepage "https://eventql.io"
-  url "https://github.com/eventql/eventql/releases/download/v0.4.1/eventql-0.4.1.tgz"
+  url "https://ghproxy.com/https://github.com/eventql/eventql/releases/download/v0.4.1/eventql-0.4.1.tgz"
   sha256 "a61f093bc45a1f9b9b374331ab40665c0c1060a2278b2833c0b6eb6c547b4ef4"
   license "AGPL-3.0"
 

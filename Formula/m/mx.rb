@@ -1,7 +1,7 @@
 class Mx < Formula
   desc "Command-line tool used for the development of Graal projects"
   homepage "https://github.com/graalvm/mx"
-  url "https://github.com/graalvm/mx/archive/refs/tags/6.41.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/graalvm/mx/archive/refs/tags/6.41.0.tar.gz"
   sha256 "736902dd5bb17378e96dc5b1860f2444b350854f0711f89f5520c0dd1d7f6e1c"
   license "GPL-2.0-only"
 
@@ -32,7 +32,7 @@ class Mx < Formula
 
   test do
     resource "homebrew-testdata" do
-      url "https://github.com/oracle/graal/archive/refs/tags/vm-22.3.2.tar.gz"
+      url "https://ghproxy.com/https://github.com/oracle/graal/archive/refs/tags/vm-22.3.2.tar.gz"
       sha256 "77c7801038f0568b3c2ef65924546ae849bd3bf2175e2d248c35ba27fd9d4967"
     end
 

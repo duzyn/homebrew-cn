@@ -4,13 +4,13 @@ cask "tiled" do
   on_high_sierra :or_older do
     sha256 "9cd3dae263fd142c72ede7d6b78190860e25580f7ae645145daa39d918aa1ce5"
 
-    url "https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.12-10.13.zip",
+    url "https://ghproxy.com/https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.12-10.13.zip",
         verified: "github.com/mapeditor/tiled/"
   end
   on_mojave :or_newer do
     sha256 "0e82e42daa384644a8a795730efcad600cc35ca631693328a6ce65830dc8afa0"
 
-    url "https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.14+.zip",
+    url "https://ghproxy.com/https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.14+.zip",
         verified: "github.com/mapeditor/tiled/"
   end
 

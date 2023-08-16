@@ -41,17 +41,17 @@ class Duck < Formula
   end
 
   resource "jna" do
-    url "https://github.com/java-native-access/jna/archive/refs/tags/5.13.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/java-native-access/jna/archive/refs/tags/5.13.0.tar.gz"
     sha256 "526bff8ffcbc2067a7403f55b01ad8d7a781c098abca79c4ea6c9e80198bb5fd"
   end
 
   resource "rococoa" do
-    url "https://github.com/iterate-ch/rococoa/archive/refs/tags/0.9.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/iterate-ch/rococoa/archive/refs/tags/0.9.1.tar.gz"
     sha256 "62c3c36331846384aeadd6014c33a30ad0aaff7d121b775204dc65cb3f00f97b"
   end
 
   resource "JavaNativeFoundation" do
-    url "https://github.com/apple/openjdk/archive/refs/tags/iTunesOpenJDK-1014.0.2.12.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/apple/openjdk/archive/refs/tags/iTunesOpenJDK-1014.0.2.12.1.tar.gz"
     sha256 "e8556a73ea36c75953078dfc1bafc9960e64593bc01e733bc772d2e6b519fd4a"
   end
 

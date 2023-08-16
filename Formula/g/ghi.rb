@@ -1,7 +1,7 @@
 class Ghi < Formula
   desc "Work on GitHub issues on the command-line"
   homepage "https://github.com/drazisil/ghi"
-  url "https://github.com/drazisil/ghi/archive/refs/tags/1.2.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/drazisil/ghi/archive/refs/tags/1.2.1.tar.gz"
   sha256 "83fbc4918ddf14df77ef06b28922f481747c6f4dc99b865e15d236b1db98c0b8"
   license "MIT"
   head "https://github.com/drazisil/ghi.git", branch: "master"

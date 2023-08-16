@@ -1,7 +1,7 @@
 class Irssi < Formula
   desc "Modular IRC client"
   homepage "https://irssi.org/"
-  url "https://github.com/irssi/irssi/releases/download/1.4.4/irssi-1.4.4.tar.xz"
+  url "https://ghproxy.com/https://github.com/irssi/irssi/releases/download/1.4.4/irssi-1.4.4.tar.xz"
   sha256 "fefe9ec8c7b1475449945c934a2360ab12693454892be47a6d288c63eb107ead"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
 

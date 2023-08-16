@@ -10,7 +10,7 @@ class Sslyze < Formula
     sha256 "247eeed21e57cb5bfe8bd5565f83a35988cfad5c8294120fa7b729bd5e5cf949"
 
     resource "nassl" do
-      url "https://github.com/nabla-c0d3/nassl/archive/refs/tags/5.0.1.tar.gz"
+      url "https://ghproxy.com/https://github.com/nabla-c0d3/nassl/archive/refs/tags/5.0.1.tar.gz"
       sha256 "53302410923e5c1afd54c7f48051f15459eeacbd7005b719d2a5db12ede83042"
     end
   end

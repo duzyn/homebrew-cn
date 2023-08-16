@@ -13,7 +13,7 @@ cask "amethyst" do
     version "0.20.0"
     sha256 "198a2bbe80832ce77fc584ad20691206a179423551dcf1cbdf46ff1e6f829c09"
 
-    url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
+    url "https://ghproxy.com/https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
         verified: "github.com/ianyh/Amethyst/"
 
     livecheck do

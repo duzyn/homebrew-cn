@@ -1,7 +1,7 @@
 class Navi < Formula
   desc "Interactive cheatsheet tool for the command-line"
   homepage "https://github.com/denisidoro/navi"
-  url "https://github.com/denisidoro/navi/archive/refs/tags/v2.22.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/denisidoro/navi/archive/refs/tags/v2.22.1.tar.gz"
   sha256 "a728ad6b6e18abe27ca2190983bedca719e46462007e61bedbc50fc9d15b89a5"
   license "Apache-2.0"
 

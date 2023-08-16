@@ -1,7 +1,7 @@
 class Twty < Formula
   desc "Command-line twitter client written in golang"
   homepage "https://github.com/mattn/twty/"
-  url "https://github.com/mattn/twty/archive/refs/tags/v0.0.13.tar.gz"
+  url "https://ghproxy.com/https://github.com/mattn/twty/archive/refs/tags/v0.0.13.tar.gz"
   sha256 "4e76ada5e7c5f2e20881fbf303fb50d3d4a443a8e37f2444371a90102737e49b"
   license "MIT"
 

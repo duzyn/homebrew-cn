@@ -1,7 +1,7 @@
 class Txt2man < Formula
   desc "Converts flat ASCII text to man page format"
   homepage "https://github.com/mvertes/txt2man/"
-  url "https://github.com/mvertes/txt2man/archive/refs/tags/txt2man-1.7.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/mvertes/txt2man/archive/refs/tags/txt2man-1.7.1.tar.gz"
   sha256 "4d9b1bfa2b7a5265b4e5cb3aebc1078323b029aa961b6836d8f96aba6a9e434d"
   license "GPL-2.0-or-later"
 

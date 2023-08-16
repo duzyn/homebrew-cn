@@ -1,7 +1,7 @@
 class Taplo < Formula
   desc "TOML toolkit written in Rust"
   homepage "https://taplo.tamasfe.dev"
-  url "https://github.com/tamasfe/taplo/archive/refs/tags/release-taplo-cli-0.8.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/tamasfe/taplo/archive/refs/tags/release-taplo-cli-0.8.1.tar.gz"
   sha256 "8c011d724bb6dd5d6af1fc4d416409f6686102850a6e74779f6bfa785c03bf4f"
   license "MIT"
   head "https://github.com/tamasfe/taplo.git", branch: "master"

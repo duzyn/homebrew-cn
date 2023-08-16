@@ -3,7 +3,7 @@ cask "gns3" do
   version "2.2.42"
   sha256 "65152f109b2b75bfa86d9f60200dd4fe1e20204ecb92c360a5b871579309c8b0"
 
-  url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg",
       verified: "github.com/GNS3/gns3-gui/"
   name "GNS3"
   name "Graphical Network Simulator 3"

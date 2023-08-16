@@ -1,7 +1,7 @@
 class Busted < Formula
   desc "Elegant Lua unit testing"
   homepage "https://lunarmodules.github.io/busted/"
-  url "https://github.com/lunarmodules/busted/archive/refs/tags/v2.1.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/lunarmodules/busted/archive/refs/tags/v2.1.2.tar.gz"
   sha256 "445519fa663dbdd21e8a6ecf1609f397d0e2168440e59ee29198ee687321e9a3"
   license "MIT"
   head "https://github.com/lunarmodules/busted.git", branch: "master"

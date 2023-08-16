@@ -9,7 +9,7 @@ cask "mints" do
   homepage "https://eclecticlight.co/mints-a-multifunction-utility/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     regex(%r{/(\d+)/(\d+)/mints(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|

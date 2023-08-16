@@ -8,7 +8,7 @@ class AzureCli < Formula
   head "https://github.com/Azure/azure-cli.git", branch: "dev"
 
   stable do
-    url "https://github.com/Azure/azure-cli/archive/azure-cli-2.50.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/Azure/azure-cli/archive/azure-cli-2.50.0.tar.gz"
     sha256 "eca7d1a6ecfb45b24b5499db141617258b79b8c01db7be6b75c9f1e225ad3623"
 
     # patch to build with pyyaml6, remove in next release

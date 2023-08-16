@@ -1,7 +1,7 @@
 class Blades < Formula
   desc "Blazing fast dead simple static site generator"
   homepage "https://getblades.org/"
-  url "https://github.com/grego/blades/archive/refs/tags/v0.5.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/grego/blades/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "e9ee64ead54e1942397ea5d6fcfd6ba928a888c1f4c127b11dec9fbadd283cc2"
   license "GPL-3.0-or-later"
   head "https://github.com/grego/blades.git", branch: "master"

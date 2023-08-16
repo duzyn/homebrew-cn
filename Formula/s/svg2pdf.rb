@@ -26,7 +26,7 @@ class Svg2pdf < Formula
   depends_on "libsvg-cairo"
 
   resource("svg.svg") do
-    url "https://raw.githubusercontent.com/mathiasbynens/small/master/svg.svg"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/mathiasbynens/small/master/svg.svg"
     sha256 "900fbe934249ad120004bd24adf66aad8817d89586273c0cc50e187bddebb601"
   end
 

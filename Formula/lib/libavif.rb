@@ -1,7 +1,7 @@
 class Libavif < Formula
   desc "Library for encoding and decoding .avif files"
   homepage "https://github.com/AOMediaCodec/libavif"
-  url "https://github.com/AOMediaCodec/libavif/archive/refs/tags/v0.11.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/AOMediaCodec/libavif/archive/refs/tags/v0.11.1.tar.gz"
   sha256 "0eb49965562a0e5e5de58389650d434cff32af84c34185b6c9b7b2fccae06d4e"
   license "BSD-2-Clause"
 

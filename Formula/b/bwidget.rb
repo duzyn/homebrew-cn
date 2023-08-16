@@ -1,7 +1,7 @@
 class Bwidget < Formula
   desc "Tcl/Tk script-only set of megawidgets to provide the developer additional tools"
   homepage "https://core.tcl-lang.org/bwidget/home"
-  url "https://downloads.sourceforge.net/project/tcllib/BWidget/1.9.16/bwidget-1.9.16.tar.gz"
+  url "https://downloads.sourceforge.net/project/tcllib/BWidget/1.9.16/bwidget-1.9.16.tar.gz?use_mirror=nchc"
   sha256 "bfe0036374b84293d23620a7f6dda86571813d0c7adfed983c1f337e5ce81ae0"
   license "TCL"
 

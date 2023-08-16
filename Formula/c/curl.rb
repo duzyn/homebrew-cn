@@ -3,7 +3,7 @@ class Curl < Formula
   homepage "https://curl.se"
   # Don't forget to update both instances of the version in the GitHub mirror URL.
   url "https://curl.se/download/curl-8.2.1.tar.bz2"
-  mirror "https://github.com/curl/curl/releases/download/curl-8_2_1/curl-8.2.1.tar.bz2"
+  mirror "https://ghproxy.com/https://github.com/curl/curl/releases/download/curl-8_2_1/curl-8.2.1.tar.bz2"
   mirror "http://fresh-center.net/linux/www/curl-8.2.1.tar.bz2"
   mirror "http://fresh-center.net/linux/www/legacy/curl-8.2.1.tar.bz2"
   sha256 "0f1e31ebe336c09ec66381f1532f8350e466e1d02ffe10c4ac44a867f1b9d343"

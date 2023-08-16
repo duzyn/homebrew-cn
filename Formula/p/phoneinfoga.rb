@@ -5,7 +5,7 @@ class Phoneinfoga < Formula
   head "https://github.com/sundowndev/phoneinfoga.git", branch: "master"
 
   stable do
-    url "https://github.com/sundowndev/phoneinfoga/archive/v2.10.7.tar.gz"
+    url "https://ghproxy.com/https://github.com/sundowndev/phoneinfoga/archive/v2.10.7.tar.gz"
     sha256 "14dc41ec4a2c3f8a97e4ea7bf99736e94a94b2e04b36075171f482a6f0873127"
 
     # patch to build with node v20, remove in next release

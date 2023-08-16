@@ -5,7 +5,7 @@ cask "siyuan" do
   sha256 arm:   "a5a5ebbadf59a015e38b11df05191f68da89203cc12fe27225d6eb337abfef56",
          intel: "d35f07163609c3475a0cd4a684217ac8053de459e80c19680ae4f862a636cf1d"
 
-  url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac#{arch}.dmg"
+  url "https://ghproxy.com/https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac#{arch}.dmg"
   name "SiYuan"
   desc "Local-first personal knowledge management system"
   homepage "https://github.com/siyuan-note/siyuan"

@@ -1,7 +1,7 @@
 class Nmrpflash < Formula
   desc "Netgear Unbrick Utility"
   homepage "https://github.com/jclehner/nmrpflash"
-  url "https://github.com/jclehner/nmrpflash/archive/refs/tags/v0.9.20.tar.gz"
+  url "https://ghproxy.com/https://github.com/jclehner/nmrpflash/archive/refs/tags/v0.9.20.tar.gz"
   sha256 "4aa17a84735f04e91b5e90e9a61e8c48033a5689bf45594ea1eeff715f0acd48"
   license "GPL-3.0-or-later"
 

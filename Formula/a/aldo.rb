@@ -31,7 +31,7 @@ class Aldo < Formula
   # Reported upstream:
   # https://savannah.nongnu.org/bugs/index.php?42127
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/aldo/0.7.7.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/aldo/0.7.7.patch"
     sha256 "3b6c6cc067fc690b5af4042a2326cee2b74071966e9e2cd71fab061fde6c4a5d"
   end
 

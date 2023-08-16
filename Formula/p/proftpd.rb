@@ -1,7 +1,7 @@
 class Proftpd < Formula
   desc "Highly configurable GPL-licensed FTP server software"
   homepage "http://www.proftpd.org/"
-  url "https://github.com/proftpd/proftpd/archive/refs/tags/v1.3.8.tar.gz"
+  url "https://ghproxy.com/https://github.com/proftpd/proftpd/archive/refs/tags/v1.3.8.tar.gz"
   mirror "https://fossies.org/linux/misc/proftpd-1.3.8.tar.gz"
   mirror "https://ftp.osuosl.org/pub/blfs/conglomeration/proftpd/proftpd-1.3.8.tar.gz"
   sha256 "f7139e7377a2cb059b8b9b14d76a6df5f440e3181cb15ae890d43bbcae574748"

@@ -2,7 +2,7 @@ cask "lighttable" do
   version "0.8.1"
   sha256 "423e9caf6db4dfe26a0167ea6ba998d747f233e2cd9cd97b7fee027c5c0c3992"
 
-  url "https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz",
+  url "https://ghproxy.com/https://github.com/LightTable/LightTable/releases/download/#{version}/lighttable-#{version}-mac.tar.gz",
       verified: "github.com/LightTable/LightTable/"
   name "Light Table"
   desc "IDE"

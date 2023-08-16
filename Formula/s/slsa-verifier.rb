@@ -1,7 +1,7 @@
 class SlsaVerifier < Formula
   desc "Verify provenance from SLSA compliant builders"
   homepage "https://github.com/slsa-framework/slsa-verifier"
-  url "https://github.com/slsa-framework/slsa-verifier/archive/refs/tags/v2.3.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/slsa-framework/slsa-verifier/archive/refs/tags/v2.3.0.tar.gz"
   sha256 "56f4ef585269a49f5af42cf19f0683b1593ec57f516ff2d426cd81623d4ce6ec"
   license "Apache-2.0"
   head "https://github.com/slsa-framework/slsa-verifier.git", branch: "main"

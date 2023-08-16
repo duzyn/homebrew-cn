@@ -3,7 +3,7 @@ class Libewf < Formula
   homepage "https://github.com/libyal/libewf"
   # The main libewf repository is currently "experimental".
   # See discussions in this issue, https://github.com/libyal/libewf/issues/127
-  url "https://github.com/libyal/libewf-legacy/releases/download/20140813/libewf-20140813.tar.gz"
+  url "https://ghproxy.com/https://github.com/libyal/libewf-legacy/releases/download/20140813/libewf-20140813.tar.gz"
   sha256 "dbfdf1bbea5944b014c2311cce4615d92b2b6b91c8401eef8640de9f3e75845b"
   license "LGPL-3.0-or-later"
   revision 1

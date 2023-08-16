@@ -2,7 +2,7 @@ cask "spectacle-editor" do
   version "0.1.6"
   sha256 "5dc93387bc6026dd44dbf2f88c9bf7730d931663d5b72f382c0a51bc6c57517b"
 
-  url "https://github.com/plotly/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/plotly/spectacle-editor/releases/download/v#{version}/Spectacle.Editor-#{version}.dmg"
   name "Spectacle Editor"
   desc "Drag and drop Spectacle editor"
   homepage "https://github.com/plotly/spectacle-editor"

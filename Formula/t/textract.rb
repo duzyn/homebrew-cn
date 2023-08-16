@@ -57,7 +57,7 @@ class Textract < Formula
   end
 
   resource "ebcdic" do
-    url "https://github.com/roskakori/CodecMapper/archive/refs/tags/v1.1.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/roskakori/CodecMapper/archive/refs/tags/v1.1.1.tar.gz"
     sha256 "7a1a77fdc7e87924e42826087bd9c0c4b48b779156c10cabc94eec237739c818"
   end
 
@@ -113,7 +113,7 @@ class Textract < Formula
 
   resource "SpeechRecognition" do
     # not available on PyPI; see https://github.com/Uberi/speech_recognition/issues/580
-    url "https://github.com/Uberi/speech_recognition/archive/refs/tags/3.8.1.tar.gz"
+    url "https://ghproxy.com/https://github.com/Uberi/speech_recognition/archive/refs/tags/3.8.1.tar.gz"
     sha256 "82d3313db383409ddaf3e42625fb0c3518231a1feb5e2ed5473b10b3d5ece7bd"
   end
 

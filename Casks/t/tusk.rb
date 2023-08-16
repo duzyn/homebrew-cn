@@ -2,7 +2,7 @@ cask "tusk" do
   version "0.23.0"
   sha256 "859bf10e072e2446adeac86e4699e64b8f869f7b6738d07f5f54a1e112245238"
 
-  url "https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/klaussinani/tusk/releases/download/v#{version}/Tusk-#{version}.dmg",
       verified: "github.com/klaussinani/tusk/"
   name "Tusk"
   desc "Refined Evernote desktop app"

@@ -1,7 +1,7 @@
 class Jasmin < Formula
   desc "Assembler for the Java Virtual Machine"
   homepage "https://jasmin.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/jasmin/jasmin/jasmin-2.4/jasmin-2.4.zip"
+  url "https://downloads.sourceforge.net/project/jasmin/jasmin/jasmin-2.4/jasmin-2.4.zip?use_mirror=nchc"
   sha256 "eaa10c68cec68206fd102e9ec7113739eccd790108a1b95a6e8c3e93f20e449d"
   license "BSD-4-Clause"
   revision 2

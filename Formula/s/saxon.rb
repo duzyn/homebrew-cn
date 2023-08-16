@@ -1,13 +1,13 @@
 class Saxon < Formula
   desc "XSLT and XQuery processor"
   homepage "https://github.com/Saxonica/Saxon-HE"
-  url "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-3/SaxonHE12-3J.zip"
+  url "https://ghproxy.com/https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-3/SaxonHE12-3J.zip"
   version "12.3"
   sha256 "3b69ea2f817cab49072f9e85dae5e01979515f2458844f7334d26025f5ec9418"
   license all_of: ["BSD-3-Clause", "MIT", "MPL-2.0"]
 
   livecheck do
-    url "https://raw.githubusercontent.com/Saxonica/Saxon-HE/main/README.md"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Saxonica/Saxon-HE/main/README.md"
     regex(/latest\s+release\s+of\s+Saxon-HE\s+is\s+\[?(v?(\d+(?:\.\d+)*))\]?/im)
   end
 

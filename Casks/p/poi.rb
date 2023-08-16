@@ -5,7 +5,7 @@ cask "poi" do
   sha256 arm:   "217444a15bcfaae1dc75807fcf139c66d0b6295fa1f461a45f811bae09008a77",
          intel: "eab57d10b4e8002231cbfb502589d97fcea9edce85c21850bdd5cbc574ccfa19"
 
-  url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg",
       verified: "github.com/poooi/poi/"
   name "poi"
   desc "Scalable KanColle browser and tool"

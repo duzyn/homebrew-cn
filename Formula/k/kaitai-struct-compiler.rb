@@ -2,7 +2,7 @@ class KaitaiStructCompiler < Formula
   desc "Compiler for generating binary data parsers"
   homepage "https://kaitai.io/"
   # Move to packages.kaitai.io when available.
-  url "https://github.com/kaitai-io/kaitai_struct_compiler/releases/download/0.10/kaitai-struct-compiler-0.10.zip"
+  url "https://ghproxy.com/https://github.com/kaitai-io/kaitai_struct_compiler/releases/download/0.10/kaitai-struct-compiler-0.10.zip"
   sha256 "3d11d6cc46d058afb4680fda2e7195f645ca03b2843501d652a529646e55d16b"
   license "GPL-3.0-or-later"
 

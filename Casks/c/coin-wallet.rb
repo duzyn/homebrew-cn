@@ -2,7 +2,7 @@ cask "coin-wallet" do
   version "5.10.3"
   sha256 "b5ac9e06718029c813c15559a53cbabe56b8c5d7185a8eee7f0f30319ac57d8a"
 
-  url "https://github.com/CoinSpace/CoinSpace/releases/download/v#{version}/Coin.Wallet.dmg",
+  url "https://ghproxy.com/https://github.com/CoinSpace/CoinSpace/releases/download/v#{version}/Coin.Wallet.dmg",
       verified: "github.com/CoinSpace/CoinSpace/"
   name "Coin Wallet"
   desc "Digital currency wallet"

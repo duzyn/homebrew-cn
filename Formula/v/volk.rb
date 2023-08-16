@@ -3,7 +3,7 @@ class Volk < Formula
 
   desc "Vector Optimized Library of Kernels"
   homepage "https://www.libvolk.org/"
-  url "https://github.com/gnuradio/volk/releases/download/v3.0.0/volk-3.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/gnuradio/volk/releases/download/v3.0.0/volk-3.0.0.tar.gz"
   sha256 "797c208bd449f77186684c9fa368cc8577fb98ce3763db5de526e6809de32d28"
   license "LGPL-3.0-or-later"
 

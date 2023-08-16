@@ -1,7 +1,7 @@
 class Ssdeep < Formula
   desc "Recursive piecewise hashing tool"
   homepage "https://ssdeep-project.github.io/ssdeep/"
-  url "https://github.com/ssdeep-project/ssdeep/releases/download/release-2.14.1/ssdeep-2.14.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/ssdeep-project/ssdeep/releases/download/release-2.14.1/ssdeep-2.14.1.tar.gz"
   sha256 "ff2eabc78106f009b4fb2def2d76fb0ca9e12acf624cbbfad9b3eb390d931313"
   license "GPL-2.0"
 

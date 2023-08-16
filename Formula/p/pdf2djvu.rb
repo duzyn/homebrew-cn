@@ -1,7 +1,7 @@
 class Pdf2djvu < Formula
   desc "Create DjVu files from PDF files"
   homepage "https://jwilk.net/software/pdf2djvu"
-  url "https://github.com/jwilk/pdf2djvu/releases/download/0.9.19/pdf2djvu-0.9.19.tar.xz"
+  url "https://ghproxy.com/https://github.com/jwilk/pdf2djvu/releases/download/0.9.19/pdf2djvu-0.9.19.tar.xz"
   sha256 "eb45a480131594079f7fe84df30e4a5d0686f7a8049dc7084eebe22acc37aa9a"
   license "GPL-2.0-only"
   revision 3

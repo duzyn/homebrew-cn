@@ -1,7 +1,7 @@
 class Flactag < Formula
   desc "Tag single album FLAC files with MusicBrainz CUE sheets"
   homepage "https://flactag.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/flactag/v2.0.4/flactag-2.0.4.tar.gz"
+  url "https://downloads.sourceforge.net/project/flactag/v2.0.4/flactag-2.0.4.tar.gz?use_mirror=nchc"
   sha256 "c96718ac3ed3a0af494a1970ff64a606bfa54ac78854c5d1c7c19586177335b2"
   license "GPL-3.0-or-later"
   revision 3
@@ -32,7 +32,7 @@ class Flactag < Formula
 
   # jpeg 9 compatibility
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/ed0e680/flactag/jpeg9.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/ed0e680/flactag/jpeg9.patch"
     sha256 "a8f3dda9e238da70987b042949541f89876009f1adbedac1d6de54435cc1e8d7"
   end
 

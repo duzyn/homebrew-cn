@@ -1,7 +1,7 @@
 class Norm < Formula
   desc "NACK-Oriented Reliable Multicast"
   homepage "https://www.nrl.navy.mil/itd/ncs/products/norm"
-  url "https://github.com/USNavalResearchLaboratory/norm/releases/download/v1.5.9/src-norm-1.5.9.tgz"
+  url "https://ghproxy.com/https://github.com/USNavalResearchLaboratory/norm/releases/download/v1.5.9/src-norm-1.5.9.tgz"
   sha256 "ef6d7bbb7b278584e057acefe3bc764d30122e83fa41d41d8211e39f25b6e3fa"
   license "BSD-2-Clause"
 

@@ -1,7 +1,7 @@
 class Fontforge < Formula
   desc "Command-line outline and bitmap font editor/converter"
   homepage "https://fontforge.github.io"
-  url "https://github.com/fontforge/fontforge/releases/download/20230101/fontforge-20230101.tar.xz"
+  url "https://ghproxy.com/https://github.com/fontforge/fontforge/releases/download/20230101/fontforge-20230101.tar.xz"
   sha256 "ca82ec4c060c4dda70ace5478a41b5e7b95eb035fe1c4cf85c48f996d35c60f8"
   license "GPL-3.0-or-later"
   revision 1
@@ -39,7 +39,7 @@ class Fontforge < Formula
   uses_from_macos "libxml2"
 
   resource "homebrew-testdata" do
-    url "https://raw.githubusercontent.com/fontforge/fontforge/1346ce6e4c004c312589fdb67e31d4b2c32a1656/tests/fonts/Ambrosia.sfd"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/fontforge/fontforge/1346ce6e4c004c312589fdb67e31d4b2c32a1656/tests/fonts/Ambrosia.sfd"
     sha256 "6a22acf6be4ab9e5c5a3373dc878030b4b8dc4652323395388abe43679ceba81"
   end
 

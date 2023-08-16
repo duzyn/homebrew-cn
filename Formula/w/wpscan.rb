@@ -1,7 +1,7 @@
 class Wpscan < Formula
   desc "WordPress security scanner"
   homepage "https://wpscan.com"
-  url "https://github.com/wpscanteam/wpscan/archive/refs/tags/v3.8.24.tar.gz"
+  url "https://ghproxy.com/https://github.com/wpscanteam/wpscan/archive/refs/tags/v3.8.24.tar.gz"
   sha256 "03d1852e9cb7e50c175f5699cd4055494ce379d6b2a931cdb8ca6000c932f767"
   license :cannot_represent # Source is public, commercial use requires a paid license
   head "https://github.com/wpscanteam/wpscan.git", branch: "master"

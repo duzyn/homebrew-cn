@@ -1,7 +1,7 @@
 class Flowgrind < Formula
   desc "TCP measurement tool, similar to iperf or netperf"
   homepage "https://flowgrind.github.io"
-  url "https://github.com/flowgrind/flowgrind/releases/download/flowgrind-0.8.2/flowgrind-0.8.2.tar.bz2"
+  url "https://ghproxy.com/https://github.com/flowgrind/flowgrind/releases/download/flowgrind-0.8.2/flowgrind-0.8.2.tar.bz2"
   sha256 "432c4d15cb62d5d8d0b3509034bfb42380a02e3f0b75d16b7619a1ede07ac4f1"
   license "GPL-3.0-or-later"
 

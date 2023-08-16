@@ -2,7 +2,7 @@ cask "cocoapods" do
   version "1.5.2"
   sha256 "03aa37afb129d6ae515d3b9ee7a81c30ba91050131e2dfbb3683bdd2f05ac67a"
 
-  url "https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2",
+  url "https://ghproxy.com/https://github.com/CocoaPods/CocoaPods-app/releases/download/#{version}/CocoaPods.app-#{version}.tar.bz2",
       verified: "github.com/CocoaPods/CocoaPods-app/"
   name "CocoaPods.app"
   desc "Dependency manager for Cocoa projects"

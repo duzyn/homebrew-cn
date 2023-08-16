@@ -1,7 +1,7 @@
 class H2c < Formula
   desc "Headers 2 curl"
   homepage "https://curl.se/h2c/"
-  url "https://github.com/curl/h2c/archive/refs/tags/1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/curl/h2c/archive/refs/tags/1.0.tar.gz"
   sha256 "1c5e4d76131abb5151c89cc54945256509dad9d12cab36205aa5bcd7f8a311af"
   license "MIT"
 

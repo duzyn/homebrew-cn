@@ -1,7 +1,7 @@
 class Advancecomp < Formula
   desc "Recompression utilities for .PNG, .MNG, .ZIP, and .GZ files"
   homepage "https://www.advancemame.it/comp-readme.html"
-  url "https://github.com/amadvance/advancecomp/releases/download/v2.5/advancecomp-2.5.tar.gz"
+  url "https://ghproxy.com/https://github.com/amadvance/advancecomp/releases/download/v2.5/advancecomp-2.5.tar.gz"
   sha256 "90b8ecad387b4770658e85be850b22318ee9e375cbad85ad25c8519d93317c07"
   license "GPL-3.0-only"
 

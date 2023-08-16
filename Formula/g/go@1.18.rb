@@ -1,7 +1,7 @@
 class GoAT118 < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
-  url "https://go.dev/dl/go1.18.10.src.tar.gz"
+  url "https://mirrors.aliyun.com/golang/go1.18.10.src.tar.gz"
   mirror "https://fossies.org/linux/misc/go1.18.10.src.tar.gz"
   sha256 "9cedcca58845df0c9474ae00274c44a95c9dfaefb132fc59921c28c7c106f8e6"
   license "BSD-3-Clause"

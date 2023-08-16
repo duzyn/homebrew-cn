@@ -1,7 +1,7 @@
 class Lgeneral < Formula
   desc "Turn-based strategy engine heavily inspired by Panzer General"
   homepage "https://lgames.sourceforge.io/LGeneral/"
-  url "https://downloads.sourceforge.net/lgeneral/lgeneral/lgeneral-1.4.4.tar.gz"
+  url "https://downloads.sourceforge.net/lgeneral/lgeneral/lgeneral-1.4.4.tar.gz?use_mirror=nchc"
   sha256 "0a26b495716cdcab63b49a294ba31649bc0abe74ce0df48276e52f4a6f323a95"
   license "GPL-2.0-or-later"
 

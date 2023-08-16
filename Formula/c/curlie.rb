@@ -1,7 +1,7 @@
 class Curlie < Formula
   desc "Power of curl, ease of use of httpie"
   homepage "https://curlie.io"
-  url "https://github.com/rs/curlie/archive/refs/tags/v1.7.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/rs/curlie/archive/refs/tags/v1.7.1.tar.gz"
   sha256 "24f34e0a21848a54750cea366ca15f6b4c1ab255b4b46942e4e09b2ebde55931"
   license "MIT"
 

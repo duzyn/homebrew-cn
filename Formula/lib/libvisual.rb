@@ -1,7 +1,7 @@
 class Libvisual < Formula
   desc "Audio Visualization tool and library"
   homepage "https://github.com/Libvisual/libvisual"
-  url "https://github.com/Libvisual/libvisual/releases/download/libvisual-0.4.2/libvisual-0.4.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/Libvisual/libvisual/releases/download/libvisual-0.4.2/libvisual-0.4.2.tar.gz"
   sha256 "63085fd9835c42c9399ea6bb13a7ebd4b1547ace75c4595ce8e9759512bd998a"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 

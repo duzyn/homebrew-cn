@@ -2,7 +2,7 @@ cask "fedistar" do
   version "1.6.1"
   sha256 "f7c4c1bcca53399ee695aa4d823e5903ed18b090a6586c7b1ac21184dd31e4e5"
 
-  url "https://github.com/h3poteto/fedistar/releases/download/v#{version}/fedistar_#{version}_universal.dmg",
+  url "https://ghproxy.com/https://github.com/h3poteto/fedistar/releases/download/v#{version}/fedistar_#{version}_universal.dmg",
       verified: "github.com/h3poteto/fedistar/"
   name "fedistar"
   desc "Multi-column Mastodon, Pleroma, and Friendica client for desktop"

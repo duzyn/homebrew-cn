@@ -2,7 +2,7 @@ cask "sameboy" do
   version "0.15.8"
   sha256 "8df3df469868f77777bc1776f15e95085f0256bec891cf65c5918c01cb16611f"
 
-  url "https://github.com/LIJI32/SameBoy/releases/download/v#{version}/sameboy_cocoa_v#{version}.zip",
+  url "https://ghproxy.com/https://github.com/LIJI32/SameBoy/releases/download/v#{version}/sameboy_cocoa_v#{version}.zip",
       verified: "github.com/LIJI32/SameBoy/"
   name "SameBoy"
   desc "Game Boy and Game Boy Color emulator written in C"

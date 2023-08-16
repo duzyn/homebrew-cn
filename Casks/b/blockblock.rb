@@ -22,7 +22,7 @@ cask "blockblock" do
     version "2.1.5"
     sha256 "3ee9f1bceec828e91602d7f3d3e516c8aa9cde58e98214065da380b870e92141"
 
-    url "https://github.com/objective-see/BlockBlock/releases/download/v#{version}/BlockBlock_#{version}.zip",
+    url "https://ghproxy.com/https://github.com/objective-see/BlockBlock/releases/download/v#{version}/BlockBlock_#{version}.zip",
         verified: "github.com/objective-see/BlockBlock/"
   end
 

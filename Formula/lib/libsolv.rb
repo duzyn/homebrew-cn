@@ -1,7 +1,7 @@
 class Libsolv < Formula
   desc "Library for solving packages and reading repositories"
   homepage "https://github.com/openSUSE/libsolv"
-  url "https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.24.tar.gz"
+  url "https://ghproxy.com/https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.24.tar.gz"
   sha256 "62743265222a729c7fe94c40f7b90ccc1ac5568f5ee6df46884e7ce3c16c78c7"
   license "BSD-3-Clause"
 

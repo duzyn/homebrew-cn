@@ -2,7 +2,7 @@ cask "librecad" do
   version "2.2.0.2"
   sha256 "552e2ac63fca297c617511c3983be7477bc050e8f774841abb7db5ce81ce935b"
 
-  url "https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD-#{version}.dmg",
       verified: "github.com/LibreCAD/LibreCAD/"
   name "LibreCAD"
   desc "CAD application"

@@ -2,7 +2,7 @@ cask "quail" do
   version "2.4.0"
   sha256 "481b42f6a2c9ffd94c450f28e49692e95030d11cf20c2823732b117bac1e8992"
 
-  url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}.dmg"
   name "Quail"
   desc "Unofficial but officially accepted esa app"
   homepage "https://github.com/1000ch/quail"

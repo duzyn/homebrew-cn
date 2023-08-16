@@ -2,7 +2,7 @@ cask "goneovim" do
   version "0.6.7"
   sha256 "71aa694f69e7b7cad11912bc66c0433468bcabea412f7426eeeb9cf6ebe64489"
 
-  url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
+  url "https://ghproxy.com/https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
   name "Goneovim"
   desc "Neovim GUI written in Golang, using a Golang qt backend"
   homepage "https://github.com/akiyosi/goneovim"

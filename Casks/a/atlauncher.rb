@@ -2,7 +2,7 @@ cask "atlauncher" do
   version "3.4.31.2"
   sha256 "a176aefcf36b0a4e5e5340430848e2b3ffa19a436758d123ff150fb4f309464a"
 
-  url "https://github.com/ATLauncher/ATLauncher/releases/download/v#{version}/ATLauncher-#{version}.zip",
+  url "https://ghproxy.com/https://github.com/ATLauncher/ATLauncher/releases/download/v#{version}/ATLauncher-#{version}.zip",
       verified: "github.com/ATLauncher/ATLauncher/"
   name "ATLauncher"
   desc "Minecraft launcher"

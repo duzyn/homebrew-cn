@@ -1,7 +1,7 @@
 class Sh4d0wup < Formula
   desc "Signing-key abuse and update exploitation framework"
   homepage "https://github.com/kpcyrd/sh4d0wup"
-  url "https://github.com/kpcyrd/sh4d0wup/archive/v0.9.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/kpcyrd/sh4d0wup/archive/v0.9.0.tar.gz"
   sha256 "ec6aa007417e76338bc903d969e88f038ba982eb603f227f85caea5b8ad715c3"
   license "GPL-3.0-or-later"
 

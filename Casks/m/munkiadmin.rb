@@ -2,7 +2,7 @@ cask "munkiadmin" do
   version "1.8.1"
   sha256 "2037b131b298579bc0213578602e219ee43d6054d4ab5d61432b08c38bc15349"
 
-  url "https://github.com/hjuutilainen/munkiadmin/releases/download/v#{version}/MunkiAdmin-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/hjuutilainen/munkiadmin/releases/download/v#{version}/MunkiAdmin-#{version}.dmg",
       verified: "github.com/hjuutilainen/munkiadmin/"
   name "MunkiAdmin"
   desc "Tool to manage Munki repositories"

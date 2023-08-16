@@ -2,7 +2,7 @@
 class Macvim < Formula
   desc "GUI for vim, made for macOS"
   homepage "https://github.com/macvim-dev/macvim"
-  url "https://github.com/macvim-dev/macvim/archive/refs/tags/release-177.tar.gz"
+  url "https://ghproxy.com/https://github.com/macvim-dev/macvim/archive/refs/tags/release-177.tar.gz"
   version "9.0.1677"
   sha256 "f0c7ce7bc81b1cecb9e9c3c39c35b9a02a3ea1f08f9131a6032f9c8bff6aa8d7"
   license "Vim"

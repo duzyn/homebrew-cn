@@ -1,7 +1,7 @@
 class Afsctool < Formula
   desc "Utility for manipulating APFS and ZFS compressed files"
   homepage "https://brkirch.wordpress.com/afsctool/"
-  url "https://github.com/RJVB/afsctool/archive/refs/tags/v1.7.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/RJVB/afsctool/archive/refs/tags/v1.7.3.tar.gz"
   sha256 "5776ff5aaf05c513bead107536d9e98e6037019a0de8a1435cc9da89ea8d49b8"
   license all_of: ["GPL-3.0-only", "BSL-1.0"]
   head "https://github.com/RJVB/afsctool.git"

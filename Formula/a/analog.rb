@@ -1,7 +1,7 @@
 class Analog < Formula
   desc "Logfile analyzer"
   homepage "https://www.c-amie.co.uk/software/analog/"
-  url "https://github.com/c-amie/analog-ce/archive/refs/tags/6.0.17.tar.gz"
+  url "https://ghproxy.com/https://github.com/c-amie/analog-ce/archive/refs/tags/6.0.17.tar.gz"
   sha256 "0e5794c2eaa5826dc014916e413e90eb2714a646ff8d6ec026437182d789b117"
   head "https://github.com/c-amie/analog-ce.git", branch: "master"
 

@@ -1,7 +1,7 @@
 class Gomodifytags < Formula
   desc "Go tool to modify struct field tags"
   homepage "https://github.com/fatih/gomodifytags"
-  url "https://github.com/fatih/gomodifytags/archive/refs/tags/v1.16.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/fatih/gomodifytags/archive/refs/tags/v1.16.0.tar.gz"
   sha256 "276526aede6e42c3d540cdaa5fe67cbd276837acfea5d9f5ca19c3a8d16a82ed"
   license "BSD-3-Clause"
 

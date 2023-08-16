@@ -1,7 +1,7 @@
 class Uvg266 < Formula
   desc "Open-source VVC/H.266 encoder"
   homepage "https://github.com/ultravideo/uvg266"
-  url "https://github.com/ultravideo/uvg266/archive/refs/tags/v0.4.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/ultravideo/uvg266/archive/refs/tags/v0.4.1.tar.gz"
   sha256 "9d4decb1b9141ce7a439710a747db7ef0983fa647255972294879122642b8f2b"
   license "BSD-3-Clause"
   head "https://github.com/ultravideo/uvg266.git", branch: "master"

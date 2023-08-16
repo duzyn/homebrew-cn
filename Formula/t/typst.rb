@@ -1,7 +1,7 @@
 class Typst < Formula
   desc "Markup-based typesetting system"
   homepage "https://github.com/typst/typst"
-  url "https://github.com/typst/typst/archive/refs/tags/v0.7.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/typst/typst/archive/refs/tags/v0.7.0.tar.gz"
   sha256 "550fb66bb3405951dfd0a1736e9e17756e906e664f6f683eeb87d40643218846"
   license "Apache-2.0"
   version_scheme 1

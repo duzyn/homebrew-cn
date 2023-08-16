@@ -8,7 +8,7 @@ cask "memo" do
   homepage "https://usememo.com/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/btk/memo/master/package.json"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/btk/memo/master/package.json"
     strategy :json do |json|
       json["version"]
     end

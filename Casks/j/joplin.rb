@@ -2,7 +2,7 @@ cask "joplin" do
   version "2.11.11"
   sha256 "fddbda6076bb3d3e8503ade49ad8eb12b25923d3be84894abc79dfe519df7998"
 
-  url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}.dmg",
       verified: "github.com/laurent22/joplin/"
   name "Joplin"
   desc "Note taking and to-do application with synchronization capabilities"

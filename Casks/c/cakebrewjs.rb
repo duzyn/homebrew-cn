@@ -2,7 +2,7 @@ cask "cakebrewjs" do
   version "1.4.4"
   sha256 "620aa8621df50f776bb21f9e435e0c0e77ffc0f836007ab35613b8acbd0400f1"
 
-  url "https://downloads.sourceforge.net/cakebrewjs/v#{version}/cakebrewjs-#{version}-mac.zip"
+  url "https://downloads.sourceforge.net/cakebrewjs/v#{version}/cakebrewjs-#{version}-mac.zip?use_mirror=nchc"
   name "cakebrewjs"
   desc "Homebrew GUI app written in electron"
   homepage "https://sourceforge.net/projects/cakebrewjs/"

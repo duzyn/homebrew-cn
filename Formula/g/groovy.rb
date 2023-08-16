@@ -33,7 +33,7 @@ class Groovy < Formula
     # Source version is from jline-2.14.6 -> jansi-1.12 -> jansi-native-1.6
     # TODO: Remove once updated to jline-3.x: https://issues.apache.org/jira/browse/GROOVY-8162
     resource "jansi-native" do
-      url "https://github.com/fusesource/jansi-native/archive/refs/tags/jansi-native-1.6.tar.gz"
+      url "https://ghproxy.com/https://github.com/fusesource/jansi-native/archive/refs/tags/jansi-native-1.6.tar.gz"
       sha256 "f4075ad012c9ed79eaa8d3240d869e10d94ca8b130f3e7dac2ba3978dce0fb21"
 
       # Update pom.xml to replace unsupported Java 6 source and to disable universal binary

@@ -1,7 +1,7 @@
 class Hz < Formula
   desc "Golang HTTP framework for microservices"
   homepage "https://github.com/cloudwego/hertz"
-  url "https://github.com/cloudwego/hertz/archive/refs/tags/cmd/hz/v0.6.6.tar.gz"
+  url "https://ghproxy.com/https://github.com/cloudwego/hertz/archive/refs/tags/cmd/hz/v0.6.6.tar.gz"
   sha256 "ee40bde5d3b25a55dbb8b8c64bd5157939ad9b52056ec753c040757c191c13e5"
   license "Apache-2.0"
   head "https://github.com/cloudwego/hertz.git", branch: "develop"

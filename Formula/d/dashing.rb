@@ -1,7 +1,7 @@
 class Dashing < Formula
   desc "Generate Dash documentation from HTML files"
   homepage "https://github.com/technosophos/dashing"
-  url "https://github.com/technosophos/dashing/archive/0.4.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/technosophos/dashing/archive/0.4.0.tar.gz"
   sha256 "81b21acae83c144f10d9eea05a0b89f0dcdfa694c3760c2a25bd4eab72a2a3b9"
   license "MIT"
   revision 1
@@ -22,7 +22,7 @@ class Dashing < Formula
   depends_on "go" => :build
 
   resource "redux_saga_docs_tarball" do
-    url "https://github.com/dmitrytut/redux-saga-docset/archive/7df9e3070934c0f4b92d66d2165312bf78ecd6a0.tar.gz"
+    url "https://ghproxy.com/https://github.com/dmitrytut/redux-saga-docset/archive/7df9e3070934c0f4b92d66d2165312bf78ecd6a0.tar.gz"
     sha256 "08e5cc1fc0776fd60492ae90961031b1419ea6ed02e2c2d9db2ede67d9d67852"
   end
 

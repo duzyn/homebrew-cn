@@ -4,7 +4,7 @@ class MoltenVk < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://github.com/KhronosGroup/MoltenVK/archive/v1.2.4.tar.gz"
+    url "https://ghproxy.com/https://github.com/KhronosGroup/MoltenVK/archive/v1.2.4.tar.gz"
     sha256 "80a33cc9a9f83df3623e2ed9e21ac6226746d37021423a9722c7dde1668898f4"
 
     # MoltenVK depends on very specific revisions of its dependencies.

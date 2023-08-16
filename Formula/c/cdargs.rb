@@ -1,7 +1,7 @@
 class Cdargs < Formula
   desc "Directory bookmarking system - Enhanced cd utilities"
   homepage "https://github.com/cbxbiker61/cdargs"
-  url "https://github.com/cbxbiker61/cdargs/archive/2.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/cbxbiker61/cdargs/archive/2.1.tar.gz"
   sha256 "062515c3fbd28c68f9fa54ff6a44b81cf647469592444af0872b5ecd7444df7d"
   license "GPL-2.0"
   head "https://github.com/cbxbiker61/cdargs.git", branch: "master"
@@ -28,7 +28,7 @@ class Cdargs < Formula
   # fixes zsh usage using the patch provided at the cdargs homepage
   # (See https://www.skamphausen.de/cgi-bin/ska/CDargs)
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/cdargs/1.35.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/cdargs/1.35.patch"
     sha256 "adb4e73f6c5104432928cd7474a83901fe0f545f1910b51e4e81d67ecef80a96"
   end
 

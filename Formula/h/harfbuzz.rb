@@ -1,7 +1,7 @@
 class Harfbuzz < Formula
   desc "OpenType text shaping engine"
   homepage "https://github.com/harfbuzz/harfbuzz"
-  url "https://github.com/harfbuzz/harfbuzz/archive/8.1.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/harfbuzz/harfbuzz/archive/8.1.1.tar.gz"
   sha256 "b16e6bc0fc7e6a218583f40c7d201771f2e3072f85ef6e9217b36c1dc6b2aa25"
   license "MIT"
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
@@ -29,7 +29,7 @@ class Harfbuzz < Formula
   depends_on "icu4c"
 
   resource "homebrew-test-ttf" do
-    url "https://github.com/harfbuzz/harfbuzz/raw/fc0daafab0336b847ac14682e581a8838f36a0bf/test/shaping/fonts/sha1sum/270b89df543a7e48e206a2d830c0e10e5265c630.ttf"
+    url "https://ghproxy.com/https://github.com/harfbuzz/harfbuzz/raw/fc0daafab0336b847ac14682e581a8838f36a0bf/test/shaping/fonts/sha1sum/270b89df543a7e48e206a2d830c0e10e5265c630.ttf"
     sha256 "9535d35dab9e002963eef56757c46881f6b3d3b27db24eefcc80929781856c77"
   end
 

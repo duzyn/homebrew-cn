@@ -2,7 +2,7 @@ cask "powershell6" do
   version "6.2.7"
   sha256 "d968da998b00178f666f342c9823c7df5038947a46d153892b1b20580be8d6d4"
 
-  url "https://ghproxy.com/https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
+  url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-x64.pkg"
   name "PowerShell"
   desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"

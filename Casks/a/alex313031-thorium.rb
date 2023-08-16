@@ -5,7 +5,7 @@ cask "alex313031-thorium" do
   sha256 arm:   "fa8a3fdfd0ae4ed09a39f94114cae2af56a21cd52d7c2315523cecd8f478b7ce",
          intel: "ab48e8974012142e8c8e7f9b8dc5631eac89fbf376225f88274964dcc8732828"
 
-  url "https://github.com/Alex313031/Thorium-Special/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/Alex313031/Thorium-Special/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg",
       verified: "github.com/Alex313031/Thorium-Special/"
   name "Thorium"
   desc "Web browser"

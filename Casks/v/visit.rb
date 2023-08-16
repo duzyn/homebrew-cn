@@ -3,7 +3,7 @@ cask "visit" do
     version "3.1.1"
     sha256 "4213daed23de17ee8bcfba779a96cce3ef92d3075ae666f7aeaffa824d484924"
 
-    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg",
+    url "https://ghproxy.com/https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg",
         verified: "github.com/visit-dav/visit/"
 
     livecheck do
@@ -14,7 +14,7 @@ cask "visit" do
     version "3.3.3"
     sha256 "e79692cb6430c030290a38859ba91927f56a35f632a71001690e3b2a9de4a9e8"
 
-    url "https://github.com/visit-dav/visit/releases/download/v#{version}/VisIt-#{version}.dmg",
+    url "https://ghproxy.com/https://github.com/visit-dav/visit/releases/download/v#{version}/VisIt-#{version}.dmg",
         verified: "github.com/visit-dav/visit/"
 
     livecheck do

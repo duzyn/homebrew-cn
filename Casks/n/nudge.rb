@@ -2,7 +2,7 @@ cask "nudge" do
   version "1.1.11.81465"
   sha256 "0ab133466c5c020ffb4c5e31384cb82ff34bb186d8e2d8da8164ea5fc1b10220"
 
-  url "https://github.com/macadmins/nudge/releases/download/v#{version}/Nudge-#{version}.pkg"
+  url "https://ghproxy.com/https://github.com/macadmins/nudge/releases/download/v#{version}/Nudge-#{version}.pkg"
   name "Nudge"
   desc "Application for enforcing OS updates"
   homepage "https://github.com/macadmins/nudge"

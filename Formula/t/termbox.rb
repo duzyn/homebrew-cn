@@ -1,7 +1,7 @@
 class Termbox < Formula
   desc "Library for writing text-based user interfaces"
   homepage "https://github.com/termbox/termbox"
-  url "https://github.com/termbox/termbox/archive/refs/tags/v1.1.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/termbox/termbox/archive/refs/tags/v1.1.4.tar.gz"
   sha256 "402fa1b353882d18e8ddd48f9f37346bbb6f5277993d3b36f1fc7a8d6097ee8a"
   license "MIT"
   head "https://github.com/termbox/termbox.git", branch: "master"

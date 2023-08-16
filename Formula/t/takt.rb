@@ -1,7 +1,7 @@
 class Takt < Formula
   desc "Text-based music programming language"
   homepage "https://takt.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/takt/takt-0.310-src.tar.gz"
+  url "https://downloads.sourceforge.net/project/takt/takt-0.310-src.tar.gz?use_mirror=nchc"
   sha256 "eb2947eb49ef84b6b3644f9cf6f1ea204283016c4abcd1f7c57b24b896cc638f"
   license "GPL-2.0-or-later"
   revision 2
@@ -28,7 +28,7 @@ class Takt < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
     sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
   end
 

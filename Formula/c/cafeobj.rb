@@ -1,7 +1,7 @@
 class Cafeobj < Formula
   desc "New generation algebraic specification and programming language"
   homepage "https://cafeobj.org/"
-  url "https://github.com/CafeOBJ/cafeobj/archive/refs/tags/v1.6.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/CafeOBJ/cafeobj/archive/refs/tags/v1.6.1.tar.gz"
   sha256 "12780724a2b63ee45b12b79fd574ea1dc2870b59a4964ae51d9acc47dbbcff3d"
   license all_of: [
     "BSD-2-Clause",

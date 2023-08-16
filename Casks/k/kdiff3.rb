@@ -3,13 +3,13 @@ cask "kdiff3" do
   version "1.10.5"
   sha256 "dd48669a53d8f6b4f305819cd9b0a1a36f1eff3d8d571c51415f9fe511700502"
 
-  url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-x86_64.dmg"
+  url "https://mirrors.ustc.edu.cn/kde/stable/kdiff3/kdiff3-#{version}-macos-x86_64.dmg"
   name "KDiff3"
   desc "Utility for comparing and merging files and directories"
   homepage "https://invent.kde.org/sdk/kdiff3"
 
   livecheck do
-    url "https://download.kde.org/stable/kdiff3/"
+    url "https://mirrors.ustc.edu.cn/kde/stable/kdiff3/"
     regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]x86_64\.dmg/i)
   end
 

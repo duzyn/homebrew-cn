@@ -5,7 +5,7 @@ cask "espanso" do
   sha256 arm:   "e84b5a96def1d793997fc8ee4e380f11b1d0515cf120402cd7aec6e07bafb74e",
          intel: "a17c03ff341beaf5a286aaab033dc443d703ed41f9dbfae653289dab00120bec"
 
-  url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
+  url "https://ghproxy.com/https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
       verified: "github.com/espanso/espanso/"
   name "Espanso"
   desc "Cross-platform Text Expander written in Rust"

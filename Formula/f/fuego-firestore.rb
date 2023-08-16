@@ -1,7 +1,7 @@
 class FuegoFirestore < Formula
   desc "Command-line client for the Firestore database"
   homepage "https://github.com/sgarciac/fuego"
-  url "https://github.com/sgarciac/fuego/archive/refs/tags/0.33.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/sgarciac/fuego/archive/refs/tags/0.33.0.tar.gz"
   sha256 "25281f2242fe41b0533255a0d4f0450b1f3f8622d1585f8ae8cda1b116ca75d0"
   license "GPL-3.0-only"
 

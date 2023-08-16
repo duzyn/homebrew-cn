@@ -1,7 +1,7 @@
 class Roapi < Formula
   desc "Full-fledged APIs for static datasets without writing a single line of code"
   homepage "https://roapi.github.io/docs"
-  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.9.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.9.0.tar.gz"
   sha256 "90dc3c036ba284504f0af023e343603b74a8f9222999fa6968fd2d7782fa6bac"
   license "Apache-2.0"
 

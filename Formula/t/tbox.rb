@@ -1,7 +1,7 @@
 class Tbox < Formula
   desc "Glib-like multi-platform C library"
   homepage "https://tboox.org/"
-  url "https://github.com/tboox/tbox/archive/v1.7.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/tboox/tbox/archive/v1.7.3.tar.gz"
   sha256 "1d8dea39d39d67b729098e1e7b31de2aa54db67afee6087064f049d60146a49e"
   license "Apache-2.0"
   head "https://github.com/tboox/tbox.git", branch: "master"

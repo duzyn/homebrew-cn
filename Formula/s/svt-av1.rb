@@ -23,7 +23,7 @@ class SvtAv1 < Formula
   end
 
   resource "homebrew-testvideo" do
-    url "https://github.com/grusell/svt-av1-homebrew-testdata/raw/main/video_64x64_yuv420p_25frames.yuv"
+    url "https://ghproxy.com/https://github.com/grusell/svt-av1-homebrew-testdata/raw/main/video_64x64_yuv420p_25frames.yuv"
     sha256 "0c5cc90b079d0d9c1ded1376357d23a9782a704a83e01731f50ccd162e246492"
   end
 

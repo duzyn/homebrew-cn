@@ -1,7 +1,7 @@
 class Chapel < Formula
   desc "Programming language for productive parallel computing at scale"
   homepage "https://chapel-lang.org/"
-  url "https://github.com/chapel-lang/chapel/releases/download/1.31.0/chapel-1.31.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/chapel-lang/chapel/releases/download/1.31.0/chapel-1.31.0.tar.gz"
   sha256 "4b861c9a354f6fcf66081256f7ec703d6dd2cd68ea363b400d10ac00bf308679"
   license "Apache-2.0"
   head "https://github.com/chapel-lang/chapel.git", branch: "main"

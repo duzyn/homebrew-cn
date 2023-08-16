@@ -62,11 +62,11 @@ class Mono < Formula
 
     # F# patches from fsharp.py
     patch do
-      url "https://raw.githubusercontent.com/mono/mono/a22ed3f094e18f1f82e1c6cead28d872d3c57e40/packaging/MacSDK/patches/fsharp-portable-pdb.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/mono/mono/a22ed3f094e18f1f82e1c6cead28d872d3c57e40/packaging/MacSDK/patches/fsharp-portable-pdb.patch"
       sha256 "5b09b0c18b7815311680cc3ecd9bb30d92a307f3f2103a5b58b06bc3a0613ed4"
     end
     patch do
-      url "https://raw.githubusercontent.com/mono/mono/a22ed3f094e18f1f82e1c6cead28d872d3c57e40/packaging/MacSDK/patches/fsharp-netfx-multitarget.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/mono/mono/a22ed3f094e18f1f82e1c6cead28d872d3c57e40/packaging/MacSDK/patches/fsharp-netfx-multitarget.patch"
       sha256 "112f885d4833effb442cf586492cdbd7401d6c2ba9d8078fe55e896cc82624d7"
     end
   end
@@ -81,7 +81,7 @@ class Mono < Formula
     # Patch is from mono's official packaging repo.
     on_linux do
       patch do
-        url "https://raw.githubusercontent.com/mono/linux-packaging-msbuild/de271a45e29b60a248b7b797cb49df6f3bedcb52/debian/patches/fix_bashisms.patch"
+        url "https://ghproxy.com/https://raw.githubusercontent.com/mono/linux-packaging-msbuild/de271a45e29b60a248b7b797cb49df6f3bedcb52/debian/patches/fix_bashisms.patch"
         sha256 "81985224eeac5b9a2d6d8e3799d13eb9f083a1596d7adb713a49dd4db757aa61"
       end
     end
@@ -99,7 +99,7 @@ class Mono < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
     sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
   end
 
@@ -107,7 +107,7 @@ class Mono < Formula
   # Patch lifted from dotnet https://github.com/dotnet/runtime/pull/76433
   patch do
     on_ventura :or_newer do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/dce4e25f7eacac188478ea9fbf61ce162f20811d/mono/ventura.diff"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/dce4e25f7eacac188478ea9fbf61ce162f20811d/mono/ventura.diff"
       sha256 "d534e564b936f8929e50551f42edfc1fdf13a643cf0ee65955668b7fe52d3ce7"
     end
   end

@@ -19,7 +19,7 @@ class Scalastyle < Formula
   depends_on "openjdk"
 
   resource "default_config" do
-    url "https://raw.githubusercontent.com/scalastyle/scalastyle/v1.0.0/lib/scalastyle_config.xml"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/scalastyle/scalastyle/v1.0.0/lib/scalastyle_config.xml"
     sha256 "6ce156449609a375d973cc8384a17524e4538114f1747efc2295cf4ca473d04e"
   end
 

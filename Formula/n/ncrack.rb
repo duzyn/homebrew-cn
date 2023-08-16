@@ -8,7 +8,7 @@ class Ncrack < Formula
   head "https://github.com/nmap/ncrack.git", branch: "master"
 
   stable do
-    url "https://github.com/nmap/ncrack/archive/refs/tags/0.7.tar.gz"
+    url "https://ghproxy.com/https://github.com/nmap/ncrack/archive/refs/tags/0.7.tar.gz"
     sha256 "f3f971cd677c4a0c0668cb369002c581d305050b3b0411e18dd3cb9cc270d14a"
 
     # Fix build with GCC 10+. Remove in the next release.

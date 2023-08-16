@@ -9,7 +9,7 @@ cask "dintch" do
   homepage "https://eclecticlight.co/dintch"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     strategy :page_match do |page|
       match = page.match(%r{(\d+)/(\d+)/dintch(\d+)\.zip}i)
       next if match.blank?

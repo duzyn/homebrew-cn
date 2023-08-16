@@ -1,7 +1,7 @@
 class Bundletool < Formula
   desc "Command-line tool to manipulate Android App Bundles"
   homepage "https://github.com/google/bundletool"
-  url "https://github.com/google/bundletool/releases/download/1.15.4/bundletool-all-1.15.4.jar"
+  url "https://ghproxy.com/https://github.com/google/bundletool/releases/download/1.15.4/bundletool-all-1.15.4.jar"
   sha256 "e5f54597dbb5211f050e8ddd03d4d731a9b4dfa5684c7687928b654a8ddc212a"
   license "Apache-2.0"
 
@@ -18,7 +18,7 @@ class Bundletool < Formula
   depends_on "openjdk"
 
   resource "homebrew-test-bundle" do
-    url "https://github.com/thuongleit/crashlytics-sample/raw/master/app/release/app.aab"
+    url "https://ghproxy.com/https://github.com/thuongleit/crashlytics-sample/raw/master/app/release/app.aab"
     sha256 "f7ea5a75ce10e394a547d0c46115b62a2f03380a18b1fc222e98928d1448775f"
   end
 

@@ -2,7 +2,7 @@ cask "boop" do
   version "1.4.0"
   sha256 "8c4492baf6d5b1d26d157877f53d063259e615d784e8ab4d046d3ee67fb9b345"
 
-  url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip",
+  url "https://ghproxy.com/https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip",
       verified: "github.com/IvanMathy/Boop/"
   name "Boop"
   desc "Scriptable scratchpad for developers"

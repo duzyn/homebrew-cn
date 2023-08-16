@@ -2,7 +2,7 @@ cask "opensoundmeter" do
   version "1.2.3"
   sha256 "b4de2eaabb8d65d918f47b92a65476f579117c14f9851ce91df31a71b41bc81c"
 
-  url "https://github.com/psmokotnin/osm/releases/download/v#{version}/OpenSoundMeter.dmg",
+  url "https://ghproxy.com/https://github.com/psmokotnin/osm/releases/download/v#{version}/OpenSoundMeter.dmg",
       verified: "github.com/psmokotnin/osm/"
   name "Open Sound Meter"
   desc "Sound measurement application for tuning audio systems in real-time"

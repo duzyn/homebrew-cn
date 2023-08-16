@@ -1,7 +1,7 @@
 class TeeClc < Formula
   desc "Microsoft Team Explorer Everywhere command-line Client"
   homepage "https://github.com/Microsoft/team-explorer-everywhere"
-  url "https://github.com/Microsoft/team-explorer-everywhere/releases/download/14.135.0/TEE-CLC-14.135.0.zip"
+  url "https://ghproxy.com/https://github.com/Microsoft/team-explorer-everywhere/releases/download/14.135.0/TEE-CLC-14.135.0.zip"
   sha256 "efc51f9b7cd8178d8f9c4c6897c98363e84cc1e44be42b7647d803c0059cffe4"
   license "MIT"
 

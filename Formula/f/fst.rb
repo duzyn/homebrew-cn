@@ -1,7 +1,7 @@
 class Fst < Formula
   desc "Represent large sets and maps compactly with finite state transducers"
   homepage "https://github.com/BurntSushi/fst"
-  url "https://github.com/BurntSushi/fst/archive/refs/tags/fst-bin-0.4.3.tar.gz"
+  url "https://ghproxy.com/https://github.com/BurntSushi/fst/archive/refs/tags/fst-bin-0.4.3.tar.gz"
   sha256 "13d1b28a6a6eaf5ce53c1840e7e6c2cb42ff7f846cd57047ddd32601667c8a5f"
   license any_of: ["Unlicense", "MIT"]
   head "https://github.com/BurntSushi/fst.git", branch: "master"

@@ -2,7 +2,7 @@ cask "otto-matic" do
   version "4.0.1"
   sha256 "2936a98e6f7d44c31cd08be7ecd11c817a83feaf80c307f77863812083c477ca"
 
-  url "https://github.com/jorio/OttoMatic/releases/download/#{version}/OttoMatic-#{version}-mac.dmg",
+  url "https://ghproxy.com/https://github.com/jorio/OttoMatic/releases/download/#{version}/OttoMatic-#{version}-mac.dmg",
       verified: "github.com/jorio/OttoMatic/"
   name "Otto Matic"
   desc "Science fiction 3D action/adventure game from Pangea Software"

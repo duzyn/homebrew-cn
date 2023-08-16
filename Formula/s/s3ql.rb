@@ -3,7 +3,7 @@ class S3ql < Formula
 
   desc "POSIX-compliant FUSE filesystem using object store as block storage"
   homepage "https://github.com/s3ql/s3ql"
-  url "https://github.com/s3ql/s3ql/releases/download/release-3.8.1/s3ql-3.8.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/s3ql/s3ql/releases/download/release-3.8.1/s3ql-3.8.1.tar.gz"
   sha256 "d4731ebaacadca38a677bb18a99446c19d4f5b573628d55371f715acace11c4c"
   license "GPL-3.0"
   revision 1
@@ -24,7 +24,7 @@ class S3ql < Formula
   depends_on "python@3.9"
 
   resource "apsw" do
-    url "https://github.com/rogerbinns/apsw/archive/refs/tags/3.38.1-r1.tar.gz"
+    url "https://ghproxy.com/https://github.com/rogerbinns/apsw/archive/refs/tags/3.38.1-r1.tar.gz"
     sha256 "d7863124c54a6abac04dd48f46b5b910e5718c36a7a21be51fc4a7e03dd45c53"
   end
 

@@ -133,7 +133,7 @@ class Qt < Formula
   # Can be removed soon and replaced with QT_ALLOW_SYMLINK_IN_PATHS
   # https://codereview.qt-project.org/c/qt/qtbase/+/475484
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/c363f0edf9e90598d54bc3f4f1bacf95abbda282/qt/qt_internal_check_if_path_has_symlinks.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/c363f0edf9e90598d54bc3f4f1bacf95abbda282/qt/qt_internal_check_if_path_has_symlinks.patch"
     sha256 "1afd8bf3299949b2717265228ca953d8d9e4201ddb547f43ed84ac0d7da7a135"
     directory "qtbase"
   end

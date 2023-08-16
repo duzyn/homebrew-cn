@@ -6,13 +6,13 @@ class Mkvdts2ac3 < Formula
   head "https://github.com/JakeWharton/mkvdts2ac3.git", branch: "master"
 
   stable do
-    url "https://github.com/JakeWharton/mkvdts2ac3/archive/1.6.0.tar.gz"
+    url "https://ghproxy.com/https://github.com/JakeWharton/mkvdts2ac3/archive/1.6.0.tar.gz"
     sha256 "f9f070c00648c1ea062ac772b160c61d1b222ad2b7d30574145bf230e9288982"
 
     # patch with upstream fix for newer mkvtoolnix compatibility
     # https://github.com/JakeWharton/mkvdts2ac3/commit/f5008860e7ec2cbd950a0628c979f06387bf76d0
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/mkvdts2ac3/1.6.0.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/mkvdts2ac3/1.6.0.patch"
       sha256 "208393d170387092cb953b6cd32e8c0201ba73560e25ed4930e4e2af6f72e4d9"
     end
   end

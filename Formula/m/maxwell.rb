@@ -1,7 +1,7 @@
 class Maxwell < Formula
   desc "Reads MySQL binlogs and writes row updates as JSON to Kafka"
   homepage "https://maxwells-daemon.io/"
-  url "https://github.com/zendesk/maxwell/releases/download/v1.40.2/maxwell-1.40.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/zendesk/maxwell/releases/download/v1.40.2/maxwell-1.40.2.tar.gz"
   sha256 "68cb3e8ee8ca1e0d63992d4a229e922d8f44724869f78b8d4a30cdc72b1d4485"
   license "Apache-2.0"
 

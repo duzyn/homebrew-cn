@@ -2,7 +2,7 @@ cask "iptvnator" do
   version "0.14.0"
   sha256 "84e73739c815f1082b1a0a338b91a80f678defe996e1df8fafe8aa27e00ace18"
 
-  url "https://github.com/4gray/iptvnator/releases/download/v#{version}/IPTVnator-#{version}-universal.dmg"
+  url "https://ghproxy.com/https://github.com/4gray/iptvnator/releases/download/v#{version}/IPTVnator-#{version}-universal.dmg"
   name "IPTVnator"
   desc "Open Source m3u, m3u8 player"
   homepage "https://github.com/4gray/iptvnator"

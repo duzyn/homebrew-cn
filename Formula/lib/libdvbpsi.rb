@@ -2,12 +2,12 @@ class Libdvbpsi < Formula
   desc "Library to decode/generate MPEG TS and DVB PSI tables"
   homepage "https://www.videolan.org/developers/libdvbpsi.html"
   url "https://get.videolan.org/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2"
-  mirror "https://download.videolan.org/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2"
+  mirror "https://mirrors.aliyun.com/videolan/pub/libdvbpsi/1.3.3/libdvbpsi-1.3.3.tar.bz2"
   sha256 "02b5998bcf289cdfbd8757bedd5987e681309b0a25b3ffe6cebae599f7a00112"
   license "LGPL-2.1-or-later"
 
   livecheck do
-    url "https://download.videolan.org/pub/libdvbpsi/"
+    url "https://mirrors.aliyun.com/videolan/pub/libdvbpsi/"
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 

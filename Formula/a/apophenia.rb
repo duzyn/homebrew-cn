@@ -1,7 +1,7 @@
 class Apophenia < Formula
   desc "C library for statistical and scientific computing"
   homepage "http://apophenia.info"
-  url "https://github.com/b-k/apophenia/archive/refs/tags/v1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/b-k/apophenia/archive/refs/tags/v1.0.tar.gz"
   sha256 "c753047a9230f9d9e105541f671c4961dc7998f4402972424e591404f33b82ca"
   license "GPL-2.0-only"
 

@@ -1,7 +1,7 @@
 class S3scanner < Formula
   desc "Scan for misconfigured S3 buckets across S3-compatible APIs!"
   homepage "https://github.com/sa7mon/S3Scanner"
-  url "https://github.com/sa7mon/S3Scanner/archive/refs/tags/v3.0.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/sa7mon/S3Scanner/archive/refs/tags/v3.0.0.tar.gz"
   sha256 "bf6d40f919be2284840980ab874cd9a345c3ea948902b14504f225d9ef1af953"
   license "MIT"
 

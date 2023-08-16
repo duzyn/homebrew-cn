@@ -1,7 +1,7 @@
 class Clp < Formula
   desc "Linear programming solver"
   homepage "https://github.com/coin-or/Clp"
-  url "https://github.com/coin-or/Clp/archive/releases/1.17.8.tar.gz"
+  url "https://ghproxy.com/https://github.com/coin-or/Clp/archive/releases/1.17.8.tar.gz"
   sha256 "f9931b5ba44f0daf445c6b48fc2c250dc12e667e59ace8ea7b025f158fe31556"
   license "EPL-2.0"
 
@@ -26,7 +26,7 @@ class Clp < Formula
   depends_on "osi"
 
   resource "coin-or-tools-data-sample-p0033-mps" do
-    url "https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.12/p0033.mps"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/coin-or-tools/Data-Sample/releases/1.2.12/p0033.mps"
     sha256 "8ccff819023237c79ef32e238a5da9348725ce9a4425d48888baf3a0b3b42628"
   end
 

@@ -5,7 +5,7 @@ cask "forkgram-telegram" do
   sha256 arm:   "2c0886a6c791e2a682d4ab9f3f7319ba879c219768ffb63654a142eaa39caffb",
          intel: "7b43535a680810b3677904bd9869c38d72149b20edf320b3372fe7eb09261bba"
 
-  url "https://github.com/Forkgram/tdesktop/releases/download/v#{version}/Forkgram.macOS.no.auto-update_#{arch}.zip"
+  url "https://ghproxy.com/https://github.com/Forkgram/tdesktop/releases/download/v#{version}/Forkgram.macOS.no.auto-update_#{arch}.zip"
   name "Forkgram"
   desc "Fork of Telegram Desktop"
   homepage "https://github.com/Forkgram/"

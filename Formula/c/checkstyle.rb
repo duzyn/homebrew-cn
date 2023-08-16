@@ -1,7 +1,7 @@
 class Checkstyle < Formula
   desc "Check Java source against a coding standard"
   homepage "https://checkstyle.sourceforge.io/"
-  url "https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.2/checkstyle-10.12.2-all.jar"
+  url "https://ghproxy.com/https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.2/checkstyle-10.12.2-all.jar"
   sha256 "d2fbf4e2f3d13820e3168fe6aa41f819728407c3ef6d4eeaaf21aefa6ce64a13"
   license "LGPL-2.1-or-later"
 

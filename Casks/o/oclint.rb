@@ -2,7 +2,7 @@ cask "oclint" do
   version "22.02"
   sha256 "6f102a568af3a4344f9658b5f4bdf3d599a851456287bf7a1fae447891f7368c"
 
-  url "https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-13.0.1-x86_64-darwin-macos-12.2-xcode-13.2.tar.gz",
+  url "https://ghproxy.com/https://github.com/oclint/oclint/releases/download/v#{version}/oclint-#{version}-llvm-13.0.1-x86_64-darwin-macos-12.2-xcode-13.2.tar.gz",
       verified: "github.com/oclint/oclint/"
   name "OCLint"
   desc "Static source code analysis tool"

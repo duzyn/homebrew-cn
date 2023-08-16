@@ -1,7 +1,7 @@
 class Vice < Formula
   desc "Versatile Commodore Emulator"
   homepage "https://sourceforge.net/projects/vice-emu/"
-  url "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.7.1.tar.gz"
+  url "https://downloads.sourceforge.net/project/vice-emu/releases/vice-3.7.1.tar.gz?use_mirror=nchc"
   sha256 "7e3811e6024db0698bfbc321bb324572446b8853d01b4073f09865957b0cab98"
   license "GPL-2.0-or-later"
   head "https://svn.code.sf.net/p/vice-emu/code/trunk/vice"

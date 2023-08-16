@@ -1,7 +1,7 @@
 class Cdebug < Formula
   desc "Swiss army knife of container debugging"
   homepage "https://github.com/iximiuz/cdebug"
-  url "https://github.com/iximiuz/cdebug/archive/refs/tags/v0.0.14.tar.gz"
+  url "https://ghproxy.com/https://github.com/iximiuz/cdebug/archive/refs/tags/v0.0.14.tar.gz"
   sha256 "6133fb7286fba476674b54e2f008c35a4b28f209e3072c3e0a75c69c5deeee81"
   license "Apache-2.0"
   head "https://github.com/iximiuz/cdebug.git", branch: "main"

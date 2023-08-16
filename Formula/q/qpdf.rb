@@ -1,7 +1,7 @@
 class Qpdf < Formula
   desc "Tools for and transforming and inspecting PDF files"
   homepage "https://github.com/qpdf/qpdf"
-  url "https://github.com/qpdf/qpdf/releases/download/v11.5.0/qpdf-11.5.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/qpdf/qpdf/releases/download/v11.5.0/qpdf-11.5.0.tar.gz"
   sha256 "15cb419e72c494a4a4b2e7c0eb9f4e980c8fd4e61ccdea64399e987f4c56c8ee"
   license "Apache-2.0"
 

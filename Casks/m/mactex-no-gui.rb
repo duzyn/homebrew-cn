@@ -2,8 +2,8 @@ cask "mactex-no-gui" do
   version "2023.0314"
   sha256 "57304ece58618f0dfc6a41be39d1d6e8f688d81247c84a89eb1cc788b280050b"
 
-  url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
-      verified: "mirror.ctan.org/systems/mac/mactex/"
+  url "https://mirrors.aliyun.com/CTAN/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
+      verified: "mirrors.aliyun.com/CTAN/systems/mac/mactex/"
   name "MacTeX"
   desc "Full TeX Live distribution without GUI applications"
   homepage "https://www.tug.org/mactex/"

@@ -2,7 +2,7 @@ cask "devcleaner" do
   version "2.4.0-447"
   sha256 "296046d58b6a355edac10ddba946b495e09c887652aea05245ef59daf72933af"
 
-  url "https://github.com/vashpan/xcode-dev-cleaner/releases/download/#{version.sub(/-\d+/, "")}/DevCleaner-#{version}.zip"
+  url "https://ghproxy.com/https://github.com/vashpan/xcode-dev-cleaner/releases/download/#{version.sub(/-\d+/, "")}/DevCleaner-#{version}.zip"
   name "DevCleaner"
   desc "Reclaim tens of gigabytes of your storage used for various Xcode caches"
   homepage "https://github.com/vashpan/xcode-dev-cleaner"

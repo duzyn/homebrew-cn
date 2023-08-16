@@ -2,7 +2,7 @@ cask "x-swiftformat" do
   version "1.3"
   sha256 "2e7d203e862a5ebb78b934bbf20949cfdceedab9db200edde04f328eefff2d6e"
 
-  url "https://github.com/ruiaureliano/X-SwiftFormat/releases/download/#{version}/x-swiftformat_#{version}.zip"
+  url "https://ghproxy.com/https://github.com/ruiaureliano/X-SwiftFormat/releases/download/#{version}/x-swiftformat_#{version}.zip"
   name "X-SwiftFormat"
   desc "Xcode extension to format Swift code"
   homepage "https://github.com/ruiaureliano/X-SwiftFormat"

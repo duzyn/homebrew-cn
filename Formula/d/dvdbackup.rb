@@ -1,7 +1,7 @@
 class Dvdbackup < Formula
   desc "Rip DVD's from the command-line"
   homepage "https://dvdbackup.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/dvdbackup/dvdbackup/dvdbackup-0.4.2/dvdbackup-0.4.2.tar.gz"
+  url "https://downloads.sourceforge.net/project/dvdbackup/dvdbackup/dvdbackup-0.4.2/dvdbackup-0.4.2.tar.gz?use_mirror=nchc"
   sha256 "0a37c31cc6f2d3c146ec57064bda8a06cf5f2ec90455366cb250506bab964550"
   revision 3
 
@@ -22,7 +22,7 @@ class Dvdbackup < Formula
   # Fix compatibility with libdvdread 6.1.0. See:
   # https://bugs.launchpad.net/dvdbackup/+bug/1869226
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/7d734fd4d41a331b403522249d96587a62fd85d5/dvdbackup/compat.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/7d734fd4d41a331b403522249d96587a62fd85d5/dvdbackup/compat.patch"
     sha256 "12d54bc08b0eb2acf6429c256373d1d98ba3f6f14821c2bebbbb571eb7b9d82b"
   end
 

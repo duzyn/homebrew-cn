@@ -1,7 +1,7 @@
 class Libbpf < Formula
   desc "Berkeley Packet Filter library"
   homepage "https://github.com/libbpf/libbpf"
-  url "https://github.com/libbpf/libbpf/archive/refs/tags/v1.2.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/libbpf/libbpf/archive/refs/tags/v1.2.2.tar.gz"
   sha256 "32b0c41eabfbbe8e0c8aea784d7495387ff9171b5a338480a8fbaceb9da8d5e5"
   license "BSD-2-Clause"
 

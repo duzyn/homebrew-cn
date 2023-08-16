@@ -1,7 +1,7 @@
 class Oniguruma < Formula
   desc "Regular expressions library"
   homepage "https://github.com/kkos/oniguruma/"
-  url "https://github.com/kkos/oniguruma/releases/download/v6.9.8/onig-6.9.8.tar.gz"
+  url "https://ghproxy.com/https://github.com/kkos/oniguruma/releases/download/v6.9.8/onig-6.9.8.tar.gz"
   sha256 "28cd62c1464623c7910565fb1ccaaa0104b2fe8b12bcd646e81f73b47535213e"
   license "BSD-2-Clause"
   head "https://github.com/kkos/oniguruma.git", branch: "master"

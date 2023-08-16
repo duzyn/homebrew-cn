@@ -38,7 +38,7 @@ class Gmic < Formula
   # Use .dylibs instead of .so on macOS
   patch do
     on_macos do
-      url "https://raw.githubusercontent.com/macports/macports-ports/a859c5929c929548f5156f5cab13a2f341982e72/science/gmic/files/patch-src-Makefile.diff"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/a859c5929c929548f5156f5cab13a2f341982e72/science/gmic/files/patch-src-Makefile.diff"
       sha256 "5b4914a05135f6c137bb5980d0c3bf8d94405f03d4e12b6ee38bd0e0e004a358"
       directory "src"
     end

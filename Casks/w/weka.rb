@@ -5,7 +5,7 @@ cask "weka" do
   sha256 arm:   "85de453da3bb41c952da48eee0bf574d1da7ee4fa6fd3a8e2d7a81a89d55d3d7",
          intel: "282d5ff81960d1ae43ee6e4e8eaa7ae8c341666a214e859728e15214af80383b"
 
-  url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-#{arch}.dmg",
+  url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-#{arch}.dmg?use_mirror=nchc",
       verified: "sourceforge.net/weka/"
   name "Weka"
   desc "Collection of machine learning algorithms for data mining tasks"

@@ -1,7 +1,7 @@
 class Rinetd < Formula
   desc "Internet TCP redirection server"
   homepage "https://github.com/samhocevar/rinetd"
-  url "https://github.com/samhocevar/rinetd/releases/download/v0.73/rinetd-0.73.tar.bz2"
+  url "https://ghproxy.com/https://github.com/samhocevar/rinetd/releases/download/v0.73/rinetd-0.73.tar.bz2"
   sha256 "39180d31b15f059b2e876496286356e40183d1567c2e2aec41aacad8721ecc44"
   license "GPL-2.0-or-later"
   revision 1

@@ -1,7 +1,7 @@
 class Nerdfix < Formula
   desc "Find/fix obsolete Nerd Font icons"
   homepage "https://github.com/loichyan/nerdfix"
-  url "https://github.com/loichyan/nerdfix/archive/refs/tags/v0.3.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/loichyan/nerdfix/archive/refs/tags/v0.3.1.tar.gz"
   sha256 "c1e4264db7de66666c5ddd73b90d7aa32fe5e7afd8a2eb8fe781288e84f93f27"
   license any_of: ["MIT", "Apache-2.0"]
 

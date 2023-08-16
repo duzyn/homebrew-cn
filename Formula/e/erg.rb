@@ -1,7 +1,7 @@
 class Erg < Formula
   desc "Statically typed language that can deeply improve the Python ecosystem"
   homepage "https://github.com/erg-lang/erg"
-  url "https://github.com/erg-lang/erg/archive/refs/tags/v0.6.18.tar.gz"
+  url "https://ghproxy.com/https://github.com/erg-lang/erg/archive/refs/tags/v0.6.18.tar.gz"
   sha256 "6ace0da09782f8a200bb35ab3280edd988abdb0f05ef62f335a3863074ad2a8b"
   license any_of: ["Apache-2.0", "MIT"]
 

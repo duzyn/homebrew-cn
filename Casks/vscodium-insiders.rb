@@ -5,7 +5,7 @@ cask "vscodium-insiders" do
   sha256 arm:   "cbd94580f44ea9aafbb617b7fbdaf381c8ced951ac567ec93183542d6544b3ed",
          intel: "6ae13f456d677f7b3ca0f4b8f0b82deaaed002761d379edf27d5b6a839e2581e"
 
-  url "https://ghproxy.com/https://github.com/VSCodium/vscodium-insiders/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg",
+  url "https://github.com/VSCodium/vscodium-insiders/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg",
       verified: "github.com/VSCodium/vscodium-insiders/"
   name "VSCodium"
   name "VSCodium Insiders"

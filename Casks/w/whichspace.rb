@@ -2,7 +2,7 @@ cask "whichspace" do
   version "0.3.2"
   sha256 "8a59e12862af491de4c42413c839426c28dcb2f29138bfa2f45529c079119ce8"
 
-  url "https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
+  url "https://ghproxy.com/https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
   name "WhichSpace"
   desc "Active space menu bar icon"
   homepage "https://github.com/gechr/WhichSpace"

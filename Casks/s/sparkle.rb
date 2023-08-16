@@ -2,7 +2,7 @@ cask "sparkle" do
   version "2.4.2"
   sha256 "64ca2b157eb94dfad6580ccb98192b48cd008076b8e72ee6a02d753595f0c731"
 
-  url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.xz",
+  url "https://ghproxy.com/https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.xz",
       verified: "github.com/sparkle-project/Sparkle/"
   name "Sparkle"
   desc "Software update framework for Cocoa developers"

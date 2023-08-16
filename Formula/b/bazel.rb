@@ -1,7 +1,7 @@
 class Bazel < Formula
   desc "Google's own build tool"
   homepage "https://bazel.build/"
-  url "https://github.com/bazelbuild/bazel/releases/download/6.3.2/bazel-6.3.2-dist.zip"
+  url "https://ghproxy.com/https://github.com/bazelbuild/bazel/releases/download/6.3.2/bazel-6.3.2-dist.zip"
   sha256 "8cd7feac58193be2bcba451ba6688a46824d37ca6359ff58e0d44eb98f042948"
   license "Apache-2.0"
 

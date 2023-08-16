@@ -1,7 +1,7 @@
 class LeakcanaryShark < Formula
   desc "CLI Java memory leak explorer for LeakCanary"
   homepage "https://square.github.io/leakcanary/shark/"
-  url "https://github.com/square/leakcanary/releases/download/v2.12/shark-cli-2.12.zip"
+  url "https://ghproxy.com/https://github.com/square/leakcanary/releases/download/v2.12/shark-cli-2.12.zip"
   sha256 "2a9f176ab0e02834f46f0415f2e9626865e0ea0498398ae943075a7875f26bf6"
   license "Apache-2.0"
 
@@ -12,7 +12,7 @@ class LeakcanaryShark < Formula
   depends_on "openjdk"
 
   resource "sample_hprof" do
-    url "https://github.com/square/leakcanary/raw/v2.6/shark-android/src/test/resources/leak_asynctask_m.hprof"
+    url "https://ghproxy.com/https://github.com/square/leakcanary/raw/v2.6/shark-android/src/test/resources/leak_asynctask_m.hprof"
     sha256 "7575158108b701e0f7233bc208decc243e173c75357bf0be9231a1dcb5b212ab"
   end
 

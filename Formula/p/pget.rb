@@ -1,7 +1,7 @@
 class Pget < Formula
   desc "File download client"
   homepage "https://github.com/Code-Hex/pget"
-  url "https://github.com/Code-Hex/pget/archive/refs/tags/v0.1.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/Code-Hex/pget/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "34d674dc48144c84de72d525e67d96500243cc1d1c4c0433794495c0846c193f"
   license "MIT"
   head "https://github.com/Code-Hex/pget.git", branch: "master"
@@ -25,7 +25,7 @@ class Pget < Formula
   end
 
   test do
-    file = "https://raw.githubusercontent.com/Homebrew/homebrew-core/master/README.md"
+    file = "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/homebrew-core/master/README.md"
     system bin/"pget", "-p", "4", file
     assert_predicate testpath/"README.md", :exist?
 

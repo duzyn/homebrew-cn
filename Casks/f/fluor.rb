@@ -17,7 +17,7 @@ cask "fluor" do
     end
   end
 
-  url "https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
   name "Fluor"
   desc "Change the behavior of the fn keys depending on the active application"
   homepage "https://github.com/Pyroh/Fluor"

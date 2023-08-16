@@ -2,8 +2,8 @@ cask "kdenlive" do
   version "23.04.3"
   sha256 "aa9947dd41529c4e541e5ed429adca5dfff45d9fa359a5418d44db0a8a92510d"
 
-  url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}.dmg",
-      verified: "cdn.download.kde.org/stable/kdenlive/"
+  url "https://cdn.mirrors.ustc.edu.cn/kde/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}.dmg",
+      verified: "cdn.mirrors.ustc.edu.cn/kde/stable/kdenlive/"
   name "Kdenlive"
   desc "Free and Open Source Video Editor"
   homepage "https://kdenlive.org/"

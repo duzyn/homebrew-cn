@@ -5,7 +5,7 @@ class Libeatmydata < Formula
   head "https://github.com/stewartsmith/libeatmydata.git", branch: "master"
 
   stable do
-    url "https://github.com/stewartsmith/libeatmydata/releases/download/v131/libeatmydata-131.tar.gz"
+    url "https://ghproxy.com/https://github.com/stewartsmith/libeatmydata/releases/download/v131/libeatmydata-131.tar.gz"
     sha256 "cf18a8c52138a38541be3478af446c06048108729d7e18476492d62d54baabc4"
 
     # Fix for https://github.com/Homebrew/homebrew-core/issues/136873.

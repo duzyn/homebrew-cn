@@ -5,7 +5,7 @@ cask "keepassxc" do
   sha256 arm:   "432350131e9b0e47cba6d2f9d3233224a06af941ff5e7a7345c25e6325b21d2f",
          intel: "ca4961311340df48f4c7413c63b8757c2219b94450e9779a6e3fabfe1ee4b06f"
 
-  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-#{arch}.dmg",
       verified: "github.com/keepassxreboot/keepassxc/"
   name "KeePassXC"
   desc "Password manager app"

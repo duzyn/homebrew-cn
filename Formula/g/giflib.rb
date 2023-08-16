@@ -1,7 +1,7 @@
 class Giflib < Formula
   desc "Library and utilities for processing GIFs"
   homepage "https://giflib.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/giflib/giflib-5.2.1.tar.gz"
+  url "https://downloads.sourceforge.net/project/giflib/giflib-5.2.1.tar.gz?use_mirror=nchc"
   sha256 "31da5562f44c5f15d63340a09a4fd62b48c45620cd302f77a6d9acf0077879bd"
 
   livecheck do

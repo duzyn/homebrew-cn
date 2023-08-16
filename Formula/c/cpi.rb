@@ -1,7 +1,7 @@
 class Cpi < Formula
   desc "Tiny c++ interpreter"
   homepage "https://treefrogframework.github.io/cpi/"
-  url "https://github.com/treefrogframework/cpi/archive/refs/tags/v2.0.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/treefrogframework/cpi/archive/refs/tags/v2.0.4.tar.gz"
   sha256 "55e98b851976d258c1211d3c04d99ce2ec104580cc78f5d30064accef6e3d952"
   license "MIT"
   head "https://github.com/treefrogframework/cpi.git", branch: "master"

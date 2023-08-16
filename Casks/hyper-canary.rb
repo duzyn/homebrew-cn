@@ -5,7 +5,7 @@ cask "hyper-canary" do
   sha256 arm:   "b23c51a1a2c6a0c1940965f959d30a6a185111954204132402aa29038d30ad98",
          intel: "4f0182611a650e83a8b5084e6f64e03c62c600641d5adb5af6f3253a796415d8"
 
-  url "https://ghproxy.com/https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-#{arch}.zip",
+  url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-#{arch}.zip",
       verified: "github.com/vercel/hyper/"
   name "Hyper"
   desc "Terminal built on web technologies"

@@ -1,7 +1,7 @@
 class Dfc < Formula
   desc "Display graphs and colors of file system space/usage"
   homepage "https://github.com/Rolinh/dfc"
-  url "https://github.com/Rolinh/dfc/releases/download/v3.1.1/dfc-3.1.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/Rolinh/dfc/releases/download/v3.1.1/dfc-3.1.1.tar.gz"
   sha256 "962466e77407dd5be715a41ffc50a54fce758a78831546f03a6bb282e8692e54"
   license "BSD-3-Clause"
   revision 1

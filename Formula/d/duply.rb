@@ -3,7 +3,7 @@ class Duply < Formula
   # Canonical domain: duply.net
   # Historical homepage: https://web.archive.org/web/20131126005707/ftplicity.sourceforge.net
   homepage "https://sourceforge.net/projects/ftplicity/"
-  url "https://downloads.sourceforge.net/project/ftplicity/duply%20%28simple%20duplicity%29/2.4.x/duply_2.4.3.tgz"
+  url "https://downloads.sourceforge.net/project/ftplicity/duply%20%28simple%20duplicity%29/2.4.x/duply_2.4.3.tgz?use_mirror=nchc"
   sha256 "867388531ddda2a5cdb0a2af77bde03261491c03a406b60fe26b96b4d92627a3"
   license "GPL-2.0-only"
 

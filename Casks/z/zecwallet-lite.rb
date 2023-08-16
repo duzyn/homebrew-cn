@@ -2,7 +2,7 @@ cask "zecwallet-lite" do
   version "1.8.8"
   sha256 "3ec1484a28a851bc4dfc133cfd097c1f74939a59cde34f21039f6020ffa352aa"
 
-  url "https://github.com/adityapk00/zecwallet-lite/releases/download/v#{version}/Zecwallet.Lite-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/adityapk00/zecwallet-lite/releases/download/v#{version}/Zecwallet.Lite-#{version}.dmg",
       verified: "github.com/adityapk00/zecwallet-lite/"
   name "Zecwallet Lite"
   desc "Zcash Light Wallet"

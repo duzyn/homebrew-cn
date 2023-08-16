@@ -1,7 +1,7 @@
 class Bvi < Formula
   desc "Vi-like binary file (hex) editor"
   homepage "https://bvi.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/bvi/bvi/1.4.2/bvi-1.4.2.src.tar.gz"
+  url "https://downloads.sourceforge.net/project/bvi/bvi/1.4.2/bvi-1.4.2.src.tar.gz?use_mirror=nchc"
   sha256 "4bba16c2b496963a9b939336c0abcc8d488664492080ae43a86da18cf4ce94f2"
   license "GPL-3.0-or-later"
 

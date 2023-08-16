@@ -3,7 +3,7 @@ class Httpie < Formula
 
   desc "User-friendly cURL replacement (command-line HTTP client)"
   homepage "https://httpie.io/"
-  url "https://github.com/httpie/cli/archive/refs/tags/3.2.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/httpie/cli/archive/refs/tags/3.2.2.tar.gz"
   sha256 "01b4407202fac3cc68c73a8ff1f4a81a759d9575fabfad855772c29365fe18e6"
   license "BSD-3-Clause"
   revision 1
@@ -99,7 +99,7 @@ class Httpie < Formula
     assert_match version.to_s, shell_output("#{bin}/https --version")
     assert_match version.to_s, shell_output("#{bin}/http --version")
 
-    raw_url = "https://raw.githubusercontent.com/Homebrew/homebrew-core/HEAD/Formula/httpie.rb"
+    raw_url = "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/homebrew-core/HEAD/Formula/httpie.rb"
     assert_match "PYTHONPATH", shell_output("#{bin}/http --ignore-stdin #{raw_url}")
   end
 end

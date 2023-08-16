@@ -5,7 +5,7 @@ cask "sage" do
   sha256 arm:   "5c52a885e9403c25763dd35a8f4a2045a94896e1dedd7d7cfca6a36027da171e",
          intel: "c07b2c2a3a534264f6df9ae10b0b781db389dc44e0191a58d23304959f61294d"
 
-  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
   name "Sage"
   desc "Mathematics software system"

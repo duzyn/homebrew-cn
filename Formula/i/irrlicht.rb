@@ -1,7 +1,7 @@
 class Irrlicht < Formula
   desc "Realtime 3D engine"
   homepage "https://irrlicht.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/irrlicht/Irrlicht%20SDK/1.8/1.8.5/irrlicht-1.8.5.zip"
+  url "https://downloads.sourceforge.net/project/irrlicht/Irrlicht%20SDK/1.8/1.8.5/irrlicht-1.8.5.zip?use_mirror=nchc"
   sha256 "effb7beed3985099ce2315a959c639b4973aac8210f61e354475a84105944f3d"
   # Irrlicht is available under alternative license terms. See
   # https://metadata.ftp-master.debian.org/changelogs//main/i/irrlicht/irrlicht_1.8.4+dfsg1-1.1_copyright
@@ -41,13 +41,13 @@ class Irrlicht < Formula
 
   # Use libraries from Homebrew or macOS
   patch do
-    url "https://github.com/Homebrew/formula-patches/raw/69ad57d16cdd4ecdf2dfa50e9ce751b082d78cf9/irrlicht/use-system-libs.patch"
+    url "https://ghproxy.com/https://github.com/Homebrew/formula-patches/raw/69ad57d16cdd4ecdf2dfa50e9ce751b082d78cf9/irrlicht/use-system-libs.patch"
     sha256 "70d2534506e0e34279c3e9d8eff4b72052cb2e78a63d13ce0bc60999cbdb411b"
   end
 
   # Update Xcode project to use libraries from Homebrew and macOS
   patch do
-    url "https://github.com/Homebrew/formula-patches/raw/69ad57d16cdd4ecdf2dfa50e9ce751b082d78cf9/irrlicht/xcode.patch"
+    url "https://ghproxy.com/https://github.com/Homebrew/formula-patches/raw/69ad57d16cdd4ecdf2dfa50e9ce751b082d78cf9/irrlicht/xcode.patch"
     sha256 "2cfcc34236469fcdb24b6a77489272dfa0a159c98f63513781245f3ef5c941c0"
   end
 

@@ -12,7 +12,7 @@ cask "copyq" do
     sha256 "4c06394d561286eedd618189dc82d9f14ecfe8c5e34f55e2b297b33cef355e29"
   end
 
-  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",
+  url "https://ghproxy.com/https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",
       verified: "github.com/hluk/CopyQ/"
   name "CopyQ"
   desc "Clipboard manager with advanced features"

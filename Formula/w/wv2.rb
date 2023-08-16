@@ -1,7 +1,7 @@
 class Wv2 < Formula
   desc "Programs for accessing Microsoft Word documents"
   homepage "https://wvware.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/wvware/wv2-0.4.2.tar.bz2"
+  url "https://downloads.sourceforge.net/project/wvware/wv2-0.4.2.tar.bz2?use_mirror=nchc"
   sha256 "9f2b6d3910cb0e29c9ff432f935a594ceec0101bca46ba2fc251aff251ee38dc"
   license all_of: [
     "LGPL-2.0-only",

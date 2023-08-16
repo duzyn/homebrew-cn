@@ -1,7 +1,7 @@
 class Pixz < Formula
   desc "Parallel, indexed, xz compressor"
   homepage "https://github.com/vasi/pixz"
-  url "https://github.com/vasi/pixz/releases/download/v1.0.7/pixz-1.0.7.tar.gz"
+  url "https://ghproxy.com/https://github.com/vasi/pixz/releases/download/v1.0.7/pixz-1.0.7.tar.gz"
   sha256 "d1b6de1c0399e54cbd18321b8091bbffef6d209ec136d4466f398689f62c3b5f"
   license "BSD-2-Clause"
   head "https://github.com/vasi/pixz.git", branch: "master"

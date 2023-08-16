@@ -1,7 +1,7 @@
 class Noweb < Formula
   desc "WEB-like literate-programming tool"
   homepage "https://www.cs.tufts.edu/~nr/noweb/"
-  url "https://github.com/nrnrnr/noweb/archive/refs/tags/v2_13.tar.gz"
+  url "https://ghproxy.com/https://github.com/nrnrnr/noweb/archive/refs/tags/v2_13.tar.gz"
   sha256 "7b32657128c8e2cb1114cca55023c58fa46789dcffcbe3dabde2c8a82fe57802"
   license "BSD-2-Clause"
 

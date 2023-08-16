@@ -1,7 +1,7 @@
 class Alpscore < Formula
   desc "Applications and libraries for physics simulations"
   homepage "https://alpscore.org"
-  url "https://github.com/ALPSCore/ALPSCore/archive/v2.2.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/ALPSCore/ALPSCore/archive/v2.2.0.tar.gz"
   sha256 "f7bc9c8f806fb0ad4d38cb6604a10d56ab159ca63aed6530c1f84ecaf40adc61"
   license "GPL-2.0-only"
   revision 3

@@ -1,7 +1,7 @@
 class Rslint < Formula
   desc "Extremely fast JavaScript and TypeScript linter"
   homepage "https://rslint.org/"
-  url "https://github.com/rslint/rslint/archive/refs/tags/v0.3.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/rslint/rslint/archive/refs/tags/v0.3.2.tar.gz"
   sha256 "1f3388c0bedb5bfb4c83f49ab773de91652144cb08327038272ad715cb161a83"
   license "MIT"
   head "https://github.com/rslint/rslint.git", branch: "master"

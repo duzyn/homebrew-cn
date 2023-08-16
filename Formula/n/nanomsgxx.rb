@@ -1,7 +1,7 @@
 class Nanomsgxx < Formula
   desc "Nanomsg binding for C++11"
   homepage "https://achille-roussel.github.io/nanomsgxx/doc/nanomsgxx.7.html"
-  url "https://github.com/achille-roussel/nanomsgxx/archive/0.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/achille-roussel/nanomsgxx/archive/0.2.tar.gz"
   sha256 "116ad531b512d60ea75ef21f55fd9d31c00b172775548958e5e7d4edaeeedbaa"
   license "MIT"
   revision 3
@@ -29,7 +29,7 @@ class Nanomsgxx < Formula
   #
   # Remove this in next release
   resource "waf" do
-    url "https://raw.githubusercontent.com/achille-roussel/nanomsgxx/4426567809a79352f65bbd2d69488df237442d33/waf"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/achille-roussel/nanomsgxx/4426567809a79352f65bbd2d69488df237442d33/waf"
     sha256 "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1"
   end
 

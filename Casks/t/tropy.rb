@@ -5,7 +5,7 @@ cask "tropy" do
   sha256 arm:   "58c0d3cce8732c62b547198d3074054ee5ce4c54382ebdbeb371bb3c8fba0358",
          intel: "d5b6abff582d19b0bdd55ed9a2678697926d139f13b981174ebe1a1fe7f076bf"
 
-  url "https://github.com/tropy/tropy/releases/download/v#{version}/tropy-#{version}#{arch}.dmg",
+  url "https://ghproxy.com/https://github.com/tropy/tropy/releases/download/v#{version}/tropy-#{version}#{arch}.dmg",
       verified: "github.com/tropy/tropy/"
   name "Tropy"
   desc "Research photo management"

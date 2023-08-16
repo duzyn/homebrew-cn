@@ -1,7 +1,7 @@
 class Rp < Formula
   desc "Tool to find ROP sequences in PE/Elf/Mach-O x86/x64 binaries"
   homepage "https://github.com/0vercl0k/rp"
-  url "https://github.com/0vercl0k/rp/archive/refs/tags/v2.1.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/0vercl0k/rp/archive/refs/tags/v2.1.2.tar.gz"
   sha256 "7d0b523e123315c1a4e66ab6386a733ce3200d0cc2c489f04edbe398a016a160"
   license "MIT"
   head "https://github.com/0vercl0k/rp.git", branch: "master"

@@ -12,7 +12,7 @@ cask "silentknight" do
     sha256 "fc095e03f05dd4218caac12f343532f41dbe9bfead3c1338ea0e585da1e51863"
 
     livecheck do
-      url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
       regex(%r{(\d+)/(\d+)/silentknight([^1]\d+)\.zip}i)
       strategy :page_match do |page, regex|
         page.scan(regex).map do |match|

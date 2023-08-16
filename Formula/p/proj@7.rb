@@ -1,7 +1,7 @@
 class ProjAT7 < Formula
   desc "Cartographic Projections Library"
   homepage "https://proj.org/"
-  url "https://github.com/OSGeo/PROJ/releases/download/7.2.1/proj-7.2.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/OSGeo/PROJ/releases/download/7.2.1/proj-7.2.1.tar.gz"
   sha256 "b384f42e5fb9c6d01fe5fa4d31da2e91329668863a684f97be5d4760dbbf0a14"
   license "MIT"
   revision 1

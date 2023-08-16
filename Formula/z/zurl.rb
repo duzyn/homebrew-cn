@@ -3,7 +3,7 @@ class Zurl < Formula
 
   desc "HTTP and WebSocket client worker with ZeroMQ interface"
   homepage "https://github.com/fanout/zurl"
-  url "https://github.com/fanout/zurl/releases/download/v1.11.1/zurl-1.11.1.tar.bz2"
+  url "https://ghproxy.com/https://github.com/fanout/zurl/releases/download/v1.11.1/zurl-1.11.1.tar.bz2"
   sha256 "39948523ffbd0167bc8ba7d433b38577156e970fe9f3baa98f2aed269241d70c"
   license "GPL-3.0-or-later"
   revision 1

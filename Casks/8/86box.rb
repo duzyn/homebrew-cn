@@ -2,7 +2,7 @@ cask "86box" do
   version "3.11,4311"
   sha256 "8e9d434c0fb460a2e6ca0b40bdbbfc5191d8827764757d19bf6a1560a58cdad7"
 
-  url "https://github.com/86Box/86Box/releases/download/v#{version.csv.first}/86Box-macOS-x86_64+arm64-b#{version.csv.second}.zip",
+  url "https://ghproxy.com/https://github.com/86Box/86Box/releases/download/v#{version.csv.first}/86Box-macOS-x86_64+arm64-b#{version.csv.second}.zip",
       verified: "github.com/86Box/86Box/"
   name "86Box"
   desc "Emulator of x86-based machines based on PCem"

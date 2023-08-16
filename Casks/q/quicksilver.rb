@@ -2,7 +2,7 @@ cask "quicksilver" do
   version "2.4.0"
   sha256 "37759ac24466688c3c089931dae32d71969ffc985ae50421f0e68657f23ce320"
 
-  url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg",
       verified: "github.com/quicksilver/Quicksilver/"
   name "Quicksilver"
   desc "Productivity application"

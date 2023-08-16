@@ -1,7 +1,7 @@
 class Pjproject < Formula
   desc "C library for multimedia protocols such as SIP, SDP, RTP and more"
   homepage "https://www.pjsip.org/"
-  url "https://github.com/pjsip/pjproject/archive/refs/tags/2.13.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/pjsip/pjproject/archive/refs/tags/2.13.1.tar.gz"
   sha256 "32a5ab5bfbb9752cb6a46627e4c410e61939c8dbbd833ac858473cfbd9fb9d7d"
   license "GPL-2.0-or-later"
   head "https://github.com/pjsip/pjproject.git", branch: "master"

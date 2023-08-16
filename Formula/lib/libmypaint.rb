@@ -1,7 +1,7 @@
 class Libmypaint < Formula
   desc "MyPaint brush engine library"
   homepage "https://github.com/mypaint/libmypaint/wiki"
-  url "https://github.com/mypaint/libmypaint/releases/download/v1.6.1/libmypaint-1.6.1.tar.xz"
+  url "https://ghproxy.com/https://github.com/mypaint/libmypaint/releases/download/v1.6.1/libmypaint-1.6.1.tar.xz"
   sha256 "741754f293f6b7668f941506da07cd7725629a793108bb31633fb6c3eae5315f"
   license "ISC"
   revision 1

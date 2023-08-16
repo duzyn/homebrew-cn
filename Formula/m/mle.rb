@@ -1,7 +1,7 @@
 class Mle < Formula
   desc "Flexible terminal-based text editor"
   homepage "https://github.com/adsr/mle"
-  url "https://github.com/adsr/mle/archive/refs/tags/v1.7.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/adsr/mle/archive/refs/tags/v1.7.2.tar.gz"
   sha256 "5275fcfc58d3d4890d074077d94497db488b2648287b3e48e67b00ea517b02ba"
   license "Apache-2.0"
 

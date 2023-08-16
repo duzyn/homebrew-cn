@@ -1,7 +1,7 @@
 class Djvulibre < Formula
   desc "DjVu viewer"
   homepage "https://djvu.sourceforge.net/"
-  url "https://downloads.sourceforge.net/djvu/djvulibre-3.5.28.tar.gz"
+  url "https://downloads.sourceforge.net/djvu/djvulibre-3.5.28.tar.gz?use_mirror=nchc"
   sha256 "fcd009ea7654fde5a83600eb80757bd3a76998e47d13c66b54c8db849f8f2edc"
   revision 2
 

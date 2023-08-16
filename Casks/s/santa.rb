@@ -2,7 +2,7 @@ cask "santa" do
   version "2023.6"
   sha256 "32af54d5313d69c04f96f03b0992d097b178a863007097f51ac719c3371fb997"
 
-  url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
+  url "https://ghproxy.com/https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
   desc "Binary authorization system"
   homepage "https://github.com/google/santa"

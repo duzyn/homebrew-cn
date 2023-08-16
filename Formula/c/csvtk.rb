@@ -1,7 +1,7 @@
 class Csvtk < Formula
   desc "Cross-platform, efficient and practical CSV/TSV toolkit in Golang"
   homepage "https://bioinf.shenwei.me/csvtk"
-  url "https://github.com/shenwei356/csvtk/archive/refs/tags/v0.27.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/shenwei356/csvtk/archive/refs/tags/v0.27.0.tar.gz"
   sha256 "9679315c8937f37a3d4ff7230df2502feb64fa6a8b937a89ae49b276411f3f9e"
   license "MIT"
   head "https://github.com/shenwei356/csvtk.git", branch: "master"
@@ -19,7 +19,7 @@ class Csvtk < Formula
   depends_on "go" => :build
 
   resource "homebrew-testdata" do
-    url "https://raw.githubusercontent.com/shenwei356/csvtk/e7b72224a70b7d40a8a80482be6405cb7121fb12/testdata/1.csv"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/shenwei356/csvtk/e7b72224a70b7d40a8a80482be6405cb7121fb12/testdata/1.csv"
     sha256 "3270b0b14178ef5a75be3f2e3fdcf93152e3949f9f8abb3382cb00755b62505b"
   end
 

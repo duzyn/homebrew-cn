@@ -1,7 +1,7 @@
 class Podsync < Formula
   desc "Turn YouTube or Vimeo channels, users, or playlists into podcast feeds"
   homepage "https://github.com/mxpv/podsync"
-  url "https://github.com/mxpv/podsync/archive/refs/tags/v2.6.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/mxpv/podsync/archive/refs/tags/v2.6.1.tar.gz"
   sha256 "e9d1653c4b8424b8f02dc1812c2848cfc930f400e996979464228cad0e16ec9b"
   license "MIT"
   head "https://github.com/mxpv/podsync.git", branch: "main"

@@ -1,7 +1,7 @@
 class Samurai < Formula
   desc "Ninja-compatible build tool written in C"
   homepage "https://github.com/michaelforney/samurai"
-  url "https://github.com/michaelforney/samurai/releases/download/1.2/samurai-1.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/michaelforney/samurai/releases/download/1.2/samurai-1.2.tar.gz"
   sha256 "3b8cf51548dfc49b7efe035e191ff5e1963ebc4fe8f6064a5eefc5343eaf78a5"
   license "Apache-2.0"
   head "https://github.com/michaelforney/samurai.git", branch: "master"

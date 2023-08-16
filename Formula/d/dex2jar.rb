@@ -1,7 +1,7 @@
 class Dex2jar < Formula
   desc "Tools to work with Android .dex and Java .class files"
   homepage "https://github.com/pxb1988/dex2jar"
-  url "https://github.com/pxb1988/dex2jar/releases/download/v2.1/dex2jar-2.1.zip"
+  url "https://ghproxy.com/https://github.com/pxb1988/dex2jar/releases/download/v2.1/dex2jar-2.1.zip"
   sha256 "7a9bdf843d43de4d1e94ec2e7b6f55825017b0c4a7ee39ff82660e2493a46f08"
   license "Apache-2.0"
 

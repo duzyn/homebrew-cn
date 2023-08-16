@@ -5,7 +5,7 @@ cask "vieb" do
   sha256 arm:   "bf9cf85ad9a0c787f2e42cad8399ee5bfe2ed47e668b75e27eedae41511776d9",
          intel: "33794c87bda8dc55ce7d9764dac1f87bbb6951d8f465297a224992f8f61535e9"
 
-  url "https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
+  url "https://ghproxy.com/https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
       verified: "github.com/Jelmerro/Vieb/"
   name "Vieb"
   desc "Vim Inspired Electron Browser"

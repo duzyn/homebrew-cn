@@ -13,7 +13,7 @@ class Ecl < Formula
     # Issue ref: https://gitlab.com/embeddable-common-lisp/ecl/-/issues/667
     # Remove in the next release along with the stable block
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/7cb53af69947e9e452d43f334577adb74011fe9e/ecl/sbcl.patch"
+      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/7cb53af69947e9e452d43f334577adb74011fe9e/ecl/sbcl.patch"
       sha256 "04fbdabd084d45144b931c49ad656f8d552b5e99857ed6de003daee8e6e3bd48"
     end
   end

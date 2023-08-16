@@ -1,7 +1,7 @@
 class Movgrab < Formula
   desc "Downloader for youtube, dailymotion, and other video websites"
   homepage "https://sites.google.com/site/columscode/home/movgrab"
-  url "https://github.com/ColumPaget/Movgrab/archive/3.1.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/ColumPaget/Movgrab/archive/3.1.2.tar.gz"
   sha256 "30be6057ddbd9ac32f6e3d5456145b09526cc6bd5e3f3fb3999cc05283457529"
   license "GPL-3.0-or-later"
   revision 5
@@ -27,7 +27,7 @@ class Movgrab < Formula
   # https://github.com/ColumPaget/libUseful/issues/1
   # https://github.com/ColumPaget/libUseful/pull/2
   patch do
-    url "https://github.com/Homebrew/formula-patches/raw/936597e74d22ab8cf421bcc9c3a936cdae0f0d96/movgrab/libUseful_xattr_backport.diff"
+    url "https://ghproxy.com/https://github.com/Homebrew/formula-patches/raw/936597e74d22ab8cf421bcc9c3a936cdae0f0d96/movgrab/libUseful_xattr_backport.diff"
     sha256 "d77c6661386f1a6d361c32f375b05bfdb4ac42804076922a4c0748da891367c2"
   end
 

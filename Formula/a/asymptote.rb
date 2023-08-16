@@ -2,7 +2,7 @@ class Asymptote < Formula
   desc "Powerful descriptive vector graphics language"
   homepage "https://asymptote.sourceforge.io"
   # Keep version in sync with manual below
-  url "https://downloads.sourceforge.net/project/asymptote/2.86/asymptote-2.86.src.tgz"
+  url "https://downloads.sourceforge.net/project/asymptote/2.86/asymptote-2.86.src.tgz?use_mirror=nchc"
   sha256 "c4ebad1fc3c7b3ce52d89f5fd7e731830d2e6147de7e4c04f8f5cd36cff3c91f"
   license "LGPL-3.0-only"
 
@@ -36,7 +36,7 @@ class Asymptote < Formula
   end
 
   resource "manual" do
-    url "https://downloads.sourceforge.net/project/asymptote/2.86/asymptote.pdf"
+    url "https://downloads.sourceforge.net/project/asymptote/2.86/asymptote.pdf?use_mirror=nchc"
     sha256 "ea28952b1f6d827a84526709d23b3d2d3003a11a008ff4713bd714ef5c8d1c56"
   end
 

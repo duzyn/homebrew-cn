@@ -1,7 +1,7 @@
 class Viennacl < Formula
   desc "Linear algebra library for many-core architectures and multi-core CPUs"
   homepage "https://viennacl.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/viennacl/1.7.x/ViennaCL-1.7.1.tar.gz"
+  url "https://downloads.sourceforge.net/project/viennacl/1.7.x/ViennaCL-1.7.1.tar.gz?use_mirror=nchc"
   sha256 "a596b77972ad3d2bab9d4e63200b171cd0e709fb3f0ceabcaf3668c87d3a238b"
   revision 1
   head "https://github.com/viennacl/viennacl-dev.git", branch: "master"

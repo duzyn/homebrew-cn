@@ -1,7 +1,7 @@
 class Gokey < Formula
   desc "Simple vaultless password manager in Go"
   homepage "https://github.com/cloudflare/gokey"
-  url "https://github.com/cloudflare/gokey/archive/refs/tags/v0.1.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/cloudflare/gokey/archive/refs/tags/v0.1.2.tar.gz"
   sha256 "31144a7906682acf25279c5c0958aff2273c24f83da0d9ad27962fbd9c3d7d5b"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/gokey.git", branch: "main"

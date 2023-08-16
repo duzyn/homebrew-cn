@@ -5,7 +5,7 @@ cask "cityofzion-neon" do
   sha256 arm:   "092a86fed9fa98f358012496c243fa1e431ee49faf3df22882522e03d9ee0931",
          intel: "69c2a85f986a8a87c12c0e396bf40b8b330de6b61ac4b5da908a93b8773a0ea1"
 
-  url "https://github.com/CityOfZion/neon-wallet/releases/download/v#{version}/Neon.#{version}.#{arch}.dmg"
+  url "https://ghproxy.com/https://github.com/CityOfZion/neon-wallet/releases/download/v#{version}/Neon.#{version}.#{arch}.dmg"
   name "Neon Wallet"
   desc "Light wallet for the NEO blockchain"
   homepage "https://github.com/CityOfZion/neon-wallet"

@@ -1,7 +1,7 @@
 class Xctesthtmlreport < Formula
   desc "Xcode-like HTML report for Unit and UI Tests"
   homepage "https://github.com/XCTestHTMLReport/XCTestHTMLReport"
-  url "https://github.com/XCTestHTMLReport/XCTestHTMLReport/archive/refs/tags/2.3.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/XCTestHTMLReport/XCTestHTMLReport/archive/refs/tags/2.3.4.tar.gz"
   sha256 "85e10b9350de8842efba29dd241968ad5112e34429ec1d5fbfb79b713ba98822"
   license "MIT"
   head "https://github.com/XCTestHTMLReport/XCTestHTMLReport.git", branch: "main"
@@ -20,7 +20,7 @@ class Xctesthtmlreport < Formula
   uses_from_macos "swift"
 
   resource "homebrew-testdata" do
-    url "https://raw.githubusercontent.com/tylervick/XCTestHTMLReport/sanity-xcresult/Tests/XCTestHTMLReportTests/Resources/SanityResults.xcresult.tar.gz"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/tylervick/XCTestHTMLReport/sanity-xcresult/Tests/XCTestHTMLReportTests/Resources/SanityResults.xcresult.tar.gz"
     sha256 "ce574435d6fc4de6e581fa190a8e77a3999f93c4714582226297e11c07d8fb66"
   end
 

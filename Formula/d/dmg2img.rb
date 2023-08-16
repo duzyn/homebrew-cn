@@ -30,7 +30,7 @@ class Dmg2img < Formula
 
   # Patch for OpenSSL 3 compatibility
   patch :p0 do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/b21aeee/dmg2img/openssl-3.diff"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/b21aeee/dmg2img/openssl-3.diff"
     sha256 "bd57e74ecb562197abfeca8f17d0622125a911dd4580472ff53e0f0793f9da1c"
   end
 

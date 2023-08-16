@@ -1,7 +1,7 @@
 class BoreCli < Formula
   desc "Modern, simple TCP tunnel in Rust that exposes local ports to a remote server"
   homepage "https://github.com/ekzhang/bore"
-  url "https://github.com/ekzhang/bore/archive/refs/tags/v0.5.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/ekzhang/bore/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "d084024cfa14b3b1df065fdf760fced511c228ff2441eda7874e3608f7563783"
   license "MIT"
   head "https://github.com/ekzhang/bore.git", branch: "main"

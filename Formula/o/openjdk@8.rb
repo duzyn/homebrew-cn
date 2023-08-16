@@ -1,7 +1,7 @@
 class OpenjdkAT8 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u372-ga.tar.gz"
+  url "https://ghproxy.com/https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u372-ga.tar.gz"
   version "1.8.0+372"
   sha256 "3235a744b51896beb1e8b738412982ebc06e2affb9d50ae3371203d9a46504da"
   license "GPL-2.0-only"

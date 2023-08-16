@@ -1,7 +1,7 @@
 class Spr < Formula
   desc "Submit pull requests for individual, amendable, rebaseable commits to GitHub"
   homepage "https://github.com/getcord/spr"
-  url "https://github.com/getcord/spr/archive/refs/tags/v1.3.4.tar.gz"
+  url "https://ghproxy.com/https://github.com/getcord/spr/archive/refs/tags/v1.3.4.tar.gz"
   sha256 "eada48e089a7edef98a45cfa7ba8b4f31102e72c9b9fba519712b3cfb8663229"
   license "MIT"
 

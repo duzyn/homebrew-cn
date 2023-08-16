@@ -1,7 +1,7 @@
 class Debugbreak < Formula
   desc "Break into the debugger programmatically"
   homepage "https://github.com/scottt/debugbreak"
-  url "https://github.com/scottt/debugbreak/archive/refs/tags/v1.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/scottt/debugbreak/archive/refs/tags/v1.0.tar.gz"
   sha256 "62089680cc1cd0857519e2865b274ed7534bfa7ddfce19d72ffee41d4921ae2f"
   license "BSD-2-Clause"
 

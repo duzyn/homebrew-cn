@@ -3,7 +3,7 @@ class GitBigPicture < Formula
 
   desc "Visualization tool for Git repositories"
   homepage "https://github.com/git-big-picture/git-big-picture"
-  url "https://github.com/git-big-picture/git-big-picture/archive/refs/tags/v1.2.2.tar.gz"
+  url "https://ghproxy.com/https://github.com/git-big-picture/git-big-picture/archive/refs/tags/v1.2.2.tar.gz"
   sha256 "7b2826d72e146c7a53e7a1cc9533c360cd8e0feb870c7d1eadcc189b8bc2c5f6"
   license "GPL-3.0-or-later"
 

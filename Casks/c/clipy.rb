@@ -2,7 +2,7 @@ cask "clipy" do
   version "1.2.1"
   sha256 "dfbb66ce3135fbaa2d64eaeea99a63e63485e322c9746045a1098b1696a1ecd5"
 
-  url "https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/Clipy/Clipy/releases/download/#{version}/Clipy_#{version}.dmg",
       verified: "github.com/Clipy/Clipy/"
   name "Clipy"
   desc "Clipboard extension app"

@@ -5,7 +5,7 @@ cask "lagrange" do
   sha256 arm:   "2dfce696b4061a04b06b6823588441a0c06fe29f63f5203967ec01288e7f017f",
          intel: "caa5f17fa1ad1238c71a40d51a4fd714d1089e4acb232f49682af26952f123d1"
 
-  url "https://github.com/skyjake/lagrange/releases/download/v#{version}/lagrange_v#{version}_macos#{arch}.tbz",
+  url "https://ghproxy.com/https://github.com/skyjake/lagrange/releases/download/v#{version}/lagrange_v#{version}_macos#{arch}.tbz",
       verified: "github.com/skyjake/lagrange/"
   name "Lagrange"
   desc "Desktop GUI client for browsing Geminispace"

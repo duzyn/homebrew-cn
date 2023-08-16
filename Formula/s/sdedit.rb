@@ -1,7 +1,7 @@
 class Sdedit < Formula
   desc "Tool for generating sequence diagrams very quickly"
   homepage "https://sdedit.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/sdedit/sdedit/4.2/sdedit-4.2.1.jar"
+  url "https://downloads.sourceforge.net/project/sdedit/sdedit/4.2/sdedit-4.2.1.jar?use_mirror=nchc"
   sha256 "270af857e6d2823ce0c18dee47e1e78ef7bc90c7e8afeda36114d364e0f4441c"
   revision 1
 

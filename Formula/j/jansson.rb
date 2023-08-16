@@ -1,7 +1,7 @@
 class Jansson < Formula
   desc "C library for encoding, decoding, and manipulating JSON"
   homepage "https://digip.org/jansson/"
-  url "https://github.com/akheron/jansson/releases/download/v2.14/jansson-2.14.tar.gz"
+  url "https://ghproxy.com/https://github.com/akheron/jansson/releases/download/v2.14/jansson-2.14.tar.gz"
   sha256 "5798d010e41cf8d76b66236cfb2f2543c8d082181d16bc3085ab49538d4b9929"
   license "MIT"
 

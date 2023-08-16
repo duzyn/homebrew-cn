@@ -2,8 +2,8 @@ cask "qbittorrent-lt20" do
   version "4.5.4"
   sha256 "36c9218feeb081d740b46ef9a3e2d1084482af39ba67f8a0166e345bd633a26b"
 
-  url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}_lt20.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/qbittorrent/qbittorrent-mac/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}_lt20.dmg",
+      verified: "downloads.sourceforge.net/qbittorrent/qbittorrent-mac/"
   name "qBittorrent"
   desc "Edition of qBitorrent based on libtorrent-rasterbar 2.0.x"
   homepage "https://www.qbittorrent.org/"

@@ -1,7 +1,7 @@
 class Interface99 < Formula
   desc "Full-featured interfaces for C99"
   homepage "https://github.com/Hirrolot/interface99"
-  url "https://github.com/Hirrolot/interface99/archive/refs/tags/v1.0.1.tar.gz"
+  url "https://ghproxy.com/https://github.com/Hirrolot/interface99/archive/refs/tags/v1.0.1.tar.gz"
   sha256 "ddc7cd979cf9c964a4313a5e6bdc87bd8df669142f29c8edb71d2f2f7822d9aa"
   license "MIT"
   head "https://github.com/Hirrolot/interface99.git", branch: "master"

@@ -8,7 +8,7 @@ cask "vcv-rack" do
   homepage "https://vcvrack.com/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/VCVRack/Rack/v#{version.major}/CHANGELOG.md"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/VCVRack/Rack/v#{version.major}/CHANGELOG.md"
     regex(/###\s(\d+(?:\.\d+)+)/i)
   end
 

@@ -2,7 +2,7 @@ cask "ultimaker-cura" do
   version "5.4.0"
   sha256 "d5883826fda5b8125d60b1434161e8c7ba8805fa116b8c14c27bbbc14717bfe1"
 
-  url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-mac.dmg",
+  url "https://ghproxy.com/https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-mac.dmg",
       verified: "github.com/Ultimaker/Cura/"
   name "Ultimaker Cura"
   name "Cura"

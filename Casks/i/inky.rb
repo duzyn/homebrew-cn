@@ -2,7 +2,7 @@ cask "inky" do
   version "0.14.1"
   sha256 "95a99301939ed16ef4602b6eba1cd754df1ecb521750e366871b12988f024115"
 
-  url "https://github.com/inkle/inky/releases/download/#{version}/Inky_mac.dmg",
+  url "https://ghproxy.com/https://github.com/inkle/inky/releases/download/#{version}/Inky_mac.dmg",
       verified: "github.com/inkle/inky/"
   name "Inky"
   desc "Editor for ink: inkle's narrative scripting language"

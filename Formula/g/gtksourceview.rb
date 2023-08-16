@@ -37,7 +37,7 @@ class Gtksourceview < Formula
   # These are already integrated upstream in their gnome-2-30 branch but a release of
   # this remains highly unlikely
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/gtksourceview/2.10.5.patch"
+    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/gtksourceview/2.10.5.patch"
     sha256 "1c91cd534d73a0f9b0189da572296c5bd9f99e0bb0d3004a5e9cbd9f828edfaf"
   end
 

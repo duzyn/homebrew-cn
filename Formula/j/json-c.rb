@@ -1,7 +1,7 @@
 class JsonC < Formula
   desc "JSON parser for C"
   homepage "https://github.com/json-c/json-c/wiki"
-  url "https://github.com/json-c/json-c/archive/refs/tags/json-c-0.17-20230812.tar.gz"
+  url "https://ghproxy.com/https://github.com/json-c/json-c/archive/refs/tags/json-c-0.17-20230812.tar.gz"
   version "0.17"
   sha256 "024d302a3aadcbf9f78735320a6d5aedf8b77876c8ac8bbb95081ca55054c7eb"
   license "MIT"

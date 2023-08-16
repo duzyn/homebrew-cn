@@ -1,7 +1,7 @@
 class Afuse < Formula
   desc "Automounting file system implemented in userspace with FUSE"
   homepage "https://github.com/pcarrier/afuse/"
-  url "https://github.com/pcarrier/afuse/archive/refs/tags/v0.5.0.tar.gz"
+  url "https://ghproxy.com/https://github.com/pcarrier/afuse/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "87284e3f7973f5a61eea4a37880512c01f0b8bf1d37a8988447efbe806ec3414"
   license "GPL-2.0-only"
 
