@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v1.37.0",
-      revision: "26bcb21a359de1824e683266dbbca1ef5f21f124"
+      tag:      "v1.38.1",
+      revision: "23398431f9dc2f0fa24cd6c71245345078648788"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,13 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "95ecc9d2146fcb879db4d06219fd2f05de016c4895dddc63245e8583c3ee2533"
-    sha256 cellar: :any, arm64_monterey: "7042c94e8a16a83db2341b6d7c644853459aa7483c4f596a439cceef5272e872"
-    sha256 cellar: :any, arm64_big_sur:  "ef24798f8482a37e2d5a8bea0ca7f0e1345a4bd9cfe06059b64142916e359f90"
-    sha256 cellar: :any, ventura:        "30fb6df2d06af873b858b2f4896b3f7a10ed1e5967221ecbb242b6136335b6c1"
-    sha256 cellar: :any, monterey:       "018f4210db9bdca57c536a7d5ecddea0692d0e280c4cce3d2b75134d368f2f1e"
-    sha256 cellar: :any, big_sur:        "f1540417f50a8bb35334dcffd4ab98ca2faa3828ed3b35703ce4b4c82a5a4bfe"
-    sha256               x86_64_linux:   "6093e1c918aa94709726f75de1f272dae3ba818e940d9d48a0f05c405205b12e"
+    sha256 cellar: :any, arm64_ventura:  "6930b20a27bcd217828241c078de0737118a479ef113b4b9a7bc404189904a9b"
+    sha256 cellar: :any, arm64_monterey: "7b3efa79d21b0cf8617f707056181933c5359eb13ead0d680370bfde9fad1b8e"
+    sha256 cellar: :any, arm64_big_sur:  "1e9bcec594cb57ca569220cbde868b50b315909ae1165dfb95839ce9d1569174"
+    sha256 cellar: :any, ventura:        "ca4cd0fcaeaa68e0d95783b6cd0ba700698fc013a3930532fadbb28649005669"
+    sha256 cellar: :any, monterey:       "994cfa466808fcc32d2568a93a47a79aeceaea234138bcd132d401c3f90a7c46"
+    sha256 cellar: :any, big_sur:        "99bd5eeaa0c31a21500c658fb6cf77bf9891e8a1f08f07a35ef575d3d4ba4e7e"
+    sha256               x86_64_linux:   "7544a6eafd67ada6cecb82c2adc56e6fdbc11ee34ff2c0c63cc4fdb81d5f3434"
   end
 
   depends_on "autoconf" => :build
@@ -151,8 +151,8 @@ class Semgrep < Formula
   end
 
   resource "rpds-py" do
-    url "https://files.pythonhosted.org/packages/da/3c/fa2701bfc5d67f4a23f1f0f4347284c51801e9dbc24f916231c2446647df/rpds_py-0.9.2.tar.gz"
-    sha256 "8d70e8f14900f2657c249ea4def963bed86a29b81f81f5b76b5a9215680de945"
+    url "https://files.pythonhosted.org/packages/77/5a/0c82d0ef1322227e8e997dbbd3d4e235383d51c299dbdfd2fed2625971b0/rpds_py-0.10.0.tar.gz"
+    sha256 "e36d7369363d2707d5f68950a64c4e025991eb0177db01ccb6aa6facae48b69f"
   end
 
   resource "ruamel-yaml" do
@@ -181,8 +181,8 @@ class Semgrep < Formula
   end
 
   resource "wcmatch" do
-    url "https://files.pythonhosted.org/packages/b7/94/5dd083fc972655f6689587c3af705aabc8b8e781bacdf22d6d2282fe6142/wcmatch-8.4.1.tar.gz"
-    sha256 "b1f042a899ea4c458b7321da1b5e3331e3e0ec781583434de1301946ceadb943"
+    url "https://files.pythonhosted.org/packages/92/51/72ce10501dbfe508808fd6a637d0a35d1b723a5e8c470f3d6e9458a4f415/wcmatch-8.5.tar.gz"
+    sha256 "86c17572d0f75cbf3bcb1a18f3bf2f9e72b39a9c08c9b4a74e991e1882a8efb3"
   end
 
   def install
