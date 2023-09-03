@@ -4,8 +4,8 @@ class Semgrep < Formula
   desc "Easily detect and prevent bugs and anti-patterns in your codebase"
   homepage "https://semgrep.dev"
   url "https://github.com/returntocorp/semgrep.git",
-      tag:      "v1.38.1",
-      revision: "23398431f9dc2f0fa24cd6c71245345078648788"
+      tag:      "v1.38.3",
+      revision: "9d48fcc2bd3b574764cb5d753f14525a918064d9"
   license "LGPL-2.1-only"
   head "https://github.com/returntocorp/semgrep.git", branch: "develop"
 
@@ -15,13 +15,13 @@ class Semgrep < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_ventura:  "6930b20a27bcd217828241c078de0737118a479ef113b4b9a7bc404189904a9b"
-    sha256 cellar: :any, arm64_monterey: "7b3efa79d21b0cf8617f707056181933c5359eb13ead0d680370bfde9fad1b8e"
-    sha256 cellar: :any, arm64_big_sur:  "1e9bcec594cb57ca569220cbde868b50b315909ae1165dfb95839ce9d1569174"
-    sha256 cellar: :any, ventura:        "ca4cd0fcaeaa68e0d95783b6cd0ba700698fc013a3930532fadbb28649005669"
-    sha256 cellar: :any, monterey:       "994cfa466808fcc32d2568a93a47a79aeceaea234138bcd132d401c3f90a7c46"
-    sha256 cellar: :any, big_sur:        "99bd5eeaa0c31a21500c658fb6cf77bf9891e8a1f08f07a35ef575d3d4ba4e7e"
-    sha256               x86_64_linux:   "7544a6eafd67ada6cecb82c2adc56e6fdbc11ee34ff2c0c63cc4fdb81d5f3434"
+    sha256 cellar: :any, arm64_ventura:  "7bbe593ab67c520caa586da84ccc9bb4ba5bf73ae7eb3ad9a7c81421068de4ba"
+    sha256 cellar: :any, arm64_monterey: "5242559fe195dd02219fedf1c6d63bb79dfd7799509aeb9c17da2c6ea37f7c3d"
+    sha256 cellar: :any, arm64_big_sur:  "dd6105e62340cc82f4df47cf4dacd3a2583d9397d78036a50fcb00ff3a2b04c4"
+    sha256 cellar: :any, ventura:        "463c393ea024e4f10d7291987322b47c85429601b9314f3b77c13068e0f0bf91"
+    sha256 cellar: :any, monterey:       "6e986542d884a19d04edb675b7aac5d4b8b6237e24425fdeae9367a96e8a737f"
+    sha256 cellar: :any, big_sur:        "4c85060f556b57029f513c492a298327b8d721b7f20431ca8861b3bcdfc443ba"
+    sha256               x86_64_linux:   "e5e1cfbe6f6737252e3fb2658adfd1228206c93eb33eeb9315c796daba046513"
   end
 
   depends_on "autoconf" => :build
@@ -56,8 +56,8 @@ class Semgrep < Formula
   end
 
   resource "bracex" do
-    url "https://files.pythonhosted.org/packages/b3/96/d53e290ddf6215cfb24f93449a1835eff566f79a1f332cf046a978df0c9e/bracex-2.3.post1.tar.gz"
-    sha256 "e7b23fc8b2cd06d3dec0692baabecb249dda94e06a617901ff03a6c56fd71693"
+    url "https://files.pythonhosted.org/packages/90/8b/34d174ce519f859af104c722fa30213103d34896a07a4f27bde6ac780633/bracex-2.4.tar.gz"
+    sha256 "a27eaf1df42cf561fed58b7a8f3fdf129d1ea16a81e1fadd1d17989bc6384beb"
   end
 
   resource "charset-normalizer" do
