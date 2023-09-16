@@ -13,6 +13,14 @@ class ServiceWeaver < Formula
     end
   end
 
+  # Upstream does not create releases for all tags (and it's unclear whether we
+  # should use stable version tags that don't have a release), so we use the
+  # `GithubLatest` strategy for now.
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "7b52eadd31941796458bdb01e25afe9f959841cc3864cf5bc533428be29ff736"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ecc6ac0829e781d0c96b5d1e2db4767e7cc8bac28fd94d123238873bdefc327b"
