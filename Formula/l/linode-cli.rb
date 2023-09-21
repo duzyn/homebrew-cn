@@ -9,17 +9,19 @@ class LinodeCli < Formula
   head "https://github.com/linode/linode-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d0266c21338939440ce96f03163bcea9c9b2b627cf346c1e97d41762d707d134"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "90ae49f2a78287d3860cdde3e6af62d88ca1c10bd8f1b898c0119c9f209c4f06"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9672f4f5cda1c593066ac5ee6fb68cbb44447601691408fbfa29acd7acf57e50"
-    sha256 cellar: :any_skip_relocation, ventura:        "2f9c8e7a488f39b1cf8587ac36784c48886301f622374cf168cce1062006177c"
-    sha256 cellar: :any_skip_relocation, monterey:       "49f73dec6d568b401eeeebb8f69ec2a528f29876e167e4af9a6063d4e6a7dd19"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5c8430edddba42074b372f794f03ae393f949757034b399c663404ac71deb1fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47183ae697b89514a470fa5d41cde5ed97a7cc17e82a789c2eae07adcd2f9588"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bb7dcd3d4fba5820c83a0678595e8e7618ec66fca6194f105ceaefd5da88c17e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d7e2c66d4c7e4310c1452dfa049d093eb7433ffa6fb9c158d66be397b72a8c81"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "cb7cdd756ad6917bdf7f3cdac8e67c488ebd84414ae65e322df65a7296019b6b"
+    sha256 cellar: :any_skip_relocation, ventura:        "c64b78a9ad107532548b60cc0dbac3da6d5e74bf59059ec2000e3abf41efb46c"
+    sha256 cellar: :any_skip_relocation, monterey:       "5e84c225cecaf719322c5bd41022434343af1e70771f48aca1e0919e5129d35a"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ff7df399cac9e6ad9f68d57983d325a7c64b0c0f9167658c3c601d8e2fa67eec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d58b2eebc8ce51b4f249b15d883b13e2c182f08cd956920dbd9851f5a29904c8"
   end
 
   depends_on "pygments"
   depends_on "python-certifi"
+  depends_on "python-packaging"
   depends_on "python@3.11"
   depends_on "pyyaml"
 
@@ -51,11 +53,6 @@ class LinodeCli < Formula
   resource "openapi3" do
     url "https://files.pythonhosted.org/packages/94/0a/e7862c7870926ecb86d887923e36b7853480a2a97430162df1b972bd9d5b/openapi3-1.8.2.tar.gz"
     sha256 "a21a490573d89ca69ada7cbe585adb2fca4964257f6f3a1df531f12815455d2c"
-  end
-
-  resource "packaging" do
-    url "https://files.pythonhosted.org/packages/b9/6c/7c6658d258d7971c5eb0d9b69fa9265879ec9a9158031206d47800ae2213/packaging-23.1.tar.gz"
-    sha256 "a392980d2b6cffa644431898be54b0045151319d1e7ec34f0cfed48767dd334f"
   end
 
   resource "requests" do
