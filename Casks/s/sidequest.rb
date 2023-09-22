@@ -1,9 +1,9 @@
 cask "sidequest" do
   arch arm: "-arm64"
 
-  version "0.10.36"
-  sha256 arm:   "e8a3d9762b6e403a3ddccf21909d67444a03134bd6a45d7850dc00d03a3ab080",
-         intel: "c88275513fc6805e8b049fe3ec1647c1bbe1d30a58d56414e96df31b27cc7da6"
+  version "0.10.38"
+  sha256 arm:   "b523d1941759058b332820dac5724eaa4eb3a2f21dd3af3d03d3b712fe0d3e60",
+         intel: "d203d0eb04ac12ec9a80a42dc3cea283f1958115376dc62fe4cdc18df5554751"
 
   url "https://ghproxy.com/https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}#{arch}.dmg",
       verified: "github.com/SideQuestVR/SideQuest/"

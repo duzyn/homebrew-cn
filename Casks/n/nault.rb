@@ -1,6 +1,6 @@
 cask "nault" do
-  version "1.18.1"
-  sha256 "5a9198b9cb0e929a80044b24277ae7cef8a760093335351cad233e920ba13874"
+  version "1.18.3"
+  sha256 "02e768906e23774219907feb95ec84782449b3f02b575f2c653a500f24b6218c"
 
   url "https://ghproxy.com/https://github.com/Nault/Nault/releases/download/v#{version}/Nault-#{version}-Mac.dmg"
   name "Nault"

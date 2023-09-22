@@ -1,6 +1,6 @@
 cask "rewind" do
-  version "13120.1,51a2fc3,20230811"
-  sha256  "de6160d151f2c53db36a1411a0b9824597cf4615d75a5757ec12e1068da34d08"
+  version "14270.1,8c61696,20230921"
+  sha256  "9816e6698989af6714d2bb30a144fec427ccd922c4ad32934368674c1dfe6e3e"
 
   url "https://updates.rewind.ai/builds/main/b#{version.csv.first}-main-#{version.csv.second}.zip"
   name "Rewind"
@@ -18,8 +18,7 @@ cask "rewind" do
   end
 
   auto_updates true
-  depends_on arch:  :arm64,
-             macos: ">= :monterey"
+  depends_on macos: ">= :monterey"
 
   app "Rewind.app"
 

@@ -1,8 +1,9 @@
 class Mill < Formula
   desc "Scala build tool"
   homepage "https://com-lihaoyi.github.io/mill/mill/Intro_to_Mill.html"
-  url "https://ghproxy.com/https://github.com/com-lihaoyi/mill/releases/download/0.11.1/0.11.1-assembly"
-  sha256 "a86f83767d011d4657d555f984ef387b1811cfc62e520605fdf1fa326824ad71"
+  # TODO: Check if we can use unversioned `openjdk` (or `openjdk@21`) at version bump.
+  url "https://ghproxy.com/https://github.com/com-lihaoyi/mill/releases/download/0.11.4/0.11.4-assembly"
+  sha256 "e17fae7d31c408e98cefded2374545004f1bf669c791d3aa489f21dbd3ee8cb5"
   license "MIT"
 
   livecheck do
@@ -11,15 +12,16 @@ class Mill < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ca3f300dc468ab7790ad51e97cb7ff9fda41396a06068586538f5186e2cfba81"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "4415f6c37b097848b2ca64a07fa62e51c03d8b060da8d166e57a1e63d7fb7bf9"
   end
 
-  depends_on "openjdk"
+  depends_on "openjdk@17"
 
   def install
     libexec.install Dir["*"].shift => "mill"
     chmod 0555, libexec/"mill"
-    (bin/"mill").write_env_script libexec/"mill", Language::Java.overridable_java_home_env
+    (bin/"mill").write_env_script libexec/"mill", Language::Java.overridable_java_home_env("17")
   end
 
   test do

@@ -1,6 +1,6 @@
 cask "submariner" do
-  version "2.3.1"
-  sha256 "29889fcc4657df2e09b943b1d7dc788773b26231efedd4bb1f0b01b5d5391e67"
+  version "2.4.2"
+  sha256 "4f306b69115f33f46d41fbf1623a8f8a01e1101e26456a15470e40caa472991a"
 
   url "https://ghproxy.com/https://github.com/NattyNarwhal/Submariner/releases/download/v#{version}/Submariner-#{version}.zip",
       verified: "github.com/NattyNarwhal/Submariner/"

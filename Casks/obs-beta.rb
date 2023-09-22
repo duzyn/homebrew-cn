@@ -1,9 +1,10 @@
 cask "obs-beta" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "apple", intel: "intel"
+  livecheck_folder = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "29.1.0-rc1"
-  sha256 arm:   "b2251b616f7d7ecb47544f82dfd02cdf10b1ec3b5b417c7d2acc51fb8ea7b000",
-         intel: "4f816233a6146c2e4075f44502f32b568a0b4c672168a41a2f193aed7f2b0164"
+  version "30.0.0-beta3"
+  sha256 arm:   "2ae0c1aa23fa4c90af37b00321fdae7585fd7a5f004f5cfd3d347dbb022e118d",
+         intel: "c48ae6e2000f33917fb48f606698a811de552629a00ff029f3482bb685fff7e4"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
@@ -11,7 +12,7 @@ cask "obs-beta" do
   homepage "https://obsproject.com/forum/list/test-builds.20/"
 
   livecheck do
-    url "https://obsproject.com/osx_update/updates_#{arch}_v2.xml"
+    url "https://obsproject.com/osx_update/updates_#{livecheck_folder}_v2.xml"
     regex(/obs[._-]studio[._-](\d+(?:[.-]\d+)+(?:(?:-beta)|(?:-rc))\d+)[._-]macos/i)
     strategy :sparkle do |items, regex|
       items.find { |item| item.channel == "beta" }&.url&.scan(regex)&.flatten

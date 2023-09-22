@@ -1,9 +1,9 @@
 class Sqldiff < Formula
   desc "Displays the differences between SQLite databases"
   homepage "https://www.sqlite.org/sqldiff.html"
-  url "https://www.sqlite.org/2023/sqlite-src-3420000.zip"
-  version "3.42.0"
-  sha256 "38ca56a317be37fb00bd92bc280d9b9209bd4008b297d483c41ec1f6079bfb6d"
+  url "https://www.sqlite.org/2023/sqlite-src-3430100.zip"
+  version "3.43.1"
+  sha256 "22e9c2ef49fe6f8a2dbc93c4d3dce09c6d6a4f563de52b0a8171ad49a8c72917"
   license "blessing"
 
   livecheck do
@@ -11,13 +11,13 @@ class Sqldiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e77cf1c3b7494e7453918b4c2b80ef93b3fdc07a34f9604489d8afd311c43111"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "97ac7bcdbde502a48e6715564b22277ed628ed04964c9b365255818d0b9babcf"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b8dd59b40a8592fce276005b534ac8e8a9c951f8db1ef279001dda839c5a7851"
-    sha256 cellar: :any_skip_relocation, ventura:        "fa978652a8b4d6bd62b35ccab977a2f191bea8e4055a638014eed598eb762ebe"
-    sha256 cellar: :any_skip_relocation, monterey:       "8dfddf54fb1d531d4c7b5a53dd3cc034d6eb139b9574ce2394d82b6f38ec53d1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "b80fb04865a77ce4295d8e2d7b4a1a9a9f321ad7444919bbe851899db002c412"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a3a4d57c21c653ff1d4b61ef8afd0f416776c808263917c1d508fe84e8ab0e8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3476f48bf9a54aa1368eab7c74d4ef550b44be1da740b5722e882dfe6874b082"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c47c881bb74ad862d2df838dc137cb2f8974dfc92b065bce3dd532d816e31e15"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "849122883db4ecc5f35ab561ad798fcfca53ac0fbf3ca0213b6d0d6f4677abdd"
+    sha256 cellar: :any_skip_relocation, ventura:        "18997809467579e4169625d093f3237d1523a827c28579bdcf7f2484dece2a43"
+    sha256 cellar: :any_skip_relocation, monterey:       "67d953e78cbd839b65336159f51e7c0503dd496dd2b0a345fed72402def46cf8"
+    sha256 cellar: :any_skip_relocation, big_sur:        "14eaab3dbd2c599352d4e747ec00e25b8ad007f005b7ebb10582cd9e1d996b88"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d113f8deb865e2891407d27254e1c131244cb779c0f11b25efc49a7a0b4498e7"
   end
 
   uses_from_macos "tcl-tk" => :build

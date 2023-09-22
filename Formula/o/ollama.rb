@@ -1,24 +1,29 @@
 class Ollama < Formula
   desc "Create, run, and share large language models (LLMs)"
   homepage "https://ollama.ai/"
-  url "https://ghproxy.com/https://github.com/jmorganca/ollama/archive/refs/tags/v0.0.14.tar.gz"
-  sha256 "339e2e6aa345afe8e991a4b9e2303ceaa0f8cf3b28f39643748e883760b6cc98"
+  url "https://github.com/jmorganca/ollama.git",
+      tag:      "v0.0.19",
+      revision: "45ac07cd025f9d1e84917db3f00e0f3e5651aede"
   license "MIT"
   head "https://github.com/jmorganca/ollama.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "213a8eb1ea0dcce9dda92d3b0e47c979f69265eca7c52c636bd96cafdd88c004"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcafc6adefefa0d46732285b8e587df02bdee04e9498412d4fd24d8f7bad5bfb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "df2e6d4036c095e9d81657dfb1a610fe9edd98ce89e91cea8b08a8d1e451f654"
-    sha256 cellar: :any_skip_relocation, ventura:        "473667c02d448045ea29bbaa8e6cad76fa95f0112ffb16174d3674138e8fa3ff"
-    sha256 cellar: :any_skip_relocation, monterey:       "164d3a85b375d1d915bf5baf0513c54c693b1c57685e3119ff6f89800bf874b0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c1a724aedddd03fc038a8dc121edcd042c32277b370cb95e80fe438f14ae91c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87fec85645b33e929f1c6be3c0d2c37347b42856ee30094bf2aa629df36db803"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c28605511527744c3ab620cac100eb06b37cc61a2ae25787cceb39a3e5453a4c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "76a75f39312e93533fc994a4834c81b8eb299a0112c2581f7cdbd543588d8732"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0f0a925eb20550fc7692e265098b041d1ce1a48ae33a8f5fca280043f0b536db"
+    sha256 cellar: :any_skip_relocation, ventura:        "20ba83604dadb1d87737b2268c33e27a6cf2115d3412c06ba2db3ae12488cbeb"
+    sha256 cellar: :any_skip_relocation, monterey:       "4db836410137eabb475fa8c57e9b8a2e814c28a1e51d0c98694b232bac215745"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d1df20f8318a30f2ad5ff6262d8a0c754d08670b36af281a5462e26c16c3da8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87a5f4499beb3e41c73d758346921342f87443581059870a224cb01e22b6bc62"
   end
 
+  depends_on "cmake" => :build
   depends_on "go" => :build
 
   def install
+    # Fix build on big sur by setting SDKROOT
+    ENV["SDKROOT"] = MacOS.sdk_path if OS.mac? && MacOS.version == :big_sur
+    system "go", "generate", "./..."
     system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 

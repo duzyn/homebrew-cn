@@ -1,8 +1,8 @@
 cask "session" do
-  version "1.11.0"
-  sha256 "b40d527ba6543ac52da1e08296514fa39237538769bdbc3abb240a078ed5a078"
+  version "1.11.3"
+  sha256 "a3774d8c177b257f0082839e22a21b4be73aec4eea18f65b698cb236bb59ad9b"
 
-  url "https://ghproxy.com/https://github.com/oxen-io/session-desktop/releases/download/v#{version}/session-desktop-mac-#{version}.dmg",
+  url "https://ghproxy.com/https://github.com/oxen-io/session-desktop/releases/download/v#{version}/session-desktop-mac-x64-#{version}.dmg",
       verified: "github.com/oxen-io/session-desktop/"
   name "Session"
   desc "Onion routing based messenger"

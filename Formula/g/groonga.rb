@@ -1,8 +1,8 @@
 class Groonga < Formula
   desc "Fulltext search engine and column store"
   homepage "https://groonga.org/"
-  url "https://ghproxy.com/https://github.com/groonga/groonga/releases/download/v13.0.5/groonga-13.0.5.tar.gz"
-  sha256 "f49c4b2bd24f60a3237495dda241017c42076f4d2012bc523fcfa4f349f069a0"
+  url "https://ghproxy.com/https://github.com/groonga/groonga/releases/download/v13.0.7/groonga-13.0.7.tar.gz"
+  sha256 "817adbd4942f524557e479b2dbc3cfd181683deff2dff8d9db85fb621a518eed"
   license "LGPL-2.1-or-later"
 
   livecheck do
@@ -11,13 +11,15 @@ class Groonga < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "19b429cc529acbca5a842c1ae86054da5c15485c071a6b81233820019d6b3a85"
-    sha256 arm64_monterey: "0671f8d2dee132266fc22c285dc699a0733092d125c69f62fde9bb35de253cfc"
-    sha256 arm64_big_sur:  "91a78ee955a285733efeebef66a3ef5bbd16456cd7d3514e1b0d3db64ca39ffb"
-    sha256 ventura:        "b04def9adbbaaccbcb3a29b3e578998cbf2d61f45e968b073bbbc16be1e204ab"
-    sha256 monterey:       "9ee9aad55c4a7bcffcba1e5e4a9794a178b0eb25a9248e5497ae46f455b6cf01"
-    sha256 big_sur:        "028d634db3e54923ca39043a123cbbd7811cf58b818275f1cac8de74b55673f1"
-    sha256 x86_64_linux:   "152f140f5bc0d0ab2427cf086a215c5d4cea5257d38528e97bb2f2c496e6bd1d"
+    sha256 arm64_sonoma:   "2d007b743526d7a7a1e371a2a589da0e1136514ad8d6729a8f581e514843956f"
+    sha256 arm64_ventura:  "c71d6b1b73a357769fec1e2b4838991c233cd9fcd6443daf90b8ec6ae5d9f1e6"
+    sha256 arm64_monterey: "dd1676ca9819bb8c5f49e0da5036e74948039f14aa4be341929a84d4c31a74c1"
+    sha256 arm64_big_sur:  "d77191491fe6917007d8bb0d5c738ba1612e3dbe029b79517efa5dea1201d121"
+    sha256 sonoma:         "e61a721be605e11321df212fa4768dc910602d638261aa327e77970f06136ca6"
+    sha256 ventura:        "03c72b7ed0f7ff1deda24cae36d2c8478ce4a44a50d160d269fdf5d969d4d058"
+    sha256 monterey:       "24a469661b6dcae18a92e0583b01c2b0b54e43a22573680d56ade6aa3a8117b2"
+    sha256 big_sur:        "c0efa4df8546b9904d8e24d2c906ed2aa86d2fedc9dcffb89b75d3bc03cc94e6"
+    sha256 x86_64_linux:   "22a38701fc448ab2b62b84650ce6bc6af1f511d10efb47dae3a5ee4d7303803e"
   end
 
   head do

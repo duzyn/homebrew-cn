@@ -2,10 +2,10 @@ class Sapling < Formula
   desc "Source control client"
   homepage "https://sapling-scm.com"
   url "https://ghproxy.com/https://github.com/facebook/sapling/archive/refs/tags/0.2.20230523-092610+f12b7eee.tar.gz"
-  version "0.2.20230523-092610+f12b7eee"
+  version "0.2.20230523-092610-f12b7eee"
   sha256 "57a04327052f900d95d0dd3800d8b13a411b08222307bb141109afca1d1d0eaf"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/facebook/sapling.git", branch: "main"
 
   livecheck do
@@ -15,13 +15,13 @@ class Sapling < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "748a832b6fc9303b9488ffa419eede0a11f213601d628dafe6e4036ef49411d2"
-    sha256 cellar: :any,                 arm64_monterey: "6e22574bc80d85053a8b9cd006c81dcad636030b1a553040d812070c6f717e89"
-    sha256 cellar: :any,                 arm64_big_sur:  "de6bbe1417ece08160a301761cf9e5b89850a31e7ece5d7e37bf2ff29df0fb8a"
-    sha256 cellar: :any,                 ventura:        "834be18db23a6d79822165626ea0940eb6cb69926b4f0a5a2d69b68cf1fcb453"
-    sha256 cellar: :any,                 monterey:       "2b2eeb0531b0d8134845f15ebd193edff8a97f271e85419d4fe07a5c6a19d34a"
-    sha256 cellar: :any,                 big_sur:        "21ec5396066114414ae3c587cbcf1a501d3aa16b34f4b24ef645678d9b9034bc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e043c11958e614bfb4d74f65c4e1f3549e4942c7c52d5b2222af0b1ccdcc600"
+    sha256 cellar: :any,                 arm64_ventura:  "13d796b6ab41617dbfe6d0f0198220a9773738a1150842ea410fbcdaf4ed3036"
+    sha256 cellar: :any,                 arm64_monterey: "21bf1046985e20082d31d9f3112b05d5adff667d89f2c22e83b85a59236122cd"
+    sha256 cellar: :any,                 arm64_big_sur:  "20dedd0b47ebd210b69c024c45369b2f88c1d0495c5f7fefc3782f1fa4f1db43"
+    sha256 cellar: :any,                 ventura:        "597f06474069628d5f47ff10523410b131454351ed0b78d855e4b49ecb170301"
+    sha256 cellar: :any,                 monterey:       "ea66d7d774293cb46710839063c268c2a98e7557df0729bb32f019fbf5d7099e"
+    sha256 cellar: :any,                 big_sur:        "9f1afc4de2980f9c13885a02a153d89052a3d100afb5838d00e50b9a79130659"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0e6c07133d5bff4dc9f9b7f5dc4fb5e3e6174337524773336570cdc1fce7f0b"
   end
 
   depends_on "cmake" => :build

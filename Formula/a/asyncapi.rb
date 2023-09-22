@@ -3,25 +3,23 @@ require "language/node"
 class Asyncapi < Formula
   desc "All in one CLI for all AsyncAPI tools"
   homepage "https://github.com/asyncapi/cli"
-  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-0.52.3.tgz"
-  sha256 "5d49cf4ffa95a10a360c42dc8985d7bd5cff55800ec6ddbbb57409a21f95a1d7"
+  url "https://registry.npmjs.org/@asyncapi/cli/-/cli-0.58.0.tgz"
+  sha256 "47198bf3e013cabb39e2c3b1e4693ea5c5d701948b90cde2ef896ffb6cf8b207"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "12b9207c6ec2f4fa22165ca9ceba7ae30626e7ad4ad502e88e112b0a02a4ce2a"
-    sha256 cellar: :any,                 arm64_monterey: "12b9207c6ec2f4fa22165ca9ceba7ae30626e7ad4ad502e88e112b0a02a4ce2a"
-    sha256 cellar: :any,                 arm64_big_sur:  "12b9207c6ec2f4fa22165ca9ceba7ae30626e7ad4ad502e88e112b0a02a4ce2a"
-    sha256 cellar: :any,                 ventura:        "8035293279ed868e81419e94be668a74f307089a6c79c8763ecfe9f843bfa446"
-    sha256 cellar: :any,                 monterey:       "8035293279ed868e81419e94be668a74f307089a6c79c8763ecfe9f843bfa446"
-    sha256 cellar: :any,                 big_sur:        "8035293279ed868e81419e94be668a74f307089a6c79c8763ecfe9f843bfa446"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee7551040667664d0dab80bcaea72edb43030a6b2c38d9a25e31e23bc162233f"
+    sha256 cellar: :any,                 arm64_ventura:  "8be0d7523462b969a74215e1f6c2c304ac0d30e7242282940ff20fbd23c74cd0"
+    sha256 cellar: :any,                 arm64_monterey: "8be0d7523462b969a74215e1f6c2c304ac0d30e7242282940ff20fbd23c74cd0"
+    sha256 cellar: :any,                 arm64_big_sur:  "8be0d7523462b969a74215e1f6c2c304ac0d30e7242282940ff20fbd23c74cd0"
+    sha256 cellar: :any,                 ventura:        "0f56ea915e2b26d4dd231129903fbd80e846403394ee8f12be807949a42d766c"
+    sha256 cellar: :any,                 monterey:       "a0ced2e5e0818937108af506bf02d78602d202f9347de60573515fa4795f6bb0"
+    sha256 cellar: :any,                 big_sur:        "a0ced2e5e0818937108af506bf02d78602d202f9347de60573515fa4795f6bb0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "accf7f14edffd9ef7697b97c23cd3999f6ef3973c665080914fb11e7f826c584"
   end
 
   depends_on "node"
 
   def install
-    # Call rm -f instead of rimraf, because devDeps aren't present in Homebrew at postpack time
-    inreplace "package.json", "rimraf oclif.manifest.json", "rm -f oclif.manifest.json"
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
 

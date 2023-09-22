@@ -3,8 +3,8 @@ class Netpbm < Formula
   homepage "https://netpbm.sourceforge.net/"
   # Maintainers: Look at https://sourceforge.net/p/netpbm/code/HEAD/tree/
   # for stable versions and matching revisions.
-  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "4534"
-  version "11.02.01"
+  url "https://svn.code.sf.net/p/netpbm/code/stable", revision: "4627"
+  version "11.02.03"
   license "GPL-3.0-or-later"
   version_scheme 1
   head "https://svn.code.sf.net/p/netpbm/code/trunk"
@@ -16,13 +16,15 @@ class Netpbm < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "aa94ed9a5045df2aa28d2cce69002a6252e2d73e7321961664fd4e8174af8f3d"
-    sha256 arm64_monterey: "2e44a5fcd77a1fe4efe84f0385484fccefced0116bb29a7c123a13072b206438"
-    sha256 arm64_big_sur:  "92d7851dcc85d1a52dac5344c9bb1a348a577b432ceae224591a790eb55e25be"
-    sha256 ventura:        "4a868b9954c01a47cf772560ac7b3c89c3901d7029ec02c494e095f31b4ba06e"
-    sha256 monterey:       "1103774cf9575189c56d525398b3ab41cc5259b2193a71dd52d30523af3ce48a"
-    sha256 big_sur:        "879fd0bd85cf07d3a04127bce91227b3b78cd3460dd3ee770e98e9dee1598f54"
-    sha256 x86_64_linux:   "50405e2f65a9068713f381efdb8f1c07de02f9a0ea5c72698cfa469efc1ab6f4"
+    sha256 arm64_sonoma:   "ee1b15b0dbf654ecaeb4ade2e389aac70885aaaff76138c1efb2a9312ec1e711"
+    sha256 arm64_ventura:  "18764f1653b784c04973e8ce49a9b5fc4d38528ebea6aa44dc372d927d5a2eb3"
+    sha256 arm64_monterey: "7d47103bfb4df2931b98b92f45ab320f294f9882c7c652d70e2aecfaef5884b1"
+    sha256 arm64_big_sur:  "3836906c1a3cb6de6e0205b4e838cdcdbcaffc70c358de8c709ac887f2d7b7a2"
+    sha256 sonoma:         "c20d9f190e929d69193162361ed6d4c1fb3df08257f1656b8d2a839320d93acb"
+    sha256 ventura:        "74be37e59beaaadb335d9f0b3884f6c1f9d6340543fb4f6f171fc5ec51dafb72"
+    sha256 monterey:       "277c94d7e43ae2df631631716be491803c791fee0cec23d93a52ba396d2e8188"
+    sha256 big_sur:        "f8ff2793dbfea3ad285d49524684189c461715dfed616029ce71464629d033cd"
+    sha256 x86_64_linux:   "a636aab2c15368ccbcef6828951cbbea01e72a20bb87fe4366d943202ece1840"
   end
 
   depends_on "jasper"

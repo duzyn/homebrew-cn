@@ -1,9 +1,9 @@
 cask "dbeaver-community" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "23.1.4"
-  sha256 arm:   "28b71c19fdd1244ee9cab284f4dae52ac4f233e110e1309cd94c9845ac332237",
-         intel: "4c10ee65f96688084ca0ae0302948b209879d8edade6a273b31d9e28f16c59fd"
+  version "23.2.0"
+  sha256 arm:   "cc22ebe124974ad993815a5cd5b918be660ee3c0dd84b1f8b839a5e11491f1f9",
+         intel: "19706c94bbb8752f2127d4f3a1b3358000fd0ed449a9f13dc75772dbb9ca30e7"
 
   url "https://ghproxy.com/https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
   name "DBeaver Community Edition"

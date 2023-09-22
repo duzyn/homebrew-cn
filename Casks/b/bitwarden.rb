@@ -1,6 +1,6 @@
 cask "bitwarden" do
-  version "2023.7.1"
-  sha256 "dc994336533c632f18a39ce7b36993caba7ff54841420689212edaffa5f81a77"
+  version "2023.9.0"
+  sha256 "1539057aa54fd1f95f498a4a58fb66ebb9bd39a7d8751007cd0ac8eb1a69e7a7"
 
   url "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-universal.dmg",
       verified: "github.com/bitwarden/clients/"

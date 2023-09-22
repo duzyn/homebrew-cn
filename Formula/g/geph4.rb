@@ -1,19 +1,19 @@
 class Geph4 < Formula
   desc "Modular Internet censorship circumvention system to deal with national filtering"
   homepage "https://geph.io/"
-  url "https://ghproxy.com/https://github.com/geph-official/geph4-client/archive/refs/tags/v4.8.9.tar.gz"
-  sha256 "4add89de7e432842e27976995002e4f39b75b0f34a3569044f223e3b38c6bbcd"
+  url "https://ghproxy.com/https://github.com/geph-official/geph4-client/archive/refs/tags/v4.9.2.tar.gz"
+  sha256 "2eec1319f1bc7f1a5f28c6451bc655cdcab64327b98c345ea20ff4ac6fc5d0f2"
   license "GPL-3.0-only"
   head "https://github.com/geph-official/geph4-client.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "822eae0cff9a5b8a680ecfee72cfbd2365aa4897b7d20208f2f2ecf319a98e29"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "29e3239dadefe9abba2cc5dd2fe01e9372eea1323d8a323ca0000497d8cbe335"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d3f4892dc69cbcce604423af7c8bafb835ef013228d9a5e97dbfe4d1e97f0266"
-    sha256 cellar: :any_skip_relocation, ventura:        "b520cc3e1cfa0c74a0d2c56e3e9764a3e113cf394982dee958ce9f088d7180c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "a6fb1f3ebd7fd5a9166aab74b86d806de7c028656f992334180a307f0dc1940a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "13e4648622ee8094af3988a30ec7e2562caab7d38fd9d9b8a8b48c43f787cf4a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66a81dcc8f59833210b4b9a8a0031aedfc4c3ac3440fff31e026b30aadc03234"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fbba29bc3299286063537aa78c0de38e06b430945b97f0dc51c070db2b50bccb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "df0d743e889c90b8aeec583747bc54b3ab60ed63bf6628f5182d9517b7471611"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5d4ce91db857546aadf29c60311906b737acfbaf406bd2898ca6cbaf5082c0a3"
+    sha256 cellar: :any_skip_relocation, ventura:        "fa305c96c087e5672862c176414fa1c24f48f560e6641ce2ae341c0d59438d17"
+    sha256 cellar: :any_skip_relocation, monterey:       "7743cb69bb35a763352fcb7db352401af88d7ce581756a3e23cffb8a15650bc6"
+    sha256 cellar: :any_skip_relocation, big_sur:        "7908384141d9c2c9f48850334272550be25b98cbda6a95fc7fb82218afc0294c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aeda076799c39f886b13c302c3aeb8684dad4d684f7888c7026bb6600b40d8b6"
   end
 
   depends_on "rust" => :build

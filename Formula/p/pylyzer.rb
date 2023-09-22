@@ -1,18 +1,18 @@
 class Pylyzer < Formula
   desc "Fast static code analyzer & language server for Python"
   homepage "https://github.com/mtshiba/pylyzer"
-  url "https://ghproxy.com/https://github.com/mtshiba/pylyzer/archive/refs/tags/v0.0.40.tar.gz"
-  sha256 "647702bf2e3f3cde18d4279dbe6f26287c4f39ee4e5b5365f44400b18b374c11"
+  url "https://ghproxy.com/https://github.com/mtshiba/pylyzer/archive/refs/tags/v0.0.47.tar.gz"
+  sha256 "0c497a2560cadf0290659242c0da3f710502ba5cc95cccc2f2f70e4a732d2991"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "623211eec50364ef3b4309796791329b321ae13ea61b4580a33321cb6511ce31"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e8a9055e38bff18337dd3f3f0853e9edbce2e3449af7b1902db3aa1287045dc6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "933f15aec0bf2577827de301d5ff4011d04ad7492864603040f33a78809d355b"
-    sha256 cellar: :any_skip_relocation, ventura:        "98722ebfa1aea5dd7716ca2f7e1c0c1fb3e986bef9522008a3d7052c3994d919"
-    sha256 cellar: :any_skip_relocation, monterey:       "95bbd704aa2f69714fdd0f34b6e4ff04e55728371adc5287d40f29521b225678"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1847aa9b6374fa2bd0c616de87ac954cd35f353b2086641f008f25b03d10e48f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c889c0bff70ccd371fff5fb10bb96ba6d9230fd464cd1ee1f74cc8ccb71c845"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "83db319520e98f933bb58e405c7575d072312f0606347b767f4094f0fb2324e7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5ba7b28734a1c662d23436153aaabadb71fb1cad2766e613140cd30dc2c1407b"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2153b256d6db335ec074bcd78ef71fa07295524c8325efa55c84857c09ca3942"
+    sha256 cellar: :any_skip_relocation, ventura:        "9cab1c6d5af41ca55effccea6986fae5d2eee2738d0942ba79c4203204940b3e"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9a52afbe1d0d942885a32ff8f616763d4f02ef0ea79913f4ee6aad8da986bb2"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b10c5d08b94a9cbd2830486f1be5f28701aa76593e53149624550e7baaa236bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27f6babd4d6cfe6780a4f7e97ff7892bae92a36e422f57c394d6240dc19f163d"
   end
 
   depends_on "rust" => :build

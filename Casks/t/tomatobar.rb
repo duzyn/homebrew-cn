@@ -1,6 +1,6 @@
 cask "tomatobar" do
-  version "3.4.2a"
-  sha256 "c7620fa9f8d8c9202a90e98bfc978956454a2f3793a664d9d315d642b11b80c0"
+  version "3.5.0"
+  sha256 "f5b29a3761d60a952697fa9f8f9e1c86350ee6f18d4e94eb2e9093ab7cb61e72"
 
   url "https://ghproxy.com/https://github.com/ivoronin/TomatoBar/releases/download/v#{version}/TomatoBar-v#{version}.zip"
   name "TomatoBar"

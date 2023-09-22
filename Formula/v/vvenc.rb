@@ -1,27 +1,24 @@
 class Vvenc < Formula
   desc "Fraunhofer Versatile Video Encoder"
   homepage "https://github.com/fraunhoferhhi/vvenc"
-  url "https://ghproxy.com/https://github.com/fraunhoferhhi/vvenc/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "119970f1e00667045eb12775db10611fc04f9158348144913c9e233f98664714"
+  url "https://ghproxy.com/https://github.com/fraunhoferhhi/vvenc/archive/refs/tags/v1.9.1.tar.gz"
+  sha256 "970c5512345e7246495f8e880aa79a5c3d086a5eacdc079bf77335a6f7dda65f"
   license "BSD-3-Clause-Clear"
   head "https://github.com/fraunhoferhhi/vvenc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ecfe2b5d545259933c801b393c2bd3e7a54414a71a8cdb53a0ba50f47a5b760e"
-    sha256 cellar: :any,                 arm64_monterey: "8e6228f077cf83571ad12a696ba30d65178d501b7b62ec773c20472655126b24"
-    sha256 cellar: :any,                 arm64_big_sur:  "db2b61f9eb87e5fef99cd20dba0f30a5f2edda2d8e39a208a3bf28f4c8d97d26"
-    sha256 cellar: :any,                 ventura:        "eab513161cc50d914f87a9636690638a98602d3e46b06d1a5e13d75fc5d69522"
-    sha256 cellar: :any,                 monterey:       "33357da3c451e6adeb7e1a841f3b28f894202e6a9a24eb686656f9aad8160430"
-    sha256 cellar: :any,                 big_sur:        "3b37cbb5281175e0f2abdf71548adccb6e1935f789be069f89e165852002ea33"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1cbbed66a84f67a944f46dfa1b56d32e6c20b45c4daca6286d1faadea6325b4"
+    sha256 cellar: :any,                 arm64_sonoma:   "c0a48a4659d494e677dff8b888c81a538a50308514cd7a053e74b5ac816c4f0a"
+    sha256 cellar: :any,                 arm64_ventura:  "bebff1854fdfbc44083dd35f079a80924830680bc0ce82bfe04afa8796683e64"
+    sha256 cellar: :any,                 arm64_monterey: "0e050bde4ca41f13e6003eb226305cb7462922bec2a03424558d9bdac8a756c2"
+    sha256 cellar: :any,                 arm64_big_sur:  "2734830741c270793c3f8af775be81f254657f9b091bde2317b38b82f2925c19"
+    sha256 cellar: :any,                 sonoma:         "594f6198f800272aeb70b40b0276ad3aa7cb32a0d045b5b3420108a6e57dc93c"
+    sha256 cellar: :any,                 ventura:        "78f86364a1df51bdf8e47da46ba43e8b3093fb13b968a62d488bca139a4b006e"
+    sha256 cellar: :any,                 monterey:       "3ce9625e8cf55672627339cdb93b2310f978eb96f84fda09cb309ab4158d5308"
+    sha256 cellar: :any,                 big_sur:        "f7b7727843d03ab4b391668fb5e37cc29a8487beb58c981b5e986477888da095"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc851a75c6b2fb4bde0dd9ea1502c6921772977a27b384633bff7afcc898f94f"
   end
 
   depends_on "cmake" => :build
-
-  resource("test_video") do
-    url "https://archive.org/download/test_bunny_202304/test_bunny.yuv"
-    sha256 "6c7e90db57f5097d05d735757d72ef2ef4d5a3c0da562706fd9cfa669535e797"
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build",
@@ -33,14 +30,19 @@ class Vvenc < Formula
   end
 
   test do
-    resource("test_video").stage testpath
+    resource "homebrew-test_video" do
+      url "https://ghproxy.com/https://raw.githubusercontent.com/fraunhoferhhi/vvenc/master/test/data/RTn23_80x44p15_f15.yuv"
+      sha256 "ecd2ef466dd2975f4facc889e0ca128a6bea6645df61493a96d8e7763b6f3ae9"
+    end
+
+    resource("homebrew-test_video").stage testpath
     system bin/"vvencapp",
-           "-i", testpath/"test_bunny.yuv",
+           "-i", testpath/"RTn23_80x44p15_f15.yuv",
            "-s", "360x640",
            "--fps", "60/1",
            "--format", "yuv420_10",
            "--hdr", "hdr10_2020",
-           "-o", testpath/"test_bunny.vvc"
-    assert_predicate testpath/"test_bunny.vvc", :exist?
+           "-o", testpath/"RTn23_80x44p15_f15.vvc"
+    assert_predicate testpath/"RTn23_80x44p15_f15.vvc", :exist?
   end
 end

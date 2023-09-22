@@ -1,8 +1,8 @@
 class Jenkins < Formula
   desc "Extendable open source continuous integration server"
   homepage "https://www.jenkins.io/"
-  url "https://get.jenkins.io/war/2.419/jenkins.war"
-  sha256 "895a90dd5929a38c8cc8c0342478d27a6e01470cd7e8da8c4ae51f26aa1bdf85"
+  url "https://get.jenkins.io/war/2.424/jenkins.war"
+  sha256 "592b7be5d6d7bf3a6028ffaa0c71b4f5b887cd1e659f9f97fecbbe4d2d4843cc"
   license "MIT"
 
   livecheck do
@@ -11,13 +11,15 @@ class Jenkins < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f481799c352c61bc3f483c0b2a82614d06a8d5058936cead3dfd3428b5a2f505"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f481799c352c61bc3f483c0b2a82614d06a8d5058936cead3dfd3428b5a2f505"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "f481799c352c61bc3f483c0b2a82614d06a8d5058936cead3dfd3428b5a2f505"
-    sha256 cellar: :any_skip_relocation, ventura:        "f481799c352c61bc3f483c0b2a82614d06a8d5058936cead3dfd3428b5a2f505"
-    sha256 cellar: :any_skip_relocation, monterey:       "f481799c352c61bc3f483c0b2a82614d06a8d5058936cead3dfd3428b5a2f505"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f481799c352c61bc3f483c0b2a82614d06a8d5058936cead3dfd3428b5a2f505"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b357f0ee192166394fbe23e1b0bec805dbf9dffca5ae1a8760cc1a032dc9e8bb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, sonoma:         "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, ventura:        "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, monterey:       "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bc2b127cfe05e9ab74644299ef307dda51b22c6900a87e03e4f4a4ecd664c902"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f01728655dd4eedd3e9ad92765ac10a6f02ca79ba78371c270031787630d9e02"
   end
 
   head do

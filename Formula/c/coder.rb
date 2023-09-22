@@ -1,18 +1,18 @@
 class Coder < Formula
   desc "Tool for provisioning self-hosted development environments with Terraform"
   homepage "https://coder.com"
-  url "https://ghproxy.com/https://github.com/coder/coder/archive/refs/tags/v2.0.2.tar.gz"
-  sha256 "a9c2a996cb916ef0d74c1cdd2ccf30f95b9953618ce2d504a7477eb2b8b655c2"
+  url "https://ghproxy.com/https://github.com/coder/coder/archive/refs/tags/v2.1.5.tar.gz"
+  sha256 "1a84e22d9dfd63fc0f25ab2a65d6c968f44d32c8048b9770ac57282221abb171"
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b186e397d831c685fd02e1fc14164873628aab73ae4bff23f95516c058c26fef"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86a3163174a7ece89c2377803f22bc4cf6cd0223ce5e7170c2d17f098793f762"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2b171b0eb5e9dada9123942f078e600fcd35b7599ab584f8bec95020bb4ac929"
-    sha256 cellar: :any_skip_relocation, ventura:        "b935c29a44f0c97c9d4849029d3d8fd1a489c2fabcd938b21fe7ddf1aba88592"
-    sha256 cellar: :any_skip_relocation, monterey:       "521fd048b8d1fe9a7f1a7755f0c10bf6a668ca6970540a0a01193dc1e7e93cf0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f56154a06f23fdfa286d4300e27e946614d197c92cf58e16372866d2df4470ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d7082c8c547ea6bf5c0bde81b809cd4f667ae6f1ca4ea843ce62b00bb89e792"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "222f401e5096646024d4006352987fa0c1540f37dde8562461ab298ef57dfbae"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f41d00fd8a9c63ab21214712f41ad7316402cdc66041fe4270301c7485590a39"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "27fe72ffda47fc878939eaecb9a07e2bd47129657da919c3d43f5bc2642da69a"
+    sha256 cellar: :any_skip_relocation, ventura:        "fa654f59a4f5b3b303ad0bb791ef4d7b6edc7c44eea6b9c81ab87b76ba1d4f21"
+    sha256 cellar: :any_skip_relocation, monterey:       "c2ad246790e36b6ab1785174569abf66cc0ef3968ad0d5ac3aef7d89eaaf2170"
+    sha256 cellar: :any_skip_relocation, big_sur:        "f89c7440eda2e5981254917a4b3900e20e175b2b56e5a907c07ad9543682296a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "19acd3ec7080028a64710264551eec6746fc60e218955b884a59a26427d71f8b"
   end
 
   depends_on "go" => :build
@@ -20,14 +20,18 @@ class Coder < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/coder/coder/buildinfo.tag=#{version}
+      -X github.com/coder/coder/v2/buildinfo.tag=#{version}
+      -X github.com/coder/coder/v2/buildinfo.agpl=true
     ]
-    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/coder"
+    system "go", "build", *std_go_args(ldflags: ldflags), "-tags", "slim", "./cmd/coder"
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/coder version")
+    version_output = shell_output("#{bin}/coder version")
+    assert_match version.to_s, version_output
+    assert_match "AGPL", version_output
+    assert_match "Slim build", version_output
+
     assert_match "You are not logged in", shell_output("#{bin}/coder netcheck 2>&1", 1)
-    assert_match "postgres://", shell_output("#{bin}/coder server postgres-builtin-url")
   end
 end

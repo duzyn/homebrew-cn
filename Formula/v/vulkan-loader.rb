@@ -1,8 +1,8 @@
 class VulkanLoader < Formula
   desc "Vulkan ICD Loader"
   homepage "https://github.com/KhronosGroup/Vulkan-Loader"
-  url "https://ghproxy.com/https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v1.3.261.tar.gz"
-  sha256 "85d13004c81b032baf7cc4c2de0b2cb57072a86855d7ca7fc9a813621da275ba"
+  url "https://ghproxy.com/https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v1.3.263.tar.gz"
+  sha256 "9c84474c9668946ad0ff291df3147e109ede5bd417e512cdfe6c71e2a231dc08"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Loader.git", branch: "main"
 
@@ -12,13 +12,15 @@ class VulkanLoader < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "0238beac030dd66e84edbc34df4f8e438bb7e9c76d3e0f5694668aab3ef7fdf3"
-    sha256 arm64_monterey: "8d1ec8d92636cbbd807716004b4fd234b0d344b21d71712b7ca1485da0091e35"
-    sha256 arm64_big_sur:  "6e956563bb0f2da079297e14db106c16f33704ce9b72f89509a7d72063443ea5"
-    sha256 ventura:        "a92cc0620126b8ad42f617c34c990382773d0f3521b935dfbed62bfa58075a92"
-    sha256 monterey:       "1c7f74caf60512a5a32ff71c8aa0272ffbd7f60dff4e08c9779da478f6362fbe"
-    sha256 big_sur:        "212181b0f63c1728f678b43235688115587bfad9dbf601610ef01a9459e2de68"
-    sha256 x86_64_linux:   "649a17ad304e099c0b10119ad5846478a9cb1dbb74fa6affb1ab816ee4b4a36e"
+    sha256 arm64_sonoma:   "ac9880862e84d1305e68220203c91a94a843b02ec388e1cf0021db17f2a4489f"
+    sha256 arm64_ventura:  "aa4de5de39fae458f9456a1cd77665305a88a4d0eaf3d2c6f24d84ee379ae438"
+    sha256 arm64_monterey: "2078f25536074f4161a23b5294b00e27d536e219a35a4b83176bb0c8448c0038"
+    sha256 arm64_big_sur:  "859ed627cad7e34998269762381eebfd8be45c599607ab86149f16aff598baf5"
+    sha256 sonoma:         "a3183fb36ab31dc8a45f457634e97796806fa9be772ab52048e38d83d434914f"
+    sha256 ventura:        "745c5b5a127b3b49da0950221062f1714d9e8746d326eca4c8695a9d21162f8e"
+    sha256 monterey:       "162cd814aefd12e232161bde957fb9f1bbabf3eb499715a12dec34643221a883"
+    sha256 big_sur:        "c29e15d5014bfbe1e288673923b4e1a54182e5aadf7a59925f39a705ccdeb593"
+    sha256 x86_64_linux:   "767d18fab83036a1c5bbfb93746e2f87e7137e4e1b792ff003fc48e3fffd865e"
   end
 
   depends_on "cmake" => :build

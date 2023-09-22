@@ -1,8 +1,8 @@
 class Netdata < Formula
   desc "Diagnose infrastructure problems with metrics, visualizations & alarms"
   homepage "https://netdata.cloud/"
-  url "https://ghproxy.com/https://github.com/netdata/netdata/releases/download/v1.42.0/netdata-v1.42.0.tar.gz"
-  sha256 "10c5685ba184a348fb75d0ce2d011bf9227774a07de60197a81b04373d5ea333"
+  url "https://ghproxy.com/https://github.com/netdata/netdata/releases/download/v1.42.4/netdata-v1.42.4.tar.gz"
+  sha256 "412f9612341132e978f76da0e4b26dd22f3ba4df20f063083ddf2e7b75d6bc9e"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,13 +11,13 @@ class Netdata < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "9d50638615e89e2dfda3388f386a21040004763a02547ada4b8b62903b44d0b0"
-    sha256 arm64_monterey: "f047d2792f98c8817ac797328d4843146e6a9ea2cfc7a8d80c349776235bb137"
-    sha256 arm64_big_sur:  "747f9ce8b430cd7f1ea7660f4dd05a2f18708bbead1ef75b74b685d2f75c7d37"
-    sha256 ventura:        "1a7b4b9b7b9348e0f58d5b9b18b4778ed6a9feea842c1d5887eadfc01421cb0e"
-    sha256 monterey:       "57f3c8a9acf9d94a4fa944bec24c3bcb3469b03c2d607d5e921788cb38563fb8"
-    sha256 big_sur:        "d25be43f0d5af5a16191526870d85bbb98d7bed3a8db6784945be481682f2311"
-    sha256 x86_64_linux:   "5d348442d8436cfd585c2a0032ca0a0956f57f41ba0ca7392665bdb8d680c0bd"
+    sha256 arm64_ventura:  "7c8d8df5ee9302c30c50e24fa58e22a7093bc9528a4325497267584744013032"
+    sha256 arm64_monterey: "2782ae3c60e121fe779eb961f066d142370f609b3585f460e730db6a12803331"
+    sha256 arm64_big_sur:  "f62cfc58feb690b4169ef7d69cad35474aaf42c051cc0c0f98ae97f2f9b51e9b"
+    sha256 ventura:        "84ed2c860ad536ad6e6b4f3761753075fe200ee5e3caf42059e71f603c2ea7a0"
+    sha256 monterey:       "aacb2516f927bb427de7d2869fd90b9c6147cd9187524ab92fc5bbc6e4416a57"
+    sha256 big_sur:        "2543ca3b7ed49581f3573181bef00974bab1c5b8eddbbf1a3f1450b9442766cc"
+    sha256 x86_64_linux:   "95fad5695a25b665e9f0945fde0d6899ab860cbb414eda9d249ee23f1fc4bef2"
   end
 
   depends_on "autoconf" => :build
@@ -44,6 +44,11 @@ class Netdata < Formula
   end
 
   def install
+    # daemon/buildinfo.c saves the configure args and certain environment
+    # variables used to build netdata. Remove the environment variable that may
+    # reference `HOMEBREW_LIBRARY`, which can make bottling fail.
+    ENV.delete "PKG_CONFIG_LIBDIR"
+
     # https://github.com/protocolbuffers/protobuf/issues/9947
     ENV.append_to_cflags "-DNDEBUG"
 

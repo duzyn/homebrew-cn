@@ -1,15 +1,19 @@
 cask "languagetool" do
-  version "1.5.1"
-  sha256 "8c7333ec336e7906153740d3329a2b32130d60573d1106140fb15be1637e4767"
+  version "1.5.4"
+  sha256 "f272c787f625f07760aab5f48413da58f2215c7e2671c46dca82659d199fe942"
 
   url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version}.dmg"
   name "LanguageTool for Desktop"
   desc "Grammar, spelling and style suggestions in all the writing apps"
   homepage "https://languagetool.org/"
 
+  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
+  # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://languagetool.org/download/mac-app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   depends_on macos: ">= :big_sur"

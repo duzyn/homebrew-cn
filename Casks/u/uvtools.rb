@@ -1,9 +1,9 @@
 cask "uvtools" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.15.1"
-  sha256 arm:   "28d71721d1b1628d263ccd31387ff2914bb5798a075a0dd07c9c2179c97acee0",
-         intel: "c7d029aa9bc88d7611510370852bb3ba3b22ac7910e1aab0597909a643d0f97c"
+  version "4.0.1"
+  sha256 arm:   "eb429e97026587a2b69bb2282995d2a35c3734095a06bbd7af7d9dae9136fe4d",
+         intel: "4224e919690da844a50cd096de4ea0d99dfce85641f0522d4466d1e50f57bd24"
 
   url "https://ghproxy.com/https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-#{arch}_v#{version}.zip"
   name "UVtools"

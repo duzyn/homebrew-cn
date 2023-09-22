@@ -1,6 +1,6 @@
 cask "preform" do
-  version "3.30.0,220_39707"
-  sha256 "c4c441b0647b8e473dd46a979f0c737a84ec52a1e2cb122ca364dd7d6f694781"
+  version "3.31.1,235_44845"
+  sha256 "30936dad4ced98bd0e06dcfbe7acf62203f8df0596a80baa0cc37a10d2b4daf1"
 
   url "https://downloads.formlabs.com/PreForm/Release/#{version.csv.first}/PreForm_mac_#{version.csv.first}_release_releaser_#{version.csv.second}.dmg"
   name "PreForm"

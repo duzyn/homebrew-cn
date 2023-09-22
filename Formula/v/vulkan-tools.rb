@@ -1,19 +1,19 @@
 class VulkanTools < Formula
   desc "Vulkan utilities and tools"
   homepage "https://github.com/KhronosGroup/Vulkan-Tools"
-  url "https://ghproxy.com/https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.3.261.tar.gz"
-  sha256 "2e9a1b380f4e494934c72e2b2fb77d2c3ae03ba19fd36ffad65529413108db2f"
+  url "https://ghproxy.com/https://github.com/KhronosGroup/Vulkan-Tools/archive/refs/tags/v1.3.263.tar.gz"
+  sha256 "afd5709f54c6d224dd7f2d9aef1fb931b5f275bfd4cc5e265fd47be4898b5277"
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Tools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "9e56da40ef8dba6ee29dcbf4444cad4549710de6b0d641c6747050cc5f1bfa2c"
-    sha256 cellar: :any,                 arm64_monterey: "44eb826281716e1127cab1255365e70b272df13b604fa94def82d8e2133fec7a"
-    sha256 cellar: :any,                 arm64_big_sur:  "20b5e97125ce636c33b92f3cba0567cc733d6a209ce1e10de9e0d56b46e97759"
-    sha256 cellar: :any,                 ventura:        "b2669e6545da86fa9d319d369c4ea2e69a0a7f8c538d634dd61b98dc0b8e1467"
-    sha256 cellar: :any,                 monterey:       "eda9e78ba210dded38a0d38df8f6dada42260ca680c162f1747d93e369ca3990"
-    sha256 cellar: :any,                 big_sur:        "df26604836fadf60a89e8726628b8576d1fa1d6cc751bfe5040edd8829885d3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7ff22b6e07a2982ea033d7167a206f15c601fca0056c6b619fe823178e884491"
+    sha256 cellar: :any,                 arm64_ventura:  "8463c31119eda9659fa4fa1aaed4a7e45f30c3d2ff5d320c7af954f9bcfec5a7"
+    sha256 cellar: :any,                 arm64_monterey: "320d19b6cc5c908dec1d6a92fd921ad6f549bad5593ea14b7480c431c3fec208"
+    sha256 cellar: :any,                 arm64_big_sur:  "acff2c38a81fde78a24c943e3a81ffe12191d69dd1ab81a6045142ddea4567e7"
+    sha256 cellar: :any,                 ventura:        "3f5d4ac9cbd444f58bcae7948ae8835e4dd4a5f8a8248390214df90b33d960d0"
+    sha256 cellar: :any,                 monterey:       "31d4fb13c68bca48fea0d2c6faccf19fcc032ee1f138e690346d7eed38a0429b"
+    sha256 cellar: :any,                 big_sur:        "fdd17e51aa93042e752666009476289fb2c7c5b5af564b6ebdba307324ec9be1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "805a39b1321ad5cef6befac18839040380e5237b05d8c5faf61de009cfeda903"
   end
 
   depends_on "cmake" => :build

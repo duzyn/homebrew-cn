@@ -2,8 +2,8 @@ class FaasCli < Formula
   desc "CLI for templating and/or deploying FaaS functions"
   homepage "https://www.openfaas.com/"
   url "https://github.com/openfaas/faas-cli.git",
-      tag:      "0.16.12",
-      revision: "e625c75f2b16f6b8e97777762bc2e246baf26a03"
+      tag:      "0.16.14",
+      revision: "d12888b56367056c23ae14082428bd53ba3dfcb0"
   license "MIT"
   head "https://github.com/openfaas/faas-cli.git", branch: "master"
 
@@ -13,13 +13,13 @@ class FaasCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "19b2a03d8c332839ef2ede940d9687be2f79d3608304bc4327e058483c7a037d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "19b2a03d8c332839ef2ede940d9687be2f79d3608304bc4327e058483c7a037d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "19b2a03d8c332839ef2ede940d9687be2f79d3608304bc4327e058483c7a037d"
-    sha256 cellar: :any_skip_relocation, ventura:        "9ee1e7db18f5f91684452316b5ddc6c189c7d22eef847e8632912979d4f43043"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ee1e7db18f5f91684452316b5ddc6c189c7d22eef847e8632912979d4f43043"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9ee1e7db18f5f91684452316b5ddc6c189c7d22eef847e8632912979d4f43043"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5e933ea35be18d504fd0b963ab56eff7c7197fa7c0b57ff0b84955fce4fb014"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4fc5873a722e8b2749ba49240dbdd43209b5c2e5e7624fb3e982d1e4e2ca127c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "804414eec9129f5a52fda9a14186507c608632bf3b31a701227678c316cb2a73"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4022aa0c49bc51938673247c697ab69f6e47ced2bff42a4af29f3d1771fe3868"
+    sha256 cellar: :any_skip_relocation, ventura:        "187ede3e425b4221f31331231034f9d4a325e1f1aad74f41b287e09dd179395b"
+    sha256 cellar: :any_skip_relocation, monterey:       "bf71ba2460bfb84d84c06d47f51a0fa417a3334e2300effed0d3f11ce972ca0b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "bda8cda35059d4d1c03ffc64c6d9620d04cdf8a79542ee80d1b646964aaf5e01"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "95534c90d0be8ef093d9f93a1e395e6ffb96a67d1552aa92dc2b681c47ab0eb8"
   end
 
   depends_on "go" => :build

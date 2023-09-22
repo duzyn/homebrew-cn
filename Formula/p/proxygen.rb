@@ -1,19 +1,20 @@
 class Proxygen < Formula
   desc "Collection of C++ HTTP libraries"
   homepage "https://github.com/facebook/proxygen"
-  url "https://ghproxy.com/https://github.com/facebook/proxygen/releases/download/v2023.08.14.00/proxygen-v2023.08.14.00.tar.gz"
-  sha256 "b7f1d2676da63fb1868b84331b7b9a7e8f15cafe496155554c67da176720f7b5"
+  url "https://ghproxy.com/https://github.com/facebook/proxygen/releases/download/v2023.09.04.00/proxygen-v2023.09.04.00.tar.gz"
+  sha256 "e4db076db908b003a23ac139b6c433d8c34daa77cbdea33fd5a77bf9889dcdb2"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/facebook/proxygen.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "86ed139ca5916907dfbb35a8ba7d45d6c52d8cad068d6ba1d147b7ee889f64c9"
-    sha256 cellar: :any,                 arm64_monterey: "ee3b273b198a8dc4624a2f02f440adee2c0b4a1b65ac74e664b7a154c07023d6"
-    sha256 cellar: :any,                 arm64_big_sur:  "70b54af3ffd87369e59778d9c4c6dd878ea989eeaf5e57bc40d39fad54a9f686"
-    sha256 cellar: :any,                 ventura:        "67166dfb207e984e9dbef43b9c3349c4d543159d14b4551b4645eae55a2fc904"
-    sha256 cellar: :any,                 monterey:       "0a389c5a1e7d39215f34901ff3ef26f514a6bda30e4f95aa1e807074e30db2f2"
-    sha256 cellar: :any,                 big_sur:        "9778ed394c4aca9b132b8dcee2d523663ea78687cbf83e8db7baf31e5a3bd984"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f07586b9a71d264aac6737d1326721dcdfbc1204c4228337dc00e4066908aa44"
+    sha256 cellar: :any,                 arm64_ventura:  "a119242adeb58d1f7be87197937ef4a6afe23c8d92457b7f2bcbb0568dd0d937"
+    sha256 cellar: :any,                 arm64_monterey: "19fd3dbc3be2cb8138486d50fa9ef72cf346fbf82fdbfbd890f37bc9d93626cf"
+    sha256 cellar: :any,                 arm64_big_sur:  "3c1c720cd27f9cf3fbde369cf90922376fd1582770ac574cebde012dd4698990"
+    sha256 cellar: :any,                 ventura:        "089d1586683128d15776e9a0c8e05f3ed7f24cfa61259f8f1fde679d30892eb6"
+    sha256 cellar: :any,                 monterey:       "1b73b5d8ce8f68854e06e684f1a257e2cb6417a0ff4834c9a424e0d7e0ec89d1"
+    sha256 cellar: :any,                 big_sur:        "cff17fef29debe312082af94a15f42b869b141c5a7b2751565706d6e5735e242"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "594c7b537a70c796b14a9e941a8883cd97c252391a6927e5b78068fcc643a968"
   end
 
   depends_on "cmake" => :build

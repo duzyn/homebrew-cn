@@ -1,6 +1,6 @@
 cask "sonos-s1-controller" do
-  version "57.17-43140,jqeqdtdi"
-  sha256 "071cbb3692ac5bad7547798a8e4c0680f84de1f39c05bcb409bcac404f91a90a"
+  version "57.18-44230,rdiahrpn"
+  sha256 "3ace7d55daa9a66be88ac49cc494fd14949603c586159947d77fc4fc16486abf"
 
   url "https://update-software.sonos.com/software/#{version.csv.second}/Sonos_#{version.csv.first}.dmg"
   name "Sonos S1"
@@ -9,11 +9,9 @@ cask "sonos-s1-controller" do
 
   livecheck do
     url "https://www.sonos.com/en/redir/controller_software_mac"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{software/(\w+)/Sonos[._-]v?(\d+(?:.\d+)+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{software/(\w+)/Sonos[._-]v?(\d+(?:.\d+)+)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

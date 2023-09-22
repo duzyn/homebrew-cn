@@ -1,23 +1,32 @@
 class CargoUdeps < Formula
   desc "Find unused dependencies in Cargo.toml"
   homepage "https://github.com/est31/cargo-udeps"
-  url "https://ghproxy.com/https://github.com/est31/cargo-udeps/archive/refs/tags/v0.1.41.tar.gz"
-  sha256 "f150a544a8aa5b3f604113a13c6a8fc0e0cf3feecd47c2c015b07b5bf80f6cfb"
+  # TODO: check if we can use unversioned `libgit2` at version bump.
+  # See comments below for details.
+  url "https://ghproxy.com/https://github.com/est31/cargo-udeps/archive/refs/tags/v0.1.42.tar.gz"
+  sha256 "b89c4ba44112a5b9d544bc8555a69f2fa24f44a0a389035cd38f19827a262e78"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "f767a65e795a26cdc49633b0fad577070b092d772508acd8c6431abc07d984c4"
-    sha256 cellar: :any,                 arm64_monterey: "b78eada65256f9056f84aff0fad0d7d2b6a4a5ca9b3674adf797ceac3d2d9bc6"
-    sha256 cellar: :any,                 arm64_big_sur:  "086dc47fd4c0171e90006d30d0cb333ea90533f20a2a0c24760051a83a537949"
-    sha256 cellar: :any,                 ventura:        "4e46153fd1eb2b0401f8e31ade16a2b60a19a1ea8e0ed8a403cd8467da0f7b0f"
-    sha256 cellar: :any,                 monterey:       "4409e567d6c8d8213277829b66b83599c98cc1063652313238de3747fa0f02c3"
-    sha256 cellar: :any,                 big_sur:        "e9d0fe88dc1dc9b9ccd0dba199a8b0e581cc6f14e8e974e77dc17198d806fa04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba93926882a6093960395b351970285403b6574b9d04d00e06616a9fb703df15"
+    sha256 cellar: :any,                 arm64_ventura:  "335521a382d7248d69e7bac2847385ef3a0dba0fc1e4da6eb1e45b28786c22c1"
+    sha256 cellar: :any,                 arm64_monterey: "be671c1ebb5ad02fb333b5c813a343969a8993f507c2cd3050481277d5258843"
+    sha256 cellar: :any,                 arm64_big_sur:  "04e54885fdb7a726858ee267bb7ebfbd9a141b6b5f275fd2c8c36c7df3ac3ffb"
+    sha256 cellar: :any,                 ventura:        "93a73f0049ad92f308ee8a0473580a0756f60cffb4365032d7c0743a8cb11e43"
+    sha256 cellar: :any,                 monterey:       "ca9c4e79c2f41acb75219cc3e936cc38f32b7f94d3b360e9df7ba235318e63dd"
+    sha256 cellar: :any,                 big_sur:        "2f471ecb6d65e02479ec193e1398bd4d18f350d0f1d383d045c6419097856621"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2453904dc8a8b9593261d08d5f9e02fca70daefc8af80faf3a9cf2bfb5d7e43e"
   end
 
   depends_on "rust" => :build
   depends_on "rustup-init" => :test
-  depends_on "libgit2"
+  # To check for `libgit2` version:
+  # 1. Search for `libgit2-sys` version at https://github.com/est31/cargo-udeps/blob/v#{version}/Cargo.lock
+  # 2. If the version suffix of `libgit2-sys` is newer than +1.6.*, then:
+  #    - Migrate to the corresponding `libgit2` formula.
+  #    - Change the `LIBGIT2_SYS_USE_PKG_CONFIG` env var below to `LIBGIT2_NO_VENDOR`.
+  #      See: https://github.com/rust-lang/git2-rs/commit/59a81cac9ada22b5ea6ca2841f5bd1229f1dd659.
+  depends_on "libgit2@1.6"
   depends_on "libssh2"
   depends_on "openssl@3"
 
@@ -47,9 +56,9 @@ class CargoUdeps < Formula
     # Show that we can use a different toolchain than the one provided by the `rust` formula.
     # https://github.com/Homebrew/homebrew-core/pull/134074#pullrequestreview-1484979359
     ENV["RUSTUP_INIT_SKIP_PATH_CHECK"] = "yes"
-    system "#{Formula["rustup-init"].bin}/rustup-init", "-y", "--no-modify-path"
+    rustup_init = Formula["rustup-init"].bin/"rustup-init"
+    system rustup_init, "-y", "--profile", "minimal", "--default-toolchain", "beta", "--no-modify-path"
     ENV.prepend_path "PATH", HOMEBREW_CACHE/"cargo_cache/bin"
-    system "rustup", "default", "beta"
 
     crate = testpath/"demo-crate"
     mkdir crate do
@@ -69,7 +78,7 @@ class CargoUdeps < Formula
     end
 
     [
-      Formula["libgit2"].opt_lib/shared_library("libgit2"),
+      Formula["libgit2@1.6"].opt_lib/shared_library("libgit2"),
       Formula["libssh2"].opt_lib/shared_library("libssh2"),
       Formula["openssl@3"].opt_lib/shared_library("libssl"),
       Formula["openssl@3"].opt_lib/shared_library("libcrypto"),

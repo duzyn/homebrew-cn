@@ -1,23 +1,25 @@
 class Pixi < Formula
   desc "Package management made easy"
   homepage "https://github.com/prefix-dev/pixi"
-  url "https://ghproxy.com/https://github.com/prefix-dev/pixi/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "50a266976c4d6c3ea82be68ea112c2abff522241e4493285cef9b79063c4fc22"
+  url "https://ghproxy.com/https://github.com/prefix-dev/pixi/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "05e991faecde5cf3814db802c25ca44b09cdbe067cadd5ae008026d8b91eba43"
   license "BSD-3-Clause"
   head "https://github.com/prefix-dev/pixi.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d949c996ca66164148853845196551580d31b19938635b850b778ff37b5d1f12"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "31a4c3daaf86edd1d258ce88959d1ff7a04eb9f7a01ae9b8a0b6afcb77276c99"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ad0e214d833786e1d0b5293905553995dfa9b8a26cbbec0fe1313032c2bbc21a"
-    sha256 cellar: :any_skip_relocation, ventura:        "49ed054b54ae66554d1cfd715ec6777302951303a08324de7fc1f7e2910d9d39"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae1c0703d7ca09d780f4d2c136d1713997a3b36cfcf0fc087607ac0951e8e527"
-    sha256 cellar: :any_skip_relocation, big_sur:        "5586002d546c66ad12a9b3d29643673b8e90a7d600d05518010274a089e3378f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57b28bf9349516128e7704596247461686b0f7c838315c6b1af4dc8ccf719c9b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8d5bb1fdf87aeb729ddf45e7011ed2c973135d217753b4a8234b3484e4059198"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2adfee511755124c127e27081b2fa87465c6dccafaaaba6ab1fc9811e92cf625"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8daaff6976517bd57edbf47ad335fd8c21070eebb1b4fc509d9f1a9e80bef826"
+    sha256 cellar: :any_skip_relocation, ventura:        "361c570320fc1d907010a7bb6b38241601a6b8de13468b04d1eb87ba2057e7bf"
+    sha256 cellar: :any_skip_relocation, monterey:       "c485bff2077c48d2052bedb5bbe74c5b671871204c883b941b8d8e97afc1bab9"
+    sha256 cellar: :any_skip_relocation, big_sur:        "d98290e7bc41ba597e64dd417d64802c68c0da48627199ea0599822240d7e0b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96afd29f0a58de4b87410c3a9095c0c1959f736d669d7eb8559d0aaba5932bc8"
   end
 
   depends_on "cmake" => :build
   depends_on "rust" => :build
+
+  uses_from_macos "bzip2"
 
   on_linux do
     depends_on "pkg-config" => :build

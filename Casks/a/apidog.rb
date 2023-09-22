@@ -1,10 +1,10 @@
 cask "apidog" do
   arch arm: "-macOS-arm64"
-  livecheck_folder = on_arch_conditional arm: "mac-arm64", intel: "mac"
+  livecheck_folder = on_arch_conditional arm: "-arm64"
 
-  version "2.3.3"
-  sha256 arm:   "a2727d86f4fc0298bc8ae4a351e7c44e29ca07ac1e422b52764bbe6d879aa5f8",
-         intel: "fb8f1615ce3230d4bf1eb295f660e5f9d076f9637aaf8398d9a7b044df17d9af"
+  version "2.3.16"
+  sha256 arm:   "c9d5dbcf5726733eeb94226cea15197d5a9d20004695033b2de424761c97c35b",
+         intel: "d632dd9ff33b81dfe2e5230f8ce138b9f20dc0b8012f4f2ab07dbab0e983b729"
 
   url "https://assets.apidog.com/download/#{version}/Apidog#{arch}-#{version}.dmg"
   name "Apidog"
@@ -12,11 +12,12 @@ cask "apidog" do
   homepage "https://apidog.com/"
 
   livecheck do
-    url "https://api.apidog.com/api/v1/configs/client-updates/#{version}/#{livecheck_folder}/latest-mac.yml"
+    url "https://api.apidog.com/api/v1/configs/client-updates/latest/mac#{livecheck_folder}/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Apidog.app"
 

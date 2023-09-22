@@ -1,9 +1,9 @@
 cask "devpod" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.3.4"
-  sha256 arm:   "ed76446a47279d21c8e4b091f495d46c26dde56c27b58b514ef6804f28f781de",
-         intel: "c3a048db8c5cb3ec0183d936bcc63830410f8821bbd7405739a1a198d1ff9b1a"
+  version "0.3.7"
+  sha256 arm:   "c8e03f04e2d1a0f5a42118989d69f33183e694a6bf071e1fe3defbb484cfebed",
+         intel: "9a0cbbe9e7b6e75760d4a739b5855d31eaeb4444e21d13cb8f5155393a04ac32"
 
   url "https://ghproxy.com/https://github.com/loft-sh/devpod/releases/download/v#{version}/DevPod_macos_#{arch}.dmg",
       verified: "github.com/loft-sh/devpod/"
@@ -15,6 +15,15 @@ cask "devpod" do
   depends_on macos: ">= :high_sierra"
 
   app "DevPod.app"
+  binary "#{appdir}/DevPod.app/Contents/MacOS/devpod-cli", target: "devpod"
 
-  zap trash: "~/.devpod"
+  zap trash: [
+    "~/.devpod",
+    "~/Library/Application Support/sh.loft.devpod",
+    "~/Library/Caches/sh.loft.devpod",
+    "~/Library/Logs/sh.loft.devpod",
+    "~/Library/Preferences/sh.loft.devpod.plist",
+    "~/Library/Saved Application State/sh.loft.devpod.savedState",
+    "~/Library/WebKit/sh.loft.devpod",
+  ]
 end

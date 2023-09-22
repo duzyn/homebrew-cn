@@ -1,28 +1,30 @@
 cask "xtool-creative-space" do
   arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "apple", intel: "intel"
 
   on_arm do
-    version "1.3.21,28.268.1686756140022,2-2023-06-14-22-29-31"
-    sha256  "c629bd7ccb29d119d9d4232968d4bf3e6d4ce6f2f4079d751402ce9baa5f9670"
+    version "1.5.11,28,c2865216-d6df-49f2-82f4-4b95f1907ed2,2023-09-04-15-34-04"
+    sha256  "b8980a35a8b28252c2fe2f700ebf1e04befd0f7e48489cd9a041670dc1740838"
   end
   on_intel do
-    version "1.3.21,16.267.1686754770561,2-2023-06-14-22-30-04"
-    sha256 "64a695f3de1afd5d0bf439176f9f2347453c9d1c2e8a4718e7eef639cb9cf034"
+    version "1.5.11,16,991f51bd-09a7-4edd-89d6-340706b219fc,2023-09-04-15-33-29"
+    sha256 "7d3850bf1bf1b10042c5ef7f103ad044f8b1a5bd0064dece1fd0514ad5716f1b"
   end
 
-  url "https://res-us.makeblock.com/ms/updater/production/packages/#{version.csv.second.tr(".", "/")}/xTool%20Creative%20Space-#{version.csv.first}-#{version.csv.third}-#{arch}.dmg",
-      verified: "res-us.makeblock.com/ms/updater/production/packages/"
+  url "https://res-us.makeblock.com/efficacy/xcs/production/packages/#{version.csv.second}/#{version.csv.third}/xTool%20Creative%20Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg",
+      verified: "res-us.makeblock.com/efficacy/xcs/production/packages/"
   name "xTool Creative Space"
   desc "Design and control software for xTool laser machines"
   homepage "https://www.xtool.com/pages/software"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?packages/(.*)/xTool\s?Creative\s?Space[._-](\d+(?:\.\d+)+)-(\d+(?:-\d+)+)-#{arch}\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[1]},#{match[0].tr("/", ".")},#{match[2]}"
-      end
+    url "https://s.xtool.com/software/download/macos-#{livecheck_arch}-chip"
+    regex(%r{/([^/]+)/([^/]+)/xTool.*Creative.*Space[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)[._-]#{arch}\.dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[3]},#{match[1]},#{match[2]},#{match[4]}"
     end
   end
 

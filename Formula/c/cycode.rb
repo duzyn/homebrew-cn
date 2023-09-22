@@ -1,20 +1,20 @@
 class Cycode < Formula
   include Language::Python::Virtualenv
 
-  desc "Boost software development security via secret scanning, SAST, SCA, and IaC"
+  desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq-public/cycode-cli"
-  url "https://files.pythonhosted.org/packages/66/aa/0a1fd9601299384a87706463254a0cdd682fa982585ab6a8e872fa1e7d1c/cycode-1.1.0.tar.gz"
-  sha256 "d9a359be988a09b96fc487b958b515a62447bb1871cf3b77a17c4f47a8c4e782"
+  url "https://files.pythonhosted.org/packages/72/ea/2280271192e2669a5254e0885d6d103e154267e5fda87d9d56e1b5d007c1/cycode-1.2.0.tar.gz"
+  sha256 "2b10033b2f80871618587d64ced932ee92fab928d96cd6476ff536597724b1a4"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d17ad737b5d02b7317a8682ea2b6a5dc7c7c718dcce7f51eb1a47e301c932eb7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b8b18d5df7298c734758b89fb4e1108e762b32e6c04574358c27ff3afe4cb60d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4b9511da5d1ff0ae169ef16f3075927e0dc11d85ab45a21b203afdc9a8d4d501"
-    sha256 cellar: :any_skip_relocation, ventura:        "8b027c6890506589ef5b321f639a337e789c991cc0fe7c8dc3e13dbba8b68926"
-    sha256 cellar: :any_skip_relocation, monterey:       "93abea1fe859d90386db84d6c5589ab15712176e9477ec079e0902dd2466b0b7"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f781608fc40e88da6a8b155bfd244c17833691753247b122cbf56d0b4749fae7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f73865a2df332c119ad2f24716ac02970c1162340373e308015a2952dc4c7303"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "67ca27d79d4f8545e891427cce7b91b832e5152f92a5353bbc14c64d15bb8bd3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a990d8a8c143ce9e1f003ffa2625a7fcdbfe6d09ba92a3084ba5758b978064e6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "ca297adcf9699467ff9fe1d07069827481df8d4ffd85bf6c2874805e962775bc"
+    sha256 cellar: :any_skip_relocation, ventura:        "8d9091e83c6bccf94c1ff1cbb396bee3971131fdd4bdf8cbc7da64c8db75dce9"
+    sha256 cellar: :any_skip_relocation, monterey:       "353ee2369966c09b0feb131b42ca215debaeb16ad6e1899f1b77cdfcce228720"
+    sha256 cellar: :any_skip_relocation, big_sur:        "aae888cc51d00be052dcc7b966adb0d4b21e219e3e43f8d53cafa489cddb12ba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "93088e826daab9b2acfce0bc4049d5655b7c22af4fd3ef08897546ace0afcaf3"
   end
 
   depends_on "python-certifi"
@@ -43,8 +43,8 @@ class Cycode < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/72/bd/fedc277e7351917b6c4e0ac751853a97af261278a4c7808babafa8ef2120/click-8.1.6.tar.gz"
-    sha256 "48ee849951919527a045bfe3bf7baa8a959c423134e1a5b98c05c20ba75a1cbd"
+    url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
+    sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
   end
 
   resource "colorama" do
@@ -58,8 +58,8 @@ class Cycode < Formula
   end
 
   resource "gitpython" do
-    url "https://files.pythonhosted.org/packages/87/56/6dcdfde2f3a747988d1693100224fb88fc1d3bbcb3f18377b2a3ef53a70a/GitPython-3.1.32.tar.gz"
-    sha256 "8d9b8cb1e80b9735e8717c9362079d3ce4c6e5ddeebedd0361b228c3a67a62f6"
+    url "https://files.pythonhosted.org/packages/a7/bc/4970a84934f8783cbd7851703531742977aa6fb77a2128401e5ba3c5989f/GitPython-3.1.36.tar.gz"
+    sha256 "4bb0c2a6995e85064140d31a33289aa5dce80133a23d36fcd372d716c54d3ebf"
   end
 
   resource "idna" do
@@ -88,8 +88,8 @@ class Cycode < Formula
   end
 
   resource "smmap" do
-    url "https://files.pythonhosted.org/packages/21/2d/39c6c57032f786f1965022563eec60623bb3e1409ade6ad834ff703724f3/smmap-5.0.0.tar.gz"
-    sha256 "c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936"
+    url "https://files.pythonhosted.org/packages/88/04/b5bf6d21dc4041000ccba7eb17dd3055feb237e7ffc2c20d3fae3af62baa/smmap-5.0.1.tar.gz"
+    sha256 "dceeb6c0028fdb6734471eb07c0cd2aae706ccaecab45965ee83f11c8d3b1f62"
   end
 
   resource "texttable" do

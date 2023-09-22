@@ -8,8 +8,8 @@ cask "stats" do
     end
   end
   on_catalina :or_newer do
-    version "2.9.4"
-    sha256 "4df566eb959ad1f359a353f0776d74bc7238b7fc727c1763d7f2d7ab1b714606"
+    version "2.9.7"
+    sha256 "17a6f3d571c88ced99e870a15176ab0b5824e61b0a0e30ecb03eaea95efdeb96"
   end
 
   url "https://ghproxy.com/https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"

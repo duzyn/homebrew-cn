@@ -4,16 +4,18 @@ class Mosh < Formula
   url "https://ghproxy.com/https://github.com/mobile-shell/mosh/releases/download/mosh-1.4.0/mosh-1.4.0.tar.gz"
   sha256 "872e4b134e5df29c8933dff12350785054d2fd2839b5ae6b5587b14db1465ddd"
   license "GPL-3.0-or-later"
-  revision 4
+  revision 7
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "cdd2d7e3bbfe43525ebe6066f1748c1c33969e442ded18547ac767a9ae14eb17"
-    sha256 cellar: :any,                 arm64_monterey: "749b88a7f9c420d0fbdca8f04149d2b4133c5e37b4b9be2e6d3efc1658867dc8"
-    sha256 cellar: :any,                 arm64_big_sur:  "bd94ec171b2ff3cb6c8f64ceecdf9894ffa49dd62059cd39c31788d80f67605b"
-    sha256 cellar: :any,                 ventura:        "f76c8c24a42a2ec22d4077fa5ab64ccc6587872d01f2ba5759083beb81ae84b1"
-    sha256 cellar: :any,                 monterey:       "f1613e143631ecd0f20c27f0e0439117076bf3a8dc40728bc04e16f4748ddc49"
-    sha256 cellar: :any,                 big_sur:        "20b801a44a511b7daba60c7f8804bfcb89b61adea449ff10081c60646ed1fb3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2cffb2c704a0df44613cb6f0db5fe9f6fafaf3459b14f07b1e700a73af156846"
+    sha256 cellar: :any,                 arm64_sonoma:   "a57a41674f05b4c46be3344975b328043f03ae2eb21d28bff3b282c78301c64a"
+    sha256 cellar: :any,                 arm64_ventura:  "5385b41abbc305384440b081b8faa976235c5ebe88d168b2fcfa7272c4b5e06d"
+    sha256 cellar: :any,                 arm64_monterey: "d256d62ac6e964b6379f33e548d047c47e163c9c41245c9122f620ff7d0eb1cd"
+    sha256 cellar: :any,                 arm64_big_sur:  "342b208be1ec535ae078d77b0877d37b013aa6d6047f3f45cc34a7d5a8d8f417"
+    sha256 cellar: :any,                 sonoma:         "7f0e73c9b7bf2a5615ea08c46f0f63897d1431a02d55cef2996212c2214119da"
+    sha256 cellar: :any,                 ventura:        "92d1339cd920ced8d784e34e8dc996b21b3d696388387e409512a49e9e09d975"
+    sha256 cellar: :any,                 monterey:       "fdf6330bdac536f37680c4132d5b2cad35b3267873c56b6a1008f02a14e08c3e"
+    sha256 cellar: :any,                 big_sur:        "5068cdd5a5de38d0829c9d5ccf02cc8dc38df1d05e295441d455e135800d4cb9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9342b1b96373c81b1cba4d93149a2c4383078f2db735cdcbc100cea536589d8"
   end
 
   head do

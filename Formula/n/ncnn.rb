@@ -1,25 +1,24 @@
 class Ncnn < Formula
   desc "High-performance neural network inference framework"
   homepage "https://github.com/Tencent/ncnn"
-  # TODO: Check if we can use unversioned `protobuf` at version bump
-  url "https://ghproxy.com/https://github.com/Tencent/ncnn/archive/refs/tags/20230517.tar.gz"
-  sha256 "71c1960e5fbbe68d2c3cf572cbf4dd08bb387ef20d2c560c074c5969c6b44bde"
+  url "https://ghproxy.com/https://github.com/Tencent/ncnn/archive/refs/tags/20230816.tar.gz"
+  sha256 "6b14105b6aba1e5fc87321b161c1d996c507f9b671a961831c8cd9987e807aa1"
   license "BSD-3-Clause"
-  revision 1
+  revision 3
   head "https://github.com/Tencent/ncnn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "ed2692c1a67318b5218593d057af9153a48b9df731d0e1058c004728ea9c4cba"
-    sha256 cellar: :any,                 arm64_monterey: "24c3b2a927d6a37089bf356074d3482223cfb8f3dc8ab5a82994a6d7cf40386f"
-    sha256 cellar: :any,                 arm64_big_sur:  "a49e000aaa89bdb6ba2f9444aa6fe044f8c7cc2d3aeade99f7897be99d423f37"
-    sha256 cellar: :any,                 ventura:        "4c2d84274d55fa4bc0df27d32fe5c23a8b944fbc70a5b000fc77fd97dbb0219f"
-    sha256 cellar: :any,                 monterey:       "67fe161648c66a67498703f993417cb86444d08818401f7010addcdd3c1935b5"
-    sha256 cellar: :any,                 big_sur:        "15d8f63b196d40b59d473380a1bf8a77300368f33c9fad1b0c36a66f1dfc8f03"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b93d162a55925582e4ac57ed0b3a935d62962337f0a3d55d38018bb3a82e6a8"
+    sha256 cellar: :any,                 arm64_ventura:  "babe021fab681fdb55b985baa47ca19aae564ef1664344453cd216b25b936217"
+    sha256 cellar: :any,                 arm64_monterey: "4c5fe412084696f8c5456d964615c7da9c5ac452279038c93f10351eef84265d"
+    sha256 cellar: :any,                 arm64_big_sur:  "f1e8b9c35d88039311138049437dd8e6cc9833db7d0fb0fc9df913ee4308f5e8"
+    sha256 cellar: :any,                 ventura:        "c41eb84ee11b7f4c5a61801428765af3e24c386d97bf51960ec64e93d64f41ca"
+    sha256 cellar: :any,                 monterey:       "1e507820cfa6e07f946ab5dfd4094308a3ae5f9273e4aa644b59b223d55ec491"
+    sha256 cellar: :any,                 big_sur:        "9f1f4ba1e2d9c8877ce39d618995f5c5c577e2f01601ebc21d651ea02f2e175e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24a8b8c0cc33fefa200d47b5366bb616c7b9105c60cccaf67ed4af3583d4d412"
   end
 
   depends_on "cmake" => :build
-  depends_on "protobuf@21"
+  depends_on "protobuf"
 
   on_macos do
     depends_on "glslang" => :build
@@ -29,6 +28,10 @@ class Ncnn < Formula
   end
 
   def install
+    # fix `libabsl_log_internal_check_op.so.2301.0.0: error adding symbols: DSO missing from command line` error
+    # https://stackoverflow.com/a/55086637
+    ENV.append "LDFLAGS", "-Wl,--copy-dt-needed-entries" if OS.linux?
+
     args = std_cmake_args + %w[
       -DCMAKE_CXX_STANDARD=11
       -DCMAKE_CXX_STANDARD_REQUIRED=ON

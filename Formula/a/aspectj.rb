@@ -1,8 +1,8 @@
 class Aspectj < Formula
   desc "Aspect-oriented programming for Java"
   homepage "https://www.eclipse.org/aspectj/"
-  url "https://ghproxy.com/https://github.com/eclipse/org.aspectj/releases/download/V1_9_19/aspectj-1.9.19.jar"
-  sha256 "3ae8f2834e72bed7327cb9aaa2773ef865fd03214ac1f2332133870f3d29c743"
+  url "https://ghproxy.com/https://github.com/eclipse-aspectj/aspectj/releases/download/V1_9_20_1/aspectj-1.9.20.1.jar"
+  sha256 "9f37838b559d9c86790c5c69645481ff873a16057bc114323b5bb14656936416"
   license "EPL-2.0"
 
   livecheck do
@@ -11,13 +11,13 @@ class Aspectj < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d0d78bf62281fa0f291004065055585e42f7ee2df5f6f7ec869457e48b0fc9be"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8971baec3ba3318208c5d95dc416bfa39da932444b19dfdf4804ef656e733f60"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2296e96ebecc4a914230d369d718d4d9c654d1cc395cdd5a10141d5196380c37"
-    sha256 cellar: :any_skip_relocation, ventura:        "0f48216a20b433eb2f2b41369fc4fff9814517940cb6a440f5604a29481002f2"
-    sha256 cellar: :any_skip_relocation, monterey:       "13cfc4a1b4632ec42b5025a92939eb3c9f4908bacebe6f92cfc665eaf45556c8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "62b8186c7bd78b64c63f35f230c56a0f26d1909006d494a457adcad264e48f44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c817855445fba97bcdd1a5cb283e43570a7aa7861b4be6b6c3175e9413f15941"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b1265454259b88ce08c2bd0a5923b6e0740c578300a2749144ccb513360744c5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "075b826056529da2c82c8a51f9f0dfe5696b5a1eb5ec5b56bacc39276d13aca7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b47d0da2aad2b92fdfbb58e9563e1629888e5e6e3d4a95f4d028edf4441697ca"
+    sha256 cellar: :any_skip_relocation, ventura:        "7122a63ee0a47f9fa04443f4b83ce2128afa1ebf879650b153840743d1b02498"
+    sha256 cellar: :any_skip_relocation, monterey:       "4bcb50e4ccfc1ab291d4960c501f012f4d03c0c615732035e3751d72d561d3bc"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9c70934a17e83ff66a81a23281052f97082b4e2fc4fcd25af08eb934a953e886"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "05a12fe5b79a589997a056513812a89277f9ff446cc5f51de1056e331f62be3e"
   end
 
   depends_on "openjdk"

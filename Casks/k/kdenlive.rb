@@ -1,6 +1,6 @@
 cask "kdenlive" do
-  version "23.04.3"
-  sha256 "aa9947dd41529c4e541e5ed429adca5dfff45d9fa359a5418d44db0a8a92510d"
+  version "23.08.1"
+  sha256 "5be8a40bbb859c32d75a2bab4a6c264a57727725ea9c6fd5ada0d6443adde05a"
 
   url "https://cdn.mirrors.ustc.edu.cn/kde/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}.dmg",
       verified: "cdn.mirrors.ustc.edu.cn/kde/stable/kdenlive/"

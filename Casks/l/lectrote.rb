@@ -1,6 +1,6 @@
 cask "lectrote" do
-  version "1.4.3"
-  sha256 "a69423ff98cb1a29ed584ced61d283b4d39058d9fdc21baa4e3748bf76aec23e"
+  version "1.4.5"
+  sha256 "e0aca6c4348e9e96a45a81c4f38a937686f59f492d391d626fcb9f8791a63b4f"
 
   url "https://ghproxy.com/https://github.com/erkyrath/lectrote/releases/download/lectrote-#{version}/Lectrote-#{version}-macos-universal.dmg"
   name "lectrote"

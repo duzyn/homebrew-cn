@@ -1,6 +1,6 @@
 cask "iina-plus" do
-  version "0.7.5"
-  sha256 "ef7f3bb1a812b6064ea0921c63a5e3e3c2749f88d9be610628ca2b310935a656"
+  version "0.7.10"
+  sha256 "64941b3a018e8f1372e97561d5f1fb4c7b91e12289633a5f4fb8c1a34b553ecb"
 
   url "https://ghproxy.com/https://github.com/xjbeta/iina-plus/releases/download/#{version}/IINA+.#{version}.dmg"
   name "IINA+"

@@ -3,20 +3,18 @@ class Censys < Formula
 
   desc "Command-line interface for the Censys APIs (censys.io)"
   homepage "https://github.com/censys/censys-python"
-  url "https://files.pythonhosted.org/packages/d2/2f/1b7c7cb70c5e49d89a8d4545c1c5f3b42f68e470331512356d8a27f23041/censys-2.2.4.tar.gz"
-  sha256 "2bcace81886b490b8e9b89e9269ee78ec7442631f5ac6e3fae8c94421a2b9d09"
+  url "https://files.pythonhosted.org/packages/b7/e3/cbeed937ddea89c9f28660d7b969614a977432bcb26de158c0198a8005c5/censys-2.2.6.tar.gz"
+  sha256 "379d1d607bf9e4cab593b67d553ae9f635cd39a6283ff76d3eede0f7eb2b5b52"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "14b455d14124a1a7bdbaa99d3db99584c209eacb3ff3ba10756ea40c0dc15d1e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2831d2f5d3cc977431acd04f5c01d0f0988967bcc477b6838e61ff0268c1273c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9ce0d931dcc975c627b605d6ea401cbaaa79627d69f4e243fec9a995c2931558"
-    sha256 cellar: :any_skip_relocation, ventura:        "0d6621c60de7bc4949311867937f780ce0a749f674017ab60a6f546cc45e6eb0"
-    sha256 cellar: :any_skip_relocation, monterey:       "195b5ebd5b15010aefb11eacbb9a6c19f0a0a97eed2ec508668503126411dcb8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0503f2b979ab194d638d14762bc9c26be6d27384ec74c5dc2afc5cba7f8ac476"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "665013db97a8ba7add0c047da51bdb30ad0d23a6738d8c83c5c076821501ea4a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3b56b8b05538dc67440fb82af69f60fbcd28c1358cb335e0f84f9e481c94e4fa"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8dd1022f9d5efa6a55a391947249c9fbb79add49af246f9323e52adf77a462ae"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7ed95fb642d3d19bcbcd3b0e6c5f1b4b1c0a3654b80ac4599fd1e7dc17612987"
+    sha256 cellar: :any_skip_relocation, ventura:        "439cfc6fc31aa756ebf337c598f1d9995a197ef45b5fb74ec27b602822fe292b"
+    sha256 cellar: :any_skip_relocation, monterey:       "ec44caa4333e6c76dbf51b6ca142816cc6bda902647868182f248dac2459e2fd"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a40c96b900b8094bfd68a7050dce12d79211e1880c5e9c5ce9f94ee2641adc42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a59f2d92be5d5644e491f1c6632b0535f0ea539ba088d2c2bfa2f1dae38c62ab"
   end
 
   depends_on "pygments"
@@ -59,8 +57,8 @@ class Censys < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/e3/12/67d0098eb77005f5e068de639e6f4cfb8f24e6fcb0fd2037df0e1d538fee/rich-13.4.2.tar.gz"
-    sha256 "d653d6bccede5844304c605d5aac802c7cf9621efd700b46c7ec2b51ea914898"
+    url "https://files.pythonhosted.org/packages/ad/1a/94fe086875350afbd61795c3805e38ef085af466a695db605bcdd34b4c9c/rich-13.5.2.tar.gz"
+    sha256 "fb9d6c0a0f643c99eed3875b5377a184132ba9be4d61516a55273d3554d75a39"
   end
 
   resource "urllib3" do

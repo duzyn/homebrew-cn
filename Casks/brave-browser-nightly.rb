@@ -2,11 +2,11 @@ cask "brave-browser-nightly" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "nightly-arm64", intel: "nightly"
 
-  version "1.59.9.0,159.9"
-  sha256 arm:   "665a23f848b3a6540eb78e0b857c037bc32ba9d34958619af3b00f20b195bd06",
-         intel: "3861de01c16b08087fad348bceea38c909a93bc5885a931be168e86174d3d869"
+  version "1.60.44.0"
+  sha256 arm:   "640ef25e6a2ee2f3aa5c1eacdb4a5cbdaa7009656df822d0945a33c5ed1413e4",
+         intel: "c475bca99870d15492e410ebe405e8d5998a3a054559afabc76af2d4633ef24e"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.csv.second}/Brave-Browser-Nightly-#{arch}.dmg",
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Nightly-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
   name "Brave Nightly"
   desc "Web browser focusing on privacy"
@@ -14,7 +14,7 @@ cask "brave-browser-nightly" do
 
   livecheck do
     url "https://updates.bravesoftware.com/sparkle/Brave-Browser/#{folder}/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

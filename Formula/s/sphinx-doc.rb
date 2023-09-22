@@ -3,19 +3,20 @@ class SphinxDoc < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://files.pythonhosted.org/packages/dc/01/688bdf9282241dca09fe6e3a1110eda399fa9b10d0672db609e37c2e7a39/sphinx-7.1.2.tar.gz"
-  sha256 "780f4d32f1d7d1126576e0e5ecc19dc32ab76cd24e950228dcf7b1f6d3d9e22f"
+  url "https://files.pythonhosted.org/packages/73/8e/6e51da4b26665b4b92b1944ea18b2d9c825e753e19180cc5bdc818d0ed3b/sphinx-7.2.6.tar.gz"
+  sha256 "9a5160e1ea90688d5963ba09a2dcd8bdd526620edbb65c328728f1b2228d5ab5"
   license "BSD-2-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "016643b9d82e46e5797484466321bba9ff955368ad083150ece2ddead9ddff18"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4890a150e569209619a40e2f2ccadc5274b01f65c5ed3901d8082270b0913519"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4e3e3806280bf0c50298a4a484ebc5e2087f0fa356ea19d21ceccd964391a8b7"
-    sha256 cellar: :any_skip_relocation, ventura:        "9cfa6caa3c64435cfea0446ed3ac1415d02e2a41017dcd58ba587fe30e1d96f4"
-    sha256 cellar: :any_skip_relocation, monterey:       "c8b6cef306a6bbb16c8d2915048a3d426ff772e1357872c287d364a723b49897"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c60fc9f5f649a53bf8e43d394a925162cbc95c9a7d0d328cdda84f6bc2dce4b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96dcb163a150a72c55497e659b8a3569c7e420bb4b0f99749d2bc31bca00e094"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6416263dde3ef4450ed561967d30a2d42e16c62b2c574ca0fa9cd3b752f89108"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "43d9aade8a7bd14b4a4872bb8f983d9f54f6e9c1a69802bb9d02462d331b6456"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d81cf0a4e3b6283fc1be0a4b4532c28195381655b10ef50593bebd07fc31c3e0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "faaed42485012afd211340d0be16e47ca3f02e7f8949b0d5e9813ca79aced72d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1a6cf1aebca4dce7848dccbcf513a7b1d5989bfd812d0447b3d5157ef294f36b"
+    sha256 cellar: :any_skip_relocation, ventura:        "675fdf20e3920b32e5eb544a26ae651fa05b98b96ca2e6adc3ba2177edabef35"
+    sha256 cellar: :any_skip_relocation, monterey:       "d531521fad65df5b2b1c8b3a1fb1e0b14aa2c29903005bb00bdd70906fd84a18"
+    sha256 cellar: :any_skip_relocation, big_sur:        "94baf12a48e8f732b430972b619129dfb49da667c897f333c638d57cfa9f1076"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a59a538214bdae0b50e986b5b35a1c3df39cc9164c6c067e758007efd94ec44"
   end
 
   keg_only <<~EOS
@@ -26,6 +27,7 @@ class SphinxDoc < Formula
   depends_on "docutils"
   depends_on "pygments"
   depends_on "python-certifi"
+  depends_on "python-packaging"
   depends_on "python@3.11"
 
   resource "alabaster" do
@@ -68,11 +70,6 @@ class SphinxDoc < Formula
     sha256 "b0db7b75a32367a0e25c23b397842c65e344a1206524d16c8069f0a1c91b5f4c"
   end
 
-  resource "packaging" do
-    url "https://files.pythonhosted.org/packages/b9/6c/7c6658d258d7971c5eb0d9b69fa9265879ec9a9158031206d47800ae2213/packaging-23.1.tar.gz"
-    sha256 "a392980d2b6cffa644431898be54b0045151319d1e7ec34f0cfed48767dd334f"
-  end
-
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
     sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
@@ -84,18 +81,18 @@ class SphinxDoc < Formula
   end
 
   resource "sphinxcontrib-applehelp" do
-    url "https://files.pythonhosted.org/packages/32/df/45e827f4d7e7fcc84e853bcef1d836effd762d63ccb86f43ede4e98b478c/sphinxcontrib-applehelp-1.0.4.tar.gz"
-    sha256 "828f867945bbe39817c210a1abfd1bc4895c8b73fcaade56d45357a348a07d7e"
+    url "https://files.pythonhosted.org/packages/1c/5a/fce19be5d4db26edc853a0c34832b39db7b769b7689da027529767b0aa98/sphinxcontrib_applehelp-1.0.7.tar.gz"
+    sha256 "39fdc8d762d33b01a7d8f026a3b7d71563ea3b72787d5f00ad8465bd9d6dfbfa"
   end
 
   resource "sphinxcontrib-devhelp" do
-    url "https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz"
-    sha256 "ff7f1afa7b9642e7060379360a67e9c41e8f3121f2ce9164266f61b9f4b338e4"
+    url "https://files.pythonhosted.org/packages/2e/f2/6425b6db37e7c2254ad661c90a871061a078beaddaf9f15a00ba9c3a1529/sphinxcontrib_devhelp-1.0.5.tar.gz"
+    sha256 "63b41e0d38207ca40ebbeabcf4d8e51f76c03e78cd61abe118cf4435c73d4212"
   end
 
   resource "sphinxcontrib-htmlhelp" do
-    url "https://files.pythonhosted.org/packages/b3/47/64cff68ea3aa450c373301e5bebfbb9fce0a3e70aca245fcadd4af06cd75/sphinxcontrib-htmlhelp-2.0.1.tar.gz"
-    sha256 "0cbdd302815330058422b98a113195c9249825d681e18f11e8b1f78a2f11efff"
+    url "https://files.pythonhosted.org/packages/fd/2d/abf5cd4cc1d5cd9842748b15a28295e4c4a927facfa8a0e173bd3f151bc5/sphinxcontrib_htmlhelp-2.0.4.tar.gz"
+    sha256 "6c26a118a05b76000738429b724a0568dbde5b72391a688577da08f11891092a"
   end
 
   resource "sphinxcontrib-jsmath" do
@@ -104,13 +101,13 @@ class SphinxDoc < Formula
   end
 
   resource "sphinxcontrib-qthelp" do
-    url "https://files.pythonhosted.org/packages/b1/8e/c4846e59f38a5f2b4a0e3b27af38f2fcf904d4bfd82095bf92de0b114ebd/sphinxcontrib-qthelp-1.0.3.tar.gz"
-    sha256 "4c33767ee058b70dba89a6fc5c1892c0d57a54be67ddd3e7875a18d14cba5a72"
+    url "https://files.pythonhosted.org/packages/4f/a2/53129fc967ac8402d5e4e83e23c959c3f7a07362ec154bdb2e197d8cc270/sphinxcontrib_qthelp-1.0.6.tar.gz"
+    sha256 "62b9d1a186ab7f5ee3356d906f648cacb7a6bdb94d201ee7adf26db55092982d"
   end
 
   resource "sphinxcontrib-serializinghtml" do
-    url "https://files.pythonhosted.org/packages/b5/72/835d6fadb9e5d02304cf39b18f93d227cd93abd3c41ebf58e6853eeb1455/sphinxcontrib-serializinghtml-1.1.5.tar.gz"
-    sha256 "aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952"
+    url "https://files.pythonhosted.org/packages/5c/41/df4cd017e8234ded544228f60f74fac1fe1c75bdb1e87b33a83c91a10530/sphinxcontrib_serializinghtml-1.1.9.tar.gz"
+    sha256 "0c64ff898339e1fac29abd2bf5f11078f3ec413cfe9c046d3120d7ca65530b54"
   end
 
   resource "urllib3" do

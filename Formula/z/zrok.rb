@@ -3,19 +3,19 @@ require "language/node"
 class Zrok < Formula
   desc "Geo-scale, next-generation sharing platform built on top of OpenZiti"
   homepage "https://zrok.io"
-  url "https://ghproxy.com/https://github.com/openziti/zrok/archive/v0.4.4.tar.gz"
-  sha256 "dca065422492243e0dedaf47350d7e52048ba9c78fa04bc5135761e3e4a7e2f3"
+  url "https://ghproxy.com/https://github.com/openziti/zrok/archive/v0.4.6.tar.gz"
+  sha256 "fd673ef9e8709feb660f5fc15e75580f383989194c66b358bf5d4ae2b30a8a7b"
   license "Apache-2.0"
   head "https://github.com/openziti/zrok.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e3088d47bf0170e3befc1ca28b8ca1f458997a528bb92ea3d17b4b1fd725edc7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2a664e51240f6390e51a26d97a35001ed1fb422bf2eb1c94e18a5bcc9d4fcd26"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bddf25b9648effe4ca2c6b9a5be519f202208ea5e0e662330689f33bd6d0d186"
-    sha256 cellar: :any_skip_relocation, ventura:        "4a809432d8148c5d0c41498f47e5eee94eded4dd2d123e473df5bb9403585479"
-    sha256 cellar: :any_skip_relocation, monterey:       "8d3ab5c086128df54fd1d50e260f23a7b455dc64029fba62bca5110012c4567b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a4aa4e19bf5cc376513c8659e17a3e4d8f59c8e118961c1e912ce3337761f752"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5fbfe7bb3098819e739fc3b20737ef77e2f0cc3b0fd252066c8b2756442e2fa0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "81139ce1a01089d21c6542df88e6928857436fe0c8ca57d214daf0782f0959ed"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "48810723c7297d5b000041bdefc988db8a7987250725d90346e3aac57abb2915"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b75ef7bde83314de14176a81a26d791e18ffbf09c8e3c45d826b6288648aa8cd"
+    sha256 cellar: :any_skip_relocation, ventura:        "3e2be753b4af73f7fa05e5cac258e39c9f2b3066f76f49027eef21f84c2cf742"
+    sha256 cellar: :any_skip_relocation, monterey:       "de9753ad13d7b96803c51703251219e7b5fc4004a251c350711f23ac7613ab25"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2d906e07771921f787421c65ad81109ff14617cf127054e80e244655347e3f75"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79107692887f4e67445b0810a33d70b394afd5467c04be04fd49c90629f33fc6"
   end
 
   depends_on "go" => :build

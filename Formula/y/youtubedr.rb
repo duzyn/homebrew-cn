@@ -1,18 +1,20 @@
 class Youtubedr < Formula
   desc "Download Youtube Video in Golang"
   homepage "https://github.com/kkdai/youtube"
-  url "https://ghproxy.com/https://github.com/kkdai/youtube/archive/v2.8.1.tar.gz"
-  sha256 "0b3f77e4d5d7c909302804da22c1327c13d7002e10afe6435c0db659c2fe4f8a"
+  url "https://ghproxy.com/https://github.com/kkdai/youtube/archive/refs/tags/v2.9.0.tar.gz"
+  sha256 "f8d60ac8ea16f2fd0e58c12d4502b1b1c5ad46325912cc29fe2031aa897b53a2"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dcd46ea00bab177fd432ac57c9437296c2f78bf8365d4af27455001a33fb1b6f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "dcd46ea00bab177fd432ac57c9437296c2f78bf8365d4af27455001a33fb1b6f"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dcd46ea00bab177fd432ac57c9437296c2f78bf8365d4af27455001a33fb1b6f"
-    sha256 cellar: :any_skip_relocation, ventura:        "ab79ea1e4d0c4d10912b3baa9e04c25abf2b32ecfa16638efaff1763af2f31d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "ab79ea1e4d0c4d10912b3baa9e04c25abf2b32ecfa16638efaff1763af2f31d9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ab79ea1e4d0c4d10912b3baa9e04c25abf2b32ecfa16638efaff1763af2f31d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7a6928623746c8960de09b60b88bd84111fce4e691bad00786dfcb170fab7e27"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "11f394bda025b75cd4c13ee8346cfc925e4d2f6592d08435b0978b4f749bec90"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "11f394bda025b75cd4c13ee8346cfc925e4d2f6592d08435b0978b4f749bec90"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "11f394bda025b75cd4c13ee8346cfc925e4d2f6592d08435b0978b4f749bec90"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "11f394bda025b75cd4c13ee8346cfc925e4d2f6592d08435b0978b4f749bec90"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a767486215393900a1d8fb126b39f54526e17aa3f56b62965fb4b2e76f500903"
+    sha256 cellar: :any_skip_relocation, ventura:        "a767486215393900a1d8fb126b39f54526e17aa3f56b62965fb4b2e76f500903"
+    sha256 cellar: :any_skip_relocation, monterey:       "a767486215393900a1d8fb126b39f54526e17aa3f56b62965fb4b2e76f500903"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a767486215393900a1d8fb126b39f54526e17aa3f56b62965fb4b2e76f500903"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09d72233693a679dec340d1ec3ac307041b8a8505d69601a32ebe3805c7eccbd"
   end
 
   depends_on "go" => :build

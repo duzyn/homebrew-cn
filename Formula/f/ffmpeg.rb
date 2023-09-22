@@ -1,12 +1,23 @@
 class Ffmpeg < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
-  sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
+
+  stable do
+    url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
+    sha256 "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
+
+    # Fix for binutils, remove with `stable` block on next release
+    # https://www.linuxquestions.org/questions/slackware-14/regression-on-current-with-ffmpeg-4175727691/
+    patch do
+      url "https://github.com/FFmpeg/FFmpeg/commit/effadce6c756247ea8bae32dc13bb3e6f464f0eb.patch?full_index=1"
+      sha256 "9800c708313da78d537b61cfb750762bb8ad006ca9335b1724dbbca5669f5b24"
+    end
+  end
 
   livecheck do
     url "https://ffmpeg.org/download.html"
@@ -15,13 +26,13 @@ class Ffmpeg < Formula
 
   bottle do
     rebuild 1
-    sha256 arm64_ventura:  "cd3d6af30b9dd5adc545ef6ded53987665e88ad0f498cfef3ed154099b7e24c0"
-    sha256 arm64_monterey: "a0c02bd23396b2cdfd5fa22fea2f25962fe140b3b3513ee9a5841b5d0a9170e3"
-    sha256 arm64_big_sur:  "d21fa5146f66ba1c92be64f9bb340b6ce1cee593b5847eef200e3520b184dab8"
-    sha256 ventura:        "498b4e1f10f898845f00cfcd14199ee3a51b67fe54370625e99799cf3003b616"
-    sha256 monterey:       "6b1dc5718ec8496ae851d7171e0abfb611d05ced2735c18fb2df793c6ffe7a61"
-    sha256 big_sur:        "5dcdfca2a21b890c606803739674b6b78e1b3a18280024848e6ce0fa4a8ea555"
-    sha256 x86_64_linux:   "0c2060da94b748abc4644fd0a38e6d535e7ab4b94456ee0a503d87b287a575fb"
+    sha256 arm64_ventura:  "729117c6150c83f1d777150bd7a27095694ff2223b214eea36c87fed5a3bed3b"
+    sha256 arm64_monterey: "6bb2917a8e52afcea688aca3e9ff513e61f73ab91ce7a36d6a965c9804d80cdb"
+    sha256 arm64_big_sur:  "e2a2c049c31d4aba0e9a94992eadd77325815d18271525a519e707f36252b663"
+    sha256 ventura:        "f68289b6c324ec56523280f5ef9da27bc4d91dc40492c9549fa7f2d102027e4c"
+    sha256 monterey:       "3ee3b0cbcd2a1a70d7f8f4a10e714e90cc506d80778d98d85c77941d1334f9f6"
+    sha256 big_sur:        "67fa43102ea1b4fbc40793269a1c3675d7080291f5d5ce1f34461df57b1637c1"
+    sha256 x86_64_linux:   "0ffde8698c2fde197654c833776afac30294df3cd98f8be799124dec4437db03"
   end
 
   depends_on "pkg-config" => :build
@@ -32,6 +43,7 @@ class Ffmpeg < Formula
   depends_on "freetype"
   depends_on "frei0r"
   depends_on "gnutls"
+  depends_on "jpeg-xl"
   depends_on "lame"
   depends_on "libass"
   depends_on "libbluray"
@@ -76,6 +88,13 @@ class Ffmpeg < Formula
 
   fails_with gcc: "5"
 
+  # Fix for QtWebEngine, do not remove
+  # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=270209
+  patch do
+    url "https://gitlab.archlinux.org/archlinux/packaging/packages/ffmpeg/-/raw/5670ccd86d3b816f49ebc18cab878125eca2f81f/add-av_stream_get_first_dts-for-chromium.patch"
+    sha256 "57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77"
+  end
+
   def install
     args = %W[
       --prefix=#{prefix}
@@ -92,6 +111,7 @@ class Ffmpeg < Formula
       --enable-libaribb24
       --enable-libbluray
       --enable-libdav1d
+      --enable-libjxl
       --enable-libmp3lame
       --enable-libopus
       --enable-librav1e

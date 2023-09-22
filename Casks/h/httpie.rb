@@ -1,9 +1,9 @@
 cask "httpie" do
   arch arm: "-arm64"
 
-  version "2023.3.3"
-  sha256 arm:   "1406051846b12010041c4ce3c892ed6cd9eeea724a118e3a44ebfee231f97c85",
-         intel: "64f219784f7ddd76748b6c9533c2046b7a51be8c3d2e7f05dc60fd7a978b2503"
+  version "2023.3.5"
+  sha256 arm:   "b1bab40137592abc575f018ef5c2efb71ee0300f5e64e45587a9c44784ff498d",
+         intel: "a8144b84a56fcf67fc7f21f3c3bb902aa287ccb1b38491c316d44073dc323601"
 
   url "https://ghproxy.com/https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
       verified: "github.com/httpie/desktop/"

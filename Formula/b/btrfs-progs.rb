@@ -1,8 +1,8 @@
 class BtrfsProgs < Formula
   desc "Userspace utilities to manage btrfs filesystems"
   homepage "https://btrfs.wiki.kernel.org/index.php/Main_Page"
-  url "https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v6.3.3.tar.xz"
-  sha256 "4be30015760270d081642cc0023a8bfee7cb657a2aa055644e6a56d68695b96e"
+  url "https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v6.5.1.tar.xz"
+  sha256 "dacbb28136e82586af802205263a428c3d1941778bc3fdc9b1b386ea12eb904e"
   license all_of: [
     "GPL-2.0-only",
     "LGPL-2.1-or-later", # libbtrfsutil
@@ -14,7 +14,7 @@ class BtrfsProgs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b38844787c5ee0c1424ede59a128bcddc246284938347f10703c3f2b6e18149e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "52a22de452728966dfacf83ea71cc15f885ccd1531f5dba7f30e43f7852181dd"
   end
 
   depends_on "pkg-config" => :build
@@ -28,6 +28,10 @@ class BtrfsProgs < Formula
   depends_on "zlib"
   depends_on "zstd"
 
+  def python3
+    which("python3.11")
+  end
+
   def install
     system "./configure", "--disable-python", *std_configure_args
     # Override `udevdir` since Homebrew's `pkg-config udev --variable=udevdir` output
@@ -37,8 +41,7 @@ class BtrfsProgs < Formula
 
     # We don't use the make target `install_python` due to Homebrew's prefix scheme patch
     cd "libbtrfsutil/python" do
-      python3 = "python3.11"
-      system python3, *Language::Python.setup_install_args(prefix, python3)
+      system python3, "-m", "pip", "install", *std_pip_args, "."
     end
   end
 
@@ -51,6 +54,6 @@ class BtrfsProgs < Formula
     output = shell_output("#{bin}/btrfs filesystem show #{device}")
     assert_match "Total devices 1 FS bytes used 144.00KiB", output
 
-    system "python3.11", "-c", "import btrfsutil"
+    system python3, "-c", "import btrfsutil"
   end
 end

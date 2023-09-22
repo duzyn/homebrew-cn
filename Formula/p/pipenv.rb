@@ -3,19 +3,20 @@ class Pipenv < Formula
 
   desc "Python dependency management tool"
   homepage "https://github.com/pypa/pipenv"
-  url "https://files.pythonhosted.org/packages/6f/7f/389e0d3839c53a7ab5e99fe0dcd0dbd8c4ea269acf95861fb7cb2ca2ef1a/pipenv-2023.7.23.tar.gz"
-  sha256 "77b1ba91d3cbfa85acb05fb447f5c8ab452dc377e0aea0f3ded8b2c36b669a45"
+  url "https://files.pythonhosted.org/packages/2e/2f/12ba8e583735de1c66f5636d355bf75986f1c96a41b42c00c05c53484a71/pipenv-2023.9.8.tar.gz"
+  sha256 "cfcda864aeb748e6e496b97f20a273477f1e8cc0a3dbb634c133acc5883582ea"
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "183cbf7ad20f479dc1df113e30a77c78feda1e9753a98ba87dab1f51ffbfde8a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "12a0f3fb752c97aa3820191e7242b236579727a2a49863a7b746876a61508924"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9038c479a691c8d60f39d49fc497913c08d26cf34ace1da108bf58d2f249cef3"
-    sha256 cellar: :any_skip_relocation, ventura:        "7fc3a19011b99542024e275521c7ae52c732b4b1fd56b45ce0b079a939361709"
-    sha256 cellar: :any_skip_relocation, monterey:       "3de68677f9a175e5dd66008c010a1cd4e09b0d5a684df0074d5fb7665c08a198"
-    sha256 cellar: :any_skip_relocation, big_sur:        "1635d55e403f8e374e9df00319896f62d5cb5ae466a020d91a625be8ef59b72c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d118f584f911bb11d817e0e19a7eee5a2a18d925cc38fff67f2eeb7da15a3ffd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3066a9b67c96011ec36498f020a39f85aff9072d53f25016267bc2c733b97920"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "66ec647af668f72afd9d4c61a8b879305ef9de2d22c952a18d1bd461b3bce014"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c5a49f7f3928a0316611f3ac14f16084aef3f2112d5f2baff8cf63abe91c14a8"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "84eee54bea5bf8af6a7ecd8b33f9f56e0cf9269b18afd6a105089db2b2cee4c7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "88379da6643b7291f101861ac38355e19a86688f174a70a8ccbb0826cf42abf6"
+    sha256 cellar: :any_skip_relocation, ventura:        "3f791d8e77723d287db8633e7a8cfc66eeaa527edb3f3bb0e2f4d224ca082176"
+    sha256 cellar: :any_skip_relocation, monterey:       "f615b733b915beeb891c20b83ccaf57608e4534b48beac80caf853bc065b68df"
+    sha256 cellar: :any_skip_relocation, big_sur:        "ae1c16fc3d7f9eb2bb812db82b0a9cb613ead50ed2774ba69dc65ada9fbdfb7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9206508be3eb026812550e9168c30783b4adc72d923470f6c64fa6fd145a63c2"
   end
 
   depends_on "python-certifi"
@@ -27,23 +28,18 @@ class Pipenv < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/00/0b/c506e9e44e4c4b6c89fcecda23dc115bf8e7ff7eb127e0cb9c114cbc9a15/filelock-3.12.2.tar.gz"
-    sha256 "002740518d8aa59a26b0c76e10fb8c6e15eae825d34b6fdf670333fd7b938d81"
+    url "https://files.pythonhosted.org/packages/5a/47/f1f3f5b6da710d5a7178a7f8484d9b86b75ee596fb4fefefb50e8dd2205a/filelock-3.12.3.tar.gz"
+    sha256 "0ecc1dd2ec4672a10c8550a8182f1bd0c0a5088470ecd5a125e45f49472fac3d"
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/a1/70/c1d14c0c58d975f06a449a403fac69d3c9c6e8ae2a529f387d77c29c2e56/platformdirs-3.9.1.tar.gz"
-    sha256 "1b42b450ad933e981d56e59f1b97495428c9bd60698baab9f3eb3d00d5822421"
+    url "https://files.pythonhosted.org/packages/dc/99/c922839819f5d00d78b3a1057b5ceee3123c69b2216e776ddcb5a4c265ff/platformdirs-3.10.0.tar.gz"
+    sha256 "b45696dab2d7cc691a3226759c0d3b00c47c8b6e293d96f6436f733303f77f6d"
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/7c/08/cc69e4b3d499ee9570c4c57f23d5e71ed814fcf03988a4edd3081cb74577/virtualenv-20.24.1.tar.gz"
-    sha256 "2ef6a237c31629da6442b0bcaa3999748108c7166318d1f55cc9f8d7294e97bd"
-  end
-
-  resource "virtualenv-clone" do
-    url "https://files.pythonhosted.org/packages/85/76/49120db3bb8de4073ac199a08dc7f11255af8968e1e14038aee95043fafa/virtualenv-clone-0.5.7.tar.gz"
-    sha256 "418ee935c36152f8f153c79824bb93eaf6f0f7984bae31d3f48f350b9183501a"
+    url "https://files.pythonhosted.org/packages/a6/8e/2ebdf99a0dd15249272780e34fa40e3becfd28689505979d3ec6aa2f6ce1/virtualenv-20.24.4.tar.gz"
+    sha256 "772b05bfda7ed3b8ecd16021ca9716273ad9f4467c801f27e83ac73430246dca"
   end
 
   def python3

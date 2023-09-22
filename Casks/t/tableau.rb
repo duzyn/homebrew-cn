@@ -1,6 +1,6 @@
 cask "tableau" do
-  version "2023.2.0"
-  sha256 "eabd7b60bf51106a259c6fbffbfa149f0e568a4fd81621a93be2113984edb2d1"
+  version "2023.2.2"
+  sha256 "623ecbf8dcd2d2b4bf49d8175cb4bfd080b3e71575f415302acae9f2cec87ed0"
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name "Tableau Desktop"
@@ -24,10 +24,13 @@ cask "tableau" do
     "com.simba.sqlserverodbc",
     "com.tableausoftware.Desktop.app",
     "com.tableausoftware.DesktopShortcut",
-    "com.tableausoftware.FLEXNet.11.*",
+    "com.tableausoftware.extensions",
+    "com.tableausoftware.FLEXNet.*",
     "com.tableausoftware.mysql",
+    "com.tableausoftware.networkExtensions",
     "com.tableausoftware.oracle",
     "com.tableausoftware.postgresql",
+    "com.tableausoftware.telemetry",
     "simba.sparkodbc",
   ]
 

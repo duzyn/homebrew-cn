@@ -8,20 +8,21 @@ class Sickchill < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a6401ad13073cd204c85b26ae1df7a1064cc6e66eab1e8ea605fd9df53a3779b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b57f4e83254da9ecc9968acbdb0a8ca386a03d83530d6e300841f96dd1d9d56"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4db130ef6a054a2eb4915fddd31b5ee48699d8d0abe2acf61a4bace142102980"
-    sha256 cellar: :any_skip_relocation, ventura:        "202bf4c6317ca054417de91b84b177c3fb53c76cf94bd44a21ea97d809f9fac1"
-    sha256 cellar: :any_skip_relocation, monterey:       "571b8a31d5058fe71564d9251410d2d13aced0f83f3c822fdbaf407c384b41b2"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8e1289c921a090e56cbce3fd8363ff0aceaec5dd61929cc82647dc2c33c07613"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d701f524ef75d9444722c22a2f7447e9aa317708ebc438988ee38e41bbb23cf6"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b0fabd330e2456041744cd122546e3485d549dde9813ca74951c693a17987d80"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7d88a3eae7435bdb9030ae181e8b415a09247c05550a02c1aeac91f680468c02"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1c01fcc3bd297d13903fd9ca9beea901f4df3db925747a3595ff092773e76d75"
+    sha256 cellar: :any_skip_relocation, ventura:        "3814ffc343cb623813b1675ffdb5bd990135a024f77dd4ba400e4ecd23763b3c"
+    sha256 cellar: :any_skip_relocation, monterey:       "48f07b6b6cfc34627ef0e5f7a477dfe7ac55fb2ebfa95c5b4cfa40369340c453"
+    sha256 cellar: :any_skip_relocation, big_sur:        "9138afa7d250ce68a07001f81048d49774b5526dae1f41827383ed0acf446a22"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1ccfc88f849783ff972b02cb8cb6f823b94648237f7ace689bf180f4d9925b9"
   end
 
   depends_on "cffi"
   depends_on "pycparser"
   depends_on "python-certifi"
   depends_on "python-cryptography"
+  depends_on "python-pytz"
   depends_on "python-typing-extensions"
   depends_on "python@3.11"
   depends_on "pyyaml"
@@ -50,7 +51,7 @@ class Sickchill < Formula
     sha256 "18addaa163febd69a9e1ec4ec4dddc210785c94c6c1f9b2bcb2a73451b2f23e3"
   end
 
-  resource "bencode.py" do
+  resource "bencode-py" do
     url "https://files.pythonhosted.org/packages/e8/6f/1fc1f714edc73a9a42af816da2bda82bbcadf1d7f6e6cae854e7087f579b/bencode.py-4.0.0.tar.gz"
     sha256 "2a24ccda1725a51a650893d0b63260138359eaa299bb6e7a09961350a2a6e05c"
   end
@@ -100,7 +101,7 @@ class Sickchill < Formula
     sha256 "e5323eb936458dccc2582dc6f9c322c852a775a27065ff2b0c4970b9d53d01b3"
   end
 
-  resource "dogpile.cache" do
+  resource "dogpile-cache" do
     url "https://files.pythonhosted.org/packages/d2/f8/f3e877361372737d83f6592d6ba2126b2018d2208472a5dcb82773694281/dogpile.cache-1.2.2.tar.gz"
     sha256 "fd9022c0d9cbadadf20942391a95adaf296be80b42daa8e202f8de1c21f198b2"
   end
@@ -215,7 +216,7 @@ class Sickchill < Formula
     sha256 "05b87589df8a8c630fd701bae6008cc1cfff4457bd0064887ad25248327a5ba3"
   end
 
-  resource "putio.py" do
+  resource "putio-py" do
     url "https://files.pythonhosted.org/packages/7a/63/af072aadbb7fb643588e41dd8b434ee47238fcb15f04976101fae38b1b12/putio.py-8.7.0.tar.gz"
     sha256 "ecfbedeada74a2c7540a665c4d5b9bb147b32fbdb90c40149e65b3786f0e7300"
   end
@@ -268,11 +269,6 @@ class Sickchill < Formula
   resource "python3-fanart" do
     url "https://files.pythonhosted.org/packages/2e/55/d09b26a5c3bc41e9b92cba5342f1801ea9e8c1bec0862a428401e24dfd19/python3-fanart-2.0.0.tar.gz"
     sha256 "8bfb0605ced5be0123c9aa82c392e8c307e9c65bff47d545d6413bbb643a4a74"
-  end
-
-  resource "pytz" do
-    url "https://files.pythonhosted.org/packages/5e/32/12032aa8c673ee16707a9b6cdda2b09c0089131f35af55d443b6a9c69c1d/pytz-2023.3.tar.gz"
-    sha256 "1d8ce29db189191fb55338ee6d0387d82ab59f3d00eac103412d64e0ebd0c588"
   end
 
   resource "qbittorrent-api" do
@@ -346,7 +342,7 @@ class Sickchill < Formula
     sha256 "4b927c4f19b71e627b13f3db2324e4ae660527143f9e1f2e2fb404f3a187e2ba"
   end
 
-  resource "tus.py" do
+  resource "tus-py" do
     url "https://files.pythonhosted.org/packages/54/3c/266c0aadca8969b8f4832e4975a86afe9c869b3ee6918a408b03619746d6/tus.py-1.3.4.tar.gz"
     sha256 "b80feda87700aae629eb19dd98cec68ae520cd9b2aa24bd0bab2b777be0b4366"
   end

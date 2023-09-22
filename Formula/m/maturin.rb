@@ -1,35 +1,73 @@
 class Maturin < Formula
   desc "Build and publish Rust crates as Python packages"
   homepage "https://github.com/PyO3/maturin"
-  url "https://ghproxy.com/https://github.com/PyO3/maturin/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "2ca7edb89db161c5c780a18bb6cc5d2f2068fba5aae085f9203daae13f86fad1"
+  url "https://ghproxy.com/https://github.com/PyO3/maturin/archive/refs/tags/v1.2.3.tar.gz"
+  sha256 "61e119a3d9b8f8083b7765236bc52afe779a0c2ae8c3aebc9e52d36560733772"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/PyO3/maturin.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a380cb00a7040cc9fe9ded0543a17591d00de36b222c13c89e851af3503e2e0b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "76bf9239ac9ab7e0c64a1cac34895371122ddfd327ad7d8e29a221b091f52e03"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4a8b362e1b8caea7a61269b5a3054331d338ada1ed14231343814d038a3c9913"
-    sha256 cellar: :any_skip_relocation, ventura:        "daeb9e19e6d236f7ababfe54f8e699a9a3286b22be194ac53d84d59dad60b5d8"
-    sha256 cellar: :any_skip_relocation, monterey:       "9e1d7dc3eabe323cab10cad60b1669bcb2570576928f8dc54b4e555a81131a1c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a6bf4fcf100054c9dc720087670b1a8d710ec2b5619c32edab16a2440dc0d208"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "357e5495e6374aa1bd3613683380126bd93bae9a05099ae8daa1fb7416c95a30"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "94a1c679bd2fa3acf25e14cbb8f571e80162d7231b93a2820b87905cb9c63a89"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2c54561198519e6a02e38d3f4bafdc7a5b58eb0bd9e3069367a410d40d191ebc"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "30a2b03bdf7e5423e662ddd2a63643889692f7c97ee7371097df7d38d863403d"
+    sha256 cellar: :any_skip_relocation, ventura:        "c04a1d6f98b063a6d0a472a1bcdc94f3e99d7ab71cbd6547ba37581210fb60c0"
+    sha256 cellar: :any_skip_relocation, monterey:       "d2a39e45c65b5e06e2265f659edc7e59e95264a055e7f6b272ba213b1e3b1047"
+    sha256 cellar: :any_skip_relocation, big_sur:        "51f68a51569e06a2c9725a3569e7de1b1a430b97c5c887b7d53b124c685a6234"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "34891e1ee14d0117c44faf37c29c19d2b50d58e49178681f4bfabb9d7eeb449f"
   end
 
-  depends_on "python@3.11" => :test
+  depends_on "python-flit-core" => :build
+  depends_on "python-typing-extensions" => :build
+  depends_on "python@3.10" => [:build, :test]
+  depends_on "python@3.11" => [:build, :test]
   depends_on "rust"
 
-  def install
-    system "cargo", "install", *std_cargo_args
+  resource "semantic-version" do
+    url "https://files.pythonhosted.org/packages/7d/31/f2289ce78b9b473d582568c234e104d2a342fd658cc288a7553d83bb8595/semantic_version-2.10.0.tar.gz"
+    sha256 "bdabb6d336998cbb378d4b9db3a4b56a1e3235701dc05ea2690d9a997ed5041c"
+  end
 
+  resource "setuptools-rust" do
+    url "https://files.pythonhosted.org/packages/90/f1/70b31cacce03bf21fa645d359d6303fb5590c1a02c41c7e2df1c480826b4/setuptools-rust-1.7.0.tar.gz"
+    sha256 "c7100999948235a38ae7e555fe199aa66c253dc384b125f5d85473bf81eae3a3"
+  end
+
+  resource "tomli" do
+    url "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz"
+    sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
+  end
+
+  def pythons
+    deps.map(&:to_formula)
+        .filter { |f| f.name.start_with?("python@") }
+        .sort_by(&:version)
+        .map { |f| f.opt_libexec/"bin/python" }
+  end
+
+  def install
+    pythons.each do |python|
+      ENV.append_path "PYTHONPATH", buildpath/Language::Python.site_packages(python)
+      resources.each do |r|
+        r.stage do
+          system python, "-m", "pip", "install", *std_pip_args(prefix: buildpath), "."
+        end
+      end
+
+      system python, "-m", "pip", "install", *std_pip_args, "."
+    end
+
+    # overwrite the minimal binary that pip installed
+    system "cargo", "install", *std_cargo_args, "--force"
     generate_completions_from_executable(bin/"maturin", "completions")
   end
 
   test do
-    python = Formula["python@3.11"].opt_bin/"python3.11"
     system "cargo", "new", "hello_world", "--bin"
     system bin/"maturin", "build", "-m", "hello_world/Cargo.toml", "-b", "bin", "-o", "dist", "--compatibility", "off"
-    system python, "-m", "pip", "install", "hello_world", "--no-index", "--find-links", testpath/"dist"
-    system python, "-m", "pip", "uninstall", "-y", "hello_world"
+    pythons.each do |python|
+      system python, "-m", "pip", "install", "hello_world", "--no-index", "--find-links", testpath/"dist"
+      system python, "-m", "pip", "uninstall", "-y", "hello_world"
+    end
   end
 end

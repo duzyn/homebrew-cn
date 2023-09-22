@@ -1,9 +1,11 @@
 class Metals < Formula
   desc "Scala language server"
   homepage "https://github.com/scalameta/metals"
-  url "https://ghproxy.com/https://github.com/scalameta/metals/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "4ed800e189546ea8c97f7fd4c866fed85921ad8b6449f1c9aecd4d885bea3dce"
+  # TODO: Check if we can use unversioned `openjdk` (or `openjdk@21`) at version bump.
+  url "https://ghproxy.com/https://github.com/scalameta/metals/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "5912c3cf0a8c2e430a6733998445b724b2f8192cccc8afe5816daa5146753d1f"
   license "Apache-2.0"
+  revision 1
 
   # Some version tags don't become a release, so it's necessary to check the
   # GitHub releases instead.
@@ -13,17 +15,17 @@ class Metals < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ba58acd84ef04ef3b0c1789b126d6b82fd949cb0153237138cbd09ec56bf9b79"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "755a702265c160ceade1775fcb8c04af11c8aa2988edc7c6e91e2c631f4a773a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a7fd3b3783c6c2766d9c618f1035d87cbb53ec8caa4de94ebb1f884e142a055"
-    sha256 cellar: :any_skip_relocation, ventura:        "9f559c018b08791bf49bdfe9c2712d63b7cb9e14b54b60677f6280c355894a3c"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ffbcc653ad9b3c46b6ba3bb6822dade65abfa167ee4b44f168ee07c6ad73e72"
-    sha256 cellar: :any_skip_relocation, big_sur:        "7af649e156a418c0d6268f9002c5a57d629d36715f2af40b672df7773a3325a8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9695fb20f447e6c01ec220d1bd6f6a457e3a86fb9fd9c1e1de51f3b84c22e1e7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b32885725341ab3cbacbf30beffcfce7e6ac86eb8078b49148e71a469bc22a3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b3cfeb7071944f3641968372235a47c3f4c871e229d6103043615b3e4341132"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "931aa55a8ad851b6f7da59f0b241ed4a3da67fd92ebd3ef3d842046a0ef6e829"
+    sha256 cellar: :any_skip_relocation, ventura:        "a592d1973c3a7136d77d8732c43ae485f9a768bf3a1d84db1780d34aa0352212"
+    sha256 cellar: :any_skip_relocation, monterey:       "5c56392bbb2ca4913359c7e78c8ed5a377af5e7dbbbdbd071570813fddca049d"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b424547318a9b7dc694918f797aa53a9bd7c5384217a0dbf3df7f9bfb75421d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56516bf1fedc5fa187e525867290ffcee070b4f50d8edf8208c9607d3ddaf821"
   end
 
   depends_on "sbt" => :build
-  depends_on "openjdk"
+  depends_on "openjdk@17"
 
   def install
     ENV["CI"] = "TRUE"
@@ -44,12 +46,10 @@ class Metals < Formula
     (libexec/"lib").install buildpath.glob("mtags-shared/target/scala-*/mtags-shared_*-#{version}.jar")
     (libexec/"lib").install "mtags-interfaces/target/mtags-interfaces-#{version}.jar"
 
-    (bin/"metals").write <<~EOS
-      #!/bin/bash
-
-      export JAVA_HOME="#{Language::Java.java_home}"
-      exec "${JAVA_HOME}/bin/java" -cp "#{libexec/"lib"}/*" "scala.meta.metals.Main" "$@"
-    EOS
+    args = %W[-cp "#{libexec/"lib"}/*" scala.meta.metals.Main]
+    env = Language::Java.overridable_java_home_env("17")
+    env["PATH"] = "$JAVA_HOME/bin:$PATH"
+    (bin/"metals").write_env_script "java", args.join(" "), env
   end
 
   test do

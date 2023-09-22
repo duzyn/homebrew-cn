@@ -1,8 +1,8 @@
 class Libphonenumber < Formula
   desc "C++ Phone Number library by Google"
   homepage "https://github.com/google/libphonenumber"
-  url "https://ghproxy.com/https://github.com/google/libphonenumber/archive/v8.13.18.tar.gz"
-  sha256 "54578d748ce38eea8c3530e49c1adf09272ef4535ed32db2555ab39b0b8851c0"
+  url "https://ghproxy.com/https://github.com/google/libphonenumber/archive/v8.13.21.tar.gz"
+  sha256 "bca757a8e04849c8158bbbc243c500699daa7601d1fd23a1277fc2643188b44b"
   license "Apache-2.0"
 
   livecheck do
@@ -11,13 +11,15 @@ class Libphonenumber < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "3ffcf5f5d056ecdd2192d4724dfbfefd6ccdc07eda707f6e30901fa3cfe6a997"
-    sha256 cellar: :any,                 arm64_monterey: "30f69c73962bc10cb552104973c2234618772d6a6817cd9bd70c3801eafcb371"
-    sha256 cellar: :any,                 arm64_big_sur:  "e24f7b1e43b44cc4f9738e37afa8fcb71cf9797b824727dc09f23472f2da5946"
-    sha256 cellar: :any,                 ventura:        "717e3c2039dd9914daa7b20352cb30690bb8aa0f4e461d551d2089d8740e1aa8"
-    sha256 cellar: :any,                 monterey:       "8f76d0a55702ae2f16887e2699f329874079c163890eda33b073511ad9d456bf"
-    sha256 cellar: :any,                 big_sur:        "706f846c51b3a57c261014699fca1bd3721c4c2603dcddb256ff1b5a9bbff40b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61e371216b5688670dfd17e015a0b5787526e7ac8144bc0550689071e9ddd59b"
+    sha256 cellar: :any,                 arm64_sonoma:   "5118b6bad63f63b6d7622764178be5f2a26e407dc74b431a562ce9c04ed445c1"
+    sha256 cellar: :any,                 arm64_ventura:  "21a3a475b9b870a53540ceb6dba7f20740b5a1c735c2d0afe7dffeda616a1b61"
+    sha256 cellar: :any,                 arm64_monterey: "7ce9fe50a39ae9db051868b9556f2bbb6c3091661fcca726778a8670a079e260"
+    sha256 cellar: :any,                 arm64_big_sur:  "fedf724d2955f069ee9a513babe657b1300d55f66fb5fa64dd0d44718d60d6f7"
+    sha256 cellar: :any,                 sonoma:         "d93656b2580ee70b076313691ef8df1cf574f5d7e8bebe0b7209534206116557"
+    sha256 cellar: :any,                 ventura:        "77b45e40d790accc6663fa77496bed64163dfab386a68a2aab74d8ee2c54ddb4"
+    sha256 cellar: :any,                 monterey:       "61c27850633c036763947c586bf2c247d60ee2371508e4caf34dc2025c959d08"
+    sha256 cellar: :any,                 big_sur:        "99b5759b5f8645392176418c42b2ee0e29c496ae4054d2fa762156b024bc80ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f55aebcfdaa44ea71bdf5021547920a2e8d759911d618104495deb293e131daa"
   end
 
   depends_on "cmake" => :build
@@ -30,8 +32,6 @@ class Libphonenumber < Formula
   depends_on "re2"
 
   fails_with gcc: "5" # For abseil and C++17
-
-  patch :DATA
 
   def install
     ENV.append_to_cflags "-Wno-sign-compare" # Avoid build failure on Linux.
@@ -70,35 +70,3 @@ class Libphonenumber < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/cpp/CMakeLists.txt b/cpp/CMakeLists.txt
-index d2d111d..5b7d2b2 100644
---- a/cpp/CMakeLists.txt
-+++ b/cpp/CMakeLists.txt
-@@ -19,8 +19,8 @@ cmake_minimum_required (VERSION 3.11)
- project (libphonenumber VERSION 8.13.0)
-
- # Pick the C++ standard to compile with.
--# Abseil currently supports C++11, C++14, and C++17.
--set(CMAKE_CXX_STANDARD 11 CACHE STRING "C++ standard used to compile this project")
-+# Abseil currently supports C++14, and C++17.
-+set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ standard used to compile this project")
- set(CMAKE_CXX_STANDARD_REQUIRED ON)
- set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
-
-diff --git a/tools/cpp/CMakeLists.txt b/tools/cpp/CMakeLists.txt
-index 91c9052..ae8db75 100644
---- a/tools/cpp/CMakeLists.txt
-+++ b/tools/cpp/CMakeLists.txt
-@@ -17,8 +17,8 @@
- cmake_minimum_required (VERSION 3.11)
-
- # Pick the C++ standard to compile with.
--# Abseil currently supports C++11, C++14, and C++17.
--set(CMAKE_CXX_STANDARD 11)
-+# Abseil currently supports C++14, and C++17.
-+set(CMAKE_CXX_STANDARD 17)
- set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
- project (generate_geocoding_data)

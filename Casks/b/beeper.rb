@@ -1,7 +1,7 @@
 cask "beeper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.69.5"
+  version "3.77.21"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
@@ -14,6 +14,8 @@ cask "beeper" do
     regex(/Beeper\D*?(\d+(?:\.\d+)+)/i)
     strategy :header_match
   end
+
+  auto_updates true
 
   app "Beeper.app"
 

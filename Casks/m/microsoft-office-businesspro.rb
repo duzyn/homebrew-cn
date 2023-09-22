@@ -1,6 +1,6 @@
 cask "microsoft-office-businesspro" do
-  version "16.75.23070901"
-  sha256 "064dc3584aaa5af035dbed2671b29238206bc7ab523ddbff88773cd4e5b20cf9"
+  version "16.77.23091003"
+  sha256 "c94a41430df6f8670d14c3fadefb406128afa385930d9e9e353c6b9659c8d91a"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
@@ -51,9 +51,11 @@ cask "microsoft-office-businesspro" do
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
               "com.microsoft.teams",
+              "com.microsoft.wdav",
             ],
             # Frameworks, DFonts and ProofingTools remain in each application after pkg uninstall, delete them
             delete:    [
+              "/Applications/Microsoft Defender.app",
               "/Applications/Microsoft Excel.app",
               "/Applications/Microsoft OneNote.app",
               "/Applications/Microsoft Outlook.app",

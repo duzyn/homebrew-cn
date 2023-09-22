@@ -1,6 +1,6 @@
 cask "sublime-text-dev" do
-  version "4154"
-  sha256 "6c34bd3eadca43140216437beaa9e88b03fb0f6b5b50e660a674c40bdc0a1fbf"
+  version "4156"
+  sha256 "457e8b64096993fcdd6a8d521d475b2cf67f6e84e945b1880ff51dd4334f40d2"
 
   url "https://download.sublimetext.com/sublime_text_build_#{version}_mac.zip"
   name "Sublime Text"

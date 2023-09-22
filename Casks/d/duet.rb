@@ -1,29 +1,33 @@
 cask "duet" do
-  on_big_sur :or_older do
+  on_catalina :or_older do
     version "2.4.7.1"
     sha256 "3e91729e333ab3e2984bec4c1194e7022d016d91c79cd21509bc00b42b9559bd"
 
+    url "https://duetdownload.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
+        verified: "duetdownload.com/Mac/"
+
     livecheck do
-      url "https://updates.duetdisplay.com/latestMac"
-      strategy :header_match do |headers|
-        headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
-      end
+      skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    version "3.8.0.0"
-    sha256 "8b07ebfffd44059365a02b70ea835bb6bc1c84847b1d749c41bdf3c45e6039db"
+  on_big_sur :or_newer do
+    version "3.11.0.0"
+    sha256 "98c78849b77df18a29b33a6da755a0039aef8aa884d8737d5cafce2a4507bd6d"
+
+    url "https://duetdownload.com/Mac/#{version.major}_x/duet-#{version.dots_to_hyphens}.zip",
+        verified: "duetdownload.com/Mac/"
 
     livecheck do
       url "https://updates.duetdisplay.com/AppleSilicon"
-      strategy :header_match do |headers|
-        headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
+      regex(/duet[._-]v?(\d+(?:-\d+)+)\.zip/i)
+      strategy :header_match do |headers, regex|
+        headers["location"].scan(regex).map do |match|
+          match[0].tr("-", ".").to_s
+        end
       end
     end
   end
 
-  url "https://duetdownload.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
-      verified: "duetdownload.com/Mac/"
   name "Duet"
   desc "Remote desktop and second display tool"
   homepage "https://www.duetdisplay.com/"

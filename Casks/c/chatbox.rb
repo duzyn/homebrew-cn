@@ -1,9 +1,9 @@
 cask "chatbox" do
   arch arm: "-arm64"
 
-  version "0.6.6"
-  sha256 arm:   "ea9f9203c4b4010e9323392d8641a8e0d8b4c1b51d3eeb9ad6334e370e357b3d",
-         intel: "8b9abd7c0b4ff34b3262c40b6a22ffcdde9ca14a6bd6229c321f8acacb99dd00"
+  version "1.0.0"
+  sha256 arm:   "8dac5838e07bf4082d6d666b30e94a97730ccb224996924ceb9a3817b5bf5bd6",
+         intel: "c79d1d1c2729acba2f23f0258ddcf713e0483ff260e1101a6b0c2d5100647051"
 
   url "https://ghproxy.com/https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/Chatbox-#{version}#{arch}.dmg",
       verified: "github.com/Bin-Huang/chatbox/"

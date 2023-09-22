@@ -2,11 +2,11 @@ cask "brave-browser-dev" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "dev-arm64", intel: "dev"
 
-  version "1.58.85.0,158.85"
-  sha256 arm:   "9e4ac548711ef5fc19f0e042956aab3a4a9c646202a046349a262343f14ef70e",
-         intel: "e91e9a97dd8a31abdcdbb4cd97a3da0c3758006711fb006221624810a42de438"
+  version "1.59.88.0"
+  sha256 arm:   "b071c0fb8d4035f2fc9a2e026b1b3d7b3f725a71826c20e3682cd0d9a5d8f65a",
+         intel: "e99c4097260f112a42d86c4841b774f0262ea22b23f63f2eb73a940121679e26"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.csv.second}/Brave-Browser-Dev-#{arch}.dmg",
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Dev-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
   name "Brave Dev"
   desc "Web browser focusing on privacy"
@@ -14,7 +14,7 @@ cask "brave-browser-dev" do
 
   livecheck do
     url "https://updates.bravesoftware.com/sparkle/Brave-Browser/#{folder}/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

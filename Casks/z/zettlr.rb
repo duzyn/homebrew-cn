@@ -1,9 +1,9 @@
 cask "zettlr" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.0"
-  sha256 arm:   "0236d873d0d1477e480334fe8e68b795a8a7eb61cdbbf72d300143773e98955d",
-         intel: "73ee8fbcf481b1cf68a3456f3c215be8a7d8835342220cc44fba6fa0440f37fc"
+  version "3.0.1"
+  sha256 arm:   "33e5b028f26991ed3ed006275e4264cd077ef1799f3c24cb29b1af70a1da1959",
+         intel: "7a9b9004d499e4ca7defcb478bd80695ef8c57b3ba9644e55f8daa05d103d58d"
 
   url "https://ghproxy.com/https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
   name "Zettlr"

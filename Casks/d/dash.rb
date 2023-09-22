@@ -4,8 +4,8 @@ cask "dash" do
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
   end
   on_mojave :or_newer do
-    version "6.4.2"
-    sha256 "15c65e126e36b16b0f397a1df56ef64dfc230a0d687e43d29213cc4cc5c458d0"
+    version "7.1.0"
+    sha256 "646a44eab8a203b93557756658d4752ddba009448f90f8790055ea190051ff37"
   end
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
@@ -19,6 +19,7 @@ cask "dash" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/dash6"
 
   app "Dash.app"
 
@@ -27,6 +28,8 @@ cask "dash" do
     "~/Library/Application Support/Dash",
     "~/Library/Caches/com.kapeli.dashdoc",
     "~/Library/Cookies/com.kapeli.dashdoc.binarycookies",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.kapeli.dashdoc",
+    "~/Library/HTTPStorages/com.kapeli.dashdoc",
     "~/Library/HTTPStorages/com.kapeli.dashdoc.binarycookies",
     "~/Library/Logs/Dash",
     "~/Library/Preferences/com.kapeli.dashdoc.plist",

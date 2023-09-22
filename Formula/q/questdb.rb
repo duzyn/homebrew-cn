@@ -1,8 +1,8 @@
 class Questdb < Formula
   desc "Time Series Database"
   homepage "https://questdb.io"
-  url "https://ghproxy.com/https://github.com/questdb/questdb/releases/download/7.3/questdb-7.3-no-jre-bin.tar.gz"
-  sha256 "b5e67da09e5a50fb34693531c8af549a91517251d954b1159748e559badb881b"
+  url "https://ghproxy.com/https://github.com/questdb/questdb/releases/download/7.3.2/questdb-7.3.2-no-jre-bin.tar.gz"
+  sha256 "262318e13202b1fece40f5d808eaa543e6afd089d1d74129b571e6fd05c4a462"
   license "Apache-2.0"
 
   livecheck do
@@ -11,7 +11,7 @@ class Questdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1ab4bf80a7897167b4fee3bdaf22276e18b6098da56a3a32f2af357c8fba6938"
+    sha256 cellar: :any_skip_relocation, all: "37ca0d658a4d75db5f64acd1b9e907b82e545c7a12d9c66f28adf153fb31431e"
   end
 
   depends_on "openjdk@17"
@@ -37,17 +37,21 @@ class Questdb < Formula
   end
 
   test do
+    # questdb.sh uses `ps | grep` to verify server is running, but output is truncated to COLUMNS
+    # See https://github.com/Homebrew/homebrew-core/pull/133887#issuecomment-1679907729
+    ENV.delete "COLUMNS" if OS.linux?
+
     mkdir_p testpath/"data"
     begin
       fork do
-        exec "#{bin}/questdb start -d #{testpath}/data"
+        exec bin/"questdb", "start", "-d", testpath/"data"
       end
       sleep 30
       output = shell_output("curl -Is localhost:9000/index.html")
       sleep 4
       assert_match "questDB", output
     ensure
-      system "#{bin}/questdb", "stop"
+      system bin/"questdb", "stop"
     end
   end
 end

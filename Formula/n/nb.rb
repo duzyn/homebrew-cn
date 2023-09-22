@@ -1,19 +1,19 @@
 class Nb < Formula
   desc "Command-line and local web note‑taking, bookmarking, and archiving"
   homepage "https://xwmx.github.io/nb"
-  url "https://ghproxy.com/https://github.com/xwmx/nb/archive/refs/tags/7.5.5.tar.gz"
-  sha256 "c311be972e53de05574210d246c4366071d9fc642aa907f560ae0690dfbc051d"
+  url "https://ghproxy.com/https://github.com/xwmx/nb/archive/refs/tags/7.7.0.tar.gz"
+  sha256 "3142c4876a7d75c3f554ed3a31ee825b08e3cb785e7f718f503c853f9d10f75c"
   license "AGPL-3.0-or-later"
   head "https://github.com/xwmx/nb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e2408e3dd05497e291ac151ab513dd402e0521b0dacb9b9e44b922fafab721d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6e2408e3dd05497e291ac151ab513dd402e0521b0dacb9b9e44b922fafab721d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6e2408e3dd05497e291ac151ab513dd402e0521b0dacb9b9e44b922fafab721d"
-    sha256 cellar: :any_skip_relocation, ventura:        "96bb20854e70ecbe9d1d7fd154b609dc38fd5f75eadabb23e3b8fff0aec0495c"
-    sha256 cellar: :any_skip_relocation, monterey:       "96bb20854e70ecbe9d1d7fd154b609dc38fd5f75eadabb23e3b8fff0aec0495c"
-    sha256 cellar: :any_skip_relocation, big_sur:        "96bb20854e70ecbe9d1d7fd154b609dc38fd5f75eadabb23e3b8fff0aec0495c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f003e193b3c294e0304cb5f02cda298ce9e2a2fe019e7bb602e4ec92bf2d83a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c7730c96c6e07cc21cb87e9ec9d337d229b7963b9faf83b65149ca0c40448abe"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7730c96c6e07cc21cb87e9ec9d337d229b7963b9faf83b65149ca0c40448abe"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c7730c96c6e07cc21cb87e9ec9d337d229b7963b9faf83b65149ca0c40448abe"
+    sha256 cellar: :any_skip_relocation, ventura:        "a5fcf5da1190bc29addee9dbd1bff8e5b5354ce14c72d7a30ae72386b970ee1e"
+    sha256 cellar: :any_skip_relocation, monterey:       "a5fcf5da1190bc29addee9dbd1bff8e5b5354ce14c72d7a30ae72386b970ee1e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a5fcf5da1190bc29addee9dbd1bff8e5b5354ce14c72d7a30ae72386b970ee1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7730c96c6e07cc21cb87e9ec9d337d229b7963b9faf83b65149ca0c40448abe"
   end
 
   depends_on "bat"

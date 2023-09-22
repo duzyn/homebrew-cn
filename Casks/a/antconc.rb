@@ -1,8 +1,11 @@
 cask "antconc" do
-  version "4.2.0"
-  sha256 "5f5a7dad7582123382a1d14b56fa0609df433485e8987838bb6333db7fcb8c02"
+  arch arm: "silicon", intel: "intel"
 
-  url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.dmg"
+  version "4.2.3"
+  sha256 arm:   "9de860192c1f31ba500574f07ac5af73f2e0bc3c4ffc2c2c7a7d0b1e7f86e73c",
+         intel: "e974003aedc51253fdbb1edaf6cf74f851d41b8d4b35fe21fc9d80ff158342c0"
+
+  url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/apple-#{arch}/AntConc.dmg"
   name "AntConc"
   desc "Corpus analysis toolkit for concordancing and text analysis"
   homepage "https://www.laurenceanthony.net/software/antconc/"

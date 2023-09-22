@@ -1,6 +1,6 @@
 cask "cloudash" do
-  version "1.19.2"
-  sha256 "be93d63cc5b4cea2025a84a267c4ffbd2c2c24b3fc253e2f884ef8fda3e96615"
+  version "1.20.1"
+  sha256 "ce5112b852ae6cff7657a9a42f741faeaa31b5a040488a9d2741e08f301051b5"
 
   url "https://ghproxy.com/https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}.dmg",
       verified: "github.com/cloudashdev/cloudash/"

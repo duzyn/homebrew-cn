@@ -1,6 +1,6 @@
 cask "http-toolkit" do
-  version "1.13.0"
-  sha256 "109eb2ee7113e25edb51ef723f961edaef18cc43b7af3bf36b91032631f115f6"
+  version "1.14.3"
+  sha256 "05c14b5a835c747a585de71849d5058daff2b1b3b45160760804f771793d94e8"
 
   url "https://ghproxy.com/https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v#{version}/HttpToolkit-#{version}.dmg",
       verified: "github.com/httptoolkit/httptoolkit-desktop/"

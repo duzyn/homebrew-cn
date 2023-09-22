@@ -1,24 +1,24 @@
 class Osm2pgsql < Formula
   desc "OpenStreetMap data to PostgreSQL converter"
   homepage "https://osm2pgsql.org"
-  url "https://ghproxy.com/https://github.com/openstreetmap/osm2pgsql/archive/1.8.1.tar.gz"
-  sha256 "9e3cd9e13893fd7a153c7b42089bd23338867190c91b157cbdb4ff7176ecba62"
+  url "https://ghproxy.com/https://github.com/openstreetmap/osm2pgsql/archive/1.9.2.tar.gz"
+  sha256 "dc30a3ad9a27f944e4169be9a8e07ee09711901536ddc8fcf4a292bd3aec51d9"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/openstreetmap/osm2pgsql.git", branch: "master"
 
   bottle do
-    sha256 arm64_ventura:  "f68c6b4751669d9846144161f39b25a7d491a51bf8383ea86f35d232175ef10c"
-    sha256 arm64_monterey: "85ff17b822b7fc7ee1c1f943287322df3c4daef6b86a0806635db5eabcc5a74d"
-    sha256 arm64_big_sur:  "7de9a23f5693e7ececcf11d725c3a9f94ea23926f86b59c44ed79fdca4d9694c"
-    sha256 ventura:        "2e4ba2b036c21b703e3fe7f5970f57817b6e322aef30808d297ec6ec989285c0"
-    sha256 monterey:       "657279c73f39a324befeb90730a3be06d22de05e32703bc9c978d4a598231661"
-    sha256 big_sur:        "6a142a7afde2a59117a337f64df02a18fc9fb8a63e564611ede61460b48703c9"
-    sha256 x86_64_linux:   "f395ab892fe7b6ab665fc6b09235a2665323761aee9aab8d9a626a70df5186f8"
+    sha256 arm64_ventura:  "e3abb7bc3dabcb12115b63fa0c22ee813ca44f9de209a6b2e2c0a6e5fe2cd5c9"
+    sha256 arm64_monterey: "7776ceee6332172c3b37fe41417ddbb09bd61f02a85548f56039387a5c7bace4"
+    sha256 arm64_big_sur:  "d95bdd9864736f1d08dbe0aa762117fb15dfd0f06cc32ba91fa3622342474fa0"
+    sha256 ventura:        "667fb46bad11718d43d21780a211a5128a20d780003c96b0611609e921678a94"
+    sha256 monterey:       "1a6f32dc3c69aec68483d7f391de6cae4e752e78845d328695446fbacad717ff"
+    sha256 big_sur:        "633b99819065c8da59a60aeb74829cb0127e1982fac21e986770cf13303cbc89"
+    sha256 x86_64_linux:   "578e65d82cb65809d13408ea008c7743ce8abe34d951eff3bfe51d6f93e525bb"
   end
 
   depends_on "cmake" => :build
   depends_on "lua" => :build
+  depends_on "nlohmann-json" => :build
   depends_on "boost"
   depends_on "geos"
   depends_on "libpq"
@@ -34,10 +34,14 @@ class Osm2pgsql < Formula
     inreplace "cmake/FindLua.cmake", /set\(LUA_VERSIONS5( \d\.\d)+\)/,
                                      "set(LUA_VERSIONS5 #{lua_version})"
 
-    mkdir "build" do
-      system "cmake", "-DWITH_LUAJIT=ON", "-DUSE_PROJ_LIB=6", "..", *std_cmake_args
-      system "make", "install"
-    end
+    args = %w[
+      -DWITH_LUAJIT=ON
+      -DUSE_PROJ_LIB=6
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

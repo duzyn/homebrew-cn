@@ -1,8 +1,8 @@
 class Capnp < Formula
   desc "Data interchange format and capability-based RPC system"
   homepage "https://capnproto.org/"
-  url "https://capnproto.org/capnproto-c++-1.0.0.tar.gz"
-  sha256 "4829b3b5f5d03ea83cf6eabd18ceac04ab393398322427eda4411d9f1d017ea9"
+  url "https://capnproto.org/capnproto-c++-1.0.1.tar.gz"
+  sha256 "0f7f4b8a76a2cdb284fddef20de8306450df6dd031a47a15ac95bc43c3358e09"
   license "MIT"
   head "https://github.com/capnproto/capnproto.git", branch: "master"
 
@@ -12,30 +12,80 @@ class Capnp < Formula
   end
 
   bottle do
-    sha256 arm64_ventura:  "33183d990517550b7a2a970c808a35e18125f1d82d3bb5fa214b723f0edec517"
-    sha256 arm64_monterey: "987493ff3bd711e84174dd27142f63d07191f44debfb04f09060ec3e3ca5925b"
-    sha256 arm64_big_sur:  "55acc6d86092f97869e0be531ebe3b2edb231c08c6d4dc7eb521f638e46086cf"
-    sha256 ventura:        "58daba471c2ebb0002f0101e2e6915d327b2a52e5e5f2a0d6df6fda551dbe3d2"
-    sha256 monterey:       "ee81c9e2af592979dcf1f7b5a986d403de9aa6d8b67bc5e63c35c477322aa889"
-    sha256 big_sur:        "bb3ca39a54b2838388e8a6af0db16c05de38d49dc5699e70528528dcc6da806a"
-    sha256 x86_64_linux:   "51e284ca5b57d16b50d398251b9a21903bcdcfa04f4694dc2a327b57f254b1ad"
+    sha256 arm64_sonoma:   "813f6c36704966cc86e6f6075d238b1d23f1ec7fd6c22ef25aca9eea52fdc1cc"
+    sha256 arm64_ventura:  "85b7fa56075fd5cfc7ac2826db04393bcedc532d6c1b7e77a0fb9640b73dae23"
+    sha256 arm64_monterey: "705425ac57b11d428626f70ef1fc7b3a9bb137b11797445f6e6121cd5c677222"
+    sha256 arm64_big_sur:  "646fda7aeff0ecf305688e1f1752bd78e0d9477508d9c4e71b96c2ee2ce31259"
+    sha256 sonoma:         "f6752df4e6bf2bfbbcb254b9df123d9114a2946955eeeaa44f683daf33a31bea"
+    sha256 ventura:        "a3979d91880e97d250a9f2decb2655c8d5bbccb7be0f48468fd65826ce40a4b5"
+    sha256 monterey:       "96e2da3790877a51e93bb65e67781e203fc7c73387ac5aaa14f578627bd60fa2"
+    sha256 big_sur:        "6160d5afc05b64c8cdfb836b0d35972bf573de4136068e4f4f1ddec32a9674c7"
+    sha256 x86_64_linux:   "6a64eeff8dc7fba4f39ed8a4d25908f7757c175f21de3ff72ed62852d8275304"
   end
 
   depends_on "cmake" => :build
+  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "openssl@3"
+  end
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make", "install"
-    end
+    # Build shared library
+    system "cmake", "-S", ".", "-B", "build_shared",
+                    "-DBUILD_SHARED_LIBS=ON",
+                    "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
+                    "-DCMAKE_CXX_FLAGS=-fPIC",
+                    *std_cmake_args
+    system "cmake", "--build", "build_shared"
+    system "cmake", "--install", "build_shared"
+
+    # Build static library
+    system "cmake", "-S", ".", "-B", "build_static",
+                    "-DBUILD_SHARED_LIBS=OFF",
+                    "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
+                    "-DCMAKE_CXX_FLAGS=-fPIC",
+                    *std_cmake_args
+    system "cmake", "--build", "build_static"
+    lib.install buildpath.glob("build_static/src/capnp/*.a")
+    lib.install buildpath.glob("build_static/src/kj/*.a")
   end
 
   test do
+    ENV["PWD"] = testpath.to_s
+
     file = testpath/"test.capnp"
     text = "\"Is a happy little duck\""
 
     file.write shell_output("#{bin}/capnp id").chomp + ";\n"
     file.append_lines "const dave :Text = #{text};"
     assert_match text, shell_output("#{bin}/capnp eval #{file} dave")
+
+    (testpath/"person.capnp").write <<~EOS
+      @0x8e0594c8abeb307c;
+      struct Person {
+        id @0 :UInt32;
+        name @1 :Text;
+        email @2 :Text;
+      }
+    EOS
+    system "#{bin}/capnp", "compile", "-oc++", testpath/"person.capnp"
+
+    (testpath/"test.cpp").write <<~EOS
+      #include "person.capnp.h"
+      #include <capnp/message.h>
+      #include <capnp/serialize-packed.h>
+      #include <iostream>
+      void printPerson(int fd) {
+        ::capnp::PackedFdMessageReader message(fd);
+        Person::Reader person = message.getRoot<Person>();
+
+        std::cout << person.getName().cStr() << ": "
+                  << person.getEmail().cStr() << std::endl;
+      }
+    EOS
+    system ENV.cxx, "-c", testpath/"test.cpp", "-I#{include}", "-o", "test.o", "-fPIC", "-std=c++1y"
+    system ENV.cxx, "-shared", testpath/"test.o", "-L#{lib}", "-fPIC", "-lcapnp", "-lkj"
   end
 end

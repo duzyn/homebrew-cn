@@ -2,19 +2,21 @@ class Vcluster < Formula
   desc "Creates fully functional virtual k8s cluster inside host k8s cluster's namespace"
   homepage "https://www.vcluster.com"
   url "https://github.com/loft-sh/vcluster.git",
-      tag:      "v0.15.5",
-      revision: "c9a7c0f59af56136fc709823d33f2ae9b7eee9d4"
+      tag:      "v0.15.7",
+      revision: "3b917f958f6c69b665e4eb27a62dd88fa639a29d"
   license "Apache-2.0"
   head "https://github.com/loft-sh/vcluster.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9228e54ed8b99162fd80a899ebee99f1331773381602f188559c80ca586ff027"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7377f320662bd48ec5bfd3489190b2f52359357d0021b335019a85fc0de2bf0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5da16ea7a005618c1e8f6e2c1117b5aa4a9285f5777a742735b4c8b74e81a812"
-    sha256 cellar: :any_skip_relocation, ventura:        "ffd1791fc9e869f2ecf587eb0393d0f773011896babbcbfdf16d570171b2d043"
-    sha256 cellar: :any_skip_relocation, monterey:       "66406c104d181381afb4441d7277161186d52e9ff77d5bdc20c1d728e4af9eee"
-    sha256 cellar: :any_skip_relocation, big_sur:        "90b34df50f3de64be3df66c3a108aabd49e55672b758c9f369dab8f11d73a0db"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fabdc15a7785d4b243447ff255ef571e561e17fb98ece845fab8728ac968008"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3e6e8265857f5d6080a29051f9147b0f4995d1557c96fc045ce9c4695545db56"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "971a22b42b7a56c565afd47ee01b999c27faef6886e62066ccfed61c099a33da"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6e05d7296b460d7e3a8b2c9fefd662524f29f431a6d3793bbb00deb0b12c71e5"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "5684d2f82765345e98be1835f78e26691cb0362ca530e606664bbf3a0463e52d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9a5dc6078ed294eb2b90362eedf6c5fc47f9dd86ed1924cfd9857cab5e4c8c6c"
+    sha256 cellar: :any_skip_relocation, ventura:        "ada4396301840b37701fa3a048f7afbe0d4bd7a25776e64b09a625ac711d4ec4"
+    sha256 cellar: :any_skip_relocation, monterey:       "2e606aba6484575aad5a1afdf276c24580a846d7f9b8fad528243d620524ec30"
+    sha256 cellar: :any_skip_relocation, big_sur:        "0e398edb0e8190827f3abeb5f80acb6f08eb7020f8d6eda994676179e47fb28b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cd2c6196d14093a55a9a636b7503e425f15c631823a083052c84f1312acff8f"
   end
 
   depends_on "go" => :build

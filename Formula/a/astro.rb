@@ -1,8 +1,8 @@
 class Astro < Formula
   desc "To build and run Airflow DAGs locally and interact with the Astronomer API"
   homepage "https://www.astronomer.io/"
-  url "https://ghproxy.com/https://github.com/astronomer/astro-cli/archive/refs/tags/v1.18.2.tar.gz"
-  sha256 "c322a984b5e993ca782e69994e32eb443cbb4ccb9d8173266e26e137f9ed739a"
+  url "https://ghproxy.com/https://github.com/astronomer/astro-cli/archive/refs/tags/v1.19.2.tar.gz"
+  sha256 "cb024d1e787102572964a8c3a391e9cffd152f8c0ec43da92ec45d6b15064863"
   license "Apache-2.0"
 
   livecheck do
@@ -11,13 +11,13 @@ class Astro < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "99b9e153d1bee752004c7d9227a0c5369481c2c1cd6932f97e8139245b5fcd83"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "99b9e153d1bee752004c7d9227a0c5369481c2c1cd6932f97e8139245b5fcd83"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "99b9e153d1bee752004c7d9227a0c5369481c2c1cd6932f97e8139245b5fcd83"
-    sha256 cellar: :any_skip_relocation, ventura:        "ccb116460096acf46de260666c6065ce74da7c5c00135784e8264517bc152779"
-    sha256 cellar: :any_skip_relocation, monterey:       "ccb116460096acf46de260666c6065ce74da7c5c00135784e8264517bc152779"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ccb116460096acf46de260666c6065ce74da7c5c00135784e8264517bc152779"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3a521ecf85356513b29b04a3cc21c5e8336a671fc2c2c312103f568803759f4b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "033eba3ab4c048c7e9cc6b4de928cc44389d2d110b15e956c73f5203c212b9fb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "033eba3ab4c048c7e9cc6b4de928cc44389d2d110b15e956c73f5203c212b9fb"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "033eba3ab4c048c7e9cc6b4de928cc44389d2d110b15e956c73f5203c212b9fb"
+    sha256 cellar: :any_skip_relocation, ventura:        "359bd3ebdd46cb2e1905616b0605c57019dba951c965892b1e0ebb805551bb0e"
+    sha256 cellar: :any_skip_relocation, monterey:       "359bd3ebdd46cb2e1905616b0605c57019dba951c965892b1e0ebb805551bb0e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "359bd3ebdd46cb2e1905616b0605c57019dba951c965892b1e0ebb805551bb0e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "afd70318653b7d0df1b4fa2246b910095177d92db4bb60c1e57a3fd1a6c95b9c"
   end
 
   depends_on "go" => :build

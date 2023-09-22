@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2023.6.0.89"
-  sha256 "12c3b5a037663e392f6592143bec0a0be7e3da14796fa6bb007b411b3ee54c4b"
+  version "2023.8.1.102"
+  sha256 "78d5d20299eba5e2c75038ef575d5a7776c07c6d8d5a0c1fe7e9bb6b6ac0983a"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
@@ -9,8 +9,8 @@ cask "gamemaker" do
   homepage "https://gamemaker.io/"
 
   livecheck do
-    url "https://gms.yoyogames.com/update-mac.rss"
-    strategy :sparkle
+    url "https://gamemaker.io/en/download"
+    regex(%r{href=.*?/GameMaker-(\d+(?:\.\d+)*)\.pkg.+is-primary}i)
   end
 
   pkg "GameMaker-#{version}.pkg"

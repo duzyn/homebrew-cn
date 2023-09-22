@@ -1,28 +1,38 @@
 class Solana < Formula
   desc "Web-Scale Blockchain for decentralized apps and marketplaces"
   homepage "https://solana.com"
-  url "https://ghproxy.com/https://github.com/solana-labs/solana/archive/v1.14.24.tar.gz"
-  sha256 "1ca45518f62e4884c9b30fa5682f47d9874f8d0bb2234ca2d67ef0a9370a724f"
+  url "https://ghproxy.com/https://github.com/solana-labs/solana/archive/v1.14.27.tar.gz"
+  sha256 "678395a6a4e27546f7104b8a500098d35c64ea2a80088e17413e03f44acf3cda"
   license "Apache-2.0"
   version_scheme 1
 
   # This formula tracks the stable channel but the "latest" release on GitHub
-  # varies between Mainnet and Testnet releases. This identifies versions by
-  # checking the releases page and only matching Mainnet releases.
+  # varies between Mainnet and Testnet releases. This only returns versions
+  # from releases with "Mainnet" in the title (e.g. "Mainnet - v1.2.3").
   livecheck do
-    url "https://github.com/solana-labs/solana/releases?q=prerelease%3Afalse"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >][^>]*?>\s*Mainnet}i)
-    strategy :page_match
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+        next unless release["name"]&.downcase&.include?("mainnet")
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3bf76b7363a996c6f4ec12668c98f3151f62d8dfed4855ee068ceedc1ec7256b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e0378829e107c4caefbaaa6cb21c502faf0556953d48410893bebdee1dbf0888"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b018fef6442ce6a526677f8291e6ae199e7c262575aa42043970e72f728dc60f"
-    sha256 cellar: :any_skip_relocation, ventura:        "280fc23e390318bc1e620c65592bfa2e0443ffb36007b2cc32519954e8cc5df1"
-    sha256 cellar: :any_skip_relocation, monterey:       "d5e8a5e8ec21e1be4cbdf309da1e381971a4ac4f56d70e73b606cb9eb6828589"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8f043129c654a4ca5bcaa77e459bfe873aa8bbc252aa1e79277be67dae9ebcea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f991ef664c61b0fa7ee400483ef1860468dd20668d74cdcae6f7990abda996f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cb0d56b493bbf22ca46ed859576b6d37da7651bd380944f734a1408c92423f9d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9b4f9c5f847e3f5677590b5ab05992d5264d498c3465a8f4f2b54034ce00f74c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "3c802ec4741f1492ad251974696dcc09cae3b060c1abf1478578bbe6aeed47cd"
+    sha256 cellar: :any_skip_relocation, ventura:        "9be3807e7c41296eeeeed7fb1b20d20bf1663bd3aa51b69a9bcb8a15561e9170"
+    sha256 cellar: :any_skip_relocation, monterey:       "eb95668eebf08a5daafc7a6c206ddc18a0bd971d8563b3ae3698f2ebf6969b99"
+    sha256 cellar: :any_skip_relocation, big_sur:        "efa3812b0ca350027f9e9aaa71f62efa4604155f9b5f1b80dcc9a472fdff18f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d900db872a99b3e8947dec0951bf42083d2ae2a2107c157d2b9baa8616f03044"
   end
 
   depends_on "protobuf" => :build

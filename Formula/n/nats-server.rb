@@ -1,19 +1,19 @@
 class NatsServer < Formula
   desc "Lightweight cloud messaging system"
   homepage "https://nats.io"
-  url "https://ghproxy.com/https://github.com/nats-io/nats-server/archive/v2.9.21.tar.gz"
-  sha256 "e547ef512b59bd124e6851ee288584f6fd08cee3654f8c4a570abe11bc8d70a1"
+  url "https://ghproxy.com/https://github.com/nats-io/nats-server/archive/refs/tags/v2.10.1.tar.gz"
+  sha256 "98f89c6fb1776d219476b1053adf0c21cd8fef9f1bb1efda654986dd11c8bafa"
   license "Apache-2.0"
   head "https://github.com/nats-io/nats-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0709a071d974c82336d02018069cf16c202778ece0a2a2e290f645a39cb22832"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0709a071d974c82336d02018069cf16c202778ece0a2a2e290f645a39cb22832"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0709a071d974c82336d02018069cf16c202778ece0a2a2e290f645a39cb22832"
-    sha256 cellar: :any_skip_relocation, ventura:        "0fe1f80a98daa46e5f1a4485517e30908a770ded0fff2554e1c7662d33b090d0"
-    sha256 cellar: :any_skip_relocation, monterey:       "0fe1f80a98daa46e5f1a4485517e30908a770ded0fff2554e1c7662d33b090d0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0fe1f80a98daa46e5f1a4485517e30908a770ded0fff2554e1c7662d33b090d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "27b43f1617370b8ae8c225f4f517378af82d4b634aaea04fa8c87766197d2771"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "adf6a4e92839b796151215a8c39afcf996b4172e80590f7373b84bc900f86399"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e60e48b5021444b886d81f74fca2ca3c4f845910583664ae7aef6e6f7c22823e"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "6d579ac24a7c5687ebb8db3d118f28e5aa80a0a2a0d49bf99e04ace90d9bad5b"
+    sha256 cellar: :any_skip_relocation, ventura:        "5ce7bbf948365d028c6a3348ab31d018b5bd1612af3c399f6c6c7f7881486005"
+    sha256 cellar: :any_skip_relocation, monterey:       "2b9ca89c166765104462fd312f70a86d7711bbb420b0f2b39edd62c7a5590f90"
+    sha256 cellar: :any_skip_relocation, big_sur:        "786e935b0e6fab0e759f5e60bc85b8597fca992a7418a36c289e4a86e2b786f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bff1dd9be667654a40ec769807ecf38b7cc3550f24c34ad77d6ac6b315115589"
   end
 
   depends_on "go" => :build

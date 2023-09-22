@@ -1,19 +1,21 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
-  url "https://ghproxy.com/https://github.com/facebook/folly/archive/refs/tags/v2023.08.14.00.tar.gz"
-  sha256 "63b0abc6860e91651484937fbb6e90a05dbf48b30133b56846e5e6b9d13c396c"
+  url "https://ghproxy.com/https://github.com/facebook/folly/archive/refs/tags/v2023.09.18.00.tar.gz"
+  sha256 "92167187103e20b0c8b808c9f263453872caba7edf63410cda1f79e2f98828f8"
   license "Apache-2.0"
   head "https://github.com/facebook/folly.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "0377ab650cb478112b0db8e0690792e14408fa871cc42b8d1aedf40384026b5b"
-    sha256 cellar: :any,                 arm64_monterey: "4caa668bf8be8c8d9cc25e7d2b9fb9c2de78da7f550560ff7aeadb5a84fd419f"
-    sha256 cellar: :any,                 arm64_big_sur:  "d62be5ffc65d361ff82ee3ef6c665748793d2e882b02726d5035dd68ece722f3"
-    sha256 cellar: :any,                 ventura:        "f5c21316be7c6c7458c00f1f85b0def59d522c01679f7132baa1e28de591ad37"
-    sha256 cellar: :any,                 monterey:       "5c8417bbf1c8d3c2023cb06793acc8b5bb66c964b5d6a1a864fcc78fb0c90cac"
-    sha256 cellar: :any,                 big_sur:        "cb833e3eac6f5fad1fbc5a4d2690d496e864a95a15af1c8104eb68256a16486f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "854e73e7f47b12b5c169579201757e48b8bdf62d68a2a102afb5637e2e77be9b"
+    sha256 cellar: :any,                 arm64_sonoma:   "c32d9d99cd25d50782f940576e2c113f13f2db2f083996ad5a6dfe12376b9c90"
+    sha256 cellar: :any,                 arm64_ventura:  "204710666d4ce2a8606d60efee71882cc84b784fa1f675e2270eeab11f1b9e00"
+    sha256 cellar: :any,                 arm64_monterey: "7b9973e014b958695f55f782088c56e249ff6c144d7970e860ccd89497254c65"
+    sha256 cellar: :any,                 arm64_big_sur:  "0f10ac6a9924bd689d36d8dacf9cd28ee8b730dca3514d4b21ff7d8781dbc778"
+    sha256 cellar: :any,                 sonoma:         "bc94abe67619be219afd50b304e4a919da2e67895a50d99df87a019e9e7bc0a3"
+    sha256 cellar: :any,                 ventura:        "c485218d7366261a04a82b737178c88b5549f95a8b2f694c2dfaa5e425c44c51"
+    sha256 cellar: :any,                 monterey:       "478278b5a20c63bde7664639b518e97cb4eaeb9f580e95d1b8bfea4a698cb0e1"
+    sha256 cellar: :any,                 big_sur:        "da3134881b26222a288c77e2b8027d458b5b92a16c9d7818766937095248f031"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "682f74e2414b09ff3cff7e139ef6bf1685f22939fd11d843e4d4e0757b8b1716"
   end
 
   depends_on "cmake" => :build

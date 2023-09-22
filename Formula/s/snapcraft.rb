@@ -3,8 +3,8 @@ class Snapcraft < Formula
 
   desc "Package any app for every Linux desktop, server, cloud or device"
   homepage "https://snapcraft.io/"
-  url "https://ghproxy.com/https://github.com/snapcore/snapcraft/archive/refs/tags/7.5.0.tar.gz"
-  sha256 "93cf864cb9bab8614411ed97dcf6b5dfc1bd4cb1c2a7044960986da0c7695288"
+  url "https://ghproxy.com/https://github.com/snapcore/snapcraft/archive/refs/tags/7.5.3.tar.gz"
+  sha256 "3dd5cc59a2cb56e647e7906af7e2c9c01493d19c91132a8d0208a930449db650"
   license "GPL-3.0-only"
 
   livecheck do
@@ -13,17 +13,18 @@ class Snapcraft < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4c3a2d0391d87d471f2479570a296f7df0a0305c384eca65aa325a11e927cf6d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "940f1a574217a971d39a7d8dca874a2277ec4d6befcdb57aca376714908ac76e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "af0ec5835739dda677cbd5ea4c1aebb974327aa13dad3ec2bca5b3b93ddea18b"
-    sha256 cellar: :any_skip_relocation, ventura:        "890dbad183ff29534f3a0fcf24fd1f7ab2c3e9a176840a160024953371f7f164"
-    sha256 cellar: :any_skip_relocation, monterey:       "870423ea70caf9771ebb7b72f8d87346e15e10dde9b7cf9d4002c5e2193b38e4"
-    sha256 cellar: :any_skip_relocation, big_sur:        "6ed7885490c70e8fe34159d924c3d814086b2d0b52a4b8bf2baf76f89d8b4dc7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2db9e70ac3ff4f292ec0f8e441daacb8ffcca91b0ca067a33cb1f25e91630728"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0ff895e7a90a6be42c4d4f4cd1e4edcffad53e0c3ff65e6e1eaeea6431bb3a69"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a15282289b9f9b7737e50815d9c3bb433b6dac2f8d902a7e383d107f7e20637d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1a100c13e4b29f316c8f6bf550a79657a0d1632bb8214e23fe31025ccb6fa522"
+    sha256 cellar: :any_skip_relocation, ventura:        "e9c5d796b3da4f83630904ebc6c0fe646062b7f77b41cc825b66a729ecde668e"
+    sha256 cellar: :any_skip_relocation, monterey:       "d942f1382a4dd1b8bb09985379677bb2856d47af9d22e390c29b56dc33d6c0e4"
+    sha256 cellar: :any_skip_relocation, big_sur:        "2a4758889bc7a5640a201f80320506fa07cfbf72c5ae4f7ee121e742595fadd6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c93cb067079d80a7d97176205db6687661b2e0fef844b65ed93e8d46e4b84dc0"
   end
 
   depends_on "libsodium"
   depends_on "lxc"
+  depends_on "python-pytz"
   depends_on "python-tabulate"
   depends_on "python-typing-extensions"
   depends_on "python@3.11"
@@ -318,11 +319,6 @@ class Snapcraft < Formula
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
-  end
-
-  resource "pytz" do
-    url "https://files.pythonhosted.org/packages/5e/32/12032aa8c673ee16707a9b6cdda2b09c0089131f35af55d443b6a9c69c1d/pytz-2023.3.tar.gz"
-    sha256 "1d8ce29db189191fb55338ee6d0387d82ab59f3d00eac103412d64e0ebd0c588"
   end
 
   resource "pyxdg" do

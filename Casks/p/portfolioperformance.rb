@@ -1,9 +1,9 @@
 cask "portfolioperformance" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.65.1"
-  sha256 arm:   "08643cfbb3f06037ce15b3a0d445b2d0a87adcb820876b98d6446d6ca33e994d",
-         intel: "e59a8bf18a0685a986ccbb2e53a3b47aab40f1bf89e631bf7af35b70a7ee0419"
+  version "0.65.3"
+  sha256 arm:   "590e7fb220b8395f889a0ab2f923a8cb6c8961b6583c04246ac90e0fd6d9c69f",
+         intel: "dd6124cce2813ce452346ead0a0aa05a768224728caff4e64067b5a40ca568cb"
 
   url "https://ghproxy.com/https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",
       verified: "github.com/buchen/portfolio/"

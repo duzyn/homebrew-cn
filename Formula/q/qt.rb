@@ -14,7 +14,7 @@ class Qt < Formula
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } },
     "LGPL-3.0-only",
   ]
-  revision 2
+  revision 3
   head "https://code.qt.io/qt/qt5.git", branch: "dev"
 
   # The first-party website doesn't make version information readily available,
@@ -25,13 +25,14 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "c1fc723dbeb8b2b4df104fcf1a10653109419cfeee9f3016f9edd68ba6bedb07"
-    sha256 cellar: :any,                 arm64_monterey: "0109c8fb307b0768aa088b6d1163e25712806a8b2b8ab3695d0c8839973bbba7"
-    sha256 cellar: :any,                 arm64_big_sur:  "83298bf40b2605b6d911507ce861560039f709f6a845b47c8855af49f2e6065b"
-    sha256 cellar: :any,                 ventura:        "629cbb76ad5fca32d4d200da98bf0f8f1cd39dd570949b4ba9069ed74ccf4356"
-    sha256 cellar: :any,                 monterey:       "0c425e63eebfd5447dd200bf3225eb0ba6d005b14fccc8e295d9b2ff112d4d68"
-    sha256 cellar: :any,                 big_sur:        "18b8143094a304749f2b189f1a8d22a90254b2dae0652089dd4d1549cec73d26"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "895270278802c816e92eae4c461ba095f7848e867bde074412f40d6103b632df"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_ventura:  "d16989865a01a0f7602e47f7a4bf890623b934b667f754eccca30eeeb127a2e5"
+    sha256 cellar: :any,                 arm64_monterey: "f578f21a236dab821acc5a804ec3831310ee3a31943f581fb06b51e7441faefa"
+    sha256 cellar: :any,                 arm64_big_sur:  "f3e38bf73b9cc1dd7f218061a3e134ea3579fa20f97afb8338071261b0a977b9"
+    sha256 cellar: :any,                 ventura:        "88e933aec762ffcd368c40daf3012ea0d3a70ccea61a40369fa7d53ea4a78a00"
+    sha256 cellar: :any,                 monterey:       "184e496be6d14ba71ef0922d852ea3d5c19b995195347d35e9d8a503994c7dc3"
+    sha256 cellar: :any,                 big_sur:        "0b8f1a61e38dbf1bc6b256dd26a53693f0dd073976f38d9f39b8526e6398fc91"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f5f34a88355b1544d0b696f0c926ecb4aec4f265f1bb24e94db384277b59b33e"
   end
 
   depends_on "cmake"      => [:build, :test]
@@ -104,7 +105,6 @@ class Qt < Formula
     depends_on "nss"
     depends_on "opus"
     depends_on "pulseaudio"
-    depends_on "re2"
     depends_on "sdl2"
     depends_on "snappy"
     depends_on "systemd"
@@ -319,7 +319,7 @@ class Qt < Formula
       set(CMAKE_AUTOUIC ON)
 
       find_package(Qt6 COMPONENTS Core Gui Widgets Sql Concurrent
-        3DCore Svg Quick3D Network NetworkAuth REQUIRED)
+        3DCore Svg Quick3D Network NetworkAuth WebEngineCore REQUIRED)
 
       add_executable(test
           main.cpp
@@ -327,13 +327,13 @@ class Qt < Formula
 
       target_link_libraries(test PRIVATE Qt6::Core Qt6::Widgets
         Qt6::Sql Qt6::Concurrent Qt6::3DCore Qt6::Svg Qt6::Quick3D
-        Qt6::Network Qt6::NetworkAuth Qt6::Gui
+        Qt6::Network Qt6::NetworkAuth Qt6::Gui Qt6::WebEngineCore
       )
     EOS
 
     (testpath/"test.pro").write <<~EOS
       QT       += core svg 3dcore network networkauth quick3d \
-        sql gui widgets
+        sql gui widgets webenginecore
       TARGET = test
       CONFIG   += console
       CONFIG   -= app_bundle
@@ -353,6 +353,7 @@ class Qt < Formula
       #include <QtSvg>
       #include <QDebug>
       #include <QVulkanInstance>
+      #include <QtWebEngineCore>
       #include <iostream>
 
       int main(int argc, char *argv[])

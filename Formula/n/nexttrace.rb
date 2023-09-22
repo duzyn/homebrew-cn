@@ -1,19 +1,19 @@
 class Nexttrace < Formula
   desc "Open source visual route tracking CLI tool"
   homepage "https://github.com/sjlleo/nexttrace-core"
-  url "https://ghproxy.com/https://github.com/sjlleo/nexttrace-core/archive/refs/tags/v1.1.7-1.tar.gz"
-  sha256 "1c937a9f7c2f1d4a3e71e63db2929a5b24d438c63efd9715b00277f1b3add4cb"
+  url "https://ghproxy.com/https://github.com/sjlleo/nexttrace-core/archive/refs/tags/v1.2.1.1.tar.gz"
+  sha256 "56fe2986067ed8f84bb30d533309a79f901d9a182f25afb71a8354e5bfad6b5d"
   license "GPL-3.0-only"
   head "https://github.com/sjlleo/nexttrace-core.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "681741032c8d303c6f545f20ff059f32203663f5145202a5143cfee505e77a93"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "681741032c8d303c6f545f20ff059f32203663f5145202a5143cfee505e77a93"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "681741032c8d303c6f545f20ff059f32203663f5145202a5143cfee505e77a93"
-    sha256 cellar: :any_skip_relocation, ventura:        "8ec527e5c985b268eaf60231c243f92a0718756fdebcb71489e1d22672f0e343"
-    sha256 cellar: :any_skip_relocation, monterey:       "8ec527e5c985b268eaf60231c243f92a0718756fdebcb71489e1d22672f0e343"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8ec527e5c985b268eaf60231c243f92a0718756fdebcb71489e1d22672f0e343"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f8b8d14f176d0782d11635d1461574a11cfc9eb4ddd5d4052b4da5ed8bffa96"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e177d51b26ecb007b220ab6f2de23f8da9eb03dbbf8d1f88824f6460fae2666c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be086f5209dc1eee40ab10d8a0123b0a96ea2239a7951ce62f84320bb7be0679"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "22f2141fe46e062ca211a015481b3925cd05aec65004ec95f4338008cbf8cffe"
+    sha256 cellar: :any_skip_relocation, ventura:        "cddc2a5971066a27cfff7202160af4f1908e6954965a0574b6adaf3f5fcacf16"
+    sha256 cellar: :any_skip_relocation, monterey:       "859054ddb09798b9c45a782c8a3337159cf1ec01232b0d5de6d82137c5df21d1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "99af9852dfe9e9195f9838bcd2f44bb28a5b91b69f587324f4d56d6d2cc22688"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfc0536739bceb7a1e6a7a7e0afcead046c6609a2d37f6b2d3b60deb32ae0cb3"
   end
 
   depends_on "go" => :build
@@ -37,12 +37,7 @@ class Nexttrace < Formula
 
   test do
     # requires `sudo` to start
-    output = if OS.mac?
-      shell_output(bin/"nexttrace --language en 1.1.1.1 2>&1")
-    else
-      shell_output(bin/"nexttrace --language en 1.1.1.1 2>&1", 1)
-    end
-
+    output = shell_output(bin/"nexttrace --language en 1.1.1.1 2>&1", 1)
     assert_match "traceroute to 1.1.1.1", output
     assert_match version.to_s, shell_output(bin/"nexttrace --version")
   end

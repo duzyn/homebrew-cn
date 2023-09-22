@@ -1,19 +1,21 @@
 class Diesel < Formula
   desc "Command-line tool for Rust ORM Diesel"
   homepage "https://diesel.rs"
-  url "https://ghproxy.com/https://github.com/diesel-rs/diesel/archive/v2.1.0.tar.gz"
-  sha256 "0c530935a45876006417e8c9668088de7bd7445e8846ea859ea66f98d6e667cd"
+  url "https://ghproxy.com/https://github.com/diesel-rs/diesel/archive/refs/tags/v2.1.1.tar.gz"
+  sha256 "eaed2b94bac9d93b5138cabcce45dab3bfbdfe9d2b911653c6c4571b45d8c9fa"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/diesel-rs/diesel.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "7987c89c4a455c579a536cbb112446f4ad08484971a46717b5ef21bc40e1eebf"
-    sha256 cellar: :any,                 arm64_monterey: "f0894474786994292026121d47b3792a49ca13a6f41a4f086866d380a46e2a62"
-    sha256 cellar: :any,                 arm64_big_sur:  "2ee93e88d7371055c997b2c1a3d9c2bfd70ec906da083b3cdc6877f4730d85d5"
-    sha256 cellar: :any,                 ventura:        "17f0b276730f08426cdef5d2355aa384c29e3edbfd28d5ffa878265ca05a4071"
-    sha256 cellar: :any,                 monterey:       "f5c138b2fbdc46cf12248c3d5fb85779005a7a0d938a2810cc9256fe39683b32"
-    sha256 cellar: :any,                 big_sur:        "22bcb5b6aae2437b73ad358fa74b0a11d5569fd14cb9c992607aa8aec91ffbf0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79c05cf97e37861d09035d0da73503fc1c37cf445fa3be234d18973a27a48dca"
+    sha256 cellar: :any,                 arm64_sonoma:   "7b27f4f470fa671fcb09f13abe36b91d63056f129c5135d77cfdaf588d6edb41"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "acbf79a7e8f09fd2ee2165d210fcbd243c8d9c257fab071dbc6ea53766054fc2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fccc247b92f9991d1e24d8b6fbc1a1fd6d19970c60229c6a326e75a7d8e80f3d"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "558b3918ca0dfb19729286bc2939b093498dd0cedc13edf7d8c9badfe75e053f"
+    sha256 cellar: :any,                 sonoma:         "b74c912cfd4c7716607ab129308aad2e483fb6dbc3193510b683eadd8f167863"
+    sha256 cellar: :any_skip_relocation, ventura:        "fdd895a8cbf5afc39ba5d07e180706f95deb4204087eff55f675f1770e72a644"
+    sha256 cellar: :any_skip_relocation, monterey:       "b2f02564df1c223d5f5acad65cfaf88bc4417c8ff714a541ae9209b849375da5"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b98e2280d3c980181df23c7608acfb03533b2fdac2ecd7b9c9c6e98f4a3b3a42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0d268da02aebb441c2934e880cd57eea1cd826c45822231096338efc6cf5f4a2"
   end
 
   depends_on "rust" => [:build, :test]

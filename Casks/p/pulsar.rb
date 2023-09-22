@@ -2,15 +2,20 @@ cask "pulsar" do
   arch arm: "Silicon", intel: "Intel"
   arch_suffix = on_arch_conditional arm: "-arm64"
 
-  version "1.107.1"
-  sha256 arm:   "703be78f2ea3dcd3f9c048c22cd82e483be4820513584e1daa298f1828a9d89e",
-         intel: "4f838e8d32dbedb355356e79f7dc330932d69567c36d3542bad1154523d4803a"
+  version "1.109.0"
+  sha256 arm:   "dcbd21f720408781abb2df7b6f97dd68c8292ac955a78e492aebd14964adb8ab",
+         intel: "763999f2297183acf6683501363e3cc7d4405d121140ffc0897604004068a9e7"
 
   url "https://ghproxy.com/https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.Pulsar-#{version}#{arch_suffix}-mac.zip",
       verified: "github.com/pulsar-edit/pulsar/"
   name "Pulsar"
   desc "Text editor"
   homepage "https://pulsar-edit.dev/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Pulsar.app"
   binary "#{appdir}/Pulsar.app/Contents/Resources/app/ppm/bin/apm", target: "ppm"

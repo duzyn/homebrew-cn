@@ -3,21 +3,21 @@ class Conan < Formula
 
   desc "Distributed, open source, package manager for C/C++"
   homepage "https://conan.io"
-  url "https://files.pythonhosted.org/packages/9a/ec/325a14043fb447e16122b6595df88e4af72681388ba11516fa20712c8e66/conan-2.0.9.tar.gz"
-  sha256 "c54fde1f0629c2eb51de8636c5272fc919f9e70994c579df04620bca0a479bb4"
+  url "https://files.pythonhosted.org/packages/5b/0e/36a4d7068ffb0313504c2f3e57db51edaf15559843feda2cf8acb17be862/conan-2.0.11.tar.gz"
+  sha256 "f9129ae26c4e025c344e7d34e2afaedc924298da6810136a2b7e542143c6638c"
   license "MIT"
-  revision 1
   head "https://github.com/conan-io/conan.git", branch: "develop"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3ed3e59a6e352c12d0e75fb63a02e989fc260b4c1d72179ec7d00b00a7763898"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "930ab910b53f84e7a344f0454d9152a5ee8d9aac514004095517c83feddc70cb"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1150ab204cf96dbcae1d021dca7df336d07a8269749f6d369a33764361fd0bed"
-    sha256 cellar: :any_skip_relocation, ventura:        "1b6f53824b618d5a7d3238852b80f42513d5d56e9a13f6b5a76b2d85469b7aa1"
-    sha256 cellar: :any_skip_relocation, monterey:       "359235a7306529284b3329c8e5cc8744b35d79ae1091a4d3c049acd8ab149f66"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3c9999c144254a54ec0b732cb97b74ab94effde865e07af74687fdd4e88f6072"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5a1c552cd0c1d3690a4968a62330fc5c2c119ac60db22867a8134efaaccc3fb1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9328b4bc5d30f08240698e4e4d253a20744ea0fadd3acca7bb63e6f6f589c966"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "23ba75d40fde79f648f3db8af6d471334eb1b6876709e33cb9fe9dc72d08e917"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "600225ad52ef777b06b93b631ac4ac5dd643aa945ecbe1d7194a97e0086d7f17"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a49fe265cc75455935875e3201e6f0eb0d2a5f4f270a3ac47e3cfe1ac500ec92"
+    sha256 cellar: :any_skip_relocation, sonoma:         "d372fdbd551c13989de341296259afec352a73ca336abe7d2a62650675e96488"
+    sha256 cellar: :any_skip_relocation, ventura:        "c89515cf7f92043dd196ba11259e8dfd8319682480649f0cf23feeeca9903671"
+    sha256 cellar: :any_skip_relocation, monterey:       "b8b93a5f3a44e9f07b0bb27c7eb2fa4d9d1433890ed78368a508d541153fa04b"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5b5cd6b1c67655535791b68c472b0392813dd446ae93407461f3d224a1c01f9f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f96dc38af1c7880b9b90bade42a7331cc2d6f47c9e3d17029865191d0fdc39c"
   end
 
   depends_on "pkg-config" => :build

@@ -1,21 +1,27 @@
 cask "chromedriver-beta" do
-  version "114.0.5735.16"
-  sha256 "80f1e41949c017d897d8076e400521691cc018aa2276157c35e44a1e1f984b69"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_mac64.zip",
-      verified: "chromedriver.storage.googleapis.com/"
+  version "118.0.5993.18"
+  sha256 arm:   "60ba28bca643c45043c859cf21511296ce3488b09fb83c0f9018c88e3e25c7cc",
+         intel: "0608f81c56ea39d85c1a2a98571b1cdbe9f12688b44a073ba9cc2fa0de78ffcd"
+
+  url "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
+      verified: "edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/"
   name "ChromeDriver"
   desc "Automated testing of webapps for Google Chrome"
-  homepage "https://sites.google.com/chromium.org/driver/"
+  homepage "https://chromedriver.chromium.org/"
 
   livecheck do
-    url :homepage
-    regex(/beta.*?ChromeDriver\s(\d+(?:\.\d+)+)</i)
+    url "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json["channels"]["Beta"]["version"]&.scan(regex) { |match| match[0] }
+    end
   end
 
   conflicts_with cask: "chromedriver"
 
-  binary "chromedriver"
+  binary "chromedriver-mac-#{arch}/chromedriver"
 
   # No zap stanza required
 end

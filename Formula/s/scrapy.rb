@@ -3,20 +3,19 @@ class Scrapy < Formula
 
   desc "Web crawling & scraping framework"
   homepage "https://scrapy.org"
-  url "https://files.pythonhosted.org/packages/33/c9/1c516d418dc5ad8de725590a2d0cf611e547cadedd121d797f80859dfda4/Scrapy-2.10.0.tar.gz"
-  sha256 "4e16a33fc8c03a58bdf4e8d4bdca1f867354eac69ccf573658c7ff34fa0cae39"
+  url "https://files.pythonhosted.org/packages/68/7e/e76d9116a6260f7fbdc4cf98b7bc4c93926ced2bc2c5e124a852cb66dfea/Scrapy-2.11.0.tar.gz"
+  sha256 "3cbdedce0c3f0e0482d61be2d7458683be7cd7cf14b0ee6adfbaddb80f5b36a5"
   license "BSD-3-Clause"
   head "https://github.com/scrapy/scrapy.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bdd2c410729f078a79dadbd2d9100d150b820f243c0a34ba47724a1950cbf88d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5651b0bd01915c16220b1ddd13f9d7588fcffa2fb4382ea51f5a6c2909387663"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "dbf1dc109d79e8fb07a4bad108921530e6914a3f32fb03b5a2fe560f2fff79b3"
-    sha256 cellar: :any_skip_relocation, ventura:        "92e86b92d0cb27bebe2e16cf12342d91ec8ec2a2ab4a583cbca7889457f969f3"
-    sha256 cellar: :any_skip_relocation, monterey:       "d0be50fb695de67ece73af21072a04440742512bcc60886a8f299f60bafe5737"
-    sha256 cellar: :any_skip_relocation, big_sur:        "cd35efbfebe93eaf50def8daa8145faab611d6796efaf87867eed3a916acdc00"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6e41ef4548c98765ebd2a40eab2b20e8200af281564bad33eb3aba65a33aa62"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "54c19d181e573a30ce6a48782feb2a75c89a1584fe7c81df466ca7f13e082b59"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1863960942cf158852b27dc139781882c628012ee788c6acb53c835d89f24308"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7a4270dc0097452d877d7f50eaa305f41ed02f0f3f738e578ea0f77c38cdbed5"
+    sha256 cellar: :any_skip_relocation, ventura:        "dccb21bb17254130d1f9674443224797db26bae8d29e377a1e76c78353111f6d"
+    sha256 cellar: :any_skip_relocation, monterey:       "e1ee365c32269aa8767c855d3e1a88a080dd03c6163778a354043d49fdc4d15e"
+    sha256 cellar: :any_skip_relocation, big_sur:        "8645fb0bf627ec544a66ac947072f089d00aafc195645b27a49ccffbedf393e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2b5ef4809eb1331b9a90e3fe70a1eeb131dd57fbfe0b200a57e7a953c0891e5"
   end
 
   depends_on "cffi"
@@ -57,8 +56,8 @@ class Scrapy < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/00/0b/c506e9e44e4c4b6c89fcecda23dc115bf8e7ff7eb127e0cb9c114cbc9a15/filelock-3.12.2.tar.gz"
-    sha256 "002740518d8aa59a26b0c76e10fb8c6e15eae825d34b6fdf670333fd7b938d81"
+    url "https://files.pythonhosted.org/packages/d5/71/bb1326535231229dd69a9dd2e338f6f54b2d57bd88fc4a52285c0ab8a5f6/filelock-3.12.4.tar.gz"
+    sha256 "2e6f249f1f3654291606e046b09f1fd5eac39b360664c27f5aad072012f8bcbd"
   end
 
   resource "hyperlink" do
@@ -107,8 +106,8 @@ class Scrapy < Formula
   end
 
   resource "protego" do
-    url "https://files.pythonhosted.org/packages/3b/cd/de2f063d94115593bdff20d17f461522c90519fb3f5c46e6b4851e17b94e/Protego-0.2.1.tar.gz"
-    sha256 "df666d4304dab774e2dc9feb208bb1ac8d71ea5ceec12f4c99eba30fbd642ff2"
+    url "https://files.pythonhosted.org/packages/2c/7e/fc128cfd3bb8e081165fcdaad44ab5fff73678fbebc51f79f733c57c5295/Protego-0.3.0.tar.gz"
+    sha256 "04228bffde4c6bcba31cf6529ba2cfd6e1b70808fdc1d2cb4301be6b28d6c568"
   end
 
   resource "pyasn1" do
@@ -152,8 +151,8 @@ class Scrapy < Formula
   end
 
   resource "tldextract" do
-    url "https://files.pythonhosted.org/packages/80/90/d294a3f69b4143cf56c326064086236bc8157c389497893d940968e6cda2/tldextract-3.4.4.tar.gz"
-    sha256 "5fe3210c577463545191d45ad522d3d5e78d55218ce97215e82004dcae1e1234"
+    url "https://files.pythonhosted.org/packages/50/c6/3a555f4a1b22c66c70b0450353a0cab91c3946b8a0a732d8b72e60047103/tldextract-3.5.0.tar.gz"
+    sha256 "4df1c65b95be61d59428e8611e955e54e6f1d4483d3e8d5733d3a9062155e910"
   end
 
   resource "twisted" do

@@ -1,21 +1,21 @@
 class Rure < Formula
   desc "C API for RUst's REgex engine"
   homepage "https://github.com/rust-lang/regex/tree/HEAD/regex-capi"
-  url "https://ghproxy.com/https://github.com/rust-lang/regex/archive/1.9.3.tar.gz"
-  sha256 "e3164c4d3b87f913f1ab04b19bd2044bec0622b416cb754906ce83901b5d9e81"
+  url "https://ghproxy.com/https://github.com/rust-lang/regex/archive/1.9.5.tar.gz"
+  sha256 "adaaba54fe18cf5c5cff17573a26daae0ada64be03ec38568dc5c9d189e61bbf"
   license all_of: [
     "Unicode-TOU",
     any_of: ["Apache-2.0", "MIT"],
   ]
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "679307382587ac2ce5bfd38f2eb81d662bd033c5b5ea34f9f4d3a0f22811f341"
-    sha256 cellar: :any,                 arm64_monterey: "abfd4d5d8b62c09b78fda4438e81e41b3e86546fb5cca016302e92da2143e5cc"
-    sha256 cellar: :any,                 arm64_big_sur:  "57d3368c124b027ebb9b0584b312bd6e2e0ae1a505e3b6f35fbfbf4f5a685cb9"
-    sha256 cellar: :any,                 ventura:        "95c8907d19978629643870485e8a76c2fc48c05bb29d2679e37b6517d65d549a"
-    sha256 cellar: :any,                 monterey:       "b1f9e07cb3553f6eb79266b38b7fa84f2aec9f1e2c5eeb11fb19d72c32dd5a09"
-    sha256 cellar: :any,                 big_sur:        "355c5ff29aaf37ae03c5a0f69963caf48250ae3ad2b5bd0679dc9d656d4f3668"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ecbd010492b6c4c1f9b44a4774b925d925cf3e0ef58334d1dedc5437e3ae18ae"
+    sha256 cellar: :any,                 arm64_ventura:  "7f28a4df0515889cf222d2a717ba8ed0bad0a5c7a2544860ca5746d7bcc3de9d"
+    sha256 cellar: :any,                 arm64_monterey: "ee41505ea11ce9e2f57256d76984d503f849a5534524754fb98a012ebed747fe"
+    sha256 cellar: :any,                 arm64_big_sur:  "829d94dbb7d129f1a54467a9980d24548f5a36d86c4241930f20ba57fea92038"
+    sha256 cellar: :any,                 ventura:        "2dffd4117dc257b75ae928dda86552975f6c0deeec4989e1edc2294f70865e63"
+    sha256 cellar: :any,                 monterey:       "b30d330d9ca2a63f2ebd0b10c86393f6939b465c9f5c0ba821e15813e2471533"
+    sha256 cellar: :any,                 big_sur:        "88e5d928bfebfaeeb251650a5662b78b96274919919856639515dc2e74faf257"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "195488d563883cbeaea74f4bb7a672b783a63f8682a723722fc1effcb0ea991b"
   end
 
   depends_on "rust" => :build

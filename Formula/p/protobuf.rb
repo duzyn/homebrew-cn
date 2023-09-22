@@ -1,8 +1,8 @@
 class Protobuf < Formula
   desc "Protocol buffers (Google's data interchange format)"
   homepage "https://protobuf.dev/"
-  url "https://ghproxy.com/https://github.com/protocolbuffers/protobuf/releases/download/v23.4/protobuf-23.4.tar.gz"
-  sha256 "a700a49470d301f1190a487a923b5095bf60f08f4ae4cac9f5f7c36883d17971"
+  url "https://ghproxy.com/https://github.com/protocolbuffers/protobuf/releases/download/v24.3/protobuf-24.3.tar.gz"
+  sha256 "07d69502e58248927b58c7d7e7424135272ba5b2852a753ab6b67e62d2d29355"
   license "BSD-3-Clause"
 
   livecheck do
@@ -11,26 +11,22 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "eb86d06abace7c985b21ccac17ea418131e17689c9fdeddbcaa998d7088c89de"
-    sha256 cellar: :any,                 arm64_monterey: "0e365713a94a259dbfae77917bb9b0c29ba76d46a733aa4ee81429fc6a4af935"
-    sha256 cellar: :any,                 arm64_big_sur:  "71c787b14039d8c5d7120dfcfea969b5abb6cb4e69a6f9259a7590d7ab6065d0"
-    sha256 cellar: :any,                 ventura:        "fac1164097c4e09a76db297feaa7d525d12bd1845e250225ff32ea9f43eaef2d"
-    sha256 cellar: :any,                 monterey:       "79ed16a88a2630392fc9726794875d88aada2ddec2a5f43b00d2b43cca8ee313"
-    sha256 cellar: :any,                 big_sur:        "774b921c6373919e653637f28fe9b485505ecc4f46852c547898d585af599dbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6376391a61c411ad6cb76936abb98c1e0fb3e368a3fa9bb2668a8d169a4581d6"
-  end
-
-  head do
-    url "https://github.com/protocolbuffers/protobuf.git", branch: "main"
-    depends_on "jsoncpp"
+    sha256                               arm64_sonoma:   "a94ddfce59d4a9d48a8246faf48dc59a79cfd2d8d1a042443373db4408b58e99"
+    sha256                               arm64_ventura:  "b74655262679e566c39e14d538f04ff5e536ed2cb5f9b0b4339aaaa479d48858"
+    sha256                               arm64_monterey: "c1c4c31e1a8379e00151b75a3de75bc314f23fc5260a5f39414dca6ec4106fa2"
+    sha256                               arm64_big_sur:  "ae1a7d779efdc90d4f739835e6f409b14ef8a49f2fdf371541f296a2e0af1fb7"
+    sha256                               sonoma:         "6540683f632be116e9f8161b98ac49a76b1fab527fe10ddd123557eede227176"
+    sha256                               ventura:        "38ef2ed336542514b1aa044c24dd35b8912f0fe51e8d8bd3a77e4dcfa2533214"
+    sha256                               monterey:       "e8b7f49a6dee6024aaf30a813537b694cc08be62e6b32bc8018ef17cc860ae88"
+    sha256                               big_sur:        "40d988730fd3a9cbbf00370f7292322600f7ecdcd67cd5b32336ded78cc1d5ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "440ba0363e77bd10573ead029ea50c2274b9cac0afc33ac68073100713597f15"
   end
 
   depends_on "cmake" => :build
   depends_on "python@3.10" => [:build, :test]
   depends_on "python@3.11" => [:build, :test]
   depends_on "abseil"
-  # TODO: Add the dependency below in Protobuf 24+. Also remove `head` block.
-  # TODO: depends_on "jsoncpp"
+  depends_on "jsoncpp"
 
   uses_from_macos "zlib"
 
@@ -41,7 +37,6 @@ class Protobuf < Formula
   end
 
   def install
-    odie "Dependencies need adjusting!" if build.stable? && version >= "24"
     # Keep `CMAKE_CXX_STANDARD` in sync with the same variable in `abseil.rb`.
     abseil_cxx_standard = 17
     cmake_args = %w[

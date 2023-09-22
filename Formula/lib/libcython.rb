@@ -1,8 +1,8 @@
 class Libcython < Formula
   desc "Compiler for writing C extensions for the Python language"
   homepage "https://cython.org/"
-  url "https://files.pythonhosted.org/packages/7f/a2/fd5ced5dd33597ef291861bfadd46820de417b41bcb6ca2fa0b5f6fa8152/Cython-3.0.0.tar.gz"
-  sha256 "350b18f9673e63101dbbfcf774ee2f57c20ac4636d255741d76ca79016b1bd82"
+  url "https://files.pythonhosted.org/packages/2f/81/c9fb4b69823f674e1e2acc484eac93a47a1e3a59d4d051c76259dadd6984/Cython-3.0.2.tar.gz"
+  sha256 "9594818dca8bb22ae6580c5222da2bc5cc32334350bd2d294a00d8669bcc61b5"
   license "Apache-2.0"
 
   livecheck do
@@ -10,13 +10,15 @@ class Libcython < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ac5d6f50b1733204c1081a4f281cbd764c9c54da360dc947dd8342a1e35885ae"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "39d73ba299bbe56052c78e1985aa86a859f06bf5d3309b64a798e457b7694343"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c92bb4753d1616112242f376dc79fd17aeddcd46fdbaa8f6eff2d8d2242ac1dd"
-    sha256 cellar: :any_skip_relocation, ventura:        "f066474b198d21f3a5aeafaa64c043f40541e308ff8c041b1c5a53242630e2be"
-    sha256 cellar: :any_skip_relocation, monterey:       "f8adf04a82bc3f4f9ecc1af1b9bd423e34a435189bd6ddea26dbe59635bc8552"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9916538d6f7d53fa62a80e1d79dc26ca61ea16a5623ca20bcacce7dd2cfb4222"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4621bf731ee0e86c5c538d199975d029538bb97b76f45eb7cb89708c1407db3a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "bbf0dc8a9a6d5bfcd81d90cc2a8a318d56186d91f1b5d9359351a6f7d01bcd51"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "43ddd1a767fd47cc1ed0aea4b6879163ee027716a2408db7ca683ed8545c5f9d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "649f03e776775dbd177fe9ef22ed5761fb9a60b2a41fdf17938350a1f9cf1df6"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a1c8b39554b3b9d18b72050e60403abf0389caad005d8f1742c7c42e6a3fdd05"
+    sha256 cellar: :any_skip_relocation, sonoma:         "3cd4e664186e6f7a43608c9453590e394257d03495d20b489965f1580d915869"
+    sha256 cellar: :any_skip_relocation, ventura:        "fbb9f9fb30bcf02de1eae322f6912fd58a98376f53b15399451469a39f363e16"
+    sha256 cellar: :any_skip_relocation, monterey:       "5128468c7df3c7f359e49826936d1613530b7396d01d66acaa567563f19482f1"
+    sha256 cellar: :any_skip_relocation, big_sur:        "1760b68408acfe2cd5ec203d5d589581b37f9d2a262dd58635c9dfe71065dfb0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "208dceb6157973fccd729141f88cbe2b118acebd1d83a502db21239b925f172f"
   end
 
   keg_only <<~EOS

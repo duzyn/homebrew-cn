@@ -1,20 +1,29 @@
 class Emqx < Formula
   desc "MQTT broker for IoT"
   homepage "https://www.emqx.io/"
-  # TODO: Check if we can use unversioned `erlang` at version bump
-  url "https://ghproxy.com/https://github.com/emqx/emqx/archive/refs/tags/v5.1.2.tar.gz"
-  sha256 "b9ecb6275386b410e9c330b4c5b3d30acf377627d41e73c00c6460b4d8fd5f0b"
+  # TODO: Check if we can use unversioned `erlang` at version bump:
+  #   https://github.com/emqx/emqx/blob/v#{version}/scripts/ensure-rebar3.sh#L9
+  url "https://ghproxy.com/https://github.com/emqx/emqx/archive/refs/tags/v5.2.1.tar.gz"
+  sha256 "46513ebb562913d3fc945520a4bb77f3ae43578b2931daf44f3df7f909198e18"
   license "Apache-2.0"
   head "https://github.com/emqx/emqx.git", branch: "master"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check the "latest" release instead
+  # of the Git tags.
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "b5f436cb7ca08d254641faf9d7785757b24daec46fe1c4e834edbe491cde3d38"
-    sha256 cellar: :any,                 arm64_monterey: "5dd3a6fb09022bc904627a4aaf04fdd8a1520dffe42bb79775ea23961c440ac2"
-    sha256 cellar: :any,                 arm64_big_sur:  "eedcf7821cace8625b532a0ab1fdd1141fffc0ab7299e6df5d6711ef7ac02d2c"
-    sha256 cellar: :any,                 ventura:        "c0f706808b0a67f0e8169c82f5aeefc25a86365086fef24ee7e39d5d6bc302c4"
-    sha256 cellar: :any,                 monterey:       "d96178a3af7386126be4fd24fdef9446a781502009e4eba4d05b864b16f3a23e"
-    sha256 cellar: :any,                 big_sur:        "257ead1ee5f0bcc3d05e9e51f3e08ca506fe789c088638ef8f3cf053258345c8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "724850ba28b66b92025824696e53b2c41ae10e5378496a27b3ae15c8954856e1"
+    sha256 cellar: :any,                 arm64_ventura:  "f74592d13ab2fba6e35a1611e58bc9a4dfd9c04f17b4a338dd55b956964fbf18"
+    sha256 cellar: :any,                 arm64_monterey: "fbca9235732050894704099414b0f6fd862a3198944bf78066bec57be8062762"
+    sha256 cellar: :any,                 arm64_big_sur:  "dc91eb86ac5b39914ba6ee89e1275dedef5c73e881c1829b7b9e724f9da7c030"
+    sha256 cellar: :any,                 ventura:        "7d795bb01581a1ba6a8255be12b550d4794a9833342c795a9189872ab3fda9b9"
+    sha256 cellar: :any,                 monterey:       "0c50c48fc8e5ab4d38703739a0406f54803f1f2388dcd5888f96de3895c5ba7f"
+    sha256 cellar: :any,                 big_sur:        "b5170279c05269fec6f331389ada0a4a3c2ec325bf8d11d75e26d29fdf995308"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d634479d6b322b88ed4648088482a7435cef6d34161f1209162c4d1a24c5a48c"
   end
 
   depends_on "autoconf"  => :build
@@ -38,20 +47,38 @@ class Emqx < Formula
 
   def install
     ENV["PKG_VSN"] = version.to_s
+    ENV["BUILD_WITHOUT_QUIC"] = "1"
     touch(".prepare")
-    system "make", "emqx"
+    system "make", "emqx-rel"
     prefix.install Dir["_build/emqx/rel/emqx/*"]
     %w[emqx.cmd emqx_ctl.cmd no_dot_erlang.boot].each do |f|
       rm bin/f
     end
     chmod "+x", prefix/"releases/#{version}/no_dot_erlang.boot"
     bin.install_symlink prefix/"releases/#{version}/no_dot_erlang.boot"
+    return unless OS.mac?
+
+    # ensure load path for libcrypto is correct
+    crypto_vsn = Utils.safe_popen_read("erl", "-noshell", "-eval",
+                                       'io:format("~s", [crypto:version()]), halt().').strip
+    libcrypto = Formula["openssl@3"].opt_lib/shared_library("libcrypto", "3")
+    %w[crypto.so otp_test_engine.so].each do |f|
+      dynlib = lib/"crypto-#{crypto_vsn}/priv/lib"/f
+      old_libcrypto = dynlib.dynamically_linked_libraries(resolve_variable_references: false)
+                            .find { |d| d.end_with?(libcrypto.basename) }
+      next if old_libcrypto.nil?
+
+      dynlib.ensure_writable do
+        dynlib.change_install_name(old_libcrypto, libcrypto.to_s)
+        MachO.codesign!(dynlib) if Hardware::CPU.arm?
+      end
+    end
   end
 
   test do
     exec "ln", "-s", testpath, "data"
     exec bin/"emqx", "start"
-    system bin/"emqx_ctl", "status"
+    system bin/"emqx", "ctl", "status"
     system bin/"emqx", "stop"
   end
 end
