@@ -23,8 +23,8 @@ SCRIPT_DIR="$(dirname "$(readlink -f "${0}")")"
 export HOMEBREW_NO_INSTALL_FROM_API=True
 export HOMEBREW_BREW_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/brew"
 export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/homebrew-core"
-export HOMEBREW_BOTTLE_DOMAIN="https://ghproxy.com/https://github.com/homebrew/homebrew-bottles"
-export HOMEBREW_PIP_INDEX_URL="https://mirrors.aliyun.com/pypi/simple/"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 
 # 添加本应用库
 brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/https://github.com/duzyn/homebrew-cn
@@ -35,8 +35,8 @@ tee "$SCRIPT_DIR/config" &>/dev/null <<"EOF"
 export HOMEBREW_NO_INSTALL_FROM_API=True
 export HOMEBREW_BREW_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/brew"
 export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/homebrew-core"
-export HOMEBREW_BOTTLE_DOMAIN="https://ghproxy.com/https://github.com/homebrew/homebrew-bottles"
-export HOMEBREW_PIP_INDEX_URL="https://mirrors.aliyun.com/pypi/simple/"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 EOF
 
 if [[ -e "$HOME/.bash_profile" ]]; then
@@ -53,5 +53,5 @@ fi
 
 rm "$SCRIPT_DIR/config"
 
-echo "homebrew and homebrew-cn is installed successfully."
+echo "Homebrew and homebrew-cn is installed successfully."
 exit 0
