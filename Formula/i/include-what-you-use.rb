@@ -21,9 +21,11 @@ class IncludeWhatYouUse < Formula
   end
 
   bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "ef8f37cc8f4eebacb2b5d00cf63f45697a7766920cfad74ac9ed9c4a2b053723"
     sha256 cellar: :any,                 arm64_ventura:  "0afd0990d819a2568df41c17f085d9b160230bee5574a6033602296a9e188ded"
     sha256 cellar: :any,                 arm64_monterey: "843aef80aacd7d951c74263a2f4c521114e0a52f8f95514c4ebda405e0eaa1f4"
     sha256 cellar: :any,                 arm64_big_sur:  "27ac00895576941fb13b3caa6d0d1f6a464c0a0ebcc240feefece53e8cf382de"
+    sha256 cellar: :any,                 sonoma:         "062d2677974e4dd52eba2904339b0260606632cb4c1e5bfc9f42a4e499afb919"
     sha256 cellar: :any,                 ventura:        "ddfce96e790ca3b1c6482159148725f8fa9ee058cbdffd405d53aa1bfcd13df6"
     sha256 cellar: :any,                 monterey:       "30badd3f3516e107b32f22eae3dc47750e0d748095a797b7d2d5a59c84506e43"
     sha256 cellar: :any,                 big_sur:        "34834940add5003d4495185c6f4108ab83c0adf85b2cd30a2d5f8b459a6f2201"

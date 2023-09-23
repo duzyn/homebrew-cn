@@ -8,9 +8,11 @@ class SpirvLlvmTranslator < Formula
   revision 1
 
   bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "bcf217abc3cf6dff0301f12d3cc96361e4795d98b36d7db301e5db06421c4fb0"
     sha256 cellar: :any,                 arm64_ventura:  "82cb73e5f654afa05b7216ced0ea9c0faadb40469053ba0242391ebfb3e6ad5d"
     sha256 cellar: :any,                 arm64_monterey: "cc3218029bf78c8b44484105f4260f7b9e985b00569b09eb87f4980c58e4d79e"
     sha256 cellar: :any,                 arm64_big_sur:  "03c9ae50323c6f0d5f0209c5861529d1dda363b17a20306c5efbc177f831a0a3"
+    sha256 cellar: :any,                 sonoma:         "b3034ad8eb4e4224e3b2eccf614391dda06c165525b806cac25aa937c7a27daa"
     sha256 cellar: :any,                 ventura:        "3ec6762a23e42954c15e075b8139555dea129c192ccac7dc6bfe66331058dbd6"
     sha256 cellar: :any,                 monterey:       "f311b176fe18873113fcf5e22ec209d4f360df8badbe89c724770e9c287d32ee"
     sha256 cellar: :any,                 big_sur:        "fff2616cc45266a010d662ad32baf046ec6bfafe3d4e570c5d15ba01edd73742"
