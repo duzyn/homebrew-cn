@@ -6,9 +6,11 @@ class Libid3tag < Formula
   license "GPL-2.0-only"
 
   bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "1ed10109e8ae30da194fe62e3a71bee568b0cde84e78c0e9bbeaafed93e0927b"
     sha256 cellar: :any,                 arm64_ventura:  "0ea24c45073d3e7a8b939a1776d4fafcf6bb8072c9d2107f5b5e9903d2a18564"
     sha256 cellar: :any,                 arm64_monterey: "c632b8be47cc5f122745b4e6c0948d56cee499c276f7b6ced2f479f078dae8ad"
     sha256 cellar: :any,                 arm64_big_sur:  "9f9f8eea108670fd8d9f1bbde465e49543fb09926d0699bd03e03ad4ce4a4059"
+    sha256 cellar: :any,                 sonoma:         "c544219bae9e69ac20915abf32abcef7b8a5b4f702eb13d508dab3914fd992e8"
     sha256 cellar: :any,                 ventura:        "1b6387129a1f3dad504548c0dc6c686e2d8478cbe4c759609780af7eba72466e"
     sha256 cellar: :any,                 monterey:       "7878d7bd1222ba5e6bfd588c7a8f37eb37e008de6a6c8041846de9d3175b3528"
     sha256 cellar: :any,                 big_sur:        "3fcfb9567c7f844e56d3844c951452eaf9a074019732b0768bd64daa3a5e7766"

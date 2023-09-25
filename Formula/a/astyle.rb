@@ -12,9 +12,11 @@ class Astyle < Formula
   end
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d10de965c3f70e244f7ccfe07df9c21e6fdceebf6495598772e9520afc669bf3"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a114dafc5cb75a0f475b791537b63acb249cc95b221a58654354143076f16b5f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "bcb1a2cf4c4c9abde182ba3d376fb4ee2373b8ba3492e07100db93fcb653ec31"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "087297689e5b22bd8838f8253cccd5fc4c90871e4c78378f379554be5b42ff1f"
+    sha256 cellar: :any_skip_relocation, sonoma:         "f6eed1124a08f862faa5fe61a6959c00b657b39618fd986374ad12fd8ee4cdd0"
     sha256 cellar: :any_skip_relocation, ventura:        "58cd2e468c999eabb1fbf3c4fc4b7e31a39123c9fa2e3572dbafc1616e11e2f0"
     sha256 cellar: :any_skip_relocation, monterey:       "06fc81105e2beefdaac1a22402330e27d59c48605ba4ac87378c637f82858e04"
     sha256 cellar: :any_skip_relocation, big_sur:        "e8f99641766c6f4e699c1395d4680647e211f96009fb86e0296d271e8dcc422a"
