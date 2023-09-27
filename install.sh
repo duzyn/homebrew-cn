@@ -21,8 +21,8 @@ SCRIPT_DIR="$(dirname "$(readlink -f "${0}")")"
 
 # 关闭从 API 安装，使用 Homebrew v4.0 之前默认的行为
 export HOMEBREW_NO_INSTALL_FROM_API=True
-export HOMEBREW_BREW_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/brew"
-export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/homebrew-core"
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 
@@ -33,8 +33,8 @@ brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/https:
 tee "$SCRIPT_DIR/config" &>/dev/null <<"EOF"
 # 关闭从 API 安装，使用 Homebrew v4.0 之前默认的行为
 export HOMEBREW_NO_INSTALL_FROM_API=True
-export HOMEBREW_BREW_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/brew"
-export HOMEBREW_CORE_GIT_REMOTE="https://ghproxy.com/https://github.com/homebrew/homebrew-core"
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 EOF
