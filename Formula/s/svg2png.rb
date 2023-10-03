@@ -26,6 +26,11 @@ class Svg2png < Formula
   depends_on "libsvg-cairo"
 
   def install
+    # svg2png.c:53:9: note: include the header <string.h> or explicitly provide a declaration for 'strcmp'
+    inreplace("src/svg2png.c",
+              "#include <stdlib.h>\n",
+              "#include <stdlib.h>\n#include <string.h>\n")
+
     # Temporary Homebrew-specific work around for linker flag ordering problem in Ubuntu 16.04.
     # Remove after migration to 18.04.
     unless OS.mac?
