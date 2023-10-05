@@ -3,10 +3,9 @@ class C7n < Formula
 
   desc "Rules engine for cloud security, cost optimization, and governance"
   homepage "https://github.com/cloud-custodian/cloud-custodian"
-  url "https://ghproxy.com/https://github.com/cloud-custodian/cloud-custodian/archive/0.9.31.0.tar.gz"
-  sha256 "73343e629fed1c95c521d3ce416219d8c70c3e5679a4ca0a75d879ba222a58cf"
+  url "https://ghproxy.com/https://github.com/cloud-custodian/cloud-custodian/archive/0.9.32.0.tar.gz"
+  sha256 "e2d9c4a9d0ef6ab2e1144ad950312514ab9971f6b5825db2cece98617ea84870"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url :stable
@@ -14,13 +13,13 @@ class C7n < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "213d30b3defca92e8d39939e14d116e592c4a205bb408c1a94b5c3b6bb26e937"
-    sha256 cellar: :any,                 arm64_ventura:  "a8a1ed29f04f7e4ba6db3255ad4d087c76a05460a237c6e9ae1af16deb1ef72e"
-    sha256 cellar: :any,                 arm64_monterey: "6ad0e85b3520d6358994b72a78b89de7ad802a0d4360a9f3de2d29f880782e47"
-    sha256 cellar: :any,                 sonoma:         "90f2aabe97467821d8d3091c5bc7254212d7b9764574f2fe65b3d8efe7c2ba5e"
-    sha256 cellar: :any,                 ventura:        "f999057caedf2118dcc2979b93170352552aae3d00ca27a6c4c62e5bd5144cb5"
-    sha256 cellar: :any,                 monterey:       "bd8a455ab97b64769038c706dfcfaf71da4dc10d56a2b51467ddc25590c46cfa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9075b3eeb6ca59d25b2d40559b2ff20a5e197be35288022c645628f11c1bde12"
+    sha256 cellar: :any,                 arm64_sonoma:   "81619a97c7e715f7f672a1357bf5065f05c6d0f63fa5a6d79063d94036684d5e"
+    sha256 cellar: :any,                 arm64_ventura:  "46ffe6bb12ea10351fc5610dc6fd6a19063eb2c8252c3303893c6e12e831691c"
+    sha256 cellar: :any,                 arm64_monterey: "b419363371c3e7f0d19eddb1af79eb1404ce0e4895793cd5d6d0a48a292bf1f0"
+    sha256 cellar: :any,                 sonoma:         "9a1940b702e5e83e95328321a68b39b093dcdf8551624a48e93e8999f369dfb3"
+    sha256 cellar: :any,                 ventura:        "c8b9b1524aa47bdec09360a8b83a4f927bfe369ad401e458532915fd846772d7"
+    sha256 cellar: :any,                 monterey:       "f7323600fe36b9859e32330a586b7ad07ff1a06dc86430096a382342c06fd0e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "747aecdb512b605c8f352f506d1080e759a4437f8b3b79831dfd0f7e06a1bcb9"
   end
 
   depends_on "rust" => :build # for rpds-py
