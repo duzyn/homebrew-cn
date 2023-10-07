@@ -7,29 +7,29 @@ class Stgit < Formula
   head "https://github.com/stacked-git/stgit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0f6a42019b2308710e9b267102a491595ce103ad2feffe77f542886a1df87119"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aad33ef5ad466d0309837d7833fc31d6ab8c6b5649567a041fc64e84e968fe3a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "55385c02a13ed971938d151bb387f55a90cbb304122ab85f2df8538ba19b1db6"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "58066bbf80c510ebeac1f0ac8c79221ec3518eba346f322f4fa9d6494edaf508"
-    sha256 cellar: :any_skip_relocation, sonoma:         "da5ef83bd06583f0152cee5d3b7c75bbdce696183110b95ec9ac5fe7c8ca81db"
-    sha256 cellar: :any_skip_relocation, ventura:        "9fa293871d35f0f5ce0ea5da69b9455e52397e7f674505dbce3c3e922177e450"
-    sha256 cellar: :any_skip_relocation, monterey:       "c02c0d71c6482bc62b70606f0df9778aa06eac91eeb443b4a64ed4a417b6de6e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "801f90006ed1ec8381948d1e04cf8edb01b16392d1ec3c84650ae1f47f6b63d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12e5ab3b82281bdeb188c5586f177eca73926df1e68a39ca9c220198b303f0c4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "84e8dfa1b235b1bdc5b22f08b66d76374600c6bb99557b313dfe071b5cadfbc7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "59b2805f039ed3b95d64457043f19172040040b6453167e5cbb6d0c9a4b9e660"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "52797a389997a7ce0718c656985c995311e8e82137b82f15e3ae9ce7f952a6f3"
+    sha256 cellar: :any_skip_relocation, sonoma:         "585157d757e420d7b2bb81c61566ae534bd397691c900521cfedba38527faedb"
+    sha256 cellar: :any_skip_relocation, ventura:        "4596bcdb71391b41e5429e54bedf8b8d874d048b4edfc00a0e2629719f8f02e4"
+    sha256 cellar: :any_skip_relocation, monterey:       "3ddaa68eb197262df1b93c369dda90a6abb5793e28ced6a76faf16d8cedeab25"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70fa52f6c8b0f692a6c39bbc8a5a7c6e657aa8b59d2c37ea8e242c30ec8bfd21"
   end
 
+  depends_on "asciidoc" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
+  depends_on "xmlto" => :build
   depends_on "git"
 
   uses_from_macos "curl"
   uses_from_macos "zlib"
 
   def install
-    system "cargo", "install", *std_cargo_args
+    ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
+    system "make", "prefix=#{prefix}", "install-bin", "install-man"
     generate_completions_from_executable(bin/"stg", "completion")
-
-    system "make", "-C", "contrib", "prefix=#{prefix}", "all"
   end
 
   test do
@@ -45,5 +45,6 @@ class Stgit < Formula
     (testpath/"test").append_lines "a change"
     system "#{bin}/stg", "refresh"
     system "#{bin}/stg", "log"
+    system "man", "#{man}/man1/stg.1"
   end
 end
