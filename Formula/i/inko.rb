@@ -1,19 +1,17 @@
 class Inko < Formula
   desc "Safe and concurrent object-oriented programming language"
   homepage "https://inko-lang.org/"
-  url "https://releases.inko-lang.org/0.12.0.tar.gz"
-  sha256 "56584ece9d1522401d0855d3d103ee7e53fee74f12441a5e26b32f8d5eb934b8"
+  url "https://releases.inko-lang.org/0.13.0.tar.gz"
+  sha256 "1d63a1ac50abf2578ce69b0207f336d688dc9f745dcbb05c4090469cf824570e"
   license "MPL-2.0"
   head "https://github.com/inko-lang/inko.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "e4dfd8dfcabe4bd91017d969517af9a78a615aa12ba4701358bab0324ae6b26d"
-    sha256 cellar: :any,                 arm64_monterey: "858877702a14e0023d3689ac9d06dc5552cca998aad329e5d5a43d32b54a22f2"
-    sha256 cellar: :any,                 arm64_big_sur:  "9879147562ae214c4e76c94a32426fb8710ee0475e60b843af4b9b931881adb2"
-    sha256 cellar: :any,                 ventura:        "ffed66f5e2fc27db2f93eec8a9f821e20ad58fec79934eac28591fb36fa8fb79"
-    sha256 cellar: :any,                 monterey:       "3f421d39d79e0c0fa39e0878776cf116baacf618e89bdeaec89545fe3098c074"
-    sha256 cellar: :any,                 big_sur:        "24d398103166917fdf3813e1796957b4bd59d5d8c8ba580a62e2696bb0872030"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd48e9a3878a214c379efe9470ed433c0402a67c0948946b511442dd33fdc097"
+    sha256 cellar: :any,                 arm64_ventura:  "8e857ff184919bf20a8dbf4f8671c6734d1ad5379b4fe803b01499684cffa4f8"
+    sha256 cellar: :any,                 arm64_monterey: "f845360b7558ffbfcf9ec175d5071cb3cffea531d139b8d925d5d90dc1a46db8"
+    sha256 cellar: :any,                 ventura:        "ef6fa1a873d3cf742145eda4fc45004b6a56fa323a25a9d93946f198ebdaab57"
+    sha256 cellar: :any,                 monterey:       "042dbc0689157a3d93e7381b66c70e17e569a3f57bf377e65822ead73301f854"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57e9e473be96f46c6f6f9d8a453479d14afbc1cc93a91329aff1ba7fbbd999ec"
   end
 
   depends_on "coreutils" => :build
@@ -32,7 +30,7 @@ class Inko < Formula
 
   test do
     (testpath/"hello.inko").write <<~EOS
-      import std::stdio::STDOUT
+      import std.stdio.STDOUT
 
       class async Main {
         fn async main {
