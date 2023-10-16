@@ -1,17 +1,17 @@
 class Inko < Formula
   desc "Safe and concurrent object-oriented programming language"
   homepage "https://inko-lang.org/"
-  url "https://releases.inko-lang.org/0.13.0.tar.gz"
-  sha256 "1d63a1ac50abf2578ce69b0207f336d688dc9f745dcbb05c4090469cf824570e"
+  url "https://releases.inko-lang.org/0.13.1.tar.gz"
+  sha256 "c674d58dd4b044dbfa40b13f444f4f3c0e632fc900ae906d56f39070ba62e846"
   license "MPL-2.0"
   head "https://github.com/inko-lang/inko.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "8e857ff184919bf20a8dbf4f8671c6734d1ad5379b4fe803b01499684cffa4f8"
-    sha256 cellar: :any,                 arm64_monterey: "f845360b7558ffbfcf9ec175d5071cb3cffea531d139b8d925d5d90dc1a46db8"
-    sha256 cellar: :any,                 ventura:        "ef6fa1a873d3cf742145eda4fc45004b6a56fa323a25a9d93946f198ebdaab57"
-    sha256 cellar: :any,                 monterey:       "042dbc0689157a3d93e7381b66c70e17e569a3f57bf377e65822ead73301f854"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57e9e473be96f46c6f6f9d8a453479d14afbc1cc93a91329aff1ba7fbbd999ec"
+    sha256 cellar: :any,                 arm64_ventura:  "a4d9af578840ee114d88147d6570fb99db339697d6ec0fb0e76387a5309eefb9"
+    sha256 cellar: :any,                 arm64_monterey: "00164ffc2fe448cd629fb71d92d707519eb9f2a49df0f432d50d504af59b5a78"
+    sha256 cellar: :any,                 ventura:        "17f32bca51cb6cec63c6c2fcba0346cbbc703bdf5fed5280db3416bdc8921306"
+    sha256 cellar: :any,                 monterey:       "a408317630c4d8d9b787e5a53dc6d4332a0aeb98ce7213402a4aade66017dfef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56ff13484f743b7de168c758f888cd276967e28eff6840f969129dc35328ce6f"
   end
 
   depends_on "coreutils" => :build
