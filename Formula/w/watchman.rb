@@ -4,16 +4,17 @@ class Watchman < Formula
   url "https://ghproxy.com/https://github.com/facebook/watchman/archive/refs/tags/v2023.10.30.00.tar.gz"
   sha256 "57ff2a308e27c245e3e4795a81b446254b3bc699cb88786123ef19501712ba5f"
   license "MIT"
+  revision 1
   head "https://github.com/facebook/watchman.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "af8ea34df75162843517f14f7e52a4519ad0ed4432e9173d442e5cfa33c4f3f2"
-    sha256 cellar: :any,                 arm64_ventura:  "c111f3027724e77180c24b8df64cbcbefe643a873db724f268a8607e43b349d3"
-    sha256 cellar: :any,                 arm64_monterey: "9f9c2c1bc98d117025bb175ebb240c21d9551487d80d8b925cd5b0181914c493"
-    sha256 cellar: :any,                 sonoma:         "ac2833583555503769b41fd969a23025f78360390f6682786e2cd031c6238103"
-    sha256 cellar: :any,                 ventura:        "e005e3f5c70a8564253efb7474c7f59758d8d1abcd8790bf70974379c78d773a"
-    sha256 cellar: :any,                 monterey:       "71f792b039514a6ea18678cd66912e29b20fbf163791a6cf31307c547aa3ca9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d2f19c0b9b01610b0bcda38ce3f04223a7a3a6ef8c3eb5eaabc79dc778343d9"
+    sha256 cellar: :any,                 arm64_sonoma:   "f6fa608cc62ebc86f1b06b572109828d3c9741a24695cdc5c2ce70e0339ac44f"
+    sha256 cellar: :any,                 arm64_ventura:  "3d8a3febd98e282ab66b2fc4d0b7f1287681e5431097f87ce3da0659a22cad86"
+    sha256 cellar: :any,                 arm64_monterey: "cb2e00e66e06f5148eebcb745ca64696a91112ca6da84d5e22010ae92a52a9f3"
+    sha256 cellar: :any,                 sonoma:         "e6be2d1a6e0d3c2683efb2c762b09c85393e74d50e8f66b9425b18efb4603aca"
+    sha256 cellar: :any,                 ventura:        "f604a7c93855e1f8b4c59dc676a92565db75e01bc7b8056e4946b3c542850f50"
+    sha256 cellar: :any,                 monterey:       "a91e15d55a9aa60bee062e820eb2fa3a5b142ba371264e92280ca8130e0d2b7f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bfe4c83a5cf029a17c4ec3a95dd49a4a6932edaa795144060ebfa51dcf967705"
   end
 
   # https://github.com/facebook/watchman/issues/963
@@ -21,6 +22,7 @@ class Watchman < Formula
 
   depends_on "cmake" => :build
   depends_on "cpptoml" => :build
+  depends_on "fbthrift" => :build
   depends_on "googletest" => :build
   depends_on "mvfst" => :build
   depends_on "pkg-config" => :build
@@ -33,6 +35,7 @@ class Watchman < Formula
   depends_on "gflags"
   depends_on "glog"
   depends_on "libevent"
+  depends_on "libsodium"
   depends_on "openssl@3"
   depends_on "pcre2"
   depends_on "python@3.11"
