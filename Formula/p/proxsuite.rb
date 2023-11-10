@@ -4,35 +4,44 @@ class Proxsuite < Formula
   url "https://ghproxy.com/https://github.com/Simple-Robotics/proxsuite/releases/download/v0.5.0/proxsuite-0.5.0.tar.gz"
   sha256 "c2e928aa35c42fdc5297a81b9dcc6a7f927c8a0b01a18d1984780d67debdaa76"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/Simple-Robotics/proxsuite.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "605b6495d595e31b1ab6d1613b80509d8ed651e85a1fc0db144784b5141aeb37"
-    sha256 cellar: :any,                 arm64_ventura:  "4acf49678b9eab165289b45f289c66643f8e4cef6fedf6d2c38378f16198c17d"
-    sha256 cellar: :any,                 arm64_monterey: "0726137f73e8ea65194273419f78e84eb58303cd77c451ae6bfbaa6edec6e3fc"
-    sha256 cellar: :any,                 sonoma:         "fded3ec2005a279e86424e6740292caadad73bce7239cbde90b0ab01b0c19481"
-    sha256 cellar: :any,                 ventura:        "fa5ec4312a9775330d3a42bd94c8ade9fa462bdc99d3ecbfbd54ec9ac829bd9a"
-    sha256 cellar: :any,                 monterey:       "ed57dfda75eb6de9d01ba8c9fc296fe6815ad5806fa3b381149aa9325aef5577"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87ec9b9f689e2a30cf637e6c7a24ab33200ded3fac92e8e7d709093d8fa3f190"
+    sha256 cellar: :any,                 arm64_sonoma:   "f204fd9fc3df43dad7c4b419d40f7d3bcb40cf8b60058485df19fb653b5eae14"
+    sha256 cellar: :any,                 arm64_ventura:  "f3a1297ab6eb2a692d0768bdf67be2ef9154f562c2c970a34707c2edfbe986d1"
+    sha256 cellar: :any,                 arm64_monterey: "2e1fbd058c02dbd6e853911a1a246f17e5b8f72ff3f88dfa9dcbc51009039de9"
+    sha256 cellar: :any,                 sonoma:         "02cf28578a3807e4e18af168ff5b805b25af050408f0780f655fc58142915d7f"
+    sha256 cellar: :any,                 ventura:        "fa6b1de98bfdf21fb6d4205c2b1e9fb08385a7efb191c83e4520645ef53ee893"
+    sha256 cellar: :any,                 monterey:       "fa400ec202a319a65ef09637547f6015cfd0876b5f4f4ac40ce6bb2586dca77c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d72a5c06fef8ccd1487719f0dc3b417d969d3e3a8b6656f1623219217ee5527f"
   end
 
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "pkg-config" => :build
+  depends_on "python-setuptools" => :build
   depends_on "eigen"
   depends_on "numpy"
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "scipy"
   depends_on "simde"
 
+  def python3
+    "python3.12"
+  end
+
   def install
     system "git", "submodule", "update", "--init", "--recursive" if build.head?
+
+    pyver = Language::Python.major_minor_version python3
+    python_exe = Formula["python@#{pyver}"].opt_libexec/"bin/python"
 
     ENV.prepend_path "PYTHONPATH", Formula["eigenpy"].opt_prefix/Language::Python.site_packages
 
     # simde include dir can be removed after https://github.com/Simple-Robotics/proxsuite/issues/65
     system "cmake", "-S", ".", "-B", "build",
-                    "-DPYTHON_EXECUTABLE=#{Formula["python@3.11"].opt_libexec/"bin/python"}",
+                    "-DPYTHON_EXECUTABLE=#{python_exe}",
                     "-DBUILD_UNIT_TESTS=OFF",
                     "-DBUILD_PYTHON_INTERFACE=ON",
                     "-DINSTALL_DOCUMENTATION=ON",
@@ -43,7 +52,8 @@ class Proxsuite < Formula
   end
 
   test do
-    python_exe = Formula["python@3.11"].opt_libexec/"bin/python"
+    pyver = Language::Python.major_minor_version python3
+    python_exe = Formula["python@#{pyver}"].opt_libexec/"bin/python"
     system python_exe, "-c", <<~EOS
       import proxsuite
       qp = proxsuite.proxqp.dense.QP(10,0,0)
