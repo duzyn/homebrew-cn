@@ -1,29 +1,35 @@
 class Siril < Formula
   desc "Astronomical image processing tool"
   homepage "https://www.siril.org"
-  url "https://free-astro.org/download/siril-1.0.6.tar.bz2"
-  sha256 "f89604697ffcd43f009f8b4474daafdef220a4f786636545833be1236f38b561"
   license "GPL-3.0-or-later"
-  revision 7
+  revision 1
   head "https://gitlab.com/free-astro/siril.git", branch: "master"
 
-  bottle do
-    sha256 arm64_sonoma:   "8c6cd7d8bd63127d2263b8b153dbe941b0ad9a7edde60885db558bd048ad74c8"
-    sha256 arm64_ventura:  "208c71f56dff61d423588210968bae04e6a732466764353b46cd249b34dfe029"
-    sha256 arm64_monterey: "7bde9251cba3965ca5be5a7160c657ed679957d579b2417ceb504d969ca39885"
-    sha256 arm64_big_sur:  "5d96bce7246ddd5d51fc4bb812fd77b200cc8ddabc18dcc3b875c78fd76d0c13"
-    sha256 sonoma:         "076e83a7d0b68b7408253fbd81a04097410b02606271589c5cfd8c15fe8493c9"
-    sha256 ventura:        "417100a448f19ff66d112b370769e58547c5fa81f77ccc86b4b08033059f11d9"
-    sha256 monterey:       "c279b428372f7aa09ef73904a59aced6f4aa422650987358bece360def465ffa"
-    sha256 big_sur:        "7daf5062ee04e7bb033153df1d4f1124b993ab07b6641c4ade092e13d31d8e57"
-    sha256 x86_64_linux:   "8c89cf9a837456760716b1be36b7280dde9ec4c1042ee3c6d24f00da0c4d70f7"
+  stable do
+    url "https://free-astro.org/download/siril-1.2.0.tar.bz2"
+    sha256 "5941a4b5778929347482570dab05c9d780f3ab36e56f05b6301c39d911065e6f"
+
+    # TODO: Remove this patch on the next version after 1.2.0.
+    patch do
+      url "https://gitweb.gentoo.org/repo/gentoo.git/plain/sci-astronomy/siril/files/siril-1.2-exiv2-0.28.patch?id=002882203ad6a2b08ce035a18b95844a9f4b85d0"
+      sha256 "023a1a084f3005ed90649e71c70d59335d2efcd06875433f2cc2841f9d357eba"
+    end
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  bottle do
+    sha256 arm64_sonoma:   "167fb3ed38eb1799bfb99899c9f3979c2dd3dccae9e95e3fdbb822d1e7042a64"
+    sha256 arm64_ventura:  "3889fd0c75874e6b736de82471f837fe1685d0821b14547e50d80f921b67cf78"
+    sha256 arm64_monterey: "f79fd417b791382a23c6e8afac09c8e425a63e9f920b87758bdb535840f5e6d2"
+    sha256 sonoma:         "b6b66d66d499aff064b0e7a432170905b450583629b87beb4944136393910ceb"
+    sha256 ventura:        "0e3a6a09d544830dbb144c0c192e467f3eb2471ea6014a2c21166f69d4990487"
+    sha256 monterey:       "d158ead4b49dc102fb3083396dceee31cfe8e7d09e9cfe362e12f3835f39da05"
+    sha256 x86_64_linux:   "266ac82bad2e8b77368baf8d73a900e6ac1cfa2a4f92fcc360fd8e5fdc001e39"
+  end
+
   depends_on "cmake" => :build
   depends_on "intltool" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
   depends_on "cfitsio"
@@ -36,6 +42,7 @@ class Siril < Formula
   depends_on "jpeg-turbo"
   depends_on "json-glib"
   depends_on "libconfig"
+  depends_on "libheif"
   depends_on "libraw"
   depends_on "librsvg"
   depends_on "netpbm"
@@ -53,16 +60,13 @@ class Siril < Formula
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   def install
-    ENV.prepend_path "PERL5LIB", Formula["intltool"].libexec/"lib/perl5" unless OS.mac?
+    args = %w[
+      --force-fallback-for=kplot
+    ]
 
-    # siril uses pkg-config but it has wrong include paths for several
-    # headers. Work around that by letting it find all includes.
-    ENV.append_to_cflags "-I#{HOMEBREW_PREFIX}/include"
-    ENV.append_to_cflags "-Xpreprocessor -fopenmp -lomp" if OS.mac?
-
-    system "./autogen.sh", "--prefix=#{prefix}"
-    system "make"
-    system "make", "install"
+    system "meson", "setup", "_build", *args, *std_meson_args
+    system "meson", "compile", "-C", "_build", "--verbose"
+    system "meson", "install", "-C", "_build"
   end
 
   test do
