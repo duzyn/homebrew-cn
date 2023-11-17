@@ -28,16 +28,11 @@ jobs:
         repository: 'Homebrew/homebrew-cask-versions'
         fetch-depth: 1
         path: 'homebrew-cask-versions'
-    - uses: actions/checkout@v3
-      with:
-        repository: 'Homebrew/homebrew-cask-fonts'
-        fetch-depth: 1
-        path: 'homebrew-cask-fonts'
     - name: Update buckets
       run: |
         bash ./update.sh
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git add .
-        git commit -m "Updated $(date)"
-        git push
+        git add --all
+        git commit -am "Updated $(date)"
+        git push -f origin main
