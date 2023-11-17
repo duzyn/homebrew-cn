@@ -3,7 +3,7 @@ class Vineyard < Formula
 
   desc "In-memory immutable data manager. (Project under CNCF)"
   homepage "https://v6d.io"
-  url "https://ghproxy.com/https://github.com/v6d-io/v6d/releases/download/v0.18.2/v6d-0.18.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/v6d-io/v6d/releases/download/v0.18.2/v6d-0.18.2.tar.gz"
   sha256 "1255ca4ebeb5da34e33cb82a8d5530a5fc6b5fcebfb52d1b085058b2eab4a53c"
   license "Apache-2.0"
 

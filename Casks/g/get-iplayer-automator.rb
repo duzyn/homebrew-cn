@@ -2,7 +2,7 @@ cask "get-iplayer-automator" do
   version "1.25.4,20230609001"
   sha256 "aeccc377fb5e1bb2ed9384fd3947eb9294bddfa6b92865bee2b68183e558c80f"
 
-  url "https://ghproxy.com/https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.csv.first}/Get.iPlayer.Automator.v#{version.csv.first}.b#{version.csv.second}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.csv.first}/Get.iPlayer.Automator.v#{version.csv.first}.b#{version.csv.second}.zip"
   name "Get iPlayer Automator"
   desc "Download and watch BBC and ITV shows"
   homepage "https://github.com/Ascoware/get-iplayer-automator"

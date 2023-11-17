@@ -2,7 +2,7 @@ cask "brainfm" do
   version "0.1.5"
   sha256 "c6869346e1b68aa43db89f785bca6311d1aee117975a0df47c72cf7ab478e7c0"
 
-  url "https://ghproxy.com/https://github.com/Dinius/Brain.fm-Desktop-Client/releases/download/v#{version}/brainfm-macos.zip"
+  url "https://mirror.ghproxy.com/https://github.com/Dinius/Brain.fm-Desktop-Client/releases/download/v#{version}/brainfm-macos.zip"
   name "Brain.fm"
   desc "Desktop client for brain.fm"
   homepage "https://github.com/Dinius/Brain.fm-Desktop-Client"

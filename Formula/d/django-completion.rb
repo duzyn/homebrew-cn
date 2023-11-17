@@ -1,7 +1,7 @@
 class DjangoCompletion < Formula
   desc "Bash completion for Django"
   homepage "https://www.djangoproject.com/"
-  url "https://ghproxy.com/https://github.com/django/django/archive/refs/tags/4.2.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/django/django/archive/refs/tags/4.2.7.tar.gz"
   sha256 "fc467486f402fda9b80c2702d16d15885cd1842a509ca20bc8aec845e86aae18"
   license "BSD-3-Clause"
   head "https://github.com/django/django.git", branch: "main"

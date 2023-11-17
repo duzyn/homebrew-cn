@@ -1,7 +1,7 @@
 class Amber < Formula
   desc "Crystal web framework. Bare metal performance, productivity and happiness"
   homepage "https://amberframework.org/"
-  url "https://ghproxy.com/https://github.com/amberframework/amber/archive/refs/tags/v1.4.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/amberframework/amber/archive/refs/tags/v1.4.1.tar.gz"
   sha256 "92664a859fb27699855dfa5d87dc9bf2e4a614d3e54844a8344196d2807e775c"
   license "MIT"
 

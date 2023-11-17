@@ -1,7 +1,7 @@
 class Libtrng < Formula
   desc "Tina's Random Number Generator Library"
   homepage "https://www.numbercrunch.de/trng/"
-  url "https://ghproxy.com/https://github.com/rabauke/trng4/archive/refs/tags/v4.25.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rabauke/trng4/archive/refs/tags/v4.25.tar.gz"
   sha256 "2727ce04e726a0b214e7bc8066793489b1ddce2fdf932d63313f4fd2823c9beb"
   license "BSD-3-Clause"
   head "https://github.com/rabauke/trng4.git", branch: "master"

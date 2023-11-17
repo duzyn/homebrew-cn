@@ -24,17 +24,17 @@ class TrojanGo < Formula
   depends_on "go" => :build
 
   resource "geoip" do
-    url "https://ghproxy.com/https://github.com/v2fly/geoip/releases/download/202109102251/geoip.dat"
+    url "https://mirror.ghproxy.com/https://github.com/v2fly/geoip/releases/download/202109102251/geoip.dat"
     sha256 "ca9de5837b4ac6ceeb2a3f50d0996318011c0c7f8b5e11cb1fca6a5381f30862"
   end
 
   resource "geoip-only-cn-private" do
-    url "https://ghproxy.com/https://github.com/v2fly/geoip/releases/download/202109102251/geoip-only-cn-private.dat"
+    url "https://mirror.ghproxy.com/https://github.com/v2fly/geoip/releases/download/202109102251/geoip-only-cn-private.dat"
     sha256 "5af05c2ba255e0388f9630fcd40e05314e1cf89b8228ce4d319c45b1de36bd7c"
   end
 
   resource "geosite" do
-    url "https://ghproxy.com/https://github.com/v2fly/domain-list-community/releases/download/20210910080130/dlc.dat"
+    url "https://mirror.ghproxy.com/https://github.com/v2fly/domain-list-community/releases/download/20210910080130/dlc.dat"
     sha256 "96376220c7e78076bfde7254ee138b7c620902c7731c1e642a8ac15a74fecb34"
   end
 

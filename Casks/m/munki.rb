@@ -2,7 +2,7 @@ cask "munki" do
   version "6.3.4.4599"
   sha256 "65b45a9ec5a593e02229d2fd70211497bd08808309382e6b63941b2a54d8760e"
 
-  url "https://ghproxy.com/https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
   name "Munki"
   desc "Software installation manager"

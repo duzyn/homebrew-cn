@@ -2,7 +2,7 @@ cask "xdm" do
   version "7.2.7"
   sha256 "aa3c3df48894ec1e28f3089d93da68085ada43b715eb0f3e31fdda71da021057"
 
-  url "https://ghproxy.com/https://github.com/subhra74/xdm/releases/download/#{version}/XDMSetup.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/subhra74/xdm/releases/download/#{version}/XDMSetup.dmg",
       verified: "github.com/subhra74/xdm/"
   name "Xtreme Download Manager"
   desc "Tool to increase download speed"

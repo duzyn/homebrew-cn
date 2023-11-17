@@ -1,7 +1,7 @@
 class PowermanDockerize < Formula
   desc "Utility to simplify running applications in docker containers"
   homepage "https://github.com/powerman/dockerize"
-  url "https://ghproxy.com/https://github.com/powerman/dockerize/archive/refs/tags/v0.19.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/powerman/dockerize/archive/refs/tags/v0.19.0.tar.gz"
   sha256 "192c142ab25893c7a1e8a135280d8e72f05f12b56c1e2b5d932946707ec68c6b"
   license "MIT"
 

@@ -2,7 +2,7 @@ cask "cool-retro-term" do
   version "1.2.0"
   sha256 "605610df37b6ed92fac14d5e34a83350148e989b10ad9550d3403187fb974e48"
 
-  url "https://ghproxy.com/https://github.com/Swordfish90/cool-retro-term/releases/download/#{version}/Cool-Retro-Term-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/Swordfish90/cool-retro-term/releases/download/#{version}/Cool-Retro-Term-#{version}.dmg"
   name "Cool Retro Term"
   desc "Terminal emulator mimicking the old cathode display"
   homepage "https://github.com/Swordfish90/cool-retro-term"

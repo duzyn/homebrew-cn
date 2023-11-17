@@ -1,7 +1,7 @@
 class Xlsxio < Formula
   desc "C library for reading values from and writing values to .xlsx files"
   homepage "https://github.com/brechtsanders/xlsxio"
-  url "https://ghproxy.com/https://github.com/brechtsanders/xlsxio/archive/refs/tags/0.2.34.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/brechtsanders/xlsxio/archive/refs/tags/0.2.34.tar.gz"
   sha256 "726e3bc3cf571ac20e5c39b1f192f3793d24ebfdeaadcd210de74aa1ec100bb6"
   license "MIT"
   head "https://github.com/brechtsanders/xlsxio.git", branch: "master"

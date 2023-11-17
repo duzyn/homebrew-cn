@@ -2,7 +2,7 @@ cask "runjs" do
   version "2.9.0"
   sha256 "cc5821b98a9d846ce58ce7233836ed7d093a264ccaa9eedceffd528647bf0f7b"
 
-  url "https://ghproxy.com/https://github.com/lukehaas/RunJS/releases/download/v#{version}/RunJS-#{version}-universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/lukehaas/RunJS/releases/download/v#{version}/RunJS-#{version}-universal.dmg",
       verified: "github.com/lukehaas/RunJS/"
   name "RunJS"
   desc "JavaScript playground that auto-evaluates as code is typed"

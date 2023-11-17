@@ -1,7 +1,7 @@
 class Libofx < Formula
   desc "Library to support OFX command responses"
   homepage "https://github.com/libofx/libofx"
-  url "https://ghproxy.com/https://github.com/libofx/libofx/releases/download/0.10.9/libofx-0.10.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libofx/libofx/releases/download/0.10.9/libofx-0.10.9.tar.gz"
   sha256 "1ca89ff7d681c9edad312172ac464231a8de686e653213612f9417492cef0d37"
   license "GPL-2.0-or-later"
 

@@ -1,7 +1,7 @@
 class Mfoc < Formula
   desc "Implementation of 'offline nested' attack by Nethemba"
   homepage "https://github.com/nfc-tools/mfoc"
-  url "https://ghproxy.com/https://github.com/nfc-tools/mfoc/archive/refs/tags/mfoc-0.10.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nfc-tools/mfoc/archive/refs/tags/mfoc-0.10.7.tar.gz"
   sha256 "2dfd8ffa4a8b357807680d190a91c8cf3db54b4211a781edc1108af401dbaad7"
   license "GPL-2.0-only"
   revision 2

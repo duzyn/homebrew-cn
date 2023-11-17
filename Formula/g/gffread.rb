@@ -1,7 +1,7 @@
 class Gffread < Formula
   desc "GFF/GTF format conversions, region filtering, FASTA sequence extraction"
   homepage "https://github.com/gpertea/gffread"
-  url "https://ghproxy.com/https://github.com/gpertea/gffread/releases/download/v0.12.7/gffread-0.12.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gpertea/gffread/releases/download/v0.12.7/gffread-0.12.7.tar.gz"
   sha256 "bfde1c857495e578f5b3af3c007a9aa40593e69450eafcc6a42c3e8ef08ed1f5"
   license "MIT"
 
@@ -24,7 +24,7 @@ class Gffread < Formula
 
   test do
     resource "test_gtf" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/gpertea/gffread/4959f6b/examples/output/annotation.gtf"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gpertea/gffread/4959f6b/examples/output/annotation.gtf"
       sha256 "f8dcf147dd451e994cebfe054e120ecbf19fd40f99ae9e9865a312097c228741"
     end
     testpath.install resource("test_gtf")

@@ -1,7 +1,7 @@
 class Distcc < Formula
   desc "Distributed compiler client and server"
   homepage "https://github.com/distcc/distcc/"
-  url "https://ghproxy.com/https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz"
   sha256 "2b99edda9dad9dbf283933a02eace6de7423fe5650daa4a728c950e5cd37bd7d"
   license "GPL-2.0-or-later"
   revision 2

@@ -3,7 +3,7 @@ class Networkit < Formula
 
   desc "Performance toolkit for large-scale network analysis"
   homepage "https://networkit.github.io"
-  url "https://ghproxy.com/https://github.com/networkit/networkit/archive/refs/tags/10.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/networkit/networkit/archive/refs/tags/10.1.tar.gz"
   sha256 "35d11422b731f3e3f06ec05615576366be96ce26dd23aa16c8023b97f2fe9039"
   license "MIT"
   revision 1

@@ -2,8 +2,8 @@ cask "sqlitestudio" do
   version "3.4.4"
   sha256 "bd1bf5cd0e442b867ef9417e6c849d7b9f4d38f4305804c4b9d58d905092d8ef"
 
-  url "https://ghproxy.com/https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg",
-      verified: "ghproxy.com/https://github.com/pawelsalawa/sqlitestudio/releases/download/"
+  url "https://mirror.ghproxy.com/https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg",
+      verified: "mirror.ghproxy.com/https://github.com/pawelsalawa/sqlitestudio/releases/download/"
   name "SQLiteStudio"
   desc "Create, edit, browse SQLite databases"
   homepage "https://sqlitestudio.pl/"

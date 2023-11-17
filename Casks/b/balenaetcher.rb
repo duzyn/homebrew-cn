@@ -2,7 +2,7 @@ cask "balenaetcher" do
   version "1.18.11"
   sha256 "251f403b79f53bbf7c558cb0b6ce085bd9d4f1fb7f70d96fdfc10ecbc493e70f"
 
-  url "https://ghproxy.com/https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg",
       verified: "github.com/balena-io/etcher/"
   name "Etcher"
   desc "Tool to flash OS images to SD cards & USB drives"

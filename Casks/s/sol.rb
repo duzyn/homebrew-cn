@@ -2,14 +2,14 @@ cask "sol" do
   version "2.1.1"
   sha256 "4e0ff4b409ef56f0a8fe44ce64cfb87eab3b8d3a913228ebf8722a3a0b56b871"
 
-  url "https://ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/main/releases/#{version}.zip",
-      verified: "ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/"
+  url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/main/releases/#{version}.zip",
+      verified: "mirror.ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/"
   name "Sol"
   desc "Launcher & command palette"
   homepage "https://github.com/ospfranco/sol"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/main/releases/appcast.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/main/releases/appcast.xml"
     strategy :sparkle, &:short_version
   end
 

@@ -47,7 +47,7 @@ class Exiftran < Formula
 
   # Fix build on Darwin
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/185c281/exiftran/fix-build.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/185c281/exiftran/fix-build.diff"
     sha256 "017268a3195fb52df08ed75827fa40e8179aff0d9e54c926b0ace5f8e60702bf"
   end
 

@@ -2,7 +2,7 @@ cask "fsnotes" do
   version "6.5.0"
   sha256 "d1447fc259354a37c1cebe39a0c7c6032cc91a096133cd57998105b503b44dff"
 
-  url "https://ghproxy.com/https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip",
       verified: "github.com/glushchenko/fsnotes/"
   name "FSNotes"
   desc "Notes manager"

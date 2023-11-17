@@ -4,7 +4,7 @@ class ActionValidator < Formula
   license "GPL-3.0-only"
 
   stable do
-    url "https://ghproxy.com/https://github.com/mpalmer/action-validator/archive/refs/tags/v0.5.3.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/mpalmer/action-validator/archive/refs/tags/v0.5.3.tar.gz"
     sha256 "9afc0e12ca04d5373b3788a36b0f174077f7411572877da85a4c92d187751f14"
 
     # always pull the HEAD commit hash

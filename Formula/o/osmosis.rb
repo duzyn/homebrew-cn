@@ -1,7 +1,7 @@
 class Osmosis < Formula
   desc "Command-line OpenStreetMap data processor"
   homepage "https://wiki.openstreetmap.org/wiki/Osmosis"
-  url "https://ghproxy.com/https://github.com/openstreetmap/osmosis/releases/download/0.49.0/osmosis-0.49.0.tar"
+  url "https://mirror.ghproxy.com/https://github.com/openstreetmap/osmosis/releases/download/0.49.0/osmosis-0.49.0.tar"
   sha256 "d2a35bdbff190ffa66a6304ea1f73db9e7048c55340306e569086730518675ae"
   license :public_domain
 

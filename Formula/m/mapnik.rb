@@ -8,13 +8,13 @@ class Mapnik < Formula
   # TODO: Try switching to CMake build on next release as it works better with
   # Homebrew's build environment and avoids `--env=std` when using `scons`.
   stable do
-    url "https://ghproxy.com/https://github.com/mapnik/mapnik/releases/download/v3.1.0/mapnik-v3.1.0.tar.bz2"
+    url "https://mirror.ghproxy.com/https://github.com/mapnik/mapnik/releases/download/v3.1.0/mapnik-v3.1.0.tar.bz2"
     sha256 "43d76182d2a975212b4ad11524c74e577576c11039fdab5286b828397d8e6261"
 
     # Fix build with Scons 4 using Arch Linux patch. Remove in the next release.
     # Ref: https://github.com/mapnik/mapnik/commit/84a05a6597a941acfad220dae3fbfe5d20bfeb26
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/archlinux/svntogit-community/239768d7cd1217d5910d3f7d8ace86a7f85ad23c/trunk/scons4.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/archlinux/svntogit-community/239768d7cd1217d5910d3f7d8ace86a7f85ad23c/trunk/scons4.patch"
       sha256 "79a85ddba3ec17b86cb216e21442611498a9f2612f03e98708057b3c3a6e8b06"
     end
 

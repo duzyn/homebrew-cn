@@ -2,7 +2,7 @@ cask "foxglove-studio" do
   version "1.77.0"
   sha256 "faee47aee5f59a41af49fd889af0177ac7fa44bb5baa3f28d280caca81b5361b"
 
-  url "https://ghproxy.com/https://github.com/foxglove/studio/releases/download/v#{version}/foxglove-studio-#{version}-mac-universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/foxglove/studio/releases/download/v#{version}/foxglove-studio-#{version}-mac-universal.dmg",
       verified: "github.com/foxglove/studio/"
   name "Foxglove Studio"
   desc "Visualization and debugging tool for robotics"

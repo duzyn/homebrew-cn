@@ -1,7 +1,7 @@
 class StorjUplink < Formula
   desc "Uplink CLI for the Storj network"
   homepage "https://storj.io"
-  url "https://ghproxy.com/https://github.com/storj/storj/archive/refs/tags/v1.90.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/storj/storj/archive/refs/tags/v1.90.2.tar.gz"
   sha256 "b92890d55b7a9bbbf90de154b7379bdbcaf619a9ad796fd562db9ac6bee3b228"
   license "AGPL-3.0-only"
 

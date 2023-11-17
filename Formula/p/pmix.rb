@@ -1,7 +1,7 @@
 class Pmix < Formula
   desc "Process Management Interface for HPC environments"
   homepage "https://openpmix.github.io/"
-  url "https://ghproxy.com/https://github.com/openpmix/openpmix/releases/download/v4.2.7/pmix-4.2.7.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/openpmix/openpmix/releases/download/v4.2.7/pmix-4.2.7.tar.bz2"
   sha256 "ac9cf58a0bf01bfacd51d342100234f04c740ec14257e4492d1dd0207ff2a917"
   license "BSD-3-Clause"
 

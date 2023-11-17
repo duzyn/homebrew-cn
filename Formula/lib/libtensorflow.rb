@@ -1,7 +1,7 @@
 class Libtensorflow < Formula
   desc "C interface for Google's OS library for Machine Intelligence"
   homepage "https://www.tensorflow.org/"
-  url "https://ghproxy.com/https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.12.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tensorflow/tensorflow/archive/refs/tags/v2.12.0.tar.gz"
   sha256 "c030cb1905bff1d2446615992aad8d8d85cbe90c4fb625cee458c63bf466bc8e"
   license "Apache-2.0"
 
@@ -21,7 +21,7 @@ class Libtensorflow < Formula
   depends_on "python@3.11" => :build
 
   resource "homebrew-test-model" do
-    url "https://ghproxy.com/https://github.com/tensorflow/models/raw/v1.13.0/samples/languages/java/training/model/graph.pb"
+    url "https://mirror.ghproxy.com/https://github.com/tensorflow/models/raw/v1.13.0/samples/languages/java/training/model/graph.pb"
     sha256 "147fab50ddc945972818516418942157de5e7053d4b67e7fca0b0ada16733ecb"
   end
 

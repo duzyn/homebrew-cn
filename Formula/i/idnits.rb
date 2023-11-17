@@ -1,7 +1,7 @@
 class Idnits < Formula
   desc "Looks for problems in internet draft formatting"
   homepage "https://github.com/ietf-tools/idnits"
-  url "https://ghproxy.com/https://github.com/ietf-tools/idnits/archive/refs/tags/2.17.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ietf-tools/idnits/archive/refs/tags/2.17.1.tar.gz"
   sha256 "195ed8c9bfd38fbaf1ecb674a894f98f43be774dfecc37da5ef953ccba99ce76"
   license "GPL-2.0-or-later"
 

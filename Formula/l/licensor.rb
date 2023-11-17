@@ -1,7 +1,7 @@
 class Licensor < Formula
   desc "Write licenses to stdout"
   homepage "https://github.com/raftario/licensor"
-  url "https://ghproxy.com/https://github.com/raftario/licensor/archive/refs/tags/v2.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/raftario/licensor/archive/refs/tags/v2.1.0.tar.gz"
   sha256 "d061ce9fd26d58b0c6ababa7acdaf35222a4407f0b5ea9c4b78f6835527611fd"
   license "MIT"
   head "https://github.com/raftario/licensor.git", branch: "master"

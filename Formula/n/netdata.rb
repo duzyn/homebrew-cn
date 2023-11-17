@@ -1,7 +1,7 @@
 class Netdata < Formula
   desc "Diagnose infrastructure problems with metrics, visualizations & alarms"
   homepage "https://netdata.cloud/"
-  url "https://ghproxy.com/https://github.com/netdata/netdata/releases/download/v1.43.2/netdata-v1.43.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/netdata/netdata/releases/download/v1.43.2/netdata-v1.43.2.tar.gz"
   sha256 "d4a7ea2717ac7c8f04865f18e13aeaa0a36784156059f1b5ced75a44f74afc4d"
   license "GPL-3.0-or-later"
   revision 1

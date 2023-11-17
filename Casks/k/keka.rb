@@ -2,7 +2,7 @@ cask "keka" do
   version "1.3.5"
   sha256 "2c20da81a8a9ee638d6f63db4ae22ec08afd8a98e110d88a7608b2e94e18e574"
 
-  url "https://ghproxy.com/https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
   name "Keka"
   desc "File archiver"

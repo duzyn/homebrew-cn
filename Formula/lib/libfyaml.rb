@@ -1,7 +1,7 @@
 class Libfyaml < Formula
   desc "Fully feature complete YAML parser and emitter"
   homepage "https://github.com/pantoniou/libfyaml"
-  url "https://ghproxy.com/https://github.com/pantoniou/libfyaml/releases/download/v0.9/libfyaml-0.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/pantoniou/libfyaml/releases/download/v0.9/libfyaml-0.9.tar.gz"
   sha256 "7731edc5dfcc345d5c5c9f6ce597133991a689dabede393cd77bae89b327cd6d"
   license "MIT"
 

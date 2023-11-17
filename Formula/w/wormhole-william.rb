@@ -1,7 +1,7 @@
 class WormholeWilliam < Formula
   desc "End-to-end encrypted file transfer"
   homepage "https://github.com/psanford/wormhole-william"
-  url "https://ghproxy.com/https://github.com/psanford/wormhole-william/archive/refs/tags/v1.0.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/psanford/wormhole-william/archive/refs/tags/v1.0.7.tar.gz"
   sha256 "a335d2f338ef61ee4bb12ce9adc5ab57652ca32e7ef05bfecaf0a0003b418854"
   license "MIT"
   head "https://github.com/psanford/wormhole-william.git", branch: "master"

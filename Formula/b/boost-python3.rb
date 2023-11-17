@@ -1,7 +1,7 @@
 class BoostPython3 < Formula
   desc "C++ library for C++/Python3 interoperability"
   homepage "https://www.boost.org/"
-  url "https://ghproxy.com/https://github.com/boostorg/boost/releases/download/boost-1.83.0/boost-1.83.0.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/boostorg/boost/releases/download/boost-1.83.0/boost-1.83.0.tar.xz"
   sha256 "c5a0688e1f0c05f354bbd0b32244d36085d9ffc9f932e8a18983a9908096f614"
   license "BSL-1.0"
   revision 1

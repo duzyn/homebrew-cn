@@ -67,12 +67,12 @@ class Csound < Formula
   fails_with gcc: "5"
 
   resource "ableton-link" do
-    url "https://ghproxy.com/https://github.com/Ableton/link/archive/refs/tags/Link-3.1.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/Ableton/link/archive/refs/tags/Link-3.1.0.tar.gz"
     sha256 "6a9e70a70b5ea1d8825f6b2f34085f8e3e52d0581a62e6eb3f72de168c1a13bc"
   end
 
   resource "csound-plugins" do
-    url "https://ghproxy.com/https://github.com/csound/plugins/archive/refs/tags/1.0.2.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/csound/plugins/archive/refs/tags/1.0.2.tar.gz"
     sha256 "8c2f0625ad1d38400030f414b92d82cfdec5c04b7dc178852f3e1935abf75d30"
 
     # Fix build on macOS 12.3+ by replacing old system Python/Python.h with Homebrew's Python.h

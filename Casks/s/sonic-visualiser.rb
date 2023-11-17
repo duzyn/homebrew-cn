@@ -2,7 +2,7 @@ cask "sonic-visualiser" do
   version "4.5.2,2851"
   sha256 "d91ce0890fe9fc099fd7dfe4ed725d535f9a5a7da7bacd56130803736597ac6b"
 
-  url "https://ghproxy.com/https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first}/Sonic.Visualiser-#{version.csv.first}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first}/Sonic.Visualiser-#{version.csv.first}.dmg",
       verified: "github.com/sonic-visualiser/sonic-visualiser/"
   name "Sonic Visualiser"
   desc "Visualisation, analysis, and annotation of music audio recordings"

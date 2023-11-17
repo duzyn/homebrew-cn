@@ -1,7 +1,7 @@
 class Meilisearch < Formula
   desc "Ultra relevant, instant and typo-tolerant full-text search API"
   homepage "https://docs.meilisearch.com/"
-  url "https://ghproxy.com/https://github.com/meilisearch/meilisearch/archive/refs/tags/v1.4.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/meilisearch/meilisearch/archive/refs/tags/v1.4.2.tar.gz"
   sha256 "1bb9b5da7ee6e481861431900d7775ffcd148f78f16810b1c657a6351751c4ba"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class CreateApi < Formula
   desc "Delightful code generator for OpenAPI specs"
   homepage "https://github.com/CreateAPI/CreateAPI"
-  url "https://ghproxy.com/https://github.com/CreateAPI/CreateAPI/archive/refs/tags/0.2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/CreateAPI/CreateAPI/archive/refs/tags/0.2.0.tar.gz"
   sha256 "9f61943314797fe4f09b40be72e1f72b0a616c66cb1b66cd042f97a596ffd869"
   license "MIT"
   head "https://github.com/CreateAPI/CreateAPI.git", branch: "main"

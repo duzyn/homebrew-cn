@@ -5,7 +5,7 @@ cask "telegram-a" do
   sha256 arm:   "a2ff74897d3a51361ab886259638e859e3e6ca00fc3c95dd76316bbbfb3041bf",
          intel: "13779eb69b9bb47ab65c4a79d8c076cb981b04f80065b29b7532920496cb63dd"
 
-  url "https://ghproxy.com/https://github.com/Ajaxy/telegram-tt/releases/download/v#{version}/Telegram-A-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Ajaxy/telegram-tt/releases/download/v#{version}/Telegram-A-#{arch}.dmg",
       verified: "github.com/Ajaxy/telegram-tt/"
   name "Telegram A"
   desc "Web client for Telegram messenger"

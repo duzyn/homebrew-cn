@@ -2,7 +2,7 @@ cask "psychopy" do
   version "2023.2.3"
   sha256 "77f296e5ee58944b169c19b810b69acce9b452a603cc1e6ca1c6559745563fed"
 
-  url "https://ghproxy.com/https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
   name "PsychoPy"
   desc "Create experiments in behavioral science"
   homepage "https://github.com/psychopy/psychopy"

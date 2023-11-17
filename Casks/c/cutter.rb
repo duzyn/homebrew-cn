@@ -5,7 +5,7 @@ cask "cutter" do
   sha256 arm:   "19027e6c6515d588d6d0cb7ab5506828247f98b1ee80c7c3b1c6354d1ca25dcf",
          intel: "22ad2f3cec9cffefc8de9129c311a8f5412a641322127c43e05cef2bd498782f"
 
-  url "https://ghproxy.com/https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-macOS-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-macOS-#{arch}.dmg",
       verified: "github.com/rizinorg/cutter/"
   name "Cutter"
   desc "Reverse engineering platform powered by Rizin"

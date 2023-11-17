@@ -1,7 +1,7 @@
 class Jreleaser < Formula
   desc "Release projects quickly and easily with JReleaser"
   homepage "https://jreleaser.org/"
-  url "https://ghproxy.com/https://github.com/jreleaser/jreleaser/releases/download/v1.9.0/jreleaser-1.9.0.zip"
+  url "https://mirror.ghproxy.com/https://github.com/jreleaser/jreleaser/releases/download/v1.9.0/jreleaser-1.9.0.zip"
   sha256 "b4c1eff349d6ac494e40422b6be109c547bc9b353a5d40417b40848925429234"
   license "Apache-2.0"
 

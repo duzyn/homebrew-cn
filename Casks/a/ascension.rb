@@ -2,7 +2,7 @@ cask "ascension" do
   version "3.0.0"
   sha256 "b21598b455878b997a08c88ef1c800eef2ad648ca672228db90ece0754d5e492"
 
-  url "https://ghproxy.com/https://github.com/ansilove/Ascension/releases/download/v#{version}/Ascension_v#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/ansilove/Ascension/releases/download/v#{version}/Ascension_v#{version}.zip"
   name "Ascension"
   desc "ANSI/ASCII art viewer"
   homepage "https://github.com/ansilove/Ascension"

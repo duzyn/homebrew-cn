@@ -1,7 +1,7 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://ghproxy.com/https://github.com/AsamK/signal-cli/archive/refs/tags/v0.12.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/AsamK/signal-cli/archive/refs/tags/v0.12.4.tar.gz"
   sha256 "d9aab61f1c0e08e55e0d72a3aeb8b8479aeb02c21d0490b9b2bf1f5167d1b402"
   license "GPL-3.0-or-later"
 
@@ -31,10 +31,10 @@ class SignalCli < Formula
 
   # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#determine-the-required-libsignal-client-version
   # To check the version of `libsignal-client`, run:
-  # url=https://ghproxy.com/https://github.com/AsamK/signal-cli/releases/download/v$version/signal-cli-$version.tar.gz
+  # url=https://mirror.ghproxy.com/https://github.com/AsamK/signal-cli/releases/download/v$version/signal-cli-$version.tar.gz
   # curl -fsSL $url | tar -tz | grep libsignal-client
   resource "libsignal-client" do
-    url "https://ghproxy.com/https://github.com/signalapp/libsignal/archive/refs/tags/v0.32.1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/signalapp/libsignal/archive/refs/tags/v0.32.1.tar.gz"
     sha256 "4751e197d798555c6e8c9a869c41692ed3c72a4d34738c28c6f6a1761044e777"
   end
 

@@ -42,7 +42,7 @@ class Srecord < Formula
   # Use macOS's pstopdf
   patch do
     on_ventura :or_older do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/srecord/1.64.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/srecord/1.64.patch"
       sha256 "140e032d0ffe921c94b19145e5904538233423ab7dc03a9c3c90bf434de4dd03"
     end
   end

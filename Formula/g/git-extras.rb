@@ -1,7 +1,7 @@
 class GitExtras < Formula
   desc "Small git utilities"
   homepage "https://github.com/tj/git-extras"
-  url "https://ghproxy.com/https://github.com/tj/git-extras/archive/refs/tags/7.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tj/git-extras/archive/refs/tags/7.1.0.tar.gz"
   sha256 "e5c855361d2f1ec1be6ee601247153d9c8c04a221949b6ec3903b32fa736f542"
   license "MIT"
   head "https://github.com/tj/git-extras.git", branch: "main"

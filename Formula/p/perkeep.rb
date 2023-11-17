@@ -12,7 +12,7 @@ class Perkeep < Formula
 
     # Newer gopherjs to support a newer Go version.
     resource "gopherjs" do
-      url "https://ghproxy.com/https://github.com/gopherjs/gopherjs/archive/refs/tags/v1.18.0-beta2+go1.18.5.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/gopherjs/gopherjs/archive/refs/tags/v1.18.0-beta2+go1.18.5.tar.gz"
       sha256 "8dc2e85245343862e47ce9293e7c4b364cbd7aada734b823366ba10e72cfb93e"
     end
   end

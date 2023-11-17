@@ -154,12 +154,12 @@ class Sigstore < Formula
     assert_match version.to_s, shell_output("#{bin}/sigstore -V")
 
     resource "homebrew-test-artifact" do
-      url "https://ghproxy.com/https://github.com/sigstore/sigstore-python/releases/download/v2.0.1/sigstore-2.0.1.tar.gz", using: :nounzip
+      url "https://mirror.ghproxy.com/https://github.com/sigstore/sigstore-python/releases/download/v2.0.1/sigstore-2.0.1.tar.gz", using: :nounzip
       sha256 "78013eaa2207c054ac803b361f8722011766d243bcbfa50c6e48003df2e3ca2f"
     end
 
     resource "homebrew-test-artifact.sigstore" do
-      url "https://ghproxy.com/https://github.com/sigstore/sigstore-python/releases/download/v2.0.1/sigstore-2.0.1.tar.gz.sigstore"
+      url "https://mirror.ghproxy.com/https://github.com/sigstore/sigstore-python/releases/download/v2.0.1/sigstore-2.0.1.tar.gz.sigstore"
       sha256 "0d19d7b7c30423f00b0f4a73ae4964e9c234d71d9b307192e612175444691b03"
     end
 

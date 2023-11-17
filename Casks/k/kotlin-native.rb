@@ -5,7 +5,7 @@ cask "kotlin-native" do
   sha256 arm:   "630e883bca63d02f571dfcd5b21728be4a050545c9dca8b1846a326c14452f65",
          intel: "9a70e2f1d3020f31ac74f743d5dc3860c07101fa3916fc0325553f7b0ef4cfd5"
 
-  url "https://ghproxy.com/https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
+  url "https://mirror.ghproxy.com/https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"

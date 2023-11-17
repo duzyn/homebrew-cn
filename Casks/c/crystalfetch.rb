@@ -2,7 +2,7 @@ cask "crystalfetch" do
   version "2.1.0"
   sha256 "a2791be006e92496c2871caeee557950ecba620c6394075071938ce31051459d"
 
-  url "https://ghproxy.com/https://github.com/TuringSoftware/CrystalFetch/releases/download/v#{version}/CrystalFetch.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/TuringSoftware/CrystalFetch/releases/download/v#{version}/CrystalFetch.dmg"
   name "Crystalfetch"
   desc "UI for creating Windows installer ISO from UUPDump"
   homepage "https://github.com/TuringSoftware/CrystalFetch"

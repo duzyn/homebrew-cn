@@ -1,7 +1,7 @@
 class AstGrep < Formula
   desc "Code searching, linting, rewriting"
   homepage "https://github.com/ast-grep/ast-grep"
-  url "https://ghproxy.com/https://github.com/ast-grep/ast-grep/archive/refs/tags/0.13.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ast-grep/ast-grep/archive/refs/tags/0.13.1.tar.gz"
   sha256 "d568d4fc4f257fcc6d6a99d5a1f4c4638a2d106c653618fa595943fc41452da1"
   license "MIT"
 

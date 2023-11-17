@@ -1,7 +1,7 @@
 class TektoncdCli < Formula
   desc "CLI for interacting with TektonCD"
   homepage "https://github.com/tektoncd/cli"
-  url "https://ghproxy.com/https://github.com/tektoncd/cli/archive/refs/tags/v0.33.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tektoncd/cli/archive/refs/tags/v0.33.0.tar.gz"
   sha256 "18888780d58e1cd88fc943a6b15c9940599383466d33e11fa96f61f83bd755bc"
   license "Apache-2.0"
 

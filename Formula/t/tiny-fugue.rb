@@ -30,7 +30,7 @@ class TinyFugue < Formula
   # pcre deprecated pcre_info. Switch to HB pcre-8.31 and pcre_fullinfo.
   # Not reported upstream; project is in stasis since 2007.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9dc80757ba32bf5d818d70fc26bb24b6f/tiny-fugue/5.0b8.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9dc80757ba32bf5d818d70fc26bb24b6f/tiny-fugue/5.0b8.patch"
     sha256 "22f660dc0c0d0691ccaaacadf2f3c47afefbdc95639e46c6b4b77a0545b6a17c"
   end
 

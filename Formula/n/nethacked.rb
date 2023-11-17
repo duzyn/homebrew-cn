@@ -21,7 +21,7 @@ require "etc"
 class Nethacked < Formula
   desc "Bugfixed and interface-patched Nethack"
   homepage "https://nethacked.github.io/"
-  url "https://ghproxy.com/https://github.com/nethacked/nethacked/archive/refs/tags/1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nethacked/nethacked/archive/refs/tags/1.0.tar.gz"
   sha256 "4e3065a7b652d5fc21577e0b7ac3a60513cd30f4ee81c7f11431a71185b609aa"
   license "NGPL"
 
@@ -49,7 +49,7 @@ class Nethacked < Formula
 
   patch do
     on_macos do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/b40e459/nethacked/1.0.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/b40e459/nethacked/1.0.patch"
       sha256 "d32bed5e7b4500515135270d72077bab49534abbdc60d8d040473fbee630f90f"
     end
   end

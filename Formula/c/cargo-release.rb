@@ -3,7 +3,7 @@ class CargoRelease < Formula
   homepage "https://github.com/crate-ci/cargo-release"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/crate-ci/cargo-release/archive/refs/tags/v0.25.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/crate-ci/cargo-release/archive/refs/tags/v0.25.0.tar.gz"
   sha256 "fbde90b749180128e2d4171b5d411a1895819e911bcf560264808dc610d0c5ff"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/crate-ci/cargo-release.git", branch: "master"

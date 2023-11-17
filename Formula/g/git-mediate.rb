@@ -1,7 +1,7 @@
 class GitMediate < Formula
   desc "Utility to help resolve merge conflicts"
   homepage "https://github.com/Peaker/git-mediate"
-  url "https://ghproxy.com/https://github.com/Peaker/git-mediate/archive/refs/tags/1.0.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Peaker/git-mediate/archive/refs/tags/1.0.9.tar.gz"
   sha256 "ed9b4f5f1ccc295e69d5a368b1b5436968e2290b8e1792a768c0cfae7f91fefb"
   license "GPL-2.0-only"
 

@@ -1,7 +1,7 @@
 class GitTown < Formula
   desc "High-level command-line interface for Git"
   homepage "https://www.git-town.com/"
-  url "https://ghproxy.com/https://github.com/git-town/git-town/archive/refs/tags/v10.0.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/git-town/git-town/archive/refs/tags/v10.0.2.tar.gz"
   sha256 "045b40f98158192238d0258e706cdac5d547cc92123a5c79118ceb072c2f145e"
   license "MIT"
 

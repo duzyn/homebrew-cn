@@ -1,7 +1,7 @@
 class Bottom < Formula
   desc "Yet another cross-platform graphical process/system monitor"
   homepage "https://clementtsang.github.io/bottom/"
-  url "https://ghproxy.com/https://github.com/ClementTsang/bottom/archive/refs/tags/0.9.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ClementTsang/bottom/archive/refs/tags/0.9.6.tar.gz"
   sha256 "202130e0d7c362d0d0cf211f6a13e31be3a02f13f998f88571e59a7735d60667"
   license "MIT"
   head "https://github.com/ClementTsang/bottom.git", branch: "master"

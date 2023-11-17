@@ -34,7 +34,7 @@ class Trafshow < Formula
     "configure"         => "c6e34dddd6c159cbd373b2b593f7643642cb10449c6bc6c606e160586bc5b794",
   }.each do |name, sha|
     patch :p0 do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/be6fd4a/trafshow/patch-#{name}"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/be6fd4a/trafshow/patch-#{name}"
       sha256 sha
     end
   end
@@ -42,7 +42,7 @@ class Trafshow < Formula
   # libpcap on 10.12 has pcap_lib_version() instead of pcap_version
   patch :p0 do
     on_sierra :or_newer do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/7ad7c77/trafshow/patch-pcap-version-sierra.diff"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/7ad7c77/trafshow/patch-pcap-version-sierra.diff"
       sha256 "03213c8b8b46241ecef8f427cdbec9b09f5fdc35b9d67672ad4b370a1186aed5"
     end
   end

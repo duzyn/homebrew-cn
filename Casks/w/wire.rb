@@ -2,7 +2,7 @@ cask "wire" do
   version "3.32.4589"
   sha256 "3c30190a7920ce56aeb1db70c9c2be3c77e9fb398bdf75675fa4730ac8014d9e"
 
-  url "https://ghproxy.com/https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg",
       verified: "github.com/wireapp/wire-desktop/"
   name "Wire"
   desc "Collaboration platform focusing on security"

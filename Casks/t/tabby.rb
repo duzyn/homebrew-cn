@@ -5,7 +5,7 @@ cask "tabby" do
   sha256 arm:   "a42137b11749dc9d0d8be3e820244f88e982f4c7287515e1e4a367db610b98de",
          intel: "3bd6506816006be19ec589b7542e6470d73057a7aaeff3d6f92c134f4f25518b"
 
-  url "https://ghproxy.com/https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-#{arch}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-#{arch}.zip",
       verified: "github.com/Eugeny/tabby/"
   name "Tabby"
   name "Terminus"

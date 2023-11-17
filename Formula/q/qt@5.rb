@@ -87,7 +87,7 @@ class QtAT5 < Formula
     # Add Python 3 support to qt-webengine-chromium.
     # Submitted upstream here: https://codereview.qt-project.org/c/qt/qtwebengine-chromium/+/416534
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/7ae178a617d1e0eceb742557e63721af949bd28a/qt5/qt5-webengine-chromium-python3.patch?full_index=1"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/7ae178a617d1e0eceb742557e63721af949bd28a/qt5/qt5-webengine-chromium-python3.patch?full_index=1"
       sha256 "a93aa8ef83f0cf54f820daf5668574cc24cf818fb9589af2100b363356eb6b49"
       directory "src/3rdparty"
     end
@@ -95,21 +95,21 @@ class QtAT5 < Formula
     # Add Python 3 support to qt-webengine.
     # Submitted upstream here: https://codereview.qt-project.org/c/qt/qtwebengine/+/416535
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/a6f16c6daea3b5a1f7bc9f175d1645922c131563/qt5/qt5-webengine-python3.patch?full_index=1"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/a6f16c6daea3b5a1f7bc9f175d1645922c131563/qt5/qt5-webengine-python3.patch?full_index=1"
       sha256 "398c996cb5b606695ac93645143df39e23fa67e768b09e0da6dbd37342a43f32"
     end
 
     # Fix build of qt-webengine-chromium with newer GCC.
     # Submitted upstream here: https://codereview.qt-project.org/c/qt/qtwebengine-chromium/+/416598
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/a6f16c6daea3b5a1f7bc9f175d1645922c131563/qt5/qt5-webengine-gcc12.patch?full_index=1"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/a6f16c6daea3b5a1f7bc9f175d1645922c131563/qt5/qt5-webengine-gcc12.patch?full_index=1"
       sha256 "cf9be3ffcc3b3cd9450b1ff13535ff7d76284f73173412d097a6ab487463a379"
       directory "src/3rdparty"
     end
 
     # Fix build for Xcode 14
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/405b6b7ca7b95860ee70368076382b171a1c66f4/qt5/qt5-webengine-xcode14.diff"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/405b6b7ca7b95860ee70368076382b171a1c66f4/qt5/qt5-webengine-xcode14.diff"
       sha256 "142c4fb11dca6c0bbc86ca8f74410447c23be1b1d314758515bfda20afa6f612"
       directory "src/3rdparty"
     end
@@ -134,14 +134,14 @@ class QtAT5 < Formula
 
   # build patch for qmake with xcode 15
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/086e8cf/qt5/qt5-qmake-xcode15.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/086e8cf/qt5/qt5-qmake-xcode15.patch"
     sha256 "802f29c2ccb846afa219f14876d9a1d67477ff90200befc2d0c5759c5081c613"
   end
 
   # build patch for qtmultimedia with xcode 15
   # https://github.com/hmaarrfk/qt-main-feedstock/blob/0758b98854a3a3b9c99cded856176e96c9b8c0c5/recipe/patches/0014-remove-usage-of-unary-operator.patch
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/3f509180/qt5/qt5-qtmultimedia-xcode15.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/3f509180/qt5/qt5-qtmultimedia-xcode15.patch"
     sha256 "887d6cb4fd115ce82323d17e69fafa606c51cef98c820b82309ab38288f21e08"
   end
 

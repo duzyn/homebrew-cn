@@ -2,7 +2,7 @@ cask "wwdc" do
   version "7.4.2,1040"
   sha256 "023abb817eb971eb514c27c53a0e1fb55913e680e7293742201ed0a69df6faa5"
 
-  url "https://ghproxy.com/https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/insidegui/WWDC/"
   name "WWDC"
   desc "Allows access to WWDC livestreams, videos and sessions"

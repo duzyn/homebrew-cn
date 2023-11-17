@@ -2,7 +2,7 @@ cask "openra" do
   version "20231010"
   sha256 "da81dfcfab8287f21127827e029a0553bde08207a15656393c9e3c1d6341d3c4"
 
-  url "https://ghproxy.com/https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg",
       verified: "github.com/OpenRA/OpenRA/"
   name "OpenRA"
   desc "Real-time strategy game engine for Westwood games"

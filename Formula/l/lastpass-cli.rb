@@ -1,7 +1,7 @@
 class LastpassCli < Formula
   desc "LastPass command-line interface tool"
   homepage "https://github.com/lastpass/lastpass-cli"
-  url "https://ghproxy.com/https://github.com/lastpass/lastpass-cli/releases/download/v1.3.7/lastpass-cli-1.3.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lastpass/lastpass-cli/releases/download/v1.3.7/lastpass-cli-1.3.7.tar.gz"
   sha256 "448a53960602164456bbc9156d017540a1dac989a8cab7bc6a2a9781b52d47cb"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
   head "https://github.com/lastpass/lastpass-cli.git", branch: "master"

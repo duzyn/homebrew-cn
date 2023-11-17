@@ -1,7 +1,7 @@
 class Mycorrhiza < Formula
   desc "Lightweight wiki engine with hierarchy support"
   homepage "https://mycorrhiza.wiki"
-  url "https://ghproxy.com/https://github.com/bouncepaw/mycorrhiza/archive/refs/tags/v1.14.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/bouncepaw/mycorrhiza/archive/refs/tags/v1.14.0.tar.gz"
   sha256 "6448fe7fa6198cb3346f63d0857d5f364d0aa8fafbdc95f56ef39fbe774bbabc"
   license "AGPL-3.0-only"
   head "https://github.com/bouncepaw/mycorrhiza.git", branch: "master"

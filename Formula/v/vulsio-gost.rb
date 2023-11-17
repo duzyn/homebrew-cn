@@ -1,7 +1,7 @@
 class VulsioGost < Formula
   desc "Local CVE tracker & notification system"
   homepage "https://github.com/vulsio/gost"
-  url "https://ghproxy.com/https://github.com/vulsio/gost/archive/refs/tags/v0.4.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/vulsio/gost/archive/refs/tags/v0.4.5.tar.gz"
   sha256 "2a76fb45307d2fd3f13fe3eff096b91f1b669dd18c6a0dc02a6951764d61c0e7"
   license "MIT"
 

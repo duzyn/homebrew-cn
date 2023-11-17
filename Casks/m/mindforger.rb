@@ -2,7 +2,7 @@ cask "mindforger" do
   version "1.54.0-20220307.225449"
   sha256 "234b50d22d126eedaefcac5f3d331d1d913b2140b3ea4869f92042f2a5216c26"
 
-  url "https://ghproxy.com/https://github.com/dvorka/mindforger/releases/download/#{version.split("-").first}/mindforger-#{version}-intel.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/dvorka/mindforger/releases/download/#{version.split("-").first}/mindforger-#{version}-intel.dmg",
       verified: "github.com/dvorka/mindforger/"
   name "MindForger"
   desc "Thinking notebook and Markdown IDE"

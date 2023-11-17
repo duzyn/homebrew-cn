@@ -1,7 +1,7 @@
 class Burst < Formula
   desc "Radix sort, lazy ranges and iterators, and more. Boost-like header-only library"
   homepage "https://github.com/izvolov/burst"
-  url "https://ghproxy.com/https://github.com/izvolov/burst/archive/refs/tags/v3.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/izvolov/burst/archive/refs/tags/v3.1.1.tar.gz"
   sha256 "ee58c7b98ca1709dd452b9ba46cb4c91fc0b2952edd020ed5bc2d600b3edeae7"
   license "BSL-1.0"
   head "https://github.com/izvolov/burst.git", branch: "master"

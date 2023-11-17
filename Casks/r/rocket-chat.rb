@@ -2,7 +2,7 @@ cask "rocket-chat" do
   version "3.9.10"
   sha256 "76332443f5bc64638698b0f3d4a9698077fff6892e495b245d257435a82d2674"
 
-  url "https://ghproxy.com/https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}-mac.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version}/rocketchat-#{version}-mac.dmg",
       verified: "github.com/RocketChat/Rocket.Chat.Electron/"
   name "Rocket.Chat"
   desc "Official desktop client for Rocket.Chat"

@@ -1,7 +1,7 @@
 class Mediamtx < Formula
   desc "Zero-dependency real-time media server and media proxy"
   homepage "https://github.com/bluenviron/mediamtx"
-  url "https://ghproxy.com/https://github.com/bluenviron/mediamtx/archive/refs/tags/v1.3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/bluenviron/mediamtx/archive/refs/tags/v1.3.0.tar.gz"
   sha256 "77f2a60eff5e6907127a8ecae4e94bce2209c88119cfb13c2255e003b106659d"
   license "MIT"
 

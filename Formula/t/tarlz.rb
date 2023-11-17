@@ -25,7 +25,7 @@ class Tarlz < Formula
 
   # patch for missing major/minor/makedev for osx builds
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/0fe617f/tarlz/0.24.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/0fe617f/tarlz/0.24.patch"
     sha256 "289a90c49c6ae7990debca5d4516cbb2c17d64d7e8ab23564e65b12d1f2feb9c"
   end
 

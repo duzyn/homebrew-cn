@@ -1,7 +1,7 @@
 class Bomber < Formula
   desc "Scans Software Bill of Materials for security vulnerabilities"
   homepage "https://github.com/devops-kung-fu/bomber"
-  url "https://ghproxy.com/https://github.com/devops-kung-fu/bomber/archive/refs/tags/v0.4.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/devops-kung-fu/bomber/archive/refs/tags/v0.4.7.tar.gz"
   sha256 "4f3c66204b776c8a87a8ad48f9ed87d756164c890e03ce2aa0e217d809c3ff0e"
   license "MPL-2.0"
 

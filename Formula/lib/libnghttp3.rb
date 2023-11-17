@@ -1,7 +1,7 @@
 class Libnghttp3 < Formula
   desc "HTTP/3 library written in C"
   homepage "https://nghttp2.org/nghttp3/"
-  url "https://ghproxy.com/https://github.com/ngtcp2/nghttp3/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ngtcp2/nghttp3/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "838def499e368b24d8a4656ad9a1f38bb7ca8b2857a44c5de1c006420cc0bbee"
   license "MIT"
   head "https://github.com/ngtcp2/nghttp3.git", branch: "main"

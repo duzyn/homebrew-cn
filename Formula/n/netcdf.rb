@@ -1,7 +1,7 @@
 class Netcdf < Formula
   desc "Libraries and data formats for array-oriented scientific data"
   homepage "https://www.unidata.ucar.edu/software/netcdf/"
-  url "https://ghproxy.com/https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.9.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.9.2.tar.gz"
   sha256 "bc104d101278c68b303359b3dc4192f81592ae8640f1aee486921138f7f88cb7"
   license "BSD-3-Clause"
   revision 1

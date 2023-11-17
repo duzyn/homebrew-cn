@@ -1,7 +1,7 @@
 class ZshFastSyntaxHighlighting < Formula
   desc "Feature-rich syntax highlighting for Zsh"
   homepage "https://github.com/zdharma-continuum/fast-syntax-highlighting"
-  url "https://ghproxy.com/https://github.com/zdharma-continuum/fast-syntax-highlighting/archive/refs/tags/v1.55.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/zdharma-continuum/fast-syntax-highlighting/archive/refs/tags/v1.55.tar.gz"
   sha256 "d06cea9c047ce46ad09ffd01a8489a849fc65b8b6310bd08f8bcec9d6f81a898"
   license "BSD-3-Clause"
   head "https://github.com/zdharma-continuum/fast-syntax-highlighting.git", branch: "master"

@@ -1,7 +1,7 @@
 class Safeint < Formula
   desc "Class library for C++ that manages integer overflows"
   homepage "https://github.com/dcleblanc/SafeInt"
-  url "https://ghproxy.com/https://github.com/dcleblanc/SafeInt/archive/refs/tags/3.0.28a.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/dcleblanc/SafeInt/archive/refs/tags/3.0.28a.tar.gz"
   version "3.0.28a"
   sha256 "9e652d065a3cef80623287d5dc61edcf6a95ddab38a9dfeb34f155261fc9cef7"
   license "MIT"

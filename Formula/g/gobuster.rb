@@ -1,7 +1,7 @@
 class Gobuster < Formula
   desc "Directory/file & DNS busting tool written in Go"
   homepage "https://github.com/OJ/gobuster"
-  url "https://ghproxy.com/https://github.com/OJ/gobuster/archive/refs/tags/v3.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/OJ/gobuster/archive/refs/tags/v3.6.0.tar.gz"
   sha256 "509b16ca713de02f8fcdc7b33d97e7e18b687bb99634dde076be38297d4b401b"
   license "Apache-2.0"
 

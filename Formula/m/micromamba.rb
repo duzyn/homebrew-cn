@@ -1,7 +1,7 @@
 class Micromamba < Formula
   desc "Fast Cross-Platform Package Manager"
   homepage "https://github.com/mamba-org/mamba"
-  url "https://ghproxy.com/https://github.com/mamba-org/mamba/archive/refs/tags/micromamba-1.5.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/mamba-org/mamba/archive/refs/tags/micromamba-1.5.3.tar.gz"
   sha256 "f13e6e31279a8b526af63d53216cb6582fe0e4989d084260c24b0ab35de58dce"
   license "BSD-3-Clause"
   head "https://github.com/mamba-org/mamba.git", branch: "main"
@@ -45,7 +45,7 @@ class Micromamba < Formula
 
   resource "libarchive-headers" do
     on_monterey :or_newer do
-      url "https://ghproxy.com/https://github.com/apple-oss-distributions/libarchive/archive/refs/tags/libarchive-121.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/libarchive/archive/refs/tags/libarchive-121.tar.gz"
       sha256 "f38736ffdbf9005726bdc126e68ff34ddaee25326ae51d58e4385de717bc773f"
     end
   end

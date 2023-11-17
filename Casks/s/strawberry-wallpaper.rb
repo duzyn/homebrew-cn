@@ -2,7 +2,7 @@ cask "strawberry-wallpaper" do
   version "1.4.2"
   sha256 :no_check
 
-  url "https://ghproxy.com/https://github.com/aitexiaoy/Strawberry-Wallpaper/releases/download/#{version}/Strawberry.Wallpaper-mac.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/aitexiaoy/Strawberry-Wallpaper/releases/download/#{version}/Strawberry.Wallpaper-mac.dmg",
       verified: "github.com/aitexiaoy/Strawberry-Wallpaper/"
   name "Strawberry Wallpaper"
   desc "Automatically update wallpapers of major galleries"

@@ -2,7 +2,7 @@ cask "n1ghtshade" do
   version "1.0"
   sha256 "e1fb23833e9261244e52bb318f456fccbe1482082cdd0995f63babd47af2b746"
 
-  url "https://ghproxy.com/https://github.com/synackuk/n1ghtshade/releases/download/#{version}/n1ghtshade.app.zip"
+  url "https://mirror.ghproxy.com/https://github.com/synackuk/n1ghtshade/releases/download/#{version}/n1ghtshade.app.zip"
   name "n1ghtshade"
   desc "Permits the downgrade/jailbreak of 32-bit iOS devices"
   homepage "https://github.com/synackuk/n1ghtshade"

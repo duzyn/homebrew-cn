@@ -32,7 +32,7 @@ class Fakeroot < Formula
   # https://salsa.debian.org/clint/fakeroot/-/merge_requests/17
   patch :p0 do
     # The MR has a typo, so we use MacPorts' version.
-    url "https://ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/0ffd857cab7b021f9dbf2cbc876d8025b6aefeff/sysutils/fakeroot/files/patch-message.h.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/0ffd857cab7b021f9dbf2cbc876d8025b6aefeff/sysutils/fakeroot/files/patch-message.h.diff"
     sha256 "6540eef1c31ffb4ed636c1f4750ee668d2effdfe308d975d835aa518731c72dc"
   end
 

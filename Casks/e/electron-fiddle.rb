@@ -5,7 +5,7 @@ cask "electron-fiddle" do
   sha256 arm:   "4072c6c620a3b03c9997c0cb2380192c7b1b60ac3c583c328bdccf235a454416",
          intel: "a632d1ed1dca9a3b8ee0ed1ba8f0c4ef7e75b2de39d33cfa3af458cf879d3c83"
 
-  url "https://ghproxy.com/https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip",
       verified: "github.com/electron/fiddle/"
   name "Electron Fiddle"
   desc "Create and play with small Electron experiments"

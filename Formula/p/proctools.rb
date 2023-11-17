@@ -38,7 +38,7 @@ class Proctools < Formula
     "proctools-proctools.h" => "7c2ee6ac3dc7b26fb6738496fbabb1d1d065302a39207ae3fbacb1bc3a64371a",
   }.each do |name, sha|
     patch :p0 do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f411d167/proctools/patch-#{name}.diff"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f411d167/proctools/patch-#{name}.diff"
       sha256 sha
     end
   end

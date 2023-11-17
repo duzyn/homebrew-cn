@@ -1,7 +1,7 @@
 class Cheat < Formula
   desc "Create and view interactive cheat sheets for *nix commands"
   homepage "https://github.com/cheat/cheat"
-  url "https://ghproxy.com/https://github.com/cheat/cheat/archive/refs/tags/4.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cheat/cheat/archive/refs/tags/4.4.0.tar.gz"
   sha256 "8694d75896dcb1dfb91ed95ec37f7fe409ad2bde76e66f80b20be24ee92ae3ec"
   license "MIT"
 

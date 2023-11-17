@@ -2,7 +2,7 @@ cask "spotmenu" do
   version "1.9"
   sha256 "306fc07e2fa2987bd46eae15012808ab2341e47bc56c7b0ebef151752155fd6f"
 
-  url "https://ghproxy.com/https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.zip"
+  url "https://mirror.ghproxy.com/https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.zip"
   name "SpotMenu"
   desc "Spotify and iTunes in the menu bar"
   homepage "https://github.com/kmikiy/SpotMenu"

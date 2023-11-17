@@ -1,7 +1,7 @@
 class Proguard < Formula
   desc "Java class file shrinker, optimizer, and obfuscator"
   homepage "https://www.guardsquare.com/en/products/proguard"
-  url "https://ghproxy.com/https://github.com/Guardsquare/proguard/releases/download/v7.4/proguard-7.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Guardsquare/proguard/releases/download/v7.4/proguard-7.4.0.tar.gz"
   sha256 "5b5f1ad8d83e20c123df06d8cb10863c3570d8aabb6aec954f5fa1dbf8b5298a"
   license "GPL-2.0-or-later"
 

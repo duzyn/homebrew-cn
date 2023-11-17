@@ -3,7 +3,7 @@ class CargoUdeps < Formula
   homepage "https://github.com/est31/cargo-udeps"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/est31/cargo-udeps/archive/refs/tags/v0.1.43.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/est31/cargo-udeps/archive/refs/tags/v0.1.43.tar.gz"
   sha256 "d2c286f696f1d1314fcbef03ffa3c1a365992021529ead1caf533cbe92c3deb9"
   license any_of: ["Apache-2.0", "MIT"]
 

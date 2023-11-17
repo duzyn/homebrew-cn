@@ -2,7 +2,7 @@ cask "aegisub" do
   version "3.2.2"
   sha256 "d71fa46f074a2d5a252f30779e0b8d913d5157258f5d9fc333411f8c9493f42b"
 
-  url "https://ghproxy.com/https://github.com/Aegisub/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/Aegisub/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg"
   name "Aegisub"
   desc "Create and modify subtitles"
   homepage "https://github.com/Aegisub/Aegisub"

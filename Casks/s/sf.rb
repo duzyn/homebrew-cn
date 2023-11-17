@@ -10,7 +10,7 @@ cask "sf" do
   homepage "https://developer.salesforce.com/tools/salesforcecli"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/forcedotcom/cli/main/releasenotes/README.md"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/forcedotcom/cli/main/releasenotes/README.md"
     regex(/(\d+(?:\.\d+)+)\s+\(.*?\)\s+\[stable\]/i)
   end
 

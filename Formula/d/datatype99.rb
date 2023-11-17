@@ -1,7 +1,7 @@
 class Datatype99 < Formula
   desc "Algebraic data types for C99"
   homepage "https://github.com/Hirrolot/datatype99"
-  url "https://ghproxy.com/https://github.com/Hirrolot/datatype99/archive/refs/tags/v1.6.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Hirrolot/datatype99/archive/refs/tags/v1.6.4.tar.gz"
   sha256 "f8488decc7ab035e3af77ee62e64fc678d5cb57831457f7270efe003e63d6f09"
   license "MIT"
   head "https://github.com/Hirrolot/datatype99.git", branch: "master"

@@ -12,7 +12,7 @@ cask "stats" do
     sha256 "2fb1379da55e158c5e4bc3801245c4818ed807ee84fb2ac67c8014af9d845af0"
   end
 
-  url "https://ghproxy.com/https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   name "Stats"
   desc "System monitor for the menu bar"
   homepage "https://github.com/exelban/stats"

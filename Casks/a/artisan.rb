@@ -2,7 +2,7 @@ cask "artisan" do
   version "2.8.4"
   sha256 "9279a3b19497249ea48683ec3676081fe722ceff74122585d9f3d325031aa653"
 
-  url "https://ghproxy.com/https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-#{version}.dmg",
       verified: "github.com/artisan-roaster-scope/artisan/"
   name "Artisan"
   desc "Visual scope for coffee roasters"

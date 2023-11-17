@@ -1,7 +1,7 @@
 class Bashunit < Formula
   desc "Simple testing library for bash scripts"
   homepage "https://bashunit.typeddevs.com"
-  url "https://ghproxy.com/https://github.com/TypedDevs/bashunit/releases/download/0.10.1/bashunit"
+  url "https://mirror.ghproxy.com/https://github.com/TypedDevs/bashunit/releases/download/0.10.1/bashunit"
   sha256 "c042dcac3ab63bd66cd6f5648d2eb21396437796f6583d4e100d7cd2d7c243e9"
   license "MIT"
 

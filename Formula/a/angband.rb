@@ -1,7 +1,7 @@
 class Angband < Formula
   desc "Dungeon exploration game"
   homepage "https://angband.github.io/angband/"
-  url "https://ghproxy.com/https://github.com/angband/angband/releases/download/4.2.5/Angband-4.2.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/angband/angband/releases/download/4.2.5/Angband-4.2.5.tar.gz"
   sha256 "c4cacbdf28f726fcb1a0b30b8763100fb06f88dbb570e955232e41d83e0718a6"
   license "GPL-2.0-only"
   head "https://github.com/angband/angband.git", branch: "master"

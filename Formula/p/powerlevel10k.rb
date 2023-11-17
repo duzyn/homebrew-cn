@@ -1,7 +1,7 @@
 class Powerlevel10k < Formula
   desc "Theme for zsh"
   homepage "https://github.com/romkatv/powerlevel10k"
-  url "https://ghproxy.com/https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.19.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/romkatv/powerlevel10k/archive/refs/tags/v1.19.0.tar.gz"
   sha256 "ac3395e572b5d5b77813009fd206762268fc73b9d305c2a99f4f26ad6fecf024"
   license "MIT"
   head "https://github.com/romkatv/powerlevel10k.git", branch: "master"

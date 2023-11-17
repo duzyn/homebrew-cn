@@ -1,7 +1,7 @@
 class ChinadnsC < Formula
   desc "Port of ChinaDNS to C: fix irregularities with DNS in China"
   homepage "https://github.com/shadowsocks/ChinaDNS"
-  url "https://ghproxy.com/https://github.com/shadowsocks/ChinaDNS/releases/download/1.3.2/chinadns-1.3.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/shadowsocks/ChinaDNS/releases/download/1.3.2/chinadns-1.3.2.tar.gz"
   sha256 "abfd433e98ac0f31b8a4bd725d369795181b0b6e8d1b29142f1bb3b73bbc7230"
   license "GPL-3.0"
 

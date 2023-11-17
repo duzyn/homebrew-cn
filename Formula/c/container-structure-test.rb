@@ -1,7 +1,7 @@
 class ContainerStructureTest < Formula
   desc "Validate the structure of your container images"
   homepage "https://github.com/GoogleContainerTools/container-structure-test"
-  url "https://ghproxy.com/https://github.com/GoogleContainerTools/container-structure-test/archive/refs/tags/v1.16.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/GoogleContainerTools/container-structure-test/archive/refs/tags/v1.16.0.tar.gz"
   sha256 "4fe56bd96340873ac4aa677a770cec1b7aebdd841c11e368d90f2a9d369cf133"
   license "Apache-2.0"
   head "https://github.com/GoogleContainerTools/container-structure-test.git", branch: "master"
@@ -33,7 +33,7 @@ class ContainerStructureTest < Formula
   test do
     # Small Docker image to run tests against
     resource "homebrew-test_resource" do
-      url "https://gist.ghproxy.com/https://github.com/AndiDog/1fab301b2dbc812b1544cd45db939e94/raw/5160ab30de17833fdfe183fc38e4e5f69f7bbae0/busybox-1.31.1.tar", using: :nounzip
+      url "https://gist.mirror.ghproxy.com/https://github.com/AndiDog/1fab301b2dbc812b1544cd45db939e94/raw/5160ab30de17833fdfe183fc38e4e5f69f7bbae0/busybox-1.31.1.tar", using: :nounzip
       sha256 "ab5088c314316f39ff1d1a452b486141db40813351731ec8d5300db3eb35a316"
     end
 

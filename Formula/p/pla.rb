@@ -1,7 +1,7 @@
 class Pla < Formula
   desc "Tool for building Gantt charts in PNG, EPS, PDF or SVG format"
   homepage "https://www.arpalert.org/pla.html"
-  url "https://ghproxy.com/https://github.com/thierry-f-78/pla/archive/refs/tags/1.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/thierry-f-78/pla/archive/refs/tags/1.3.tar.gz"
   sha256 "966ff0de604cfe4fe6e9650ee7776c5096211ad76e060ff4fd9edbd711977ef2"
   license "GPL-2.0-only"
 

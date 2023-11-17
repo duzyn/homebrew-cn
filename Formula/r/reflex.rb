@@ -1,7 +1,7 @@
 class Reflex < Formula
   desc "Run a command when files change"
   homepage "https://github.com/cespare/reflex"
-  url "https://ghproxy.com/https://github.com/cespare/reflex/archive/refs/tags/v0.3.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cespare/reflex/archive/refs/tags/v0.3.1.tar.gz"
   sha256 "efe3dc7bc64b5a978c6e7f790e3d210aed16bd7e43c7fbc2713fe4b16a7a183e"
   license "MIT"
   head "https://github.com/cespare/reflex.git", branch: "main"

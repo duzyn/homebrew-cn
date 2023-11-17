@@ -1,7 +1,7 @@
 class Libzim < Formula
   desc "Reference implementation of the ZIM specification"
   homepage "https://github.com/openzim/libzim"
-  url "https://ghproxy.com/https://github.com/openzim/libzim/archive/refs/tags/9.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/openzim/libzim/archive/refs/tags/9.0.0.tar.gz"
   sha256 "681f0419d421be05ffd14dbab65c42103ebffb86deceed70b8bd6f9b0590ecd6"
   license "GPL-2.0-or-later"
 

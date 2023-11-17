@@ -2,7 +2,7 @@ cask "frappe-books" do
   version "0.19.0"
   sha256 "5fb3e743d63d85e22fca5dd19d4f7bbcb07543faf3b6575bd5c7df75da382fb8"
 
-  url "https://ghproxy.com/https://github.com/frappe/books/releases/download/v#{version}/Frappe-Books-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/frappe/books/releases/download/v#{version}/Frappe-Books-#{version}.dmg",
       verified: "github.com/frappe/books/"
   name "Frappe Books"
   desc "Book-keeping software for small businesses and freelancers"

@@ -1,7 +1,7 @@
 class Riff < Formula
   desc "Diff filter highlighting which line parts have changed"
   homepage "https://github.com/walles/riff"
-  url "https://ghproxy.com/https://github.com/walles/riff/archive/refs/tags/2.27.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/walles/riff/archive/refs/tags/2.27.1.tar.gz"
   sha256 "ba52c76c103f7e88301a61227b648d63115e52c7b14ff966073a8d0264f42bde"
   license "MIT"
 

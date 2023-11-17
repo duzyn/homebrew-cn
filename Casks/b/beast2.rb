@@ -3,7 +3,7 @@ cask "beast2" do
   version "2.7.5"
   sha256 "9b40268b958c2172ab402d8408a066f632dab2bef110578518a5ee33260a22a4"
 
-  url "https://ghproxy.com/https://github.com/CompEvol/beast2/releases/download/v#{version}/BEAST.v#{version}.Mac.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/CompEvol/beast2/releases/download/v#{version}/BEAST.v#{version}.Mac.dmg",
       verified: "github.com/CompEvol/beast2/"
   name "BEAST2"
   desc "Bayesian evolutionary analysis by sampling trees"

@@ -1,7 +1,7 @@
 class PayloadDumperGo < Formula
   desc "Android OTA payload dumper written in Go"
   homepage "https://github.com/ssut/payload-dumper-go"
-  url "https://ghproxy.com/https://github.com/ssut/payload-dumper-go/archive/refs/tags/1.2.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ssut/payload-dumper-go/archive/refs/tags/1.2.2.tar.gz"
   sha256 "7f80f6c29ad8b835d71f361ba073988a27a33043acec37eea9d9430c1fb04b57"
   license "Apache-2.0"
 

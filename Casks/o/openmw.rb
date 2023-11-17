@@ -5,7 +5,7 @@ cask "openmw" do
   sha256 arm:   "72fdb7bc24d55685dfcd2973555e7a41bf7b7aabba0515c02904a48f48be6b05",
          intel: "b3fa91fe8055690cc0b3b5518e6cbbdd31825b5b3c937a748843c95400336ccf"
 
-  url "https://ghproxy.com/https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macos-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macos-#{arch}.dmg",
       verified: "github.com/OpenMW/openmw/"
   name "OpenMW"
   desc "Open-source open-world RPG game engine that supports playing Morrowind"

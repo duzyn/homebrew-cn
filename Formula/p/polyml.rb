@@ -1,7 +1,7 @@
 class Polyml < Formula
   desc "Standard ML implementation"
   homepage "https://www.polyml.org/"
-  url "https://ghproxy.com/https://github.com/polyml/polyml/archive/refs/tags/v5.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/polyml/polyml/archive/refs/tags/v5.9.tar.gz"
   sha256 "5aa452a49f2ac0278668772af4ea0b9bf30c93457e60ff7f264c5aec2023c83e"
   license "LGPL-2.1-or-later"
   head "https://github.com/polyml/polyml.git", branch: "master"
@@ -18,7 +18,7 @@ class Polyml < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
     sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
   end
 

@@ -2,7 +2,7 @@ cask "betwixt" do
   version "1.6.1"
   sha256 "a97f893e8bc7611dfde66ae75775a829c4d25959b946276aacf32cc8485c4054"
 
-  url "https://ghproxy.com/https://github.com/kdzwinel/betwixt/releases/download/#{version}/Betwixt-darwin-x64.zip"
+  url "https://mirror.ghproxy.com/https://github.com/kdzwinel/betwixt/releases/download/#{version}/Betwixt-darwin-x64.zip"
   name "Betwixt"
   desc "Web Debugging Proxy based on Chrome DevTools Network panel"
   homepage "https://github.com/kdzwinel/betwixt"

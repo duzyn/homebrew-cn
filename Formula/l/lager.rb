@@ -1,7 +1,7 @@
 class Lager < Formula
   desc "C++ lib for value-oriented design using unidirectional data-flow architecture"
   homepage "https://sinusoid.es/lager/"
-  url "https://ghproxy.com/https://github.com/arximboldi/lager/archive/refs/tags/v0.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/arximboldi/lager/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "9e4743c3fe2c95c1653c3fd088a2200108f09d758725697831852dc91d15d174"
   license "MIT"
 

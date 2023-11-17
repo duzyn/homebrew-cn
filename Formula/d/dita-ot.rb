@@ -1,7 +1,7 @@
 class DitaOt < Formula
   desc "DITA Open Toolkit is an implementation of the OASIS DITA specification"
   homepage "https://www.dita-ot.org/"
-  url "https://ghproxy.com/https://github.com/dita-ot/dita-ot/releases/download/4.1.2/dita-ot-4.1.2.zip"
+  url "https://mirror.ghproxy.com/https://github.com/dita-ot/dita-ot/releases/download/4.1.2/dita-ot-4.1.2.zip"
   sha256 "22c47043210965349e842c46ef15e2dac2a5f784d08d9d026d5a7b1674a69223"
   license "Apache-2.0"
 

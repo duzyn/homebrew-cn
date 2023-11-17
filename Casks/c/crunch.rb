@@ -2,7 +2,7 @@ cask "crunch" do
   version "5.0.0"
   sha256 "80ebe4ddfbd6813535910c518e0594db7c23061e1a0f5c6c30382db1fc25b347"
 
-  url "https://ghproxy.com/https://github.com/chrissimpkins/Crunch/releases/download/v#{version}/Crunch-Installer.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/chrissimpkins/Crunch/releases/download/v#{version}/Crunch-Installer.dmg"
   name "Crunch"
   desc "Insane(ly slow but wicked good) PNG image optimization"
   homepage "https://github.com/chrissimpkins/Crunch"

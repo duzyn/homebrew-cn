@@ -1,7 +1,7 @@
 class Pyenv < Formula
   desc "Python version management"
   homepage "https://github.com/pyenv/pyenv"
-  url "https://ghproxy.com/https://github.com/pyenv/pyenv/archive/refs/tags/v2.3.32.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/pyenv/pyenv/archive/refs/tags/v2.3.32.tar.gz"
   sha256 "97f6568977b0ba867de9dc08ba6ce8a2e42134ec7fa718df883a983cb9901844"
   license "MIT"
   version_scheme 1

@@ -1,7 +1,7 @@
 class Lastz < Formula
   desc "Pairwise aligner for DNA sequences"
   homepage "https://lastz.github.io/lastz/"
-  url "https://ghproxy.com/https://github.com/lastz/lastz/archive/refs/tags/1.04.22.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lastz/lastz/archive/refs/tags/1.04.22.tar.gz"
   sha256 "4c829603ba4aed7ddf64255b528cd88850e4557382fca29580d3576c25c5054a"
   license "MIT"
   head "https://github.com/lastz/lastz.git", branch: "master"

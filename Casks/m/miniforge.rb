@@ -5,7 +5,7 @@ cask "miniforge" do
   sha256 arm:   "51d15ed1471ef8633f99574dc0c43fc972ce1981ebf08eade4d9b249bb7640e4",
          intel: "d8eef4816b28f1bfc099d8fc2cdac4fb0ebbe1ddd27f4acb66d83d66c260cb63"
 
-  url "https://ghproxy.com/https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
+  url "https://mirror.ghproxy.com/https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   name "miniforge"
   desc "Minimal installer for conda specific to conda-forge"
   homepage "https://github.com/conda-forge/miniforge"

@@ -1,7 +1,7 @@
 class Mmtabbarview < Formula
   desc "Modernized and view-based rewrite of PSMTabBarControl"
   homepage "https://mimo42.github.io/MMTabBarView/"
-  url "https://ghproxy.com/https://github.com/MiMo42/MMTabBarView/archive/refs/tags/v1.4.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/MiMo42/MMTabBarView/archive/refs/tags/v1.4.2.tar.gz"
   sha256 "a5b79f1b50f6cabe97558f4c24a6317c448c534f15655309b6b29a532590e976"
   license "BSD-3-Clause"
 

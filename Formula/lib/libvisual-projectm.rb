@@ -1,7 +1,7 @@
 class LibvisualProjectm < Formula
   desc "Visualization plug-in for projectM support from Libvisual"
   homepage "https://github.com/projectM-visualizer/frontend-libvisual-plug-in"
-  url "https://ghproxy.com/https://github.com/projectM-visualizer/frontend-libvisual-plug-in/archive/refs/tags/v2.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/projectM-visualizer/frontend-libvisual-plug-in/archive/refs/tags/v2.1.1.tar.gz"
   sha256 "eb8269c2a923546600d3f40ff90c011f03a215847215ee8bef44bfae305b4dd7"
   license "GPL-3.0-or-later"
 

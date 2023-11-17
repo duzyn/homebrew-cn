@@ -2,7 +2,7 @@ cask "cozy-drive" do
   version "3.39.0"
   sha256 "8e6a36525aa9423d8269177aa8221d6e2e5b0f1ae05837880823999397810a97"
 
-  url "https://ghproxy.com/https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}.dmg",
       verified: "github.com/cozy-labs/cozy-desktop/"
   name "Cozy Drive"
   desc "File synchronisation for Cozy Cloud"

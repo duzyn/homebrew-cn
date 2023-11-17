@@ -1,7 +1,7 @@
 class Gmailctl < Formula
   desc "Declarative configuration for Gmail filters"
   homepage "https://github.com/mbrt/gmailctl"
-  url "https://ghproxy.com/https://github.com/mbrt/gmailctl/archive/refs/tags/v0.10.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/mbrt/gmailctl/archive/refs/tags/v0.10.7.tar.gz"
   sha256 "0e1c4dd9d641a9f68d1016082d842c576bde761ae9eba9b434d944766278e681"
   license "MIT"
   head "https://github.com/mbrt/gmailctl.git", branch: "master"

@@ -1,7 +1,7 @@
 class Yuicompressor < Formula
   desc "Yahoo! JavaScript and CSS compressor"
   homepage "https://yui.github.io/yuicompressor/"
-  url "https://ghproxy.com/https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.zip"
+  url "https://mirror.ghproxy.com/https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.zip"
   sha256 "3243fd79cb68cc61a5278a8ff67a0ad6a2d825c36464594b66900ad8426a6a6e"
   license "BSD-3-Clause"
   revision 1

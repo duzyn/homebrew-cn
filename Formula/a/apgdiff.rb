@@ -1,7 +1,7 @@
 class Apgdiff < Formula
   desc "Another PostgreSQL diff tool"
   homepage "https://www.apgdiff.com/"
-  url "https://ghproxy.com/https://github.com/fordfrog/apgdiff/archive/refs/tags/release_2.7.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fordfrog/apgdiff/archive/refs/tags/release_2.7.0.tar.gz"
   sha256 "932a7e9fef69a289f4c7bed31a9c0709ebd2816c834b65bad796bdc49ca38341"
   license "MIT"
 

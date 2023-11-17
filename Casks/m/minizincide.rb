@@ -2,7 +2,7 @@ cask "minizincide" do
   version "2.8.0"
   sha256 "f96f3c37cf697f8114b1fdfcdd6d61e4a66c307a9c89c26ae75bc7d025e995fc"
 
-  url "https://ghproxy.com/https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
       verified: "github.com/MiniZinc/MiniZincIDE/"
   name "MiniZincIDE"
   desc "Open-source constraint modeling language and IDE"

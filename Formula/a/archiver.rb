@@ -1,10 +1,10 @@
 class Archiver < Formula
   desc "Cross-platform, multi-format archive utility"
-  homepage "https://ghproxy.com/https://github.com/mholt/archiver"
-  url "https://ghproxy.com/https://github.com/mholt/archiver/archive/refs/tags/v3.5.1.tar.gz"
+  homepage "https://mirror.ghproxy.com/https://github.com/mholt/archiver"
+  url "https://mirror.ghproxy.com/https://github.com/mholt/archiver/archive/refs/tags/v3.5.1.tar.gz"
   sha256 "b69a76f837b6cc1c34c72ace16670360577b123ccc17872a95af07178e69fbe7"
   license "MIT"
-  head "https://ghproxy.com/https://github.com/mholt/archiver.git", branch: "master"
+  head "https://mirror.ghproxy.com/https://github.com/mholt/archiver.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "247cc8a86532c7e40d47ee84872895a7790a87c0c732cb1d4dfd19a25e8b724f"

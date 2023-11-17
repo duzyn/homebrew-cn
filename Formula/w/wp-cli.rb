@@ -1,7 +1,7 @@
 class WpCli < Formula
   desc "Command-line interface for WordPress"
   homepage "https://wp-cli.org/"
-  url "https://ghproxy.com/https://github.com/wp-cli/wp-cli/releases/download/v2.9.0/wp-cli-2.9.0.phar"
+  url "https://mirror.ghproxy.com/https://github.com/wp-cli/wp-cli/releases/download/v2.9.0/wp-cli-2.9.0.phar"
   sha256 "af6b7ccc21ed0907cb504db5a059f0e120117905a6017bfdd4375cee3c93d864"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class CucumberRuby < Formula
   desc "Cucumber for Ruby"
   homepage "https://cucumber.io"
-  url "https://ghproxy.com/https://github.com/cucumber/cucumber-ruby/archive/refs/tags/v9.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cucumber/cucumber-ruby/archive/refs/tags/v9.1.0.tar.gz"
   sha256 "49397539d952ff95399ba133cc5b8c0c8e85c2177de0cf08b363a21bd5ac2cd7"
   license "MIT"
 

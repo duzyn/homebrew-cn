@@ -1,7 +1,7 @@
 class Oslo < Formula
   desc "CLI tool for the OpenSLO spec"
   homepage "https://openslo.com/"
-  url "https://ghproxy.com/https://github.com/OpenSLO/oslo/archive/refs/tags/v0.11.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/OpenSLO/oslo/archive/refs/tags/v0.11.0.tar.gz"
   sha256 "ee43704402d8867e952bc02086da4ec175a405599ffe3ac654053e9245ff10f7"
   license "Apache-2.0"
   head "https://github.com/openslo/oslo.git", branch: "main"

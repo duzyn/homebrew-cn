@@ -5,7 +5,7 @@ cask "duplicacy-cli" do
   sha256 arm:   "efaadc14cfb07e305ec00a95b2fcdc4f28db5ae5bedda0d5b4cbfb24386d53fc",
          intel: "49c6f617ef9fc954865d54b5445eaf37ee7afb0f0dd72ec993cf21ec6cd710f1"
 
-  url "https://ghproxy.com/https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_osx_#{arch}_#{version}",
+  url "https://mirror.ghproxy.com/https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_osx_#{arch}_#{version}",
       verified: "github.com/gilbertchen/duplicacy/"
   name "Duplicacy Command Line Version"
   desc "Cloud backup tool"

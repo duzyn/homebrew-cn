@@ -2,7 +2,7 @@ cask "clocker" do
   version "23.01"
   sha256 "6bd3f553fcd9e12dd656053305450aeb41912130b2f65d085718c9aa70cae0a8"
 
-  url "https://ghproxy.com/https://github.com/n0shake/Clocker/releases/download/#{version}/Clocker.zip",
+  url "https://mirror.ghproxy.com/https://github.com/n0shake/Clocker/releases/download/#{version}/Clocker.zip",
       verified: "github.com/n0shake/Clocker/"
   name "Clocker"
   desc "Menu bar timezone tracker and compact calendar"

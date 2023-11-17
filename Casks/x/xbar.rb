@@ -2,7 +2,7 @@ cask "xbar" do
   version "2.1.7-beta"
   sha256 "0a7ea7c40e4d4e2ecce0dae3c9c3773d459ddf5af86744f70c44b9f9901bc73f"
 
-  url "https://ghproxy.com/https://github.com/matryer/xbar/releases/download/v#{version}/xbar.v#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/matryer/xbar/releases/download/v#{version}/xbar.v#{version}.dmg",
       verified: "github.com/matryer/xbar/"
   name "xbar"
   desc "View output from scripts in the menu bar"

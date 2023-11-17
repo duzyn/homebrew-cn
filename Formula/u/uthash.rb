@@ -1,7 +1,7 @@
 class Uthash < Formula
   desc "C macros for hash tables and more"
   homepage "https://troydhanson.github.io/uthash/"
-  url "https://ghproxy.com/https://github.com/troydhanson/uthash/archive/refs/tags/v2.3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/troydhanson/uthash/archive/refs/tags/v2.3.0.tar.gz"
   sha256 "e10382ab75518bad8319eb922ad04f907cb20cccb451a3aa980c9d005e661acc"
   license "BSD-1-Clause"
   head "https://github.com/troydhanson/uthash.git", branch: "master"

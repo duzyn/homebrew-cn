@@ -1,7 +1,7 @@
 class Apktool < Formula
   desc "Tool for reverse engineering 3rd party, closed, binary Android apps"
   homepage "https://github.com/iBotPeaches/Apktool"
-  url "https://ghproxy.com/https://github.com/iBotPeaches/Apktool/releases/download/v2.9.0/apktool_2.9.0.jar"
+  url "https://mirror.ghproxy.com/https://github.com/iBotPeaches/Apktool/releases/download/v2.9.0/apktool_2.9.0.jar"
   sha256 "e5ecf759297b845be64a3a5145ccc372db905b15a801a22ea1c91ee03c4c7a65"
   license "Apache-2.0"
 
@@ -18,7 +18,7 @@ class Apktool < Formula
   depends_on "openjdk"
 
   resource "homebrew-test.apk" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/facebook/redex/fa32d542d4074dbd485584413d69ea0c9c3cbc98/test/instr/redex-test.apk"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/facebook/redex/fa32d542d4074dbd485584413d69ea0c9c3cbc98/test/instr/redex-test.apk"
     sha256 "7851cf2a15230ea6ff076639c2273bc4ca4c3d81917d2e13c05edcc4d537cc04"
   end
 

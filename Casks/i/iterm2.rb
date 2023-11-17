@@ -25,7 +25,7 @@ cask "iterm2" do
       # - https://github.com/Homebrew/homebrew-cask/pull/104019
       # - https://github.com/gnachman/iterm2-website/issues/82
       # url "https://iterm2.com/appcasts/final_modern.xml"
-      url "https://ghproxy.com/https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/final_modern.xml"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/final_modern.xml"
       strategy :sparkle
     end
   end

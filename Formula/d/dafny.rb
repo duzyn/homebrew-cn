@@ -1,7 +1,7 @@
 class Dafny < Formula
   desc "Verification-aware programming language"
   homepage "https://github.com/dafny-lang/dafny/blob/master/README.md"
-  url "https://ghproxy.com/https://github.com/dafny-lang/dafny/archive/refs/tags/v4.3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/dafny-lang/dafny/archive/refs/tags/v4.3.0.tar.gz"
   sha256 "f5cb71b3ea0ee0008291cf48540797f62d336f01330e8e519329dcdd1e78ce92"
   license "MIT"
 

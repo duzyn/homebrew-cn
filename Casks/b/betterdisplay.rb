@@ -19,7 +19,7 @@ cask "betterdisplay" do
     end
   end
 
-  url "https://ghproxy.com/https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg",
       verified: "github.com/waydabber/BetterDisplay/"
   name "BetterDisplay"
   desc "Display management tool"

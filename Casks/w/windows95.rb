@@ -6,7 +6,7 @@ cask "windows95" do
   sha256 arm:   "f269b76a0f8454a163053caae3d306ca7dc38d8eedd2bc343c9f363a1a88f02f",
          intel: "574198aa286094be84a1dab896d1a5d23a7f4173ec212bddcad3c9830a36fe31"
 
-  url "https://ghproxy.com/https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-#{arch}-#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-#{arch}-#{version}.zip"
   name "Windows 95"
   desc "Electron Windows 95"
   homepage "https://github.com/felixrieseberg/windows95"

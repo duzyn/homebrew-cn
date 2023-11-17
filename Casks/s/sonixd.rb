@@ -5,7 +5,7 @@ cask "sonixd" do
   sha256 arm:   "3f94302f8ad5a444eea21863c68e4e54305ed1eb15c2789bde92c1daf02baba7",
          intel: "12d5a3f5af551481a4a5ea54bb93b085a4ecd63ff1c3abb3685bf3751030ba2c"
 
-  url "https://ghproxy.com/https://github.com/jeffvli/sonixd/releases/download/v#{version}/Sonixd-#{version}-mac-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/jeffvli/sonixd/releases/download/v#{version}/Sonixd-#{version}-mac-#{arch}.dmg"
   name "Sonixd"
   desc "Desktop client for Subsonic-API and Jellyfin music servers"
   homepage "https://github.com/jeffvli/sonixd"

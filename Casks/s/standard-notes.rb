@@ -5,7 +5,7 @@ cask "standard-notes" do
   sha256 arm:   "3951afbf5c43992110e6746dd671206483fddbaf5ab35a6c0055eddeeef70bcd",
          intel: "8ac5f85525a1bb064f0e5129895e3220aa21117d049c25d577f1aa879893e318"
 
-  url "https://ghproxy.com/https://github.com/standardnotes/app/releases/download/%40standardnotes%2Fdesktop%40#{version}/standard-notes-#{version}-mac-#{arch}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/standardnotes/app/releases/download/%40standardnotes%2Fdesktop%40#{version}/standard-notes-#{version}-mac-#{arch}.zip",
       verified: "github.com/standardnotes/app/"
   name "Standard Notes"
   desc "Free, open-source, and completely encrypted notes app"

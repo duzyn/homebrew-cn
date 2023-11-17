@@ -1,7 +1,7 @@
 class OpenTyrian < Formula
   desc "Open-source port of Tyrian"
   homepage "https://github.com/opentyrian/opentyrian"
-  url "https://ghproxy.com/https://github.com/opentyrian/opentyrian/archive/refs/tags/v2.1.20221123.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/opentyrian/opentyrian/archive/refs/tags/v2.1.20221123.tar.gz"
   sha256 "e0e8a8b0d61de10a3a65789ace9ea8e8c5d8dc67f3e423d2c852d64da38aeeb9"
   license "GPL-2.0-or-later"
   head "https://github.com/opentyrian/opentyrian.git", branch: "master"

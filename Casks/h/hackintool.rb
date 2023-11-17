@@ -2,7 +2,7 @@ cask "hackintool" do
   version "4.0.3"
   sha256 "00af843d9a49e603fad1acba5ea1199927b254a487a9f3a5d04d8d6c3ad8083b"
 
-  url "https://ghproxy.com/https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
+  url "https://mirror.ghproxy.com/https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
   name "Hackintool"
   desc "Hackintosh patching tool"
   homepage "https://github.com/headkaze/Hackintool"

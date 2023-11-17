@@ -1,7 +1,7 @@
 class Fontforge < Formula
   desc "Command-line outline and bitmap font editor/converter"
   homepage "https://fontforge.github.io"
-  url "https://ghproxy.com/https://github.com/fontforge/fontforge/releases/download/20230101/fontforge-20230101.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/fontforge/fontforge/releases/download/20230101/fontforge-20230101.tar.xz"
   sha256 "ca82ec4c060c4dda70ace5478a41b5e7b95eb035fe1c4cf85c48f996d35c60f8"
   license "GPL-3.0-or-later"
   revision 1
@@ -44,7 +44,7 @@ class Fontforge < Formula
   # build patch for po translation files
   # upstream bug report, https://github.com/fontforge/fontforge/issues/5251
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/9403988/fontforge/20230101.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/9403988/fontforge/20230101.patch"
     sha256 "e784c4c0fcf28e5e6c5b099d7540f53436d1be2969898ebacd25654d315c0072"
   end
 
@@ -74,7 +74,7 @@ class Fontforge < Formula
 
   test do
     resource "homebrew-testdata" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/fontforge/fontforge/1346ce6e4c004c312589fdb67e31d4b2c32a1656/tests/fonts/Ambrosia.sfd"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/fontforge/fontforge/1346ce6e4c004c312589fdb67e31d4b2c32a1656/tests/fonts/Ambrosia.sfd"
       sha256 "6a22acf6be4ab9e5c5a3373dc878030b4b8dc4652323395388abe43679ceba81"
     end
 

@@ -1,7 +1,7 @@
 class StoneSoup < Formula
   desc "Dungeon Crawl Stone Soup: a roguelike game"
   homepage "https://crawl.develz.org/"
-  url "https://ghproxy.com/https://github.com/crawl/crawl/archive/refs/tags/0.30.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/crawl/crawl/archive/refs/tags/0.30.1.tar.gz"
   sha256 "f7f793271eab06822b9cb3936da54a1cbe759b471347088a4d76052ac8947597"
   license "GPL-2.0-or-later"
 

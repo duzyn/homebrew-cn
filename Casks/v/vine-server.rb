@@ -2,7 +2,7 @@ cask "vine-server" do
   version "5.3.1"
   sha256 "f3e22c807332df25ce2e37d06ff9552c973d69ee54d2ba9a376358d9d9337af2"
 
-  url "https://ghproxy.com/https://github.com/stweil/OSXvnc/releases/download/V#{version.dots_to_underscores}/VineServer-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/stweil/OSXvnc/releases/download/V#{version.dots_to_underscores}/VineServer-#{version}.dmg"
   name "Vine Server"
   desc "VNC server"
   homepage "https://github.com/stweil/OSXvnc/"

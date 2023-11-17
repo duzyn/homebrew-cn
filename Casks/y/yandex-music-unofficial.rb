@@ -5,7 +5,7 @@ cask "yandex-music-unofficial" do
   sha256 arm:   "dfe7459432eb25870f1e01dc35cb6df10590e0bb7eeb9a1e7a07a644d8ac90a4",
          intel: "8f4aa50707ca5c68896bfec75e989251757fc36452ef0c3fcc73e9a2a6dc46d3"
 
-  url "https://ghproxy.com/https://github.com/juvirez/yandex-music-app/releases/download/v#{version}/Yandex-Music-Unofficial-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/juvirez/yandex-music-app/releases/download/v#{version}/Yandex-Music-Unofficial-#{version}#{arch}.dmg",
       verified: "github.com/juvirez/yandex-music-app/"
   name "Yandex Music Unofficial"
   desc "Unofficial app for Yandex Music"

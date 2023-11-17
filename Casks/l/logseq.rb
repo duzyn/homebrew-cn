@@ -5,7 +5,7 @@ cask "logseq" do
   sha256 arm:   "87923565221da3bc867e1af2252caf4054a8d0e20f7dc1717c3a1221a238f083",
          intel: "08e28ebafa006738c75c0193e02ef44f4004bbc1eb15d3888bcbfa41778c85bc"
 
-  url "https://ghproxy.com/https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-#{arch}-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-#{arch}-#{version}.dmg"
   name "Logseq"
   desc "Privacy-first, open-source platform for knowledge sharing and management"
   homepage "https://github.com/logseq/logseq"

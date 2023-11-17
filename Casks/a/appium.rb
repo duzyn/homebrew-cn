@@ -2,7 +2,7 @@ cask "appium" do
   version "1.22.3-4"
   sha256 "907265e27ba854f4ec66c2fea55ac2f8756264783d69b000d447b841d407e753"
 
-  url "https://ghproxy.com/https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-Server-GUI-mac-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-Server-GUI-mac-#{version}.dmg",
       verified: "github.com/appium/appium-desktop/"
   name "Appium Server Desktop GUI"
   desc "Graphical frontend to Appium automation server"

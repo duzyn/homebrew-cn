@@ -1,7 +1,7 @@
 class Sipsak < Formula
   desc "SIP Swiss army knife"
   homepage "https://github.com/nils-ohlmeier/sipsak/"
-  url "https://ghproxy.com/https://github.com/nils-ohlmeier/sipsak/releases/download/0.9.8.1/sipsak-0.9.8.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nils-ohlmeier/sipsak/releases/download/0.9.8.1/sipsak-0.9.8.1.tar.gz"
   sha256 "c6faa022cd8c002165875d4aac83b7a2b59194f0491802924117fc6ac980c778"
   license "GPL-2.0-or-later"
 

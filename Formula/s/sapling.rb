@@ -1,7 +1,7 @@
 class Sapling < Formula
   desc "Source control client"
   homepage "https://sapling-scm.com"
-  url "https://ghproxy.com/https://github.com/facebook/sapling/archive/refs/tags/0.2.20231113-145254+995db0d6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/facebook/sapling/archive/refs/tags/0.2.20231113-145254+995db0d6.tar.gz"
   version "0.2.20231113-145254-995db0d6"
   sha256 "e927c386336ddd047d36a33d6dfb06286960d9c2a56c843fbb2d5ed1ecaf749a"
   license "GPL-2.0-or-later"

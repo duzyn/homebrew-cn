@@ -5,7 +5,7 @@ cask "snapmaker-luban" do
   sha256 arm:   "4a401b17f5f67a5c16f567b32b880ebe4e3a9e2679396d48e5fbefaa08728c17",
          intel: "ee6dab1e393d65e950250ea53868a5cd6c786fad518eaf9e61d0fcf454dc4a56"
 
-  url "https://ghproxy.com/https://github.com/snapmaker/luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/snapmaker/luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac#{arch}.dmg",
       verified: "github.com/snapmaker/luban/"
   name "Snapmaker Luban"
   desc "3D printing software"

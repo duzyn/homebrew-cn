@@ -8,7 +8,7 @@ cask "coccinellida" do
   homepage "https://coccinellida.sourceforge.net/"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml"
     strategy :sparkle
   end
 

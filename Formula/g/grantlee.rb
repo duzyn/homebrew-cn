@@ -1,7 +1,7 @@
 class Grantlee < Formula
   desc "Libraries for text templating with Qt"
   homepage "https://github.com/steveire/grantlee"
-  url "https://ghproxy.com/https://github.com/steveire/grantlee/releases/download/v5.3.1/grantlee-5.3.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/steveire/grantlee/releases/download/v5.3.1/grantlee-5.3.1.tar.gz"
   sha256 "ba288ae9ed37ec0c3622ceb40ae1f7e1e6b2ea89216ad8587f0863d64be24f06"
   license "LGPL-2.1-or-later"
   head "https://github.com/steveire/grantlee.git", branch: "master"

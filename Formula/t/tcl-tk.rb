@@ -38,7 +38,7 @@ class TclTk < Formula
   conflicts_with "page", because: "both install `page` binaries"
 
   resource "critcl" do
-    url "https://ghproxy.com/https://github.com/andreas-kupries/critcl/archive/refs/tags/3.2.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/andreas-kupries/critcl/archive/refs/tags/3.2.tar.gz"
     sha256 "20061944e28dda4ab2098b8f77682cab77973f8961f6fa60b95bcc09a546789e"
   end
 
@@ -60,14 +60,14 @@ class TclTk < Formula
     # Bugfix for ttk::ThemeChanged errors; will be in Tk 8.6.14
     # See https://core.tcl-lang.org/tk/info/310c74ecf4
     patch :p0 do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/db4f8f774193/x11/tk/files/fix-themechanged-error.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/db4f8f774193/x11/tk/files/fix-themechanged-error.patch"
       sha256 "2a75496dc597dec9d25401ab002f290be74d4acd5566793c5114e75a154c280a"
     end
 
     # Bugfix for KVO crash; will be in Tk 8.6.14
     # See https://core.tcl-lang.org/tk/info/ef5d3e29a4
     patch :p0 do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/6a93695d61d3/x11/tk/files/fix-kvo-crash.diff"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/6a93695d61d3/x11/tk/files/fix-kvo-crash.diff"
       sha256 "ec9a9234b4a326e5621fe78e078c29aa4784b6dc88c59a43d828639ebae0af41"
     end
   end

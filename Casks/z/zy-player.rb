@@ -2,7 +2,7 @@ cask "zy-player" do
   version "2.8.8"
   sha256 "c00d2315d564f800fbb6d67fb3e3620276cfc0669737b20fdbc54d39b87596ab"
 
-  url "https://ghproxy.com/https://github.com/Hunlongyu/ZY-Player/releases/download/v#{version}/ZY-Player-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/Hunlongyu/ZY-Player/releases/download/v#{version}/ZY-Player-#{version}.dmg"
   name "ZY Player"
   desc "Video resource player"
   homepage "https://github.com/Hunlongyu/ZY-Player"

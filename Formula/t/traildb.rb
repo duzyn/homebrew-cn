@@ -1,7 +1,7 @@
 class Traildb < Formula
   desc "Blazingly-fast database for log-structured data"
   homepage "https://traildb.io/"
-  url "https://ghproxy.com/https://github.com/traildb/traildb/archive/refs/tags/0.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/traildb/traildb/archive/refs/tags/0.6.tar.gz"
   sha256 "f73515fe56c547f861296cf8eecc98b8e8bf00d175ad9fb7f4b981ad7cf8b67c"
   license "MIT"
 
@@ -32,7 +32,7 @@ class Traildb < Formula
   # Update waf script for Python 3
   # Use resource instead of patch since applying corrupts waf
   resource "waf" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/traildb/traildb/053ed8e5d0301c792f3ee703cd9936c49ecf41a1/waf"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/traildb/traildb/053ed8e5d0301c792f3ee703cd9936c49ecf41a1/waf"
     sha256 "2e0cf83a63843da127610420cef1d3126f1187d8e572b6b3a28052fc2250d4bf"
   end
 

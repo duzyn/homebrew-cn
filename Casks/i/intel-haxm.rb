@@ -2,7 +2,7 @@ cask "intel-haxm" do
   version "7.8.0"
   sha256 "44059b3ad33de87562ecd7a6c5a003dce96aa51506667752601467af7b328c29"
 
-  url "https://ghproxy.com/https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
   name "Intel HAXM"
   desc "Hardware-assisted virtualization engine (hypervisor)"
   homepage "https://github.com/intel/haxm"

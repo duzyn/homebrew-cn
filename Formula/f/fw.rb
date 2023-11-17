@@ -1,7 +1,7 @@
 class Fw < Formula
   desc "Workspace productivity booster"
   homepage "https://github.com/brocode/fw"
-  url "https://ghproxy.com/https://github.com/brocode/fw/archive/refs/tags/v2.18.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/brocode/fw/archive/refs/tags/v2.18.0.tar.gz"
   sha256 "44ccad2e630b6d8dd46475af957213b49b8062789a25d75f1e1c62feb56a0a6b"
   license "WTFPL"
 
@@ -30,7 +30,7 @@ class Fw < Formula
   uses_from_macos "zlib"
 
   resource "fw.1" do
-    url "https://ghproxy.com/https://github.com/brocode/fw/releases/download/v2.18.0/fw.1"
+    url "https://mirror.ghproxy.com/https://github.com/brocode/fw/releases/download/v2.18.0/fw.1"
     sha256 "b19e2ccb837e4210d7ee8bb7a33b7c967a5734e52c6d050cc716490cac061470"
   end
 

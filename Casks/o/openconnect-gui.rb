@@ -2,7 +2,7 @@ cask "openconnect-gui" do
   version "1.5.3"
   sha256 "b4e5c8618cb327cd3ba612a25976d7df7b49f612669f90488d8c680e32f8f61f"
 
-  url "https://ghproxy.com/https://github.com/openconnect/openconnect-gui/releases/download/v#{version}/openconnect-gui-#{version}.high_sierra.bottle.tar.gz",
+  url "https://mirror.ghproxy.com/https://github.com/openconnect/openconnect-gui/releases/download/v#{version}/openconnect-gui-#{version}.high_sierra.bottle.tar.gz",
       verified: "github.com/openconnect/openconnect-gui/"
   name "OpenConnect-GUI"
   desc "GitLab mirror - Graphical OpenConnect client (beta phase)"

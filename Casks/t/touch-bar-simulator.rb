@@ -3,7 +3,7 @@ cask "touch-bar-simulator" do
     version "1.2.0"
     sha256 "4abe55de716ae56a41031cdb1d3b27bf6b1efae18b33b80bb0419669a9a76aa1"
 
-    url "https://ghproxy.com/https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch-Bar-Simulator-#{version}.dmg"
+    url "https://mirror.ghproxy.com/https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch-Bar-Simulator-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"
@@ -13,7 +13,7 @@ cask "touch-bar-simulator" do
     version "3.2.0"
     sha256 "bdfaf740392bddb3e9b281a30efab27e03638d3428ba555650dca517153c13c6"
 
-    url "https://ghproxy.com/https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
+    url "https://mirror.ghproxy.com/https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
 
     livecheck do
       skip "Legacy version"
@@ -23,7 +23,7 @@ cask "touch-bar-simulator" do
     version "4.2.0"
     sha256 "7af139d541a8d2875d76aa46ef4074496d07ef49d2aec27467d8879aac903d43"
 
-    url "https://ghproxy.com/https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
+    url "https://mirror.ghproxy.com/https://github.com/sindresorhus/touch-bar-simulator/releases/download/v#{version}/Touch.Bar.Simulator.#{version}.dmg"
   end
 
   name "Touch Bar Simulator"

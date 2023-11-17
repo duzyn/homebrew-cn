@@ -2,7 +2,7 @@ cask "protege" do
   version "5.6.3"
   sha256 "c525aec3022feb83b389314114d095061570617f85359cc8a085a65d6e28773f"
 
-  url "https://ghproxy.com/https://github.com/protegeproject/protege-distribution/releases/download/protege-#{version}/Protege-#{version}-mac.zip",
+  url "https://mirror.ghproxy.com/https://github.com/protegeproject/protege-distribution/releases/download/protege-#{version}/Protege-#{version}-mac.zip",
       verified: "github.com/protegeproject/protege-distribution/"
   name "Protégé"
   desc "Ontology editor"

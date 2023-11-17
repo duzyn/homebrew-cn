@@ -1,7 +1,7 @@
 class Seqkit < Formula
   desc "Cross-platform and ultrafast toolkit for FASTA/Q file manipulation in Golang"
   homepage "https://bioinf.shenwei.me/seqkit"
-  url "https://ghproxy.com/https://github.com/shenwei356/seqkit/archive/refs/tags/v2.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/shenwei356/seqkit/archive/refs/tags/v2.6.0.tar.gz"
   sha256 "2b0ca71f07a2b1e8c2341169148348708497a24fcbe76b888a4a641c09f00383"
   license "MIT"
   head "https://github.com/shenwei356/seqkit.git", branch: "master"
@@ -19,7 +19,7 @@ class Seqkit < Formula
   depends_on "go" => :build
 
   resource "homebrew-testdata" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/shenwei356/seqkit/e37d70a7e0ca0e53d6dbd576bd70decac32aba64/tests/seqs4amplicon.fa"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/shenwei356/seqkit/e37d70a7e0ca0e53d6dbd576bd70decac32aba64/tests/seqs4amplicon.fa"
     sha256 "b0f09da63e3c677cc698d5cdff60e2d246368263c22385937169a9a4c321178a"
   end
 

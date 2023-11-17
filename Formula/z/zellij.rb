@@ -1,7 +1,7 @@
 class Zellij < Formula
   desc "Pluggable terminal workspace, with terminal multiplexer as the base feature"
   homepage "https://zellij.dev"
-  url "https://ghproxy.com/https://github.com/zellij-org/zellij/archive/refs/tags/v0.39.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/zellij-org/zellij/archive/refs/tags/v0.39.1.tar.gz"
   sha256 "4b2f00ea3aec0d36a8e764d33d521b09de936e3c94594536ccd348457e108e14"
   license "MIT"
 

@@ -2,7 +2,7 @@ cask "opencore-patcher" do
   version "1.2.1"
   sha256 "5cce74eed9f489f10968d3088e690085bcd6bc718508f9df3e9973967146508e"
 
-  url "https://ghproxy.com/https://github.com/dortania/OpenCore-Legacy-Patcher/releases/download/#{version}/OpenCore-Patcher-GUI.app.zip",
+  url "https://mirror.ghproxy.com/https://github.com/dortania/OpenCore-Legacy-Patcher/releases/download/#{version}/OpenCore-Patcher-GUI.app.zip",
       verified: "github.com/dortania/OpenCore-Legacy-Patcher/"
   name "OpenCore Legacy Patcher GUI"
   desc "Boot loader to inject/patch current features for unsupported Macs"

@@ -1,7 +1,7 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://ghproxy.com/https://github.com/dolthub/dolt/archive/refs/tags/v1.27.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/dolthub/dolt/archive/refs/tags/v1.27.0.tar.gz"
   sha256 "8e5a646d5818e023b66814193a7d1b738522fcef9e4769bdf88d7193e0dfd273"
   license "Apache-2.0"
 

@@ -1,7 +1,7 @@
 class CargoBinutils < Formula
   desc "Cargo subcommands to invoke the LLVM tools shipped with the Rust toolchain"
   homepage "https://github.com/rust-embedded/cargo-binutils"
-  url "https://ghproxy.com/https://github.com/rust-embedded/cargo-binutils/archive/refs/tags/v0.3.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rust-embedded/cargo-binutils/archive/refs/tags/v0.3.6.tar.gz"
   sha256 "431fb12a47fafcb7047d41bdf4a4c9b77bea56856e0ef65c12c40f5fcb15f98f"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/rust-embedded/cargo-binutils.git", branch: "master"

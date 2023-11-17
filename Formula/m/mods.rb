@@ -1,7 +1,7 @@
 class Mods < Formula
   desc "AI on the command-line"
   homepage "https://github.com/charmbracelet/mods"
-  url "https://ghproxy.com/https://github.com/charmbracelet/mods/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/charmbracelet/mods/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "7272c4062095c63e6c8a2cc3b5233bf9261a027237512123c073c2128284e6d0"
   license "MIT"
 

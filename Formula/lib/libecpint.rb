@@ -1,7 +1,7 @@
 class Libecpint < Formula
   desc "Library for the efficient evaluation of integrals over effective core potentials"
   homepage "https://github.com/robashaw/libecpint"
-  url "https://ghproxy.com/https://github.com/robashaw/libecpint/archive/refs/tags/v1.0.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/robashaw/libecpint/archive/refs/tags/v1.0.7.tar.gz"
   sha256 "e9c60fddb2614f113ab59ec620799d961db73979845e6e637c4a6fb72aee51cc"
   license "MIT"
 
@@ -19,13 +19,15 @@ class Libecpint < Formula
   depends_on "cmake" => :build
   depends_on "libcerf"
   depends_on "pugixml"
-  depends_on "python@3.12"
+
+  uses_from_macos "python" => :build
 
   def install
     args = [
       "-DBUILD_SHARED_LIBS=ON",
       "-DLIBECPINT_USE_CERF=ON",
       "-DLIBECPINT_BUILD_TESTS=OFF",
+      "-DPython_EXECUTABLE=#{which("python3") || which("python")}",
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args

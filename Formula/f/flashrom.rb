@@ -35,7 +35,7 @@ class Flashrom < Formula
   end
 
   resource "DirectHW" do
-    url "https://ghproxy.com/https://github.com/PureDarwin/DirectHW/archive/refs/tags/DirectHW-1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/PureDarwin/DirectHW/archive/refs/tags/DirectHW-1.tar.gz"
     sha256 "14cc45a1a2c1a543717b1de0892c196534137db177413b9b85bedbe15cbe4563"
   end
 

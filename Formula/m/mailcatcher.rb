@@ -1,7 +1,7 @@
 class Mailcatcher < Formula
   desc "Catches mail and serves it through a dream"
   homepage "https://mailcatcher.me"
-  url "https://ghproxy.com/https://github.com/sj26/mailcatcher/archive/refs/tags/v0.9.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sj26/mailcatcher/archive/refs/tags/v0.9.0.tar.gz"
   sha256 "6f6651035bf09357ca50cccf2ce4874e30e56563006219b8bf7b663e12ccaecf"
   license "MIT"
 

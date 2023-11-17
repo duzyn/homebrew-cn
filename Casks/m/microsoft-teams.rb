@@ -1,6 +1,6 @@
 cask "microsoft-teams" do
-  version "23285.3806.2513.4535"
-  sha256 "795970834a0b9b99a522bca78c713164f2585c936d48884b8662b5bb8d6bb651"
+  version "23285.3809.2525.961"
+  sha256 "52fcf3c8edb5152aa44bed3c952dcacbcd44589856f5bd57be5b0b39ea532de0"
 
   url "https://statics.teams.cdn.office.net/production-osx/#{version}/MicrosoftTeams.pkg",
       verified: "statics.teams.cdn.office.net/production-osx/"
@@ -9,9 +9,9 @@ cask "microsoft-teams" do
   homepage "https://www.microsoft.com/en/microsoft-teams/group-chat-software/"
 
   # Microsoft releases multiple versions and builds of Teams, as listed here:
-  #   https://ghproxy.com/https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
+  #   https://mirror.ghproxy.com/https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
   # and here:
-  #   https://ghproxy.com/https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
+  #   https://mirror.ghproxy.com/https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
   #
   # We only track the "production build"/"Public (R4) build" version,
   # which agrees with the version reported by `livecheck`.

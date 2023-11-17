@@ -1,7 +1,7 @@
 class Cloog < Formula
   desc "Generate code for scanning Z-polyhedra"
   homepage "https://github.com/periscop/cloog"
-  url "https://ghproxy.com/https://github.com/periscop/cloog/releases/download/cloog-0.21.1/cloog-0.21.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/periscop/cloog/releases/download/cloog-0.21.1/cloog-0.21.1.tar.gz"
   sha256 "d370cf9990d2be24bfb24750e355bac26110051248cabf2add61f9b3867fb1d7"
   license "LGPL-2.1-or-later"
 

@@ -1,7 +1,7 @@
 class Mp3fs < Formula
   desc "Read-only FUSE file system: transcodes audio formats to MP3"
   homepage "https://khenriks.github.io/mp3fs/"
-  url "https://ghproxy.com/https://github.com/khenriks/mp3fs/releases/download/v1.1.1/mp3fs-1.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/khenriks/mp3fs/releases/download/v1.1.1/mp3fs-1.1.1.tar.gz"
   sha256 "942b588fb623ea58ce8cac8844e6ff2829ad4bc9b4c163bba58e3fa9ebc15608"
   license "GPL-3.0-or-later"
   revision 3

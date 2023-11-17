@@ -1,7 +1,7 @@
 class Premake < Formula
   desc "Write once, build anywhere Lua-based build system"
   homepage "https://premake.github.io/"
-  url "https://ghproxy.com/https://github.com/premake/premake-core/releases/download/v5.0.0-beta2/premake-5.0.0-beta2-src.zip"
+  url "https://mirror.ghproxy.com/https://github.com/premake/premake-core/releases/download/v5.0.0-beta2/premake-5.0.0-beta2-src.zip"
   sha256 "4c1100f5170ae1c3bd1b4fd9458b3b02ae841aefbfc41514887b80996436dee2"
   license "BSD-3-Clause"
   version_scheme 1

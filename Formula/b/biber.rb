@@ -1,7 +1,7 @@
 class Biber < Formula
   desc "Backend processor for BibLaTeX"
   homepage "https://sourceforge.net/projects/biblatex-biber/"
-  url "https://ghproxy.com/https://github.com/plk/biber/archive/refs/tags/v2.19.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/plk/biber/archive/refs/tags/v2.19.tar.gz"
   sha256 "1c1266bc8adb1637c4c59e23c47d919c5a38da4e53544a3c22c21de4a68fc9fe"
   license "Artistic-2.0"
   revision 2

@@ -2,7 +2,7 @@ cask "mixin" do
   version "1.0.1"
   sha256 "b5d78b0314f477da34639fece8121a11bcc08a8381f3424a732a66c0f524927d"
 
-  url "https://ghproxy.com/https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg"
   name "Mixin Messenger Desktop"
   desc "Cryptocurrency wallet"
   homepage "https://github.com/MixinNetwork/flutter-app"

@@ -13,7 +13,7 @@ class Rust < Formula
     # When bumping to a new version, check if we can use unversioned `libgit2`.
     # See comments below for details.
     resource "cargo" do
-      url "https://ghproxy.com/https://github.com/rust-lang/cargo/archive/refs/tags/0.73.1.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/rust-lang/cargo/archive/refs/tags/0.73.1.tar.gz"
       sha256 "976fb6f3e773319e60875772478645297d9eacc852857e288e8cec65399d2c88"
     end
   end

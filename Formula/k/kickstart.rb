@@ -1,7 +1,7 @@
 class Kickstart < Formula
   desc "Scaffolding tool to get new projects up and running quickly"
   homepage "https://github.com/Keats/kickstart"
-  url "https://ghproxy.com/https://github.com/Keats/kickstart/archive/refs/tags/v0.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Keats/kickstart/archive/refs/tags/v0.4.0.tar.gz"
   sha256 "5aae308d7d6aa021ddf7f5dc882f8199a5d4f4db8cb8f7175c1c1ac831075a8c"
   license "MIT"
 

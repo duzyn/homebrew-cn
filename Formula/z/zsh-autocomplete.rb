@@ -1,7 +1,7 @@
 class ZshAutocomplete < Formula
   desc "Real-time type-ahead completion for Zsh"
   homepage "https://github.com/marlonrichert/zsh-autocomplete"
-  url "https://ghproxy.com/https://github.com/marlonrichert/zsh-autocomplete/archive/refs/tags/23.07.13.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/marlonrichert/zsh-autocomplete/archive/refs/tags/23.07.13.tar.gz"
   sha256 "97bd8061b7eb2abb87045ebb00abc2568a9367f296fc27ec3e636fcf07ff8f78"
   license "MIT"
   head "https://github.com/marlonrichert/zsh-autocomplete.git", branch: "main"

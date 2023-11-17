@@ -1,7 +1,7 @@
 class Sleuthkit < Formula
   desc "Forensic toolkit"
   homepage "https://www.sleuthkit.org/"
-  url "https://ghproxy.com/https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.12.1/sleuthkit-4.12.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.12.1/sleuthkit-4.12.1.tar.gz"
   sha256 "6b2de0baabc6a38429a33993114ca3820329b477d5038cbf45fcf69fca8addfd"
   license all_of: ["IPL-1.0", "CPL-1.0", "GPL-2.0-or-later"]
 

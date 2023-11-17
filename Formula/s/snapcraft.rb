@@ -3,7 +3,7 @@ class Snapcraft < Formula
 
   desc "Package any app for every Linux desktop, server, cloud or device"
   homepage "https://snapcraft.io/"
-  url "https://ghproxy.com/https://github.com/snapcore/snapcraft/archive/refs/tags/7.5.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/snapcore/snapcraft/archive/refs/tags/7.5.3.tar.gz"
   sha256 "3dd5cc59a2cb56e647e7906af7e2c9c01493d19c91132a8d0208a930449db650"
   license "GPL-3.0-only"
 

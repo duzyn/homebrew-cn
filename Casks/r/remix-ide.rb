@@ -2,7 +2,7 @@ cask "remix-ide" do
   version "1.3.6"
   sha256 "a4a0d81e06f99f5721864afbf587b273a61d19b2d6e690a015dff2bf681039a4"
 
-  url "https://ghproxy.com/https://github.com/ethereum/remix-desktop/releases/download/v#{version}/Remix-IDE-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/ethereum/remix-desktop/releases/download/v#{version}/Remix-IDE-#{version}.dmg",
       verified: "github.com/ethereum/remix-desktop/"
   name "Remix IDE desktop"
   desc "Desktop version of Remix web IDE used for Ethereum smart contract development"

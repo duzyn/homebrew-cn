@@ -1,7 +1,7 @@
 class Kallisto < Formula
   desc "Quantify abundances of transcripts from RNA-Seq data"
   homepage "https://pachterlab.github.io/kallisto/"
-  url "https://ghproxy.com/https://github.com/pachterlab/kallisto/archive/refs/tags/v0.50.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/pachterlab/kallisto/archive/refs/tags/v0.50.1.tar.gz"
   sha256 "030752bab3b0e33cd3f23f6d8feddd74194e5513532ffbf23519e84db2a86d34"
   license "BSD-2-Clause"
 

@@ -5,7 +5,7 @@ cask "tagspaces" do
   sha256 arm:   "f7fce5743cf765833b6877b4341f26d4d38a640a98a9b93372d7785165f37ea9",
          intel: "6af6906e3ec479371ca770fabb15e6fe642f69ad6dcf90f470c1a44856fa5ffd"
 
-  url "https://ghproxy.com/https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{arch}-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{arch}-#{version}.dmg",
       verified: "github.com/tagspaces/tagspaces/"
   name "TagSpaces"
   desc "Offline, open-source, document manager with tagging support"

@@ -1,7 +1,7 @@
 class Hcloud < Formula
   desc "Command-line interface for Hetzner Cloud"
   homepage "https://github.com/hetznercloud/cli"
-  url "https://ghproxy.com/https://github.com/hetznercloud/cli/archive/refs/tags/v1.40.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/hetznercloud/cli/archive/refs/tags/v1.40.0.tar.gz"
   sha256 "74d65f21e1d123bf30a3a4ad4cfa517c241dd56af559b3f88433b97c2a8b26aa"
   license "MIT"
 

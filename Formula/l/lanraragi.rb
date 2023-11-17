@@ -7,7 +7,7 @@ class Lanraragi < Formula
   head "https://github.com/Difegue/LANraragi.git", branch: "dev"
 
   stable do
-    url "https://ghproxy.com/https://github.com/Difegue/LANraragi/archive/refs/tags/v.0.9.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/Difegue/LANraragi/archive/refs/tags/v.0.9.0.tar.gz"
     sha256 "76390a12c049216c708b522372a7eed9f2fcf8f8d462af107d881dbb1ce3a79f"
 
     # patch for `Can't load application from file ".../lanraragi": Can't open file "oshino"`
@@ -46,7 +46,7 @@ class Lanraragi < Formula
 
   resource "libarchive-headers" do
     on_macos do
-      url "https://ghproxy.com/https://github.com/apple-oss-distributions/libarchive/archive/refs/tags/libarchive-121.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/libarchive/archive/refs/tags/libarchive-121.tar.gz"
       sha256 "f38736ffdbf9005726bdc126e68ff34ddaee25326ae51d58e4385de717bc773f"
     end
   end

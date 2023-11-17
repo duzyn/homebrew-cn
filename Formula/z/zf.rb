@@ -1,7 +1,7 @@
 class Zf < Formula
   desc "Command-line fuzzy finder that prioritizes matches on filenames"
   homepage "https://github.com/natecraddock/zf"
-  url "https://ghproxy.com/https://github.com/natecraddock/zf/archive/refs/tags/0.9.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/natecraddock/zf/archive/refs/tags/0.9.0.tar.gz"
   sha256 "a40caf5b9ed2c45a703b10d214f513cfc004489330db8202d3834ba9c824ee92"
   license "MIT"
   head "https://github.com/natecraddock/zf.git", branch: "master"

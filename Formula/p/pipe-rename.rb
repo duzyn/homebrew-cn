@@ -1,7 +1,7 @@
 class PipeRename < Formula
   desc "Rename your files using your favorite text editor"
   homepage "https://github.com/marcusbuffett/pipe-rename"
-  url "https://ghproxy.com/https://github.com/marcusbuffett/pipe-rename/archive/refs/tags/1.6.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/marcusbuffett/pipe-rename/archive/refs/tags/1.6.5.tar.gz"
   sha256 "41edf419ab3d7b3c16d2efe209b3ca3d3f7104a3365f61fe821a59caac31810b"
   license "MIT"
   head "https://github.com/marcusbuffett/pipe-rename.git", branch: "master"

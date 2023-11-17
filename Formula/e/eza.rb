@@ -1,7 +1,7 @@
 class Eza < Formula
   desc "Modern, maintained replacement for ls"
   homepage "https://github.com/eza-community/eza"
-  url "https://ghproxy.com/https://github.com/eza-community/eza/archive/refs/tags/v0.16.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/eza-community/eza/archive/refs/tags/v0.16.0.tar.gz"
   sha256 "611692d82618f29cfea3834fcd16a5b5e96bd14eefe0939180a2479892a88d09"
   license "MIT"
 

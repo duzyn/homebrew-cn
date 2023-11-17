@@ -3,7 +3,7 @@ class Klee < Formula
 
   desc "Symbolic Execution Engine"
   homepage "https://klee.github.io/"
-  url "https://ghproxy.com/https://github.com/klee/klee/archive/refs/tags/v3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/klee/klee/archive/refs/tags/v3.0.tar.gz"
   sha256 "204ebf0cb739886f574b1190b04fa9ed9088770c0634984782e9633d1aa4bdc9"
   license "NCSA"
   revision 1
@@ -34,7 +34,7 @@ class Klee < Formula
 
   # klee needs a version of libc++ compiled with wllvm
   resource "libcxx" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/llvm-project-14.0.6.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/llvm-project-14.0.6.src.tar.xz"
     sha256 "8b3cfd7bc695bd6cea0f37f53f0981f34f87496e79e2529874fd03a2f9dd3a8a"
   end
 

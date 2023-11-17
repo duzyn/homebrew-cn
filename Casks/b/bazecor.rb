@@ -5,7 +5,7 @@ cask "bazecor" do
   sha256 arm:   "be172afb426247c982c818223351515b55937e3730b8ac94f6811ed5404796a9",
          intel: "1f0e35e9739fc9f6dd4b5282834077dbafd6ff2581445c2e70247c30a6961b3e"
 
-  url "https://ghproxy.com/https://github.com/Dygmalab/Bazecor/releases/download/v.#{version}/Bazecor-#{version}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Dygmalab/Bazecor/releases/download/v.#{version}/Bazecor-#{version}-#{arch}.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
   name "Bazecor"
   desc "Graphical configurator for Dygma Raise keyboards"

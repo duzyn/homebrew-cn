@@ -1,7 +1,7 @@
 class Flac123 < Formula
   desc "Command-line program for playing FLAC audio files"
   homepage "https://github.com/flac123/flac123"
-  url "https://ghproxy.com/https://github.com/flac123/flac123/archive/refs/tags/v2.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/flac123/flac123/archive/refs/tags/v2.1.1.tar.gz"
   sha256 "c09676dce51383ce4fe7a553e67f4369918cf40ee6d922e585e50c11bce9e227"
   license "GPL-2.0-or-later"
 

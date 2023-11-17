@@ -1,7 +1,7 @@
 class Geogram < Formula
   desc "Programming library of geometric algorithms"
   homepage "https://brunolevy.github.io/geogram/"
-  url "https://ghproxy.com/https://github.com/BrunoLevy/geogram/releases/download/v1.8.6/geogram_1.8.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/BrunoLevy/geogram/releases/download/v1.8.6/geogram_1.8.6.tar.gz"
   sha256 "5ea85ae4756a0f6028d33fbe44a71074c6549ad31be5e6750cc24456b7cd5331"
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
   head "https://github.com/BrunoLevy/geogram.git", branch: "main"
@@ -45,7 +45,7 @@ class Geogram < Formula
 
   test do
     resource "homebrew-bunny" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/FreeCAD/Examples/be0b4f9/Point_cloud_ExampleFiles/PointCloud-Data_Stanford-Bunny.asc"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/FreeCAD/Examples/be0b4f9/Point_cloud_ExampleFiles/PointCloud-Data_Stanford-Bunny.asc"
       sha256 "4fc5496098f4f4aa106a280c24255075940656004c6ef34b3bf3c78989cbad08"
     end
 

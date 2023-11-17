@@ -2,7 +2,7 @@ cask "dust3d" do
   version "1.0.0-rc.9"
   sha256 "9d2a251f26bcdcbe671677d48743f0c617be63c78f5c9291bd5b45e0dbb49a7f"
 
-  url "https://ghproxy.com/https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
       verified: "github.com/huxingyi/dust3d/"
   name "Dust3D"
   desc "Open-source 3D modeling software"

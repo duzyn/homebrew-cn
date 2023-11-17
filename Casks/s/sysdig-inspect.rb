@@ -2,7 +2,7 @@ cask "sysdig-inspect" do
   version "0.9.0"
   sha256 "be0c56bd2eaa751b0babaf5f8947b57bd278ed2447caab9e75634606cb3465e3"
 
-  url "https://ghproxy.com/https://github.com/draios/sysdig-inspect/releases/download/#{version}/sysdig-inspect-mac-x86_64.zip"
+  url "https://mirror.ghproxy.com/https://github.com/draios/sysdig-inspect/releases/download/#{version}/sysdig-inspect-mac-x86_64.zip"
   name "Sysdig Inspect"
   desc "Interface for container troubleshooting and security investigation"
   homepage "https://github.com/draios/sysdig-inspect"

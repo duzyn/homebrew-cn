@@ -1,7 +1,7 @@
 class Libversion < Formula
   desc "Advanced version string comparison library"
   homepage "https://github.com/repology/libversion"
-  url "https://ghproxy.com/https://github.com/repology/libversion/archive/refs/tags/3.0.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/repology/libversion/archive/refs/tags/3.0.3.tar.gz"
   sha256 "bb49d745a0c8e692007af6d928046d1ab6b9189f8dbba834cdf3c1d251c94a1d"
   license "MIT"
 

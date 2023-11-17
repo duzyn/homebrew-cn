@@ -2,7 +2,7 @@ cask "goxel" do
   version "0.12.0"
   sha256 "2a98f6eb441a10209ac9e4e99650afdeebc6dd5d54de39929b79f15b4cbc6e2f"
 
-  url "https://ghproxy.com/https://github.com/guillaumechereau/goxel/releases/download/v#{version}/goxel-#{version}-mac.zip",
+  url "https://mirror.ghproxy.com/https://github.com/guillaumechereau/goxel/releases/download/v#{version}/goxel-#{version}-mac.zip",
       verified: "github.com/guillaumechereau/goxel/"
   name "Goxel"
   desc "Open Source Voxel Editor"

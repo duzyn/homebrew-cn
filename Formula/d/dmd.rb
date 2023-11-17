@@ -5,11 +5,11 @@ class Dmd < Formula
 
   stable do
     # make sure resources also use the same version
-    url "https://ghproxy.com/https://github.com/dlang/dmd/archive/refs/tags/v2.105.3.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/dlang/dmd/archive/refs/tags/v2.105.3.tar.gz"
     sha256 "6798ad0cbcadf4aa7c13338061dc64e6213dd34d6ad84d05d43ee77a7380dad5"
 
     resource "phobos" do
-      url "https://ghproxy.com/https://github.com/dlang/phobos/archive/refs/tags/v2.105.3.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/dlang/phobos/archive/refs/tags/v2.105.3.tar.gz"
       sha256 "9ea51cd0d4908a5826d0cb240e214912a2f6ca829561959865a1edef2326943d"
     end
   end

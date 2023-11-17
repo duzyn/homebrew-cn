@@ -5,7 +5,7 @@ cask "vscodium" do
   sha256 arm:   "6c5d8e2de9ef01285da949b413d51a57d352f904d7ca11f6a3033355f2830bb2",
          intel: "8e298715d915cafe4c564332b97efe509ca6d201d6c8badc92a9e9ff18a8ce52"
 
-  url "https://ghproxy.com/https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"

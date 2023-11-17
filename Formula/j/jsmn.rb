@@ -1,7 +1,7 @@
 class Jsmn < Formula
   desc "World fastest JSON parser/tokenizer"
   homepage "https://zserge.com/jsmn/"
-  url "https://ghproxy.com/https://github.com/zserge/jsmn/archive/refs/tags/v1.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/zserge/jsmn/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "5f0913a10657fe7ec8d5794ccf00a01000e3e1f2f1e1f143c34a0f7b47edcb38"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Libwpe < Formula
   desc "General-purpose library for WPE WebKit"
   homepage "https://wpewebkit.org/"
-  url "https://ghproxy.com/https://github.com/WebPlatformForEmbedded/libwpe/releases/download/1.14.1/libwpe-1.14.1.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/WebPlatformForEmbedded/libwpe/releases/download/1.14.1/libwpe-1.14.1.tar.xz"
   sha256 "b1d0cdcf0f8dbb494e65b0f7913e357106da9a0d57f4fbb7b9d1238a6dbe9ade"
   license "BSD-2-Clause"
   head "https://github.com/WebPlatformForEmbedded/libwpe.git", branch: "master"

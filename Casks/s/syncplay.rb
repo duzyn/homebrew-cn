@@ -2,7 +2,7 @@ cask "syncplay" do
   version "1.7.0"
   sha256 "7b5955ed604966cc67e44e5f91b27b9d07cf3c373a459844bfd9a289f805eb65"
 
-  url "https://ghproxy.com/https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
       verified: "github.com/Syncplay/syncplay/"
   name "Syncplay"
   desc "Synchronises media players"

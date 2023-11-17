@@ -1,7 +1,7 @@
 class Liblbfgs < Formula
   desc "C library for limited-memory BFGS optimization algorithm"
   homepage "https://www.chokkan.org/software/liblbfgs"
-  url "https://ghproxy.com/https://github.com/chokkan/liblbfgs/archive/refs/tags/v1.10.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/chokkan/liblbfgs/archive/refs/tags/v1.10.tar.gz"
   sha256 "95c1997e6c215c58738f5f723ca225d64c8070056081a23d636160ff2169bd2f"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class GetIplayer < Formula
   desc "Utility for downloading TV and radio programmes from BBC iPlayer"
   homepage "https://github.com/get-iplayer/get_iplayer"
-  url "https://ghproxy.com/https://github.com/get-iplayer/get_iplayer/archive/refs/tags/v3.34.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/get-iplayer/get_iplayer/archive/refs/tags/v3.34.tar.gz"
   sha256 "72128a0edd731c1b1d932108b3c47c74f93e17ca99915f5c769767344f339be8"
   license "GPL-3.0-or-later"
   head "https://github.com/get-iplayer/get_iplayer.git", branch: "develop"

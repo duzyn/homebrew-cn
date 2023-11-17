@@ -5,7 +5,7 @@ class Lcov < Formula
 
   desc "Graphical front-end for GCC's coverage testing tool (gcov)"
   homepage "https://github.com/linux-test-project/lcov"
-  url "https://ghproxy.com/https://github.com/linux-test-project/lcov/releases/download/v2.0/lcov-2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/linux-test-project/lcov/releases/download/v2.0/lcov-2.0.tar.gz"
   sha256 "1857bb18e27abe8bcec701a907d5c47e01db4d4c512fc098d1a6acd29267bf46"
   license "GPL-2.0-or-later"
   head "https://github.com/linux-test-project/lcov.git", branch: "master"

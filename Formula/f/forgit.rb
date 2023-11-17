@@ -1,7 +1,7 @@
 class Forgit < Formula
   desc "Interactive git commands in the terminal"
   homepage "https://github.com/wfxr/forgit"
-  url "https://ghproxy.com/https://github.com/wfxr/forgit/releases/download/23.09.0/forgit-23.09.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/wfxr/forgit/releases/download/23.09.0/forgit-23.09.0.tar.gz"
   sha256 "258c3211542933c11f7b7f521d4a2ab79dda35580627ef7083195d3bbce0a4b2"
   license "MIT"
 

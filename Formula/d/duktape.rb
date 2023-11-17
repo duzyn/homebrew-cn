@@ -1,7 +1,7 @@
 class Duktape < Formula
   desc "Embeddable Javascript engine with compact footprint"
   homepage "https://duktape.org"
-  url "https://ghproxy.com/https://github.com/svaarala/duktape/releases/download/v2.7.0/duktape-2.7.0.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/svaarala/duktape/releases/download/v2.7.0/duktape-2.7.0.tar.xz"
   sha256 "90f8d2fa8b5567c6899830ddef2c03f3c27960b11aca222fa17aa7ac613c2890"
   license "MIT"
 

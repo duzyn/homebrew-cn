@@ -3,7 +3,7 @@ require "language/node"
 class ImageoptimCli < Formula
   desc "CLI for ImageOptim, ImageAlpha and JPEGmini"
   homepage "https://jamiemason.github.io/ImageOptim-CLI/"
-  url "https://ghproxy.com/https://github.com/JamieMason/ImageOptim-CLI/archive/refs/tags/3.1.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/JamieMason/ImageOptim-CLI/archive/refs/tags/3.1.9.tar.gz"
   sha256 "35aee4c380d332355d9f17c97396e626eea6a2e83f9777cc9171f699e2887b33"
   license "MIT"
 
@@ -18,7 +18,7 @@ class ImageoptimCli < Formula
     sha256 cellar: :any_skip_relocation, monterey: "24737964fe1dd7d2af554e33db1f31a3128e675954e256dc054ca435ebe518c6"
   end
 
-  depends_on "node@18" => :build
+  depends_on "node" => :build
   depends_on "yarn" => :build
   depends_on arch: :x86_64 # Installs pre-built x86-64 binaries
   depends_on :macos

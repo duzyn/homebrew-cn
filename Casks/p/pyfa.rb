@@ -2,7 +2,7 @@ cask "pyfa" do
   version "2.55.0"
   sha256 "7ffa3bed69901944730ed6a8afd232b809775460eeaef0214e38dedca00dbbec"
 
-  url "https://ghproxy.com/https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-v#{version}-mac.zip"
+  url "https://mirror.ghproxy.com/https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-v#{version}-mac.zip"
   name "pyfa"
   desc "Fitting tool for EVE Online"
   homepage "https://github.com/pyfa-org/Pyfa"

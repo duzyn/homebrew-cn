@@ -2,7 +2,7 @@ cask "vallum" do
   version "4.1.3"
   sha256 "b22934ea092f06cd4261f5508c230ac4a0a920a9c7fd8ca1f14ebf8e66818114"
 
-  url "https://ghproxy.com/https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
   name "Vallum"
   desc "Application firewall"

@@ -3,7 +3,7 @@ class Pgxnclient < Formula
 
   desc "Command-line client for the PostgreSQL Extension Network"
   homepage "https://pgxn.github.io/pgxnclient/"
-  url "https://ghproxy.com/https://github.com/pgxn/pgxnclient/archive/refs/tags/v1.3.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/pgxn/pgxnclient/archive/refs/tags/v1.3.2.tar.gz"
   sha256 "0d02a91364346811ce4dbbfc2f543356dac559e4222a3131018c6570d32e592a"
   license "BSD-3-Clause"
   revision 1

@@ -2,7 +2,7 @@ cask "swish" do
   version "1.10.2"
   sha256 "4032e4a6afe429f4e745328400950eb01e0f998291a07055cc9df9d1c4a6bce7"
 
-  url "https://ghproxy.com/https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.dmg",
       verified: "github.com/chrenn/swish-dl/"
   name "Swish"
   desc "Control windows and applications right from your trackpad"

@@ -2,7 +2,7 @@ cask "webtorrent" do
   version "0.24.0"
   sha256 "9cf28d0f0ef74d793cca5a0fee0d7195a11c055b4a6c118cea295c308a3bfd9d"
 
-  url "https://ghproxy.com/https://github.com/webtorrent/webtorrent-desktop/releases/download/v#{version}/WebTorrent-v#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/webtorrent/webtorrent-desktop/releases/download/v#{version}/WebTorrent-v#{version}.dmg",
       verified: "github.com/webtorrent/webtorrent-desktop/"
   name "WebTorrent Desktop"
   desc "Torrent streaming application"

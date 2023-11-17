@@ -2,7 +2,7 @@ cask "klogg" do
   version "22.06.0.1289"
   sha256 "e5df7722d0d851852dd9cc3449dd42d1fef3e74edda8c20dc04b38cb852b0fec"
 
-  url "https://ghproxy.com/https://github.com/variar/klogg/releases/download/v#{version.major_minor}/klogg-#{version}-OSX-Qt5.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/variar/klogg/releases/download/v#{version.major_minor}/klogg-#{version}-OSX-Qt5.dmg"
   name "Klogg"
   desc "Fast, advanced log explorer"
   homepage "https://github.com/variar/klogg"

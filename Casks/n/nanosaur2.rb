@@ -2,7 +2,7 @@ cask "nanosaur2" do
   version "2.1.0"
   sha256 "c2f81e0ac2b73f845d92a13d19b7fc6b83da8761d6453c2b8a34e2e2cfe1674b"
 
-  url "https://ghproxy.com/https://github.com/jorio/Nanosaur2/releases/download/v#{version}/Nanosaur2-#{version}-mac.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/jorio/Nanosaur2/releases/download/v#{version}/Nanosaur2-#{version}-mac.dmg",
       verified: "github.com/jorio/Nanosaur2/"
   name "Nanosaur II: Hatchling"
   desc "Dinosaur 3rd person shooter game sequel from Pangea Software"

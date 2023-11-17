@@ -1,7 +1,7 @@
 class Ttdl < Formula
   desc "Terminal Todo List Manager"
   homepage "https://github.com/VladimirMarkelov/ttdl"
-  url "https://ghproxy.com/https://github.com/VladimirMarkelov/ttdl/archive/refs/tags/v4.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/VladimirMarkelov/ttdl/archive/refs/tags/v4.1.0.tar.gz"
   sha256 "2372e084a3245cdc5d33ca4862668be278e0ee0b25a1481ced94df803c1db669"
   license "MIT"
 

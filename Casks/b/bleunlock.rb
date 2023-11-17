@@ -2,7 +2,7 @@ cask "bleunlock" do
   version "1.12.1"
   sha256 "d9847b2f540393bb2a18dc5be6929021c7499c383d12a198ee9f9e9ffada5f6b"
 
-  url "https://ghproxy.com/https://github.com/ts1/BLEUnlock/releases/download/#{version}/BLEUnlock-#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/ts1/BLEUnlock/releases/download/#{version}/BLEUnlock-#{version}.zip"
   name "BLEUnlock"
   desc "Lock/unlock Apple computers using the proximity of a bluetooth low energy device"
   homepage "https://github.com/ts1/BLEUnlock"

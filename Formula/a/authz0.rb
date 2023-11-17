@@ -1,7 +1,7 @@
 class Authz0 < Formula
   desc "Automated authorization test tool"
   homepage "https://authz0.hahwul.com/"
-  url "https://ghproxy.com/https://github.com/hahwul/authz0/archive/refs/tags/v1.1.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/hahwul/authz0/archive/refs/tags/v1.1.2.tar.gz"
   sha256 "b62d61846f3c1559dbffb6707f943ad6c4a5d4d519119b3c21954b8cd2a11a16"
   license "MIT"
   head "https://github.com/hahwul/authz0.git", branch: "main"

@@ -2,7 +2,7 @@ cask "osxfuse" do
   version "3.11.2"
   sha256 "0f9fd021810063ded2f9a40347e11961369238af27615842063831568a0860ce"
 
-  url "https://ghproxy.com/https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/osxfuse/osxfuse/releases/download/osxfuse-#{version}/osxfuse-#{version}.dmg",
       verified: "github.com/osxfuse/"
   name "OSXFUSE"
   desc "File system integration"

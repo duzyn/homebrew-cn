@@ -24,8 +24,8 @@ cask "calibre" do
     end
   end
   on_big_sur :or_newer do
-    version "6.29.0"
-    sha256 "2f76428ae19617875c5725cd892751a80eb2acdda76e06cd19c2f21a63966998"
+    version "7.0.0"
+    sha256 "884061bce0df80085b4a9ce60da1f63530040f615804eb8cf499718a2e314a8e"
 
     livecheck do
       url "https://github.com/kovidgoyal/calibre"
@@ -33,7 +33,7 @@ cask "calibre" do
     end
   end
 
-  url "https://ghproxy.com/https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"

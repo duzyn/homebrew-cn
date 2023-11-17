@@ -1,7 +1,7 @@
 class ProcyonDecompiler < Formula
   desc "Modern decompiler for Java 5 and beyond"
   homepage "https://github.com/mstrobel/procyon"
-  url "https://ghproxy.com/https://github.com/mstrobel/procyon/releases/download/v0.6.0/procyon-decompiler-0.6.0.jar"
+  url "https://mirror.ghproxy.com/https://github.com/mstrobel/procyon/releases/download/v0.6.0/procyon-decompiler-0.6.0.jar"
   sha256 "821da96012fc69244fa1ea298c90455ee4e021434bc796d3b9546ab24601b779"
   license "Apache-2.0"
 

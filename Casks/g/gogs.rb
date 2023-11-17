@@ -5,7 +5,7 @@ cask "gogs" do
   sha256 arm:   "f279ff28c951f084c6c0e05e1c602edb5e6d959007b52cb3826b281815f703a2",
          intel: "185fe50d2feb3fd84e470aa65011e7e2506da4ea8a0ce938b0b61ee4bf809509"
 
-  url "https://ghproxy.com/https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_#{arch}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_#{arch}.zip",
       verified: "github.com/gogs/gogs/"
   name "Go Git Service"
   desc "Self-hosted Git service"

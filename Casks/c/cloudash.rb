@@ -2,7 +2,7 @@ cask "cloudash" do
   version "1.22.0"
   sha256 "f9956be889126f8ea8143f241b1c0b4beb119404fda59b61cb3b59f56fc88470"
 
-  url "https://ghproxy.com/https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}.dmg",
       verified: "github.com/cloudashdev/cloudash/"
   name "cloudash"
   desc "Monitoring and troubleshooting for serverless architectures"

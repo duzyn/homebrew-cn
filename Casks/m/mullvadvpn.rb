@@ -2,7 +2,7 @@ cask "mullvadvpn" do
   version "2023.5"
   sha256 "1f345da489c2a9c47c056c58a89ee49dbf40c0ae6f6ffa7268e78fbd23667bd8"
 
-  url "https://ghproxy.com/https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
       verified: "github.com/mullvad/mullvadvpn-app/"
   name "Mullvad VPN"
   desc "VPN client"

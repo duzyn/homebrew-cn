@@ -1,7 +1,7 @@
 class Hex < Formula
   desc "Futuristic take on hexdump"
   homepage "https://github.com/sitkevij/hex"
-  url "https://ghproxy.com/https://github.com/sitkevij/hex/archive/refs/tags/v0.4.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sitkevij/hex/archive/refs/tags/v0.4.2.tar.gz"
   sha256 "a7cc1ece337fc19e77fbbbca145001bc5d447bde4118eb6de2c99407eb1a3b74"
   license "MIT"
   head "https://github.com/sitkevij/hex.git", branch: "master"

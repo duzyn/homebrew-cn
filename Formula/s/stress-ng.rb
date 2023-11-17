@@ -1,7 +1,7 @@
 class StressNg < Formula
   desc "Stress test a computer system in various selectable ways"
   homepage "https://wiki.ubuntu.com/Kernel/Reference/stress-ng"
-  url "https://ghproxy.com/https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.17.01.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.17.01.tar.gz"
   sha256 "b628409c1934bd4f0ac4b390a5253d383ffb8f962931379c7fb9bb2852ffcbe9"
   license "GPL-2.0-or-later"
 

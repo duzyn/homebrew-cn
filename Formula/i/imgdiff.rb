@@ -1,7 +1,7 @@
 class Imgdiff < Formula
   desc "Pixel-by-pixel image difference tool"
   homepage "https://github.com/n7olkachev/imgdiff"
-  url "https://ghproxy.com/https://github.com/n7olkachev/imgdiff/archive/refs/tags/v1.0.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/n7olkachev/imgdiff/archive/refs/tags/v1.0.2.tar.gz"
   sha256 "e057fffbf9960caf90d69387d6bc52e4c59637d75b6ee19cbc40d8a3238877e4"
   license "MIT"
   head "https://github.com/n7olkachev/imgdiff.git", branch: "master"

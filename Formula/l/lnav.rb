@@ -1,7 +1,7 @@
 class Lnav < Formula
   desc "Curses-based tool for viewing and analyzing log files"
   homepage "https://lnav.org/"
-  url "https://ghproxy.com/https://github.com/tstack/lnav/releases/download/v0.11.2/lnav-0.11.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tstack/lnav/releases/download/v0.11.2/lnav-0.11.2.tar.gz"
   sha256 "3aae3b0cc3dbcf877ecaf7d92bb73867f1aa8c5ad46bd30163dcd6d787c57864"
   license "BSD-2-Clause"
   revision 1

@@ -1,7 +1,7 @@
 class Gebug < Formula
   desc "Debug Dockerized Go applications better"
   homepage "https://github.com/moshebe/gebug"
-  url "https://ghproxy.com/https://github.com/moshebe/gebug/archive/refs/tags/v1.0.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/moshebe/gebug/archive/refs/tags/v1.0.7.tar.gz"
   sha256 "3dac2b9b1f9a3d5fa8c19fceb7f77ea8ce003504239a2744bfc3c492b96a2e56"
   license "Apache-2.0"
   head "https://github.com/moshebe/gebug.git", branch: "master"

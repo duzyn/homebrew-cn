@@ -2,7 +2,7 @@ cask "barrier" do
   version "2.4.0"
   sha256 "af938d17dcea5701da7a990705acbd0686dfedfdbcd64721666ae0bef7644ba9"
 
-  url "https://ghproxy.com/https://github.com/debauchee/barrier/releases/download/v#{version}/Barrier-#{version}-Release.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/debauchee/barrier/releases/download/v#{version}/Barrier-#{version}-Release.dmg"
   name "Barrier"
   desc "Open-source KVM software"
   homepage "https://github.com/debauchee/barrier/"

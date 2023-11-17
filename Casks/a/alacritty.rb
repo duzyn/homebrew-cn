@@ -2,7 +2,7 @@ cask "alacritty" do
   version "0.12.3"
   sha256 "7fc3220a3ad93ab2e555d2a9724506fc314ca4beaa81ce16e43cb3e9c06f1a93"
 
-  url "https://ghproxy.com/https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   name "Alacritty"
   desc "GPU-accelerated terminal emulator"
   homepage "https://github.com/alacritty/alacritty/"

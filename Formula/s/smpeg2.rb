@@ -3,7 +3,7 @@ class Smpeg2 < Formula
   homepage "https://icculus.org/smpeg/"
   # license change was done in 2021 Aug, which is 8 years after 2.0.0 release
   # commit ref, https://github.com/icculus/smpeg/commit/ffa0d54
-  url "https://ghproxy.com/https://github.com/icculus/smpeg/archive/refs/tags/release_2_0_0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/icculus/smpeg/archive/refs/tags/release_2_0_0.tar.gz"
   sha256 "fdd431bd607efcf0f35789fb3105d7535d4f0e8b46e673e9c0051726e8d1e701"
   license "LGPL-2.0-or-later"
   head "https://github.com/icculus/smpeg.git", branch: "main"

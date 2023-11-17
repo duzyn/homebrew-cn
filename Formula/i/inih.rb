@@ -1,7 +1,7 @@
 class Inih < Formula
   desc "Simple .INI file parser in C"
   homepage "https://github.com/benhoyt/inih"
-  url "https://ghproxy.com/https://github.com/benhoyt/inih/archive/refs/tags/r57.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/benhoyt/inih/archive/refs/tags/r57.tar.gz"
   sha256 "f03f98ca35c3adb56b2358573c8d3eda319ccd5287243d691e724b7eafa970b3"
   license "BSD-3-Clause"
 

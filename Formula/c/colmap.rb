@@ -1,7 +1,7 @@
 class Colmap < Formula
   desc "Structure-from-Motion and Multi-View Stereo"
   homepage "https://colmap.github.io/"
-  url "https://ghproxy.com/https://github.com/colmap/colmap/archive/refs/tags/3.8.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/colmap/colmap/archive/refs/tags/3.8.tar.gz"
   sha256 "02288f8f61692fe38049d65608ed832b31246e7792692376afb712fa4cef8775"
   license "BSD-3-Clause"
 

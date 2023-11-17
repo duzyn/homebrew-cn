@@ -1,7 +1,7 @@
 class Biome < Formula
   desc "Toolchain of the web"
   homepage "https://biomejs.dev/"
-  url "https://ghproxy.com/https://github.com/biomejs/biome/archive/refs/tags/cli/v1.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/biomejs/biome/archive/refs/tags/cli/v1.3.3.tar.gz"
   sha256 "bed6b68b0f256efbbf072c26d451e33923e4ceadb02032fe51683f98177038c0"
   license "MIT"
   head "https://github.com/biomejs/biome.git", branch: "main"

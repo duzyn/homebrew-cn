@@ -1,7 +1,7 @@
 class Pwnat < Formula
   desc "Proxy server that works behind a NAT"
   homepage "https://samy.pl/pwnat/"
-  url "https://ghproxy.com/https://github.com/samyk/pwnat/archive/refs/tags/v0.3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/samyk/pwnat/archive/refs/tags/v0.3.0.tar.gz"
   sha256 "c784ac0ef2249ae5b314a95ff5049f16c253c1f9b3720f3f88c50fc811140b44"
   license "GPL-3.0-or-later"
   head "https://github.com/samyk/pwnat.git", branch: "master"

@@ -1,7 +1,7 @@
 class Sdl2Net < Formula
   desc "Small sample cross-platform networking library"
   homepage "https://github.com/libsdl-org/SDL_net"
-  url "https://ghproxy.com/https://github.com/libsdl-org/SDL_net/releases/download/release-2.2.0/SDL2_net-2.2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libsdl-org/SDL_net/releases/download/release-2.2.0/SDL2_net-2.2.0.tar.gz"
   sha256 "4e4a891988316271974ff4e9585ed1ef729a123d22c08bd473129179dc857feb"
   license "Zlib"
 

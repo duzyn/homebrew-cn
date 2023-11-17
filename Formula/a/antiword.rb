@@ -31,7 +31,7 @@ class Antiword < Formula
   # deprecate! date: "2023-09-24", because: :unmaintained
 
   resource "testdoc.doc" do
-    url "https://ghproxy.com/https://github.com/rsdoiel/antiword/raw/fe4b579067122a2d9d62647efb1ee7cfe3ca92bb/Docs/testdoc.doc"
+    url "https://mirror.ghproxy.com/https://github.com/rsdoiel/antiword/raw/fe4b579067122a2d9d62647efb1ee7cfe3ca92bb/Docs/testdoc.doc"
     sha256 "4ea5fe94a8ff9d8cd1e21a5e233efb681f2026de48ab1ac2cbaabdb953ca25ac"
   end
 

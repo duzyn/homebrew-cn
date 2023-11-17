@@ -28,7 +28,7 @@ class Pixman < Formula
   # Fix NEON intrinsic support build issue
   # upstream PR ref, https://gitlab.freedesktop.org/pixman/pixman/-/merge_requests/71
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/46c7779/pixman/pixman-0.42.2.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/46c7779/pixman/pixman-0.42.2.patch"
     sha256 "391b56552ead4b3c6e75c0a482a6ab6a634ca250c00fb67b11899d16575f0686"
   end
 

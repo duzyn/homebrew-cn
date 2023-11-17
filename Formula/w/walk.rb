@@ -1,7 +1,7 @@
 class Walk < Formula
   desc "Terminal navigator"
   homepage "https://github.com/antonmedv/walk"
-  url "https://ghproxy.com/https://github.com/antonmedv/walk/archive/refs/tags/v1.7.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/antonmedv/walk/archive/refs/tags/v1.7.0.tar.gz"
   sha256 "b657523d637727cfa408040e9816f45ae868c5192fb3962c32a0edab9d9b00dd"
   license "MIT"
 

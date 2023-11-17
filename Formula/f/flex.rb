@@ -5,12 +5,12 @@ class Flex < Formula
   revision 2
 
   stable do
-    url "https://ghproxy.com/https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz"
     sha256 "e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
       sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
     end
   end

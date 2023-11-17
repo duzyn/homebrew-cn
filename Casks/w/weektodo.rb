@@ -2,7 +2,7 @@ cask "weektodo" do
   version "2.1.0"
   sha256 "e4bb9e10ac0434f0c0c6d9ec757ad0bec8e49a1d7a8b862b1b72a294ac9cf930"
 
-  url "https://ghproxy.com/https://github.com/Zuntek/WeekToDoWeb/releases/download/v#{version}/WeekToDo-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Zuntek/WeekToDoWeb/releases/download/v#{version}/WeekToDo-#{version}.dmg",
       verified: "github.com/Zuntek/WeekToDoWeb/"
   name "WeekToDo"
   desc "Weekly planner app focused on privacy"

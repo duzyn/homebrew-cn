@@ -22,12 +22,12 @@ class SpectralCli < Formula
   depends_on "node"
 
   resource "homebrew-petstore.yaml" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/OAI/OpenAPI-Specification/b12acf0c/examples/v3.0/petstore.yaml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/OAI/OpenAPI-Specification/b12acf0c/examples/v3.0/petstore.yaml"
     sha256 "7dc119919441597e2b24335d8c8f6d01f1f0b895637f79b35e3863a3c2df9ddf"
   end
 
   resource "homebrew-streetlights-mqtt.yml" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/asyncapi/spec/1824379b/examples/streetlights-mqtt.yml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/asyncapi/spec/1824379b/examples/streetlights-mqtt.yml"
     sha256 "7e17c9b465437a5a12decd93be49e37ca7ecfc48ff6f10e830d8290e9865d3af"
   end
 

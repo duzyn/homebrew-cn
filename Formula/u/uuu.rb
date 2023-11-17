@@ -1,7 +1,7 @@
 class Uuu < Formula
   desc "Universal Update Utility, mfgtools 3.0. NXP I.MX Chip image deploy tools"
   homepage "https://github.com/nxp-imx/mfgtools"
-  url "https://ghproxy.com/https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.125/uuu_source-uuu_1.5.125.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.125/uuu_source-uuu_1.5.125.tar.gz"
   sha256 "085d7f6308ee6b77dfb131fac40704575525adf6da45cdc446c00a0b29e4c21a"
   license "BSD-3-Clause"
   head "https://github.com/nxp-imx/mfgtools.git", branch: "master"

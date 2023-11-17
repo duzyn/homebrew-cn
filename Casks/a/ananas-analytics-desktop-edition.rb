@@ -2,7 +2,7 @@ cask "ananas-analytics-desktop-edition" do
   version "0.9.0"
   sha256 "cb4a73521d5f5ffb97405b3c7e041f73fd5044ab1ffe1ff6e967c0fb1555dec3"
 
-  url "https://ghproxy.com/https://github.com/ananas-analytics/ananas-desktop/releases/download/v#{version}/Ananas.Analytics.Desktop.Edition-#{version}.macos.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/ananas-analytics/ananas-desktop/releases/download/v#{version}/Ananas.Analytics.Desktop.Edition-#{version}.macos.dmg",
       verified: "github.com/ananas-analytics/ananas-desktop/"
   name "Ananas Analytics Desktop Edition"
   desc "Hackable data integration & analysis tool"

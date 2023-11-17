@@ -1,7 +1,7 @@
 class Duc < Formula
   desc "Suite of tools for inspecting disk usage"
   homepage "https://duc.zevv.nl/"
-  url "https://ghproxy.com/https://github.com/zevv/duc/releases/download/1.4.5/duc-1.4.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/zevv/duc/releases/download/1.4.5/duc-1.4.5.tar.gz"
   sha256 "c69512ca85b443e42ffbb4026eedd5492307af612047afb9c469df923b468bfd"
   license "LGPL-3.0"
   head "https://github.com/zevv/duc.git", branch: "master"

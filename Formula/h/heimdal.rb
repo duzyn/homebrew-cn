@@ -1,7 +1,7 @@
 class Heimdal < Formula
   desc "Free Kerberos 5 implementation"
   homepage "https://www.h5l.org"
-  url "https://ghproxy.com/https://github.com/heimdal/heimdal/releases/download/heimdal-7.8.0/heimdal-7.8.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/heimdal/heimdal/releases/download/heimdal-7.8.0/heimdal-7.8.0.tar.gz"
   sha256 "fd87a207846fa650fd377219adc4b8a8193e55904d8a752c2c3715b4155d8d38"
   license "BSD-3-Clause"
   revision 1

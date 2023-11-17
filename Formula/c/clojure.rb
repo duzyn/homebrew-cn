@@ -1,14 +1,14 @@
 class Clojure < Formula
   desc "Dynamic, general-purpose programming language"
   homepage "https://clojure.org"
-  url "https://ghproxy.com/https://github.com/clojure/brew-install/releases/download/1.11.1.1413/clojure-tools-1.11.1.1413.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/clojure/brew-install/releases/download/1.11.1.1413/clojure-tools-1.11.1.1413.tar.gz"
   mirror "https://download.clojure.org/install/clojure-tools-1.11.1.1413.tar.gz"
   sha256 "93c3a5a3adca51c5858063419abf66c83dbf24ea15e1fd92f79bf7e662381fe0"
   license "EPL-1.0"
   version_scheme 1
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/clojure/homebrew-tools/master/Formula/clojure.rb"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/clojure/homebrew-tools/master/Formula/clojure.rb"
     regex(/url ".*?clojure-tools-v?(\d+(?:\.\d+)+)\.t/i)
   end
 

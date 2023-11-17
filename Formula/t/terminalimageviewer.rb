@@ -1,7 +1,7 @@
 class Terminalimageviewer < Formula
   desc "Display images in a terminal using block graphic characters"
   homepage "https://github.com/stefanhaustein/TerminalImageViewer"
-  url "https://ghproxy.com/https://github.com/stefanhaustein/TerminalImageViewer/archive/refs/tags/v.1.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/stefanhaustein/TerminalImageViewer/archive/refs/tags/v.1.2.tar.gz"
   sha256 "6807ab4986b3893e97e8ee0eb59f02d93ff74a3994bf524d7747ac80b827184b"
   license "Apache-2.0"
   head "https://github.com/stefanhaustein/TerminalImageViewer.git", branch: "master"

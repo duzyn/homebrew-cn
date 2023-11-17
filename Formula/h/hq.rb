@@ -1,7 +1,7 @@
 class Hq < Formula
   desc "Jq, but for HTML"
   homepage "https://github.com/orf/html-query"
-  url "https://ghproxy.com/https://github.com/orf/html-query/archive/refs/tags/html-query-v1.2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/orf/html-query/archive/refs/tags/html-query-v1.2.1.tar.gz"
   sha256 "db6c574acc701f337285839e1f7a3a6e30267fd0ba69733a9a74e637b827bcdb"
   license "MIT"
 

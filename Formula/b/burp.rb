@@ -5,11 +5,11 @@ class Burp < Formula
   revision 1
 
   stable do
-    url "https://ghproxy.com/https://github.com/grke/burp/releases/download/2.4.0/burp-2.4.0.tar.bz2"
+    url "https://mirror.ghproxy.com/https://github.com/grke/burp/releases/download/2.4.0/burp-2.4.0.tar.bz2"
     sha256 "1f88d325f59c6191908d13ac764db5ee56b478fbea30244ae839383b9f9d2832"
 
     resource "uthash" do
-      url "https://ghproxy.com/https://github.com/troydhanson/uthash/archive/refs/tags/v2.3.0.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/troydhanson/uthash/archive/refs/tags/v2.3.0.tar.gz"
       sha256 "e10382ab75518bad8319eb922ad04f907cb20cccb451a3aa980c9d005e661acc"
     end
   end

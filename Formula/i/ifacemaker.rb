@@ -1,7 +1,7 @@
 class Ifacemaker < Formula
   desc "Generate interfaces from structure methods"
   homepage "https://github.com/vburenin/ifacemaker"
-  url "https://ghproxy.com/https://github.com/vburenin/ifacemaker/archive/refs/tags/v1.2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/vburenin/ifacemaker/archive/refs/tags/v1.2.1.tar.gz"
   sha256 "3bbe9d742995ca5804da15f0f01ed85ff5d68b6b3e22b04c1491492eb703aa54"
   license "Apache-2.0"
   head "https://github.com/vburenin/ifacemaker.git", branch: "master"

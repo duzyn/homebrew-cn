@@ -1,7 +1,7 @@
 class Votca < Formula
   desc "Versatile Object-oriented Toolkit for Coarse-graining Applications"
   homepage "https://www.votca.org/"
-  url "https://ghproxy.com/https://github.com/votca/votca/archive/refs/tags/v2023.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/votca/votca/archive/refs/tags/v2023.tar.gz"
   sha256 "ac78d2eb5a6694b76878d2ab1ec86bb161765143a447cc23905cdcb2bb6743be"
   license "Apache-2.0"
 

@@ -3,7 +3,7 @@ class Gnuradio < Formula
 
   desc "SDK for signal processing blocks to implement software radios"
   homepage "https://gnuradio.org/"
-  url "https://ghproxy.com/https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.10.7.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gnuradio/gnuradio/archive/refs/tags/v3.10.7.0.tar.gz"
   sha256 "55156650ada130600c70bc2ab38eee718fc1d23011be548471e888399f207ddc"
   license "GPL-3.0-or-later"
   revision 3
@@ -72,7 +72,7 @@ class Gnuradio < Formula
 
   # pygccxml only published a .whl file on PyPi
   resource "pygccxml" do
-    url "https://ghproxy.com/https://github.com/CastXML/pygccxml/archive/refs/tags/v2.2.1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/CastXML/pygccxml/archive/refs/tags/v2.2.1.tar.gz"
     sha256 "9815a12e3bf6b83b2e9d8c88335fb3fa0e2b4067d7fbaaed09c3bf26c6206cc7"
   end
 

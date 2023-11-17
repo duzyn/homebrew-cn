@@ -2,7 +2,7 @@ class Metals < Formula
   desc "Scala language server"
   homepage "https://github.com/scalameta/metals"
   # TODO: Check if we can use unversioned `openjdk` (or `openjdk@21`) at version bump.
-  url "https://ghproxy.com/https://github.com/scalameta/metals/archive/refs/tags/v1.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/scalameta/metals/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "267cb6c3b1fcd4dd73e001d8daf889f56cd6e9f507d48ab5e619d2fba842d882"
   license "Apache-2.0"
 

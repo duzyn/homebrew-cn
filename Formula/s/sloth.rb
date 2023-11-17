@@ -1,7 +1,7 @@
 class Sloth < Formula
   desc "Prometheus SLO generator"
   homepage "https://sloth.dev/"
-  url "https://ghproxy.com/https://github.com/slok/sloth/archive/refs/tags/v0.11.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/slok/sloth/archive/refs/tags/v0.11.0.tar.gz"
   sha256 "17f7ce5ebc1ebe29391b0848616c2a9881f70cd72780605db55cfd817a8331af"
   license "Apache-2.0"
   head "https://github.com/slok/sloth.git", branch: "main"

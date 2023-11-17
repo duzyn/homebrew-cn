@@ -2,7 +2,7 @@ cask "tad" do
   version "0.13.0"
   sha256 "4c71f6f6a0fadf65891663d1a0462dd8d3576a4c62bdd8721012cbdd61ee1fee"
 
-  url "https://ghproxy.com/https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg",
       verified: "github.com/antonycourtney/tad/"
   name "Tad"
   desc "Desktop application for viewing and analyzing tabular data"

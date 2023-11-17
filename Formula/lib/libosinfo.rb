@@ -36,7 +36,7 @@ class Libosinfo < Formula
   uses_from_macos "libxslt"
 
   resource "pci.ids" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/pciutils/pciids/fd7d37fcca8edc95f174382a9a5a29c368f26acf/pci.ids"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/pciutils/pciids/fd7d37fcca8edc95f174382a9a5a29c368f26acf/pci.ids"
     sha256 "3ed78330ac32d8cba9a90831f88654c30346b9705c9befb013424e274d2f3fbf"
   end
 

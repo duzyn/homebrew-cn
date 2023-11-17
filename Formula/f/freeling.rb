@@ -1,7 +1,7 @@
 class Freeling < Formula
   desc "Suite of language analyzers"
   homepage "https://nlp.lsi.upc.edu/freeling/"
-  url "https://ghproxy.com/https://github.com/TALP-UPC/FreeLing/releases/download/4.2/FreeLing-src-4.2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/TALP-UPC/FreeLing/releases/download/4.2/FreeLing-src-4.2.1.tar.gz"
   sha256 "c672a6379142ac2e872741e7662f17eccd8230bffc680564d2843d87480f1600"
   license "AGPL-3.0-only"
   revision 1

@@ -1,7 +1,7 @@
 class Clamav < Formula
   desc "Anti-virus software"
   homepage "https://www.clamav.net/"
-  url "https://ghproxy.com/https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.2.1/clamav-1.2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.2.1/clamav-1.2.1.tar.gz"
   mirror "https://www.clamav.net/downloads/production/clamav-1.2.1.tar.gz"
   sha256 "9a14fe870cbb8f5f79f668b789dca0f25cc6be22abe32f4f7d3677e4ee3935b0"
   license "GPL-2.0-or-later"

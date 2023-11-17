@@ -1,7 +1,7 @@
 class Libswiftnav < Formula
   desc "C library implementing GNSS related functions and algorithms"
   homepage "https://github.com/swift-nav/libswiftnav"
-  url "https://ghproxy.com/https://github.com/swift-nav/libswiftnav/archive/refs/tags/v2.4.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/swift-nav/libswiftnav/archive/refs/tags/v2.4.2.tar.gz"
   sha256 "9dfe4ce4b4da28ffdb71acad261eef4dd98ad79daee4c1776e93b6f1765fccfa"
   license "LGPL-3.0-only"
 
@@ -30,7 +30,7 @@ class Libswiftnav < Formula
   # (e.g., https://github.com/swift-nav/libswiftnav/tree/v2.4.2/cmake)
   # to identify the referenced commit hash in the swift-nav/cmake repository.
   resource "swift-nav/cmake" do
-    url "https://ghproxy.com/https://github.com/swift-nav/cmake/archive/fd8c86b87d2b18261691ef8db1f6fd9906911b82.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/swift-nav/cmake/archive/fd8c86b87d2b18261691ef8db1f6fd9906911b82.tar.gz"
     sha256 "7b6995bcc97d001cfe5c4741a8fa3637bc4dc2c3460b908585aef5e7af268798"
   end
 

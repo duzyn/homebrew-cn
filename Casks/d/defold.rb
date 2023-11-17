@@ -4,7 +4,7 @@ cask "defold" do
   version "1.6.1"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://ghproxy.com/https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
       verified: "github.com/defold/defold/"
   name "Defold"
   desc "Game engine for development of desktop, mobile and web games"

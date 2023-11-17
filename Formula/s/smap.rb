@@ -1,7 +1,7 @@
 class Smap < Formula
   desc "Drop-in replacement for Nmap powered by shodan.io"
   homepage "https://github.com/s0md3v/Smap"
-  url "https://ghproxy.com/https://github.com/s0md3v/Smap/archive/refs/tags/0.1.12.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/s0md3v/Smap/archive/refs/tags/0.1.12.tar.gz"
   sha256 "870838dc01cbf2a018db8bbdee2ac439e4666e131d1f014843fc5b6994c33049"
   license "AGPL-3.0-or-later"
   head "https://github.com/s0md3v/Smap.git", branch: "main"

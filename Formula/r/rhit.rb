@@ -1,7 +1,7 @@
 class Rhit < Formula
   desc "Nginx log explorer"
   homepage "https://dystroy.org/rhit/"
-  url "https://ghproxy.com/https://github.com/Canop/rhit/archive/refs/tags/v2.0.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Canop/rhit/archive/refs/tags/v2.0.1.tar.gz"
   sha256 "b01b7207ca819e741b635e7751bbf9074c9eb9e97f0483c31e560f5e709a53b0"
   license "MIT"
   head "https://github.com/Canop/rhit.git", branch: "main"
@@ -21,7 +21,7 @@ class Rhit < Formula
   depends_on "rust" => :build
 
   resource "homebrew-testdata" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Canop/rhit/c78d63b/test-data/access.log"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Canop/rhit/c78d63b/test-data/access.log"
     sha256 "e9ec07d6c7267ec326aa3f28a02a8140215c2c769ac2fe51b6294152644165eb"
   end
 

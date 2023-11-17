@@ -1,7 +1,7 @@
 class Cmake < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
-  url "https://ghproxy.com/https://github.com/Kitware/CMake/releases/download/v3.27.8/cmake-3.27.8.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Kitware/CMake/releases/download/v3.27.8/cmake-3.27.8.tar.gz"
   mirror "http://fresh-center.net/linux/misc/cmake-3.27.8.tar.gz"
   mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.27.8.tar.gz"
   sha256 "fece24563f697870fbb982ea8bf17482c9d5f855d8c9bf0b82463d76c9e8d0cc"

@@ -2,7 +2,7 @@ cask "raze" do
   version "1.8.1"
   sha256 "32ca4c208bae098e5045acc5fc6caa91336b2713d96a0dc95ce6b7f682804b86"
 
-  url "https://ghproxy.com/https://github.com/coelckers/Raze/releases/download/#{version}/raze-macos-#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/coelckers/Raze/releases/download/#{version}/raze-macos-#{version}.zip"
   name "Raze"
   desc "Build engine port backed by GZDoom tech"
   homepage "https://github.com/coelckers/Raze"

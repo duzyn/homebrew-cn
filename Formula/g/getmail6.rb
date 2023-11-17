@@ -3,7 +3,7 @@ class Getmail6 < Formula
 
   desc "Extensible mail retrieval system with POP3, IMAP4, SSL support"
   homepage "https://getmail6.org/"
-  url "https://ghproxy.com/https://github.com/getmail6/getmail6/archive/refs/tags/v6.18.13.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/getmail6/getmail6/archive/refs/tags/v6.18.13.tar.gz"
   sha256 "977a8fbf63494b6278c30f225c7bfbc7cbdfdffddbd2f29fcd887dfb6ce0d509"
   license "GPL-2.0-only"
 

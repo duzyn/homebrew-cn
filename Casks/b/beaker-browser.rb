@@ -2,7 +2,7 @@ cask "beaker-browser" do
   version "1.1.0"
   sha256 "c88718c6ec1f7cbb70f33e3ac04f0d2117ab5b7907d9fa0529cd8b70f13df0e2"
 
-  url "https://ghproxy.com/https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg",
       verified: "github.com/beakerbrowser/beaker/"
   name "Beaker Browser"
   name "Beaker"

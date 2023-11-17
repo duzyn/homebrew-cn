@@ -5,7 +5,7 @@ cask "dynobase" do
   sha256 arm:   "04e02e4df46e40d5fef4f20fdd9bf67b7eb1cdf173235d79baa302471af44a83",
          intel: "23da601ad1256ffbb9ec409173fac7b6b720651529e12369ce6ae4ab5ce94158"
 
-  url "https://ghproxy.com/https://github.com/Dynobase/dynobase/releases/download/v#{version.csv.third}/Dynobase.#{version.csv.first}.-.Build.#{version.csv.second}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Dynobase/dynobase/releases/download/v#{version.csv.third}/Dynobase.#{version.csv.first}.-.Build.#{version.csv.second}-#{arch}.dmg",
       verified: "github.com/Dynobase/dynobase/"
   name "Dynobase"
   desc "GUI Client for DynamoDB"

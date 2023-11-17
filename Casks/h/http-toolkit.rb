@@ -2,7 +2,7 @@ cask "http-toolkit" do
   version "1.14.7"
   sha256 "87f7b15319d0393650035461a2e7be1f5c7873fa83f680fdc59290dda911ae89"
 
-  url "https://ghproxy.com/https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v#{version}/HttpToolkit-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v#{version}/HttpToolkit-#{version}.dmg",
       verified: "github.com/httptoolkit/httptoolkit-desktop/"
   name "HTTP Toolkit"
   desc "HTTP(S) debugging proxy, analyzer, and client"

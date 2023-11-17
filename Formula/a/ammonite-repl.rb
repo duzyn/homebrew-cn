@@ -2,7 +2,7 @@ class AmmoniteRepl < Formula
   desc "Ammonite is a cleanroom re-implementation of the Scala REPL"
   homepage "https://ammonite.io/"
   # TODO: Check if we can use unversioned `openjdk` (or `openjdk@21`) at version bump.
-  url "https://ghproxy.com/https://github.com/com-lihaoyi/Ammonite/releases/download/2.5.11/3.2-2.5.11"
+  url "https://mirror.ghproxy.com/https://github.com/com-lihaoyi/Ammonite/releases/download/2.5.11/3.2-2.5.11"
   version "2.5.11"
   sha256 "384cf08e2591be4d199c75cf1913d44c043466b8cddeaa21dd5669d10f94a18f"
   license "MIT"

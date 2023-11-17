@@ -2,7 +2,7 @@ cask "hiddenbar" do
   version "1.9"
   sha256 "3f54b024f5c1c40bc18aebe39014710289b47e147e71561fae22a661cab26d02"
 
-  url "https://ghproxy.com/https://github.com/dwarvesf/hidden/releases/download/v#{version}/Hidden.Bar.#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/dwarvesf/hidden/releases/download/v#{version}/Hidden.Bar.#{version}.dmg"
   name "Hidden Bar"
   desc "Utility to hide menu bar items"
   homepage "https://github.com/dwarvesf/hidden/"

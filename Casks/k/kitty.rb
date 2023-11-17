@@ -2,7 +2,7 @@ cask "kitty" do
   version "0.31.0"
   sha256 "8ea20b4d90b480bca6ec08c5492f5bcda1c55c5619879278751af5a4034bb91a"
 
-  url "https://ghproxy.com/https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   name "kitty"
   desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"

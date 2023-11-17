@@ -13,12 +13,12 @@ class Lensfun < Formula
   head "https://github.com/lensfun/lensfun.git", branch: "master"
 
   stable do
-    url "https://ghproxy.com/https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz"
     sha256 "dafb39c08ef24a0e2abd00d05d7341b1bf1f0c38bfcd5a4c69cf5f0ecb6db112"
 
     # upstream cmake build change, https://github.com/lensfun/lensfun/pull/1983
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/86b624c/lensfun/0.3.4.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/86b624c/lensfun/0.3.4.patch"
       sha256 "8cc8af937d185bb0e01d3610fa7bb35905eb7d4e36ac4c807a292f1258369bdb"
     end
   end

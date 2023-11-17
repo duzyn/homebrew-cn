@@ -1,7 +1,7 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.land/"
-  url "https://ghproxy.com/https://github.com/denoland/deno/releases/download/v1.37.2/deno_src.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/denoland/deno/releases/download/v1.37.2/deno_src.tar.gz"
   sha256 "9b922f3cfd106a679156f5c3699728cbc08e053f3ea505b04da93aa8fc46a2f3"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
@@ -53,14 +53,14 @@ class Deno < Formula
   # https://github.com/denoland/rusty_v8/commits/v#{rusty_v8_version}/v8
   # Then, use the corresponding tag found in https://github.com/denoland/v8/tags.
   resource "v8" do
-    url "https://ghproxy.com/https://github.com/denoland/v8/archive/refs/tags/11.8.172.6-denoland-6dccdd60aac64dc962c3.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/denoland/v8/archive/refs/tags/11.8.172.6-denoland-6dccdd60aac64dc962c3.tar.gz"
     sha256 "c9a1320de81a9ed2c5d4d1e0edf2bdf073efe46bd3f489d9afd5501aaf646d40"
   end
 
   # Use the version of `deno_core` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
   # Search for 'name = "deno_core"' (without single quotes).
   resource "deno_core" do
-    url "https://ghproxy.com/https://github.com/denoland/deno_core/archive/refs/tags/0.220.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/denoland/deno_core/archive/refs/tags/0.220.0.tar.gz"
     sha256 "2eecf64fdc28323e2b4e8cd10fa6ade57f1efabf2ba4bc3c960bd6e080fac3ee"
   end
 

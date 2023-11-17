@@ -5,7 +5,7 @@ cask "slab" do
   sha256 arm:   "aa11f368ea25463ce153ce8a22077b25852edcaf592473a71817e52a45ec7bf6",
          intel: "10ab8b790b915bd28bd4b04c32bac7a973f82b0b16c52c3682e544a93cba8f63"
 
-  url "https://ghproxy.com/https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg",
       verified: "github.com/slab/desktop-releases/"
   name "Slab"
   desc "Knowledge management for organizations"

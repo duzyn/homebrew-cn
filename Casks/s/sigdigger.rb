@@ -2,7 +2,7 @@ cask "sigdigger" do
   version "0.3.0"
   sha256 "18314d22fdc0d41061312b02d088f6cb903292c741d1e4f6aa3371c804406c98"
 
-  url "https://ghproxy.com/https://github.com/BatchDrake/SigDigger/releases/download/v#{version}/SigDigger-#{version}-x86_64.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/BatchDrake/SigDigger/releases/download/v#{version}/SigDigger-#{version}-x86_64.dmg",
       verified: "github.com/BatchDrake/SigDigger/"
   name "SigDigger"
   desc "Qt-based digital signal analyzer"

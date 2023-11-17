@@ -1,7 +1,7 @@
 class WxwidgetsAT30 < Formula
   desc "Cross-platform C++ GUI toolkit - Stable Release"
   homepage "https://www.wxwidgets.org"
-  url "https://ghproxy.com/https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5.1/wxWidgets-3.0.5.1.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5.1/wxWidgets-3.0.5.1.tar.bz2"
   sha256 "440f6e73cf5afb2cbf9af10cec8da6cdd3d3998d527598a53db87099524ac807"
   license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
   revision 1

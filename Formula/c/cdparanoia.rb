@@ -33,14 +33,14 @@ class Cdparanoia < Formula
   # Patches via MacPorts
   patch do
     on_macos do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/8e0aff2/cdparanoia/osx_interface.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/8e0aff2/cdparanoia/osx_interface.patch"
       sha256 "c4e22315b639535f41afd904188d8cc875e1642fcf59672c8b9ee06fc77e6b68"
     end
   end
 
   patch do
     on_linux do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/bfad134/cdparanoia/linux_fpic.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/bfad134/cdparanoia/linux_fpic.patch"
       sha256 "496f53d21dde7e23f4c9cf1cc28219efcbb5464fe2abbd5a073635279281c9c4"
     end
   end

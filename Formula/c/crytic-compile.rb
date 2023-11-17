@@ -38,7 +38,7 @@ class CryticCompile < Formula
 
   test do
     resource "testdata" do
-      url "https://ghproxy.com/https://github.com/crytic/slither/raw/d0a4f5595d7177b3b7d4bd35e1384bf35ebc22d4/tests/ast-parsing/compile/variable-0.8.0.sol-0.8.15-compact.zip", using: :nounzip
+      url "https://mirror.ghproxy.com/https://github.com/crytic/slither/raw/d0a4f5595d7177b3b7d4bd35e1384bf35ebc22d4/tests/ast-parsing/compile/variable-0.8.0.sol-0.8.15-compact.zip", using: :nounzip
       sha256 "2f165f629882d0250d03a56cb67a84e9741375349195915a04385b0666394478"
     end
 

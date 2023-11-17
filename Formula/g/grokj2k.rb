@@ -1,7 +1,7 @@
 class Grokj2k < Formula
   desc "JPEG 2000 Library"
   homepage "https://github.com/GrokImageCompression/grok"
-  url "https://ghproxy.com/https://github.com/GrokImageCompression/grok/archive/refs/tags/v11.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/GrokImageCompression/grok/archive/refs/tags/v11.0.0.tar.gz"
   sha256 "ffaa563312071197db5bc2a180d74fea061be5e76fcb9915caf886fe61d4b391"
   license "AGPL-3.0-or-later"
   head "https://github.com/GrokImageCompression/grok.git", branch: "master"
@@ -93,7 +93,7 @@ class Grokj2k < Formula
 
   test do
     resource "homebrew-test_image" do
-      url "https://ghproxy.com/https://github.com/GrokImageCompression/grok-test-data/raw/43ce4cb/input/nonregression/basn6a08.tif"
+      url "https://mirror.ghproxy.com/https://github.com/GrokImageCompression/grok-test-data/raw/43ce4cb/input/nonregression/basn6a08.tif"
       sha256 "d0b9715d79b10b088333350855f9721e3557b38465b1354b0fa67f230f5679f3"
     end
 

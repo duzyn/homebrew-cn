@@ -2,7 +2,7 @@ cask "music-decoy" do
   version "1.0"
   sha256 "e4fa4670e24522ac5e0999ed6c483201d257e858fc644d3490edee6887b847eb"
 
-  url "https://ghproxy.com/https://github.com/FuzzyIdeas/MusicDecoy/releases/download/v#{version}/MusicDecoy.zip",
+  url "https://mirror.ghproxy.com/https://github.com/FuzzyIdeas/MusicDecoy/releases/download/v#{version}/MusicDecoy.zip",
       verified: "github.com/FuzzyIdeas/MusicDecoy/"
   name "Music Decoy"
   desc "Music app blocker utility"

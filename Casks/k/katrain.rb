@@ -6,7 +6,7 @@ cask "katrain" do
     depends_on formula: "katago"
   end
 
-  url "https://ghproxy.com/https://github.com/sanderland/katrain/releases/download/v#{version}/KaTrainOSX.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/sanderland/katrain/releases/download/v#{version}/KaTrainOSX.dmg"
   name "KaTrain"
   desc "Tool for analyzing games and playing go with AI feedback from KataGo"
   homepage "https://github.com/sanderland/katrain"

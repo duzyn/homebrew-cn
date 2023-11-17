@@ -1,7 +1,7 @@
 class Snapcast < Formula
   desc "Synchronous multiroom audio player"
   homepage "https://github.com/badaix/snapcast"
-  url "https://ghproxy.com/https://github.com/badaix/snapcast/archive/refs/tags/v0.27.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/badaix/snapcast/archive/refs/tags/v0.27.0.tar.gz"
   sha256 "c662c6eafbaa42a4797a4ed6ba4a7602332abf99f6ba6ea88ff8ae59978a86ba"
   license "GPL-3.0-or-later"
 

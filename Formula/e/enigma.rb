@@ -1,7 +1,7 @@
 class Enigma < Formula
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
-  url "https://ghproxy.com/https://github.com/Enigma-Game/Enigma/releases/download/1.30/Enigma-1.30-src.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Enigma-Game/Enigma/releases/download/1.30/Enigma-1.30-src.tar.gz"
   sha256 "ae64b91fbc2b10970071d0d78ed5b4ede9ee3868de2e6e9569546fc58437f8af"
   license "GPL-2.0-or-later"
 

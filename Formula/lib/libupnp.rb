@@ -1,7 +1,7 @@
 class Libupnp < Formula
   desc "Portable UPnP development kit"
   homepage "https://pupnp.sourceforge.io/"
-  url "https://ghproxy.com/https://github.com/pupnp/pupnp/releases/download/release-1.14.18/libupnp-1.14.18.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/pupnp/pupnp/releases/download/release-1.14.18/libupnp-1.14.18.tar.bz2"
   sha256 "16a7cee93ce2868ae63ab1a8164dc7de43577c59983b9f61293a310d6888dceb"
   license "BSD-3-Clause"
 

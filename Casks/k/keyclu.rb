@@ -2,7 +2,7 @@ cask "keyclu" do
   version "0.17"
   sha256 "719f791b69b8e235b59acf3b40d9c0738b9bcb1d408613fb8b741311d34efbf3"
 
-  url "https://ghproxy.com/https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip",
+  url "https://mirror.ghproxy.com/https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip",
       verified: "github.com/Anze/KeyCluCask/"
   name "KeyClu"
   desc "Find shortcuts for any installed application"

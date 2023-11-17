@@ -2,7 +2,7 @@ cask "opensesame" do
   version "4.0.13"
   sha256 "60836525f04ffd6db16772e0697769f147ebcfd0797c895d21864b8e95db7f44"
 
-  url "https://ghproxy.com/https://github.com/open-cogsci/OpenSesame/releases/download/release%2F#{version}/opensesame_#{version}-py311-macos-x64-1.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/open-cogsci/OpenSesame/releases/download/release%2F#{version}/opensesame_#{version}-py311-macos-x64-1.dmg",
       verified: "github.com/open-cogsci/OpenSesame/"
   name "OpenSesame"
   desc "Graphical experiment builder for the social sciences"

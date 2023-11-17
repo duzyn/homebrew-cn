@@ -1,7 +1,7 @@
 class Liblouis < Formula
   desc "Open-source braille translator and back-translator"
   homepage "https://liblouis.org"
-  url "https://ghproxy.com/https://github.com/liblouis/liblouis/releases/download/v3.27.0/liblouis-3.27.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/liblouis/liblouis/releases/download/v3.27.0/liblouis-3.27.0.tar.gz"
   sha256 "b3f1526f28612ee0297472100e3d825fcb333326c385f794f5a9072b8c29615d"
   license all_of: ["GPL-3.0-or-later", "LGPL-2.1-or-later"]
 

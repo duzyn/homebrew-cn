@@ -2,7 +2,7 @@ cask "squirrel" do
   version "0.16.2"
   sha256 "e08d28fd72445bccbdbccc06b16a9e300c07371f67d576cd4ed35731be9d4ad6"
 
-  url "https://ghproxy.com/https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.zip",
       verified: "github.com/rime/squirrel/"
   name "Squirrel"
   desc "Rime input method engine"

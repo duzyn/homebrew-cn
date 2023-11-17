@@ -11,7 +11,7 @@ class Mesa < Formula
     sha256 "4ec8ec65dbdb1ee9444dba72970890128a19543a58cf05931bd6f54f124e117f"
 
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f0a40cf7d70ee5a25639b91d9a8088749a2dd04e/mesa/fix-build-on-macOS.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f0a40cf7d70ee5a25639b91d9a8088749a2dd04e/mesa/fix-build-on-macOS.patch"
       sha256 "a9b646e48d4e4228c3e06d8ca28f65e01e59afede91f58d4bd5a9c42a66b338d"
     end
   end

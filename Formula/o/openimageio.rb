@@ -1,7 +1,7 @@
 class Openimageio < Formula
   desc "Library for reading, processing and writing images"
   homepage "https://openimageio.org/"
-  url "https://ghproxy.com/https://github.com/OpenImageIO/oiio/archive/refs/tags/v2.5.5.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/OpenImageIO/oiio/archive/refs/tags/v2.5.5.0.tar.gz"
   sha256 "8c0de6cd8cfc8aeb696e9cf4fbd067c8c1d9fc22a3b7b81dfeda857ab526b1c8"
   license "Apache-2.0"
   revision 2

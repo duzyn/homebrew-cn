@@ -1,7 +1,7 @@
 class Sqlfmt < Formula
   desc "SQL formatter with width-aware output"
   homepage "https://sqlfum.pt/"
-  url "https://ghproxy.com/https://github.com/mjibson/sqlfmt/archive/refs/tags/v0.5.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/mjibson/sqlfmt/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "0776e9505048fd88220c0ee9b481ca258b6abe7e7bb27204a4873f11e1d7c95b"
   license "Apache-2.0"
   head "https://github.com/mjibson/sqlfmt.git", branch: "master"

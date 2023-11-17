@@ -1,7 +1,7 @@
 class ThreeBody < Formula
   desc "三体编程语言 Three Body Language written in Rust"
   homepage "https://github.com/rustq/3body-lang"
-  url "https://ghproxy.com/https://github.com/rustq/3body-lang/archive/refs/tags/0.4.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rustq/3body-lang/archive/refs/tags/0.4.1.tar.gz"
   sha256 "5ecda3677b713060b3fc4cc3b4e2ecd54ff0d6e39a1a8407a6d50779f68c9f2a"
   license "MIT"
   head "https://github.com/rustq/3body-lang.git", branch: "main"

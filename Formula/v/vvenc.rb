@@ -1,7 +1,7 @@
 class Vvenc < Formula
   desc "Fraunhofer Versatile Video Encoder"
   homepage "https://github.com/fraunhoferhhi/vvenc"
-  url "https://ghproxy.com/https://github.com/fraunhoferhhi/vvenc/archive/refs/tags/v1.9.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fraunhoferhhi/vvenc/archive/refs/tags/v1.9.1.tar.gz"
   sha256 "970c5512345e7246495f8e880aa79a5c3d086a5eacdc079bf77335a6f7dda65f"
   license "BSD-3-Clause-Clear"
   head "https://github.com/fraunhoferhhi/vvenc.git", branch: "master"
@@ -31,7 +31,7 @@ class Vvenc < Formula
 
   test do
     resource "homebrew-test_video" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/fraunhoferhhi/vvenc/master/test/data/RTn23_80x44p15_f15.yuv"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/fraunhoferhhi/vvenc/master/test/data/RTn23_80x44p15_f15.yuv"
       sha256 "ecd2ef466dd2975f4facc889e0ca128a6bea6645df61493a96d8e7763b6f3ae9"
     end
 

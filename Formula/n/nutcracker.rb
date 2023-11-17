@@ -1,7 +1,7 @@
 class Nutcracker < Formula
   desc "Proxy for memcached and redis"
   homepage "https://github.com/twitter/twemproxy"
-  url "https://ghproxy.com/https://github.com/twitter/twemproxy/archive/refs/tags/0.5.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/twitter/twemproxy/archive/refs/tags/0.5.0.tar.gz"
   sha256 "73f305d8525abbaaa6a5f203c1fba438f99319711bfcb2bb8b2f06f0d63d1633"
   license "Apache-2.0"
   revision 1
@@ -29,7 +29,7 @@ class Nutcracker < Formula
   # Use Homebrew libyaml instead of the vendored one.
   # Adapted from Debian's equivalent patch.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/0e1ac7ef20e83159554b6522380b1c4b48ce4f2f/nutcracker/use-system-libyaml.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/0e1ac7ef20e83159554b6522380b1c4b48ce4f2f/nutcracker/use-system-libyaml.patch"
     sha256 "9105f2bd784f291da5c3f3fb4f6876e62ab7a6f78256f81f5574d593924e424c"
   end
 

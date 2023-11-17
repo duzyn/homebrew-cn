@@ -1,7 +1,7 @@
 class Prqlc < Formula
   desc "Simple, powerful, pipelined SQL replacement"
   homepage "https://prql-lang.org"
-  url "https://ghproxy.com/https://github.com/PRQL/prql/archive/refs/tags/0.10.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/PRQL/prql/archive/refs/tags/0.10.1.tar.gz"
   sha256 "401c6e9f22ea8877e0779b5158759434e4f0781be6085c8748aa8ca394622eb9"
   license "Apache-2.0"
   head "https://github.com/prql/prql.git", branch: "main"

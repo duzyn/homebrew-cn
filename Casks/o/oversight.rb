@@ -2,7 +2,7 @@ cask "oversight" do
   version "2.2.1"
   sha256 "030790bb9378383f35c5f6aabee6580e1d6357f0adb620a221168bc042a0b691"
 
-  url "https://ghproxy.com/https://github.com/objective-see/OverSight/releases/download/v#{version}/OverSight_#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/objective-see/OverSight/releases/download/v#{version}/OverSight_#{version}.zip",
       verified: "github.com/objective-see/OverSight/"
   name "OverSight"
   desc "Monitors computer mic and webcam"

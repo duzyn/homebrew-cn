@@ -1,7 +1,7 @@
 class Flann < Formula
   desc "Fast Library for Approximate Nearest Neighbors"
   homepage "https://github.com/flann-lib/flann"
-  url "https://ghproxy.com/https://github.com/flann-lib/flann/archive/refs/tags/1.9.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/flann-lib/flann/archive/refs/tags/1.9.2.tar.gz"
   sha256 "e26829bb0017f317d9cc45ab83ddcb8b16d75ada1ae07157006c1e7d601c8824"
   license "BSD-3-Clause"
   revision 1

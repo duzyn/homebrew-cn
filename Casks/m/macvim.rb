@@ -2,7 +2,7 @@ cask "macvim" do
   version "178"
   sha256 "9efe173a7906f0e83e93a4c71eb768a2bbf58d4af1e881cf55b4b6c9e280ee0f"
 
-  url "https://ghproxy.com/https://github.com/macvim-dev/macvim/releases/download/release-#{version}/MacVim.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/macvim-dev/macvim/releases/download/release-#{version}/MacVim.dmg"
   name "MacVim"
   desc "Text editor"
   homepage "https://github.com/macvim-dev/macvim"

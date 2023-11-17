@@ -1,7 +1,7 @@
 class Libxls < Formula
   desc "Read binary Excel files from C/C++"
   homepage "https://github.com/libxls/libxls"
-  url "https://ghproxy.com/https://github.com/libxls/libxls/releases/download/v1.6.2/libxls-1.6.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libxls/libxls/releases/download/v1.6.2/libxls-1.6.2.tar.gz"
   sha256 "5dacc34d94bf2115926c80c6fb69e4e7bd2ed6403d51cff49041a94172f5e371"
   license "BSD-2-Clause"
 
@@ -20,7 +20,7 @@ class Libxls < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
     sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
   end
 

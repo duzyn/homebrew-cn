@@ -2,7 +2,7 @@ cask "privileges" do
   version "1.5.4"
   sha256 "6f16af136a928a9e0c233ef7d36db4458588224e676b079ede1b626c8ddba346"
 
-  url "https://ghproxy.com/https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges.zip"
+  url "https://mirror.ghproxy.com/https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges.zip"
   name "Privileges"
   desc "Admin rights switcher"
   homepage "https://github.com/SAP/macOS-enterprise-privileges"

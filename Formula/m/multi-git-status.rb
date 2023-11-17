@@ -1,7 +1,7 @@
 class MultiGitStatus < Formula
   desc "Show uncommitted, untracked and unpushed changes for multiple Git repos"
   homepage "https://github.com/fboender/multi-git-status"
-  url "https://ghproxy.com/https://github.com/fboender/multi-git-status/archive/refs/tags/2.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fboender/multi-git-status/archive/refs/tags/2.2.tar.gz"
   sha256 "d26a71cd2efd80416c28d59632665341bc393d2d5fdde20dd588f959b0faea6a"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Snort < Formula
   desc "Flexible Network Intrusion Detection System"
   homepage "https://www.snort.org"
-  url "https://ghproxy.com/https://github.com/snort3/snort3/archive/refs/tags/3.1.74.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/snort3/snort3/archive/refs/tags/3.1.74.0.tar.gz"
   mirror "https://fossies.org/linux/misc/snort3-3.1.74.0.tar.gz"
   sha256 "4a4529e74bc202303c0330ae8b2317f0bef3ac92ae7216df8cfedfce24ddd129"
   license "GPL-2.0-only"

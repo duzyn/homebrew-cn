@@ -1,7 +1,7 @@
 class SeleniumServer < Formula
   desc "Browser automation for testing purposes"
   homepage "https://www.selenium.dev/"
-  url "https://ghproxy.com/https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.15.0/selenium-server-4.15.0.jar"
+  url "https://mirror.ghproxy.com/https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.15.0/selenium-server-4.15.0.jar"
   sha256 "0933b1fc5febce425b0e3f538c9832f43f4e384f69f384d6223d1e9ec9ba597a"
   license "Apache-2.0"
 

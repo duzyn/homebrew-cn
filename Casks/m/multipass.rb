@@ -9,7 +9,7 @@ cask "multipass" do
     end
   end
 
-  url "https://ghproxy.com/https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
+  url "https://mirror.ghproxy.com/https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   name "Multipass"
   desc "Orchestrates virtual Ubuntu instances"
   homepage "https://github.com/canonical/multipass/"

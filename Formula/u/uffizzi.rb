@@ -1,7 +1,7 @@
 class Uffizzi < Formula
   desc "Self-serve developer platforms in minutes, not months with k8s virtual clusters"
   homepage "https://uffizzi.com"
-  url "https://ghproxy.com/https://github.com/UffizziCloud/uffizzi_cli/archive/refs/tags/v2.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/UffizziCloud/uffizzi_cli/archive/refs/tags/v2.3.3.tar.gz"
   sha256 "72f60f25350803ecb71b3ca20020393f76914c0eeb1b59187d500fbfab89a1d1"
   license "Apache-2.0"
 

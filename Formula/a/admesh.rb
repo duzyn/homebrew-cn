@@ -1,7 +1,7 @@
 class Admesh < Formula
   desc "Processes triangulated solid meshes"
   homepage "https://github.com/admesh/admesh"
-  url "https://ghproxy.com/https://github.com/admesh/admesh/releases/download/v0.98.5/admesh-0.98.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/admesh/admesh/releases/download/v0.98.5/admesh-0.98.5.tar.gz"
   sha256 "0d7994bfa587c4e958b2ac7c7d2fb90dfb6c5463d32513ada169cf710a438535"
   license "GPL-2.0"
 

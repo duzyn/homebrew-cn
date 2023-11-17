@@ -1,7 +1,7 @@
 class Phpstan < Formula
   desc "PHP Static Analysis Tool"
   homepage "https://github.com/phpstan/phpstan"
-  url "https://ghproxy.com/https://github.com/phpstan/phpstan/releases/download/1.10.41/phpstan.phar"
+  url "https://mirror.ghproxy.com/https://github.com/phpstan/phpstan/releases/download/1.10.41/phpstan.phar"
   sha256 "32f1faa376ee49f5670791557f4ddc4268e6d9e7ad9c2631f3966740b8d9936a"
   license "MIT"
 

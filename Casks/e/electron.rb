@@ -5,7 +5,7 @@ cask "electron" do
   sha256 arm:   "e2b581b75e10b61267d73d96b15ee6358fa42fc925e214b3473a68e4cfd5dff3",
          intel: "bd11cb617a9fb2926dc07aa277987f1db36c19fdabd566e6dc959e2504e0689a"
 
-  url "https://ghproxy.com/https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
       verified: "github.com/electron/electron/"
   name "Electron"
   desc "Build desktop apps with JavaScript, HTML, and CSS"

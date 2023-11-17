@@ -2,7 +2,7 @@ cask "termhere" do
   version "1.2.1"
   sha256 "8311c29b09f982ce829d5733865c715f4f457d0a46dcab2beb18462a73a37b9d"
 
-  url "https://ghproxy.com/https://github.com/hbang/TermHere/releases/download/#{version}/TermHere.#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/hbang/TermHere/releases/download/#{version}/TermHere.#{version}.dmg",
       verified: "github.com/hbang/TermHere/"
   name "TermHere"
   desc "Finder extension for opening a terminal from the current directory"

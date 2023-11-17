@@ -2,7 +2,7 @@ cask "virtualbuddy" do
   version "1.3.2,107"
   sha256 "793da34d91819bdbaded61f3b832d468b8cca91714132a9e89eb262e2d008412"
 
-  url "https://ghproxy.com/https://github.com/insidegui/VirtualBuddy/releases/download/#{version.csv.first}/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/insidegui/VirtualBuddy/releases/download/#{version.csv.first}/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "VirtualBuddy"
   desc "Virtualization tool"
   homepage "https://github.com/insidegui/VirtualBuddy"

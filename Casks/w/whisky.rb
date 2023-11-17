@@ -2,7 +2,7 @@ cask "whisky" do
   version "2.1.3"
   sha256 "d208e50b217086de209c7f3ef85fc53eb54c0461ce407e5a3c77e3622511b316"
 
-  url "https://ghproxy.com/https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip"
+  url "https://mirror.ghproxy.com/https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip"
   name "Whisky"
   desc "Wine wrapper built with SwiftUI"
   homepage "https://github.com/IsaacMarovitz/Whisky"

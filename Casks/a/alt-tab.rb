@@ -2,7 +2,7 @@ cask "alt-tab" do
   version "6.64.0"
   sha256 "c7a9982cb7c006feae3489ba63810075052aa3ca5bd8405233ca6b8bf030221f"
 
-  url "https://ghproxy.com/https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip",
       verified: "github.com/lwouis/alt-tab-macos/"
   name "AltTab"
   desc "Enable Windows-like alt-tab"

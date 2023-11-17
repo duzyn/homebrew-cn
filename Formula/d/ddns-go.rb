@@ -1,7 +1,7 @@
 class DdnsGo < Formula
   desc "Simple and easy-to-use DDNS"
   homepage "https://github.com/jeessy2/ddns-go"
-  url "https://ghproxy.com/https://github.com/jeessy2/ddns-go/archive/refs/tags/v5.6.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jeessy2/ddns-go/archive/refs/tags/v5.6.6.tar.gz"
   sha256 "5e64b6c9c1723bd955d2d66e637f49d2d76501efc95dd732d7a111cf64da2fde"
   license "MIT"
   head "https://github.com/jeessy2/ddns-go.git", branch: "master"

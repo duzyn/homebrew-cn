@@ -1,7 +1,7 @@
 class Msktutil < Formula
   desc "Active Directory keytab management"
   homepage "https://github.com/msktutil/msktutil"
-  url "https://ghproxy.com/https://github.com/msktutil/msktutil/releases/download/1.2.1/msktutil-1.2.1.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/msktutil/msktutil/releases/download/1.2.1/msktutil-1.2.1.tar.bz2"
   sha256 "f9686237c4e24414802415f4c8627c7343da365c5a3bcdef7a853fa3cd27b45d"
   license "GPL-2.0-or-later"
 

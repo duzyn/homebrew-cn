@@ -1,7 +1,7 @@
 class Statix < Formula
   desc "Lints and suggestions for the nix programming language"
   homepage "https://github.com/nerdypepper/statix"
-  url "https://ghproxy.com/https://github.com/nerdypepper/statix/archive/refs/tags/v0.5.8.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nerdypepper/statix/archive/refs/tags/v0.5.8.tar.gz"
   sha256 "547ee83df5814c18f8577b5ca25a1f12a416900b6eaa95821386a28090e8a89d"
   license "MIT"
   head "https://github.com/nerdypepper/statix.git", branch: "master"

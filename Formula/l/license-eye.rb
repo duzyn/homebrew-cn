@@ -1,7 +1,7 @@
 class LicenseEye < Formula
   desc "Tool to check and fix license headers and resolve dependency licenses"
   homepage "https://github.com/apache/skywalking-eyes"
-  url "https://ghproxy.com/https://github.com/apache/skywalking-eyes/archive/refs/tags/v0.5.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/apache/skywalking-eyes/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "a966e511617fda5628cf3ed816b7152653268f40f3fdba60210f628cf4c75ab9"
   license "Apache-2.0"
   head "https://github.com/apache/skywalking-eyes.git", branch: "main"

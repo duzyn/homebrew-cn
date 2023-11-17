@@ -2,7 +2,7 @@ cask "contour" do
   version "0.3.12.262"
   sha256 "45487d423767a20c2d55a712392cebea6b3d2d259c68fbce8f11c6f7e155cc76"
 
-  url "https://ghproxy.com/https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
   name "Contour"
   desc "Terminal emulator"
   homepage "https://github.com/contour-terminal/contour/"

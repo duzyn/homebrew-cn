@@ -1,7 +1,7 @@
 class Syft < Formula
   desc "CLI for generating a Software Bill of Materials from container images"
   homepage "https://github.com/anchore/syft"
-  url "https://ghproxy.com/https://github.com/anchore/syft/archive/refs/tags/v0.96.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/anchore/syft/archive/refs/tags/v0.96.0.tar.gz"
   sha256 "fb8c003b5b11bbacc66dbd2e60f1ba91a8d96cc91653d677fe9b460de912fb21"
   license "Apache-2.0"
   head "https://github.com/anchore/syft.git", branch: "main"
@@ -33,7 +33,7 @@ class Syft < Formula
 
   test do
     resource "homebrew-micronaut.cdx.json" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/anchore/syft/934644232ab115b2518acdb5d240ae31aaf55989/syft/pkg/cataloger/java/test-fixtures/graalvm-sbom/micronaut.json"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/anchore/syft/934644232ab115b2518acdb5d240ae31aaf55989/syft/pkg/cataloger/java/test-fixtures/graalvm-sbom/micronaut.json"
       sha256 "c09171c53d83db5de5f2b9bdfada33d242ebf7ff9808ad2bd1343754406ad44e"
     end
 

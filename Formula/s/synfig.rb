@@ -6,7 +6,7 @@ class Synfig < Formula
 
   stable do
     url "https://downloads.sourceforge.net/project/synfig/development/1.5.1/synfig-1.5.1.tar.gz?use_mirror=nchc"
-    mirror "https://ghproxy.com/https://github.com/synfig/synfig/releases/download/v1.5.1/synfig-1.5.1.tar.gz"
+    mirror "https://mirror.ghproxy.com/https://github.com/synfig/synfig/releases/download/v1.5.1/synfig-1.5.1.tar.gz"
     sha256 "aa91593c28a89f269be1be9c8bd9ecca6491f9e6af26744d1c160c6553ee2ced"
 
     # Apply upstream commit to fix build with ffmpeg:

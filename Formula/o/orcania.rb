@@ -1,7 +1,7 @@
 class Orcania < Formula
   desc "Potluck with different functions for different purposes in C"
   homepage "https://babelouest.github.io/orcania/"
-  url "https://ghproxy.com/https://github.com/babelouest/orcania/archive/refs/tags/v2.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/babelouest/orcania/archive/refs/tags/v2.3.3.tar.gz"
   sha256 "e26947f7622acf3660b71fb8018ee791c97376530ab6c4a00e4aa2775e052626"
   license "LGPL-2.1-only"
 

@@ -2,7 +2,7 @@ cask "slippi-dolphin" do
   version "3.3.1"
   sha256 "ec7acce03bb8547c95b5b3c257073f875e7839c15e3a2c6845937002fc59ae4f"
 
-  url "https://ghproxy.com/https://github.com/project-slippi/Ishiiruka/releases/download/v#{version}/FM-Slippi-#{version}-Mac.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/project-slippi/Ishiiruka/releases/download/v#{version}/FM-Slippi-#{version}-Mac.dmg",
       verified: "github.com/project-slippi/Ishiiruka/"
   name "Slippi"
   desc "Fork of the Dolphin GameCube and Wii emulator with netplay support via Slippi"

@@ -34,7 +34,7 @@ class Xinit < Formula
     depends_on "quartz-wm"
 
     resource "xquartz" do
-      url "https://ghproxy.com/https://github.com/XQuartz/XQuartz/archive/refs/tags/XQuartz-2.8.2.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/XQuartz/XQuartz/archive/refs/tags/XQuartz-2.8.2.tar.gz"
       sha256 "050c538cf2ed39f49a366c7424c7b22781c9f7ebe02aa697f12e314913041000"
     end
   end

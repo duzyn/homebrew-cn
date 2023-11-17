@@ -1,7 +1,7 @@
 class NagiosPlugins < Formula
   desc "Plugins for the nagios network monitoring system"
   homepage "https://www.nagios-plugins.org/"
-  url "https://ghproxy.com/https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.7/nagios-plugins-2.4.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.7/nagios-plugins-2.4.7.tar.gz"
   sha256 "63833d03cd62ea5da85763c241c276c468e8b92730fd6f1701cc9828d73c7f69"
   license "GPL-3.0-or-later"
   head "https://github.com/nagios-plugins/nagios-plugins.git", branch: "master"

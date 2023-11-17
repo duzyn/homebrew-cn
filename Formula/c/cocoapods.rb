@@ -1,7 +1,7 @@
 class Cocoapods < Formula
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
-  url "https://ghproxy.com/https://github.com/CocoaPods/CocoaPods/archive/refs/tags/1.14.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/CocoaPods/CocoaPods/archive/refs/tags/1.14.2.tar.gz"
   sha256 "63dea3b89485ae417ba30712e1c898d8fb93d7bb14b14fe576d62b42bf8beb47"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Tio < Formula
   desc "Simple TTY terminal I/O application"
   homepage "https://tio.github.io"
-  url "https://ghproxy.com/https://github.com/tio/tio/releases/download/v2.7/tio-2.7.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/tio/tio/releases/download/v2.7/tio-2.7.tar.xz"
   sha256 "bf8fe434848c2c1b6540af0b42503c986068176ddc1a988cf02e521e7de5daa5"
   license "GPL-2.0-or-later"
   head "https://github.com/tio/tio.git", branch: "master"

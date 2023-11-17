@@ -2,7 +2,7 @@ cask "praat" do
   version "6.4,6400"
   sha256 "bc486a7101d98243c8b512d969117fabc23e69c8bbfdc82218fca933ccf16621"
 
-  url "https://ghproxy.com/https://github.com/praat/praat/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/praat/praat/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
       verified: "github.com/praat/praat/"
   name "Praat"
   desc "Doing phonetics by computer"

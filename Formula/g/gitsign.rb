@@ -1,7 +1,7 @@
 class Gitsign < Formula
   desc "Keyless Git signing using Sigstore"
   homepage "https://github.com/sigstore/gitsign"
-  url "https://ghproxy.com/https://github.com/sigstore/gitsign/archive/refs/tags/v0.8.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sigstore/gitsign/archive/refs/tags/v0.8.0.tar.gz"
   sha256 "3087506ef7811f2d26b6eb8612d4d0a4d8d8eec6258bca4f25247bb7a49e297c"
   license "Apache-2.0"
 

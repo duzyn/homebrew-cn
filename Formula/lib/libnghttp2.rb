@@ -1,7 +1,7 @@
 class Libnghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
-  url "https://ghproxy.com/https://github.com/nghttp2/nghttp2/releases/download/v1.58.0/nghttp2-1.58.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nghttp2/nghttp2/releases/download/v1.58.0/nghttp2-1.58.0.tar.gz"
   mirror "http://fresh-center.net/linux/www/nghttp2-1.58.0.tar.gz"
   mirror "http://fresh-center.net/linux/www/legacy/nghttp2-1.58.0.tar.gz"
   # this legacy mirror is for user to install from the source when https not working for them

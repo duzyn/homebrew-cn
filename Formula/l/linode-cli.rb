@@ -26,7 +26,7 @@ class LinodeCli < Formula
   depends_on "pyyaml"
 
   resource "linode-api-spec" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/linode/linode-api-docs/refs/tags/v4.167.3/openapi.yaml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/linode/linode-api-docs/refs/tags/v4.167.3/openapi.yaml"
     sha256 "43ddaeb31a6ba3cc069555f07188b87f7867be9a386a374ddf0020bf769877d5"
   end
 

@@ -1,7 +1,7 @@
 class Fplll < Formula
   desc "Lattice algorithms using floating-point arithmetic"
   homepage "https://github.com/fplll/fplll"
-  url "https://ghproxy.com/https://github.com/fplll/fplll/releases/download/5.4.5/fplll-5.4.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fplll/fplll/releases/download/5.4.5/fplll-5.4.5.tar.gz"
   sha256 "76d3778f0326597ed7505bab19493a9bf6b73a5c5ca614e8fb82f42105c57d00"
   license "LGPL-2.1-or-later"
 

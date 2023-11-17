@@ -1,7 +1,7 @@
 class GnustepBase < Formula
   desc "Library of general-purpose, non-graphical Objective C objects"
   homepage "https://github.com/gnustep/libs-base"
-  url "https://ghproxy.com/https://github.com/gnustep/libs-base/releases/download/base-1_29_0/gnustep-base-1.29.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gnustep/libs-base/releases/download/base-1_29_0/gnustep-base-1.29.0.tar.gz"
   sha256 "fa58eda665c3e0b9c420dc32bb3d51247a407c944d82e5eed1afe8a2b943ef37"
   license "GPL-2.0-or-later"
 

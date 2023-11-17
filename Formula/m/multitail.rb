@@ -1,7 +1,7 @@
 class Multitail < Formula
   desc "Tail multiple files in one terminal simultaneously"
   homepage "https://vanheusden.com/multitail/"
-  url "https://ghproxy.com/https://github.com/folkertvanheusden/multitail/archive/refs/tags/7.1.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/folkertvanheusden/multitail/archive/refs/tags/7.1.2.tar.gz"
   sha256 "c8552e10093f0690b8baef84945753c878e234d7b3d0e3ff27e509ed5515998c"
   license "Apache-2.0"
   head "https://github.com/folkertvanheusden/multitail.git"

@@ -1,7 +1,7 @@
 class ClangFormatAT11 < Formula
   desc "Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript"
   homepage "https://clang.llvm.org/docs/ClangFormat.html"
-  url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-11.1.0/llvm-11.1.0.src.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-11.1.0/llvm-11.1.0.src.tar.xz"
   sha256 "ce8508e318a01a63d4e8b3090ab2ded3c598a50258cc49e2625b9120d4c03ea5"
   license "Apache-2.0"
 
@@ -24,7 +24,7 @@ class ClangFormatAT11 < Formula
   uses_from_macos "zlib"
 
   resource "clang" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-11.1.0/clang-11.1.0.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-11.1.0/clang-11.1.0.src.tar.xz"
     sha256 "0a8288f065d1f57cb6d96da4d2965cbea32edc572aa972e466e954d17148558b"
   end
 

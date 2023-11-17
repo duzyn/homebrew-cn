@@ -2,7 +2,7 @@ cask "macfuse" do
   version "4.5.0"
   sha256 "9df7257315a9b9a97a9ba3a76011cabed7bc3784515b69fa098f8d81efec726d"
 
-  url "https://ghproxy.com/https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/osxfuse/"
   name "macFUSE"
   desc "File system integration"

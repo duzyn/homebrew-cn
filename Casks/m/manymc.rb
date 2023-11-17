@@ -2,7 +2,7 @@ cask "manymc" do
   version "0.1.2"
   sha256 "5e230f3aca4e8b63b24b036b4175e55c2a3f49da68bdd8b05b9dc8ef823cc06d"
 
-  url "https://ghproxy.com/https://github.com/MinecraftMachina/ManyMC/releases/download/v#{version}/ManyMC.zip"
+  url "https://mirror.ghproxy.com/https://github.com/MinecraftMachina/ManyMC/releases/download/v#{version}/ManyMC.zip"
   name "ManyMC"
   desc "Minecraft launcher with native arm64 support"
   homepage "https://github.com/MinecraftMachina/ManyMC"

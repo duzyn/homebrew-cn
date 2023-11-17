@@ -2,7 +2,7 @@ cask "mockoon" do
   version "5.1.0"
   sha256 "cd366d2e7237b05a5a3e8cc509f3598dea60a508101b50298e828a09f5bb11e1"
 
-  url "https://ghproxy.com/https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.universal.dmg",
       verified: "github.com/mockoon/mockoon/"
   name "Mockoon"
   desc "Create mock APIs in seconds"

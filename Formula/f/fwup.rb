@@ -1,7 +1,7 @@
 class Fwup < Formula
   desc "Configurable embedded Linux firmware update creator and runner"
   homepage "https://github.com/fwup-home/fwup"
-  url "https://ghproxy.com/https://github.com/fwup-home/fwup/releases/download/v1.10.1/fwup-1.10.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fwup-home/fwup/releases/download/v1.10.1/fwup-1.10.1.tar.gz"
   sha256 "46a443f7461ffe7aa2228bce296d65e83d0ab9c886449d443a562ca59963a233"
   license "Apache-2.0"
 

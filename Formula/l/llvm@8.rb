@@ -1,7 +1,7 @@
 class LlvmAT8 < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
-  url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/llvm-8.0.1.src.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/llvm-8.0.1.src.tar.xz"
   sha256 "44787a6d02f7140f145e2250d56c9f849334e11f9ae379827510ed72f12b75e7"
   license "NCSA"
   revision 5
@@ -43,7 +43,7 @@ class LlvmAT8 < Formula
   end
 
   resource "clang" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/cfe-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/cfe-8.0.1.src.tar.xz"
     sha256 "70effd69f7a8ab249f66b0a68aba8b08af52aa2ab710dfb8a0fba102685b1646"
 
     # Fix include paths on Big Sur
@@ -65,56 +65,56 @@ class LlvmAT8 < Formula
       # Skip sysroot headers if they are found alongside the toolchain. Backported from
       # https://github.com/llvm/llvm-project/commit/a3a24316087d0e1b4db0b8fee19cdee8b7968032
       patch :p3 do
-        url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/bc3176e6794efb9f2581ce4f9ede3ad34efb492c/llvm%409/llvm%409.patch?full_index=1"
+        url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/bc3176e6794efb9f2581ce4f9ede3ad34efb492c/llvm%409/llvm%409.patch?full_index=1"
         sha256 "02fb21c26f468b0dab25c93b2802539133e06b0bcf19802a7ecdc227c454c4db"
       end
     end
   end
 
   resource "clang-extra-tools" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/clang-tools-extra-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/clang-tools-extra-8.0.1.src.tar.xz"
     sha256 "187179b617e4f07bb605cc215da0527e64990b4a7dd5cbcc452a16b64e02c3e1"
   end
 
   resource "compiler-rt" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/compiler-rt-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/compiler-rt-8.0.1.src.tar.xz"
     sha256 "11828fb4823387d820c6715b25f6b2405e60837d12a7469e7a8882911c721837"
   end
 
   resource "libcxx" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libcxx-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libcxx-8.0.1.src.tar.xz"
     sha256 "7f0652c86a0307a250b5741ab6e82bb10766fb6f2b5a5602a63f30337e629b78"
   end
 
   resource "libcxxabi" do
     on_linux do
-      url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libcxxabi-8.0.1.src.tar.xz"
+      url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libcxxabi-8.0.1.src.tar.xz"
       sha256 "b75bf3c8dc506e7d950d877eefc8b6120a4651aaa110f5805308861f2cfaf6ef"
     end
   end
 
   resource "libunwind" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libunwind-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/libunwind-8.0.1.src.tar.xz"
     sha256 "1870161dda3172c63e632c1f60624564e1eb0f9233cfa8f040748ca5ff630f6e"
   end
 
   resource "lld" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/lld-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/lld-8.0.1.src.tar.xz"
     sha256 "9fba1e94249bd7913e8a6c3aadcb308b76c8c3d83c5ce36c99c3f34d73873d88"
   end
 
   resource "lldb" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/lldb-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/lldb-8.0.1.src.tar.xz"
     sha256 "e8a79baa6d11dd0650ab4a1b479f699dfad82af627cbbcd49fa6f2dc14e131d7"
   end
 
   resource "openmp" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/openmp-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/openmp-8.0.1.src.tar.xz"
     sha256 "3e85dd3cad41117b7c89a41de72f2e6aa756ea7b4ef63bb10dcddf8561a7722c"
   end
 
   resource "polly" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/polly-8.0.1.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/polly-8.0.1.src.tar.xz"
     sha256 "e8a1f7e8af238b32ce39ab5de1f3317a2e3f7d71a8b1b8bbacbd481ac76fd2d1"
   end
 

@@ -1,7 +1,7 @@
 class Stoken < Formula
   desc "Tokencode generator compatible with RSA SecurID 128-bit (AES)"
   homepage "https://github.com/stoken-dev/stoken"
-  url "https://ghproxy.com/https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/stoken-dev/stoken/archive/refs/tags/v0.93.tar.gz"
   sha256 "102e2d112b275efcdc20ef438670e4f24f08870b9072a81fda316efcc38aef9c"
   license "LGPL-2.1-only"
 

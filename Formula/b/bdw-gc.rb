@@ -1,7 +1,7 @@
 class BdwGc < Formula
   desc "Garbage collector for C and C++"
   homepage "https://www.hboehm.info/gc/"
-  url "https://ghproxy.com/https://github.com/ivmai/bdwgc/releases/download/v8.2.4/gc-8.2.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ivmai/bdwgc/releases/download/v8.2.4/gc-8.2.4.tar.gz"
   sha256 "3d0d3cdbe077403d3106bb40f0cbb563413d6efdbb2a7e1cd6886595dec48fc2"
   license "MIT"
 

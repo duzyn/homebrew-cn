@@ -2,7 +2,7 @@ cask "syncalicious" do
   version "0.0.6"
   sha256 "ff43d46269d18c8ac86f7d49f1abae8100f0b0852a594e88925b8e1bccd028f0"
 
-  url "https://ghproxy.com/https://github.com/zenangst/Syncalicious/releases/download/#{version}/Syncalicious.zip"
+  url "https://mirror.ghproxy.com/https://github.com/zenangst/Syncalicious/releases/download/#{version}/Syncalicious.zip"
   name "Syncalicious"
   desc "Backup and synchronize preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"

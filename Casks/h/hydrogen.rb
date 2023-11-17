@@ -2,7 +2,7 @@ cask "hydrogen" do
   version "1.2.2"
   sha256 "c20c2edf80d4f22bfc068e9d9176bf1e8f0a27d66d86340bc1010cd9cc29995d"
 
-  url "https://ghproxy.com/https://github.com/hydrogen-music/hydrogen/releases/download/#{version}/Hydrogen-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/hydrogen-music/hydrogen/releases/download/#{version}/Hydrogen-#{version}.dmg",
       verified: "github.com/hydrogen-music/hydrogen/"
   name "Hydrogen"
   desc "Drum machine and sequencer"

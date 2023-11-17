@@ -4,7 +4,7 @@ cask "freac" do
   on_catalina :or_older do
     sha256 "d1dfcd43a675ed3a4674791a76dff1e92c712b545a01c4308f48a10782056117"
 
-    url "https://ghproxy.com/https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos10.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos10.dmg",
         verified: "github.com/enzo1982/freac/"
 
     livecheck do
@@ -20,7 +20,7 @@ cask "freac" do
   on_big_sur :or_newer do
     sha256 "22e29d73bdaf6dcb851a03bfe344028e38457c85b21e7378ffac8625a8ed4f12"
 
-    url "https://ghproxy.com/https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos11.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos11.dmg",
         verified: "github.com/enzo1982/freac/"
 
     livecheck do

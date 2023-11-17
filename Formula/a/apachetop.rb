@@ -1,7 +1,7 @@
 class Apachetop < Formula
   desc "Top-like display of Apache log"
   homepage "https://github.com/tessus/apachetop"
-  url "https://ghproxy.com/https://github.com/tessus/apachetop/releases/download/0.23.2/apachetop-0.23.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tessus/apachetop/releases/download/0.23.2/apachetop-0.23.2.tar.gz"
   sha256 "f94a34180808c3edb24c1779f72363246dd4143a89f579ef2ac168a45b04443f"
   license "BSD-3-Clause"
 

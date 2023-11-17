@@ -2,7 +2,7 @@ cask "nvs" do
   version "1.7.1"
   sha256 "0df024c8c8489a63674cac148e766eab0cc2de3cd8e97c6caffd8e117a09863e"
 
-  url "https://ghproxy.com/https://github.com/jasongin/nvs/archive/refs/tags/v#{version}.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jasongin/nvs/archive/refs/tags/v#{version}.tar.gz"
   name "Node Version Switcher"
   desc "Cross-platform tool for switching between versions and forks of Node.js"
   homepage "https://github.com/jasongin/nvs"

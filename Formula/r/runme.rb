@@ -1,7 +1,7 @@
 class Runme < Formula
   desc "Execute commands inside your runbooks, docs, and READMEs"
   homepage "https://runme.dev/"
-  url "https://ghproxy.com/https://github.com/stateful/runme/archive/refs/tags/v2.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/stateful/runme/archive/refs/tags/v2.0.0.tar.gz"
   sha256 "bd29549e6b8b68c0cfb6002f4a89383ec4f7f84b1c68d3895169c65899cbb900"
   license "Apache-2.0"
   head "https://github.com/stateful/runme.git", branch: "main"

@@ -31,7 +31,7 @@ class Libhid < Formula
 
   # Fix compilation error on 10.9
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/libhid/0.2.16.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/libhid/0.2.16.patch"
     sha256 "443a3218902054b7fc7a9f91fd1601d50e2cc7bdca3f16e75419b3b60f2dab81"
   end
 

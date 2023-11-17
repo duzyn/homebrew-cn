@@ -1,7 +1,7 @@
 class Mmseqs2 < Formula
   desc "Software suite for very fast sequence search and clustering"
   homepage "https://mmseqs.com/"
-  url "https://ghproxy.com/https://github.com/soedinglab/MMseqs2/archive/refs/tags/15-6f452.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/soedinglab/MMseqs2/archive/refs/tags/15-6f452.tar.gz"
   version "15-6f452"
   sha256 "7115ac5a7e2a49229466806aaa760d00204bb08c870e3c231b00e525c77531dc"
   license "GPL-3.0-or-later"
@@ -71,7 +71,7 @@ class Mmseqs2 < Formula
 
   test do
     resource "homebrew-testdata" do
-      url "https://ghproxy.com/https://github.com/soedinglab/MMseqs2/releases/download/12-113e3/MMseqs2-Regression-Minimal.zip"
+      url "https://mirror.ghproxy.com/https://github.com/soedinglab/MMseqs2/releases/download/12-113e3/MMseqs2-Regression-Minimal.zip"
       sha256 "ab0c2953d1c27736c22a57a1ccbb976c1320435fad82b5c579dbd716b7bae4ce"
     end
 

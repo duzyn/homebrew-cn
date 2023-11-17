@@ -1,7 +1,7 @@
 class Moarvm < Formula
   desc "VM with adaptive optimization and JIT compilation, built for Rakudo"
   homepage "https://moarvm.org"
-  url "https://ghproxy.com/https://github.com/MoarVM/MoarVM/releases/download/2023.10/MoarVM-2023.10.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/MoarVM/MoarVM/releases/download/2023.10/MoarVM-2023.10.tar.gz"
   sha256 "aa79d77896c312ba23e01074a53ef3d060becae2ed70b066f902f332da65a499"
   license "Artistic-2.0"
 
@@ -31,7 +31,7 @@ class Moarvm < Formula
   conflicts_with "rakudo-star", because: "rakudo-star currently ships with moarvm included"
 
   resource "nqp" do
-    url "https://ghproxy.com/https://github.com/Raku/nqp/releases/download/2023.10/nqp-2023.10.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/Raku/nqp/releases/download/2023.10/nqp-2023.10.tar.gz"
     sha256 "41051246635db1d4de08d373e2515ab76280f5e0c57d4a4fa2426545ac40956d"
   end
 

@@ -1,7 +1,7 @@
 class Quantlib < Formula
   desc "Library for quantitative finance"
   homepage "https://www.quantlib.org/"
-  url "https://ghproxy.com/https://github.com/lballabio/QuantLib/releases/download/v1.32/QuantLib-1.32.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lballabio/QuantLib/releases/download/v1.32/QuantLib-1.32.tar.gz"
   sha256 "ef2d374ef8c320572dd4b32946da368b2dcdac41e2b87e3e9538a894efe5a6ca"
   license "BSD-3-Clause"
 

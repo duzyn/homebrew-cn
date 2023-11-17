@@ -2,7 +2,7 @@ cask "breaktimer" do
   version "1.2.0"
   sha256 "feebd9f838df0892664a1377f4e2cd568ffe823132390b82f6592da17d164566"
 
-  url "https://ghproxy.com/https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg",
       verified: "github.com/tom-james-watson/breaktimer-app/"
   name "BreakTimer"
   desc "Tool to manage periodic breaks"

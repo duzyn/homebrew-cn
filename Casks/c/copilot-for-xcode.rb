@@ -2,7 +2,7 @@ cask "copilot-for-xcode" do
   version "0.27.0"
   sha256 "39f03e5142ef57badd8861d5cd4d2756c8e2f1b164cf5a7188e18ff7b8f4b0c2"
 
-  url "https://ghproxy.com/https://github.com/intitni/CopilotForXcode/releases/download/#{version}/Copilot.for.Xcode.app.zip"
+  url "https://mirror.ghproxy.com/https://github.com/intitni/CopilotForXcode/releases/download/#{version}/Copilot.for.Xcode.app.zip"
   name "Copilot for Xcode"
   desc "Xcode extension for Github Copilot"
   homepage "https://github.com/intitni/CopilotForXcode"

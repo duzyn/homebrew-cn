@@ -1,7 +1,7 @@
 class Richgo < Formula
   desc "Enrich `go test` outputs with text decorations"
   homepage "https://github.com/kyoh86/richgo"
-  url "https://ghproxy.com/https://github.com/kyoh86/richgo/archive/refs/tags/v0.3.12.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/kyoh86/richgo/archive/refs/tags/v0.3.12.tar.gz"
   sha256 "811db92c36818be053fa3950d40f8cca13912b8a4a9f54b82a63e2f112d2c4fe"
   license "MIT"
   head "https://github.com/kyoh86/richgo.git", branch: "main"

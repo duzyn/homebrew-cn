@@ -2,7 +2,7 @@ cask "docker-toolbox" do
   version "19.03.1"
   sha256 "6ad3fe973d5c8198c24bc270b3bb89c6ad48db28d0d6232710990888bda369f6"
 
-  url "https://ghproxy.com/https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/docker/toolbox/releases/download/v#{version}/DockerToolbox-#{version}.pkg",
       verified: "github.com/docker/toolbox/"
   name "Docker Toolbox"
   homepage "https://www.docker.com/products/docker-toolbox"

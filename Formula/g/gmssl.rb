@@ -1,7 +1,7 @@
 class Gmssl < Formula
   desc "Toolkit for Chinese national cryptographic standards"
   homepage "https://github.com/guanzhi/GmSSL"
-  url "https://ghproxy.com/https://github.com/guanzhi/GmSSL/archive/refs/tags/v3.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/guanzhi/GmSSL/archive/refs/tags/v3.1.0.tar.gz"
   sha256 "a3cdf5df87b07df33cb9e30c35de658fd0c06d5909d4428f4abd181d02567cde"
   license "Apache-2.0"
   head "https://github.com/guanzhi/GmSSL.git", branch: "master"

@@ -1,7 +1,7 @@
 class Jflex < Formula
   desc "Lexical analyzer generator for Java, written in Java"
   homepage "https://jflex.de/"
-  url "https://ghproxy.com/https://github.com/jflex-de/jflex/releases/download/v1.9.1/jflex-1.9.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jflex-de/jflex/releases/download/v1.9.1/jflex-1.9.1.tar.gz"
   sha256 "e0c1e9eef91ff6df04d73fa5eaff13f3a02b679fee1474e5ccae007224df6df6"
   license "BSD-3-Clause"
 

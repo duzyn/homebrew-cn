@@ -5,7 +5,7 @@ cask "v2rayu" do
   sha256 arm:   "6b3a453a5287183a7c52ccb68da5aa05257ed92a4af67ef79ac7ee98adcf558d",
          intel: "49a4fdbad92dfac7d5401f48cca882f6d9fae9bd137bc20fa16cec33054b2ac6"
 
-  url "https://ghproxy.com/https://github.com/yanue/V2rayU/releases/download/v#{version}/V2rayU-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/yanue/V2rayU/releases/download/v#{version}/V2rayU-#{arch}.dmg"
   name "V2rayU"
   desc "Collection of tools to build a dedicated basic communication network"
   homepage "https://github.com/yanue/V2rayU"

@@ -5,7 +5,7 @@ cask "elk" do
   sha256 arm:   "bfa8cf1854302eeb4f8f4ac28240b32ca674e2066bb29f518226b4fe93ecc4f0",
          intel: "e358c071ba8b310bdc29441f18fe56d6e31d96a5975c6f82be1088b10f1fbad9"
 
-  url "https://ghproxy.com/https://github.com/elk-zone/elk-native/releases/download/elk-native-v#{version}/Elk_#{version}_macos_#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/elk-zone/elk-native/releases/download/elk-native-v#{version}/Elk_#{version}_macos_#{arch}.dmg"
   name "Elk Native"
   desc "Mastodon web client"
   homepage "https://github.com/elk-zone/elk-native"

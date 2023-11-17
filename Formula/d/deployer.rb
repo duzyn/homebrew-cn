@@ -1,7 +1,7 @@
 class Deployer < Formula
   desc "Deployment tool written in PHP with support for popular frameworks"
   homepage "https://deployer.org/"
-  url "https://ghproxy.com/https://github.com/deployphp/deployer/releases/download/v7.3.3/deployer.phar"
+  url "https://mirror.ghproxy.com/https://github.com/deployphp/deployer/releases/download/v7.3.3/deployer.phar"
   sha256 "e85f68eeef818d7b09bf50946b006c0a096d23069e26875596e26310a6d06a76"
   license "MIT"
 

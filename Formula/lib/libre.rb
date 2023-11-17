@@ -1,7 +1,7 @@
 class Libre < Formula
   desc "Toolkit library for asynchronous network I/O with protocol stacks"
   homepage "https://github.com/baresip/re"
-  url "https://ghproxy.com/https://github.com/baresip/re/archive/refs/tags/v3.6.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/baresip/re/archive/refs/tags/v3.6.2.tar.gz"
   sha256 "8f77a51b0fecc9d903b1151607e214ad7380756dae5efa5e860b2953513bb260"
   license "BSD-3-Clause"
 

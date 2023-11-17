@@ -5,7 +5,7 @@ cask "dbeaver-community" do
   sha256 arm:   "31ae05b25d967f6b2f39b8f45c5a36e712f21a3a6cf50a7122e1bacf49b97c47",
          intel: "a51ae7765d336021534a4c44b39365a5bcae89b1d8f3d3ba6c0b47628a70aa19"
 
-  url "https://ghproxy.com/https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/dbeaver/dbeaver/releases/download/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
   name "DBeaver Community Edition"
   desc "Universal database tool and SQL client"
   homepage "https://dbeaver.io/"

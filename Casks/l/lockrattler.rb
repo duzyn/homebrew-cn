@@ -9,7 +9,7 @@ cask "lockrattler" do
   homepage "https://eclecticlight.co/"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     regex(%r{/(\d+)/(\d+)/lockrattler(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|

@@ -1,7 +1,7 @@
 class Cfonts < Formula
   desc "Sexy ANSI fonts for the console"
   homepage "https://github.com/dominikwilkowski/cfonts"
-  url "https://ghproxy.com/https://github.com/dominikwilkowski/cfonts/archive/refs/tags/v1.1.2rust.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/dominikwilkowski/cfonts/archive/refs/tags/v1.1.2rust.tar.gz"
   sha256 "39e863eea0c16087ae5e289124f12ceaba9452939c04518ae8f82c28f0121200"
   license "GPL-3.0-or-later"
   head "https://github.com/dominikwilkowski/cfonts.git", branch: "released"

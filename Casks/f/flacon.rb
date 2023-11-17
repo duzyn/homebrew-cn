@@ -2,7 +2,7 @@ cask "flacon" do
   version "11.3.0"
   sha256 "f566c4173243da4783124e02240a71b249091b47054a78e217a03c65ee723b31"
 
-  url "https://ghproxy.com/https://github.com/flacon/flacon/releases/download/v#{version}/Flacon_#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/flacon/flacon/releases/download/v#{version}/Flacon_#{version}.dmg",
       verified: "github.com/flacon/flacon/"
   name "Flacon"
   desc "Open source audio file encoder"

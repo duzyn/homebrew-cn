@@ -1,7 +1,7 @@
 class Ali < Formula
   desc "Generate HTTP load and plot the results in real-time"
   homepage "https://github.com/nakabonne/ali"
-  url "https://ghproxy.com/https://github.com/nakabonne/ali/archive/refs/tags/v0.7.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nakabonne/ali/archive/refs/tags/v0.7.5.tar.gz"
   sha256 "3eed2d7cbdf8365cad78833362e99138e7c0945d6dbc19e1253f8e0438a72f81"
   license "MIT"
   head "https://github.com/nakabonne/ali.git", branch: "master"

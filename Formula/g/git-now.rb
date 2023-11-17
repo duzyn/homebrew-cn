@@ -8,11 +8,11 @@ class GitNow < Formula
     # We switched from git url to tarballs & resource as submodule fetch fails without
     # https://github.com/iwata/git-now/commit/9beab94649afd0822c2c5bf38db9963c7a997ba7
     # but we cannot apply a patch before `git submodule update --init --recursive`.
-    url "https://ghproxy.com/https://github.com/iwata/git-now/archive/refs/tags/v0.1.1.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/iwata/git-now/archive/refs/tags/v0.1.1.0.tar.gz"
     sha256 "b6f6b9221dcab10de44514575f54e80daf825dc9f5a72262f5708a7432aa087f"
 
     resource "shFlags" do
-      url "https://ghproxy.com/https://github.com/nvie/shFlags/archive/refs/tags/1.0.3.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/nvie/shFlags/archive/refs/tags/1.0.3.tar.gz"
       sha256 "5e8dfddc7eb5f51f56b74b9d928cb64bd969e0d511c3efab5c0a6c2433c6fedd"
     end
 

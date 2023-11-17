@@ -2,7 +2,7 @@ class ErlangAT25 < Formula
   desc "Programming language for highly scalable real-time systems"
   homepage "https://www.erlang.org/"
   # Download tarball from GitHub; it is served faster than the official tarball.
-  url "https://ghproxy.com/https://github.com/erlang/otp/releases/download/OTP-25.3.2.7/otp_src_25.3.2.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/erlang/otp/releases/download/OTP-25.3.2.7/otp_src_25.3.2.7.tar.gz"
   sha256 "a8662859d153d3c4253c6a3a4d1538d0f32ce1cf02bb5484b17c9c176da37b37"
   license "Apache-2.0"
 
@@ -30,7 +30,7 @@ class ErlangAT25 < Formula
   uses_from_macos "libxslt" => :build # for xsltproc
 
   resource "html" do
-    url "https://ghproxy.com/https://github.com/erlang/otp/releases/download/OTP-25.3.2.7/otp_doc_html_25.3.2.7.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/erlang/otp/releases/download/OTP-25.3.2.7/otp_doc_html_25.3.2.7.tar.gz"
     sha256 "7c510198f1d777dc428566af03dcbcce12746e8a38b242a38e3408a19d2f3eba"
   end
 

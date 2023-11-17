@@ -2,7 +2,7 @@ cask "asset-catalog-tinkerer" do
   version "2.7"
   sha256 "2034e46b75d7a156d917b1a82b510674d037199826a3c86390f37540ee15cd4b"
 
-  url "https://ghproxy.com/https://github.com/insidegui/AssetCatalogTinkerer/releases/download/#{version}/AssetCatalogTinkerer_v#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/insidegui/AssetCatalogTinkerer/releases/download/#{version}/AssetCatalogTinkerer_v#{version}.zip"
   name "Asset Catalog Tinkerer"
   desc "Browse/extract images from .car files"
   homepage "https://github.com/insidegui/AssetCatalogTinkerer"

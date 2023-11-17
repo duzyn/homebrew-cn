@@ -2,7 +2,7 @@ class Symengine < Formula
   desc "Fast symbolic manipulation library written in C++"
   homepage "https://sympy.org"
   # TODO: Check if we can use unversioned `llvm` at version bump.
-  url "https://ghproxy.com/https://github.com/symengine/symengine/releases/download/v0.11.1/symengine-0.11.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/symengine/symengine/releases/download/v0.11.1/symengine-0.11.1.tar.gz"
   sha256 "217b39955dc19f920c6f54c057fdc89e8e155ddee8f0e3c3cacc67b3e3850b64"
   license "MIT"
   revision 1

@@ -1,7 +1,7 @@
 class Codequery < Formula
   desc "Code-understanding, code-browsing or code-search tool"
   homepage "https://github.com/ruben2020/codequery"
-  url "https://ghproxy.com/https://github.com/ruben2020/codequery/archive/refs/tags/v0.26.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ruben2020/codequery/archive/refs/tags/v0.26.0.tar.gz"
   sha256 "5972a5778159835e37f5c9114a90f1be4756f27487d9074d2fb3464625a0ced2"
   license "MPL-2.0"
 

@@ -1,7 +1,7 @@
 class Moar < Formula
   desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moar"
-  url "https://ghproxy.com/https://github.com/walles/moar/archive/refs/tags/v1.18.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/walles/moar/archive/refs/tags/v1.18.4.tar.gz"
   sha256 "71e5b3e00e047c22b67c2657aa5cd36b19fdc1fac0f03f827212a569d4067810"
   license "BSD-2-Clause"
 

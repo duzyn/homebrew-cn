@@ -38,7 +38,7 @@ class Coccinelle < Formula
   # Bootstrap resource for Ocaml 4.12 compatibility.
   # Remove when Coccinelle supports Ocaml 4.12 natively
   resource "stdcompat" do
-    url "https://ghproxy.com/https://github.com/thierry-martinez/stdcompat/releases/download/v15/stdcompat-15.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/thierry-martinez/stdcompat/releases/download/v15/stdcompat-15.tar.gz"
     sha256 "5e746f68ffe451e7dabe9d961efeef36516b451f35a96e174b8f929a44599cf5"
   end
 

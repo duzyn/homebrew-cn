@@ -1,7 +1,7 @@
 class Gau < Formula
   desc "Open Threat Exchange, Wayback Machine, and Common Crawl URL fetcher"
   homepage "https://github.com/lc/gau"
-  url "https://ghproxy.com/https://github.com/lc/gau/archive/refs/tags/v2.2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lc/gau/archive/refs/tags/v2.2.1.tar.gz"
   sha256 "31abcc1f12fc00078898d96bd32531cd3404a66147b40ab64b31c1d7027671f3"
   license "MIT"
   head "https://github.com/lc/gau.git", branch: "master"

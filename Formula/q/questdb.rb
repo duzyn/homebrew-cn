@@ -1,7 +1,7 @@
 class Questdb < Formula
   desc "Time Series Database"
   homepage "https://questdb.io"
-  url "https://ghproxy.com/https://github.com/questdb/questdb/releases/download/7.3.4/questdb-7.3.4-no-jre-bin.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/questdb/questdb/releases/download/7.3.4/questdb-7.3.4-no-jre-bin.tar.gz"
   sha256 "637ca62f44c73977cd6c40d98578cbb635a73396ce0c348d812ce94d82f642c7"
   license "Apache-2.0"
 

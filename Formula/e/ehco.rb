@@ -6,12 +6,12 @@ class Ehco < Formula
   head "https://github.com/Ehco1996/ehco.git", branch: "master"
 
   stable do
-    url "https://ghproxy.com/https://github.com/Ehco1996/ehco/archive/refs/tags/v1.1.2.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/Ehco1996/ehco/archive/refs/tags/v1.1.2.tar.gz"
     sha256 "064f80a267e22206033c62f5cd61b01172cd7cac532679669474e22993c4884b"
 
     # go@1.20 build patch, remove in next release
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/cb97010/ehco/1.1.2-go-1.20-build.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/cb97010/ehco/1.1.2-go-1.20-build.patch"
       sha256 "47444d6fba83b0f1e02bd42cdc32842f3134ae2a92c029184fd2daa099b25f07"
     end
   end

@@ -1,7 +1,7 @@
 class Telnetd < Formula
   desc "TELNET server"
   homepage "https://opensource.apple.com/"
-  url "https://ghproxy.com/https://github.com/apple-oss-distributions/remote_cmds/archive/refs/tags/remote_cmds-294.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/remote_cmds/archive/refs/tags/remote_cmds-294.tar.gz"
   sha256 "6e0a4a9cd79fa412f41185333588bc5d4e66a97dc6a2275418c97fb17abb3528"
   license all_of: ["BSD-4-Clause-UC", "BSD-3-Clause"]
 
@@ -18,7 +18,7 @@ class Telnetd < Formula
   depends_on :macos
 
   resource "libtelnet" do
-    url "https://ghproxy.com/https://github.com/apple-oss-distributions/libtelnet/archive/refs/tags/libtelnet-13.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/libtelnet/archive/refs/tags/libtelnet-13.tar.gz"
     sha256 "4ffc494a069257477c3a02769a395da8f72f5c26218a02b9ea73fa2a63216cee"
   end
 

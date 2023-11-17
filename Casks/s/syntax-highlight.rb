@@ -2,7 +2,7 @@ cask "syntax-highlight" do
   version "2.1.20"
   sha256 "ab02f358aaa5d5724556b98a94beda8cc04b96f4d767fa2d929693c284170415"
 
-  url "https://ghproxy.com/https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
+  url "https://mirror.ghproxy.com/https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
   name "Syntax Highlight"
   desc "Quicklook extension for source files"
   homepage "https://github.com/sbarex/SourceCodeSyntaxHighlight"

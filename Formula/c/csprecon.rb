@@ -1,7 +1,7 @@
 class Csprecon < Formula
   desc "Discover new target domains using Content Security Policy"
   homepage "https://github.com/edoardottt/csprecon"
-  url "https://ghproxy.com/https://github.com/edoardottt/csprecon/archive/refs/tags/v0.0.8.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/edoardottt/csprecon/archive/refs/tags/v0.0.8.tar.gz"
   sha256 "0a722fa9cc16c408eeb1cbf4e884a061407aa7a5d24beeb7d9bc8ceecf214d4f"
   license "MIT"
 

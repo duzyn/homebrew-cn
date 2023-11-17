@@ -1,7 +1,7 @@
 class Fd < Formula
   desc "Simple, fast and user-friendly alternative to find"
   homepage "https://github.com/sharkdp/fd"
-  url "https://ghproxy.com/https://github.com/sharkdp/fd/archive/refs/tags/v8.7.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sharkdp/fd/archive/refs/tags/v8.7.1.tar.gz"
   sha256 "2292cf6e4ba9262c592075b19ef9c241db32742b61ce613a3f42c474c01a3e28"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/fd.git", branch: "master"

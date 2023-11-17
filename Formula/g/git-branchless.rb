@@ -3,7 +3,7 @@ class GitBranchless < Formula
   homepage "https://github.com/arxanas/git-branchless"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/arxanas/git-branchless/archive/refs/tags/v0.8.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/arxanas/git-branchless/archive/refs/tags/v0.8.0.tar.gz"
   sha256 "f9e13d9a3de960b32fb684a59492defd812bb0785df48facc964478f675f0355"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/arxanas/git-branchless.git", branch: "master"

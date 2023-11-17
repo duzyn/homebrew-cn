@@ -2,7 +2,7 @@ cask "plover" do
   version "4.0.0rc2"
   sha256 "46659da04b7fe04b9b21bda469e292ac53ec005713e5d2d970a90e99e9c2014f"
 
-  url "https://ghproxy.com/https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_10_13_x86_64.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_10_13_x86_64.dmg",
       verified: "github.com/openstenoproject/plover/"
   name "Plover"
   desc "Stenotype engine"

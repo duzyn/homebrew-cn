@@ -1,7 +1,7 @@
 class Osi < Formula
   desc "Open Solver Interface"
   homepage "https://github.com/coin-or/Osi"
-  url "https://ghproxy.com/https://github.com/coin-or/Osi/archive/refs/tags/releases/0.108.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/coin-or/Osi/archive/refs/tags/releases/0.108.9.tar.gz"
   sha256 "8b09802960d7d4fd9579b3e4320bfb36e7f8dca5e5094bf1f5edf1b7003f5562"
   license "EPL-2.0"
 

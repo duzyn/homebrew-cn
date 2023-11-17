@@ -1,7 +1,7 @@
 class Shuffledns < Formula
   desc "Enumerate subdomains using active bruteforce & resolve subdomains with wildcards"
   homepage "https://github.com/projectdiscovery/shuffledns"
-  url "https://ghproxy.com/https://github.com/projectdiscovery/shuffledns/archive/refs/tags/v1.0.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/projectdiscovery/shuffledns/archive/refs/tags/v1.0.9.tar.gz"
   sha256 "ce61eb210c0bb7ff5cc2e0d45e90129764494d9c0b8883e04fe67b16169ab707"
   license "GPL-3.0-or-later"
   head "https://github.com/projectdiscovery/shuffledns.git", branch: "main"

@@ -1,7 +1,7 @@
 class Fsql < Formula
   desc "Search through your filesystem with SQL-esque queries"
   homepage "https://github.com/kashav/fsql"
-  url "https://ghproxy.com/https://github.com/kashav/fsql/archive/refs/tags/v0.5.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/kashav/fsql/archive/refs/tags/v0.5.2.tar.gz"
   sha256 "21f12261516bfa2ebc4136b7e7e08a23743809e847dfdace3c1f6ac88023277d"
   license "MIT"
 

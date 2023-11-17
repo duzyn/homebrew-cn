@@ -2,7 +2,7 @@ cask "continuity-activation-tool" do
   version "1.0"
   sha256 :no_check
 
-  url "https://ghproxy.com/https://github.com/dokterdok/Continuity-Activation-Tool/archive/master.zip"
+  url "https://mirror.ghproxy.com/https://github.com/dokterdok/Continuity-Activation-Tool/archive/master.zip"
   name "Continuity Activation Tool"
   desc "Enable continuity features on compatible hardware"
   homepage "https://github.com/dokterdok/Continuity-Activation-Tool/"

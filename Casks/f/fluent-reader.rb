@@ -2,7 +2,7 @@ cask "fluent-reader" do
   version "1.1.4"
   sha256 "cdcac2ad7199b214be1c4fe0f0f0c936c86ef87c2e173fb87e9395652399cad6"
 
-  url "https://ghproxy.com/https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg",
       verified: "github.com/yang991178/fluent-reader/"
   name "Fluent Reader"
   desc "RSS/Atom news aggregator"

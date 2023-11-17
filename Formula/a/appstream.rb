@@ -1,7 +1,7 @@
 class Appstream < Formula
   desc "Tools and libraries to work with AppStream metadata"
   homepage "https://www.freedesktop.org/wiki/Distributions/AppStream/"
-  url "https://ghproxy.com/https://github.com/ximion/appstream/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ximion/appstream/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "e964fea8b4b7efac7976dc13da856421ddec4299acb5012a7c059f03eabcbeae"
   license "LGPL-2.1-or-later"
 

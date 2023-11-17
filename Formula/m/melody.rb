@@ -1,7 +1,7 @@
 class Melody < Formula
   desc "Language that compiles to regular expressions"
   homepage "https://yoav-lavi.github.io/melody/book"
-  url "https://ghproxy.com/https://github.com/yoav-lavi/melody/archive/refs/tags/0.19.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/yoav-lavi/melody/archive/refs/tags/0.19.0.tar.gz"
   sha256 "d7605160d3589578c84a919c09addd8f4bd1f06441795192041b491462c9f655"
   license any_of: ["Apache-2.0", "MIT"]
 

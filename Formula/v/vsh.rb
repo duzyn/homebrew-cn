@@ -1,7 +1,7 @@
 class Vsh < Formula
   desc "HashiCorp Vault interactive shell"
   homepage "https://github.com/fishi0x01/vsh"
-  url "https://ghproxy.com/https://github.com/fishi0x01/vsh/archive/refs/tags/v0.12.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fishi0x01/vsh/archive/refs/tags/v0.12.2.tar.gz"
   sha256 "713d8f8901c7fc3b2c9c620ce928fa17e3b5a5f949d0dd37ad5ad48ae46dab4b"
   license "MIT"
 

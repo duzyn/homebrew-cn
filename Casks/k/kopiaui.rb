@@ -5,7 +5,7 @@ cask "kopiaui" do
   sha256 arm:   "0d63198e1632d54d9eda0dee8d805707491f77856d802bb434be4da156027d7e",
          intel: "58e4dbac8a4f1ee57067877a137d0da234baab783daf10d68397dd63fca92bce"
 
-  url "https://ghproxy.com/https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg",
       verified: "github.com/kopia/kopia/"
   name "KopiaUI"
   desc "Backup/restore tool"

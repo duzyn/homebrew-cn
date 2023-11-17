@@ -1,7 +1,7 @@
 class Geoip < Formula
   desc "This library is for the GeoIP Legacy format (dat)"
   homepage "https://github.com/maxmind/geoip-api-c"
-  url "https://ghproxy.com/https://github.com/maxmind/geoip-api-c/releases/download/v1.6.12/GeoIP-1.6.12.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/maxmind/geoip-api-c/releases/download/v1.6.12/GeoIP-1.6.12.tar.gz"
   sha256 "1dfb748003c5e4b7fd56ba8c4cd786633d5d6f409547584f6910398389636f80"
   license "LGPL-2.1-or-later"
   head "https://github.com/maxmind/geoip-api-c.git", branch: "main"

@@ -1,7 +1,7 @@
 class PdfDiff < Formula
   desc "Tool for visualizing differences between two pdf files"
   homepage "https://github.com/serhack/pdf-diff"
-  url "https://ghproxy.com/https://github.com/serhack/pdf-diff/archive/refs/tags/v0.0.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/serhack/pdf-diff/archive/refs/tags/v0.0.1.tar.gz"
   sha256 "13053afc3bbe14b84639d5a6a6416863e8c6d93e4f3c2c8ba7c38d4c427ae707"
   license "MIT"
   head "https://github.com/serhack/pdf-diff.git", branch: "main"

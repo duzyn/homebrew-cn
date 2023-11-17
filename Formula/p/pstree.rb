@@ -4,7 +4,7 @@
 class Pstree < Formula
   desc "Show ps output as a tree"
   homepage "https://github.com/FredHucht/pstree"
-  url "https://ghproxy.com/https://github.com/FredHucht/pstree/archive/refs/tags/v2.40.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/FredHucht/pstree/archive/refs/tags/v2.40.tar.gz"
   sha256 "64d613d8f66685b29f13a80e08cddc08616cf3e315a0692cbbf9de0d8aa376b3"
 
   bottle do

@@ -1,7 +1,7 @@
 class PythonLauncher < Formula
   desc "Launch your Python interpreter the lazy/smart way"
   homepage "https://github.com/brettcannon/python-launcher"
-  url "https://ghproxy.com/https://github.com/brettcannon/python-launcher/archive/refs/tags/v1.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/brettcannon/python-launcher/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "31e5a4e50e3db4506e8484db06f6503df1225f482b40a892ffb5131b4ec11a43"
   license "MIT"
   head "https://github.com/brettcannon/python-launcher.git", branch: "main"

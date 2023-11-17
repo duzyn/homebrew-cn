@@ -9,7 +9,7 @@ cask "spundle" do
   homepage "https://eclecticlight.co/dintch/"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     regex(%r{(\d+)/(\d+)/Spundle(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|

@@ -1,7 +1,7 @@
 class SpotifyPlayer < Formula
   desc "Command driven spotify player"
   homepage "https://github.com/aome510/spotify-player"
-  url "https://ghproxy.com/https://github.com/aome510/spotify-player/archive/refs/tags/v0.15.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/aome510/spotify-player/archive/refs/tags/v0.15.2.tar.gz"
   sha256 "799319c79619fb900c9090a81c54df88685417b571e880bad758934f234e77c2"
   license "MIT"
 

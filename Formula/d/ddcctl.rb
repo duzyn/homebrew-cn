@@ -1,7 +1,7 @@
 class Ddcctl < Formula
   desc "DDC monitor controls (brightness) for Mac OSX command-line"
   homepage "https://github.com/kfix/ddcctl"
-  url "https://ghproxy.com/https://github.com/kfix/ddcctl/archive/refs/tags/v1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/kfix/ddcctl/archive/refs/tags/v1.tar.gz"
   sha256 "1b6eddd0bc20594d55d58832f2d2419ee899e74ffc79c389dcdac55617aebb90"
   license "GPL-3.0-only"
 

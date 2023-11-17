@@ -1,7 +1,7 @@
 class Mvfst < Formula
   desc "QUIC transport protocol implementation"
   homepage "https://github.com/facebookincubator/mvfst"
-  url "https://ghproxy.com/https://github.com/facebookincubator/mvfst/archive/refs/tags/v2023.11.13.00.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/facebookincubator/mvfst/archive/refs/tags/v2023.11.13.00.tar.gz"
   sha256 "d295360febdaeb887a8e7598bde4e4f223122d9cc69225803a40acca798a5627"
   license "MIT"
   head "https://github.com/facebookincubator/mvfst.git", branch: "main"

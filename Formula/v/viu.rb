@@ -1,7 +1,7 @@
 class Viu < Formula
   desc "Simple terminal image viewer written in Rust"
   homepage "https://github.com/atanunq/viu"
-  url "https://ghproxy.com/https://github.com/atanunq/viu/archive/refs/tags/v1.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/atanunq/viu/archive/refs/tags/v1.4.0.tar.gz"
   sha256 "9b359c2c7e78d418266654e4c94988b0495ddea62391fcf51512038dd3109146"
   license "MIT"
   head "https://github.com/atanunq/viu.git", branch: "master"

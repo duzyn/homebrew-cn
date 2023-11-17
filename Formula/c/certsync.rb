@@ -138,7 +138,7 @@ class Certsync < Formula
 
   # pypi artifact request, https://github.com/skelsec/unicrypto/issues/7
   resource "unicrypto" do
-    url "https://ghproxy.com/https://github.com/skelsec/unicrypto/archive/refs/tags/0.0.10.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/skelsec/unicrypto/archive/refs/tags/0.0.10.tar.gz"
     sha256 "3daefcdf8e71f9300032393ad85d7f22fc08d07dc05cf7776019b9480bd8506a"
   end
 

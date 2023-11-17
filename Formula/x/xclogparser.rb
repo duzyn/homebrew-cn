@@ -1,7 +1,7 @@
 class Xclogparser < Formula
   desc "Tool to parse the SLF serialization format used by Xcode"
   homepage "https://github.com/MobileNativeFoundation/XCLogParser"
-  url "https://ghproxy.com/https://github.com/MobileNativeFoundation/XCLogParser/archive/refs/tags/v0.2.36.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/MobileNativeFoundation/XCLogParser/archive/refs/tags/v0.2.36.tar.gz"
   sha256 "d3b2e0d75b3c6920535398c882d75c92f901262a302a344a75fe23adfe01e10c"
   license "Apache-2.0"
 
@@ -22,7 +22,7 @@ class Xclogparser < Formula
   uses_from_macos "swift"
 
   resource "test_log" do
-    url "https://ghproxy.com/https://github.com/tinder-maxwellelliott/XCLogParser/releases/download/0.2.9/test.xcactivitylog"
+    url "https://mirror.ghproxy.com/https://github.com/tinder-maxwellelliott/XCLogParser/releases/download/0.2.9/test.xcactivitylog"
     sha256 "bfcad64404f86340b13524362c1b71ef8ac906ba230bdf074514b96475dd5dca"
   end
 

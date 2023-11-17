@@ -1,7 +1,7 @@
 class Topgrade < Formula
   desc "Upgrade all the things"
   homepage "https://github.com/topgrade-rs/topgrade"
-  url "https://ghproxy.com/https://github.com/topgrade-rs/topgrade/archive/refs/tags/v13.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/topgrade-rs/topgrade/archive/refs/tags/v13.0.0.tar.gz"
   sha256 "6d83af871b6ce108dd4773c81835734d306b41425c41c533095ca5a82324b049"
   license "GPL-3.0-or-later"
 

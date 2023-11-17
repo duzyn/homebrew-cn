@@ -1,7 +1,7 @@
 class Metalang99 < Formula
   desc "C99 preprocessor-based metaprogramming language"
   homepage "https://github.com/Hirrolot/metalang99"
-  url "https://ghproxy.com/https://github.com/Hirrolot/metalang99/archive/refs/tags/v1.13.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Hirrolot/metalang99/archive/refs/tags/v1.13.3.tar.gz"
   sha256 "91fe8d4edcc2e7f91c5b567a2b90f2e30c2373f1ebbabcf209ea0d74f63bc1e9"
   license "MIT"
   head "https://github.com/Hirrolot/metalang99.git", branch: "master"

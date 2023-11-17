@@ -1,7 +1,7 @@
 class Kamel < Formula
   desc "Apache Camel K CLI"
   homepage "https://camel.apache.org/"
-  url "https://ghproxy.com/https://github.com/apache/camel-k/archive/refs/tags/v2.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/apache/camel-k/archive/refs/tags/v2.1.0.tar.gz"
   sha256 "1d192ae85d57a0b6a5ee81c17b8fc3bcd0503b028104d1b1cd1c204f5eea9ceb"
   license "Apache-2.0"
   head "https://github.com/apache/camel-k.git", branch: "main"

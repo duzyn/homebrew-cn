@@ -1,7 +1,7 @@
 class Dufs < Formula
   desc "Static file server"
   homepage "https://github.com/sigoden/dufs"
-  url "https://ghproxy.com/https://github.com/sigoden/dufs/archive/refs/tags/v0.37.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sigoden/dufs/archive/refs/tags/v0.37.1.tar.gz"
   sha256 "cb09973b94e2209fa2f657a903c4115309dcb3be2a8232f60c97486ce62948f7"
   license any_of: ["Apache-2.0", "MIT"]
 

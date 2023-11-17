@@ -21,13 +21,13 @@ class Mpack < Formula
 
   # Fix missing return value; clang refuses to compile otherwise
   patch :p0 do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/1ad38a9c/mpack/uudecode.c.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/1ad38a9c/mpack/uudecode.c.patch"
     sha256 "52ad1592ee4b137cde6ddb3c26e3541fa0dcea55c53ae8b37546cd566c897a43"
   end
 
   # Fix build failure because of missing include statements on Linux.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/6e7bc4dd7b971cabc3cc794236e62e732981102f/mpack/linux.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/6e7bc4dd7b971cabc3cc794236e62e732981102f/mpack/linux.patch"
     sha256 "3123446e13b34a083cab8408e16fce0a4dba78c170887722f4cd4306798c54d0"
   end
 

@@ -1,7 +1,7 @@
 class Benerator < Formula
   desc "Tool for realistic test data generation"
   homepage "https://rapiddweller.github.io/homebrew-benerator/"
-  url "https://ghproxy.com/https://github.com/rapiddweller/rapiddweller-benerator-ce/releases/download/3.1.0/rapiddweller-benerator-ce-3.1.0-jdk-11-dist.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rapiddweller/rapiddweller-benerator-ce/releases/download/3.1.0/rapiddweller-benerator-ce-3.1.0-jdk-11-dist.tar.gz"
   sha256 "194feb051ae18cfcd407b8e1668ce9c60561394bc454f9fc9747c274166843bc"
   license "Apache-2.0"
 

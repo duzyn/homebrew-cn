@@ -1,7 +1,7 @@
 class Sqlsmith < Formula
   desc "Random SQL query generator"
   homepage "https://github.com/anse1/sqlsmith"
-  url "https://ghproxy.com/https://github.com/anse1/sqlsmith/releases/download/v1.4/sqlsmith-1.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/anse1/sqlsmith/releases/download/v1.4/sqlsmith-1.4.tar.gz"
   sha256 "b0821acbe82782f6037315549f475368be3592cefe2c3c540f9cf52aa70d2f55"
   license "GPL-3.0-only"
 

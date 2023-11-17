@@ -1,7 +1,7 @@
 class Enchant < Formula
   desc "Spellchecker wrapping library"
   homepage "https://abiword.github.io/enchant/"
-  url "https://ghproxy.com/https://github.com/AbiWord/enchant/releases/download/v2.6.2/enchant-2.6.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/AbiWord/enchant/releases/download/v2.6.2/enchant-2.6.2.tar.gz"
   sha256 "6686a728e56e760f8dee09a22f0fb53b46ee9dbe7d64cf9e5bb35a658bff7e1d"
   license "LGPL-2.1-or-later"
 

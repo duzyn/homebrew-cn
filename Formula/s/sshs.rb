@@ -1,7 +1,7 @@
 class Sshs < Formula
   desc "Graphical command-line client for SSH"
   homepage "https://github.com/quantumsheep/sshs"
-  url "https://ghproxy.com/https://github.com/quantumsheep/sshs/archive/refs/tags/3.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/quantumsheep/sshs/archive/refs/tags/3.4.0.tar.gz"
   sha256 "f46f9185f97e35cf3b02286631df715027c3b0d374959c7e402a21bd30208f74"
   license "MIT"
 

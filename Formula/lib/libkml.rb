@@ -1,7 +1,7 @@
 class Libkml < Formula
   desc "Library to parse, generate and operate on KML"
   homepage "https://github.com/libkml/libkml"
-  url "https://ghproxy.com/https://github.com/libkml/libkml/archive/refs/tags/1.3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libkml/libkml/archive/refs/tags/1.3.0.tar.gz"
   sha256 "8892439e5570091965aaffe30b08631fdf7ca7f81f6495b4648f0950d7ea7963"
   license "BSD-3-Clause"
   revision 1

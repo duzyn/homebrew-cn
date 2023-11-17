@@ -1,7 +1,7 @@
 class Stp < Formula
   desc "Simple Theorem Prover, an efficient SMT solver for bitvectors"
   homepage "https://stp.github.io/"
-  url "https://ghproxy.com/https://github.com/stp/stp/archive/refs/tags/2.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/stp/stp/archive/refs/tags/2.3.3.tar.gz"
   sha256 "ea6115c0fc11312c797a4b7c4db8734afcfce4908d078f386616189e01b4fffa"
   license "MIT"
   revision 8

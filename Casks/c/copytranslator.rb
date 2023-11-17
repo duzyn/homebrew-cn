@@ -2,7 +2,7 @@ cask "copytranslator" do
   version "11.0.0"
   sha256 "b05cd929b0e285d0b5300f71a575b20287f3c814043138ce04e1bcfc4d1dff96"
 
-  url "https://ghproxy.com/https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/CopyTranslator/CopyTranslator/releases/download/v#{version}/copytranslator-#{version}.dmg",
       verified: "github.com/CopyTranslator/CopyTranslator/"
   name "CopyTranslator"
   desc "Tool that translates text in real-time while copying"

@@ -33,7 +33,7 @@ class Httrack < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
     sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
   end
 
@@ -46,8 +46,8 @@ class Httrack < Formula
   end
 
   test do
-    download = "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/homebrew/65c59dedea31/.yardopts"
+    download = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/homebrew/65c59dedea31/.yardopts"
     system bin/"httrack", download, "-O", testpath
-    assert_predicate testpath/"ghproxy.com/https://raw.githubusercontent.com", :exist?
+    assert_predicate testpath/"mirror.ghproxy.com/https://raw.githubusercontent.com", :exist?
   end
 end

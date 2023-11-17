@@ -2,7 +2,7 @@ class Pymol < Formula
   include Language::Python::Virtualenv
   desc "Molecular visualization system"
   homepage "https://pymol.org/"
-  url "https://ghproxy.com/https://github.com/schrodinger/pymol-open-source/archive/refs/tags/v2.5.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/schrodinger/pymol-open-source/archive/refs/tags/v2.5.0.tar.gz"
   sha256 "aa828bf5719bd9a14510118a93182a6e0cadc03a574ba1e327e1e9780a0e80b3"
   license :cannot_represent
   head "https://github.com/schrodinger/pymol-open-source.git", branch: "master"
@@ -37,7 +37,7 @@ class Pymol < Formula
   end
 
   resource "mmtf-cpp" do
-    url "https://ghproxy.com/https://github.com/rcsb/mmtf-cpp/archive/refs/tags/v1.0.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/rcsb/mmtf-cpp/archive/refs/tags/v1.0.0.tar.gz"
     sha256 "881f69c4bb56605fa63fd5ca50842facc4947f686cbf678ad04930674d714f40"
   end
 
@@ -52,7 +52,7 @@ class Pymol < Formula
   end
 
   resource "Pmw" do
-    url "https://ghproxy.com/https://github.com/schrodinger/pmw-patched/archive/8bedfc8747e7757c1048bc5e11899d1163717a43.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/schrodinger/pmw-patched/archive/8bedfc8747e7757c1048bc5e11899d1163717a43.tar.gz"
     sha256 "3a59e6d33857733d0a8ff0c968140b8728f8e27aaa51306160ae6ab13cea26d3"
   end
 

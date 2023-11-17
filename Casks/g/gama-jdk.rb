@@ -5,7 +5,7 @@ cask "gama-jdk" do
   sha256 arm:   "c9b1307df181137e58a39966b5d332bc8e145a823ba189f93e489cf75a214234",
          intel: "1d428e832dbe1778b9b90209052418a941a0549f7653b7e3977ac5980738a1fc"
 
-  url "https://ghproxy.com/https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}_with_JDK.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}_with_JDK.dmg",
       verified: "github.com/gama-platform/gama/"
   name "GAMA Platform with embedded JDK"
   desc "IDE for building spatially explicit agent-based simulations"

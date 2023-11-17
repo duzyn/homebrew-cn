@@ -1,7 +1,7 @@
 class Rke < Formula
   desc "Rancher Kubernetes Engine, a Kubernetes installer that works everywhere"
   homepage "https://rke.docs.rancher.com/"
-  url "https://ghproxy.com/https://github.com/rancher/rke/archive/refs/tags/v1.4.11.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rancher/rke/archive/refs/tags/v1.4.11.tar.gz"
   sha256 "c04182cf0df6ae74cb3db6163f694f427fdb92a0f3621341716f107445860047"
   license "Apache-2.0"
 

@@ -5,7 +5,7 @@ cask "semeru-jdk-open" do
   sha256 arm:   "d647374134635b686e91769eb5c1df657a4031bd11f1012084d8bbb23ae202d6",
          intel: "d736f77e208fb53f19d8a1791ec2d1e749a387659a5c1c85fce45d1efe83d66f"
 
-  url "https://ghproxy.com/https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg",
       verified: "github.com/ibmruntimes/"
   name "IBM Semeru Runtime (JDK) Open Edition"
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"

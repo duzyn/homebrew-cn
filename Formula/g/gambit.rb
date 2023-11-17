@@ -1,7 +1,7 @@
 class Gambit < Formula
   desc "Software tools for game theory"
   homepage "http://www.gambit-project.org"
-  url "https://ghproxy.com/https://github.com/gambitproject/gambit/archive/refs/tags/v16.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gambitproject/gambit/archive/refs/tags/v16.1.0.tar.gz"
   sha256 "de3e3d561cf46aeaec135efaf23f41ddef28968d9071251ca8cb6266babece62"
   license all_of: ["GPL-2.0-or-later", "Zlib"]
 

@@ -67,7 +67,7 @@ class Lilypond < Formula
   uses_from_macos "perl" => :build
 
   resource "font-urw-base35" do
-    url "https://ghproxy.com/https://github.com/ArtifexSoftware/urw-base35-fonts/archive/refs/tags/20200910.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/ArtifexSoftware/urw-base35-fonts/archive/refs/tags/20200910.tar.gz"
     sha256 "e0d9b7f11885fdfdc4987f06b2aa0565ad2a4af52b22e5ebf79e1a98abd0ae2f"
   end
 

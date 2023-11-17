@@ -5,7 +5,7 @@ cask "spacedrive" do
   sha256 arm:   "de1163887a1117847bd25d5857b549c6bda38ef4f3d45fdd07b12bc6fa0270a0",
          intel: "f8b48a8949cab9168d7bd46c09c32845441ca427abd0a33bfbad2d3ad7d83b22"
 
-  url "https://ghproxy.com/https://github.com/spacedriveapp/spacedrive/releases/download/#{version}/Spacedrive-darwin-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/spacedriveapp/spacedrive/releases/download/#{version}/Spacedrive-darwin-#{arch}.dmg"
   name "Spacedrive"
   desc "Open source cross-platform file explorer"
   homepage "https://github.com/spacedriveapp/spacedrive"

@@ -1,7 +1,7 @@
 class Lsof < Formula
   desc "Utility to list open files"
   homepage "https://github.com/lsof-org/lsof"
-  url "https://ghproxy.com/https://github.com/lsof-org/lsof/archive/refs/tags/4.99.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lsof-org/lsof/archive/refs/tags/4.99.0.tar.gz"
   sha256 "27fca13b6a3682114a489205a89d05d92f1c755e282be1f3590db15b16b2ed06"
   license "lsof"
 

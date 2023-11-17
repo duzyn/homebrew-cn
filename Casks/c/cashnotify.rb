@@ -2,7 +2,7 @@ cask "cashnotify" do
   version "3.6.4"
   sha256 "f195b73ad787a0afef91728b7d516f5a5c6a3c9d05c2b37642e407c2346d893d"
 
-  url "https://ghproxy.com/https://github.com/BaguetteEngineering/download.cashnotify.com/releases/download/v#{version}/CashNotify-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/BaguetteEngineering/download.cashnotify.com/releases/download/v#{version}/CashNotify-#{version}.dmg",
       verified: "github.com/BaguetteEngineering/download.cashnotify.com/"
   name "CashNotify"
   desc "Monitor your Stripe and Paypal accounts from your menubar"

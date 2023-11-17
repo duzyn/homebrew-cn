@@ -1,7 +1,7 @@
 class Aspectj < Formula
   desc "Aspect-oriented programming for Java"
   homepage "https://www.eclipse.org/aspectj/"
-  url "https://ghproxy.com/https://github.com/eclipse-aspectj/aspectj/releases/download/V1_9_20_1/aspectj-1.9.20.1.jar"
+  url "https://mirror.ghproxy.com/https://github.com/eclipse-aspectj/aspectj/releases/download/V1_9_20_1/aspectj-1.9.20.1.jar"
   sha256 "9f37838b559d9c86790c5c69645481ff873a16057bc114323b5bb14656936416"
   license "EPL-2.0"
 

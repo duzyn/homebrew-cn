@@ -2,7 +2,7 @@ cask "minisim" do
   version "0.8.0"
   sha256 "d9fd74e21687d4179ef2ad90b8454e260f4ebb533b8d91105d21b5aeb3fc51e7"
 
-  url "https://ghproxy.com/https://github.com/okwasniewski/MiniSim/releases/download/v#{version}/MiniSim.app.zip",
+  url "https://mirror.ghproxy.com/https://github.com/okwasniewski/MiniSim/releases/download/v#{version}/MiniSim.app.zip",
       verified: "github.com/okwasniewski/MiniSim/"
   name "MiniSim"
   desc "App for launching iOS and Android simulators"

@@ -1,7 +1,7 @@
 class Mongrel2 < Formula
   desc "Application, language, and network architecture agnostic web server"
   homepage "https://mongrel2.org/"
-  url "https://ghproxy.com/https://github.com/mongrel2/mongrel2/releases/download/v1.13.0/mongrel2-v1.13.0.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/mongrel2/mongrel2/releases/download/v1.13.0/mongrel2-v1.13.0.tar.bz2"
   sha256 "b6f1f50c9f65b605342d8792b1cc8a1c151105339030313b9825b6a68d400c10"
   license "BSD-3-Clause"
   head "https://github.com/mongrel2/mongrel2.git", branch: "develop"

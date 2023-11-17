@@ -32,7 +32,7 @@ class Jetty < Formula
     # Once 1.0.5 is available, we can switch to stable versions. Afterward, the version should
     # probably match the jetty-setuid version that is included with jetty.
     resource "jetty.toolchain" do
-      url "https://ghproxy.com/https://github.com/eclipse/jetty.toolchain/archive/ce0f110e0b95baf85775897aa90f5b6c0cc6cd4d.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/eclipse/jetty.toolchain/archive/ce0f110e0b95baf85775897aa90f5b6c0cc6cd4d.tar.gz"
       sha256 "06a3ac033e5c4cc05716e7d362de7257e73aad1783b297bd57b6e0f7661555ab"
 
       # Fix header paths on macOS to follow modern JDKs rather than old system Java.

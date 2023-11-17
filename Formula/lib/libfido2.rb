@@ -1,7 +1,7 @@
 class Libfido2 < Formula
   desc "Provides library functionality for FIDO U2F & FIDO 2.0, including USB"
   homepage "https://developers.yubico.com/libfido2/"
-  url "https://ghproxy.com/https://github.com/Yubico/libfido2/archive/refs/tags/1.14.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Yubico/libfido2/archive/refs/tags/1.14.0.tar.gz"
   sha256 "3601792e320032d428002c4cce8499a4c7b803319051a25a0c9f1f138ffee45a"
   license "BSD-2-Clause"
 

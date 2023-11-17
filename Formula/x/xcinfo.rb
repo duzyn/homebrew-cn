@@ -1,7 +1,7 @@
 class Xcinfo < Formula
   desc "Tool to get information about and install available Xcode versions"
   homepage "https://github.com/xcodereleases/xcinfo"
-  url "https://ghproxy.com/https://github.com/xcodereleases/xcinfo/archive/refs/tags/1.0.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/xcodereleases/xcinfo/archive/refs/tags/1.0.3.tar.gz"
   sha256 "b22f56193e4de8b71bbdaf99c17cec03f291d333d095311ad7aab74b5fb50c5a"
   license "MIT"
 

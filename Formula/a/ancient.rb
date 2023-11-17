@@ -1,7 +1,7 @@
 class Ancient < Formula
   desc "Decompression routines for ancient formats"
   homepage "https://github.com/temisu/ancient"
-  url "https://ghproxy.com/https://github.com/temisu/ancient/archive/refs/tags/v2.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/temisu/ancient/archive/refs/tags/v2.1.1.tar.gz"
   sha256 "6f63e2765866925f1b188baee958d4518720bd0009ab4f50b390ea5028649ec2"
   license "BSD-2-Clause"
 

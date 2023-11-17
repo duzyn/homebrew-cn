@@ -1,7 +1,7 @@
 class Fcp < Formula
   desc "Significantly faster alternative to the classic Unix cp(1) command"
   homepage "https://github.com/Svetlitski/fcp/"
-  url "https://ghproxy.com/https://github.com/Svetlitski/fcp/archive/refs/tags/v0.2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Svetlitski/fcp/archive/refs/tags/v0.2.1.tar.gz"
   sha256 "e835d014849f5a3431a0798bcac02332915084bf4f4070fb1c6914b1865295f2"
   license "BSD-3-Clause"
 

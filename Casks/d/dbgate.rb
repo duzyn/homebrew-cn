@@ -2,7 +2,7 @@ cask "dbgate" do
   version "5.2.7"
   sha256 "0f69344bbe00f77a40f1219c493a9c27c8c24f2ac658b481af2b55c7bb471e74"
 
-  url "https://ghproxy.com/https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-mac_universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-mac_universal.dmg",
       verified: "github.com/dbgate/dbgate/"
   name "DbGate"
   desc "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others"

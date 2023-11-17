@@ -1,7 +1,7 @@
 class Treefmt < Formula
   desc "One CLI to format the code tree"
   homepage "https://github.com/numtide/treefmt"
-  url "https://ghproxy.com/https://github.com/numtide/treefmt/archive/refs/tags/v0.6.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/numtide/treefmt/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "5bb67936c5e1dfdb0f260e0f1795e1624697e266c6c1b9e47914df4aa17c5107"
   license "MIT"
 

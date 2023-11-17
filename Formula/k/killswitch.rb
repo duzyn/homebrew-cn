@@ -1,7 +1,7 @@
 class Killswitch < Formula
   desc "VPN kill switch for macOS"
   homepage "https://vpn-kill-switch.com"
-  url "https://ghproxy.com/https://github.com/vpn-kill-switch/killswitch/archive/refs/tags/v0.7.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/vpn-kill-switch/killswitch/archive/refs/tags/v0.7.3.tar.gz"
   sha256 "dbc1fc04e9945049e0cad3aa18740394cac9d93a0aacca00d45c82ec891346f1"
   license "BSD-3-Clause"
 

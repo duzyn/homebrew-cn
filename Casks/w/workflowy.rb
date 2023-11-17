@@ -2,7 +2,7 @@ cask "workflowy" do
   version "4.0.2311142047"
   sha256 "f70f8728137785234d4245b09f98265974ee10b3a8cb200e662a500c3ca258ab"
 
-  url "https://ghproxy.com/https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.zip",
+  url "https://mirror.ghproxy.com/https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.zip",
       verified: "github.com/workflowy/desktop/"
   name "WorkFlowy"
   desc "Notetaking tool"

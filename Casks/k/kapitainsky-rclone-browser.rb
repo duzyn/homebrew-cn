@@ -2,7 +2,7 @@ cask "kapitainsky-rclone-browser" do
   version "1.8.0,a0b66c6"
   sha256 "44465643aa1a8b87ff9d68410567045674e3d979e789f8b0bd2953e1ebf7e715"
 
-  url "https://ghproxy.com/https://github.com/kapitainsky/RcloneBrowser/releases/download/#{version.csv.first}/rclone-browser-#{version.csv.first}-#{version.csv.second}-macos.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/kapitainsky/RcloneBrowser/releases/download/#{version.csv.first}/rclone-browser-#{version.csv.first}-#{version.csv.second}-macos.dmg"
   name "Rclone Browser"
   desc "GUI for rclone"
   homepage "https://github.com/kapitainsky/RcloneBrowser"

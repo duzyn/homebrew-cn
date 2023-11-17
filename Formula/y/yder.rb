@@ -1,7 +1,7 @@
 class Yder < Formula
   desc "Logging library for C applications"
   homepage "https://babelouest.github.io/yder/"
-  url "https://ghproxy.com/https://github.com/babelouest/yder/archive/refs/tags/v1.4.20.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/babelouest/yder/archive/refs/tags/v1.4.20.tar.gz"
   sha256 "c1a7f2281514d0d0bba912b6b70f371d8c127ccfd644b8c438c9301a0fd4c5f2"
   license "LGPL-2.1-only"
 

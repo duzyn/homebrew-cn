@@ -1,7 +1,7 @@
 class Pmd < Formula
   desc "Source code analyzer for Java, JavaScript, and more"
   homepage "https://pmd.github.io"
-  url "https://ghproxy.com/https://github.com/pmd/pmd/releases/download/pmd_releases/6.55.0/pmd-bin-6.55.0.zip"
+  url "https://mirror.ghproxy.com/https://github.com/pmd/pmd/releases/download/pmd_releases/6.55.0/pmd-bin-6.55.0.zip"
   sha256 "21acf96d43cb40d591cacccc1c20a66fc796eaddf69ea61812594447bac7a11d"
   license "BSD-4-Clause"
 

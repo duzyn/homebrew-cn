@@ -1,7 +1,7 @@
 class Xeol < Formula
   desc "Xcanner for end-of-life software in container images, filesystems, and SBOMs"
   homepage "https://github.com/xeol-io/xeol"
-  url "https://ghproxy.com/https://github.com/xeol-io/xeol/archive/refs/tags/v0.9.10.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/xeol-io/xeol/archive/refs/tags/v0.9.10.tar.gz"
   sha256 "cf74990385fdccda05469e9aa996ff88707b05a3988f5985c292f70957e9366f"
   license "Apache-2.0"
 

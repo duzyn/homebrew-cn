@@ -2,7 +2,7 @@ cask "reactotron" do
   version "2.17.1"
   sha256 "0b498386dd5feecd8f5137a629cf2f3170c6c92f1d33eb8e40831e4daddfc959"
 
-  url "https://ghproxy.com/https://github.com/infinitered/reactotron/releases/download/v#{version}/Reactotron-#{version}-mac.zip"
+  url "https://mirror.ghproxy.com/https://github.com/infinitered/reactotron/releases/download/v#{version}/Reactotron-#{version}-mac.zip"
   name "Reactotron"
   desc "Desktop app for inspecting React JS and React Native projects"
   homepage "https://github.com/infinitered/reactotron"
@@ -14,7 +14,7 @@ cask "reactotron" do
   # For the time being, we check the "Quick Installation Guide" file that's
   # linked in the README.
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/infinitered/reactotron/master/docs/installing.md"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/infinitered/reactotron/master/docs/installing.md"
     regex(%r{releases/tag/v?(\d+(?:\.\d+)+)\)}i)
   end
 

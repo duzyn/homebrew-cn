@@ -1,7 +1,7 @@
 class Yash < Formula
   desc "Yet another shell: a POSIX-compliant command-line shell"
   homepage "https://yash.osdn.jp/"
-  url "https://ghproxy.com/https://github.com/magicant/yash/releases/download/2.55/yash-2.55.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/magicant/yash/releases/download/2.55/yash-2.55.tar.xz"
   sha256 "97cd809d5e216b3c4afae42379f1bd4f5082b7c16d51e282d60a5014fbc9e1f6"
   license "GPL-2.0-or-later"
 

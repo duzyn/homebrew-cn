@@ -1,7 +1,7 @@
 class Lcdproc < Formula
   desc "Display real-time system information on a LCD"
   homepage "https://www.lcdproc.org/"
-  url "https://ghproxy.com/https://github.com/lcdproc/lcdproc/releases/download/v0.5.9/lcdproc-0.5.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lcdproc/lcdproc/releases/download/v0.5.9/lcdproc-0.5.9.tar.gz"
   sha256 "d48a915496c96ff775b377d2222de3150ae5172bfb84a6ec9f9ceab962f97b83"
   license "GPL-2.0-or-later"
   revision 2

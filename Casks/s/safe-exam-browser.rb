@@ -2,7 +2,7 @@ cask "safe-exam-browser" do
   version "3.3"
   sha256 "db671f4a61ea1ca14b1c56e1cf5334669cd86307ce62c030e710ab3e7347e627"
 
-  url "https://ghproxy.com/https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg",
       verified: "github.com/SafeExamBrowser/seb-mac/"
   name "Safe Exam Browser"
   desc "Web browser environment to carry out e-assessments safely"

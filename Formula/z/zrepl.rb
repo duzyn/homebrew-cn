@@ -1,7 +1,7 @@
 class Zrepl < Formula
   desc "One-stop ZFS backup & replication solution"
   homepage "https://zrepl.github.io"
-  url "https://ghproxy.com/https://github.com/zrepl/zrepl/archive/refs/tags/v0.6.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/zrepl/zrepl/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "263c82501b75a1413f8a298c1d67d7e940c1b0cb967979790773237e2a30adbd"
   license "MIT"
   head "https://github.com/zrepl/zrepl.git", branch: "master"
@@ -19,7 +19,7 @@ class Zrepl < Formula
   depends_on "go" => :build
 
   resource "homebrew-sample_config" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/zrepl/zrepl/master/config/samples/local.yml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/zrepl/zrepl/master/config/samples/local.yml"
     sha256 "f27b21716e6efdc208481a8f7399f35fd041183783e00c57f62b3a5520470c05"
   end
 

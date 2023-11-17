@@ -2,7 +2,7 @@ cask "extraterm" do
   version "0.74.0"
   sha256 "f23a37036a376972fb263cf5d1c4b621bc7718bbb15720b85c7dbff444cdcce0"
 
-  url "https://ghproxy.com/https://github.com/sedwards2009/extraterm/releases/download/v#{version}/ExtratermQt_#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/sedwards2009/extraterm/releases/download/v#{version}/ExtratermQt_#{version}.dmg",
       verified: "github.com/sedwards2009/extraterm/"
   name "extraterm"
   desc "Swiss army chainsaw of terminal emulators"

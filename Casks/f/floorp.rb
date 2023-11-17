@@ -2,7 +2,7 @@ cask "floorp" do
   version "11.5.1"
   sha256 "1b2c1ced1370b66eb5dd1aac8590a56d599316f262f24865eb337bf4750ed882"
 
-  url "https://ghproxy.com/https://github.com/Floorp-Projects/Floorp/releases/download/v#{version}/floorp-macOS-universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Floorp-Projects/Floorp/releases/download/v#{version}/floorp-macOS-universal.dmg",
       verified: "github.com/Floorp-Projects/Floorp/"
   name "Floorp browser"
   desc "Privacy-focused Firefox-based browser"

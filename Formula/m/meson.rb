@@ -1,7 +1,7 @@
 class Meson < Formula
   desc "Fast and user friendly build system"
   homepage "https://mesonbuild.com/"
-  url "https://ghproxy.com/https://github.com/mesonbuild/meson/releases/download/1.2.3/meson-1.2.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/mesonbuild/meson/releases/download/1.2.3/meson-1.2.3.tar.gz"
   sha256 "4533a43c34548edd1f63a276a42690fce15bde9409bcf20c4b8fa3d7e4d7cac1"
   license "Apache-2.0"
   head "https://github.com/mesonbuild/meson.git", branch: "master"

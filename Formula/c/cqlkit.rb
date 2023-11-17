@@ -1,7 +1,7 @@
 class Cqlkit < Formula
   desc "CLI tool to export Cassandra query as CSV and JSON format"
   homepage "https://github.com/tenmax/cqlkit"
-  url "https://ghproxy.com/https://github.com/tenmax/cqlkit/releases/download/v0.3.3/cqlkit-0.3.3.zip"
+  url "https://mirror.ghproxy.com/https://github.com/tenmax/cqlkit/releases/download/v0.3.3/cqlkit-0.3.3.zip"
   sha256 "0574b4b6fe893078e993a80f95a183b89955129ab8929f5032b7faacf611952c"
   license "Apache-2.0"
 

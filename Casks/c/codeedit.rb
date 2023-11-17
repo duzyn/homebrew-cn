@@ -2,7 +2,7 @@ cask "codeedit" do
   version "0.0.3-alpha.36,5650b45"
   sha256 "5faeabb324bcf3fc822244e8f309098ede05b8f38c27f6de8dc10da11c43a6c1"
 
-  url "https://ghproxy.com/https://github.com/CodeEditApp/CodeEdit/releases/download/#{version.csv.first}/CodeEdit-#{version.csv.second}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/CodeEditApp/CodeEdit/releases/download/#{version.csv.first}/CodeEdit-#{version.csv.second}.dmg",
       verified: "github.com/CodeEditApp/CodeEdit/"
   name "CodeEdit"
   desc "Code editor"

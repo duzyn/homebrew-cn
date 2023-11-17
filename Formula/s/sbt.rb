@@ -1,7 +1,7 @@
 class Sbt < Formula
   desc "Build tool for Scala projects"
   homepage "https://www.scala-sbt.org/"
-  url "https://ghproxy.com/https://github.com/sbt/sbt/releases/download/v1.9.7/sbt-1.9.7.tgz"
+  url "https://mirror.ghproxy.com/https://github.com/sbt/sbt/releases/download/v1.9.7/sbt-1.9.7.tgz"
   mirror "https://sbt-downloads.cdnedge.bluemix.net/releases/v1.9.7/sbt-1.9.7.tgz"
   sha256 "23543bc4597b552e8e2c27d695fe672ec235ab8a64f766b37828fb68c6d9d910"
   license "Apache-2.0"

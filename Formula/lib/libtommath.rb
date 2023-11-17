@@ -1,7 +1,7 @@
 class Libtommath < Formula
   desc "C library for number theoretic multiple-precision integers"
   homepage "https://www.libtom.net/LibTomMath/"
-  url "https://ghproxy.com/https://github.com/libtom/libtommath/releases/download/v1.2.1/ltm-1.2.1.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/libtom/libtommath/releases/download/v1.2.1/ltm-1.2.1.tar.xz"
   sha256 "986025d7b374276fee2e30e99f3649e4ac0db8a02257a37ee10eae72abed0d1f"
   license "Unlicense"
   head "https://github.com/libtom/libtommath.git", branch: "develop"

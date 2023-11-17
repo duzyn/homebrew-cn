@@ -1,7 +1,7 @@
 class InotifyTools < Formula
   desc "C library and command-line programs providing a simple interface to inotify"
   homepage "https://github.com/inotify-tools/inotify-tools"
-  url "https://ghproxy.com/https://github.com/inotify-tools/inotify-tools/archive/refs/tags/4.23.9.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/inotify-tools/inotify-tools/archive/refs/tags/4.23.9.0.tar.gz"
   sha256 "1dfa33f80b6797ce2f6c01f454fd486d30be4dca1b0c5c2ea9ba3c30a5c39855"
   license "GPL-2.0-or-later"
 

@@ -2,7 +2,7 @@ cask "thonny" do
   version "4.1.3"
   sha256 "01c9525d56457d76f4fa31745bfc4178f8182d7a5f08ada64c28fbbf9e79df56"
 
-  url "https://ghproxy.com/https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
   name "Thonny"
   desc "Python IDE for beginners"

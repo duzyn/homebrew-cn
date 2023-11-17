@@ -1,7 +1,7 @@
 class Libjwt < Formula
   desc "JSON Web Token C library"
   homepage "https://github.com/benmcollins/libjwt"
-  url "https://ghproxy.com/https://github.com/benmcollins/libjwt/releases/download/v1.16.0/libjwt-1.16.0.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/benmcollins/libjwt/releases/download/v1.16.0/libjwt-1.16.0.tar.bz2"
   sha256 "ea9d0bff35b8b8f8f4df9d9920123f366ea4e6bb1c90ebe16143d840f146f2ed"
   license "MPL-2.0"
 

@@ -1,7 +1,7 @@
 class IsaL < Formula
   desc "Intelligent Storage Acceleration Library"
   homepage "https://github.com/intel/isa-l"
-  url "https://ghproxy.com/https://github.com/intel/isa-l/archive/refs/tags/v2.30.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/intel/isa-l/archive/refs/tags/v2.30.0.tar.gz"
   sha256 "bcf592c04fdfa19e723d2adf53d3e0f4efd5b956bb618fed54a1108d76a6eb56"
   license "BSD-3-Clause"
 

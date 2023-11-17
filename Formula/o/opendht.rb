@@ -1,7 +1,7 @@
 class Opendht < Formula
   desc "C++17 Distributed Hash Table implementation"
   homepage "https://github.com/savoirfairelinux/opendht"
-  url "https://ghproxy.com/https://github.com/savoirfairelinux/opendht/archive/refs/tags/v3.1.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/savoirfairelinux/opendht/archive/refs/tags/v3.1.2.tar.gz"
   sha256 "7b1e451a21a10ac1d189c9467be75e4e3e4e6769ed8cab37a9c7f098b361dd22"
   license "GPL-3.0-or-later"
 

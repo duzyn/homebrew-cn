@@ -1,7 +1,7 @@
 class Fwupd < Formula
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
-  url "https://ghproxy.com/https://github.com/fwupd/fwupd/releases/download/1.9.8/fwupd-1.9.8.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/fwupd/fwupd/releases/download/1.9.8/fwupd-1.9.8.tar.xz"
   sha256 "6060075ce02ab11c66c96d6ca689c75f3abc909730c7279c5edd8cf5bfaed46a"
   license "LGPL-2.1-or-later"
   head "https://github.com/fwupd/fwupd.git", branch: "main"

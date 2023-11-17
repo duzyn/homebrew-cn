@@ -1,7 +1,7 @@
 class Javarepl < Formula
   desc "Read Eval Print Loop (REPL) for Java"
   homepage "https://github.com/albertlatacz/java-repl"
-  url "https://ghproxy.com/https://github.com/albertlatacz/java-repl/releases/download/428/javarepl-428.jar"
+  url "https://mirror.ghproxy.com/https://github.com/albertlatacz/java-repl/releases/download/428/javarepl-428.jar"
   sha256 "d42de9405aa69ea6c4eb0e28a6b3cb09e3bd008649d9ac6c55a4aa798e284734"
   license "Apache-2.0"
   revision 2

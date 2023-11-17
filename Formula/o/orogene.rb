@@ -1,7 +1,7 @@
 class Orogene < Formula
   desc "`node_modules/` package manager and utility toolkit"
   homepage "https://orogene.dev"
-  url "https://ghproxy.com/https://github.com/orogene/orogene/archive/refs/tags/v0.3.34.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/orogene/orogene/archive/refs/tags/v0.3.34.tar.gz"
   sha256 "d4e50c2c3965e62160cf6a15db3734e4a847ca79629599fdd5ce30579aaae9a3"
   license "Apache-2.0"
   head "https://github.com/orogene/orogene.git", branch: "main"

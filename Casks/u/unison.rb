@@ -2,7 +2,7 @@ cask "unison" do
   version "2.53.3"
   sha256 "c389e23927e43117851dd01b6fe681c8fa2f8c21bad599c24e2dfb8639f4100b"
 
-  url "https://ghproxy.com/https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos.app.tar.gz",
+  url "https://mirror.ghproxy.com/https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos.app.tar.gz",
       verified: "github.com/bcpierce00/unison/"
   name "Unison"
   desc "File synchronizer"

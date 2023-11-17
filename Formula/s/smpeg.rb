@@ -1,7 +1,7 @@
 class Smpeg < Formula
   desc "SDL MPEG Player Library"
   homepage "https://icculus.org/smpeg/"
-  url "https://ghproxy.com/https://github.com/icculus/smpeg/archive/refs/tags/release_0_4_5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/icculus/smpeg/archive/refs/tags/release_0_4_5.tar.gz"
   sha256 "e2e53bfd2e6401e2c29e5eb3929be0e8698bc9e4c9d731751f67e77b408f1f74"
   # license change was done in 2021 Aug, which is 8 years after 0.4.5 release
   # commit ref, https://github.com/icculus/smpeg/commit/ffa0d54

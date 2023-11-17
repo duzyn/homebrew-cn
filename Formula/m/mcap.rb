@@ -1,7 +1,7 @@
 class Mcap < Formula
   desc "Serialization-agnostic container file format for pub/sub messages"
   homepage "https://mcap.dev"
-  url "https://ghproxy.com/https://github.com/foxglove/mcap/archive/refs/tags/releases/mcap-cli/v0.0.38.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/foxglove/mcap/archive/refs/tags/releases/mcap-cli/v0.0.38.tar.gz"
   sha256 "06e8c3d4eb0f7a1cc2128a54025ba9bd62366f4f0eceef5b23e2e5d727873425"
   license "MIT"
   head "https://github.com/foxglove/mcap.git", branch: "main"
@@ -33,17 +33,17 @@ class Mcap < Formula
 
   test do
     resource "homebrew-testdata-OneMessage" do
-      url "https://ghproxy.com/https://github.com/foxglove/mcap/raw/releases/mcap-cli/v0.0.20/tests/conformance/data/OneMessage/OneMessage-ch-chx-mx-pad-rch-rsh-st-sum.mcap"
+      url "https://mirror.ghproxy.com/https://github.com/foxglove/mcap/raw/releases/mcap-cli/v0.0.20/tests/conformance/data/OneMessage/OneMessage-ch-chx-mx-pad-rch-rsh-st-sum.mcap"
       sha256 "16e841dbae8aae5cc6824a63379c838dca2e81598ae08461bdcc4e7334e11da4"
     end
 
     resource "homebrew-testdata-OneAttachment" do
-      url "https://ghproxy.com/https://github.com/foxglove/mcap/raw/releases/mcap-cli/v0.0.20/tests/conformance/data/OneAttachment/OneAttachment-ax-pad-st-sum.mcap"
+      url "https://mirror.ghproxy.com/https://github.com/foxglove/mcap/raw/releases/mcap-cli/v0.0.20/tests/conformance/data/OneAttachment/OneAttachment-ax-pad-st-sum.mcap"
       sha256 "f9dde0a5c9f7847e145be73ea874f9cdf048119b4f716f5847513ee2f4d70643"
     end
 
     resource "homebrew-testdata-OneMetadata" do
-      url "https://ghproxy.com/https://github.com/foxglove/mcap/raw/releases/mcap-cli/v0.0.20/tests/conformance/data/OneMetadata/OneMetadata-mdx-pad-st-sum.mcap"
+      url "https://mirror.ghproxy.com/https://github.com/foxglove/mcap/raw/releases/mcap-cli/v0.0.20/tests/conformance/data/OneMetadata/OneMetadata-mdx-pad-st-sum.mcap"
       sha256 "cb779e0296d288ad2290d3c1911a77266a87c0bdfee957049563169f15d6ba8e"
     end
 

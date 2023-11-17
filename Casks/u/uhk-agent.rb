@@ -2,7 +2,7 @@ cask "uhk-agent" do
   version "3.2.1"
   sha256 "8cc7ba22b9cd81595c4bae981de4c2a62116146e5249a097abf523c85800cb88"
 
-  url "https://ghproxy.com/https://github.com/UltimateHackingKeyboard/agent/releases/download/v#{version}/UHK.Agent-#{version}-mac.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/UltimateHackingKeyboard/agent/releases/download/v#{version}/UHK.Agent-#{version}-mac.dmg"
   name "Ultimate Hacking Keyboard Agent"
   name "UHK Agent"
   desc "Configuration application for the Ultimate Hacking Keyboard"

@@ -2,7 +2,7 @@ cask "ckb-next" do
   version "0.4.4"
   sha256 "2a762181525ba4b1f26a95b374babe48ff0d590f1d36bc109749c845c8a57090"
 
-  url "https://ghproxy.com/https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/ckb-next/ckb-next/releases/download/v#{version}/ckb-next_v#{version}.dmg"
   name "ckb-next"
   desc "RGB driver"
   homepage "https://github.com/ckb-next/ckb-next"

@@ -2,7 +2,7 @@ cask "keepingyouawake" do
   version "1.6.5"
   sha256 "4e9d879c95cbf8e25370974c2b8875f17b2aa3b9c295bb76d0da74cd833afe04"
 
-  url "https://ghproxy.com/https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip",
       verified: "github.com/newmarcel/KeepingYouAwake/"
   name "KeepingYouAwake"
   desc "Tool to prevent the system from going into sleep mode"

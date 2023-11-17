@@ -1,7 +1,7 @@
 class Wandio < Formula
   desc "Transparently read from and write to zip, bzip2, lzma or zstd archives"
   homepage "https://github.com/LibtraceTeam/wandio"
-  url "https://ghproxy.com/https://github.com/LibtraceTeam/wandio/archive/refs/tags/4.2.6-1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/LibtraceTeam/wandio/archive/refs/tags/4.2.6-1.tar.gz"
   version "4.2.6"
   sha256 "f035d4d6beadf7a7e5619fb73db5a84d338008b5f4d6b1b8843619547248ec73"
   license "LGPL-3.0-or-later"

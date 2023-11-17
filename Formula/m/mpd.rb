@@ -1,7 +1,7 @@
 class Mpd < Formula
   desc "Music Player Daemon"
   homepage "https://web.archive.org/web/20230506090801/https://www.musicpd.org/"
-  url "https://ghproxy.com/https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.23.14.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.23.14.tar.gz"
   sha256 "3547237437368962c8a8bdec088a369a94ef66f7afc22f6fc0d643c1406bd533"
   license "GPL-2.0-or-later"
   head "https://github.com/MusicPlayerDaemon/MPD.git", branch: "master"

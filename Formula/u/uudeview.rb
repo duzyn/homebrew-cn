@@ -26,7 +26,7 @@ class Uudeview < Formula
 
   # Fix function signatures (for clang)
   patch :p0 do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/19da78c/uudeview/inews.c.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/19da78c/uudeview/inews.c.patch"
     sha256 "4bdf357ede31abc17b1fbfdc230051f0c2beb9bb8805872bd66e40989f686d7b"
   end
 

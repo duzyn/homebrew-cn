@@ -1,7 +1,7 @@
 class CargoNextest < Formula
   desc "Next-generation test runner for Rust"
   homepage "https://nexte.st"
-  url "https://ghproxy.com/https://github.com/nextest-rs/nextest/archive/refs/tags/cargo-nextest-0.9.62.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nextest-rs/nextest/archive/refs/tags/cargo-nextest-0.9.62.tar.gz"
   sha256 "d3d412911da8701743a3f5833e8c188b5183cca3abadb2cb97d4eb28df9bfcf8"
   license "Apache-2.0"
 

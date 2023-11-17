@@ -1,7 +1,7 @@
 class Slirp4netns < Formula
   desc "User-mode networking for unprivileged network namespaces"
   homepage "https://github.com/rootless-containers/slirp4netns"
-  url "https://ghproxy.com/https://github.com/rootless-containers/slirp4netns/archive/refs/tags/v1.2.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rootless-containers/slirp4netns/archive/refs/tags/v1.2.2.tar.gz"
   sha256 "2450afb5730ee86a70f9c3f0d3fbc8981ab8e147246f4e0d354f0226a3a40b36"
   license "GPL-2.0-or-later"
 
@@ -31,12 +31,12 @@ class Slirp4netns < Formula
 
   test do
     resource "homebrew-test-common" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/rootless-containers/slirp4netns/v1.2.1/tests/common.sh"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/rootless-containers/slirp4netns/v1.2.1/tests/common.sh"
       sha256 "756149863c2397c09fabbc0a3234858ad4a5b2fd1480fb4646c8fa9d294c001a"
     end
 
     resource "homebrew-test-api-socket" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/rootless-containers/slirp4netns/v1.2.1/tests/test-slirp4netns-api-socket.sh"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/rootless-containers/slirp4netns/v1.2.1/tests/test-slirp4netns-api-socket.sh"
       sha256 "075f43c98d9a848ab5966d515174b3c996deec8c290873d92e200dc6ceae1500"
     end
 

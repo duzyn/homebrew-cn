@@ -1,7 +1,7 @@
 class Tgui < Formula
   desc "GUI library for use with sfml"
   homepage "https://tgui.eu"
-  url "https://ghproxy.com/https://github.com/texus/TGUI/archive/refs/tags/v1.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/texus/TGUI/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "765e2db29ef4521dcf3947ce7e020614adce4eb662145bb5774685ecb68847f8"
   license "Zlib"
 

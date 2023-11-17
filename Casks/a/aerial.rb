@@ -2,7 +2,7 @@ cask "aerial" do
   version "3.3.5"
   sha256 "69f2db4c75e0f7cad34ff1b3f3ebdf3f6714024c064894c6ac1795f1d4608c02"
 
-  url "https://ghproxy.com/https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip",
+  url "https://mirror.ghproxy.com/https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip",
       verified: "github.com/JohnCoates/Aerial/"
   name "Aerial Screensaver"
   desc "Apple TV Aerial screensaver"

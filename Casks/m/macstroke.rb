@@ -2,7 +2,7 @@ cask "macstroke" do
   version "2.0.5"
   sha256 "113116367df18a2d3278d9540afdb0476f6b45dd6fbd09a565c9c038bb5e1a88"
 
-  url "https://ghproxy.com/https://github.com/mtjo/MacStroke/releases/download/#{version}/MacStroke.zip"
+  url "https://mirror.ghproxy.com/https://github.com/mtjo/MacStroke/releases/download/#{version}/MacStroke.zip"
   name "MacStroke"
   desc "Configurable global mouse gestures"
   homepage "https://github.com/mtjo/MacStroke/"

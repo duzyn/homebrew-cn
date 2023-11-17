@@ -1,7 +1,7 @@
 class Freeglut < Formula
   desc "Open-source alternative to the OpenGL Utility Toolkit (GLUT) library"
   homepage "https://freeglut.sourceforge.net/"
-  url "https://ghproxy.com/https://github.com/FreeGLUTProject/freeglut/releases/download/v3.4.0/freeglut-3.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/FreeGLUTProject/freeglut/releases/download/v3.4.0/freeglut-3.4.0.tar.gz"
   sha256 "3c0bcb915d9b180a97edaebd011b7a1de54583a838644dcd42bb0ea0c6f3eaec"
   license "MIT"
 
@@ -32,7 +32,7 @@ class Freeglut < Formula
   end
 
   resource "init_error_func.c" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/dcnieho/FreeGLUT/c63102d06d09f8a9d4044fd107fbda2034bb30c6/freeglut/freeglut/progs/demos/init_error_func/init_error_func.c"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/dcnieho/FreeGLUT/c63102d06d09f8a9d4044fd107fbda2034bb30c6/freeglut/freeglut/progs/demos/init_error_func/init_error_func.c"
     sha256 "74ff9c3f722043fc617807f19d3052440073b1cb5308626c1cefd6798a284613"
   end
 

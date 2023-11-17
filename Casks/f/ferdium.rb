@@ -5,7 +5,7 @@ cask "ferdium" do
   sha256 arm:   "0b987d71b6416a53182890f62b6405a542684ebfeca7229c0f24ec4080e11cd5",
          intel: "a5b13bae58d9610ccd1c26e5e7eab143e588f4a2e84855129b3daff66f0d0d81"
 
-  url "https://ghproxy.com/https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-mac-#{version}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-mac-#{version}-#{arch}.dmg",
       verified: "github.com/ferdium/ferdium-app/"
   name "Ferdium"
   desc "Multi-platform multi-messaging app"

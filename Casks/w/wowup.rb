@@ -5,7 +5,7 @@ cask "wowup" do
   sha256 arm:   "cbe35839240a592862169db6b0e4f77529eccb90d940c5ebfa29ad999c4f2fc6",
          intel: "006bb26c2556e564dd16942dd23bf167c688656e0b440fc08c5ebc7f734abb36"
 
-  url "https://ghproxy.com/https://github.com/WowUp/WowUp/releases/download/v#{version}/WowUp-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/WowUp/WowUp/releases/download/v#{version}/WowUp-#{version}#{arch}.dmg",
       verified: "github.com/WowUp/WowUp/"
   name "WowUp"
   desc "World of Warcraft addon manager"

@@ -2,7 +2,7 @@ cask "utc-menu-clock" do
   version "1.3"
   sha256 "099a638a7a45cb9085d29e75769caf44ed142fd74b9e4665fca2de7e4a641081"
 
-  url "https://ghproxy.com/https://github.com/netik/UTCMenuClock/raw/master/downloads/UTCMenuClock_v#{version}_universal.zip"
+  url "https://mirror.ghproxy.com/https://github.com/netik/UTCMenuClock/raw/master/downloads/UTCMenuClock_v#{version}_universal.zip"
   name "UTCMenuClock"
   desc "Menu bar clock"
   homepage "https://github.com/netik/UTCMenuClock"

@@ -1,7 +1,7 @@
 class Nexus < Formula
   desc "Repository manager for binary software components"
   homepage "https://www.sonatype.org/"
-  url "https://ghproxy.com/https://github.com/sonatype/nexus-public/archive/refs/tags/release-3.38.1-01.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sonatype/nexus-public/archive/refs/tags/release-3.38.1-01.tar.gz"
   sha256 "83b3a39e4d350d9786ce47410607fdd9ec04fca4f8451c0a763d8e22c5639e87"
   license "EPL-1.0"
 

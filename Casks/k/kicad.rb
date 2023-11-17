@@ -2,7 +2,7 @@ cask "kicad" do
   version "7.0.9"
   sha256 "0e626521850594596d30711967216203e85343e0ed59f552336975fef6caa7dc"
 
-  url "https://ghproxy.com/https://github.com/KiCad/kicad-source-mirror/releases/download/#{version}/kicad-unified-universal-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/KiCad/kicad-source-mirror/releases/download/#{version}/kicad-unified-universal-#{version}.dmg",
       verified: "github.com/KiCad/kicad-source-mirror/"
   name "KiCad"
   desc "Electronics design automation suite"

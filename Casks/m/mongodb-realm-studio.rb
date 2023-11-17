@@ -2,7 +2,7 @@ cask "mongodb-realm-studio" do
   version "14.0.4"
   sha256 "133d654bea44880513d0c9f8c5d406811f5e6f5a9f798ac9dde07cec3477312b"
 
-  url "https://ghproxy.com/https://github.com/realm/realm-studio/releases/download/v#{version}/Realm.Studio-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/realm/realm-studio/releases/download/v#{version}/Realm.Studio-#{version}.dmg",
       verified: "github.com/realm/realm-studio/"
   name "Realm Studio"
   desc "Tool for the Realm Database and Realm Platform"

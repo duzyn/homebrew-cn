@@ -1,7 +1,7 @@
 class Jbake < Formula
   desc "Java based static site/blog generator"
   homepage "https://jbake.org/"
-  url "https://ghproxy.com/https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip"
+  url "https://mirror.ghproxy.com/https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip"
   sha256 "8d9c2b70fbf26415c5b3e530088b8b7fd1d236d3ce2c98a9c03fff4734bced39"
   license "MIT"
 

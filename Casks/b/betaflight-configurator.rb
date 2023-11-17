@@ -2,7 +2,7 @@ cask "betaflight-configurator" do
   version "10.9.0"
   sha256 "e5c6cbcdd513fe33ff3a357ff6a19c4914bfb8f40b10cbb109e7a5752d3e33a7"
 
-  url "https://ghproxy.com/https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
   name "Betaflight-Configurator"
   desc "Configuration tool for the Betaflight firmware"
   homepage "https://github.com/betaflight/betaflight-configurator"

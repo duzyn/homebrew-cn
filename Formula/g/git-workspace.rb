@@ -1,7 +1,7 @@
 class GitWorkspace < Formula
   desc "Sync personal and work git repositories from multiple providers"
   homepage "https://github.com/orf/git-workspace"
-  url "https://ghproxy.com/https://github.com/orf/git-workspace/archive/refs/tags/v1.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/orf/git-workspace/archive/refs/tags/v1.4.0.tar.gz"
   sha256 "fb66b03f4068950ba2fac73b445a964b2b941137f9b31f5db9f4fba1a73d3d4d"
   license "MIT"
 

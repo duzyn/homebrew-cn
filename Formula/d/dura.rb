@@ -1,7 +1,7 @@
 class Dura < Formula
   desc "Backs up your work automatically via Git commits"
   homepage "https://github.com/tkellogg/dura"
-  url "https://ghproxy.com/https://github.com/tkellogg/dura/archive/refs/tags/v0.2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tkellogg/dura/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "6486afa167cc2c9b6b6646b9a3cb36e76c1a55e986f280607c8933a045d58cca"
   license "Apache-2.0"
 

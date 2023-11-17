@@ -1,7 +1,7 @@
 class Orbiton < Formula
   desc "Fast and config-free text editor and IDE limited by VT100"
   homepage "https://orbiton.zip/"
-  url "https://ghproxy.com/https://github.com/xyproto/orbiton/archive/refs/tags/v2.65.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/xyproto/orbiton/archive/refs/tags/v2.65.5.tar.gz"
   sha256 "c53f28c5f2293e29e9bd4f3346375601c516eab3e3ec5f4c57e72dddf51e392a"
   license "BSD-3-Clause"
   head "https://github.com/xyproto/orbiton.git", branch: "main"

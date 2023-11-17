@@ -2,7 +2,7 @@ cask "proxy-audio-device" do
   version "1.0.6"
   sha256 "1cbdcec6141b21fd4ad72d7675820e6c30a72aad8a48db2a7ce1be72165d8cbb"
 
-  url "https://ghproxy.com/https://github.com/briankendall/proxy-audio-device/releases/download/v#{version}/ProxyAudioDevice_v#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/briankendall/proxy-audio-device/releases/download/v#{version}/ProxyAudioDevice_v#{version}.zip"
   name "Proxy Audio Device"
   desc "Sound and audio controller"
   homepage "https://github.com/briankendall/proxy-audio-device"

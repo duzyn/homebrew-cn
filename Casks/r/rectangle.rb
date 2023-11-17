@@ -2,7 +2,7 @@ cask "rectangle" do
   version "0.74"
   sha256 "1117f3830f11dfd74e73d17f76072008a6c4545342842e4ba831410f36d2f968"
 
-  url "https://ghproxy.com/https://github.com/rxhanson/Rectangle/releases/download/v#{version}/Rectangle#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/rxhanson/Rectangle/releases/download/v#{version}/Rectangle#{version}.dmg",
       verified: "github.com/rxhanson/Rectangle/"
   name "Rectangle"
   desc "Move and resize windows using keyboard shortcuts or snap areas"

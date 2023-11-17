@@ -1,7 +1,7 @@
 class Argparse < Formula
   desc "Argument Parser for Modern C++"
   homepage "https://github.com/p-ranav/argparse"
-  url "https://ghproxy.com/https://github.com/p-ranav/argparse/archive/refs/tags/v3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/p-ranav/argparse/archive/refs/tags/v3.0.tar.gz"
   sha256 "ba7b465759bb01069d57302855eaf4d1f7d677f21ad7b0b00b92939645c30f47"
   license "MIT"
   head "https://github.com/p-ranav/argparse.git", branch: "master"

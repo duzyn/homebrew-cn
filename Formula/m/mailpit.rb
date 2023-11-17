@@ -3,7 +3,7 @@ require "language/node"
 class Mailpit < Formula
   desc "Web and API based SMTP testing"
   homepage "https://github.com/axllent/mailpit"
-  url "https://ghproxy.com/https://github.com/axllent/mailpit/archive/refs/tags/v1.10.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/axllent/mailpit/archive/refs/tags/v1.10.0.tar.gz"
   sha256 "4c44f0af8e008e968b94029a67fca7c7c79fadb7c50296191854c6302f2dcc8e"
   license "MIT"
 

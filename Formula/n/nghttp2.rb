@@ -1,7 +1,7 @@
 class Nghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
-  url "https://ghproxy.com/https://github.com/nghttp2/nghttp2/releases/download/v1.58.0/nghttp2-1.58.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nghttp2/nghttp2/releases/download/v1.58.0/nghttp2-1.58.0.tar.gz"
   mirror "http://fresh-center.net/linux/www/nghttp2-1.58.0.tar.gz"
   sha256 "9ebdfbfbca164ef72bdf5fd2a94a4e6dfb54ec39d2ef249aeb750a91ae361dfb"
   license "MIT"

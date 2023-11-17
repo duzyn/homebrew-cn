@@ -1,7 +1,7 @@
 class OktaAwsCli < Formula
   desc "Okta federated identity for AWS CLI"
   homepage "https://github.com/okta/okta-aws-cli"
-  url "https://ghproxy.com/https://github.com/okta/okta-aws-cli/archive/refs/tags/v1.2.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/okta/okta-aws-cli/archive/refs/tags/v1.2.2.tar.gz"
   sha256 "f617b105e885fc8dc53accd7f3f8a2c3165b28b52abfbe7151e8353ad7eb427b"
   license "Apache-2.0"
 

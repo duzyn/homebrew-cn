@@ -1,7 +1,7 @@
 class Cnats < Formula
   desc "C client for the NATS messaging system"
   homepage "https://github.com/nats-io/nats.c"
-  url "https://ghproxy.com/https://github.com/nats-io/nats.c/archive/refs/tags/v3.7.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nats-io/nats.c/archive/refs/tags/v3.7.0.tar.gz"
   sha256 "6570e3c1be5d4d6040fd620d2318299e59045b7dc6c88d49c6168a3088d44ea2"
   license "Apache-2.0"
 

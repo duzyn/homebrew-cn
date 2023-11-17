@@ -12,7 +12,7 @@ class Libplacebo < Formula
     sha256 "66f173e511884ad96c23073e6c3a846215db804f098e11698132abe5a63d6f72"
 
     resource "fast_float" do
-      url "https://ghproxy.com/https://github.com/fastfloat/fast_float/archive/refs/tags/v5.2.0.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/fastfloat/fast_float/archive/refs/tags/v5.2.0.tar.gz"
       sha256 "72bbfd1914e414c920e39abdc81378adf910a622b62c45b4c61d344039425d18"
     end
 

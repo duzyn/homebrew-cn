@@ -2,7 +2,7 @@ cask "oss-browser" do
   version "1.17.0"
   sha256 "457743b705524bfbdf9e60d345dfac2533d4eae93b47e3abbebe5d156a3f89a9"
 
-  url "https://ghproxy.com/https://github.com/aliyun/oss-browser/releases/download/v#{version}/oss-browser-darwin-x64.zip"
+  url "https://mirror.ghproxy.com/https://github.com/aliyun/oss-browser/releases/download/v#{version}/oss-browser-darwin-x64.zip"
   name "oss-browser"
   desc "Graphical management tool for OSS (Object Storage Service)"
   homepage "https://github.com/aliyun/oss-browser/"

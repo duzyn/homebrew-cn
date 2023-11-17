@@ -39,7 +39,7 @@ class Gdmap < Formula
   # This header file doesn't exist in OSX and the program compiles and runs fine without it.
   # Filed bug upstream as https://sourceforge.net/p/gdmap/bugs/19/
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/gdmap/0.8.1.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/gdmap/0.8.1.patch"
     sha256 "292cc974405f0a8c7f6dc32770f81057e67eac6e4fcb1fc575e1f02e044cf9c3"
   end
 

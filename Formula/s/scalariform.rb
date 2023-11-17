@@ -1,7 +1,7 @@
 class Scalariform < Formula
   desc "Scala source code formatter"
   homepage "https://github.com/scala-ide/scalariform"
-  url "https://ghproxy.com/https://github.com/scala-ide/scalariform/releases/download/0.2.10/scalariform.jar"
+  url "https://mirror.ghproxy.com/https://github.com/scala-ide/scalariform/releases/download/0.2.10/scalariform.jar"
   sha256 "59d7c26f26c13bdbc27e3011da244f01001d55741058062f49e4626862b7991e"
   license "MIT"
 

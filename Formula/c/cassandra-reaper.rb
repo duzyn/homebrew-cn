@@ -1,7 +1,7 @@
 class CassandraReaper < Formula
   desc "Management interface for Cassandra"
   homepage "https://cassandra-reaper.io/"
-  url "https://ghproxy.com/https://github.com/thelastpickle/cassandra-reaper/releases/download/3.4.0/cassandra-reaper-3.4.0-release.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/thelastpickle/cassandra-reaper/releases/download/3.4.0/cassandra-reaper-3.4.0-release.tar.gz"
   sha256 "3a1627baba2efa1691be1d8b2c1f525bc0ec50829431f04ac6ae3ce8d90e2c1d"
   license "Apache-2.0"
 

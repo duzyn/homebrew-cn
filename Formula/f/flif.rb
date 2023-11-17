@@ -1,7 +1,7 @@
 class Flif < Formula
   desc "Free Loseless Image Format"
   homepage "https://flif.info/"
-  url "https://ghproxy.com/https://github.com/FLIF-hub/FLIF/archive/refs/tags/v0.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/FLIF-hub/FLIF/archive/refs/tags/v0.4.tar.gz"
   sha256 "cc98313ef0dbfef65d72bc21f730edf2a97a414f14bd73ad424368ce032fdb7f"
   license "LGPL-3.0-or-later"
   head "https://github.com/FLIF-hub/FLIF.git", branch: "master"
@@ -25,7 +25,7 @@ class Flif < Formula
   depends_on "sdl2"
 
   resource "homebrew-test_c" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/FLIF-hub/FLIF/dcc2011/tools/test.c"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/FLIF-hub/FLIF/dcc2011/tools/test.c"
     sha256 "a20b625ba0efdb09ad21a8c1c9844f686f636656f0e9bd6c24ad441375223afe"
   end
 

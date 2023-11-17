@@ -5,7 +5,7 @@ cask "zettlr" do
   sha256 arm:   "2c47c3f584ee1adef24342ab124d670ed8a170007c3af7ddc0b931e6af718d35",
          intel: "5872eb85bc02efe2104a660dd801f747a794b2664b44c0eaeffb3822fa61dec3"
 
-  url "https://ghproxy.com/https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
   name "Zettlr"
   desc "Open-source markdown editor"
   homepage "https://github.com/Zettlr/Zettlr/"

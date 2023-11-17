@@ -2,7 +2,7 @@ cask "pensela" do
   version "1.2.5"
   sha256 "f6029a8a876038835c9045e75a05367f4f6f63e7ff6a9f11e4921a0ef9559c6b"
 
-  url "https://ghproxy.com/https://github.com/weiameili/Pensela/releases/download/v#{version}/Pensela-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/weiameili/Pensela/releases/download/v#{version}/Pensela-#{version}.dmg"
   name "Pensela"
   desc "Screen Annotation Tool"
   homepage "https://github.com/weiameili/Pensela"

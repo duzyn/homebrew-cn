@@ -32,7 +32,7 @@ class Mpg321 < Formula
   # https://sourceforge.net/p/mpg321/patches/20/
   # Remove these at: Unknown.  These have not been merged as of 0.3.2.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/mpg321/0.3.2.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/mpg321/0.3.2.patch"
     sha256 "a856292a913d3d94b3389ae7b1020d662e85bd4557d1a9d1c8ebe517978e62a1"
   end
 

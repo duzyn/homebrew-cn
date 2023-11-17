@@ -1,7 +1,7 @@
 class Mqttui < Formula
   desc "Subscribe to a MQTT Topic or publish something quickly from the terminal"
   homepage "https://github.com/EdJoPaTo/mqttui"
-  url "https://ghproxy.com/https://github.com/EdJoPaTo/mqttui/archive/refs/tags/v0.19.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/EdJoPaTo/mqttui/archive/refs/tags/v0.19.0.tar.gz"
   sha256 "76d39f14920eb1cf1a65239f1e54c840f20b35c2be96f074819be5175427a7e7"
   license "GPL-3.0-or-later"
 

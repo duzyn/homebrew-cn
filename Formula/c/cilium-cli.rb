@@ -1,7 +1,7 @@
 class CiliumCli < Formula
   desc "CLI to install, manage & troubleshoot Kubernetes clusters running Cilium"
   homepage "https://cilium.io"
-  url "https://ghproxy.com/https://github.com/cilium/cilium-cli/archive/refs/tags/v0.15.14.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cilium/cilium-cli/archive/refs/tags/v0.15.14.tar.gz"
   sha256 "1cd6f181c7337203753ae9bc5cb8580e5d09080a7f567caebe8180532e68ece3"
   license "Apache-2.0"
 

@@ -68,12 +68,12 @@ class PhpAT80 < Formula
 
   # Let PHP8.0 support OpenSSL3
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/shivammathur/php-src-backports/2bcb0b/patches/0002-Add-minimal-OpenSSL-3.0-patch-PHP8.0.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/shivammathur/php-src-backports/2bcb0b/patches/0002-Add-minimal-OpenSSL-3.0-patch-PHP8.0.patch"
     sha256 "8c359c0b0cc63dc6779a4fb1b2ba5ca555eb60e962013123dcb1239aef5cee9a"
   end
 
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/shivammathur/php-src-backports/2bcb0b/patches/0003-Fix-bug-79589-ssl3_read_n-unexpected-eof-while-reading-PHP8.0.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/shivammathur/php-src-backports/2bcb0b/patches/0003-Fix-bug-79589-ssl3_read_n-unexpected-eof-while-reading-PHP8.0.patch"
     sha256 "3383d1881379827e02b42842367666725f4f54f4364d937c6acb0ee67bce84a2"
   end
 

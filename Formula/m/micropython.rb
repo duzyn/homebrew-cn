@@ -1,7 +1,7 @@
 class Micropython < Formula
   desc "Python implementation for microcontrollers and constrained systems"
   homepage "https://www.micropython.org/"
-  url "https://ghproxy.com/https://github.com/micropython/micropython/releases/download/v1.21.0/micropython-1.21.0.zip"
+  url "https://mirror.ghproxy.com/https://github.com/micropython/micropython/releases/download/v1.21.0/micropython-1.21.0.zip"
   sha256 "12521faacc7191353f2739267bd9fd2a5e60ea04fb47df74f8e22b6bf59ba967"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Canfigger < Formula
   desc "Simple configuration file parser library"
   homepage "https://github.com/andy5995/canfigger/"
-  url "https://ghproxy.com/https://github.com/andy5995/canfigger/releases/download/v0.2.0/canfigger-0.2.0.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/andy5995/canfigger/releases/download/v0.2.0/canfigger-0.2.0.tar.xz"
   sha256 "c43449d5f99f4a5255800c8c521e3eaec7490b08fc4363f2858ba45c565a1d23"
   license "GPL-3.0-or-later"
   head "https://github.com/andy5995/canfigger.git", branch: "trunk"

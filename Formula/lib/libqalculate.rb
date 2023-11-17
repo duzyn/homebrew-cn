@@ -1,7 +1,7 @@
 class Libqalculate < Formula
   desc "Library for Qalculate! program"
   homepage "https://qalculate.github.io/"
-  url "https://ghproxy.com/https://github.com/Qalculate/libqalculate/releases/download/v4.8.1/libqalculate-4.8.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Qalculate/libqalculate/releases/download/v4.8.1/libqalculate-4.8.1.tar.gz"
   sha256 "a55fbdc14cb183c62a95e430823017b5f958f0758d3476578f8cc05369157c54"
   license "GPL-2.0-or-later"
 

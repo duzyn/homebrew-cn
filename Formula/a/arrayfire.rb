@@ -1,7 +1,7 @@
 class Arrayfire < Formula
   desc "General purpose GPU library"
   homepage "https://arrayfire.com"
-  url "https://ghproxy.com/https://github.com/arrayfire/arrayfire/releases/download/v3.9.0/arrayfire-full-3.9.0.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/arrayfire/arrayfire/releases/download/v3.9.0/arrayfire-full-3.9.0.tar.bz2"
   sha256 "8356c52bf3b5243e28297f4b56822191355216f002f3e301d83c9310a4b22348"
   license "BSD-3-Clause"
 

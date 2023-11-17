@@ -2,7 +2,7 @@ cask "yu-writer" do
   version "0.5.3"
   sha256 "4fff4042c6ac7c047097c5e6d59a8a1c3f9dacfbdcadb3121904426413b38e06"
 
-  url "https://ghproxy.com/https://github.com/ivarptr/yu-writer.site/releases/download/v#{version}/yu-writer-beta-#{version}-macos.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/ivarptr/yu-writer.site/releases/download/v#{version}/yu-writer-beta-#{version}-macos.dmg",
       verified: "github.com/ivarptr/yu-writer.site/"
   name "Yu Writer"
   desc "Markdown editor"

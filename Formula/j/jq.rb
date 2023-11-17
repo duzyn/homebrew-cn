@@ -1,7 +1,7 @@
 class Jq < Formula
   desc "Lightweight and flexible command-line JSON processor"
   homepage "https://jqlang.github.io/jq/"
-  url "https://ghproxy.com/https://github.com/jqlang/jq/releases/download/jq-1.7/jq-1.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jqlang/jq/releases/download/jq-1.7/jq-1.7.tar.gz"
   sha256 "402a0d6975d946e6f4e484d1a84320414a0ff8eb6cf49d2c11d144d4d344db62"
   license "MIT"
 

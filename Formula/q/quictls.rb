@@ -1,7 +1,7 @@
 class Quictls < Formula
   desc "TLS/SSL and crypto library with QUIC APIs"
   homepage "https://github.com/quictls/openssl"
-  url "https://ghproxy.com/https://github.com/quictls/openssl/archive/refs/tags/openssl-3.1.4-quic1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/quictls/openssl/archive/refs/tags/openssl-3.1.4-quic1.tar.gz"
   version "3.1.4-quic1"
   sha256 "4bf990243d6aa39b8befa0c399834415842912ef67f88bef98e74dc619469618"
   license "Apache-2.0"

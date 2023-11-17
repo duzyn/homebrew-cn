@@ -1,7 +1,7 @@
 class Wally < Formula
   desc "Modern package manager for Roblox projects inspired by Cargo"
   homepage "https://github.com/UpliftGames/wally"
-  url "https://ghproxy.com/https://github.com/UpliftGames/wally/archive/refs/tags/v0.3.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/UpliftGames/wally/archive/refs/tags/v0.3.2.tar.gz"
   sha256 "f7da2a10865b05efe97273aa1d08e0efbb9d26fecb770d819bdc01fbb98a0ad9"
   license "MPL-2.0"
   head "https://github.com/UpliftGames/wally.git", branch: "main"

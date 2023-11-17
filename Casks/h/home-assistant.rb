@@ -2,7 +2,7 @@ cask "home-assistant" do
   version "2023.7,2023.471"
   sha256 "ca907a0f37c0f6e8896a1a3559e48a1653e933736359511f98805fb7cc26c2f3"
 
-  url "https://ghproxy.com/https://github.com/home-assistant/iOS/releases/download/release%2F#{version.csv.first}%2F#{version.csv.second}/home-assistant-mac.zip",
+  url "https://mirror.ghproxy.com/https://github.com/home-assistant/iOS/releases/download/release%2F#{version.csv.first}%2F#{version.csv.second}/home-assistant-mac.zip",
       verified: "github.com/home-assistant/iOS/"
   name "Home Assistant"
   desc "Companion app for Home Assistant home automation software"

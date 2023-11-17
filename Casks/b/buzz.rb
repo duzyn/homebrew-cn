@@ -2,7 +2,7 @@ cask "buzz" do
   version "0.8.4"
   sha256 "272c9010e23b7b1c47e6bf7db376238e7d2ab897efc1cb2ccfa4ea5ecd733feb"
 
-  url "https://ghproxy.com/https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac.dmg"
   name "Buzz"
   desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"

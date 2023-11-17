@@ -1,7 +1,7 @@
 class Ecoji < Formula
   desc "Encodes (and decodes) data as emojis"
   homepage "https://github.com/keith-turner/ecoji"
-  url "https://ghproxy.com/https://github.com/keith-turner/ecoji/archive/refs/tags/v2.0.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/keith-turner/ecoji/archive/refs/tags/v2.0.1.tar.gz"
   sha256 "59c78ddaef057bbfb06ea8522dfc51ea8bce3e8f149a3231823a37f6de0b4ed2"
   license "Apache-2.0"
   head "https://github.com/keith-turner/ecoji.git", branch: "main"

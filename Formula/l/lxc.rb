@@ -1,7 +1,7 @@
 class Lxc < Formula
   desc "CLI client for interacting with LXD"
   homepage "https://ubuntu.com/lxd"
-  url "https://ghproxy.com/https://github.com/canonical/lxd/releases/download/lxd-5.19/lxd-5.19.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/canonical/lxd/releases/download/lxd-5.19/lxd-5.19.tar.gz"
   sha256 "4edc371e8c7e19fa08f1d1362a96761d44db94e3c5054b3adc8051235f250223"
   license "Apache-2.0"
   head "https://github.com/canonical/lxd.git", branch: "main"

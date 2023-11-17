@@ -1,7 +1,7 @@
 class Libmapper < Formula
   desc "Distributed system for media control mapping"
   homepage "http://www.libmapper.org"
-  url "https://ghproxy.com/https://github.com/libmapper/libmapper/releases/download/2.4.5/libmapper-2.4.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libmapper/libmapper/releases/download/2.4.5/libmapper-2.4.5.tar.gz"
   sha256 "08d4568b7586379373f8e4d85332dd63a97c7f8b45702d5fc178614679f401bc"
   license "LGPL-2.1-or-later"
 

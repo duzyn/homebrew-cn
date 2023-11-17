@@ -4,7 +4,7 @@ class Ghostscript < Formula
   license "AGPL-3.0-or-later"
 
   stable do
-    url "https://ghproxy.com/https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10021/ghostpdl-10.02.1.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10021/ghostpdl-10.02.1.tar.xz"
     sha256 "01f4b699f031566b04cec495506811866e17896b26847c14e5333fb3adfc0619"
 
     on_macos do

@@ -1,7 +1,7 @@
 class Libirecovery < Formula
   desc "Library and utility to talk to iBoot/iBSS via USB"
   homepage "https://www.libimobiledevice.org/"
-  url "https://ghproxy.com/https://github.com/libimobiledevice/libirecovery/releases/download/1.1.0/libirecovery-1.1.0.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/libimobiledevice/libirecovery/releases/download/1.1.0/libirecovery-1.1.0.tar.bz2"
   sha256 "ee3b1afbc0cab5309492cfcf3e132c6cc002617a57664ee0120ae918318e25f9"
   license "LGPL-2.1-only"
   head "https://github.com/libimobiledevice/libirecovery.git", branch: "master"

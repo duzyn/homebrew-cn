@@ -1,7 +1,7 @@
 class Gnirehtet < Formula
   desc "Reverse tethering tool for Android"
   homepage "https://github.com/Genymobile/gnirehtet"
-  url "https://ghproxy.com/https://github.com/Genymobile/gnirehtet/archive/refs/tags/v2.5.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Genymobile/gnirehtet/archive/refs/tags/v2.5.1.tar.gz"
   sha256 "0d41361b9ac8b3b7fa4f4a0aff933472a72886556bd3fc4659be299b546274e6"
   license "Apache-2.0"
   head "https://github.com/Genymobile/gnirehtet.git", branch: "master"
@@ -22,7 +22,7 @@ class Gnirehtet < Formula
   depends_on "socat" => :test
 
   resource "java_bundle" do
-    url "https://ghproxy.com/https://github.com/Genymobile/gnirehtet/releases/download/v2.5.1/gnirehtet-java-v2.5.1.zip"
+    url "https://mirror.ghproxy.com/https://github.com/Genymobile/gnirehtet/releases/download/v2.5.1/gnirehtet-java-v2.5.1.zip"
     sha256 "816748078fa6a304600a294a13338a06ac778bcc0e57b62d88328c7968ad2d3a"
   end
 

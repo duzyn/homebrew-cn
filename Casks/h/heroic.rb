@@ -5,7 +5,7 @@ cask "heroic" do
   sha256 arm:   "f2ab43f01631a75a8c58e63255c275e1052b89a4bd2cf184e9678a65375632eb",
          intel: "7e6fe5413403cba95d0bf1c359375fbeecdf18973a25ddd9a32d0f72389ca053"
 
-  url "https://ghproxy.com/https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}-macOS-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}-macOS-#{arch}.dmg"
   name "Heroic Games Launcher"
   desc "Game launcher"
   homepage "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/"

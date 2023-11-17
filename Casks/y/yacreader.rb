@@ -2,7 +2,7 @@ cask "yacreader" do
   version "9.13.1.2307166"
   sha256 "51f4b0f564aa4796e78e80efc0e1cff155d0fb89cc75579ee54d128d66d6998e"
 
-  url "https://ghproxy.com/https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.Qt6.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.Qt6.dmg",
       verified: "github.com/YACReader/yacreader/"
   name "YACReader"
   desc "Comic reader"

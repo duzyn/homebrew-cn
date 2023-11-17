@@ -45,7 +45,7 @@ class Regipy < Formula
 
   test do
     resource "homebrew-test_hive" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/mkorman90/regipy/71acd6a65bdee11ff776dbd44870adad4632404c/regipy_tests/data/SYSTEM.xz"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/mkorman90/regipy/71acd6a65bdee11ff776dbd44870adad4632404c/regipy_tests/data/SYSTEM.xz"
       sha256 "b1582ab413f089e746da0528c2394f077d6f53dd4e68b877ffb2667bd027b0b0"
     end
 

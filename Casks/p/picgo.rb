@@ -5,7 +5,7 @@ cask "picgo" do
   sha256 arm:   "a2216b8572565a099d8d66b3d425a94e64de3b8b3ecfb7dc2d84f6b2814aa3bb",
          intel: "6522bad65f0abce9e5ce0f5208244ce73660c51a299189aafd754431c03960e3"
 
-  url "https://ghproxy.com/https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-#{arch}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-#{arch}.dmg"
   name "PicGo"
   desc "Tool for uploading images"
   homepage "https://github.com/Molunerfinn/PicGo"

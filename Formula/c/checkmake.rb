@@ -1,7 +1,7 @@
 class Checkmake < Formula
   desc "Linter/analyzer for Makefiles"
   homepage "https://github.com/mrtazz/checkmake"
-  url "https://ghproxy.com/https://github.com/mrtazz/checkmake/archive/refs/tags/0.2.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/mrtazz/checkmake/archive/refs/tags/0.2.2.tar.gz"
   sha256 "4e5914f1ee3e5f384d605406f30799bf556a06b9785d5b0e555fd88b43daf19c"
   license "MIT"
   head "https://github.com/mrtazz/checkmake.git", branch: "main"

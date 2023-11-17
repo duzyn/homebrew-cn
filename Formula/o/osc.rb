@@ -3,7 +3,7 @@ class Osc < Formula
 
   desc "Command-line interface to work with an Open Build Service"
   homepage "https://openbuildservice.org"
-  url "https://ghproxy.com/https://github.com/openSUSE/osc/archive/refs/tags/1.4.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/openSUSE/osc/archive/refs/tags/1.4.4.tar.gz"
   sha256 "ff2d675bdc569f7d6a6cb4b958307757559810219b7e53aef6b1c12a99f4d599"
   license "GPL-2.0-or-later"
   head "https://github.com/openSUSE/osc.git", branch: "master"

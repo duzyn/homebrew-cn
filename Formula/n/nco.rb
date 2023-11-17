@@ -1,7 +1,7 @@
 class Nco < Formula
   desc "Command-line operators for netCDF and HDF files"
   homepage "https://nco.sourceforge.net/"
-  url "https://ghproxy.com/https://github.com/nco/nco/archive/refs/tags/5.1.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nco/nco/archive/refs/tags/5.1.9.tar.gz"
   sha256 "9cd90345c1e3860a690b53fd6c08b721d631a646d169431927884c99841c34e9"
   license "BSD-3-Clause"
 
@@ -31,7 +31,7 @@ class Nco < Formula
   uses_from_macos "flex" => :build
 
   resource "antlr2" do
-    url "https://ghproxy.com/https://github.com/nco/antlr2/archive/refs/tags/antlr2-2.7.7-1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/nco/antlr2/archive/refs/tags/antlr2-2.7.7-1.tar.gz"
     sha256 "d06e0ae7a0380c806321045d045ccacac92071f0f843aeef7bdf5841d330a989"
   end
 

@@ -2,7 +2,7 @@ cask "middleclick" do
   version "2.6.1"
   sha256 "6f351cbc0fe2bf32526e691dfae50eea71a679a7f52ecd155fd453d8684ab175"
 
-  url "https://ghproxy.com/https://github.com/artginzburg/MiddleClick-Sonoma/releases/download/#{version}/MiddleClick.zip"
+  url "https://mirror.ghproxy.com/https://github.com/artginzburg/MiddleClick-Sonoma/releases/download/#{version}/MiddleClick.zip"
   name "MiddleClick"
   desc "Utility to extend trackpad functionality"
   homepage "https://github.com/artginzburg/MiddleClick-Sonoma"

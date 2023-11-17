@@ -1,7 +1,7 @@
 class WildflyAs < Formula
   desc "Managed application runtime for building applications"
   homepage "https://www.wildfly.org/"
-  url "https://ghproxy.com/https://github.com/wildfly/wildfly/releases/download/30.0.0.Final/wildfly-30.0.0.Final.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/wildfly/wildfly/releases/download/30.0.0.Final/wildfly-30.0.0.Final.tar.gz"
   sha256 "e10404c9d3e035a7d364b22b2e343fe8ae867b6bbcbf945bf2a969eff7d9ebea"
   license "Apache-2.0"
 

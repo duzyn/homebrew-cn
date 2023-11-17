@@ -1,7 +1,7 @@
 class Libilbc < Formula
   desc "Packaged version of iLBC codec from the WebRTC project"
   homepage "https://github.com/TimothyGu/libilbc"
-  url "https://ghproxy.com/https://github.com/TimothyGu/libilbc/releases/download/v3.0.4/libilbc-3.0.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/TimothyGu/libilbc/releases/download/v3.0.4/libilbc-3.0.4.tar.gz"
   sha256 "6820081a5fc58f86c119890f62cac53f957adb40d580761947a0871cea5e728f"
   license "BSD-3-Clause"
 

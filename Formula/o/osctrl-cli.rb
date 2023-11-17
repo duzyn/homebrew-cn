@@ -1,7 +1,7 @@
 class OsctrlCli < Formula
   desc "Fast and efficient osquery management"
   homepage "https://osctrl.net"
-  url "https://ghproxy.com/https://github.com/jmpsec/osctrl/archive/refs/tags/v0.3.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jmpsec/osctrl/archive/refs/tags/v0.3.4.tar.gz"
   sha256 "612c27fffab5f9e1742dd6abc5879dcc11b89966542dde7ee9f88a31249352cb"
   license "MIT"
 

@@ -5,7 +5,7 @@ cask "podman-desktop" do
   sha256 arm:   "99af3747c2766a65da7b0f69ae06f1f6c41b94c922790bc3c589d67532c4a54f",
          intel: "abd8d1cb06029e3ade24d71dc2a9e251a045da3423149060e28eee755e579540"
 
-  url "https://ghproxy.com/https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",
       verified: "github.com/containers/podman-desktop/"
   name "Podman Desktop"
   desc "Browse, manage, inspect containers and images"

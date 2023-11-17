@@ -5,18 +5,18 @@ class Devd < Formula
   head "https://github.com/cortesi/devd.git", branch: "master"
 
   stable do
-    url "https://ghproxy.com/https://github.com/cortesi/devd/archive/refs/tags/v0.9.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/cortesi/devd/archive/refs/tags/v0.9.tar.gz"
     sha256 "5aee062c49ffba1e596713c0c32d88340360744f57619f95809d01c59bff071f"
 
     # Get go.mod and go.sum from commit after v0.9 release.
     # Ref: https://github.com/cortesi/devd/commit/4ab3fc9061542fd35b5544627354e5755fa74c1c
     # TODO: Remove in the next release.
     resource "go.mod" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/cortesi/devd/4ab3fc9061542fd35b5544627354e5755fa74c1c/go.mod"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/cortesi/devd/4ab3fc9061542fd35b5544627354e5755fa74c1c/go.mod"
       sha256 "483b4294205cf2dea2d68b8f99aefcf95aadac229abc2a299f4d1303f645e6b0"
     end
     resource "go.sum" do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/cortesi/devd/4ab3fc9061542fd35b5544627354e5755fa74c1c/go.sum"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/cortesi/devd/4ab3fc9061542fd35b5544627354e5755fa74c1c/go.sum"
       sha256 "3fb5d8aa8edfefd635db6de1fda8ca079328b6af62fea704993e06868cfb3199"
     end
   end

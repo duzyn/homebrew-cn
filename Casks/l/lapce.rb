@@ -2,7 +2,7 @@ cask "lapce" do
   version "0.3.0"
   sha256 "6809ae58793a2515e16b86ded1fe02d684aa8cc9a0e9a55d9de413bbec1b4a6f"
 
-  url "https://ghproxy.com/https://github.com/lapce/lapce/releases/download/v#{version}/Lapce-macos.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/lapce/lapce/releases/download/v#{version}/Lapce-macos.dmg",
       verified: "github.com/lapce/lapce/"
   name "Lapce"
   desc "Open source code editor written in Rust"

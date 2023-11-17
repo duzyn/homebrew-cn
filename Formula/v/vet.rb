@@ -1,7 +1,7 @@
 class Vet < Formula
   desc "Policy driven vetting of open source dependencies"
   homepage "https://github.com/safedep/vet"
-  url "https://ghproxy.com/https://github.com/safedep/vet/archive/refs/tags/v1.3.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/safedep/vet/archive/refs/tags/v1.3.1.tar.gz"
   sha256 "1a5062586b799e3dd2fcf6cecdccce82753a225fe8e2f3166a5ce5d3d3a1b995"
   license "Apache-2.0"
 

@@ -2,7 +2,7 @@ cask "obs-ndi" do
   version "4.13.0"
   sha256 "0a18604d710734d3d07a1a4dc8ff2007027444b16944341e84b408546d95272e"
 
-  url "https://ghproxy.com/https://github.com/obs-ndi/obs-ndi/releases/download/#{version}/obs-ndi-#{version}-macos-universal.pkg"
+  url "https://mirror.ghproxy.com/https://github.com/obs-ndi/obs-ndi/releases/download/#{version}/obs-ndi-#{version}-macos-universal.pkg"
   name "obs-ndi"
   desc "NDI integration for OBS Studio"
   homepage "https://github.com/obs-ndi/obs-ndi"

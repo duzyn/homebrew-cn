@@ -1,7 +1,7 @@
 class Crystalline < Formula
   desc "Language Server Protocol implementation for Crystal"
   homepage "https://github.com/elbywan/crystalline"
-  url "https://ghproxy.com/https://github.com/elbywan/crystalline/archive/refs/tags/v0.11.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/elbywan/crystalline/archive/refs/tags/v0.11.0.tar.gz"
   sha256 "488449ea0612034e6d4c9afac4c4bdac80111ea79dd6212d530ddf47f8d813f7"
   license "MIT"
 

@@ -2,7 +2,7 @@ cask "macgesture" do
   version "3.2.0"
   sha256 "dd1dafaa4958524f5cf7e3ba35d3235c11f4348d429be63df03a0f6cf8aa0000"
 
-  url "https://ghproxy.com/https://github.com/MacGesture/MacGesture/releases/download/#{version}/MacGesture-#{version}.zip"
+  url "https://mirror.ghproxy.com/https://github.com/MacGesture/MacGesture/releases/download/#{version}/MacGesture-#{version}.zip"
   name "MacGesture"
   desc "Utility to set up global mouse gestures"
   homepage "https://github.com/MacGesture/MacGesture"

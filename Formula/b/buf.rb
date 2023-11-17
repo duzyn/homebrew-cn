@@ -1,7 +1,7 @@
 class Buf < Formula
   desc "New way of working with Protocol Buffers"
   homepage "https://github.com/bufbuild/buf"
-  url "https://ghproxy.com/https://github.com/bufbuild/buf/archive/refs/tags/v1.28.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/bufbuild/buf/archive/refs/tags/v1.28.1.tar.gz"
   sha256 "4ccc872e26edffaa99baa43d7091dcff50347bb8132a57b97880385d7742c82d"
   license "Apache-2.0"
   head "https://github.com/bufbuild/buf.git", branch: "main"

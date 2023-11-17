@@ -1,7 +1,7 @@
 class S3fs < Formula
   desc "FUSE-based file system backed by Amazon S3"
   homepage "https://github.com/s3fs-fuse/s3fs-fuse/wiki"
-  url "https://ghproxy.com/https://github.com/s3fs-fuse/s3fs-fuse/archive/refs/tags/v1.93.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/s3fs-fuse/s3fs-fuse/archive/refs/tags/v1.93.tar.gz"
   sha256 "24818315329bcd96073dd103e410643e75401d3f36dd6650223de3667a5762dd"
   license "GPL-2.0-or-later"
   head "https://github.com/s3fs-fuse/s3fs-fuse.git", branch: "master"

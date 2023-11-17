@@ -2,7 +2,7 @@ cask "supertuxkart" do
   version "1.4"
   sha256 "21a7fb34132036c5810a8b48527513981d98d09d27d33b15e2f428bdc492c89d"
 
-  url "https://ghproxy.com/https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac.zip",
+  url "https://mirror.ghproxy.com/https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac.zip",
       verified: "github.com/supertuxkart/stk-code/"
   name "SuperTuxKart"
   desc "Kart racing game"

@@ -5,7 +5,7 @@ cask "processing" do
   sha256 arm:   "bccec62845344357533f83c6777cda8ea127308219f23d1d94416b8cc0c0612a",
          intel: "6e5593c107439b199e14c4b0fd2bef88cf09e7cba7550c5ca6f2f912ce999b82"
 
-  url "https://ghproxy.com/https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.zip",
       verified: "github.com/processing/processing4/"
   name "Processing"
   desc "Flexible software sketchbook and a language for learning how to code"

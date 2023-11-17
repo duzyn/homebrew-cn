@@ -2,7 +2,7 @@ cask "opencpn" do
   version "5.8.4,-0+637.1637c28"
   sha256 "2c3dc08908c002dcfe61a67b8e594a14d4de7ec486f6e44fc4ddc18219b65b44"
 
-  url "https://ghproxy.com/https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}#{version.csv.second}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}#{version.csv.second}.pkg",
       verified: "github.com/OpenCPN/OpenCPN/"
   name "OpenCPN"
   desc "Full-featured and concise ChartPlotter/Navigator"

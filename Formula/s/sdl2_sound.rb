@@ -1,7 +1,7 @@
 class Sdl2Sound < Formula
   desc "Abstract soundfile decoder for SDL"
   homepage "https://icculus.org/SDL_sound/"
-  url "https://ghproxy.com/https://github.com/icculus/SDL_sound/releases/download/v2.0.2/SDL2_sound-2.0.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/icculus/SDL_sound/releases/download/v2.0.2/SDL2_sound-2.0.2.tar.gz"
   sha256 "465a81d6004af731768b881b2f50383150cc58a8d346653bad85e2375829cc3a"
   license all_of: [
     "Zlib",

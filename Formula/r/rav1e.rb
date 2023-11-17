@@ -5,12 +5,12 @@ class Rav1e < Formula
   head "https://github.com/xiph/rav1e.git", branch: "master"
 
   stable do
-    url "https://ghproxy.com/https://github.com/xiph/rav1e/archive/refs/tags/v0.6.6.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/xiph/rav1e/archive/refs/tags/v0.6.6.tar.gz"
     sha256 "723696e93acbe03666213fbc559044f3cae5b8b888b2ddae667402403cff51e5"
 
     # keep the version in sync
     resource "Cargo.lock" do
-      url "https://ghproxy.com/https://github.com/xiph/rav1e/releases/download/v0.6.6/Cargo.lock"
+      url "https://mirror.ghproxy.com/https://github.com/xiph/rav1e/releases/download/v0.6.6/Cargo.lock"
       sha256 "2014f7d76e7d0d7eaa63158ef5a1a1cea15a095fd5fb79b20b1052015a7fcd0c"
     end
   end

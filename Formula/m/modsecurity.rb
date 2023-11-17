@@ -1,7 +1,7 @@
 class Modsecurity < Formula
   desc "Libmodsecurity is one component of the ModSecurity v3 project"
   homepage "https://github.com/SpiderLabs/ModSecurity"
-  url "https://ghproxy.com/https://github.com/SpiderLabs/ModSecurity/releases/download/v3.0.10/modsecurity-v3.0.10.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/SpiderLabs/ModSecurity/releases/download/v3.0.10/modsecurity-v3.0.10.tar.gz"
   sha256 "d5d459f7c2e57a69a405f3222d8e285de419a594b0ea8829058709962227ead0"
   license "Apache-2.0"
 

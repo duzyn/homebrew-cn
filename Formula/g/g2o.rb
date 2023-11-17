@@ -1,7 +1,7 @@
 class G2o < Formula
   desc "General framework for graph optimization"
   homepage "https://openslam-org.github.io/g2o.html"
-  url "https://ghproxy.com/https://github.com/RainerKuemmerle/g2o/archive/refs/tags/20230806_git.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/RainerKuemmerle/g2o/archive/refs/tags/20230806_git.tar.gz"
   version "20230806"
   sha256 "e717d3b96cc6d00fcbbaf637aae648c9823599e6aa8fcf4546fc9ad4034dcde5"
   license "BSD-2-Clause"
@@ -27,7 +27,7 @@ class G2o < Formula
   depends_on "eigen"
 
   resource "homebrew-testdata" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/OpenSLAM-org/openslam_g2o/2362b9e1e9dab318625cd0af9ba314c47ba8de48/data/2d/intel/intel.g2o"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/OpenSLAM-org/openslam_g2o/2362b9e1e9dab318625cd0af9ba314c47ba8de48/data/2d/intel/intel.g2o"
     sha256 "4d87aaf96e1e04e47c723c371386b15358c71e98c05dad16b786d585f9fd70ff"
   end
 

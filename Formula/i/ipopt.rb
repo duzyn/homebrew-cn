@@ -1,7 +1,7 @@
 class Ipopt < Formula
   desc "Interior point optimizer"
   homepage "https://coin-or.github.io/Ipopt/"
-  url "https://ghproxy.com/https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.13.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.13.tar.gz"
   sha256 "2afcb057e7cf8ed7e07f50ee0a4a06d2e4d39e0f964777e9dd55fe56199a5e0a"
   license "EPL-2.0"
   head "https://github.com/coin-or/Ipopt.git", branch: "stable/3.14"
@@ -31,7 +31,7 @@ class Ipopt < Formula
     patch do
       # MUMPS does not provide a Makefile.inc customized for macOS.
       on_macos do
-        url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/ab96a8b8e510a8a022808a9be77174179ac79e85/ipopt/mumps-makefile-inc-generic-seq.patch"
+        url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/ab96a8b8e510a8a022808a9be77174179ac79e85/ipopt/mumps-makefile-inc-generic-seq.patch"
         sha256 "0c570ee41299073ec2232ad089d8ee10a2010e6dfc9edc28f66912dae6999d75"
       end
 
@@ -43,7 +43,7 @@ class Ipopt < Formula
   end
 
   resource "test" do
-    url "https://ghproxy.com/https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.13.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.13.tar.gz"
     sha256 "2afcb057e7cf8ed7e07f50ee0a4a06d2e4d39e0f964777e9dd55fe56199a5e0a"
   end
 

@@ -4,7 +4,7 @@ cask "inkstitch" do
   on_sierra :or_older do
     sha256 "7a52e13a01dc74fd3267aa0efb1b0718c2463d88fbcca4c06822ab8065f936d1"
 
-    url "https://ghproxy.com/https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-capitan-catalina-osx.pkg",
+    url "https://mirror.ghproxy.com/https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-capitan-catalina-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
     pkg "inkstitch-v#{version}-sierra-osx.pkg"
@@ -12,7 +12,7 @@ cask "inkstitch" do
   on_high_sierra :or_newer do
     sha256 "64c5c2a38958b803e988783230169ec965f2aec58f27868d4ccddbf73d93141a"
 
-    url "https://ghproxy.com/https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
+    url "https://mirror.ghproxy.com/https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
     pkg "inkstitch-v#{version}-osx.pkg"

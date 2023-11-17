@@ -1,7 +1,7 @@
 class Libantlr3c < Formula
   desc "ANTLRv3 parsing library for C"
   homepage "https://www.antlr3.org/"
-  url "https://ghproxy.com/https://github.com/antlr/antlr3/archive/refs/tags/3.5.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/antlr/antlr3/archive/refs/tags/3.5.3.tar.gz"
   sha256 "a0892bcf164573d539b930e57a87ea45333141863a0dd3a49e5d8c919c8a58ab"
   license "BSD-3-Clause"
 

@@ -1,7 +1,7 @@
 class Janet < Formula
   desc "Dynamic language and bytecode vm"
   homepage "https://janet-lang.org"
-  url "https://ghproxy.com/https://github.com/janet-lang/janet/archive/refs/tags/v1.32.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/janet-lang/janet/archive/refs/tags/v1.32.1.tar.gz"
   sha256 "ac74444f1b545830c34738fe9ebb58c865ea4b819b0b0c3124315c646d9ce4cb"
   license "MIT"
   head "https://github.com/janet-lang/janet.git", branch: "master"
@@ -20,7 +20,7 @@ class Janet < Formula
   depends_on "ninja" => :build
 
   resource "jpm" do
-    url "https://ghproxy.com/https://github.com/janet-lang/jpm/archive/refs/tags/v1.1.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/janet-lang/jpm/archive/refs/tags/v1.1.0.tar.gz"
     sha256 "337c40d9b8c087b920202287b375c2962447218e8e127ce3a5a12e6e47ac6f16"
   end
 

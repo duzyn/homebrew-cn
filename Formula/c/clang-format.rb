@@ -7,21 +7,21 @@ class ClangFormat < Formula
   head "https://github.com/llvm/llvm-project.git", branch: "main"
 
   stable do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/llvm-17.0.5.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/llvm-17.0.5.src.tar.xz"
     sha256 "569526fd017478eee51518a79c064442c0499269c6a6de586e409d91282afd04"
 
     resource "clang" do
-      url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/clang-17.0.5.src.tar.xz"
+      url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/clang-17.0.5.src.tar.xz"
       sha256 "66b45502b9d570fda7feefe3595e34f0bf0c49df84f4298c7735289427f17bcb"
     end
 
     resource "cmake" do
-      url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/cmake-17.0.5.src.tar.xz"
+      url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/cmake-17.0.5.src.tar.xz"
       sha256 "734ea7767ebda642d22c878024c9fb14ae0521d048bdba54e463bb73260adaef"
     end
 
     resource "third-party" do
-      url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/third-party-17.0.5.src.tar.xz"
+      url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/third-party-17.0.5.src.tar.xz"
       sha256 "fe2f67bda7b1c28ff3930a91481cf64b6059aacf7b683c29b95424d32a258890"
     end
   end

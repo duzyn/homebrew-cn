@@ -1,7 +1,7 @@
 class VespaCli < Formula
   desc "Command-line tool for Vespa.ai"
   homepage "https://vespa.ai"
-  url "https://ghproxy.com/https://github.com/vespa-engine/vespa/archive/refs/tags/v8.258.16.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/vespa-engine/vespa/archive/refs/tags/v8.258.16.tar.gz"
   sha256 "79dae75e00d9309c0fc49fb30e6c69c08cb02eccb8396a783999c9b8d166096c"
   license "Apache-2.0"
 

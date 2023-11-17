@@ -1,7 +1,7 @@
 class MsgpackCxx < Formula
   desc "MessagePack implementation for C++ / msgpack.org[C++]"
   homepage "https://msgpack.org/"
-  url "https://ghproxy.com/https://github.com/msgpack/msgpack-c/releases/download/cpp-6.1.0/msgpack-cxx-6.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/msgpack/msgpack-c/releases/download/cpp-6.1.0/msgpack-cxx-6.1.0.tar.gz"
   sha256 "23ede7e93c8efee343ad8c6514c28f3708207e5106af3b3e4969b3a9ed7039e7"
   license "BSL-1.0"
   head "https://github.com/msgpack/msgpack-c.git", branch: "cpp_master"

@@ -1,7 +1,7 @@
 class Tlrc < Formula
   desc "Official tldr client written in Rust"
   homepage "https://github.com/tldr-pages/tlrc"
-  url "https://ghproxy.com/https://github.com/tldr-pages/tlrc/archive/refs/tags/v1.7.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tldr-pages/tlrc/archive/refs/tags/v1.7.1.tar.gz"
   sha256 "418d8f66d77bb01917b673a7dd7a54d58c2f8f297c0c6af5168c8d8b21effafc"
   license "MIT"
   head "https://github.com/tldr-pages/tlrc.git", branch: "main"

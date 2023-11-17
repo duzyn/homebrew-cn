@@ -1,7 +1,7 @@
 class Mold < Formula
   desc "Modern Linker"
   homepage "https://github.com/rui314/mold"
-  url "https://ghproxy.com/https://github.com/rui314/mold/archive/refs/tags/v2.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rui314/mold/archive/refs/tags/v2.3.3.tar.gz"
   sha256 "dcba90d5ee852ececb3a1a70110bb2d385079dcd1aa103e970296683c642f856"
   license "MIT"
   head "https://github.com/rui314/mold.git", branch: "main"

@@ -44,12 +44,12 @@ class Openrct2 < Formula
   fails_with gcc: "5" # C++17
 
   resource "title-sequences" do
-    url "https://ghproxy.com/https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.6/title-sequences.zip"
+    url "https://mirror.ghproxy.com/https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.6/title-sequences.zip"
     sha256 "24a189cdaf1f78fb6d6caede8f1ab3cedf8ab9f819cd2260a09b2cce4c710d98"
   end
 
   resource "objects" do
-    url "https://ghproxy.com/https://github.com/OpenRCT2/objects/releases/download/v1.3.11/objects.zip"
+    url "https://mirror.ghproxy.com/https://github.com/OpenRCT2/objects/releases/download/v1.3.11/objects.zip"
     sha256 "bf85d88e4fb11ca2e5915567390898747dc2459b3c7a057bdc32b829c91780b4"
   end
 

@@ -2,7 +2,7 @@ class Pocl < Formula
   desc "Portable Computing Language"
   homepage "http://portablecl.org"
   # TODO: Check if we can use unversioned `llvm` at version bump.
-  url "https://ghproxy.com/https://github.com/pocl/pocl/archive/refs/tags/v4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/pocl/pocl/archive/refs/tags/v4.0.tar.gz"
   sha256 "7f4e8ab608b3191c2b21e3f13c193f1344b40aba7738f78762f7b88f45e8ce03"
   license "MIT"
   revision 1

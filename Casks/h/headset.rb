@@ -5,7 +5,7 @@ cask "headset" do
   sha256 arm:   "63c6b9b45e7de083eee9267546b5695648d70b088da3488cffa0ca5897691d61",
          intel: "1fa8274db4738f363b741df1dc5004ca87b947e81d3732eefbea5bce39c6ce57"
 
-  url "https://ghproxy.com/https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-#{arch}.dmg",
       verified: "github.com/headsetapp/headset-electron/"
   name "Headset"
   desc "Music player powered by YouTube and Reddit"

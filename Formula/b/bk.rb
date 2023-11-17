@@ -1,7 +1,7 @@
 class Bk < Formula
   desc "Terminal EPUB Reader"
   homepage "https://github.com/aeosynth/bk"
-  url "https://ghproxy.com/https://github.com/aeosynth/bk/archive/refs/tags/v0.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/aeosynth/bk/archive/refs/tags/v0.6.0.tar.gz"
   sha256 "c720c8e81e86709f8543ca1a97a3c30b3bb33d55692a536cefed0ad2e3dfabcd"
   license "MIT"
   head "https://github.com/aeosynth/bk.git", branch: "master"

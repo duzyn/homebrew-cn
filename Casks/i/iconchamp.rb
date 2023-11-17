@@ -2,14 +2,14 @@ cask "iconchamp" do
   version "1.3.6"
   sha256 :no_check
 
-  url "https://ghproxy.com/https://github.com/MacEnhance/appcast/raw/master/IconChamp/IconChamp.zip",
+  url "https://mirror.ghproxy.com/https://github.com/MacEnhance/appcast/raw/master/IconChamp/IconChamp.zip",
       verified: "github.com/MacEnhance/appcast/"
   name "IconChamp"
   desc "Icon theming app for Big Sur and Monterey"
   homepage "https://www.macenhance.com/iconchamp"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/MacEnhance/appcast/master/IconChamp/appcast.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MacEnhance/appcast/master/IconChamp/appcast.xml"
     strategy :sparkle, &:short_version
   end
 

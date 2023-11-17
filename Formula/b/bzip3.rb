@@ -1,7 +1,7 @@
 class Bzip3 < Formula
   desc "Better and stronger spiritual successor to BZip2"
   homepage "https://github.com/kspalaiologos/bzip3"
-  url "https://ghproxy.com/https://github.com/kspalaiologos/bzip3/releases/download/1.3.2/bzip3-1.3.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/kspalaiologos/bzip3/releases/download/1.3.2/bzip3-1.3.2.tar.gz"
   sha256 "152cf2134fc27b68fef37d72b8c1f9f327ac611f6101d5a01287cdba24bc58c3"
   license "LGPL-3.0-only"
 

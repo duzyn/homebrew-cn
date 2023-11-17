@@ -2,7 +2,7 @@ cask "pinta" do
   version "2.1.1"
   sha256 "e93a867b48738ba5c4108b009213c1941c7dab3116695819bdd7e8774203db1a"
 
-  url "https://ghproxy.com/https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.dmg",
       verified: "github.com/PintaProject/Pinta/"
   name "Pinta"
   desc "Simple Gtk# Paint Program"

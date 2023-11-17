@@ -5,7 +5,7 @@ cask "freecad" do
   sha256 arm:   "b6959ca9e0e2f7cddda2cf1e97a26f3e2e65205f2e8e53b3c5dccd062f0be14f",
          intel: "633dd754e7732c531a019fe74068e43883f8f329c25fe85bfcc91fa26186451f"
 
-  url "https://ghproxy.com/https://github.com/FreeCAD/FreeCAD/releases/download/#{version}/FreeCAD-#{version}-mac-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/FreeCAD/FreeCAD/releases/download/#{version}/FreeCAD-#{version}-mac-#{arch}.dmg",
       verified: "github.com/FreeCAD/FreeCAD/"
   name "FreeCAD"
   desc "3D parametric modeler"

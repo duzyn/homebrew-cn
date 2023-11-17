@@ -1,7 +1,7 @@
 class Gops < Formula
   desc "Tool to list and diagnose Go processes currently running on your system"
   homepage "https://github.com/google/gops"
-  url "https://ghproxy.com/https://github.com/google/gops/archive/refs/tags/v0.3.28.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/google/gops/archive/refs/tags/v0.3.28.tar.gz"
   sha256 "9a040fe38e45aa41cfc43be5babb5e7962b027e1f6f8b68e5112f01866a42bba"
   license "BSD-3-Clause"
   head "https://github.com/google/gops.git", branch: "master"

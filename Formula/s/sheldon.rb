@@ -3,7 +3,7 @@ class Sheldon < Formula
   homepage "https://sheldon.cli.rs"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for steps.
-  url "https://ghproxy.com/https://github.com/rossmacarthur/sheldon/archive/refs/tags/0.7.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rossmacarthur/sheldon/archive/refs/tags/0.7.3.tar.gz"
   sha256 "cf8844dce853156d076a6956733420ad7a9365e16a928e419b11de8bc634fc67"
   license any_of: ["Apache-2.0", "MIT"]
   revision 2

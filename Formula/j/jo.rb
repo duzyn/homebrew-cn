@@ -1,7 +1,7 @@
 class Jo < Formula
   desc "JSON output from a shell"
   homepage "https://github.com/jpmens/jo"
-  url "https://ghproxy.com/https://github.com/jpmens/jo/releases/download/1.9/jo-1.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jpmens/jo/releases/download/1.9/jo-1.9.tar.gz"
   sha256 "0195cd6f2a41103c21544e99cd9517b0bce2d2dc8cde31a34867977f8a19c79f"
   license all_of: ["GPL-2.0-or-later", "MIT"]
 

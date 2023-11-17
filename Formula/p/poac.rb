@@ -1,7 +1,7 @@
 class Poac < Formula
   desc "Package Manager for C++"
   homepage "https://github.com/poac-dev/poac"
-  url "https://ghproxy.com/https://github.com/poac-dev/poac/archive/refs/tags/0.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/poac-dev/poac/archive/refs/tags/0.6.0.tar.gz"
   sha256 "40f55553f7cca3bdad39599ce8c9049aeecf8f6140cfebac28c51d7d9abbbb78"
   license "Apache-2.0"
   revision 4

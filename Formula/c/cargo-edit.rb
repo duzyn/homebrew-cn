@@ -3,7 +3,7 @@ class CargoEdit < Formula
   homepage "https://killercup.github.io/cargo-edit/"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/killercup/cargo-edit/archive/refs/tags/v0.12.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/killercup/cargo-edit/archive/refs/tags/v0.12.2.tar.gz"
   sha256 "10c86ca7585852ce288a44608ef87c827f4b733a94eb847ab15735b823b30560"
   license "MIT"
 

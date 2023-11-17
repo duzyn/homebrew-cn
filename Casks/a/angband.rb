@@ -2,7 +2,7 @@ cask "angband" do
   version "4.2.5"
   sha256 "ea04557f8ad46d7e446fd4e76324774743bb6b073f6fe9b803256776707bbc66"
 
-  url "https://ghproxy.com/https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg",
       verified: "github.com/angband/angband/"
   name "Angband"
   desc "Dungeon exploration game"

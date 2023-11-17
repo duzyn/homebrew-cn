@@ -1,7 +1,7 @@
 class Gismo < Formula
   desc "C++ library for isogeometric analysis (IGA)"
   homepage "https://gismo.github.io"
-  url "https://ghproxy.com/https://github.com/gismo/gismo/archive/refs/tags/v21.12.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gismo/gismo/archive/refs/tags/v21.12.0.tar.gz"
   sha256 "4001b4c49661ca8b71baf915e773341e115d154077bef218433a3c1d72ee4f0c"
   license "MPL-2.0"
 

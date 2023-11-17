@@ -1,7 +1,7 @@
 class Toxiproxy < Formula
   desc "TCP proxy to simulate network & system conditions for chaos & resiliency testing"
   homepage "https://github.com/shopify/toxiproxy"
-  url "https://ghproxy.com/https://github.com/Shopify/toxiproxy/archive/refs/tags/v2.7.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Shopify/toxiproxy/archive/refs/tags/v2.7.0.tar.gz"
   sha256 "e61c3fac7cfb21ec9df2c176dcc5b999a588468068094d0255cb7a2dd2688684"
   license "MIT"
 

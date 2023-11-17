@@ -1,7 +1,7 @@
 class Crfsuite < Formula
   desc "Fast implementation of conditional random fields"
   homepage "https://www.chokkan.org/software/crfsuite/"
-  url "https://ghproxy.com/https://github.com/chokkan/crfsuite/archive/refs/tags/0.12.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/chokkan/crfsuite/archive/refs/tags/0.12.tar.gz"
   sha256 "ab83084ed5d4532ec772d96c3e964104d689f2c295915e80299ea3c315335b00"
   license "BSD-3-Clause"
 

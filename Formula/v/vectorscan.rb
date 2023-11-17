@@ -2,7 +2,7 @@ class Vectorscan < Formula
   desc "High-performance regular expression matching library"
   homepage "https://github.com/VectorCamp/vectorscan"
   # TODO: update version check for new release
-  url "https://ghproxy.com/https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.10.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.10.1.tar.gz"
   sha256 "ed4fb5aafecca155c4ce2f9b2c0ab781dc92fee720f77f4f4d56b651787ae118"
   license "BSD-3-Clause"
 

@@ -1,7 +1,7 @@
 class Zug < Formula
   desc "C++ library providing transducers"
   homepage "https://sinusoid.es/zug/"
-  url "https://ghproxy.com/https://github.com/arximboldi/zug/archive/refs/tags/v0.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/arximboldi/zug/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "1b9c8f962e40baa6f0c6af35f957444850063d550078a3ebd0227727b8ef193c"
   license "BSL-1.0"
 

@@ -2,7 +2,7 @@ cask "spyder" do
   version "5.5.0"
   sha256 "522ab177d2803843faeb9c11d59489df23be81c29491a69a5b6db879fa253f8b"
 
-  url "https://ghproxy.com/https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder.dmg",
       verified: "github.com/spyder-ide/spyder/"
   name "Spyder"
   desc "Scientific Python IDE"

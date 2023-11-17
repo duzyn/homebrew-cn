@@ -1,7 +1,7 @@
 class Tm < Formula
   desc "TriggerMesh CLI to work with knative objects"
   homepage "https://triggermesh.com"
-  url "https://ghproxy.com/https://github.com/triggermesh/tm/archive/refs/tags/v1.21.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/triggermesh/tm/archive/refs/tags/v1.21.0.tar.gz"
   sha256 "865d62d11ac28536ed630562088ca8537ceb5c54fcbc413788171f98ab301df2"
   license "Apache-2.0"
   head "https://github.com/triggermesh/tm.git", branch: "main"
@@ -63,7 +63,7 @@ class Tm < Formula
     assert_predicate testpath/"foo-node/serverless.yaml", :exist?
     assert_predicate testpath/"foo-node/handler.js", :exist?
 
-    runtime = "https://ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/node10/runtime.yaml"
+    runtime = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/node10/runtime.yaml"
     yaml = File.read("foo-node/serverless.yaml")
     assert_match "runtime: #{runtime}", yaml
 
@@ -72,7 +72,7 @@ class Tm < Formula
     assert_predicate testpath/"foo-python/serverless.yaml", :exist?
     assert_predicate testpath/"foo-python/handler.py", :exist?
 
-    runtime = "https://ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python37/runtime.yaml"
+    runtime = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python37/runtime.yaml"
     yaml = File.read("foo-python/serverless.yaml")
     assert_match "runtime: #{runtime}", yaml
 
@@ -81,7 +81,7 @@ class Tm < Formula
     assert_predicate testpath/"foo-go/serverless.yaml", :exist?
     assert_predicate testpath/"foo-go/main.go", :exist?
 
-    runtime = "https://ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/go/runtime.yaml"
+    runtime = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/go/runtime.yaml"
     yaml = File.read("foo-go/serverless.yaml")
     assert_match "runtime: #{runtime}", yaml
 
@@ -90,7 +90,7 @@ class Tm < Formula
     assert_predicate testpath/"foo-ruby/serverless.yaml", :exist?
     assert_predicate testpath/"foo-ruby/handler.rb", :exist?
 
-    runtime = "https://ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/ruby25/runtime.yaml"
+    runtime = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/ruby25/runtime.yaml"
     yaml = File.read("foo-ruby/serverless.yaml")
     assert_match "runtime: #{runtime}", yaml
   end

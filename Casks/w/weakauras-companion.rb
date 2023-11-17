@@ -2,7 +2,7 @@ cask "weakauras-companion" do
   version "5.1.2"
   sha256 "efd4e06e82eb4e8cb11d3af64d083ec01d05ce5ba2684d28755b0834d42ac184"
 
-  url "https://ghproxy.com/https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-universal.dmg",
       verified: "github.com/WeakAuras/WeakAuras-Companion/"
   name "WeakAuras Companion"
   desc "Update your auras from Wago.io and creates regular backups of them"

@@ -1,7 +1,7 @@
 class CargoDeps < Formula
   desc "Cargo subcommand to building dependency graphs of Rust projects"
   homepage "https://github.com/mrcnski/cargo-deps"
-  url "https://ghproxy.com/https://github.com/mrcnski/cargo-deps/archive/refs/tags/v1.5.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/mrcnski/cargo-deps/archive/refs/tags/v1.5.1.tar.gz"
   sha256 "b570902b2225f1cf8af5a33d3b77ac4bf04161ef7e9573731eed97715efa9fd3"
   license "BSD-3-Clause"
   head "https://github.com/mrcnski/cargo-deps.git", branch: "master"

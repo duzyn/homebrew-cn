@@ -1,7 +1,7 @@
 class WpebackendFdo < Formula
   desc "Freedesktop.org backend for WPE WebKit"
   homepage "https://wpewebkit.org/"
-  url "https://ghproxy.com/https://github.com/Igalia/WPEBackend-fdo/releases/download/1.14.2/wpebackend-fdo-1.14.2.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/Igalia/WPEBackend-fdo/releases/download/1.14.2/wpebackend-fdo-1.14.2.tar.xz"
   sha256 "93c9766ae9864eeaeaee2b0a74f22cbca08df42c1a1bdb55b086f2528e380d38"
   license "BSD-2-Clause"
   head "https://github.com/Igalia/WPEBackend-fdo.git", branch: "master"

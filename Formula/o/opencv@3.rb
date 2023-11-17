@@ -2,7 +2,7 @@ class OpencvAT3 < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
   # TODO: Check if we can use unversioned `protobuf` at version bump
-  url "https://ghproxy.com/https://github.com/opencv/opencv/archive/refs/tags/3.4.16.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/opencv/opencv/archive/refs/tags/3.4.16.tar.gz"
   sha256 "5e37b791b2fe42ed39b52d9955920b951ee42d5da95f79fbc9765a08ef733399"
   license "BSD-3-Clause"
   revision 10
@@ -44,14 +44,14 @@ class OpencvAT3 < Formula
   fails_with gcc: "5" # ffmpeg is compiled with GCC
 
   resource "contrib" do
-    url "https://ghproxy.com/https://github.com/opencv/opencv_contrib/archive/refs/tags/3.4.16.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/opencv/opencv_contrib/archive/refs/tags/3.4.16.tar.gz"
     sha256 "92b4f6ab8107e9de387bafc3c7658263e5c6be68554d6086b37a2cb168e332c5"
   end
 
   # tbb 2021 support. Backport of
   # https://github.com/opencv/opencv/pull/19384
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/ec823c01d3275b13b527e4860ae542fac11da24c/opencv%403/tbb2021.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/ec823c01d3275b13b527e4860ae542fac11da24c/opencv%403/tbb2021.patch"
     sha256 "a125f962ea07f0656869cbd97433f0e465013effc13c97a414752e0d25ed9a7d"
   end
 

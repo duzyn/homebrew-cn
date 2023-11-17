@@ -44,7 +44,7 @@ class GccAT11 < Formula
   # Branch from the Darwin maintainer of GCC, with a few generic fixes and
   # Apple Silicon support, located at https://github.com/iains/gcc-11-branch
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/c233b1a8d81b9c9f5827510d8d285080ee11de2e/gcc/gcc-11.4.0.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/c233b1a8d81b9c9f5827510d8d285080ee11de2e/gcc/gcc-11.4.0.diff"
     sha256 "440f6e965966c86a7925506e63eb06f7f54c00b1d146db8d0c567bdb8820072f"
   end
 

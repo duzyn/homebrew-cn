@@ -1,7 +1,7 @@
 class AnsibleCmdb < Formula
   desc "Generates static HTML overview page from Ansible facts"
   homepage "https://github.com/fboender/ansible-cmdb"
-  url "https://ghproxy.com/https://github.com/fboender/ansible-cmdb/releases/download/1.31/ansible-cmdb-1.31.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/fboender/ansible-cmdb/releases/download/1.31/ansible-cmdb-1.31.tar.gz"
   sha256 "ab1be4a85184647bcec08d4e65bda66c7d08c0f88c81eca4d0e44e02b768c2bb"
   license "GPL-3.0-or-later"
 

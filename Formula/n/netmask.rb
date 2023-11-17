@@ -1,7 +1,7 @@
 class Netmask < Formula
   desc "IP address netmask generation utility"
   homepage "https://github.com/tlby/netmask/blob/master/README"
-  url "https://ghproxy.com/https://github.com/tlby/netmask/archive/refs/tags/v2.4.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tlby/netmask/archive/refs/tags/v2.4.4.tar.gz"
   sha256 "7e4801029a1db868cfb98661bcfdf2152e49d436d41f8748f124d1f4a3409d83"
   license "GPL-2.0-only"
 

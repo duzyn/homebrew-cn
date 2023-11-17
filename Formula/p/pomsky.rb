@@ -1,7 +1,7 @@
 class Pomsky < Formula
   desc "Regular expression language"
   homepage "https://pomsky-lang.org/"
-  url "https://ghproxy.com/https://github.com/rulex-rs/pomsky/archive/refs/tags/v0.11.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rulex-rs/pomsky/archive/refs/tags/v0.11.tar.gz"
   sha256 "602cf73d7f7343b8c59ae82973635f5f62f26e2fe341fa990fca5fe504736384"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/rulex-rs/pomsky.git", branch: "main"

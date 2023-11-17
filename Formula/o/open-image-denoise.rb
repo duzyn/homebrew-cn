@@ -1,7 +1,7 @@
 class OpenImageDenoise < Formula
   desc "High-performance denoising library for ray tracing"
   homepage "https://openimagedenoise.github.io"
-  url "https://ghproxy.com/https://github.com/OpenImageDenoise/oidn/releases/download/v2.1.0/oidn-2.1.0.src.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/OpenImageDenoise/oidn/releases/download/v2.1.0/oidn-2.1.0.src.tar.gz"
   sha256 "ce144ba582ff36563d9442ee07fa2a4d249bc85aa93e5b25fc527ff4ee755ed6"
   license "Apache-2.0"
 

@@ -1,7 +1,7 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://ghproxy.com/https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.1-ga.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.1-ga.tar.gz"
   sha256 "4414ebc898e53489c2325ff6cb1a73640840f31c2fd671bd598e23c8a87e88ad"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 

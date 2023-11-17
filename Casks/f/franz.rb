@@ -5,7 +5,7 @@ cask "franz" do
   sha256 arm:   "97fac95cdc2c4080c6f9a0659befae61e63c6f2332aa8aa2b75dcc07d4d00a82",
          intel: "dc7bef96dabd0b86199430cd7699b17dae6cbc6eae5f6962b14d93381d0df853"
 
-  url "https://ghproxy.com/https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}#{arch}.dmg",
       verified: "github.com/meetfranz/franz/"
   name "Franz"
   desc "Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more"

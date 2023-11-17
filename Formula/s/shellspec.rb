@@ -1,7 +1,7 @@
 class Shellspec < Formula
   desc "BDD unit testing framework for dash, bash, ksh, zsh and all POSIX shells"
   homepage "https://shellspec.info/"
-  url "https://ghproxy.com/https://github.com/shellspec/shellspec/archive/refs/tags/0.28.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/shellspec/shellspec/archive/refs/tags/0.28.1.tar.gz"
   sha256 "400d835466429a5fe6c77a62775a9173729d61dd43e05dfa893e8cf6cb511783"
   license "MIT"
   head "https://github.com/shellspec/shellspec.git", branch: "master"

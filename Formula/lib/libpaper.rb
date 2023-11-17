@@ -1,7 +1,7 @@
 class Libpaper < Formula
   desc "Library for handling paper characteristics"
   homepage "https://github.com/rrthomas/libpaper"
-  url "https://ghproxy.com/https://github.com/rrthomas/libpaper/releases/download/v2.1.2/libpaper-2.1.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rrthomas/libpaper/releases/download/v2.1.2/libpaper-2.1.2.tar.gz"
   sha256 "1fda0cf64efa46b9684a4ccc17df4386c4cc83254805419222c064bf62ea001f"
   license "LGPL-2.1-or-later"
 

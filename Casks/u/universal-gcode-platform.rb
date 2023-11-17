@@ -5,7 +5,7 @@ cask "universal-gcode-platform" do
   sha256 arm:   "7be0908be21f338dd16a8c407393b2758ddf537c44897d35887c8e9f5b53be55",
          intel: "11332ff1ae50c0f51b24aaff639299d72951b46ebfde6719dfab384bc93f1405"
 
-  url "https://ghproxy.com/https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/macosx-#{arch}-ugs-platform-app-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/macosx-#{arch}-ugs-platform-app-#{version}.dmg",
       verified: "github.com/winder/Universal-G-Code-Sender/"
   name "Universal G-code Sender (Platform version)"
   desc "G-code sender for CNC (compatible with GRBL, TinyG, g2core and Smoothieware)"

@@ -2,7 +2,7 @@ cask "maa" do
   version "4.26.1"
   sha256 "c51cc5d87463ee5b206f7ab60f476a2df365c220085e7e2bea2732162cdf1112"
 
-  url "https://ghproxy.com/https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v#{version}/MAA-v#{version}-macos-universal.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v#{version}/MAA-v#{version}-macos-universal.dmg"
   name "MAA"
   desc "One-click tool for the daily tasks of Arknights"
   homepage "https://github.com/MaaAssistantArknights/MaaAssistantArknights"

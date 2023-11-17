@@ -28,7 +28,7 @@ class EotUtils < Formula
   end
 
   resource "eot" do
-    url "https://ghproxy.com/https://github.com/RoelN/font-face-render-check/raw/98f0adda9cfe44fe97f6d538aa893a37905a7add/dev/pixelambacht-dash.eot"
+    url "https://mirror.ghproxy.com/https://github.com/RoelN/font-face-render-check/raw/98f0adda9cfe44fe97f6d538aa893a37905a7add/dev/pixelambacht-dash.eot"
     sha256 "23d6fbe778abe8fe51cfc5ea22f8e061b4c8d32b096ef4a252ba6f2f00406c91"
   end
 

@@ -1,7 +1,7 @@
 class Cp2k < Formula
   desc "Quantum chemistry and solid state physics software package"
   homepage "https://www.cp2k.org/"
-  url "https://ghproxy.com/https://github.com/cp2k/cp2k/releases/download/v2023.2/cp2k-2023.2.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/cp2k/cp2k/releases/download/v2023.2/cp2k-2023.2.tar.bz2"
   sha256 "adbcc903c1a78cba98f49fe6905a62b49f12e3dfd7cedea00616d1a5f50550db"
   license "GPL-2.0-or-later"
 
@@ -36,7 +36,7 @@ class Cp2k < Formula
   fails_with :clang # needs OpenMP support
 
   resource "libint" do
-    url "https://ghproxy.com/https://github.com/cp2k/libint-cp2k/releases/download/v2.6.0/libint-v2.6.0-cp2k-lmax-5.tgz"
+    url "https://mirror.ghproxy.com/https://github.com/cp2k/libint-cp2k/releases/download/v2.6.0/libint-v2.6.0-cp2k-lmax-5.tgz"
     sha256 "1cd72206afddb232bcf2179c6229fbf6e42e4ba8440e701e6aa57ff1e871e9db"
   end
 

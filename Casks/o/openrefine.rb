@@ -2,7 +2,7 @@ cask "openrefine" do
   version "3.7.6"
   sha256 "cfbbc3945945dc0cb5dabd67ebc605a21aa8d46095acecf28e4980be645956c7"
 
-  url "https://ghproxy.com/https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg",
       verified: "github.com/OpenRefine/OpenRefine/"
   name "OpenRefine"
   desc "Tool for working with messy data (previously Google Refine)"

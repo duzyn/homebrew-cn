@@ -5,7 +5,7 @@ cask "panwriter" do
   sha256 arm:   "11095d2dd24c661b069b732017893880a65ad5c3ad7707abe93d22b74f1cc105",
          intel: "3169bea7447ec001e17b458df4f7fec340be8ab7205720782be0243c28bb8448"
 
-  url "https://ghproxy.com/https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}-#{arch}.dmg",
       verified: "github.com/mb21/panwriter/"
   name "PanWriter"
   desc "Markdown editor with pandoc integration and paginated preview"

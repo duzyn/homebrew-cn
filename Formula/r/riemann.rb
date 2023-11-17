@@ -1,7 +1,7 @@
 class Riemann < Formula
   desc "Event stream processor"
   homepage "https://riemann.io/"
-  url "https://ghproxy.com/https://github.com/riemann/riemann/releases/download/0.3.10/riemann-0.3.10.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/riemann/riemann/releases/download/0.3.10/riemann-0.3.10.tar.bz2"
   sha256 "76421dc7ef51ab7a5a0c61cabb03ba46cad0d6eda6bd19e7704c8e207a8e0513"
   license "EPL-1.0"
 

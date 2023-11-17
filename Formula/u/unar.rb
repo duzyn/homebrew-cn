@@ -1,7 +1,7 @@
 class Unar < Formula
   desc "Command-line unarchiving tools supporting multiple formats"
   homepage "https://theunarchiver.com/command-line"
-  url "https://ghproxy.com/https://github.com/MacPaw/XADMaster/archive/refs/tags/v1.10.8.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/MacPaw/XADMaster/archive/refs/tags/v1.10.8.tar.gz"
   sha256 "652953d7988b3c33f4f52b61c357afd1a7c2fc170e5e6e2219f4432b0c4cd39f"
   license "LGPL-2.1-or-later"
   head "https://github.com/MacPaw/XADMaster.git", branch: "master"
@@ -31,7 +31,7 @@ class Unar < Formula
   fails_with :gcc
 
   resource "universal-detector" do
-    url "https://ghproxy.com/https://github.com/MacPaw/universal-detector/archive/refs/tags/1.1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/MacPaw/universal-detector/archive/refs/tags/1.1.tar.gz"
     sha256 "8e8532111d0163628eb828a60d67b53133afad3f710b1967e69d3b8eee28a811"
   end
 

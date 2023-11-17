@@ -33,7 +33,7 @@ cask "datweatherdoe" do
     end
   end
 
-  url "https://ghproxy.com/https://github.com/inderdhir/DatWeatherDoe/releases/download/#{version}/DatWeatherDoe-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/inderdhir/DatWeatherDoe/releases/download/#{version}/DatWeatherDoe-#{version}.dmg"
   name "DatWeatherDoe"
   desc "Menu bar weather app"
   homepage "https://github.com/inderdhir/DatWeatherDoe"

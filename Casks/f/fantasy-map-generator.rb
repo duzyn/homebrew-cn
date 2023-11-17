@@ -3,7 +3,7 @@ cask "fantasy-map-generator" do
     version "1.89.36"
     sha256 :no_check
 
-    url "https://ghproxy.com/https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/current/fmg-darwin-arm64.zip",
+    url "https://mirror.ghproxy.com/https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/current/fmg-darwin-arm64.zip",
         verified: "github.com/Azgaar/Fantasy-Map-Generator/"
 
     livecheck do
@@ -17,7 +17,7 @@ cask "fantasy-map-generator" do
     version "1.3"
     sha256 "6aba1ba5b3c358fe4b09d2cbd7449bc603213cbc52de622250eaabaf8eae6d6d"
 
-    url "https://ghproxy.com/https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/v#{version}/FMG-macos-x64.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/v#{version}/FMG-macos-x64.dmg",
         verified: "github.com/Azgaar/Fantasy-Map-Generator/"
 
     livecheck do

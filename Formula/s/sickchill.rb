@@ -316,7 +316,7 @@ class Sickchill < Formula
 
   # upstream issue report, https://github.com/hustcc/timeago/issues/45
   resource "timeago" do
-    url "https://ghproxy.com/https://github.com/hustcc/timeago/archive/refs/tags/1.0.16.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/hustcc/timeago/archive/refs/tags/1.0.16.tar.gz"
     sha256 "7b54b88b3d0566cbf01ca11077dad8f7ae07a4318479e3d1b30feebe85f7137f"
   end
 

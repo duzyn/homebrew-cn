@@ -2,7 +2,7 @@ cask "manuskript" do
   version "0.15.0"
   sha256 "59cd751d2010e661e4b3fc38bbbf49801dcf9b9317d7a62aff0826f8bcbac085"
 
-  url "https://ghproxy.com/https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.dmg",
       verified: "github.com/olivierkes/manuskript/"
   name "Manuskript"
   desc "Tool for writers"

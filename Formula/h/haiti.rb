@@ -1,7 +1,7 @@
 class Haiti < Formula
   desc "Hash type identifier"
   homepage "https://noraj.github.io/haiti/#/"
-  url "https://ghproxy.com/https://github.com/noraj/haiti/archive/refs/tags/v2.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/noraj/haiti/archive/refs/tags/v2.1.0.tar.gz"
   sha256 "ee1fee20c891db567abe753de25e7f1f1d4c7c59d92b6ce28f2e96606f247828"
   license "MIT"
 

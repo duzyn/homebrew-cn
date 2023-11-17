@@ -31,7 +31,7 @@ class Mcpp < Formula
   # Patch from ZeroC fixing EOL comment parsing
   # https://forums.zeroc.com/forum/bug-reports/5445-mishap-in-slice-compilers?t=5309
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/3fd7fba/mcpp/2.7.2.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/3fd7fba/mcpp/2.7.2.patch"
     sha256 "4bc6a6bd70b67cb78fc48d878cd264b32d7bd0b1ad9705563320d81d5f1abb71"
   end
 

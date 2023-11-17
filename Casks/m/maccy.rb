@@ -2,14 +2,14 @@ cask "maccy" do
   version "0.28.0"
   sha256 "7718ede6c9081cde959645a97268fe652a2f54046e4044caa3228c90cb548474"
 
-  url "https://ghproxy.com/https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip",
+  url "https://mirror.ghproxy.com/https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip",
       verified: "github.com/p0deje/Maccy/"
   name "Maccy"
   desc "Clipboard manager"
   homepage "https://maccy.app/"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml"
     strategy :sparkle, &:short_version
   end
 

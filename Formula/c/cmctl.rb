@@ -1,7 +1,7 @@
 class Cmctl < Formula
   desc "Command-line tool to manage cert-manager"
   homepage "https://cert-manager.io"
-  url "https://ghproxy.com/https://github.com/cert-manager/cert-manager/archive/refs/tags/v1.13.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cert-manager/cert-manager/archive/refs/tags/v1.13.2.tar.gz"
   sha256 "ef6ef828ecf8a334ea9e3f3b21b4b19985a57aac053ddf11972f15d9a2102b80"
   license "Apache-2.0"
   head "https://github.com/cert-manager/cert-manager.git", branch: "master"

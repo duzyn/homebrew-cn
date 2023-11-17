@@ -1,7 +1,7 @@
 class Swtpm < Formula
   desc "Software TPM Emulator based on libtpms"
   homepage "https://github.com/stefanberger/swtpm"
-  url "https://ghproxy.com/https://github.com/stefanberger/swtpm/archive/refs/tags/v0.8.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/stefanberger/swtpm/archive/refs/tags/v0.8.1.tar.gz"
   sha256 "7bba52aa41090f75087034fac5fe8daed10c3e7e7234df7c9558849318927f41"
   license "BSD-3-Clause"
 

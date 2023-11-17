@@ -22,7 +22,7 @@ class Bazelisk < Formula
   conflicts_with "bazel", because: "Bazelisk replaces the bazel binary"
 
   resource "bazel_zsh_completion" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/bazelbuild/bazel/036e533/scripts/zsh_completion/_bazel"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/bazelbuild/bazel/036e533/scripts/zsh_completion/_bazel"
     sha256 "4094dc84add2f23823bc341186adf6b8487fbd5d4164bd52d98891c41511eba4"
   end
 

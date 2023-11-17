@@ -1,7 +1,7 @@
 class DmtxUtils < Formula
   desc "Read and write data matrix barcodes"
   homepage "https://github.com/dmtx/dmtx-utils"
-  url "https://ghproxy.com/https://github.com/dmtx/dmtx-utils/archive/refs/tags/v0.7.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/dmtx/dmtx-utils/archive/refs/tags/v0.7.6.tar.gz"
   sha256 "0d396ec14f32a8cf9e08369a4122a16aa2e5fa1675e02218f16f1ab777ea2a28"
   license "LGPL-2.1"
   revision 6
@@ -26,7 +26,7 @@ class DmtxUtils < Formula
   depends_on "libtool"
 
   resource "test_image12" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/dmtx/libdmtx/ca9313f/test/rotate_test/images/test_image12.png"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/dmtx/libdmtx/ca9313f/test/rotate_test/images/test_image12.png"
     sha256 "683777f43ce2747c8a6c7a3d294f64bdbfee600d719aac60a18fcb36f7fc7242"
   end
 

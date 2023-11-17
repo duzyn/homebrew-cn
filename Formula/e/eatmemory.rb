@@ -1,7 +1,7 @@
 class Eatmemory < Formula
   desc "Simple program to allocate memory from the command-line"
   homepage "https://github.com/julman99/eatmemory"
-  url "https://ghproxy.com/https://github.com/julman99/eatmemory/archive/refs/tags/v0.1.10.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/julman99/eatmemory/archive/refs/tags/v0.1.10.tar.gz"
   sha256 "568622f6aef9e20e7d5c5bb66ab7ce74bec458415b8135921fe6d2425450b374"
   license "MIT"
 

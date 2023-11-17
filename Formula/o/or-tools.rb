@@ -1,7 +1,7 @@
 class OrTools < Formula
   desc "Google's Operations Research tools"
   homepage "https://developers.google.com/optimization/"
-  url "https://ghproxy.com/https://github.com/google/or-tools/archive/refs/tags/v9.8.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/google/or-tools/archive/refs/tags/v9.8.tar.gz"
   sha256 "85e10e7acf0a9d9a3b891b9b108f76e252849418c6230daea94ac429af8a4ea4"
   license "Apache-2.0"
   head "https://github.com/google/or-tools.git", branch: "stable"

@@ -2,7 +2,7 @@ cask "hydrus-network" do
   version "552a"
   sha256 "5fd51db34c6d0bcf656bc37cb6363fdad72ed6dbaadc83d615ddff8cdce1fae9"
 
-  url "https://ghproxy.com/https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
   name "hydrus-network"
   desc "Booru-style media tagger"

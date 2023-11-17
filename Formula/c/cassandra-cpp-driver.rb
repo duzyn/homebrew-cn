@@ -1,7 +1,7 @@
 class CassandraCppDriver < Formula
   desc "DataStax C/C++ Driver for Apache Cassandra"
   homepage "https://docs.datastax.com/en/developer/cpp-driver/latest"
-  url "https://ghproxy.com/https://github.com/datastax/cpp-driver/archive/refs/tags/2.17.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/datastax/cpp-driver/archive/refs/tags/2.17.1.tar.gz"
   sha256 "53b4123aad59b39f2da0eb0ce7fe0e92559f7bba0770b2e958254f17bffcd7cf"
   license "Apache-2.0"
   head "https://github.com/datastax/cpp-driver.git", branch: "master"

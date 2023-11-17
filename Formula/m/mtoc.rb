@@ -1,7 +1,7 @@
 class Mtoc < Formula
   desc "Mach-O to PE/COFF binary converter"
   homepage "https://opensource.apple.com/"
-  url "https://ghproxy.com/https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-949.0.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-949.0.1.tar.gz"
   sha256 "8b2d8dc371a57e42852fa6102efaf324ef004adf86072bf9957e2ac9005326c1"
   license "APSL-2.0"
 
@@ -26,7 +26,7 @@ class Mtoc < Formula
   conflicts_with "ocmtoc", because: "both install `mtoc` binaries"
 
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/acidanthera/ocbuild/d3e57820ce85bc2ed4ce20cc25819e763c17c114/patches/mtoc-permissions.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/acidanthera/ocbuild/d3e57820ce85bc2ed4ce20cc25819e763c17c114/patches/mtoc-permissions.patch"
     sha256 "0d20ee119368e30913936dfee51055a1055b96dde835f277099cb7bcd4a34daf"
   end
 

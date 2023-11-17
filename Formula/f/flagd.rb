@@ -39,7 +39,7 @@ class Flagd < Formula
     begin
       pid = fork do
         exec bin/"flagd", "start", "-f",
-            "https://ghproxy.com/https://raw.githubusercontent.com/open-feature/flagd/main/config/samples/example_flags.json",
+            "https://mirror.ghproxy.com/https://raw.githubusercontent.com/open-feature/flagd/main/config/samples/example_flags.json",
             "-p", port.to_s
       end
       sleep 3

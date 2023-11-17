@@ -1,7 +1,7 @@
 class Blogc < Formula
   desc "Blog compiler with template engine and markup language"
   homepage "https://blogc.rgm.io/"
-  url "https://ghproxy.com/https://github.com/blogc/blogc/releases/download/v0.20.1/blogc-0.20.1.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/blogc/blogc/releases/download/v0.20.1/blogc-0.20.1.tar.xz"
   sha256 "d1289367362b7b11b438670fe703ff2c751e795393c06e1999d6b9a6e438fdd8"
   license "BSD-3-Clause"
   head "https://github.com/blogc/blogc.git", branch: "master"

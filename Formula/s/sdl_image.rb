@@ -12,7 +12,7 @@ class SdlImage < Formula
     # https://github.com/Homebrew/homebrew-python/issues/281
     # https://trac.macports.org/ticket/37453
     patch :p0 do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/41996822/sdl_image/IMG_ImageIO.m.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/41996822/sdl_image/IMG_ImageIO.m.patch"
       sha256 "c43c5defe63b6f459325798e41fe3fdf0a2d32a6f4a57e76a056e752372d7b09"
     end
   end

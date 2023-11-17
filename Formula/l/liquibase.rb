@@ -1,7 +1,7 @@
 class Liquibase < Formula
   desc "Library for database change tracking"
   homepage "https://www.liquibase.org/"
-  url "https://ghproxy.com/https://github.com/liquibase/liquibase/releases/download/v4.25.0/liquibase-4.25.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/liquibase/liquibase/releases/download/v4.25.0/liquibase-4.25.0.tar.gz"
   sha256 "362174965cd8c2c74f1026201f911afc1a323c822828bf3fd04bcefa3aa45c49"
   license "Apache-2.0"
 

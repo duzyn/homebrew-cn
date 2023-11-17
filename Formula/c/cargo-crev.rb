@@ -1,7 +1,7 @@
 class CargoCrev < Formula
   desc "Code review system for the cargo package manager"
   homepage "https://web.crev.dev/rust-reviews/"
-  url "https://ghproxy.com/https://github.com/crev-dev/cargo-crev/archive/refs/tags/v0.25.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/crev-dev/cargo-crev/archive/refs/tags/v0.25.4.tar.gz"
   sha256 "1eed9427b732e6d8afe9148a868a4a836d1905688c9104a2d6959fd0119795fe"
   license "Apache-2.0"
 

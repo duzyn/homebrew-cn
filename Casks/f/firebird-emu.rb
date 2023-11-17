@@ -2,7 +2,7 @@ cask "firebird-emu" do
   version "1.6"
   sha256 "c68aae5b077bd447845f476316fed93cf261ac7221fac0a38dfc0a575a3392d2"
 
-  url "https://ghproxy.com/https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-emu_macOS.zip"
+  url "https://mirror.ghproxy.com/https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-emu_macOS.zip"
   name "firebird"
   desc "TI Nspire calculator emulator"
   homepage "https://github.com/nspire-emus/firebird"

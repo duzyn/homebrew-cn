@@ -1,7 +1,7 @@
 class FregeRepl < Formula
   desc "REPL (read-eval-print loop) for Frege"
   homepage "https://github.com/Frege/frege-repl"
-  url "https://ghproxy.com/https://github.com/Frege/frege-repl/releases/download/1.4-SNAPSHOT/frege-repl-1.4-SNAPSHOT.zip"
+  url "https://mirror.ghproxy.com/https://github.com/Frege/frege-repl/releases/download/1.4-SNAPSHOT/frege-repl-1.4-SNAPSHOT.zip"
   version "1.4-SNAPSHOT"
   sha256 "2ca5f13bc5efaf8515381e8cdf99b4d4017264a462a30366a873cb54cc4f4640"
   license "BSD-3-Clause"

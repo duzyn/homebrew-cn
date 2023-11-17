@@ -3,7 +3,7 @@ require "language/node"
 class Netlistsvg < Formula
   desc "Draws an SVG schematic from a yosys JSON netlist"
   homepage "https://github.com/nturley/netlistsvg"
-  url "https://ghproxy.com/https://github.com/nturley/netlistsvg/archive/refs/tags/v1.0.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nturley/netlistsvg/archive/refs/tags/v1.0.2.tar.gz"
   sha256 "b7f218f9d8f2b826d28bff6ebe1f5b1a4fb5b7c9465a034ae0a8fcd2b9d53a67"
   license "MIT"
 

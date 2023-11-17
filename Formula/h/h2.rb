@@ -1,7 +1,7 @@
 class H2 < Formula
   desc "Java SQL database"
   homepage "https://www.h2database.com/"
-  url "https://ghproxy.com/https://github.com/h2database/h2database/releases/download/version-2.2.224/h2-2023-09-17.zip"
+  url "https://mirror.ghproxy.com/https://github.com/h2database/h2database/releases/download/version-2.2.224/h2-2023-09-17.zip"
   version "2.2.224"
   sha256 "33f6c5c51aef2d9b15635214e4c7f01f82256f37df511b3efee3f6b6d79d5deb"
   license "MPL-2.0"

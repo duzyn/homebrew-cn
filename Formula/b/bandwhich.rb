@@ -1,7 +1,7 @@
 class Bandwhich < Formula
   desc "Terminal bandwidth utilization tool"
   homepage "https://github.com/imsnif/bandwhich"
-  url "https://ghproxy.com/https://github.com/imsnif/bandwhich/archive/refs/tags/v0.21.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/imsnif/bandwhich/archive/refs/tags/v0.21.1.tar.gz"
   sha256 "8ba9bf6469834ad498b9fd17f86759a16793b00a6ef44edd6e525ec40adcb0b0"
   license "MIT"
 

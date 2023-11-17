@@ -2,7 +2,7 @@ cask "gitahead" do
   version "2.6.3"
   sha256 "ea017f49698ec7442d0e322e2640fba9b087694f5efc15d0b8c730b6343c378b"
 
-  url "https://ghproxy.com/https://github.com/gitahead/gitahead/releases/download/v#{version}/GitAhead-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/gitahead/gitahead/releases/download/v#{version}/GitAhead-#{version}.dmg"
   name "GitAhead"
   homepage "https://github.com/gitahead/gitahead"
 

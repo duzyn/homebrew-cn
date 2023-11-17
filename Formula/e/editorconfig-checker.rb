@@ -1,7 +1,7 @@
 class EditorconfigChecker < Formula
   desc "Tool to verify that your files are in harmony with your .editorconfig"
   homepage "https://github.com/editorconfig-checker/editorconfig-checker"
-  url "https://ghproxy.com/https://github.com/editorconfig-checker/editorconfig-checker/archive/refs/tags/2.7.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/editorconfig-checker/editorconfig-checker/archive/refs/tags/2.7.2.tar.gz"
   sha256 "0c0e1105e2adb2c265b188cb66af40fdc86ed99656ede92ef8e92ca5aa8eb198"
   license "MIT"
   head "https://github.com/editorconfig-checker/editorconfig-checker.git", branch: "main"

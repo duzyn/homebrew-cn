@@ -1,7 +1,7 @@
 class CargoDocset < Formula
   desc "Cargo subcommand to generate a Dash/Zeal docset for your Rust packages"
   homepage "https://github.com/Robzz/cargo-docset"
-  url "https://ghproxy.com/https://github.com/Robzz/cargo-docset/archive/refs/tags/v0.3.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Robzz/cargo-docset/archive/refs/tags/v0.3.1.tar.gz"
   sha256 "98e7aec301ad5840d442f6027bba02b41de3f03b1f3c85b23adcc6dd7ca8c415"
   license "Apache-2.0"
   head "https://github.com/Robzz/cargo-docset.git", branch: "master"

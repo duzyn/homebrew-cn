@@ -25,7 +25,7 @@ class Vip < Formula
 
   # use awk and /var/tmp as temporary directory
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/vip/19971113.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/vip/19971113.patch"
     sha256 "96879c8d778f21b21aa27eb138424a82ffa8e8192b8cf15b2c4a5794908ef790"
   end
 

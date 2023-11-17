@@ -1,7 +1,7 @@
 class Protobuf < Formula
   desc "Protocol buffers (Google's data interchange format)"
   homepage "https://protobuf.dev/"
-  url "https://ghproxy.com/https://github.com/protocolbuffers/protobuf/releases/download/v25.0/protobuf-25.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/protocolbuffers/protobuf/releases/download/v25.0/protobuf-25.0.tar.gz"
   sha256 "7beed9c511d632cff7c22ac0094dd7720e550153039d5da7e059bcceb488474a"
   license "BSD-3-Clause"
 

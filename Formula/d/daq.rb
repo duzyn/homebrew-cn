@@ -1,7 +1,7 @@
 class Daq < Formula
   desc "Network intrusion prevention and detection system"
   homepage "https://www.snort.org/"
-  url "https://ghproxy.com/https://github.com/snort3/libdaq/archive/refs/tags/v3.0.13.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/snort3/libdaq/archive/refs/tags/v3.0.13.tar.gz"
   mirror "https://fossies.org/linux/misc/libdaq-3.0.13.tar.gz"
   sha256 "3a48b934bc45a1fe44b3887185d33a76a042c1d10aa177e3e7c417d83da67213"
   license "GPL-2.0-only"

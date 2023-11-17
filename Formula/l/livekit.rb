@@ -1,7 +1,7 @@
 class Livekit < Formula
   desc "Scalable, high-performance WebRTC server"
   homepage "https://livekit.io"
-  url "https://ghproxy.com/https://github.com/livekit/livekit/archive/refs/tags/v1.5.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/livekit/livekit/archive/refs/tags/v1.5.1.tar.gz"
   sha256 "9776bc99b71507fcfebc4749407d3c12f2ed1ed8f6df6c3d70e8bd65e39b4ec6"
   license "Apache-2.0"
   head "https://github.com/livekit/livekit.git", branch: "master"

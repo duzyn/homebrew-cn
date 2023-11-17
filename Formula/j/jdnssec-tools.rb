@@ -1,7 +1,7 @@
 class JdnssecTools < Formula
   desc "Java command-line tools for DNSSEC"
   homepage "https://github.com/dblacka/jdnssec-tools"
-  url "https://ghproxy.com/https://github.com/dblacka/jdnssec-tools/releases/download/v0.17.1/jdnssec-tools-0.17.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/dblacka/jdnssec-tools/releases/download/v0.17.1/jdnssec-tools-0.17.1.tar.gz"
   sha256 "d710e8f1d33a20337f6f9bf6e06787d315f4c821d68aa7b347032c2c7331628f"
   license "LGPL-2.1"
   head "https://github.com/dblacka/jdnssec-tools.git", branch: "master"

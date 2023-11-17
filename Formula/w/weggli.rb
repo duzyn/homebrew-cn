@@ -1,7 +1,7 @@
 class Weggli < Formula
   desc "Fast and robust semantic search tool for C and C++ codebases"
   homepage "https://github.com/googleprojectzero/weggli"
-  url "https://ghproxy.com/https://github.com/googleprojectzero/weggli/archive/refs/tags/v0.2.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/googleprojectzero/weggli/archive/refs/tags/v0.2.4.tar.gz"
   sha256 "12fde9a0dca2852d5f819eeb9de85c4d11c5c384822f93ac66b2b7b166c3af78"
   license "Apache-2.0"
   head "https://github.com/googleprojectzero/weggli.git", branch: "main"

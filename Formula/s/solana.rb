@@ -1,7 +1,7 @@
 class Solana < Formula
   desc "Web-Scale Blockchain for decentralized apps and marketplaces"
   homepage "https://solana.com"
-  url "https://ghproxy.com/https://github.com/solana-labs/solana/archive/refs/tags/v1.16.19.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/solana-labs/solana/archive/refs/tags/v1.16.19.tar.gz"
   sha256 "4c5b3d42bdfef923c8b17c7edeb83f2a15bceb6264d8c39311651c1c4a9d491c"
   license "Apache-2.0"
   version_scheme 1

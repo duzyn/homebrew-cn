@@ -2,7 +2,7 @@ cask "emojipedia" do
   version "20190306"
   sha256 "32c2e398cac48a9fbd05e45b1a11b791c539bb09aa964c54ec066e2a6aa1f047"
 
-  url "https://ghproxy.com/https://github.com/gingerbeardman/Emojipedia/releases/download/#{version}/Emojipedia.dictionary.zip"
+  url "https://mirror.ghproxy.com/https://github.com/gingerbeardman/Emojipedia/releases/download/#{version}/Emojipedia.dictionary.zip"
   name "Emojipedia"
   homepage "https://github.com/gingerbeardman/Emojipedia"
 

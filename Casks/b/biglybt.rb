@@ -5,7 +5,7 @@ cask "biglybt" do
   sha256 arm:   "45b50b8452fb00b13eefbd5d84dadf2d3fb65cf5f8bf3540205a1ae68da3da3c",
          intel: "479f737d015ecca811c21e120f89264f4815d251c895b88bf5206249a3dc41b7"
 
-  url "https://ghproxy.com/https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_#{arch}_Installer.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_#{arch}_Installer.dmg",
       verified: "github.com/BiglySoftware/BiglyBT/"
   name "biglybt"
   desc "Bittorrent client based on the Azureus open source project"

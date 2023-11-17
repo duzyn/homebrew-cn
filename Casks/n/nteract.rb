@@ -2,7 +2,7 @@ cask "nteract" do
   version "0.28.0"
   sha256 "de65abe5ed76489217a9c29bcc177aa5b2ee2f0657cd017301af33280ca8a737"
 
-  url "https://ghproxy.com/https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/nteract/nteract/releases/download/v#{version}/nteract-#{version}.dmg"
   name "nteract"
   desc "Interactive computing suite"
   homepage "https://github.com/nteract/nteract"

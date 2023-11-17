@@ -1,7 +1,7 @@
 class Solidity < Formula
   desc "Contract-oriented programming language"
   homepage "https://soliditylang.org"
-  url "https://ghproxy.com/https://github.com/ethereum/solidity/releases/download/v0.8.23/solidity_0.8.23.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ethereum/solidity/releases/download/v0.8.23/solidity_0.8.23.tar.gz"
   sha256 "cce2c489ba0e29a5c37cc58bd3b3621d996658ffc78c6be8e75f744698068239"
   license all_of: ["GPL-3.0-or-later", "MIT", "BSD-3-Clause", "Apache-2.0", "CC0-1.0"]
 

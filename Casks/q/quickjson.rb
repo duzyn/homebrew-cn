@@ -2,7 +2,7 @@ cask "quickjson" do
   version "1.0.0"
   sha256 "874fc0afd431f68527929a0592c23a81b70d53e6032419e540551fccd662cfd2"
 
-  url "https://ghproxy.com/https://github.com/johan/QuickJSON/releases/download/v#{version}/QuickJSON.qlgenerator.zip"
+  url "https://mirror.ghproxy.com/https://github.com/johan/QuickJSON/releases/download/v#{version}/QuickJSON.qlgenerator.zip"
   name "QuickJSON"
   desc "QuickLook plugin to pretty-print JSON"
   homepage "https://github.com/johan/QuickJSON"

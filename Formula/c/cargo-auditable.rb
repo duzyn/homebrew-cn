@@ -1,7 +1,7 @@
 class CargoAuditable < Formula
   desc "Make production Rust binaries auditable"
   homepage "https://github.com/rust-secure-code/cargo-auditable"
-  url "https://ghproxy.com/https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/v0.6.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "091dc954c09408a9a2bdf1b01fa34f3e4bf7a7621966d2f4c4d5fc689a3baaf4"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/rust-secure-code/cargo-auditable.git", branch: "master"

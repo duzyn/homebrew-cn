@@ -1,7 +1,7 @@
 class Mgis < Formula
   desc "Provide tools to handle MFront generic interface behaviours"
   homepage "https://thelfer.github.io/mgis/web/index.html"
-  url "https://ghproxy.com/https://github.com/thelfer/MFrontGenericInterfaceSupport/archive/refs/tags/MFrontGenericInterfaceSupport-2.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/thelfer/MFrontGenericInterfaceSupport/archive/refs/tags/MFrontGenericInterfaceSupport-2.1.tar.gz"
   sha256 "f5b556aab130da0c423f395fe4c35d6bf509dd8fc958242f2e37ea788464aea9"
   license any_of: ["LGPL-3.0-only", "CECILL-1.0"]
   revision 2

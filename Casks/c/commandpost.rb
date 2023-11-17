@@ -20,7 +20,7 @@ cask "commandpost" do
     sha256 "9115107751cda2cf605a513da378fb0dcc40d57fe7dfbd76f664420946f9f773"
   end
 
-  url "https://ghproxy.com/https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
       verified: "github.com/CommandPost/CommandPost/"
   name "CommandPost"
   desc "Workflow enhancements for Final Cut Pro"

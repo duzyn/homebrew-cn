@@ -1,7 +1,7 @@
 class Helidon < Formula
   desc "Command-line tool for Helidon application development"
   homepage "https://helidon.io/"
-  url "https://ghproxy.com/https://github.com/helidon-io/helidon-build-tools/archive/refs/tags/3.0.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/helidon-io/helidon-build-tools/archive/refs/tags/3.0.6.tar.gz"
   sha256 "749cf3fd162bb9449ab57584c0bdf8874114d678499071ea522c047637de0f90"
   license "Apache-2.0"
   revision 1

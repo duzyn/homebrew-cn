@@ -44,28 +44,28 @@ class Podman < Formula
 
   resource "gvproxy" do
     on_macos do
-      url "https://ghproxy.com/https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.7.1.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.7.1.tar.gz"
       sha256 "cbc97a44b6ca8f6c427ac58e193aa39c28674e4f1d2af09b5a9e35d1d3bb7fd3"
     end
   end
 
   resource "catatonit" do
     on_linux do
-      url "https://ghproxy.com/https://github.com/openSUSE/catatonit/archive/refs/tags/v0.2.0.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/openSUSE/catatonit/archive/refs/tags/v0.2.0.tar.gz"
       sha256 "d0cf1feffdc89c9fb52af20fc10127887a408bbd99e0424558d182b310a3dc92"
     end
   end
 
   resource "netavark" do
     on_linux do
-      url "https://ghproxy.com/https://github.com/containers/netavark/archive/refs/tags/v1.8.0.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/containers/netavark/archive/refs/tags/v1.8.0.tar.gz"
       sha256 "b1422ef6927458e9f80f7d322b751e29ab5d04d8ed6cb065baa82fa4291af10f"
     end
   end
 
   resource "aardvark-dns" do
     on_linux do
-      url "https://ghproxy.com/https://github.com/containers/aardvark-dns/archive/refs/tags/v1.8.0.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/containers/aardvark-dns/archive/refs/tags/v1.8.0.tar.gz"
       sha256 "c9b818110e3d5d45f8bdb3c9ccc48c994aedb0b19fefcc7577fc1ef7ed294343"
     end
   end

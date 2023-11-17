@@ -3,7 +3,7 @@ class Tart < Formula
   homepage "https://github.com/cirruslabs/tart"
   # NOTE: 1.x uses non-open source license
   # https://tart.run/blog/2023/02/11/changing-tart-license/
-  url "https://ghproxy.com/https://github.com/cirruslabs/tart/archive/refs/tags/0.38.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cirruslabs/tart/archive/refs/tags/0.38.0.tar.gz"
   sha256 "ca6a46c2373eb9c9e105d2a80229f7cbcdb03d5ce800173ec01b78424f5a5d7f"
   license "AGPL-3.0-or-later"
 
@@ -26,7 +26,7 @@ class Tart < Formula
   uses_from_macos "swift"
 
   resource "softnet" do
-    url "https://ghproxy.com/https://github.com/cirruslabs/softnet/archive/refs/tags/0.6.2.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/cirruslabs/softnet/archive/refs/tags/0.6.2.tar.gz"
     sha256 "7f42694b32d7f122a74a771e1f2f17bd3dca020fb79754780fbc17e9abd65bbe"
   end
 

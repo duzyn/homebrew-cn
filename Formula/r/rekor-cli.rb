@@ -1,7 +1,7 @@
 class RekorCli < Formula
   desc "CLI for interacting with Rekor"
   homepage "https://docs.sigstore.dev/logging/overview/"
-  url "https://ghproxy.com/https://github.com/sigstore/rekor/archive/refs/tags/v1.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sigstore/rekor/archive/refs/tags/v1.3.3.tar.gz"
   sha256 "2e4e75fcae81ef85e6e3c20e00a9b590bfa86c0706a6c902024222cd61b64c47"
   license "Apache-2.0"
 
@@ -33,7 +33,7 @@ class RekorCli < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/rekor-cli version")
 
-    url = "https://ghproxy.com/https://github.com/sigstore/rekor/releases/download/v#{version}/rekor-cli-darwin-arm64"
+    url = "https://mirror.ghproxy.com/https://github.com/sigstore/rekor/releases/download/v#{version}/rekor-cli-darwin-arm64"
     output = shell_output("#{bin}/rekor-cli search --artifact #{url} 2>&1")
     assert_match "Found matching entries (listed by UUID):", output
   end

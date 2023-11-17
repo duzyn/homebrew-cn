@@ -2,7 +2,7 @@ cask "xaos" do
   version "4.3.1"
   sha256 "e006fc69772b1944dcc87bfbb9abfcfc94af08ccfca1a85d8d1aeddfd9e7d248"
 
-  url "https://ghproxy.com/https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
       verified: "github.com/xaos-project/XaoS/"
   name "GNU XaoS"
   desc "Real-time interactive fractal zoomer"

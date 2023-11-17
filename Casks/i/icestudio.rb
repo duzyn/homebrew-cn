@@ -2,7 +2,7 @@ cask "icestudio" do
   version "0.11"
   sha256 "959f55093888b91fa8b6715ecc9d6a4d2494dc814ee2ab717ee825284ba13889"
 
-  url "https://ghproxy.com/https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx64.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx64.dmg",
       verified: "github.com/FPGAwars/icestudio/"
   name "icestudio"
   desc "Visual editor for open FPGA board"

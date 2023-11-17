@@ -1,7 +1,7 @@
 class Marcli < Formula
   desc "Parse MARC (ISO 2709) files"
   homepage "https://github.com/hectorcorrea/marcli"
-  url "https://ghproxy.com/https://github.com/hectorcorrea/marcli/archive/refs/tags/v1.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/hectorcorrea/marcli/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "9278cc6b36974cbf0ddea2869b577ae41ad03e1753e596d50e221ccf0db700ff"
   license "MIT"
   head "https://github.com/hectorcorrea/marcli.git", branch: "main"
@@ -21,7 +21,7 @@ class Marcli < Formula
   depends_on "go" => :build
 
   resource "testdata" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/hectorcorrea/marcli/5434a2f85c6f03771f92ad9f0d5af5241f3385a6/data/test_1a.mrc"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/hectorcorrea/marcli/5434a2f85c6f03771f92ad9f0d5af5241f3385a6/data/test_1a.mrc"
     sha256 "7359455ae04b1619f3879fe39eb22ad4187fb3550510f71cb4f27693f60cf386"
   end
 

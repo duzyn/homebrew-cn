@@ -42,7 +42,7 @@ class Cvs < Formula
   end
 
   patch :p0 do
-    url "https://ghproxy.com/https://github.com/apple-oss-distributions/cvs/archive/refs/tags/cvs-47.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/cvs/archive/refs/tags/cvs-47.tar.gz"
     sha256 "57652695bbfbc33eacb8f1ecb3ca5e2df0f773e4abb307b840bf948e3840f3d3"
     patches = ["patches/PR5178707.diff",
                "patches/ea.diff",
@@ -63,7 +63,7 @@ class Cvs < Formula
     # Fixes error: 'Illegal instruction: 4'; '%n used in a non-immutable format string' on 10.13
     # Patches the upstream-provided gnulib on all platforms as is recommended
     on_macos do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/24118ec737c7d008420d4683a07129ed80a759eb/cvs/vasnprintf-high-sierra-fix.diff"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/24118ec737c7d008420d4683a07129ed80a759eb/cvs/vasnprintf-high-sierra-fix.diff"
       sha256 "affa485332f66bb182963680f90552937bf1455b855388f7c06ef6a3a25286e2"
     end
     # Fixes error: %n in writable segment detected on Linux

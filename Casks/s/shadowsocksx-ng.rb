@@ -2,7 +2,7 @@ cask "shadowsocksx-ng" do
   version "1.10.2"
   sha256 "e4d0388d40c86db70c8bb8c0950207845a4e33217010b811aac1d1562762502e"
 
-  url "https://ghproxy.com/https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.dmg"
   name "ShadowsocksX-NG"
   desc "Tunneling proxy"
   homepage "https://github.com/shadowsocks/ShadowsocksX-NG/"

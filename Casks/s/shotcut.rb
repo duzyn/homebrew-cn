@@ -2,7 +2,7 @@ cask "shotcut" do
   version "23.09.29"
   sha256 "86e183dc454a9f410263176cde0e0862910c05de00a033f2df273c3803b9d2be"
 
-  url "https://ghproxy.com/https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-#{version.no_dots}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-#{version.no_dots}.dmg",
       verified: "github.com/mltframework/shotcut/"
   name "Shotcut"
   desc "Video editor"

@@ -1,7 +1,7 @@
 class Podofo < Formula
   desc "Library to work with the PDF file format"
   homepage "https://github.com/podofo/podofo"
-  url "https://ghproxy.com/https://github.com/podofo/podofo/archive/refs/tags/0.10.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/podofo/podofo/archive/refs/tags/0.10.2.tar.gz"
   sha256 "565168132e8fbfcdbad4ea4c5567bcc57ebbffb4528f6273baf3f490a3cf7563"
   license all_of: ["LGPL-2.0-only", "GPL-2.0-only"]
   head "https://github.com/podofo/podofo.git", branch: "master"

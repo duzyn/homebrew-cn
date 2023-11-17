@@ -5,7 +5,7 @@ cask "drawio" do
   sha256 arm:   "f2e368f1a9245e71981bf715c16246c299fe104af03de10fa49c1791d0ce6473",
          intel: "02a295d32d09c73dbcd9d37830b9bddbd8387af1068a0bdaedc20ab9ee80d55d"
 
-  url "https://ghproxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
       verified: "github.com/jgraph/drawio-desktop/"
   name "draw.io Desktop"
   desc "Online diagram software"

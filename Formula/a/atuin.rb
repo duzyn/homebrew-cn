@@ -1,7 +1,7 @@
 class Atuin < Formula
   desc "Improved shell history for zsh, bash, fish and nushell"
   homepage "https://github.com/atuinsh/atuin"
-  url "https://ghproxy.com/https://github.com/atuinsh/atuin/archive/refs/tags/v17.0.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/atuinsh/atuin/archive/refs/tags/v17.0.1.tar.gz"
   sha256 "b03d3a1597ba2bbd784612e730419c2cdc099311adf48518bd9c00d2799199f6"
   license "MIT"
 

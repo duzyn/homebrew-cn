@@ -1,7 +1,7 @@
 class Noir < Formula
   desc "Attack surface detector form source code"
   homepage "https://github.com/noir-cr/noir"
-  url "https://ghproxy.com/https://github.com/noir-cr/noir/archive/refs/tags/v0.10.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/noir-cr/noir/archive/refs/tags/v0.10.0.tar.gz"
   sha256 "f6c258fe91fc76df4ea9a4ea3c9eb132ebacc7a24a2cfeb7f2932552b94a670b"
   license "MIT"
 

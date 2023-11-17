@@ -2,7 +2,7 @@ cask "gqrx" do
   version "2.17.3"
   sha256 "126c981aa1fa63df65f4c8545a4a2480b5da3305e06983c2bacf6e630a7732a3"
 
-  url "https://ghproxy.com/https://github.com/gqrx-sdr/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/gqrx-sdr/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg",
       verified: "github.com/gqrx-sdr/gqrx/"
   name "Gqrx"
   desc "Software-defined radio receiver powered by GNU Radio and Qt"

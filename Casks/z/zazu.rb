@@ -2,7 +2,7 @@ cask "zazu" do
   version "0.6.0"
   sha256 "a726bd20d64d6f03b3251d7841f94fae0f50103533706e9291233aa3adbecf92"
 
-  url "https://ghproxy.com/https://github.com/tinytacoteam/zazu/releases/download/v#{version}/Zazu-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/tinytacoteam/zazu/releases/download/v#{version}/Zazu-#{version}.dmg",
       verified: "github.com/"
   name "Zazu"
   desc "Extensible and open-source launcher for hackers, creators and dabblers"

@@ -34,7 +34,7 @@ class Wordplay < Formula
   # Fixes compiler warnings on Darwin, via MacPorts.
   # Point to words file in share.
   patch :p0 do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/5de9072/wordplay/patch-wordplay.c"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/5de9072/wordplay/patch-wordplay.c"
     sha256 "45d356c4908e0c69b9a7ac666c85f3de46a8a83aee028c8567eeea74d364ff89"
   end
 

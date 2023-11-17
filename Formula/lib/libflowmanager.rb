@@ -1,7 +1,7 @@
 class Libflowmanager < Formula
   desc "Flow-based measurement tasks with packet-based inputs"
   homepage "https://github.com/LibtraceTeam/libflowmanager"
-  url "https://ghproxy.com/https://github.com/LibtraceTeam/libflowmanager/archive/refs/tags/v3.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/LibtraceTeam/libflowmanager/archive/refs/tags/v3.0.0.tar.gz"
   sha256 "ab60c9c9611488e51c14b6e3870f91a191236dced12f0ed16a58cdd2c08ee74f"
   license "LGPL-3.0-or-later"
   revision 2

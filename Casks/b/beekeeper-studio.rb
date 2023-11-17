@@ -5,7 +5,7 @@ cask "beekeeper-studio" do
   sha256 arm:   "0b236df18e6e8f36eebf659a2fc98f95428bb92dd043a1344fb852b5b636609a",
          intel: "98d63b7557bde466178e3ec448581058380eb91983c71cc4e7882a0151b6dbed"
 
-  url "https://ghproxy.com/https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
   name "Beekeeper Studio"
   desc "Cross platform SQL editor and database management app"

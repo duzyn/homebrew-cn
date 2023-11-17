@@ -1,7 +1,7 @@
 class Wzprof < Formula
   desc "Profiling for Wazero"
   homepage "https://github.com/stealthrocket/wzprof"
-  url "https://ghproxy.com/https://github.com/stealthrocket/wzprof/archive/refs/tags/v0.2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/stealthrocket/wzprof/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "20223095b6b0bcb7ee655e755d2979f743a1bd03bf4fb09928856356caa9d463"
   license "Apache-2.0"
   head "https://github.com/stealthrocket/wzprof.git", branch: "main"
@@ -26,7 +26,7 @@ class Wzprof < Formula
 
   test do
     resource "simple.wasm" do
-      url "https://ghproxy.com/https://github.com/stealthrocket/wzprof/raw/c2e9f22/testdata/c/simple.wasm"
+      url "https://mirror.ghproxy.com/https://github.com/stealthrocket/wzprof/raw/c2e9f22/testdata/c/simple.wasm"
       sha256 "f838a6edabfc830177f10f8cba0a07f36bb1d81209d4300f6d41ad2305756b3a"
     end
 

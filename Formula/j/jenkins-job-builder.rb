@@ -61,7 +61,7 @@ class JenkinsJobBuilder < Formula
 
     # setuptools patch to fix the conflict with jenkins-job-builder
     patch do
-      url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/08e835e/jenkins-job-builder/python-jenkins-1.8.1-setuptools.patch"
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/08e835e/jenkins-job-builder/python-jenkins-1.8.1-setuptools.patch"
       sha256 "f3319463368d8ed133ade64e6a4c4f01a28d45e6993a38012a26be55d8d3e765"
     end
   end
@@ -83,7 +83,7 @@ class JenkinsJobBuilder < Formula
 
   # setuptools patch, upstream bug report, https://storyboard.openstack.org/#!/story/2010842
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f4a0fb0/jenkins-job-builder/5.0.4-setuptools.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/f4a0fb0/jenkins-job-builder/5.0.4-setuptools.patch"
     sha256 "35d06c1dbd44bd9cd36c188eaaddc846a4c64dbd5fc1fb1d3269e54de1f6e2b2"
   end
 

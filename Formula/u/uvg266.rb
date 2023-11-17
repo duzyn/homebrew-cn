@@ -5,7 +5,7 @@ class Uvg266 < Formula
   head "https://github.com/ultravideo/uvg266.git", branch: "master"
 
   stable do
-    url "https://ghproxy.com/https://github.com/ultravideo/uvg266/archive/refs/tags/v0.8.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/ultravideo/uvg266/archive/refs/tags/v0.8.0.tar.gz"
     sha256 "27e4306577fe646951bd3c12685c1527b41385bfcb95262233669fc7f44f21bd"
 
     # Fix attempts to build AVX2 code on arm64 - remove on next release

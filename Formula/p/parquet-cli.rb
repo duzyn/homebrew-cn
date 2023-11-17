@@ -29,7 +29,7 @@ class ParquetCli < Formula
   # This file generated with `red-parquet` gem:
   #   Arrow::Table.new("values" => ["foo", "Homebrew", "bar"]).save("homebrew.parquet")
   resource("homebrew-test-parquet") do
-    url "https://gist.ghproxy.com/https://github.com/bayandin/2144b5fc6052153c1a33fd2679d50d95/raw/7d793910a1afd75ee4677f8c327491f7bdd2256b/homebrew.parquet"
+    url "https://gist.mirror.ghproxy.com/https://github.com/bayandin/2144b5fc6052153c1a33fd2679d50d95/raw/7d793910a1afd75ee4677f8c327491f7bdd2256b/homebrew.parquet"
     sha256 "5caf572cb0df5ce9d6893609de82d2369b42c3c81c611847b6f921d912040118"
   end
 

@@ -1,7 +1,7 @@
 class Bat < Formula
   desc "Clone of cat(1) with syntax highlighting and Git integration"
   homepage "https://github.com/sharkdp/bat"
-  url "https://ghproxy.com/https://github.com/sharkdp/bat/archive/refs/tags/v0.24.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sharkdp/bat/archive/refs/tags/v0.24.0.tar.gz"
   sha256 "907554a9eff239f256ee8fe05a922aad84febe4fe10a499def72a4557e9eedfb"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/bat.git", branch: "master"

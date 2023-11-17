@@ -1,7 +1,7 @@
 class Cake < Formula
   desc "Cross platform build automation system with a C# DSL"
   homepage "https://cakebuild.net/"
-  url "https://ghproxy.com/https://github.com/cake-build/cake/archive/refs/tags/v3.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cake-build/cake/archive/refs/tags/v3.0.0.tar.gz"
   sha256 "2bd3f55d13e559120296aa206ebe09f0410ccd6f133dd1bcb90f56470bfcf09e"
   license "MIT"
 

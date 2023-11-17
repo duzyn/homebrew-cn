@@ -2,7 +2,7 @@ cask "qownnotes" do
   version "23.11.1"
   sha256 "aba311be4d65805525d630aac1e51f55a0913cf6f6bcaf73ab327795e4c830c8"
 
-  url "https://ghproxy.com/https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
   name "QOwnNotes"
   desc "Plain-text file notepad and todo-list manager"

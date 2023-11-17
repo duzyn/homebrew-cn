@@ -3,14 +3,14 @@ cask "nextcloud" do
     version "2.6.5.20200710-legacy"
     sha256 "4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519"
 
-    url "https://ghproxy.com/https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
+    url "https://mirror.ghproxy.com/https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   end
   on_sierra :or_newer do
     version "3.10.1"
     sha256 "3d67640b8769e771e5f4f6f922cb40346545088eba3684e12a5eac3d42d16925"
 
-    url "https://ghproxy.com/https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
+    url "https://mirror.ghproxy.com/https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud-releases/desktop/"
   end
 

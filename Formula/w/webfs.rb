@@ -24,7 +24,7 @@ class Webfs < Formula
   depends_on "openssl@3"
 
   patch :p0 do
-    url "https://ghproxy.com/https://github.com/Homebrew/formula-patches/raw/0518a6d1ed821aebf0de4de78e39b57d6e60e296/webfs/patch-ls.c"
+    url "https://mirror.ghproxy.com/https://github.com/Homebrew/formula-patches/raw/0518a6d1ed821aebf0de4de78e39b57d6e60e296/webfs/patch-ls.c"
     sha256 "8ddb6cb1a15f0020bbb14ef54a8ae5c6748a109564fa461219901e7e34826170"
   end
 

@@ -1,7 +1,7 @@
 class Hyperfine < Formula
   desc "Command-line benchmarking tool"
   homepage "https://github.com/sharkdp/hyperfine"
-  url "https://ghproxy.com/https://github.com/sharkdp/hyperfine/archive/refs/tags/v1.18.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sharkdp/hyperfine/archive/refs/tags/v1.18.0.tar.gz"
   sha256 "fea7b92922117ed04b9c84bb9998026264346768804f66baa40743c5528bed6b"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sharkdp/hyperfine.git", branch: "master"

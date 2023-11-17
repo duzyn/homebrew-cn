@@ -1,7 +1,7 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
-  url "https://ghproxy.com/https://github.com/facebook/folly/archive/refs/tags/v2023.11.13.00.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/facebook/folly/archive/refs/tags/v2023.11.13.00.tar.gz"
   sha256 "67fd1dbc5fa6b49a2356911e4d1c317f36fa11b161d1caadf6233b3681018a54"
   license "Apache-2.0"
   head "https://github.com/facebook/folly.git", branch: "main"

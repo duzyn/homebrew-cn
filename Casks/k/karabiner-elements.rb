@@ -3,7 +3,7 @@ cask "karabiner-elements" do
     version "11.6.0"
     sha256 "c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d"
 
-    url "https://ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
@@ -18,7 +18,7 @@ cask "karabiner-elements" do
     version "12.10.0"
     sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
 
-    url "https://ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
@@ -31,7 +31,7 @@ cask "karabiner-elements" do
     version "12.10.0"
     sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
 
-    url "https://ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
@@ -63,7 +63,7 @@ cask "karabiner-elements" do
     version "12.10.0"
     sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
 
-    url "https://ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
@@ -76,7 +76,7 @@ cask "karabiner-elements" do
     version "13.7.0"
     sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
-    url "https://ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
@@ -115,7 +115,7 @@ cask "karabiner-elements" do
     version "14.12.0"
     sha256 "df137bb3f274380d6de473f31535e72b3332eb62ed3b637fb7073ffa12eebca3"
 
-    url "https://ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+    url "https://mirror.ghproxy.com/https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do

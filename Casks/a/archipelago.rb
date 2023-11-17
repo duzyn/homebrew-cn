@@ -5,7 +5,7 @@ cask "archipelago" do
   sha256 arm:   "05cc3c36708d7f1094ec1688f3546a9603da9f1509db7fc3e8b5f36283a1c49b",
          intel: "57f24ee903337773ee96725ebb9709c3015d60fcc878b0ac871a8551a3fbe471"
 
-  url "https://ghproxy.com/https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}#{arch}-mac.zip"
+  url "https://mirror.ghproxy.com/https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}#{arch}-mac.zip"
   name "Archipelago"
   desc "Terminal emulator built on web technology"
   homepage "https://github.com/npezza93/archipelago"

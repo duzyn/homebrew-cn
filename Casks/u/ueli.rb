@@ -2,7 +2,7 @@ cask "ueli" do
   version "8.26.0"
   sha256 "4bf25847e0ee2a7e25c3547adf04c33d82c78e98f5ce58c14ecca19cb34a6dc0"
 
-  url "https://ghproxy.com/https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg",
       verified: "github.com/oliverschwendener/ueli/"
   name "Ueli"
   desc "Keystroke launcher"

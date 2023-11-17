@@ -1,7 +1,7 @@
 class Detekt < Formula
   desc "Static code analysis for Kotlin"
   homepage "https://github.com/detekt/detekt"
-  url "https://ghproxy.com/https://github.com/detekt/detekt/releases/download/v1.23.3/detekt-cli-1.23.3-all.jar"
+  url "https://mirror.ghproxy.com/https://github.com/detekt/detekt/releases/download/v1.23.3/detekt-cli-1.23.3-all.jar"
   sha256 "2e6f73f1707b05d07b8a48b2272b95b55f1eaa53ee73198c34d0bdd04f7daa90"
   license "Apache-2.0"
 

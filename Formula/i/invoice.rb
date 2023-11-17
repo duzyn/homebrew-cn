@@ -1,7 +1,7 @@
 class Invoice < Formula
   desc "Command-line invoice generator"
   homepage "https://github.com/maaslalani/invoice"
-  url "https://ghproxy.com/https://github.com/maaslalani/invoice/archive/refs/tags/v0.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/maaslalani/invoice/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "f34f20f6491f42c0e94dbde433a578f0dba98938f2e3186018d3e16d050abdaf"
   license "MIT"
   head "https://github.com/maaslalani/invoice.git", branch: "main"

@@ -1,7 +1,7 @@
 class Blink < Formula
   desc "Tiniest x86-64-linux emulator"
   homepage "https://github.com/jart/blink"
-  url "https://ghproxy.com/https://github.com/jart/blink/releases/download/1.0.0/blink-1.0.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jart/blink/releases/download/1.0.0/blink-1.0.0.tar.gz"
   sha256 "09ffc3cdb57449111510bbf2f552b3923d82a983ef032ee819c07f5da924c3a6"
   license "ISC"
   head "https://github.com/jart/blink.git", branch: "master"

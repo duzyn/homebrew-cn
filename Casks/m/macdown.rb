@@ -2,7 +2,7 @@ cask "macdown" do
   version "0.7.2"
   sha256 "271f11eb64c19fccee2615e092067cdecc29adf0c2ed0703dae9acda8fa0a672"
 
-  url "https://ghproxy.com/https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip",
+  url "https://mirror.ghproxy.com/https://github.com/MacDownApp/macdown/releases/download/v#{version}/MacDown.app.zip",
       verified: "github.com/MacDownApp/macdown/"
   name "MacDown"
   desc "Open-source Markdown editor"

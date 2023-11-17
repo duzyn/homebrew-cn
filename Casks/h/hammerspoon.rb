@@ -15,7 +15,7 @@ cask "hammerspoon" do
     version "0.9.100"
     sha256 "6dcfc807c7cec692caf3b18c36cc1ea3af6b9f42699b4df277734408e4e07399"
 
-    url "https://ghproxy.com/https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
+    url "https://mirror.ghproxy.com/https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
         verified: "github.com/Hammerspoon/hammerspoon/"
 
     livecheck do

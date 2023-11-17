@@ -2,7 +2,7 @@ cask "gnucash" do
   version "5.4-2"
   sha256 "ffe311fd2077cf1df15c253a5e062dc3801fa9db06829d3d12184184727e89c8"
 
-  url "https://ghproxy.com/https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-Intel-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-Intel-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"
   name "GnuCash"
   desc "Double-entry accounting program"

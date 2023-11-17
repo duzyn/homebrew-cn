@@ -1,7 +1,7 @@
 class Openvino < Formula
   desc "Open Visual Inference And Optimization toolkit for AI inference"
   homepage "https://docs.openvino.ai"
-  url "https://ghproxy.com/https://github.com/openvinotoolkit/openvino/archive/refs/tags/2023.2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/openvinotoolkit/openvino/archive/refs/tags/2023.2.0.tar.gz"
   sha256 "419b3137a1a549fc5054edbba5b71da76cbde730e8a271769126e021477ad47b"
   license "Apache-2.0"
   head "https://github.com/openvinotoolkit/openvino.git", branch: "master"
@@ -40,7 +40,7 @@ class Openvino < Formula
     depends_on "opencl-icd-loader"
 
     resource "onednn_gpu" do
-      url "https://ghproxy.com/https://github.com/oneapi-src/oneDNN/archive/284ad4574939fa784e4ddaa1f4aa577b8eb7a017.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/oneapi-src/oneDNN/archive/284ad4574939fa784e4ddaa1f4aa577b8eb7a017.tar.gz"
       sha256 "16f36078339cd08b949efea1d863344cb0b742d9f5898937d07a591b0c4da517"
     end
   end
@@ -49,7 +49,7 @@ class Openvino < Formula
     depends_on "scons" => :build
 
     resource "arm_compute" do
-      url "https://ghproxy.com/https://github.com/ARM-software/ComputeLibrary/archive/refs/tags/v23.08.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/ARM-software/ComputeLibrary/archive/refs/tags/v23.08.tar.gz"
       sha256 "62f514a555409d4401e5250b290cdf8cf1676e4eb775e5bd61ea6a740a8ce24f"
     end
   end
@@ -59,22 +59,22 @@ class Openvino < Formula
   end
 
   resource "ade" do
-    url "https://ghproxy.com/https://github.com/opencv/ade/archive/refs/tags/v0.1.2d.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/opencv/ade/archive/refs/tags/v0.1.2d.tar.gz"
     sha256 "edefba61a33d6cd4b78a9976cb3309c95212610a81ba6dade09882d1794198ff"
   end
 
   resource "mlas" do
-    url "https://ghproxy.com/https://github.com/openvinotoolkit/mlas/archive/f6425b1394334822390fcd9da12788c9cd0d11da.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/openvinotoolkit/mlas/archive/f6425b1394334822390fcd9da12788c9cd0d11da.tar.gz"
     sha256 "707a6634d62ea5563042a67161472b4be3ffe73c9783719519abdd583b0295f4"
   end
 
   resource "onednn_cpu" do
-    url "https://ghproxy.com/https://github.com/openvinotoolkit/oneDNN/archive/2ead5d4fe5993a797d9a7a4b8b5557b96f6ec90e.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/openvinotoolkit/oneDNN/archive/2ead5d4fe5993a797d9a7a4b8b5557b96f6ec90e.tar.gz"
     sha256 "3c51d577f9e7e4cbd94ad08d267502953ec64513241dda6595b2608fafc8314c"
   end
 
   resource "onnx" do
-    url "https://ghproxy.com/https://github.com/onnx/onnx/archive/refs/tags/v1.14.1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/onnx/onnx/archive/refs/tags/v1.14.1.tar.gz"
     sha256 "e296f8867951fa6e71417a18f2e550a730550f8829bd35e947b4df5e3e777aa1"
   end
 

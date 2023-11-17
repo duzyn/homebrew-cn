@@ -5,7 +5,7 @@ cask "onlyoffice" do
   sha256 arm:   "79e556575e5b78e197a9391f218d0a61abefc89f647dd0cfc38ec5ed92f24854",
          intel: "62b2cdf1b02e550f6f41407dfa07d325628b746eefec021e795ec3c189feefed"
 
-  url "https://ghproxy.com/https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
   name "ONLYOFFICE"
   desc "Document editor"

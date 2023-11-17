@@ -1,7 +1,7 @@
 class TrzszSsh < Formula
   desc "Simple ssh client with trzsz ( trz / tsz ) support"
   homepage "https://trzsz.github.io/ssh"
-  url "https://ghproxy.com/https://github.com/trzsz/trzsz-ssh/archive/refs/tags/v0.1.13.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/trzsz/trzsz-ssh/archive/refs/tags/v0.1.13.tar.gz"
   sha256 "1b3269bbc5324be6434c07f6b5a8b45b1af5c6f983f0dbc84492a6e5c8fb2a86"
   license "MIT"
 

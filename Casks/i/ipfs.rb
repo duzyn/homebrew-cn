@@ -2,7 +2,7 @@ cask "ipfs" do
   version "0.31.0"
   sha256 "e037db18f10ff016a524f95e8088165b85ebe9e386c283c0a28834479ee7741b"
 
-  url "https://ghproxy.com/https://github.com/ipfs/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}-mac.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/ipfs/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}-mac.dmg"
   name "IPFS Desktop"
   desc "Menu bar application for the IPFS peer-to-peer network"
   homepage "https://github.com/ipfs/ipfs-desktop"

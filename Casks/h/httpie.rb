@@ -5,7 +5,7 @@ cask "httpie" do
   sha256 arm:   "72b53cf68a215f514651d917c13f53f62dd4ad2ec988bc132c00ece4a2249bea",
          intel: "d6cc25fc0837664267f19441cd18707d61b3437cc471136aa0b41df19838b7c5"
 
-  url "https://ghproxy.com/https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
       verified: "github.com/httpie/desktop/"
   name "HTTPie for Desktop"
   desc "Testing client for REST, GraphQL, and HTTP APIs"

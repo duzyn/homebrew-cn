@@ -1,7 +1,7 @@
 class Csmith < Formula
   desc "Generates random C programs conforming to the C99 standard"
   homepage "https://github.com/csmith-project/csmith"
-  url "https://ghproxy.com/https://github.com/csmith-project/csmith/archive/refs/tags/csmith-2.3.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/csmith-project/csmith/archive/refs/tags/csmith-2.3.0.tar.gz"
   sha256 "9d024a6b202f6a1b9e01351218a85888c06b67b837fe4c6f8ef5bd522fae098c"
   license "BSD-2-Clause"
   head "https://github.com/csmith-project/csmith.git", branch: "master"
@@ -32,7 +32,7 @@ class Csmith < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
     sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
   end
 

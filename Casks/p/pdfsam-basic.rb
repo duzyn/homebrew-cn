@@ -2,7 +2,7 @@ cask "pdfsam-basic" do
   version "5.2.0"
   sha256 "8fb2f4ac523e57d1e03723f2484a5446321e53b0f8ad11c299c2e7931e0554e0"
 
-  url "https://ghproxy.com/https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg",
       verified: "github.com/torakiki/pdfsam/"
   name "PDFsam Basic"
   desc "Extracts pages, splits, merges, mixes and rotates PDF files"

@@ -20,7 +20,7 @@ cask "monitorcontrol" do
     sha256 "43deae2bac157b50f6b8bbd62fea4547a2dc9ab53b7209abd98e6d3efbd30e02"
   end
 
-  url "https://ghproxy.com/https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
   name "MonitorControl"
   desc "Tool to control external monitor brightness & volume"
   homepage "https://github.com/MonitorControl/MonitorControl"

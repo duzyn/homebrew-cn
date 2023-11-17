@@ -1,7 +1,7 @@
 class Graphqxl < Formula
   desc "Language for creating big and scalable GraphQL server-side schemas"
   homepage "https://gabotechs.github.io/graphqxl"
-  url "https://ghproxy.com/https://github.com/gabotechs/graphqxl/archive/refs/tags/v0.40.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gabotechs/graphqxl/archive/refs/tags/v0.40.0.tar.gz"
   sha256 "11f642476d684b2dc69f4f40fadc679e15ee371d9b479c64407ad08f6cd857ac"
   license "MIT"
   head "https://github.com/gabotechs/graphqxl.git", branch: "main"

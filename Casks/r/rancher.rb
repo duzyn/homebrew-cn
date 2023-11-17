@@ -5,7 +5,7 @@ cask "rancher" do
   sha256 arm:   "8a89f8068a4abb5d7b57fde584739b91631d11aef7ef3d4b8f8e3ed5be3e66c7",
          intel: "113dcc99800289f985bb0453ff9a21e78102592a8f701ed6400eec85fdd26af2"
 
-  url "https://ghproxy.com/https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
   name "Rancher Desktop"
   desc "Kubernetes and container management on the desktop"

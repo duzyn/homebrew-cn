@@ -1,7 +1,7 @@
 class Gitwatch < Formula
   desc "Watch a file or folder and automatically commit changes to a git repo easily"
   homepage "https://github.com/gitwatch/gitwatch"
-  url "https://ghproxy.com/https://github.com/gitwatch/gitwatch/archive/refs/tags/v0.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gitwatch/gitwatch/archive/refs/tags/v0.1.tar.gz"
   sha256 "ed52d5c799c19dc6f920f3625964bc4b4948b6f8929c289aece462304e419697"
   license "GPL-3.0-or-later"
   head "https://github.com/gitwatch/gitwatch.git", branch: "master"

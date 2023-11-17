@@ -3,7 +3,7 @@ class Onefetch < Formula
   homepage "https://onefetch.dev/"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/o2sh/onefetch/archive/refs/tags/2.18.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/o2sh/onefetch/archive/refs/tags/2.18.1.tar.gz"
   sha256 "7b0f03e9d2383ac32283cfb9ec09d10c8789a298969c8b7d45fa0168bd909140"
   license "MIT"
   revision 1

@@ -2,13 +2,13 @@ cask "youtype" do
   version "0.7.3"
   sha256 :no_check
 
-  url "https://ghproxy.com/https://github.com/freefelt/YouType/raw/main/YouType.zip"
+  url "https://mirror.ghproxy.com/https://github.com/freefelt/YouType/raw/main/YouType.zip"
   name "YouType"
   desc "Input method helper"
   homepage "https://github.com/freefelt/YouType"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/freefelt/YouType/main/appcast.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/freefelt/YouType/main/appcast.xml"
     strategy :sparkle
   end
 

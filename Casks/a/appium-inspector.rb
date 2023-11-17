@@ -2,7 +2,7 @@ cask "appium-inspector" do
   version "2023.11.1"
   sha256 "315508db1620dcf35e3769f21c63bbe89b2cd87c5a9e362bf84e6b623844448e"
 
-  url "https://ghproxy.com/https://github.com/appium/appium-inspector/releases/download/v#{version}/Appium-Inspector-#{version}-universal-mac.zip"
+  url "https://mirror.ghproxy.com/https://github.com/appium/appium-inspector/releases/download/v#{version}/Appium-Inspector-#{version}-universal-mac.zip"
   name "Appium Inspector GUI"
   desc "GUI inspector for mobile apps"
   homepage "https://github.com/appium/appium-inspector/"

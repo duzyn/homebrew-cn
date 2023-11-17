@@ -3,7 +3,7 @@ class Gfold < Formula
   homepage "https://github.com/nickgerace/gfold"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/nickgerace/gfold/archive/refs/tags/4.4.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nickgerace/gfold/archive/refs/tags/4.4.0.tar.gz"
   sha256 "d1f8c5a578bc20751a8584c73d4df3092364b0616226656d71dbf954edd481c3"
   license "Apache-2.0"
   revision 1

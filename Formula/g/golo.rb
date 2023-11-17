@@ -1,7 +1,7 @@
 class Golo < Formula
   desc "Lightweight dynamic language for the JVM"
   homepage "https://golo-lang.org/"
-  url "https://ghproxy.com/https://github.com/eclipse-archived/golo-lang/releases/download/release%2F3.4.0/golo-3.4.0.zip"
+  url "https://mirror.ghproxy.com/https://github.com/eclipse-archived/golo-lang/releases/download/release%2F3.4.0/golo-3.4.0.zip"
   sha256 "867c462a41a20e4b7dc1aef461b809d193a505c2a757477b147f0e30235bd545"
   license "EPL-2.0"
   head "https://github.com/eclipse-archived/golo-lang.git", branch: "master"

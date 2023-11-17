@@ -1,7 +1,7 @@
 class Aide < Formula
   desc "File and directory integrity checker"
   homepage "https://aide.github.io/"
-  url "https://ghproxy.com/https://github.com/aide/aide/releases/download/v0.18.6/aide-0.18.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/aide/aide/releases/download/v0.18.6/aide-0.18.6.tar.gz"
   sha256 "8ff36ce47d37d0cc987762d5d961346d475de74bba8a1832fd006db6edd3c10e"
   license "GPL-2.0-or-later"
 

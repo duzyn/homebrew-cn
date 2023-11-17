@@ -2,7 +2,7 @@ cask "texstudio" do
   version "4.6.3"
   sha256 "f05d7d752dea12d26703863ae1ab1a71deed1999a233cf749e37ac0578dcfeb7"
 
-  url "https://ghproxy.com/https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg",
       verified: "github.com/texstudio-org/texstudio/"
   name "TeXstudio"
   desc "LaTeX editor"

@@ -5,7 +5,7 @@ cask "obs-advanced-scene-switcher" do
   sha256 arm:   "a0e525f6948a1eee807e0b2712c029ae43279dd32ff8d9559869426628bee539",
          intel: "b315b8ee4a23b92a0fa0d2382be52fec7e266a4bdd532d207511f3bcd2162fbf"
 
-  url "https://ghproxy.com/https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-macos-#{arch}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-macos-#{arch}.pkg",
       verified: "github.com/WarmUpTill/SceneSwitcher/"
   name "OBS Advanced Scene Switcher"
   desc "Automated scene switcher for OBS Studio"

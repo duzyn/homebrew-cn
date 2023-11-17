@@ -10,7 +10,7 @@ cask "dosbox-x" do
     sha256 "22fd4908b464c1c8d9742f63d054ec52f7a747a981e5d1e86c126d3984f9f590"
   end
 
-  url "https://ghproxy.com/https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"

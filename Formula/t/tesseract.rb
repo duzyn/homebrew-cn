@@ -1,7 +1,7 @@
 class Tesseract < Formula
   desc "OCR (Optical Character Recognition) engine"
   homepage "https://github.com/tesseract-ocr/"
-  url "https://ghproxy.com/https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.3.3.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.3.3.tar.gz"
   sha256 "dc4329f85f41191b2d813b71b528ba6047745813474e583ccce8795ff2ff5681"
   license "Apache-2.0"
   head "https://github.com/tesseract-ocr/tesseract.git", branch: "main"
@@ -34,22 +34,22 @@ class Tesseract < Formula
   fails_with gcc: "5"
 
   resource "eng" do
-    url "https://ghproxy.com/https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/eng.traineddata"
+    url "https://mirror.ghproxy.com/https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/eng.traineddata"
     sha256 "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
   end
 
   resource "osd" do
-    url "https://ghproxy.com/https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/osd.traineddata"
+    url "https://mirror.ghproxy.com/https://github.com/tesseract-ocr/tessdata_fast/raw/4.1.0/osd.traineddata"
     sha256 "9cf5d576fcc47564f11265841e5ca839001e7e6f38ff7f7aacf46d15a96b00ff"
   end
 
   resource "snum" do
-    url "https://ghproxy.com/https://github.com/USCDataScience/counterfeit-electronics-tesseract/raw/319a6eeacff181dad5c02f3e7a3aff804eaadeca/Training%20Tesseract/snum.traineddata"
+    url "https://mirror.ghproxy.com/https://github.com/USCDataScience/counterfeit-electronics-tesseract/raw/319a6eeacff181dad5c02f3e7a3aff804eaadeca/Training%20Tesseract/snum.traineddata"
     sha256 "36f772980ff17c66a767f584a0d80bf2302a1afa585c01a226c1863afcea1392"
   end
 
   resource "test_resource" do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/tesseract-ocr/test/6dd816cdaf3e76153271daf773e562e24c928bf5/testing/eurotext.tif"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/tesseract-ocr/test/6dd816cdaf3e76153271daf773e562e24c928bf5/testing/eurotext.tif"
     sha256 "7b9bd14aba7d5e30df686fbb6f71782a97f48f81b32dc201a1b75afe6de747d6"
   end
 

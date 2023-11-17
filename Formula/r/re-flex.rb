@@ -1,7 +1,7 @@
 class ReFlex < Formula
   desc "Regex-centric, fast and flexible scanner generator for C++"
   homepage "https://www.genivia.com/doc/reflex/html"
-  url "https://ghproxy.com/https://github.com/Genivia/RE-flex/archive/refs/tags/v3.5.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Genivia/RE-flex/archive/refs/tags/v3.5.1.tar.gz"
   sha256 "e08ed24a6799a6976f6e32312be1ee059b4b6b55f8af3b433a3016d63250c0e4"
   license "BSD-3-Clause"
 

@@ -1,7 +1,7 @@
 class DyldHeaders < Formula
   desc "Header files for the dynamic linker"
   homepage "https://opensource.apple.com/"
-  url "https://ghproxy.com/https://github.com/apple-oss-distributions/dyld/archive/refs/tags/dyld-1122.1.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/apple-oss-distributions/dyld/archive/refs/tags/dyld-1122.1.2.tar.gz"
   sha256 "f453e698d4c79bd3259dfd95a41ad987f9eac9728b8036a404ef23d08daf5326"
   license "APSL-2.0"
 

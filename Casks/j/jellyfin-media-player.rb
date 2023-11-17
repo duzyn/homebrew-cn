@@ -2,7 +2,7 @@ cask "jellyfin-media-player" do
   version "1.9.1"
   sha256 "6ed5f5c1489c177de45f46fdbeefee8cc9eee7faff75d03e3840f522849674d2"
 
-  url "https://ghproxy.com/https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{version}-macos-notarized.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{version}-macos-notarized.dmg",
       verified: "github.com/jellyfin/jellyfin-media-player/"
   name "jellyfin-media-player"
   desc "Jellyfin desktop client"

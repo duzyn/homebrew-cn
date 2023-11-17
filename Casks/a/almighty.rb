@@ -9,7 +9,7 @@ cask "almighty" do
   homepage "https://onmyway133.com/almighty/"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/onmyway133/archives/master/AlmightyCast.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/onmyway133/archives/master/AlmightyCast.xml"
     strategy :sparkle, &:short_version
   end
 

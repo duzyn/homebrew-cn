@@ -1,7 +1,7 @@
 class Sshportal < Formula
   desc "SSH & Telnet bastion server"
   homepage "https://v1.manfred.life/sshportal/"
-  url "https://ghproxy.com/https://github.com/moul/sshportal/archive/refs/tags/v1.19.5.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/moul/sshportal/archive/refs/tags/v1.19.5.tar.gz"
   sha256 "713be8542c93d91811f9643a8a2954ebc15130099e300fedb5ea4785b5337b52"
   license "Apache-2.0"
 

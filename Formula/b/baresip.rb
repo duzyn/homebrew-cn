@@ -1,7 +1,7 @@
 class Baresip < Formula
   desc "Modular SIP useragent"
   homepage "https://github.com/baresip/baresip"
-  url "https://ghproxy.com/https://github.com/baresip/baresip/archive/refs/tags/v3.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/baresip/baresip/archive/refs/tags/v3.6.0.tar.gz"
   sha256 "9996197bcba8bd2cbbed209f39b52dd811d2f4e35386819370da075b7d24b864"
   license "BSD-3-Clause"
 

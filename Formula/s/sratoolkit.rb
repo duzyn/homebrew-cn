@@ -4,11 +4,11 @@ class Sratoolkit < Formula
   license all_of: [:public_domain, "GPL-3.0-or-later", "MIT"]
 
   stable do
-    url "https://ghproxy.com/https://github.com/ncbi/sra-tools/archive/refs/tags/3.0.8.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/ncbi/sra-tools/archive/refs/tags/3.0.8.tar.gz"
     sha256 "c722e1c96eb6775962ed250fdbd443357beed386ae3587534cf1835dcf604b66"
 
     resource "ncbi-vdb" do
-      url "https://ghproxy.com/https://github.com/ncbi/ncbi-vdb/archive/refs/tags/3.0.8.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/ncbi/ncbi-vdb/archive/refs/tags/3.0.8.tar.gz"
       sha256 "f8c0168a3e8454b6faf8e996fb074dd26bf161362168d316ebb22bb173fa2251"
     end
   end

@@ -1,7 +1,7 @@
 class Alda < Formula
   desc "Music programming language for musicians"
   homepage "https://alda.io"
-  url "https://ghproxy.com/https://github.com/alda-lang/alda/archive/refs/tags/release-2.2.7.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/alda-lang/alda/archive/refs/tags/release-2.2.7.tar.gz"
   sha256 "8c3bd6c558ab6cb043699498bb008c2113d73a6ecd312d0af68d64eb59806ebe"
   license "EPL-2.0"
 

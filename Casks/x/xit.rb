@@ -3,7 +3,7 @@ cask "xit" do
     version "1.0b16"
     sha256 "0e9897d16a5a613a4da9861c907e1f0922df446cc88628e13271793a6c94b229"
 
-    url "https://ghproxy.com/https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
+    url "https://mirror.ghproxy.com/https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
 
     livecheck do
       skip "Legacy version"
@@ -20,7 +20,7 @@ cask "xit" do
     sha256 arm:   "6b44a102747811e0373737e24104902dc1d8aaf8801fc83c0e77622bab1b12fa",
            intel: "7b25b255a1af84261321b40ac08c31311bbff73a13be2c523862863be0bba620"
 
-    url "https://ghproxy.com/https://github.com/Uncommon/Xit/releases/download/#{version}/Xit#{arch}.#{version}.zip"
+    url "https://mirror.ghproxy.com/https://github.com/Uncommon/Xit/releases/download/#{version}/Xit#{arch}.#{version}.zip"
 
     livecheck do
       url :url

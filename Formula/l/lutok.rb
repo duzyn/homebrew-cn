@@ -1,7 +1,7 @@
 class Lutok < Formula
   desc "Lightweight C++ API for Lua"
   homepage "https://github.com/jmmv/lutok"
-  url "https://ghproxy.com/https://github.com/jmmv/lutok/releases/download/lutok-0.4/lutok-0.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/jmmv/lutok/releases/download/lutok-0.4/lutok-0.4.tar.gz"
   sha256 "2cec51efa0c8d65ace8b21eaa08384b77abc5087b46e785f78de1c21fb754cd5"
   license "BSD-3-Clause"
   revision 2
@@ -25,7 +25,7 @@ class Lutok < Formula
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
     sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
   end
 

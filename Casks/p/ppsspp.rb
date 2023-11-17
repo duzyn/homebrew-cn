@@ -2,7 +2,7 @@ cask "ppsspp" do
   version "1.16.6"
   sha256 "3ddb393885303b43e886c898a78bd81fafb022a96a5dccdab4462617f344835a"
 
-  url "https://ghproxy.com/https://github.com/hrydgard/ppsspp/releases/download/v#{version}/PPSSPPSDL-macOS-v#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/hrydgard/ppsspp/releases/download/v#{version}/PPSSPPSDL-macOS-v#{version}.zip",
       verified: "github.com/hrydgard/ppsspp/"
   name "PPSSPP"
   desc "PSP emulator"

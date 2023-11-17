@@ -28,7 +28,7 @@ class Yconalyzer < Formula
   # Fix build issues issue on OS X 10.9/clang
   # Patch reported to upstream - https://sourceforge.net/p/yconalyzer/bugs/3/
   patch :p0 do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/yconalyzer/1.0.4.patch"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/yconalyzer/1.0.4.patch"
     sha256 "a4e87fc310565d91496adac9343ba72841bde3b54b4996e774fa3f919c903f33"
   end
 

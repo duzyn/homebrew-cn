@@ -1,7 +1,7 @@
 class Octosql < Formula
   desc "SQL query tool to analyze data from different file formats and databases"
   homepage "https://github.com/cube2222/octosql/"
-  url "https://ghproxy.com/https://github.com/cube2222/octosql/archive/refs/tags/v0.12.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cube2222/octosql/archive/refs/tags/v0.12.2.tar.gz"
   sha256 "e2bf45a039d1f6bedfd900b656a42ee3986c5a27ddae1a083f2dc52011c3b401"
   license "MPL-2.0"
   head "https://github.com/cube2222/octosql.git", branch: "main"

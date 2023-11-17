@@ -1,7 +1,7 @@
 class Freerdp < Formula
   desc "X11 implementation of the Remote Desktop Protocol (RDP)"
   homepage "https://www.freerdp.com/"
-  url "https://ghproxy.com/https://github.com/FreeRDP/FreeRDP/archive/refs/tags/2.11.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/FreeRDP/FreeRDP/archive/refs/tags/2.11.2.tar.gz"
   sha256 "674b5600bc2ae3e16e5b5a811c7d5b0daaff6198601ba278bd15b4cb9b281044"
   license "Apache-2.0"
 

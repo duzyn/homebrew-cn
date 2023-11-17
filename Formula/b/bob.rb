@@ -1,7 +1,7 @@
 class Bob < Formula
   desc "Version manager for neovim"
   homepage "https://github.com/MordechaiHadad/bob"
-  url "https://ghproxy.com/https://github.com/MordechaiHadad/bob/archive/refs/tags/v2.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/MordechaiHadad/bob/archive/refs/tags/v2.6.0.tar.gz"
   sha256 "05ac4956812d5cde18cf4059f0e5ce92a0556bf7a78bd487eec8670d235a4617"
   license "MIT"
 

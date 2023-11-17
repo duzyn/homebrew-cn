@@ -1,7 +1,7 @@
 class ElixirLs < Formula
   desc "Language Server and Debugger for Elixir"
   homepage "https://elixir-lsp.github.io/elixir-ls"
-  url "https://ghproxy.com/https://github.com/elixir-lsp/elixir-ls/archive/refs/tags/v0.17.9.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/elixir-lsp/elixir-ls/archive/refs/tags/v0.17.9.tar.gz"
   sha256 "387e1ce2bdfc8bcb5eb9531ba84298e6f63eac35e67b3de1c4651404d2d26a8e"
   license "Apache-2.0"
 

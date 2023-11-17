@@ -1,7 +1,7 @@
 class UniversalCtags < Formula
   desc "Maintained ctags implementation"
   homepage "https://github.com/universal-ctags/ctags"
-  url "https://ghproxy.com/https://github.com/universal-ctags/ctags/archive/refs/tags/p6.0.20231112.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/universal-ctags/ctags/archive/refs/tags/p6.0.20231112.0.tar.gz"
   version "p6.0.20231112.0"
   sha256 "6625afe878429ccbc36cef7f0ad6672fd596b25f2d5ece7573a6322f761952f7"
   license "GPL-2.0-only"

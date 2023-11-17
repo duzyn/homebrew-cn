@@ -5,7 +5,7 @@ cask "audacity" do
   sha256 arm:   "01946a56dc45acc01d693fd3b7e7d2325e6adb4f052253bc94fe7e7b272d5791",
          intel: "70400941a153815f803ab436d23c08f29dbb80f7777ab21134663539727307b7"
 
-  url "https://ghproxy.com/https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-macOS-#{version}-#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/audacity/audacity/"
   name "Audacity"
   desc "Multi-track audio editor and recorder"

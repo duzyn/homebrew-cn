@@ -1,7 +1,7 @@
 class Keydb < Formula
   desc "Multithreaded fork of Redis"
   homepage "https://keydb.dev"
-  url "https://ghproxy.com/https://github.com/Snapchat/KeyDB/archive/refs/tags/v6.3.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/Snapchat/KeyDB/archive/refs/tags/v6.3.4.tar.gz"
   sha256 "229190b251f921e05aff7b0d2f04b5676c198131e2abbec1e2cfb2e61215e2f3"
   license "BSD-3-Clause"
 

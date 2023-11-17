@@ -1,7 +1,7 @@
 class Orbuculum < Formula
   desc "Arm Cortex-M SWO/SWV Demux and Postprocess"
   homepage "https://github.com/orbcode/orbuculum"
-  url "https://ghproxy.com/https://github.com/orbcode/orbuculum/archive/refs/tags/V2.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/orbcode/orbuculum/archive/refs/tags/V2.1.0.tar.gz"
   sha256 "ccdd86130094001a0ab61e5501a6636e12c82b0b44690795a2911c65c5618c46"
   license "BSD-3-Clause"
 

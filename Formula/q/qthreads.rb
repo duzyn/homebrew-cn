@@ -1,7 +1,7 @@
 class Qthreads < Formula
   desc "Lightweight locality-aware user-level threading runtime"
   homepage "https://www.sandia.gov/qthreads/"
-  url "https://ghproxy.com/https://github.com/sandialabs/qthreads/archive/refs/tags/1.19.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/sandialabs/qthreads/archive/refs/tags/1.19.tar.gz"
   sha256 "2790382991c0755d752354b189aa019076c80ebed7f4c5c045d14bd57c9eb7ac"
   license "BSD-3-Clause"
   head "https://github.com/sandialabs/qthreads.git", branch: "main"

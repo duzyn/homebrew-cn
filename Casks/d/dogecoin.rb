@@ -2,7 +2,7 @@ cask "dogecoin" do
   version "1.14.6"
   sha256 "fc2a8551d90a53636c04dbd9e8b3ae5df409a2548017e90ec29f3d5ecaf86dd2"
 
-  url "https://ghproxy.com/https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx-signed.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/dogecoin/dogecoin/releases/download/v#{version}/dogecoin-#{version}-osx-signed.dmg",
       verified: "github.com/dogecoin/dogecoin/"
   name "Dogecoin"
   desc "Cryptocurrency"

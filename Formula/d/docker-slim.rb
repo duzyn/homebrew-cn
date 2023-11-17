@@ -1,7 +1,7 @@
 class DockerSlim < Formula
   desc "Minify and secure Docker images"
   homepage "https://slimtoolkit.org/"
-  url "https://ghproxy.com/https://github.com/slimtoolkit/slim/archive/refs/tags/1.40.6.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/slimtoolkit/slim/archive/refs/tags/1.40.6.tar.gz"
   sha256 "f7263ce640a60b2c88573f068ac1c9402c3c9025d186fdd556968b3069bbbf90"
   license "Apache-2.0"
 

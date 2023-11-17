@@ -1,7 +1,7 @@
 class NodeBuild < Formula
   desc "Install NodeJS versions"
   homepage "https://github.com/nodenv/node-build"
-  url "https://ghproxy.com/https://github.com/nodenv/node-build/archive/refs/tags/v4.9.130.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nodenv/node-build/archive/refs/tags/v4.9.130.tar.gz"
   sha256 "0e2a39613acc08176ecbd66baaa54cb4dcb33c6a956a07bc53295022816f4fdd"
   license "MIT"
   head "https://github.com/nodenv/node-build.git", branch: "master"

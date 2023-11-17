@@ -1,7 +1,7 @@
 class Enchive < Formula
   desc "Encrypted personal archives"
   homepage "https://github.com/skeeto/enchive"
-  url "https://ghproxy.com/https://github.com/skeeto/enchive/releases/download/3.5/enchive-3.5.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/skeeto/enchive/releases/download/3.5/enchive-3.5.tar.xz"
   sha256 "cb867961149116443a85d3a64ef5963e3c399bdd377b326669bb566a3453bd06"
   license "Unlicense"
   head "https://github.com/skeeto/enchive.git", branch: "master"

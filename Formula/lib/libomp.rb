@@ -1,7 +1,7 @@
 class Libomp < Formula
   desc "LLVM's OpenMP runtime library"
   homepage "https://openmp.llvm.org/"
-  url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/openmp-17.0.5.src.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/openmp-17.0.5.src.tar.xz"
   sha256 "13c80e80d3eea2f4ffe89585a8e8c81bdedec410192c613fc089a12f7da4c0a2"
   license "MIT"
 
@@ -32,7 +32,7 @@ class Libomp < Formula
   end
 
   resource "cmake" do
-    url "https://ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/cmake-17.0.5.src.tar.xz"
+    url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.5/cmake-17.0.5.src.tar.xz"
     sha256 "734ea7767ebda642d22c878024c9fb14ae0521d048bdba54e463bb73260adaef"
   end
 

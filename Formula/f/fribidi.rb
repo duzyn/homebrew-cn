@@ -1,7 +1,7 @@
 class Fribidi < Formula
   desc "Implementation of the Unicode BiDi algorithm"
   homepage "https://github.com/fribidi/fribidi"
-  url "https://ghproxy.com/https://github.com/fribidi/fribidi/releases/download/v1.0.13/fribidi-1.0.13.tar.xz"
+  url "https://mirror.ghproxy.com/https://github.com/fribidi/fribidi/releases/download/v1.0.13/fribidi-1.0.13.tar.xz"
   sha256 "7fa16c80c81bd622f7b198d31356da139cc318a63fc7761217af4130903f54a2"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
 

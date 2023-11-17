@@ -9,7 +9,7 @@ cask "cirrus" do
   homepage "https://eclecticlight.co/cirrus-bailiff/"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     regex(%r{/(\d+)/(\d+)/cirrus(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)

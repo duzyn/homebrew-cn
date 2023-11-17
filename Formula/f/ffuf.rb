@@ -1,7 +1,7 @@
 class Ffuf < Formula
   desc "Fast web fuzzer written in Go"
   homepage "https://github.com/ffuf/ffuf"
-  url "https://ghproxy.com/https://github.com/ffuf/ffuf/archive/refs/tags/v2.1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ffuf/ffuf/archive/refs/tags/v2.1.0.tar.gz"
   sha256 "52d3daf5b97528a74b7b3305decd4bb01a553a8f18d39fc107ebc15dc3113de7"
   license "MIT"
 

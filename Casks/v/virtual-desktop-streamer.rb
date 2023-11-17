@@ -2,7 +2,7 @@ cask "virtual-desktop-streamer" do
   version "1.29.0"
   sha256 "dc40150544462e41ea9a17c538f86f297d0e4a4e10c6ed4e069380d59301aa35"
 
-  url "https://ghproxy.com/https://github.com/guygodin/VirtualDesktop/releases/download/v#{version}/VirtualDesktop.Streamer.Setup.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/guygodin/VirtualDesktop/releases/download/v#{version}/VirtualDesktop.Streamer.Setup.dmg",
       verified: "github.com/guygodin/VirtualDesktop/"
   name "Virtual Desktop Streamer"
   desc "VR Virtual Desktop Streamer"

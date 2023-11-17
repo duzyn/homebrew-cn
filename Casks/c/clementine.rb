@@ -2,7 +2,7 @@ cask "clementine" do
   version "1.3.1"
   sha256 "825aa66996237e1d3ea2723b24188ead203f298d0bec89f4c3bc6582d9e63e3a"
 
-  url "https://ghproxy.com/https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg",
       verified: "github.com/clementine-player/Clementine/"
   name "Clementine"
   desc "Music player and library organizer"

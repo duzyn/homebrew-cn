@@ -2,13 +2,13 @@ cask "swiftcord" do
   version "0.6.1"
   sha256 "6da79f88930ce384a58c3fd902f75ad64ef0b9e015aa547db6a85af7d46b2032"
 
-  url "https://ghproxy.com/https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version}/Swiftcord.#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version}/Swiftcord.#{version}.dmg"
   name "Swiftcord"
   desc "Native Discord client built in Swift"
   homepage "https://github.com/SwiftcordApp/Swiftcord"
 
   livecheck do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/SwiftcordApp/Swiftcord/main/appcast.xml"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/SwiftcordApp/Swiftcord/main/appcast.xml"
     strategy :sparkle, &:short_version
   end
 

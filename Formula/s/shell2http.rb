@@ -1,7 +1,7 @@
 class Shell2http < Formula
   desc "Executing shell commands via HTTP server"
   homepage "https://github.com/msoap/shell2http"
-  url "https://ghproxy.com/https://github.com/msoap/shell2http/archive/refs/tags/v1.16.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/msoap/shell2http/archive/refs/tags/v1.16.0.tar.gz"
   sha256 "90aa95c7b7bdb068b5b4a44e3e6782cda6b8417efbd0551383fb4f102e04584c"
   license "MIT"
   head "https://github.com/msoap/shell2http.git", branch: "master"

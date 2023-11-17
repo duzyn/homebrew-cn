@@ -2,7 +2,7 @@ cask "ganttproject" do
   version "3.2.3200,3.2.3230"
   sha256 "4e6ebd308378d3d1936050ff6407630692d5b8833f05f139428b052cf91982dc"
 
-  url "https://ghproxy.com/https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.csv.first}/ganttproject-#{version.csv.second}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.csv.first}/ganttproject-#{version.csv.second}.dmg",
       verified: "github.com/bardsoftware/ganttproject/"
   name "GanttProject"
   desc "Gantt chart and project management application"

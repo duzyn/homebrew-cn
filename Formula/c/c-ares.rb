@@ -2,7 +2,7 @@ class CAres < Formula
   desc "Asynchronous DNS library"
   homepage "https://c-ares.org/"
   url "https://c-ares.org/download/c-ares-1.22.0.tar.gz"
-  mirror "https://ghproxy.com/https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.22.0.tar.gz"
+  mirror "https://mirror.ghproxy.com/https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.22.0.tar.gz"
   mirror "http://fresh-center.net/linux/misc/dns/c-ares-1.22.0.tar.gz"
   mirror "http://fresh-center.net/linux/misc/dns/legacy/c-ares-1.22.0.tar.gz"
   sha256 "ad2e205088083317147c9f9eab5f24b82c3d50927c381a7c963deeb1182dbc21"

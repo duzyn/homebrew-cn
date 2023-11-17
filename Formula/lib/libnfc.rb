@@ -1,7 +1,7 @@
 class Libnfc < Formula
   desc "Low level NFC SDK and Programmers API"
   homepage "https://github.com/nfc-tools/libnfc"
-  url "https://ghproxy.com/https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.8.0/libnfc-1.8.0.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.8.0/libnfc-1.8.0.tar.bz2"
   sha256 "6d9ad31c86408711f0a60f05b1933101c7497683c2e0d8917d1611a3feba3dd5"
   license "LGPL-3.0"
 

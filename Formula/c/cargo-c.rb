@@ -3,7 +3,7 @@ class CargoC < Formula
   homepage "https://github.com/lu-zero/cargo-c"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/lu-zero/cargo-c/archive/refs/tags/v0.9.27.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/lu-zero/cargo-c/archive/refs/tags/v0.9.27.tar.gz"
   sha256 "caca521e893ae7cc63a9e2c5e58f2151b7b74754a4fd884c8eb5939b967ae0d5"
   license "MIT"
 

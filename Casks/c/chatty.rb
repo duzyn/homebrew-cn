@@ -2,7 +2,7 @@ cask "chatty" do
   version "0.25"
   sha256 "ff5eae45cc1f8aea1f62823b5340d51845506428317469e992e44880c70a54b6"
 
-  url "https://ghproxy.com/https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip",
+  url "https://mirror.ghproxy.com/https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip",
       verified: "github.com/chatty/chatty/"
   name "Chatty"
   desc "Twitch chat client"

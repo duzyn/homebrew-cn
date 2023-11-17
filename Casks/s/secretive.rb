@@ -17,7 +17,7 @@ cask "secretive" do
     end
   end
 
-  url "https://ghproxy.com/https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
+  url "https://mirror.ghproxy.com/https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
   name "Secretive"
   desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"

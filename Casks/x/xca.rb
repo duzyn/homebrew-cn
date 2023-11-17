@@ -2,7 +2,7 @@ cask "xca" do
   version "2.5.0"
   sha256 "0042758b99d09aa254d721e1e94fd97adfc186727891093e9eeec4d18e9d734f"
 
-  url "https://ghproxy.com/https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}-Darwin.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/chris2511/xca/releases/download/RELEASE.#{version}/xca-#{version}-Darwin.dmg",
       verified: "github.com/chris2511/xca/"
   name "XCA"
   desc "X Certificate and Key management"

@@ -1,7 +1,7 @@
 class Augeas < Formula
   desc "Configuration editing tool and API"
   homepage "https://augeas.net/"
-  url "https://ghproxy.com/https://github.com/hercules-team/augeas/releases/download/release-1.14.1/augeas-1.14.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/hercules-team/augeas/releases/download/release-1.14.1/augeas-1.14.1.tar.gz"
   sha256 "368bfdd782e4b9c7163baadd621359c82b162734864b667051ff6bcb57b9edff"
   license "LGPL-2.1-or-later"
   head "https://github.com/hercules-team/augeas.git", branch: "master"

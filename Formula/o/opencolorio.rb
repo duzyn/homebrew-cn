@@ -5,7 +5,7 @@ class Opencolorio < Formula
   head "https://github.com/AcademySoftwareFoundation/OpenColorIO.git", branch: "master"
 
   stable do
-    url "https://ghproxy.com/https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.3.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/AcademySoftwareFoundation/OpenColorIO/archive/refs/tags/v2.3.0.tar.gz"
     sha256 "32b7be676c110d849a77886d8a409159f0367309b2b2f5dae5aa0c38f42b445a"
 
     # Backport fix for detection of yaml-cpp 0.8

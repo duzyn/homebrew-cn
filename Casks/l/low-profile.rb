@@ -2,7 +2,7 @@ cask "low-profile" do
   version "4.0.1"
   sha256 "09ca984a85e16a6a188d7fc396578f8768fe0c7f8013a2e438ff52ce45388a39"
 
-  url "https://ghproxy.com/https://github.com/ninxsoft/LowProfile/releases/download/v#{version}/Low.Profile.#{version}.pkg"
+  url "https://mirror.ghproxy.com/https://github.com/ninxsoft/LowProfile/releases/download/v#{version}/Low.Profile.#{version}.pkg"
   name "Low Profile"
   desc "Utility to help inspect Apple Configuration Profile payloads"
   homepage "https://github.com/ninxsoft/LowProfile"

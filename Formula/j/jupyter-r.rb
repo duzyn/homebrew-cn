@@ -1,7 +1,7 @@
 class JupyterR < Formula
   desc "R support for Jupyter"
   homepage "https://irkernel.github.io"
-  url "https://ghproxy.com/https://github.com/IRkernel/IRkernel/archive/refs/tags/1.3.2.tar.gz", using: :nounzip
+  url "https://mirror.ghproxy.com/https://github.com/IRkernel/IRkernel/archive/refs/tags/1.3.2.tar.gz", using: :nounzip
   sha256 "4ef2df1371e4b80dc1520da9186242998eb89eb0acfbc7d78de9aef4416bc358"
   license "MIT"
   revision 1

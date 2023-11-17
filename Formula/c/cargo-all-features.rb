@@ -1,7 +1,7 @@
 class CargoAllFeatures < Formula
   desc "Cargo subcommands to build and test all feature flag combinations"
   homepage "https://github.com/frewsxcv/cargo-all-features"
-  url "https://ghproxy.com/https://github.com/frewsxcv/cargo-all-features/archive/refs/tags/1.10.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/frewsxcv/cargo-all-features/archive/refs/tags/1.10.0.tar.gz"
   sha256 "07ea7112bf358e124ecaae45a7eed4de64beeacfb18e4bc8aec1a8d2a5db428c"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/frewsxcv/cargo-all-features.git", branch: "master"

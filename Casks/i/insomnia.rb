@@ -2,7 +2,7 @@ cask "insomnia" do
   version "8.4.2"
   sha256 "29472ecaf6d49408ef45916fb8493671b3a0713ce97d59ec92a41fa5ca906e6f"
 
-  url "https://ghproxy.com/https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
       verified: "github.com/Kong/insomnia/"
   name "Insomnia"
   desc "HTTP and GraphQL Client"

@@ -5,7 +5,7 @@ cask "icon-shelf" do
   sha256 arm:   "9b5a1346a6c5a8cc1aec5cc074b6fed58d200505aef53d392d1ac06fd172095c",
          intel: "c7b4361269f79b34b3948816c3366fa76ac8011b11196ef3e96431f74bf78a6a"
 
-  url "https://ghproxy.com/https://github.com/Icon-Shelf/icon-shelf/releases/download/v#{version}/Icon-Shelf-#{version}#{arch}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/Icon-Shelf/icon-shelf/releases/download/v#{version}/Icon-Shelf-#{version}#{arch}.dmg",
       verified: "github.com/Icon-Shelf/icon-shelf/"
   name "Icon Shelf"
   desc "Icon manager for web developers"

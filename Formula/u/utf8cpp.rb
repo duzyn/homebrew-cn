@@ -1,7 +1,7 @@
 class Utf8cpp < Formula
   desc "UTF-8 with C++ in a Portable Way"
   homepage "https://github.com/nemtrif/utfcpp"
-  url "https://ghproxy.com/https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.2.tar.gz"
   sha256 "d3c032650cd30823b7ebbebbe91f39d8c0e91221b2e3e92b93ca425478f986f2"
   license "BSL-1.0"
 

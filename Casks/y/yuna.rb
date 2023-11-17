@@ -2,7 +2,7 @@ cask "yuna" do
   version "1.4.23"
   sha256 "9a159f8cd2e16cc4dd31cb3a0f4c30fee20f29cfc77514ac27099561b0893fbd"
 
-  url "https://ghproxy.com/https://github.com/BeeeQueue/yuna/releases/download/v#{version}/Yuna-#{version}.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/BeeeQueue/yuna/releases/download/v#{version}/Yuna-#{version}.dmg",
       verified: "github.com/BeeeQueue/yuna/"
   name "Yuna"
   desc "Anime player and list manager"

@@ -1,7 +1,7 @@
 class Apophenia < Formula
   desc "C library for statistical and scientific computing"
   homepage "https://github.com/b-k/apophenia"
-  url "https://ghproxy.com/https://github.com/b-k/apophenia/archive/refs/tags/v1.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/b-k/apophenia/archive/refs/tags/v1.0.tar.gz"
   sha256 "c753047a9230f9d9e105541f671c4961dc7998f4402972424e591404f33b82ca"
   license "GPL-2.0-only"
 
@@ -31,7 +31,7 @@ class Apophenia < Formula
   # Fix compilation with POSIX basename(3)
   # Patches already accepted upstream, remove on next release
   patch do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/9aaa7da2cc8dab92f16744724797739088742a29/apophenia/posix-basename.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/9aaa7da2cc8dab92f16744724797739088742a29/apophenia/posix-basename.diff"
     sha256 "9d8d92c850cdb671032679e3ef46dafda96ffa6daf39769573392605cea41af3"
   end
 

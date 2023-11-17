@@ -35,7 +35,7 @@ class Rtmpdump < Formula
   # Patch for OpenSSL 1.1 compatibility
   # Taken from https://github.com/JudgeZarbi/RTMPDump-OpenSSL-1.1
   patch :p0 do
-    url "https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/rtmpdump/openssl-1.1.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/85fa66a9/rtmpdump/openssl-1.1.diff"
     sha256 "3c9167e642faa9a72c1789e7e0fb1ff66adb11d721da4bd92e648cb206c4a2bd"
   end
 

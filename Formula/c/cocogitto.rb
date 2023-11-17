@@ -3,7 +3,7 @@ class Cocogitto < Formula
   homepage "https://github.com/cocogitto/cocogitto"
   # TODO: check if we can use unversioned `libgit2` at version bump.
   # See comments below for details.
-  url "https://ghproxy.com/https://github.com/cocogitto/cocogitto/archive/refs/tags/5.6.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/cocogitto/cocogitto/archive/refs/tags/5.6.0.tar.gz"
   sha256 "eea9655f4750cb2567eaca9ca4968a3a639f9003242ef733b205bf5410d90c86"
   license "MIT"
 

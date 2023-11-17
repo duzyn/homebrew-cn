@@ -1,7 +1,7 @@
 class Samtools < Formula
   desc "Tools for manipulating next-generation sequencing data"
   homepage "https://www.htslib.org/"
-  url "https://ghproxy.com/https://github.com/samtools/samtools/releases/download/1.18/samtools-1.18.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/samtools/samtools/releases/download/1.18/samtools-1.18.tar.bz2"
   sha256 "d686ffa621023ba61822a2a50b70e85d0b18e79371de5adb07828519d3fc06e1"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Tt < Formula
   desc "Command-line utility to manage Tarantool applications"
   homepage "https://github.com/tarantool/tt"
-  url "https://ghproxy.com/https://github.com/tarantool/tt/releases/download/v2.0.0/tt-2.0.0-complete.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/tarantool/tt/releases/download/v2.0.0/tt-2.0.0-complete.tar.gz"
   sha256 "f266d8c6e3e9b34c377b52c250711ec60bea3648af4f44780b05804bfab51978"
   license "BSD-2-Clause"
 

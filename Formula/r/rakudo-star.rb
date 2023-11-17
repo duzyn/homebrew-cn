@@ -1,7 +1,7 @@
 class RakudoStar < Formula
   desc "Rakudo compiler and commonly used packages"
   homepage "https://rakudo.org/"
-  url "https://ghproxy.com/https://github.com/rakudo/star/releases/download/2023.10/rakudo-star-2023.10.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rakudo/star/releases/download/2023.10/rakudo-star-2023.10.tar.gz"
   sha256 "4c5fb2bd521ac2bcb9f747bb854fe1682dd64a6e69d3636e4101f6c6b5cdcd95"
   license "Artistic-2.0"
 

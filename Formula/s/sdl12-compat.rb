@@ -1,7 +1,7 @@
 class Sdl12Compat < Formula
   desc "SDL 1.2 compatibility layer that uses SDL 2.0 behind the scenes"
   homepage "https://github.com/libsdl-org/sdl12-compat"
-  url "https://ghproxy.com/https://github.com/libsdl-org/sdl12-compat/archive/refs/tags/release-1.2.68.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libsdl-org/sdl12-compat/archive/refs/tags/release-1.2.68.tar.gz"
   sha256 "63c6e4dcc1154299e6f363c872900be7f3dcb3e42b9f8f57e05442ec3d89d02d"
   license all_of: ["Zlib", "MIT-0"]
   head "https://github.com/libsdl-org/sdl12-compat.git", branch: "main"

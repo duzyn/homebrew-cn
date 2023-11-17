@@ -1,7 +1,7 @@
 class Libunwind < Formula
   desc "C API for determining the call-chain of a program"
   homepage "https://www.nongnu.org/libunwind/"
-  url "https://ghproxy.com/https://github.com/libunwind/libunwind/releases/download/v1.7.2/libunwind-1.7.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/libunwind/libunwind/releases/download/v1.7.2/libunwind-1.7.2.tar.gz"
   sha256 "a18a6a24307443a8ace7a8acc2ce79fbbe6826cd0edf98d6326d0225d6a5d6e6"
   license "MIT"
 

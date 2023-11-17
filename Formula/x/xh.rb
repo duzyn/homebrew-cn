@@ -1,7 +1,7 @@
 class Xh < Formula
   desc "Friendly and fast tool for sending HTTP requests"
   homepage "https://github.com/ducaale/xh"
-  url "https://ghproxy.com/https://github.com/ducaale/xh/archive/refs/tags/v0.19.4.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/ducaale/xh/archive/refs/tags/v0.19.4.tar.gz"
   sha256 "1ab3ede256d4f0fba965ad15c0446a48ff61524ef27d3a1067916b1359568778"
   license "MIT"
   head "https://github.com/ducaale/xh.git", branch: "master"

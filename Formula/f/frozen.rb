@@ -1,7 +1,7 @@
 class Frozen < Formula
   desc "Header-only, constexpr alternative to gperf for C++14 users"
   homepage "https://github.com/serge-sans-paille/frozen"
-  url "https://ghproxy.com/https://github.com/serge-sans-paille/frozen/archive/refs/tags/1.1.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/serge-sans-paille/frozen/archive/refs/tags/1.1.1.tar.gz"
   sha256 "f7c7075750e8fceeac081e9ef01944f221b36d9725beac8681cbd2838d26be45"
   license "Apache-2.0"
   head "https://github.com/serge-sans-paille/frozen.git", branch: "master"
