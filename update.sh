@@ -53,5 +53,6 @@ for file in ./Formula/**/*.rb ./Casks/**/*.rb; do
                  s#download\.blender\.org#mirrors.aliyun.com/blender#g;
                  s#download\.virtualbox\.org/virtualbox#mirror.nju.edu.cn/virtualbox/#g;
                  s#www\.wireshark\.org/download#mirror.nju.edu.cn/wireshark/#g;
+                 s#archive\.torproject\.org/tor-package-archive#tor.ybti.net/dist#g;
                  s#download\.calibre-ebook\.com/#mirror.ghproxy.com/https://github.com/kovidgoyal/calibre/releases/download/v#g' "$file"
 done
