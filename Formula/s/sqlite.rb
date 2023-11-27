@@ -2,7 +2,7 @@ class Sqlite < Formula
   desc "Command-line interface for SQLite"
   homepage "https://sqlite.org/index.html"
   url "https://www.sqlite.org/2023/sqlite-autoconf-3440100.tar.gz"
-  version "3.44.0"
+  version "3.44.1"
   sha256 "63c3181633844adb5e36187f75b8f31a51cd32487992a26b89bf26b22ecdcf48"
   license "blessing"
 
@@ -15,14 +15,13 @@ class Sqlite < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "fa132db79fe888d31b4d4cddf4fc6ad9ef4010d21ac57464cf389fe504989a12"
-    sha256 cellar: :any,                 arm64_ventura:  "9bf78ea015b6910175f71e2367e60f59ea5b66b7081648a8d1fad5b662c83afa"
-    sha256 cellar: :any,                 arm64_monterey: "ed2265541a05ac1268b2d643f0622766ba53600cc81d7ca1ce588132f2fa5bfe"
-    sha256 cellar: :any,                 sonoma:         "ad64a2c04fe1d60ada4de8ebebb3428755b70507188909d0c91de417ff4a80b1"
-    sha256 cellar: :any,                 ventura:        "9dfa089ca3a3b9c0187cfce6964526366c1b76fb42980419dcb26020a874acee"
-    sha256 cellar: :any,                 monterey:       "de19a9b4e4b3c1138e093f82d9f5f3db6990896192dc126c9b96903dfcffddd5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54775b760e63628adcb0bd7edfffacee6220268efb3123cf5fd831aa5b3da42a"
+    sha256 cellar: :any,                 arm64_sonoma:   "37c65a0b6310a5c838e61ab33679457ab8a402ac35096b027775e74d4185eca1"
+    sha256 cellar: :any,                 arm64_ventura:  "72577ec6e7611e1f4704c9caba4eaca272b18fbb31a5713a88f74999cb848269"
+    sha256 cellar: :any,                 arm64_monterey: "f3fc307f69df7c96731a0a9c65ad6142e4173e12f1f55ae815cc00607598715b"
+    sha256 cellar: :any,                 sonoma:         "a01b39042ce752a75018b5a46a2bd6ce130b8db003562c518687fc9689a78cdb"
+    sha256 cellar: :any,                 ventura:        "01313334f5675104e66d3708e4cfba9e9f0de3bc6bdfb7a14fca60755bf0936e"
+    sha256 cellar: :any,                 monterey:       "d9705e9968256ab7b8eef4b3cb0358950a402f5f68f7f045c72fa76bd4ce956c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66e6b6065a69b0fbcc7b64b8c4f938233f86f4e234d719f02e69198d58c394f0"
   end
 
   keg_only :provided_by_macos
