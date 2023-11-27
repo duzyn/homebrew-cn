@@ -1,31 +1,37 @@
-cask "kaleidoscope" do
-  version "4.3,5020"
-  sha256 "3245428d5cba433726267122b065792cd3eb09146f69727889e18a048d6168ab"
+cask "kaleidoscope3" do
+  version "3.9,2176"
+  sha256 "036eea0cfd11797a72e37aa41af3c3acf65f7d6e9d5d5f5945444d49e232b44e"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
-  name "Kaleidoscope"
+  name "Kaleidoscope v3"
   desc "Spot and merge differences in text and image files or folders"
   homepage "https://kaleidoscope.app/"
 
+  # Upstream also includes the newest version across all major versions, so we
+  # have to omit items with a different major version.
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
     regex(/Kaleidoscope[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.app\.zip/i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
+    strategy :sparkle do |items, regex|
+      items.map do |item|
+        next if item.short_version&.split(".")&.first != version.major
 
-      "#{match[1]},#{match[2]}"
+        match = item.url.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
   auto_updates true
   conflicts_with cask: [
+    "kaleidoscope",
     "ksdiff",
-    "homebrew/cask-versions/kaleidoscope3",
     "homebrew/cask-versions/kaleidoscope2",
     "homebrew/cask-versions/ksdiff2",
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :big_sur"
 
   app "Kaleidoscope.app"
 
