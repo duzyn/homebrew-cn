@@ -1,8 +1,8 @@
 class CiliumCli < Formula
   desc "CLI to install, manage & troubleshoot Kubernetes clusters running Cilium"
   homepage "https://cilium.io"
-  url "https://mirror.ghproxy.com/https://github.com/cilium/cilium-cli/archive/refs/tags/v0.15.15.tar.gz"
-  sha256 "a5e176554345a721a64c5f51d95aa247e66e4dca25b68391bc58d158f76cf337"
+  url "https://mirror.ghproxy.com/https://github.com/cilium/cilium-cli/archive/refs/tags/v0.15.16.tar.gz"
+  sha256 "74a0e20e6ae00ea77ca1c69cd73f01077be05405fc7d0ee012a7706424f832c5"
   license "Apache-2.0"
 
   # Upstream uses GitHub releases to indicate that a version is released
@@ -14,13 +14,13 @@ class CiliumCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4c1e3643f9e5d4757d0af2f54680118ccdc1ea9b60a78100513bc0c2e8062f20"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ced2f43e0c526ed670cd0cf05c5b102f767c39b00f255ae6d2b27846d6386732"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c34d96438f05104064ee9ed4528e8008c475c384dcd0baed3bc20f6c4befcd5e"
-    sha256 cellar: :any_skip_relocation, sonoma:         "ed6bb085d8520e99370a54f61a5887a94856e17a9107f40fddfd732070d89f43"
-    sha256 cellar: :any_skip_relocation, ventura:        "cd5887f008942995017730baf011b37a08cc995fb9a752eab3fafd8efa7f3b97"
-    sha256 cellar: :any_skip_relocation, monterey:       "0b2e069d52456a54d8039144ee82d52807e34b801918dad22f04e00428249787"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0cc4183108fe05bccfda9e521c6a7dd8e9a0d28e417c53dc3a6cc284bd03382"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f8e71df63ecbfcb8a79a2a046096ff5123d6afc83487deac09a13ff153026d7a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e2b30a4f969a945cec52a18f32799c5a78cf20f3463b4c905c408e8f4c4a4f04"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c920650a157a8bbdebbfaa1d83da84e3762ccecb34f8d9ce7398578517162e0"
+    sha256 cellar: :any_skip_relocation, sonoma:         "704dd9f0e01a6830e6d61541f17fa80efda6fc64568cad0f04ea24dd1f5fc8ad"
+    sha256 cellar: :any_skip_relocation, ventura:        "94bfb8f8f5c7d85f982f7222f2423be44ceb11e6fd58bc50df6422c526778cd8"
+    sha256 cellar: :any_skip_relocation, monterey:       "575911f12be5e46a389c7bc7dafef49a5cd4ee851532f0ebeeab74dadb3f1f45"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f237ca062e222ac2e83e076046c3afed2edaddb8cc01f7aa48656715c91bfd5a"
   end
 
   depends_on "go" => :build
