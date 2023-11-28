@@ -31,8 +31,9 @@ jobs:
     - name: Update buckets
       run: |
         bash ./update.sh
+        echo "Updated on $(date)" >log
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add --all
-        git commit -am "Updated $(date)"
+        git commit -am "Updated on $(date)"
         git push -f origin main
