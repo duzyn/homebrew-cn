@@ -1,5 +1,5 @@
 class Cidr < Formula
-  desc "CLI to perform various actions on ranges"
+  desc "CLI to perform various actions on CIDR ranges"
   homepage "https://github.com/bschaatsbergen/cidr"
   url "https://mirror.ghproxy.com/https://github.com/bschaatsbergen/cidr/archive/refs/tags/v1.0.1.tar.gz"
   sha256 "445d7197afdaf320c6c39032b85a274b2a31e0984af06ecefa835e5cb2d7a259"
