@@ -20,7 +20,12 @@ class Lima < Formula
   depends_on "qemu"
 
   def install
-    system "make", "VERSION=#{version}", "clean", "all"
+    if build.head?
+      system "make"
+    else
+      # VERSION has to be explicitly specified when building from tar.gz, as it does not contain git tags
+      system "make", "VERSION=#{version}"
+    end
 
     bin.install Dir["_output/bin/*"]
     share.install Dir["_output/share/*"]
