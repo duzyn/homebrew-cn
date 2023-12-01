@@ -3,19 +3,18 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/f3/f2/1b73216a9cd3d5d1d4c3dc786d2eb4c4583ed4c2ee060a5f3979294e5715/dvc-3.30.1.tar.gz"
-  sha256 "4048b016b0a0bd08d08fadd889a5e7e2debcda1e891204987a5ccc8ccc4bdc29"
+  url "https://files.pythonhosted.org/packages/6c/db/68f606ef37226b0d99495772c2b291e4522ffc32efda644d9ce8e12897b5/dvc-3.30.3.tar.gz"
+  sha256 "04bfcd6ef3d318ba279ce70ebe419a8094e88bc51c6d98fefb8b5a8abf8d90be"
   license "Apache-2.0"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "b7b463c92b9f50ab24a08f6d795cc8795a431148b41295f88a4250aa9b4a594b"
-    sha256 cellar: :any,                 arm64_ventura:  "0a0b38e8c2a372199f818a9d80156e717f7e97371dd30e1c10ba447379bd72ac"
-    sha256 cellar: :any,                 arm64_monterey: "f3aaba74f274908de83edd79ea713dd0c1c4a19ff69eb18c9f4a60a26659cda9"
-    sha256 cellar: :any,                 sonoma:         "bda7fb6f088a9010301babdacb42754d23c9f7dd1a792998189d49136218bef0"
-    sha256 cellar: :any,                 ventura:        "aa69eae172e68c42874c94738c159aace320c94179392bbb1e52f1bbc69bb1a1"
-    sha256 cellar: :any,                 monterey:       "f2c192fb9a620e5174e6cdadd68813d7e0f57d0bf67ba76f3ca7dae4488aed99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "39134aa87a8b1b89600f878910e2030beb5296ccf263a19c627855cfb209802d"
+    sha256 cellar: :any,                 arm64_sonoma:   "eecfe2a52e9178e6ee7d77f596d77c297923097618bdac051fa214bea377e428"
+    sha256 cellar: :any,                 arm64_ventura:  "3bb5273bec305edb1e3cb98f94bae488ff57cde740eb56afe32c0ee58bab4e0c"
+    sha256 cellar: :any,                 arm64_monterey: "cd66b6981077ab7d894923d265a6f54961b59a09cc9b2e74b1685e7a75075f6f"
+    sha256 cellar: :any,                 sonoma:         "bf5da14dcc753041dc8746fb91d55abacfb563b83019d22755bb601cc0ebfb15"
+    sha256 cellar: :any,                 ventura:        "8b6e85eb6d277fbf34d0b50d7fc0f52df4f0ecd6c097994711bd40b034d1bb18"
+    sha256 cellar: :any,                 monterey:       "ef3de227638a015baacde32b4ff952673dbd3a4ec672f5c3f51182be81accf29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "294506f162ef67e387d999a235f5883b3eecb4f13fabe36685add06c511fe08f"
   end
 
   depends_on "openjdk" => :build # for hydra-core
@@ -369,8 +368,8 @@ class Dvc < Formula
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/f9/26/6e4218cda2e15e7b2120acf68c470f49ec7c811bc82c09b4befa5c66386e/google-api-python-client-2.108.0.tar.gz"
-    sha256 "6396efca83185fb205c0abdbc1c2ee57b40475578c6af37f6d0e30a639aade99"
+    url "https://files.pythonhosted.org/packages/f8/99/c83a13d7d7f15aa06e9a6811375688f8c45f5211f5f5c719d337a2596f3d/google-api-python-client-2.109.0.tar.gz"
+    sha256 "d06390c25477c361d52639fe00ef912c3fab8dafc7fbf29580c1144e92523a79"
   end
 
   resource "google-auth" do
