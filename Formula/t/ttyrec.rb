@@ -31,15 +31,22 @@ class Ttyrec < Formula
     sha256 "76b8153476565c5c548aa04c2eeaa7c7ec8c1385bcf8b511c68915a3a126fdeb"
   end
 
+  # Fixes "ttyrec.c:209:20: error: storage size of ‘status’ isn’t known";
+  # check `man 2 wait3`.
+  patch :DATA
+
   def install
+    # Fix compile with newer Clang
+    ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
+
     # macOS has openpty() in <util.h>
     # Reported by email to satoru@0xcc.net on 2017-12-20
     inreplace "ttyrec.c", "<libutil.h>", "<util.h>" if OS.mac?
 
     # openpty is a BSD function
-    cflags = OS.mac? ? "-DHAVE_openpty" : nil
+    ENV.append_to_cflags "-DHAVE_openpty" if OS.mac?
 
-    system "make", "CFLAGS=#{cflags}"
+    system "make", "CFLAGS=#{ENV.cflags}"
     bin.install %w[ttytime ttyplay ttyrec]
     man1.install Dir["*.1"]
   end
@@ -50,3 +57,19 @@ class Ttyrec < Formula
     end
   end
 end
+
+__END__
+--- a/ttyrec.c
++++ b/ttyrec.c
+@@ -203,11 +203,7 @@ doinput()
+ void
+ finish()
+ {
+-#if defined(SVR4)
+ 	int status;
+-#else /* !SVR4 */
+-	union wait status;
+-#endif /* !SVR4 */
+ 	register int pid;
+ 	register int die = 0;
+ 
