@@ -3,19 +3,19 @@ class Pipx < Formula
 
   desc "Execute binaries from Python packages in isolated environments"
   homepage "https://pypa.github.io/pipx"
-  url "https://files.pythonhosted.org/packages/da/1b/5ebbf68e321684ffca2ee6757c4f6962a136e75a4925554f774f511666ad/pipx-1.3.0.tar.gz"
-  sha256 "db07ec2a3a15d772a71b2608c134f065d7fbc51d4654abe6adfc412800ed6ba4"
+  url "https://files.pythonhosted.org/packages/2c/e0/8aeefc5c784b5b5cf9db979619963fef880a9a9f8718f5558fbd203dc294/pipx-1.3.1.tar.gz"
+  sha256 "34d4a313eaeefe3d506b8e7cb75752fda970ec76774cfd774d1e2a7076cef60f"
   license "MIT"
   head "https://github.com/pypa/pipx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8f0ff71980a043221939efaeb6bd1ea6adbaaa35e39b1fd5999d35ad760a2113"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bfa1565ab1a7d8a31ed989c90bd3e109f8639fcb636f9ba38a2df96215ad6932"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3c48bdf708348bbebe7cda3617c123b4d611b423af4fef497d083755a5cbae03"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e965f3734bceffb9beae2f70129b906f6b940594fcaf02210878942b0a65d239"
-    sha256 cellar: :any_skip_relocation, ventura:        "6f315f5e229c97f8f00594cf6ff76c9765cdfd9f54aa919dcfec863c65740db4"
-    sha256 cellar: :any_skip_relocation, monterey:       "0b23ac18cf62e5c74d8a5a3f36071369309b9b0ef4682846bb78243256665b9c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cb58d051eb6c40efbc41400b4f1762f018bc848138c052f13c9f40a0c6ed4f47"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "05b993baf897f284bddf60259d393fbbc212abeeb271b1dbee8a7b12fa104a50"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "abfb7d2ecb188d721c9508a9c5da84d2b3cfd0e50c0fdc6047b34e5dc6a06ec4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b4ab0640d3e74962b5bfbaa22f6cb3eb20a6f41f164984a3e7719151a6b0fa5"
+    sha256 cellar: :any_skip_relocation, sonoma:         "02d74ce75d95153f5bb67a96a209125bf33ad1e512fba094fc2091c1dcaa80e5"
+    sha256 cellar: :any_skip_relocation, ventura:        "588a20806e95f797bab24a2900f00bd3291a9193d147463bd705da9eb0ada55e"
+    sha256 cellar: :any_skip_relocation, monterey:       "9fdeec06b17c63c2543861536af95998262d165c27626d979f0e85b04be0ba23"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f113f0bc2b0cb165ea21789a75c36b19f331d88d1f17bea24ba3bfbe76400eb4"
   end
 
   depends_on "python-argcomplete"
