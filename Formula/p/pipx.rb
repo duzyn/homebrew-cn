@@ -2,7 +2,7 @@ class Pipx < Formula
   include Language::Python::Virtualenv
 
   desc "Execute binaries from Python packages in isolated environments"
-  homepage "https://pypa.github.io/pipx"
+  homepage "https://pipx.pypa.io"
   url "https://files.pythonhosted.org/packages/2c/e0/8aeefc5c784b5b5cf9db979619963fef880a9a9f8718f5558fbd203dc294/pipx-1.3.1.tar.gz"
   sha256 "34d4a313eaeefe3d506b8e7cb75752fda970ec76774cfd774d1e2a7076cef60f"
   license "MIT"
