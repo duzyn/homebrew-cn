@@ -4,8 +4,8 @@ class Coin3d < Formula
   license all_of: ["BSD-3-Clause", "ISC"]
 
   stable do
-    url "https://mirror.ghproxy.com/https://github.com/coin3d/coin/releases/download/v4.0.1/coin-4.0.1-src.zip"
-    sha256 "267f36baa2bece32445fb1879f7a1c7931bd3a274affa04660d36a262370fdf2"
+    url "https://mirror.ghproxy.com/https://github.com/coin3d/coin/releases/download/v4.0.2/coin-4.0.2-src.zip"
+    sha256 "b764a88674f96fa540df3a9520d80586346843779858dcb6cd8657725fcb16f0"
 
     # TODO: migrate pyside@2 -> pyside and python@3.10 -> python@3.12 on next pivy release
     resource "pivy" do
@@ -15,12 +15,12 @@ class Coin3d < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:   "3ad22a7dd39a9e022049878282fb976dedbcfe98681ce03b09476961326950d8"
-    sha256 cellar: :any, arm64_ventura:  "0024daf187ebcb36e6d4fa26b04fca49a25f0798e50912cef8d4bac1de43cf25"
-    sha256 cellar: :any, arm64_monterey: "9277d0d51f9904bf5d2022b0b08c93ab7ca6c559e02e21a3bdbe7a6a47418f5d"
-    sha256 cellar: :any, sonoma:         "966357de8e031f3ce234d2fc973b0875a5ea9ff27cb87ab79ccfcefe43d2bb2e"
-    sha256 cellar: :any, ventura:        "e492d9afcdf9254176491b4484056aa1bded811eb4bf4fe88dd0ab8ee8f7b10d"
-    sha256 cellar: :any, monterey:       "388c68347ed11a681f42624a06e90e20dd09c280ddf64d1544fb5b5b31184d9d"
+    sha256 cellar: :any, arm64_sonoma:   "109634fdffabd73998545546b0608fb74e325744326e8d5e6e5a7911c0c47c47"
+    sha256 cellar: :any, arm64_ventura:  "99d3003891e5b8b7264d74feb424acfaeab6b721d82c0e90a908b79536ff9f13"
+    sha256 cellar: :any, arm64_monterey: "ce73bef75ed4334d2a880bebb4f96c729eeac891bd73ef6ca042fef7ed7c9509"
+    sha256 cellar: :any, sonoma:         "9940156cce6b8569b81dfb790b958e2b9d9c370daa15888bdca668b0deb230d9"
+    sha256 cellar: :any, ventura:        "2b85535a188812a6211ec7f4aa80962b6786a9ed7a9010a3384d5b4e1b09fed4"
+    sha256 cellar: :any, monterey:       "e63ea57db53d46dcbf42ad69021b3c1a4363621ccae6a6995481cc0a70f88f68"
   end
 
   head do
