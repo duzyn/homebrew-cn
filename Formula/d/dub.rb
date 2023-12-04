@@ -8,8 +8,8 @@ class Dub < Formula
   head "https://github.com/dlang/dub.git", branch: "master"
 
   livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url "https://code.dlang.org/packages/dub"
+    regex(%r{"badge">v?(\d+(?:\.\d+)+)</strong>}i)
   end
 
   bottle do
