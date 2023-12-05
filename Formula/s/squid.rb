@@ -6,8 +6,8 @@ class Squid < Formula
   license "GPL-2.0-or-later"
 
   livecheck do
-    url "http://www.squid-cache.org/Versions/v6/"
-    regex(/href=.*?squid[._-]v?(\d+(?:\.\d+)+)-RELEASENOTES\.html/i)
+    url "http://www.squid-cache.org/Versions/"
+    regex(%r{<td>\s*v?(\d+(?:\.\d+)+)\s*</td>}im)
   end
 
   bottle do
