@@ -5,13 +5,14 @@ class Z3 < Formula
   head "https://github.com/Z3Prover/z3.git", branch: "master"
 
   stable do
-    url "https://mirror.ghproxy.com/https://github.com/Z3Prover/z3/archive/refs/tags/z3-4.12.2.tar.gz"
-    sha256 "9f58f3710bd2094085951a75791550f547903d75fe7e2fcb373c5f03fc761b8f"
+    url "https://mirror.ghproxy.com/https://github.com/Z3Prover/z3/archive/refs/tags/z3-4.12.3.tar.gz"
+    sha256 "61670733eb7a74eeca13033244cbec2c4098dca24a6fa3df0e7ae12ee8f33d9c"
 
-    # Fix source build for users with GCC 13. Remove in the next release.
+    # build patch to use built-in `importlib.resources` avail in py3.9+
+    # upstream PR ref, https://github.com/Z3Prover/z3/pull/7042
     patch do
-      url "https://github.com/Z3Prover/z3/commit/520e692a43c41e8981eb091494bef0297ecbe3c6.patch?full_index=1"
-      sha256 "3e57b6ba3f8f271c3a8e46f1172b3384296c9570165680eb2bcf57d84e28298a"
+      url "https://github.com/Z3Prover/z3/commit/03ae6d86cb4db88c71d6b245e29400e9a44cb59f.patch?full_index=1"
+      sha256 "bc574bf4a6de35a41e396f42b3e82f2f563bcd017acb536a86958a1e44b0fb9a"
     end
   end
 
@@ -22,14 +23,13 @@ class Z3 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "3cefdb9b53c5f6b9bbac30630f7e2498a50d3081fd5c332b3ee48d984960129b"
-    sha256 cellar: :any,                 arm64_ventura:  "f22e57323803087dbd3d716c3d637af5b3e606906027899e7428b412b2776c33"
-    sha256 cellar: :any,                 arm64_monterey: "70cbff047978886125f28a24926398d2f84310039a39ba8e1d898099396606a6"
-    sha256 cellar: :any,                 sonoma:         "6ab4f5b41405b259bba990f259a97f34f371a9051c9cc621a71ed97084dd87c3"
-    sha256 cellar: :any,                 ventura:        "57f7090b42df9bce9b095b922ffbd4e6f2ec22f6ddb68651c16a95dc75bce6d1"
-    sha256 cellar: :any,                 monterey:       "3c9f8a788f325077119a4be747f7462c2804fed4143a82e8cf35847ba7803d03"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "03e5e838aceb33a27d58731b22a71d4c6063c0c1c2ce26babe696925b4d2512c"
+    sha256 cellar: :any,                 arm64_sonoma:   "c4d6e0a9b71a57802fb548d03592481c0d67e373f79ce23c76869b57a1f9c9d4"
+    sha256 cellar: :any,                 arm64_ventura:  "484665bf9ad7b8eb858adfe9ae3340f48e9aeea8b44d45ded9ab51a4e50d9405"
+    sha256 cellar: :any,                 arm64_monterey: "b271a212e4388ef73a37799a4e90a4b5b03232bbda65887ec6f05e8730b8e74e"
+    sha256 cellar: :any,                 sonoma:         "fb63aa21ad0dc59176294c4bf1f525968e2aad21ab6d6da3dd7bb54cdbc41ea8"
+    sha256 cellar: :any,                 ventura:        "1b613299520702b4b80999165909607c97c8b612d280b109f979dd4c1ecc671a"
+    sha256 cellar: :any,                 monterey:       "d72efca19ebe3a17a6035fbd26fb47d215f74d77ff5c6c1cb9ce3969386a2c42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0e2c8e3996f03ad8383905b81628760de7f583929bf5f256e87689a3cd0d0b94"
   end
 
   depends_on "cmake" => :build
