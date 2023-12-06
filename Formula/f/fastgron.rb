@@ -1,18 +1,18 @@
 class Fastgron < Formula
   desc "High-performance JSON to GRON converter"
   homepage "https://github.com/adamritter/fastgron"
-  url "https://mirror.ghproxy.com/https://github.com/adamritter/fastgron/archive/refs/tags/v0.7.6.tar.gz"
-  sha256 "f5ceb98c4f7646a0976307413437fb8e6b686b0c90aa9377f83b92465d2e6903"
+  url "https://mirror.ghproxy.com/https://github.com/adamritter/fastgron/archive/refs/tags/v0.7.7.tar.gz"
+  sha256 "3011a3b99cd07d42648b2e964f459024b13ecc904d30501f0493fb0dc9fc33b2"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f453a56cf3c9ac630da1bcac3823380afb44571f5b2231135231b2df4d92e304"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c86fc9a4fe8df410cfd5cec92f4245413bd1628b187ab0020f12ad0f193056ce"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2ff4fe06a80809210b114fddb0cdd3c4e77260d4e98f28852c1926026bb91c3"
-    sha256 cellar: :any_skip_relocation, sonoma:         "0240dcdd9a488a7ab3fd25c57e449c401f45ea32bfcc1fedf0064f4683d21b8d"
-    sha256 cellar: :any_skip_relocation, ventura:        "ee90aa2af5bbdd0c866c29bfa327d5251cac96f73260d9b927393d1513a06bf8"
-    sha256 cellar: :any_skip_relocation, monterey:       "d65d5f91cc8d5086a2851abe163ff6a8cae2585e9bab2c04cdc1db63187ab9e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8d29cf954e504c7fd7e05bdc22cc7937c88e803f9b73f37bd3c1213a4695612"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7374e488e419e340057a89ca0c75c8ab18f26fec54e729b75d8d27f0390f79b6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f925e09414fba335897ba67999bd674c8e2c8748aa13fbb1f6f2960467e3613a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3e90031e801cfed2013a80c38f32b7c4788e7282aa0163723e4141e33f5299b1"
+    sha256 cellar: :any_skip_relocation, sonoma:         "3ff4b53ee3e5687edd4a35f270a3b13b4d822cdb50cab09ef22b51f608493659"
+    sha256 cellar: :any_skip_relocation, ventura:        "3f5469196d51e258b7baf7cb7ee982d4ecf9506eedd9fa8cf475d5c89d9947bb"
+    sha256 cellar: :any_skip_relocation, monterey:       "54a91239a017ae40c51bbbe08d1d6b444858cfbd4e54d555f1490f9d33c5e179"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "149b9bd41abdc81948522c8b37dc2580eaa2242a1045798eb22ac6da45201b08"
   end
 
   depends_on "cmake" => :build
