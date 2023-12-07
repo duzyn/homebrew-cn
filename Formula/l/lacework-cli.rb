@@ -2,8 +2,8 @@ class LaceworkCli < Formula
   desc "CLI for managing Lacework"
   homepage "https://docs.lacework.com/cli"
   url "https://github.com/lacework/go-sdk.git",
-      tag:      "v1.41.0",
-      revision: "e5dc8b211c50d38af014cd192e3755ef4c4405d2"
+      tag:      "v1.41.1",
+      revision: "30819f41d92025ea005caa878a153544c4028b88"
   license "Apache-2.0"
   head "https://github.com/lacework/go-sdk.git", branch: "main"
 
@@ -16,13 +16,13 @@ class LaceworkCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b32639b9af5c06e276a935280afd8f24115677b296919d02130de9fc8698a21f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2312540c8bc980c607d45a6e807dc7e87fa154c7c2371d994a2086b6c4ebeb65"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "40db386b3f5cba075fc81becd0cf8d82f255d30ca546226cae96b3aad086ed68"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2de2b191c90fdf454e791318915ef6b3e8515e38c864a40e5ae6cbc98367010d"
-    sha256 cellar: :any_skip_relocation, ventura:        "58527ce76ffe253f1495afe2ef19d2d686ec4cc429128ffe35934d6c6be4e2b8"
-    sha256 cellar: :any_skip_relocation, monterey:       "31770cf52aaeac21efdcb11d1e5aec5a0a4482ebf8a49427bdadf1cc61f31408"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ce992236cb9a739c1707dbf17ae9a8375ea1a1fddb73c57b08cbcb5af5ffa6a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e73b964be88cf0357472bb07e5cf92094ea20f8a58f88417fba9a988a908df05"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bd776866a93b94352239029e632dbe6574f5a17422c917519c3f0bd3d50e4ee6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6785383daff7b44ba29fbafffb88bc492f3080e5549e7f96d05622a779664a9d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b2888984ea92cac449ab60f731a078c5b273cd277a714f9b90287bfa0f7a9efa"
+    sha256 cellar: :any_skip_relocation, ventura:        "dd494b9ab4dbd8bffff0ed3e60a462dcc31b6054165ec01b7d9f08e43f61e72b"
+    sha256 cellar: :any_skip_relocation, monterey:       "aaedd858b2ae78533e58ec5876b59d1ab947ff918ac12b8364377ba881f9e9ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f4b37255f34a3a705ad49e6eaf13b13f1072814301a3fbab20ca6e5e5780a24"
   end
 
   depends_on "go" => :build
