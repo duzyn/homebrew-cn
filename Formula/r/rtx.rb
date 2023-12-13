@@ -1,8 +1,8 @@
 class Rtx < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://github.com/jdx/rtx"
-  url "https://mirror.ghproxy.com/https://github.com/jdx/rtx/archive/refs/tags/v2023.12.22.tar.gz"
-  sha256 "ecf01f0524bfc66c81091a8fd5586cbb17fe706d159a55e7e434193e8a56a379"
+  url "https://mirror.ghproxy.com/https://github.com/jdx/rtx/archive/refs/tags/v2023.12.24.tar.gz"
+  sha256 "7f5ca83cbddee992aaac340d26c7a5d9511d59d61a7eec923421b4c5ef1604fd"
   license "MIT"
   head "https://github.com/jdx/rtx.git", branch: "main"
 
@@ -12,13 +12,13 @@ class Rtx < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b6d6afc6809d4069107fb50d1966acbeac7a141d6ec6b6cef80cc5d98d81a769"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bf3a8dd875b080657feb5530e4bf4ec0aecd50d5ac816b798355209e8e81ed76"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7991db55c6e79c289a1edbd8dab055c0190df64fdfabba7ee1a9acda74460e84"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8a4bc31581c59118c3c186070b88be17b82f245012cdb5b805ee5b45de7fba1f"
-    sha256 cellar: :any_skip_relocation, ventura:        "f958dc2d8883975be504f609f0512dc09f29799fea72c7514eaf3b6d1bfd8022"
-    sha256 cellar: :any_skip_relocation, monterey:       "06ab03db40e383f90b47a0ace113ae6ab988ac80752e902b5a856c33009c8b6c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b82871a31063bd08b3c8e8739c8f89bc71e15f388a9d45cbc2c6171b43456f9f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dbb9a01c97caa3ff626292e28a0249d1915adad98c3b5d42abb3adac4aefada5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0e72c37a87f26f6e86dbb540b49bf0ea946c3deb96930e24efe5767357d5aa70"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b072d4e217b6eeed5fd2a7f4fcbcecb756f66df6fa9acba747d6e9f9a6179f22"
+    sha256 cellar: :any_skip_relocation, sonoma:         "33cd86c89dd516006dd13e1c0743319977ee62773ed108a9014d1723998d6efd"
+    sha256 cellar: :any_skip_relocation, ventura:        "07b557297e8a7e0607275f3eaa1f19e4e03508ffbe608599b0a96017134702ef"
+    sha256 cellar: :any_skip_relocation, monterey:       "5957b701cbf4138e334d1eb99873b7be20fdaac857f2499366051f2d15082f68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9d0b0ba6febfbffc785476f734756161130662c2ba5ae0dde5b7e97cad0048b"
   end
 
   depends_on "rust" => :build
@@ -31,6 +31,7 @@ class Rtx < Formula
   def install
     system "cargo", "install", *std_cargo_args
     man1.install "man/man1/rtx.1"
+    share.install "share/fish"
     generate_completions_from_executable(bin/"rtx", "completion")
     lib.mkpath
     touch lib/".disable-self-update"
