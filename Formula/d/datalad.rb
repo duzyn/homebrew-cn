@@ -22,7 +22,7 @@ class Datalad < Formula
   depends_on "python-certifi"
   depends_on "python-cryptography"
   depends_on "python-packaging"
-  depends_on "python@3.11"
+  depends_on "python@3.11" # Python 3.12 blocked by `boto` usage: https://github.com/datalad/datalad/issues/5597
 
   resource "annexremote" do
     url "https://files.pythonhosted.org/packages/30/a8/c2bd70b26edbb815cb8180344a7dd88ba9da5124b02b4434ddb25e0cc6d1/annexremote-1.6.4.tar.gz"
