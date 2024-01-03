@@ -7,7 +7,7 @@ class GerbilScheme < Formula
   revision 3
 
   livecheck do
-    url "https://github.com/vyzo/gerbil.git"
+    url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
