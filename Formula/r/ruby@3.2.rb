@@ -1,65 +1,50 @@
-class Ruby < Formula
+class RubyAT32 < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
+  url "https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.2.tar.gz"
+  sha256 "96c57558871a6748de5bc9f274e93f4b5aad06cd8f37befa0e8d94e7b8a423bc"
   license "Ruby"
-  head "https://github.com/ruby/ruby.git", branch: "master"
-
-  stable do
-    url "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0.tar.gz"
-    sha256 "96518814d9832bece92a85415a819d4893b307db5921ae1f0f751a9a89a56b7d"
-
-    # Should be updated only when Ruby is updated (if an update is available).
-    # The exception is Rubygem security fixes, which mandate updating this
-    # formula & the versioned equivalents and bumping the revisions.
-    resource "rubygems" do
-      url "https://rubygems.org/rubygems/rubygems-3.5.4.tgz"
-      sha256 "bf70fee8dcc11ebea76d31399c3b6eea90590b06c1c587cef1b6e53ec32b0128"
-    end
-  end
 
   livecheck do
     url "https://www.ruby-lang.org/en/downloads/"
-    regex(/href=.*?ruby[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/href=.*?ruby[._-]v?(3\.2(?:\.\d+)+)\.t/i)
   end
 
   bottle do
-    sha256 arm64_sonoma:   "f1df6988bf95afc9fd2f0f3c81f5ebbc44c329e0256e0cb9e6d1ff0afa87042c"
-    sha256 arm64_ventura:  "4324666563f8553fb823d6eebf087de3d5a2215150920dd18d231d88e02551e7"
-    sha256 arm64_monterey: "df1e89eab46fc3712498cbd05ab1babcfe4ac65b04922c3ab71a7fc4196c10c4"
-    sha256 sonoma:         "b91811e54f96b78f45d33e51b0113ca979b76a60d64c3ee9b3c22ba4959b3ca6"
-    sha256 ventura:        "b3f7fe0a1e2b5222f3353f3f8d7024aba62933dbb67ae88bdeccebc675ccc04f"
-    sha256 monterey:       "383e350e08b528df131d01b7e5b453ceba5a4355b54239189765bca3b32f7185"
-    sha256 x86_64_linux:   "658faff09d5f5825de52dac5d178ec9e65e91ffcb627f9daf8753b0d42d59c1f"
+    sha256 arm64_sonoma:   "91b5c2d9207e9f58ad261b5f5840c34dc72f1a5eb6de01c3cedaf89e432ddfe3"
+    sha256 arm64_ventura:  "0b65c4ba013503e416a4884712402cc2ed5c6b9f4c4560f86039fb2b71628e83"
+    sha256 arm64_monterey: "2df167357dc100a1b762b41c0b1458bf28abc360ac0b83e4fc273c57c8b3a3f1"
+    sha256 sonoma:         "8dfc8b566f6eef066982c219a54349745fe357b2ff25a1540ebb670ebb832993"
+    sha256 ventura:        "95143e5b58e724722afaab652fa03a8d44dad295c7eeeca312f752459e79ddd3"
+    sha256 monterey:       "cdab46842594d1697969df3dfaabe26447805c68dd64bdd437358f907595d428"
+    sha256 x86_64_linux:   "69149c1e6132fe612f4b54f0e6e684632b24ec186b9aef6aa55cd23836423b26"
   end
 
-  keg_only :provided_by_macos
+  keg_only :versioned_formula
 
   depends_on "autoconf" => :build
+  depends_on "bison" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "libyaml"
   depends_on "openssl@3"
+  depends_on "readline"
 
   uses_from_macos "gperf"
   uses_from_macos "libffi"
   uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
 
-  def determine_api_version
-    Utils.safe_popen_read("#{bin}/ruby", "-e", "print Gem.ruby_api_version")
+  # Should be updated only when Ruby is updated (if an update is available).
+  # The exception is Rubygem security fixes, which mandate updating this
+  # formula & the versioned equivalents and bumping the revisions.
+  resource "rubygems" do
+    url "https://rubygems.org/rubygems/rubygems-3.4.10.tgz"
+    sha256 "55f1c67fa2ae96c9751b81afad5c0f2b3792c5b19cbba6d54d8df9fd821460d3"
   end
 
   def api_version
-    if head?
-      if latest_head_prefix
-        determine_api_version
-      else
-        # Best effort guess
-        "#{stable.version.major.to_i}.#{stable.version.minor.to_i + 1}.0+0"
-      end
-    else
-      "#{version.major.to_i}.#{version.minor.to_i}.0"
-    end
+    "3.2.0"
   end
 
   def rubygems_bindir
@@ -75,9 +60,7 @@ class Ruby < Formula
     #       https://github.com/Homebrew/brew/pull/12508
     inreplace "tool/mkconfig.rb", /^(\s+val = )'"\$\(SDKROOT\)"'\+/, "\\1"
 
-    system "./autogen.sh" if build.head?
-
-    paths = %w[libyaml openssl@3].map { |f| Formula[f].opt_prefix }
+    paths = %w[libyaml openssl@3 readline].map { |f| Formula[f].opt_prefix }
     args = %W[
       --prefix=#{prefix}
       --enable-shared
@@ -112,8 +95,6 @@ class Ruby < Formula
 
     # A newer version of ruby-mode.el is shipped with Emacs
     elisp.install Dir["misc/*.el"].reject { |f| f == "misc/ruby-mode.el" }
-
-    return if build.head? # Use bundled RubyGems for --HEAD (will be newer)
 
     # This is easier than trying to keep both current & versioned Ruby
     # formulae repeatedly updated with Rubygem patches.
@@ -252,7 +233,7 @@ class Ruby < Formula
     hello_text = shell_output("#{bin}/ruby -e 'puts :hello'")
     assert_equal "hello\n", hello_text
 
-    assert_equal api_version, determine_api_version
+    assert_equal api_version, shell_output("#{bin}/ruby -e 'print Gem.ruby_api_version'")
 
     ENV["GEM_HOME"] = testpath
     system "#{bin}/gem", "install", "json"
