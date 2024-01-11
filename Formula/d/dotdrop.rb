@@ -2,7 +2,7 @@ class Dotdrop < Formula
   include Language::Python::Virtualenv
 
   desc "Save your dotfiles once, deploy them everywhere"
-  homepage "https://deadc0de.re/dotdrop"
+  homepage "https://github.com/deadc0de6/dotdrop"
   url "https://files.pythonhosted.org/packages/21/1c/e9dcccd0a92ea4b9c0ba821e4a5e61dabc408695476d4b736060c050f940/dotdrop-1.14.0.tar.gz"
   sha256 "677361af37aef575acd5233de3a8b1b3d8b7bcf1f3587946d089e344503aa24d"
   license "GPL-3.0-or-later"
