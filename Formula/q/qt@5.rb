@@ -224,7 +224,7 @@ class QtAT5 < Formula
   end
 
   # CVE-2023-34410
-  # Orginal (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2023-34410-qtbase-5.15.diff
+  # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2023-34410-qtbase-5.15.diff
   # KDE patch excludes Windows-specific fixes
   # Remove with Qt 5.15.15
   patch do
