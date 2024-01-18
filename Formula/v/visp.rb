@@ -4,7 +4,7 @@ class Visp < Formula
   url "https://visp-doc.inria.fr/download/releases/visp-3.6.0.tar.gz"
   sha256 "eec93f56b89fd7c0d472b019e01c3fe03a09eda47f3903c38dc53a27cbfae532"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://visp.inria.fr/download/"
@@ -12,13 +12,13 @@ class Visp < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "2fa4057ae2962f36b06e95acde4272cc3baa36153203ff138c4fa8132b261ed4"
-    sha256 cellar: :any,                 arm64_ventura:  "e3b36c4385af2c3b126a2bcf13d9baf7acb315647628f9da0bacd04cb48b25ac"
-    sha256 cellar: :any,                 arm64_monterey: "2177ed813158414e18588468eb2b3159a74bfd37d3c0a13e32bd95a107e7a1be"
-    sha256 cellar: :any,                 sonoma:         "4b6b81f707bbb08e6a6cc31922f1cc3e036dab8b94fc820aa4904c9dd932d201"
-    sha256 cellar: :any,                 ventura:        "b4620408848aff38c74cec1dd4b57477618a95d0aa03b1086fa80de05f83b668"
-    sha256 cellar: :any,                 monterey:       "65dc6434cb725f919949e5ec74c49767c255758efef24d40623a0883a44dea33"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6e236da65dd3f3caaedb5fbe986658ffe570cfbf3ef4ac2dc5b7f613d5099bb"
+    sha256 cellar: :any,                 arm64_sonoma:   "d93518ea5414c4aa840a7907fb7d95cba0d59a395fcc60750e839933be88e4a6"
+    sha256 cellar: :any,                 arm64_ventura:  "c85a167caf67cd5656ee083daff897a7c321f3e0e8012a66c0eabec48df83fc2"
+    sha256 cellar: :any,                 arm64_monterey: "439dcf5a4c9708c2e6e3fc9900ede114918029de72f7e80dd987508f65091863"
+    sha256 cellar: :any,                 sonoma:         "1ae8fd8777454c15cb1228348773ea4c2bf66d8d705e171f5b2edb5cd29a1f21"
+    sha256 cellar: :any,                 ventura:        "ee54db90499d8344e29ed206aeb469aefb0b78e10f2854cca13e0fc61cbe7428"
+    sha256 cellar: :any,                 monterey:       "9cb2ee515990c573f6a134659b1ade1214f389baef6790589bd4f78c386a3579"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a57aaf636d683040f9dc92d074f6e5dd78e1945a6f754930a347d362d67eb5e"
   end
 
   depends_on "cmake" => :build
@@ -40,6 +40,12 @@ class Visp < Formula
   end
 
   fails_with gcc: "5"
+
+  # One usage of OpenCV Universal Intrinsics API altered starting from 4.9.0
+  # Remove this patch if it's merged into a future version
+  # https://github.com/lagadic/visp/issues/1309
+  # Patch source: https://github.com/lagadic/visp/pull/1310
+  patch :DATA
 
   def install
     ENV.cxx11
@@ -125,3 +131,37 @@ class Visp < Formula
     assert_equal version.to_s, shell_output("./test").chomp
   end
 end
+__END__
+diff --git a/modules/tracker/mbt/src/depth/vpMbtFaceDepthDense.cpp b/modules/tracker/mbt/src/depth/vpMbtFaceDepthDense.cpp
+index 8a47b5d437..c6d636bc9e 100644
+--- a/modules/tracker/mbt/src/depth/vpMbtFaceDepthDense.cpp
++++ b/modules/tracker/mbt/src/depth/vpMbtFaceDepthDense.cpp
+@@ -606,9 +606,15 @@ void vpMbtFaceDepthDense::computeInteractionMatrixAndResidu(const vpHomogeneousM
+         cv::v_float64x2 vx, vy, vz;
+         cv::v_load_deinterleave(ptr_point_cloud, vx, vy, vz);
+ 
++#if (VISP_HAVE_OPENCV_VERSION >= 0x040900)
++        cv::v_float64x2 va1 = cv::v_sub(cv::v_mul(vnz, vy), cv::v_mul(vny, vz)); // vnz*vy - vny*vz
++        cv::v_float64x2 va2 = cv::v_sub(cv::v_mul(vnx, vz), cv::v_mul(vnz, vx)); // vnx*vz - vnz*vx
++        cv::v_float64x2 va3 = cv::v_sub(cv::v_mul(vny, vx), cv::v_mul(vnx, vy)); // vny*vx - vnx*vy
++#else
+         cv::v_float64x2 va1 = vnz*vy - vny*vz;
+         cv::v_float64x2 va2 = vnx*vz - vnz*vx;
+         cv::v_float64x2 va3 = vny*vx - vnx*vy;
++#endif
+ 
+         cv::v_float64x2 vnxy = cv::v_combine_low(vnx, vny);
+         cv::v_store(ptr_L, vnxy);
+@@ -630,7 +636,12 @@ void vpMbtFaceDepthDense::computeInteractionMatrixAndResidu(const vpHomogeneousM
+         cv::v_store(ptr_L, vnxy);
+         ptr_L += 2;
+ 
++#if (VISP_HAVE_OPENCV_VERSION >= 0x040900)
++        cv::v_float64x2 verr = cv::v_add(vd, cv::v_muladd(vnx, vx, cv::v_muladd(vny, vy, cv::v_mul(vnz, vz))));
++#else
+         cv::v_float64x2 verr = vd + cv::v_muladd(vnx, vx, cv::v_muladd(vny, vy, vnz*vz));
++#endif
++
+         cv::v_store(ptr_error, verr);
+         ptr_error += 2;
+ #elif USE_SSE
