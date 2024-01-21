@@ -7,11 +7,14 @@ class Dub < Formula
   version_scheme 1
   head "https://github.com/dlang/dub.git", branch: "master"
 
+  # Upstream may not create a GitHub release for tagged versions, so we check
+  # the dlang.org package as an indicator that a version is released. The API
+  # provides the latest version (https://code.dlang.org/api/packages/dub/latest)
+  # but this is sometimes an unstable version, so we identify the latest stable
+  # version from the package's version page.
   livecheck do
-    url "https://code.dlang.org/api/packages/dub/latest"
-    strategy :json do |json|
-      json
-    end
+    url "https://code.dlang.org/packages/dub/versions"
+    regex(%r{href=.*/packages/dub/v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
   bottle do
