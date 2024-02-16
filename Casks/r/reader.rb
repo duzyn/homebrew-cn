@@ -1,11 +1,11 @@
 cask "reader" do
-  version "0.1.180"
-  sha256 "dc388117c7ce2f8a32e7cca18b8ddc4b4d829bdebbc5ed838ba47b4d21e8676f"
+  version "0.1.184"
+  sha256 "bfc4ebccb60e7bd0787a1ff05fb205f4abca2f2da36fa3654cd9e6444dc8fa17"
 
   url "https://mirror.ghproxy.com/https://github.com/readwiseio/reader-desktop-releases/releases/download/reader-desktop-v#{version}/Reader_#{version}_universal.dmg",
       verified: "github.com/readwiseio/reader-desktop-releases/"
   name "Readwise Reader"
-  desc "Save articles to read, highlight key content, and organize notes for review"
+  desc "Save articles to read, highlight key content, and organise notes for review"
   homepage "https://readwise.io/read/"
 
   livecheck do

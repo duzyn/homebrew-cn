@@ -7,7 +7,7 @@ cask "vapor" do
 
   url "https://mirror.ghproxy.com/https://github.com/NCAR/VAPOR/releases/download/v#{version}/VAPOR#{version.major}-#{version}-Darwin#{arch}.dmg"
   name "VAPOR"
-  desc "Visualization and analysis platform"
+  desc "Visualisation and analysis platform"
   homepage "https://github.com/NCAR/VAPOR"
 
   livecheck do
