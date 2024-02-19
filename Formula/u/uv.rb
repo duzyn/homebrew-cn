@@ -1,19 +1,19 @@
 class Uv < Formula
   desc "Extremely fast Python package installer and resolver, written in Rust"
   homepage "https://github.com/astral-sh/uv"
-  url "https://mirror.ghproxy.com/https://github.com/astral-sh/uv/archive/refs/tags/0.1.3.tar.gz"
-  sha256 "6141b16dd8651c6a6ad0beaf75ed98185ef1dc268dfbb8e726a5a6b2272a2a69"
+  url "https://mirror.ghproxy.com/https://github.com/astral-sh/uv/archive/refs/tags/0.1.4.tar.gz"
+  sha256 "3c18aee2a348102256e0912e09c1e6985514b857096eee17917ac49ecf784dcc"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "3e8440e045fec97dc0f3bdb53b6e82214790b2e574bae7350d6375df0e96060c"
-    sha256 cellar: :any,                 arm64_ventura:  "c2545dcdcd473b30e3734b76804279a21b24505e74f5691089688ef0608aafaa"
-    sha256 cellar: :any,                 arm64_monterey: "6b15d1de06b56aed7e21322721de63924ac8bd66c456ab1034da4820791c9cb9"
-    sha256 cellar: :any,                 sonoma:         "140801bc55204c0d2117cda8e747b880fdec77558918568e34ba64787ccc1ab8"
-    sha256 cellar: :any,                 ventura:        "aa4f097cb67b119937cff28ac325bb22ef57dbeeb0f008e6939e84207e0edc57"
-    sha256 cellar: :any,                 monterey:       "7127bd70851cf1526501cb9f4d16febaec4c80641233c71316e1d0dacf098ad9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3030b73f1c6ef458f391dbf55df049dea4a680e9e4a712ec9b1d3218c25d6cc"
+    sha256 cellar: :any,                 arm64_sonoma:   "968f98865c18c1413cccdaacb19acf96a3f89669815b9dba36d3dbccc8347885"
+    sha256 cellar: :any,                 arm64_ventura:  "b34378ebbc4e73089994d2f98df4e84ae5cbe1a172516969ad2cc4241062451a"
+    sha256 cellar: :any,                 arm64_monterey: "bdc2cf490d1e7e582717af60fbcfa045e2bc983bf9669ed1249efd59f9f4d32c"
+    sha256 cellar: :any,                 sonoma:         "c5d0e762bf68b1f99154cb8faf37e2951f854cdfafa9fd1921c1aceb47e36549"
+    sha256 cellar: :any,                 ventura:        "403600dfa8b9c8c2cfa129f5eeff051ccd1fed8ca43825a4eb9f6493b9a03255"
+    sha256 cellar: :any,                 monterey:       "0a7c31cf1438a85f42322b605bf920d33d332540b7298c2f9d6559463dbada20"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d33f73e1baa56bcd6b1dd9dabef39609020ef0247f9097f709056c9a997b51b6"
   end
 
   depends_on "pkg-config" => :build

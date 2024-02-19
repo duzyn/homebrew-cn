@@ -30,7 +30,7 @@ class Redis < Formula
 
     # Fix up default conf file to match our paths
     inreplace "redis.conf" do |s|
-      s.gsub! "/var/run/redis.pid", var/"run/redis.pid"
+      s.gsub! "/var/run/redis_6379.pid", var/"run/redis.pid"
       s.gsub! "dir ./", "dir #{var}/db/redis/"
       s.sub!(/^bind .*$/, "bind 127.0.0.1 ::1")
     end
