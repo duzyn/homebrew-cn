@@ -28,7 +28,7 @@ class Termshare < Formula
   end
 
   # https://github.com/progrium/termshare/issues/15
-  deprecate! date: "2023-06-27", because: :unmaintained
+  disable! date: "2024-02-22", because: :unmaintained
 
   depends_on "go" => :build
 
