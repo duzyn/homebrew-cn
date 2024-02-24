@@ -9,24 +9,20 @@ class Mvt < Formula
   head "https://github.com/mvt-project/mvt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6584a77f1ad333dd5f3f753e1e22fa297a7f48d7401e7e14826242e80c254756"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0d58ba9a5f05b1f67b4b680cba08244928d27653e8508b22e38ad561046435c2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "831fef6b6a5e023d00dda58f42554a1bccca8c9b16105a7a213b3a26a8588270"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f1920fb2675211ed86a60b54f6ebf24b4f2ae33ad29a9a2504664c0343638e16"
-    sha256 cellar: :any_skip_relocation, ventura:        "06cdba2996db55aedab8f51e378d41983a843690fa1099e8d94f19583e5e9a4a"
-    sha256 cellar: :any_skip_relocation, monterey:       "b174441002c0efe5d504b5368c3f824fb9bb2da15357b34379d45ddd83fd224a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c254bc7823df89e296c3d31a524c5a835aadfb2b2ce2cae5e75b848fac86ac2"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "76655e4e61dbfd2a3d0e6f95f88aae86be8653aa9109336e3994e86a0c578853"
+    sha256 cellar: :any,                 arm64_ventura:  "073187af11f6f4b6af59009654a33607009e143555fb15f4a8e7b57ce3afad0f"
+    sha256 cellar: :any,                 arm64_monterey: "cade6319b5c3d7bcf95e49276c5e09b14eefcaca0e3980f2e343df2b7e4bc6dd"
+    sha256 cellar: :any,                 sonoma:         "8fcea249801dd2db42b9d7d353b02bd2b5fcbeadc0bbbc7544670748dd3da449"
+    sha256 cellar: :any,                 ventura:        "a5a718409d10da7b024263b2a61088fbd2bb3992aee78ec4157c3c720a94c41c"
+    sha256 cellar: :any,                 monterey:       "f79ce726f223e449c9ff034120e3cf95448ef12bb4e0350a0aa77b863d3f8390"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5e0bdffdfcdf59c7128ebb65219495c331ba975f2d9958d9974d6fd01822b9a5"
   end
 
-  depends_on "cffi"
-  depends_on "pycparser"
-  depends_on "pygments"
+  depends_on "libyaml"
   depends_on "python-certifi"
-  depends_on "python-click"
   depends_on "python-cryptography"
-  depends_on "python-packaging"
   depends_on "python@3.12"
-  depends_on "pyyaml"
 
   resource "adb-shell" do
     url "https://files.pythonhosted.org/packages/8f/73/d246034db6f3e374dad9a35ee3f61345a6b239d4febd2a41ab69df9936fe/adb_shell-0.4.4.tar.gz"
@@ -43,9 +39,31 @@ class Mvt < Formula
     sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
   end
 
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
+    sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
+  end
+
   resource "idna" do
     url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
     sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+  end
+
+  # The `iosbackup` resource requires `nskeyedunarchiver`, so it must be installed first
+  resource "nskeyedunarchiver" do
+    url "https://files.pythonhosted.org/packages/e8/d9/227a00737de97609b0b2d161905f03bb8e246df0498ec5735b83166eef8f/NSKeyedUnArchiver-1.5.tar.gz"
+    sha256 "eeda0480021817336e0ffeaca80377c1a8f08ecc5fc06be483b48c44bad414f4"
+  end
+
+  # The `iosbackup` resource requires `pycryptodome`, so it must be installed first
+  resource "pycryptodome" do
+    url "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz"
+    sha256 "09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7"
+  end
+
+  resource "iosbackup" do
+    url "https://files.pythonhosted.org/packages/db/b8/4cd52322deceb942b9e18b127d45d112c2f7a3ec7821ab528659d4f04275/iOSbackup-0.9.925.tar.gz"
+    sha256 "33545a9249e5b3faaadf1ee782fe6bdfcdb70fae0defba1acee336a65f93d1ca"
   end
 
   resource "libusb1" do
@@ -63,9 +81,9 @@ class Mvt < Formula
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
   end
 
-  resource "nskeyedunarchiver" do
-    url "https://files.pythonhosted.org/packages/e8/d9/227a00737de97609b0b2d161905f03bb8e246df0498ec5735b83166eef8f/NSKeyedUnArchiver-1.5.tar.gz"
-    sha256 "eeda0480021817336e0ffeaca80377c1a8f08ecc5fc06be483b48c44bad414f4"
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
   end
 
   resource "pyahocorasick" do
@@ -78,9 +96,14 @@ class Mvt < Formula
     sha256 "6d391a96e59b23130a5cfa74d6fd7f388dbbe26cc8f1edf39fdddf08d9d6676c"
   end
 
-  resource "pycryptodome" do
-    url "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz"
-    sha256 "09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7"
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
+    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   resource "requests" do
@@ -109,14 +132,8 @@ class Mvt < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/36/dd/a6b232f449e1bc71802a5b7950dc3675d32c6dbc2a1bd6d71f065551adb6/urllib3-2.1.0.tar.gz"
-    sha256 "df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
-  end
-
-  # This resource depends on `nskeyedunarchiver`, so we place it last
-  resource "iosbackup" do
-    url "https://files.pythonhosted.org/packages/db/b8/4cd52322deceb942b9e18b127d45d112c2f7a3ec7821ab528659d4f04275/iOSbackup-0.9.925.tar.gz"
-    sha256 "33545a9249e5b3faaadf1ee782fe6bdfcdb70fae0defba1acee336a65f93d1ca"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   def install
