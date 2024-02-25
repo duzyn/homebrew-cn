@@ -49,18 +49,6 @@ class Mvt < Formula
     sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
   end
 
-  # The `iosbackup` resource requires `nskeyedunarchiver`, so it must be installed first
-  resource "nskeyedunarchiver" do
-    url "https://files.pythonhosted.org/packages/e8/d9/227a00737de97609b0b2d161905f03bb8e246df0498ec5735b83166eef8f/NSKeyedUnArchiver-1.5.tar.gz"
-    sha256 "eeda0480021817336e0ffeaca80377c1a8f08ecc5fc06be483b48c44bad414f4"
-  end
-
-  # The `iosbackup` resource requires `pycryptodome`, so it must be installed first
-  resource "pycryptodome" do
-    url "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz"
-    sha256 "09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7"
-  end
-
   resource "iosbackup" do
     url "https://files.pythonhosted.org/packages/db/b8/4cd52322deceb942b9e18b127d45d112c2f7a3ec7821ab528659d4f04275/iOSbackup-0.9.925.tar.gz"
     sha256 "33545a9249e5b3faaadf1ee782fe6bdfcdb70fae0defba1acee336a65f93d1ca"
@@ -81,6 +69,11 @@ class Mvt < Formula
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
   end
 
+  resource "nskeyedunarchiver" do
+    url "https://files.pythonhosted.org/packages/e8/d9/227a00737de97609b0b2d161905f03bb8e246df0498ec5735b83166eef8f/NSKeyedUnArchiver-1.5.tar.gz"
+    sha256 "eeda0480021817336e0ffeaca80377c1a8f08ecc5fc06be483b48c44bad414f4"
+  end
+
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
     sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
@@ -94,6 +87,11 @@ class Mvt < Formula
   resource "pyasn1" do
     url "https://files.pythonhosted.org/packages/ce/dc/996e5446a94627fe8192735c20300ca51535397e31e7097a3cc80ccf78b7/pyasn1-0.5.1.tar.gz"
     sha256 "6d391a96e59b23130a5cfa74d6fd7f388dbbe26cc8f1edf39fdddf08d9d6676c"
+  end
+
+  resource "pycryptodome" do
+    url "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz"
+    sha256 "09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7"
   end
 
   resource "pygments" do
@@ -137,7 +135,11 @@ class Mvt < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    # The `iosbackup` resource requires `nskeyedunarchiver` & `pycryptodome`, so they must be installed first
+    venv = virtualenv_create(libexec, "python3.12")
+    venv.pip_install resources.reject { |r| r.name == "iosbackup" }
+    venv.pip_install resource("iosbackup")
+    venv.pip_install_and_link buildpath
 
     %w[mvt-android mvt-ios].each do |script|
       generate_completions_from_executable(bin/script, shells: [:fish, :zsh], shell_parameter_format: :click)
