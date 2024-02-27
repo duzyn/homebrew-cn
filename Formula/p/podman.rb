@@ -189,14 +189,14 @@ class Podman < Formula
         #{bin}/podman
         #{bin}/podman-remote
         #{bin}/podmansh
-      ].sort, Dir[bin/"*"].sort
+      ].sort, Dir[bin/"*"]
       assert_equal %W[
         #{libexec}/podman/catatonit
         #{libexec}/podman/netavark
         #{libexec}/podman/aardvark-dns
         #{libexec}/podman/quadlet
         #{libexec}/podman/rootlessport
-      ].sort, Dir[libexec/"podman/*"].sort
+      ].sort, Dir[libexec/"podman/*"]
       out = shell_output("file #{libexec}/podman/catatonit")
       assert_match "statically linked", out
     end
