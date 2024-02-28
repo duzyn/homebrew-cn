@@ -100,8 +100,6 @@ class Rdkit < Formula
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    (prefix/site_packages/"homebrew-rdkit.pth").write libexec/site_packages
   end
 
   def caveats

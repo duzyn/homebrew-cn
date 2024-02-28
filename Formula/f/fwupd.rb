@@ -1,4 +1,6 @@
 class Fwupd < Formula
+  include Language::Python::Virtualenv
+
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
   url "https://mirror.ghproxy.com/https://github.com/fwupd/fwupd/releases/download/1.9.14/fwupd-1.9.14.tar.xz"
@@ -21,8 +23,6 @@ class Fwupd < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "python-jinja" => :build
-  depends_on "python-markupsafe" => :build
   depends_on "python@3.12" => :build
   depends_on "vala" => :build
   depends_on "gcab"
@@ -40,11 +40,25 @@ class Fwupd < Formula
   uses_from_macos "curl"
   uses_from_macos "sqlite"
 
+  resource "jinja2" do
+    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
+    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+  end
+
+  resource "markupsafe" do
+    url "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz"
+    sha256 "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
+  end
+
   def python3
     "python3.12"
   end
 
   def install
+    venv = virtualenv_create(buildpath/"venv", python3)
+    venv.pip_install resources
+    ENV.prepend_path "PYTHONPATH", buildpath/"venv"/Language::Python.site_packages(python3)
+
     system "meson", "setup", "build",
                     "-Dbuild=standalone", # this is used as PolicyKit is not available on macOS
                     "-Dlibarchive=enabled", # fail if missing
