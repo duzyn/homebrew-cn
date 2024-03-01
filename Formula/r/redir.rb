@@ -1,9 +1,9 @@
 class Redir < Formula
   desc "Port redirector"
-  homepage "https://web.archive.org/web/20190817033513/sammy.net/~sammy/hacks/"
+  homepage "https://github.com/TracyWebTech/redir"
   url "https://mirror.ghproxy.com/https://github.com/TracyWebTech/redir/archive/refs/tags/2.2.1-9.tar.gz"
   sha256 "7e6612a0eee1626a0e7d9888de49b9c0fa4b7f75c5c4caca7804bf73d73f01fe"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2f440dee539a0814120a94614749b73c2ab46e22e1521dc6fbd2b05a35c442cd"

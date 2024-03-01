@@ -1,7 +1,6 @@
 class Pgtune < Formula
   desc "Tuning wizard for postgresql.conf"
-  # Original web server flaky, let's leave it to the archive.org copy
-  homepage "https://web.archive.org/web/20190717075914/pgfoundry.org/projects/pgtune"
+  homepage "https://github.com/gregs1104/pgtune"
   url "https://ftp.postgresql.org/pub/projects/pgFoundry/pgtune/pgtune/0.9.3/pgtune-0.9.3.tar.gz"
   mirror "https://mirrorservice.org/sites/ftp.postgresql.org/projects/pgFoundry/pgtune/pgtune/0.9.3/pgtune-0.9.3.tar.gz"
   sha256 "31ac5774766dd9793d8d2d3681d1edb45760897c8eda3afc48b8d59350dee0ea"

@@ -1,6 +1,6 @@
 class Taktuk < Formula
   desc "Deploy commands to (a potentially large set of) remote nodes"
-  homepage "https://web.archive.org/web/20200806133931/https://taktuk.gforge.inria.fr/"
+  homepage "https://taktuk.gitlabpages.inria.fr/"
   url "https://deb.debian.org/debian/pool/main/t/taktuk/taktuk_3.7.7.orig.tar.gz"
   sha256 "56a62cca92670674c194e4b59903e379ad0b1367cec78244641aa194e9fe893e"
   license "GPL-2.0-or-later"
