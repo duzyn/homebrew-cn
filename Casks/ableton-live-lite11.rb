@@ -1,20 +1,20 @@
-cask "ableton-live-intro" do
-  version "12.0.1"
-  sha256 "a4d4d7c5afd280c0ba1c4bed7ed8c6a7876eaace1ef4fe75f875333ba18418b8"
+cask "ableton-live-lite11" do
+  version "11.3.22"
+  sha256 "3b7dab85e3e479c67387528231da324bfc613c7324b205a4981e68d6918e735b"
 
-  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_universal.dmg"
-  name "Ableton Live Intro"
+  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_universal.dmg"
+  name "Ableton Live Lite"
   desc "Sound and music editor"
-  homepage "https://www.ableton.com/en/live/"
+  homepage "https://www.ableton.com/en/products/live-lite/"
 
   livecheck do
-    cask "ableton-live-suite"
+    cask "ableton-live-suite11"
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :high_sierra"
 
-  app "Ableton Live #{version.major} Intro.app"
+  app "Ableton Live #{version.major} Lite.app"
 
   uninstall quit: "com.ableton.live"
 
