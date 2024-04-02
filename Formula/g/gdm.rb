@@ -1,5 +1,3 @@
-require "language/go"
-
 class Gdm < Formula
   desc "Go Dependency Manager (gdm)"
   homepage "https://github.com/sparrc/gdm"
@@ -30,7 +28,7 @@ class Gdm < Formula
 
   depends_on "go"
 
-  go_resource "golang.org/x/tools" do
+  resource "golang.org/x/tools" do
     url "https://go.googlesource.com/tools.git",
         revision: "6f233b96dfbc53e33b302e31b88814cf74697ff6"
   end
@@ -41,7 +39,7 @@ class Gdm < Formula
     mkdir_p buildpath/"src/github.com/sparrc"
     ln_sf buildpath, buildpath/"src/github.com/sparrc/gdm"
 
-    Language::Go.stage_deps resources, buildpath/"src"
+    resources.each { |r| (buildpath/"src"/r.name).install r }
 
     cd "src/github.com/sparrc/gdm" do
       system "go", "build", *std_go_args(ldflags: "-X main.Version=#{version}")

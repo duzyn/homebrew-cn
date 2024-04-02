@@ -36,9 +36,8 @@ class Gitea < Formula
   end
 
   service do
-    run [opt_bin/"gitea", "web"]
+    run [opt_bin/"gitea", "web", "--work-path", var/"gitea"]
     keep_alive true
-    working_dir opt_libexec
     log_path var/"log/gitea.log"
     error_log_path var/"log/gitea.log"
   end
