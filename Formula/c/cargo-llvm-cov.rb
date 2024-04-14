@@ -2,7 +2,7 @@ class CargoLlvmCov < Formula
   desc "Cargo subcommand to easily use LLVM source-based code coverage"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
   # cannot use github tarball due to https://github.com/taiki-e/cargo-llvm-cov/pull/152#issuecomment-1107055622
-  url "https://static.crates.io/crates/cargo-llvm-cov/cargo-llvm-cov-0.6.9.crate", using: :nounzip
+  url "https://static.crates.io/crates/cargo-llvm-cov/cargo-llvm-cov-0.6.9.crate"
   sha256 "137c054c19f1134aabe426018c3d8718ff5cfe679ba895f3f0a869eccf8b380b"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/taiki-e/cargo-llvm-cov.git", branch: "main"
@@ -21,7 +21,6 @@ class CargoLlvmCov < Formula
   depends_on "rustup-init" => :test
 
   def install
-    system "tar", "--strip-components", "1", "-xzvf", "cargo-llvm-cov-#{version}.crate" unless build.head?
     system "cargo", "install", *std_cargo_args
   end
 
