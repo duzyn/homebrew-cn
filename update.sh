@@ -38,7 +38,7 @@ for file in ./Formula/**/*.rb ./Casks/**/*.rb; do
                  s#(raw\.githubusercontent\.com)#mirror.ghproxy.com/https://\1#g;
                  s#(github\.com/.+/raw)#mirror.ghproxy.com/https://\1#g;
                  s#(github\.com/.+/archive)#mirror.ghproxy.com/https://\1#g;
-                 s#(downloads\.sourceforge\.net/.*)"#\1?use_mirror=nchc"#g;
+                 s#(downloads\.sourceforge\.net/.*)"#\1?use_mirror=jaist"#g;
                  s#download\.kde\.org#mirrors.ustc.edu.cn/kde#g;
                  s#(www\.)?7-zip\.org/a#mirror.nju.edu.cn/7-zip#g;
                  s#mirror\.ctan\.org#mirrors.aliyun.com/CTAN#g;
