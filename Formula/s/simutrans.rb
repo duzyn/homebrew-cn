@@ -38,7 +38,7 @@ class Simutrans < Formula
   fails_with gcc: "5"
 
   resource "pak64" do
-    url "https://downloads.sourceforge.net/project/simutrans/pak64/123-0/simupak64-123-0.zip?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/simutrans/pak64/123-0/simupak64-123-0.zip?use_mirror=jaist"
     sha256 "b8a0a37c682d8f62a3b715c24c49bc738f91d6e1e4600a180bb4d2e9f85b86c1"
   end
 

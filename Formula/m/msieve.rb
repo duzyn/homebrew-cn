@@ -1,7 +1,7 @@
 class Msieve < Formula
   desc "C library for factoring large integers"
   homepage "https://sourceforge.net/projects/msieve/"
-  url "https://downloads.sourceforge.net/project/msieve/msieve/Msieve%20v1.53/msieve153_src.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/msieve/msieve/Msieve%20v1.53/msieve153_src.tar.gz?use_mirror=jaist"
   sha256 "c5fcbaaff266a43aa8bca55239d5b087d3e3f138d1a95d75b776c04ce4d93bb4"
   license :public_domain
 

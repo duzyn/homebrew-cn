@@ -1,7 +1,7 @@
 class Apng2gif < Formula
   desc "Convert APNG animations into animated GIF format"
   homepage "https://apng2gif.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/apng2gif/1.8/apng2gif-1.8-src.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/apng2gif/1.8/apng2gif-1.8-src.zip?use_mirror=jaist"
   sha256 "9a07e386017dc696573cd7bc7b46b2575c06da0bc68c3c4f1c24a4b39cdedd4d"
   license all_of: ["libpng-2.0", "Zlib"]
 

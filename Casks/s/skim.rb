@@ -2,8 +2,8 @@ cask "skim" do
   version "1.7.2"
   sha256 "b7f03705dee643c84519d6e9428bb8aeef62e635f81da60e5e032f7cf0141187"
 
-  url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/skim-app/Skim/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/skim-app/Skim/?use_mirror=jaist"
   name "Skim"
   desc "PDF reader and note-taking application"
   homepage "https://skim-app.sourceforge.io/"

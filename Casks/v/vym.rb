@@ -2,7 +2,7 @@ cask "vym" do
   version "2.9.22"
   sha256 "4859da0de9bc32f183ef2c73af63665b4962303f950c924a8baad903bfd2f418"
 
-  url "https://downloads.sourceforge.net/vym/vym-#{version}.dmg?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/vym/vym-#{version}.dmg?use_mirror=jaist"
   name "VYM (View Your Mind)"
   desc "Generate and manipulate maps which show your thoughts"
   homepage "https://sourceforge.net/projects/vym/"

@@ -1,7 +1,7 @@
 class Dict < Formula
   desc "Dictionary Server Protocol (RFC2229) client"
   homepage "https://dict.org/bin/Dict"
-  url "https://downloads.sourceforge.net/project/dict/dictd/dictd-1.13.1/dictd-1.13.1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/dict/dictd/dictd-1.13.1/dictd-1.13.1.tar.gz?use_mirror=jaist"
   sha256 "e4f1a67d16894d8494569d7dc9442c15cc38c011f2b9631c7f1cc62276652a1b"
   license "GPL-2.0-or-later"
 

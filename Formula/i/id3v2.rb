@@ -1,7 +1,7 @@
 class Id3v2 < Formula
   desc "Command-line editor"
   homepage "https://id3v2.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/id3v2/id3v2/0.1.12/id3v2-0.1.12.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/id3v2/id3v2/0.1.12/id3v2-0.1.12.tar.gz?use_mirror=jaist"
   sha256 "8105fad3189dbb0e4cb381862b4fa18744233c3bbe6def6f81ff64f5101722bf"
   license "LGPL-2.1"
 

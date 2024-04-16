@@ -1,7 +1,7 @@
 class Imlib2 < Formula
   desc "Image loading and rendering library"
   homepage "https://sourceforge.net/projects/enlightenment/"
-  url "https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.12.2/imlib2-1.12.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/enlightenment/imlib2-src/1.12.2/imlib2-1.12.2.tar.gz?use_mirror=jaist"
   sha256 "e96b43014ac9d61a0775e28a46cf7befbd49654705df845001e849e44839481b"
   license "Imlib2"
 

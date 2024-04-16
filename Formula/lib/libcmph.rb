@@ -1,7 +1,7 @@
 class Libcmph < Formula
   desc "C minimal perfect hashing library"
   homepage "https://cmph.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/cmph/v2.0.2/cmph-2.0.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/cmph/v2.0.2/cmph-2.0.2.tar.gz?use_mirror=jaist"
   sha256 "365f1e8056400d460f1ee7bfafdbf37d5ee6c78e8f4723bf4b3c081c89733f1e"
 
   bottle do

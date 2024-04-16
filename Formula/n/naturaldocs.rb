@@ -1,7 +1,7 @@
 class Naturaldocs < Formula
   desc "Extensible, multi-language documentation generator"
   homepage "https://www.naturaldocs.org/"
-  url "https://downloads.sourceforge.net/project/naturaldocs/Stable%20Releases/2.3/Natural_Docs_2.3.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/naturaldocs/Stable%20Releases/2.3/Natural_Docs_2.3.zip?use_mirror=jaist"
   mirror "https://naturaldocs.org/download/natural_docs/2.3/Natural_Docs_2.3.zip"
   sha256 "37dcfeaa0aee2a3622adc85882edacfb911c2e713dba6592cbee6812deddd2f2"
   license "AGPL-3.0-only"

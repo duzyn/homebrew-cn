@@ -2,7 +2,7 @@ cask "flightgear" do
   version "2020.3.19"
   sha256 "8cfa99b69a05f19929b9380995076fa0129d7536c78d303a50b81a098b02f477"
 
-  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg?use_mirror=nchc",
+  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg?use_mirror=jaist",
       verified: "sourceforge.net/flightgear/"
   name "FlightGear"
   desc "Flight simulator"

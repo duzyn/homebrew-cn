@@ -1,7 +1,7 @@
 class Libngspice < Formula
   desc "Spice circuit simulator as shared library"
   homepage "https://ngspice.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/42/ngspice-42.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/42/ngspice-42.tar.gz?use_mirror=jaist"
   sha256 "737fe3846ab2333a250dfadf1ed6ebe1860af1d8a5ff5e7803c772cc4256e50a"
   license :cannot_represent
 

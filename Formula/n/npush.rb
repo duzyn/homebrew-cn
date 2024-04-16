@@ -1,7 +1,7 @@
 class Npush < Formula
   desc "Logic game similar to Sokoban and Boulder Dash"
   homepage "https://npush.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/npush/npush/0.7/npush-0.7.tgz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/npush/npush/0.7/npush-0.7.tgz?use_mirror=jaist"
   sha256 "f216d2b3279e8737784f77d4843c9e6f223fa131ce1ebddaf00ad802aba2bcd9"
   license "GPL-2.0"
   head "https://svn.code.sf.net/p/npush/code/"

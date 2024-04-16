@@ -1,7 +1,7 @@
 class Ganglia < Formula
   desc "Scalable distributed monitoring system"
   homepage "https://ganglia.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/ganglia/ganglia%20monitoring%20core/3.7.2/ganglia-3.7.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/ganglia/ganglia%20monitoring%20core/3.7.2/ganglia-3.7.2.tar.gz?use_mirror=jaist"
   sha256 "042dbcaf580a661b55ae4d9f9b3566230b2232169a0898e91a797a4c61888409"
   license "BSD-3-Clause"
   revision 3

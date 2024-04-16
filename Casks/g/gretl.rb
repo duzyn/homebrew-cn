@@ -5,7 +5,7 @@ cask "gretl" do
   sha256 arm:   "5a8a030bfd599073a1f900303bc1fa5c4e4c730b00ffc2a90bc4f6301f89411c",
          intel: "0bbed1734d0e6a9a018f901243da86cacaca5fb974bc6325885e257ff8818f8f"
 
-  url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-#{arch}.pkg?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-#{arch}.pkg?use_mirror=jaist"
   name "gretl"
   desc "Software package for econometric analysis"
   homepage "https://gretl.sourceforge.net/"

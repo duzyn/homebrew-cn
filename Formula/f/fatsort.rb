@@ -1,7 +1,7 @@
 class Fatsort < Formula
   desc "Sorts FAT16 and FAT32 partitions"
   homepage "https://fatsort.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/fatsort/fatsort-1.6.5.640.tar.xz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/fatsort/fatsort-1.6.5.640.tar.xz?use_mirror=jaist"
   version "1.6.5"
   sha256 "630ece56d9eb3a55524af0aec3aade7854360eba949172a6cfb4768cb8fbe42e"
   license "GPL-2.0-or-later"

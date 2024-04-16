@@ -1,7 +1,7 @@
 class Curlftpfs < Formula
   desc "Filesystem for accessing FTP hosts based on FUSE and libcurl"
   homepage "https://curlftpfs.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/curlftpfs/curlftpfs/0.9.2/curlftpfs-0.9.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/curlftpfs/curlftpfs/0.9.2/curlftpfs-0.9.2.tar.gz?use_mirror=jaist"
   sha256 "4eb44739c7078ba0edde177bdd266c4cfb7c621075f47f64c85a06b12b3c6958"
   license "GPL-2.0-only"
   revision 1

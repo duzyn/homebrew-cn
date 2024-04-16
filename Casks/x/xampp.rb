@@ -2,8 +2,8 @@ cask "xampp" do
   version "8.2.4-0"
   sha256 "eb9888f2e3b131ae9a5fbec063a6b642a7285e065a8e5f5e97c699b71e2d7ac5"
 
-  url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-installer.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/xampp/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-installer.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/xampp/?use_mirror=jaist"
   name "XAMPP"
   desc "Apache distribution containing MySQL, PHP, and Perl"
   homepage "https://www.apachefriends.org/index.html"

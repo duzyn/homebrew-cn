@@ -62,7 +62,7 @@ class Ghostscript < Formula
 
   # https://sourceforge.net/projects/gs-fonts/
   resource "fonts" do
-    url "https://downloads.sourceforge.net/project/gs-fonts/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/gs-fonts/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz?use_mirror=jaist"
     sha256 "0eb6f356119f2e49b2563210852e17f57f9dcc5755f350a69a46a0d641a0c401"
   end
 

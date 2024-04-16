@@ -1,7 +1,7 @@
 class FdkAac < Formula
   desc "Standalone library of the Fraunhofer FDK AAC code from Android"
   homepage "https://sourceforge.net/projects/opencore-amr/"
-  url "https://downloads.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-2.0.3.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-2.0.3.tar.gz?use_mirror=jaist"
   sha256 "829b6b89eef382409cda6857fd82af84fabb63417b08ede9ea7a553f811cb79e"
   license "Apache-2.0"
 

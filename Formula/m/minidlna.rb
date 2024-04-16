@@ -1,7 +1,7 @@
 class Minidlna < Formula
   desc "Media server software, compliant with DLNA/UPnP-AV clients"
   homepage "https://sourceforge.net/projects/minidlna/"
-  url "https://downloads.sourceforge.net/project/minidlna/minidlna/1.3.3/minidlna-1.3.3.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/minidlna/minidlna/1.3.3/minidlna-1.3.3.tar.gz?use_mirror=jaist"
   sha256 "39026c6d4a139b9180192d1c37225aa3376fdf4f1a74d7debbdbb693d996afa4"
   license "GPL-2.0-only"
   revision 1

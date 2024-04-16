@@ -1,7 +1,7 @@
 class Calc < Formula
   desc "Arbitrary precision calculator"
   homepage "http://www.isthe.com/chongo/tech/comp/calc/"
-  url "https://downloads.sourceforge.net/project/calc/calc/2.15.0.6/calc-2.15.0.6.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/calc/calc/2.15.0.6/calc-2.15.0.6.tar.bz2?use_mirror=jaist"
   sha256 "89db710d005979ba93b312e85c2be4d1cb77379433454f988de2157e4d99e2a6"
   license "LGPL-2.1-or-later"
 

@@ -5,16 +5,16 @@ cask "kid3" do
   on_high_sierra :or_older do
     sha256 "1154c252cbc1b70dccebf6e1f48e00e16eb87e7cc8302d700db2236f1de5ed8e"
 
-    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-Qt5.dmg?use_mirror=nchc",
-        verified: "downloads.sourceforge.net/kid3/?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-Qt5.dmg?use_mirror=jaist",
+        verified: "downloads.sourceforge.net/kid3/?use_mirror=jaist"
 
     depends_on macos: "<= :high_sierra"
   end
   on_mojave :or_newer do
     sha256 "1154c252cbc1b70dccebf6e1f48e00e16eb87e7cc8302d700db2236f1de5ed8e"
 
-    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-amd64.dmg?use_mirror=nchc",
-        verified: "downloads.sourceforge.net/kid3/?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-amd64.dmg?use_mirror=jaist",
+        verified: "downloads.sourceforge.net/kid3/?use_mirror=jaist"
 
     depends_on macos: ">= :mojave"
   end

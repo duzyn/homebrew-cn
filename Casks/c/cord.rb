@@ -2,7 +2,7 @@ cask "cord" do
   version "0.5.7"
   sha256 "8f505b12b94167100b3b8b44ed3cee32ffcc94b73dc44fe0ecc896151f114100"
 
-  url "https://downloads.sourceforge.net/cord/cord/#{version.csv.first}/CoRD_#{version}.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/cord/cord/#{version.csv.first}/CoRD_#{version}.zip?use_mirror=jaist"
   name "CoRD"
   desc "Remote desktop client"
   homepage "https://cord.sourceforge.net/"

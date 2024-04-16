@@ -1,7 +1,7 @@
 class Libpano < Formula
   desc "Build panoramic images from a set of overlapping images"
   homepage "https://panotools.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/panotools/libpano13/libpano13-2.9.22/libpano13-2.9.22.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/panotools/libpano13/libpano13-2.9.22/libpano13-2.9.22.tar.gz?use_mirror=jaist"
   version "13-2.9.22"
   sha256 "affc6830cdbe71c28d2731dcbf8dea2acda6d9ffd4609c6dbf3ba0c68440a8e3"
   license "GPL-2.0-or-later"

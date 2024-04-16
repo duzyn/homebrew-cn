@@ -1,7 +1,7 @@
 class Libquvi < Formula
   desc "C library to parse flash media stream properties"
   homepage "https://quvi.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/quvi/0.4/libquvi/libquvi-0.4.1.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/quvi/0.4/libquvi/libquvi-0.4.1.tar.bz2?use_mirror=jaist"
   sha256 "f5a2fb0571634483e8a957910f44e739f5a72eb9a1900bd10b453c49b8d5f49d"
   revision 2
 
@@ -28,7 +28,7 @@ class Libquvi < Formula
   uses_from_macos "curl"
 
   resource "scripts" do
-    url "https://downloads.sourceforge.net/project/quvi/0.4/libquvi-scripts/libquvi-scripts-0.4.14.tar.xz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/quvi/0.4/libquvi-scripts/libquvi-scripts-0.4.14.tar.xz?use_mirror=jaist"
     sha256 "b8d17d53895685031cd271cf23e33b545ad38cad1c3bddcf7784571382674c65"
   end
 

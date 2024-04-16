@@ -3,7 +3,7 @@ class LittleCms2 < Formula
   homepage "https://www.littlecms.com/"
   # Ensure release is announced at https://www.littlecms.com/categories/releases/
   # (or https://www.littlecms.com/blog/)
-  url "https://downloads.sourceforge.net/project/lcms/lcms/2.16/lcms2-2.16.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/lcms/lcms/2.16/lcms2-2.16.tar.gz?use_mirror=jaist"
   sha256 "d873d34ad8b9b4cea010631f1a6228d2087475e4dc5e763eb81acc23d9d45a51"
   license "MIT"
   version_scheme 1

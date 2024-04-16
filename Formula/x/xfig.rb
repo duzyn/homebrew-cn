@@ -1,7 +1,7 @@
 class Xfig < Formula
   desc "Facility for interactive generation of figures"
   homepage "https://mcj.sourceforge.net/"
-  url "https://downloads.sourceforge.net/mcj/xfig-3.2.9.tar.xz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/mcj/xfig-3.2.9.tar.xz?use_mirror=jaist"
   sha256 "13ed9d04d1bbc2dec09da7ef49ceec278382d290f6cd926474c2f2d016fec2f7"
   license "MIT"
 

@@ -1,7 +1,7 @@
 class Gphoto2 < Formula
   desc "Command-line interface to libgphoto2"
   homepage "http://www.gphoto.org/"
-  url "https://downloads.sourceforge.net/project/gphoto/gphoto/2.5.28/gphoto2-2.5.28.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/gphoto/gphoto/2.5.28/gphoto2-2.5.28.tar.bz2?use_mirror=jaist"
   sha256 "2a648dcdf12da19e208255df4ebed3e7d2a02f905be4165f2443c984cf887375"
   license "GPL-2.0-or-later"
   revision 1

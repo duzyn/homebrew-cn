@@ -1,7 +1,7 @@
 class Cpptest < Formula
   desc "Unit testing framework handling automated tests in C++"
   homepage "https://cpptest.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/cpptest/cpptest/cpptest-2.0.0/cpptest-2.0.0.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/cpptest/cpptest/cpptest-2.0.0/cpptest-2.0.0.tar.bz2?use_mirror=jaist"
   mirror "https://mirror.ghproxy.com/https://github.com/cpptest/cpptest/releases/download/2.0.0/cpptest-2.0.0.tar.bz2"
   sha256 "7c258936a407bcd1635a9b7719fbdcd6c6e044b5d32f53bbf6fbf6f205e5e429"
   license "LGPL-2.1-or-later"

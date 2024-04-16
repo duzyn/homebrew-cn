@@ -37,7 +37,7 @@ class Hatari < Formula
 
   # Download EmuTOS ROM image
   resource "emutos" do
-    url "https://downloads.sourceforge.net/project/emutos/emutos/1.2/emutos-1024k-1.2.zip?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/emutos/emutos/1.2/emutos-1024k-1.2.zip?use_mirror=jaist"
     sha256 "65933ffcda6cba87ab013b5e799c3a0896b9a7cb2b477032f88f091ab8578b2a"
   end
 

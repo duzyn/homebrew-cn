@@ -1,7 +1,7 @@
 class Djview4 < Formula
   desc "Viewer for the DjVu image format"
   homepage "https://djvu.sourceforge.net/djview4.html"
-  url "https://downloads.sourceforge.net/project/djvu/DjView/4.12/djview-4.12.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/djvu/DjView/4.12/djview-4.12.tar.gz?use_mirror=jaist"
   sha256 "5673c6a8b7e195b91a1720b24091915b8145de34879db1158bc936b100eaf3e3"
   license "GPL-2.0-or-later"
   revision 2

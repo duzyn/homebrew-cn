@@ -2,8 +2,8 @@ cask "paintbrush" do
   version "2.6.0,20210402"
   sha256 "9d12b754ec65edc77fa51d3a3c8a0b08ac863e10fd530bff219f9f22bb9dba3a"
 
-  url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version.csv.first}/Paintbrush-#{version.csv.first}.zip?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/paintbrush/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/paintbrush/Paintbrush%202.x/Paintbrush%20#{version.csv.first}/Paintbrush-#{version.csv.first}.zip?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/paintbrush/?use_mirror=jaist"
   name "Paintbrush"
   desc "Image editor"
   homepage "https://paintbrush.sourceforge.io/"

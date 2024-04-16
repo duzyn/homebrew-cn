@@ -1,7 +1,7 @@
 class Zshdb < Formula
   desc "Debugger for zsh"
   homepage "https://github.com/rocky/zshdb"
-  url "https://downloads.sourceforge.net/project/bashdb/zshdb/1.1.4/zshdb-1.1.4.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/bashdb/zshdb/1.1.4/zshdb-1.1.4.tar.gz?use_mirror=jaist"
   sha256 "83749450ffe030c28e7b7d1d8b06aea63232504ff61f31f9becc5a5717e69638"
   license all_of: ["GPL-2.0-or-later", "GPL-3.0-or-later"]
 

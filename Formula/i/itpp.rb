@@ -1,7 +1,7 @@
 class Itpp < Formula
   desc "Library of math, signal, and communication classes and functions"
   homepage "https://itpp.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/itpp/itpp/4.3.1/itpp-4.3.1.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/itpp/itpp/4.3.1/itpp-4.3.1.tar.bz2?use_mirror=jaist"
   sha256 "50717621c5dfb5ed22f8492f8af32b17776e6e06641dfe3a3a8f82c8d353b877"
   license "GPL-3.0"
   head "https://git.code.sf.net/p/itpp/git.git", branch: "master"

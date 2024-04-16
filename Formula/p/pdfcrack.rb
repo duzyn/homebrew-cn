@@ -1,7 +1,7 @@
 class Pdfcrack < Formula
   desc "PDF files password cracker"
   homepage "https://pdfcrack.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/pdfcrack/pdfcrack/pdfcrack-0.20/pdfcrack-0.20.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/pdfcrack/pdfcrack/pdfcrack-0.20/pdfcrack-0.20.tar.gz?use_mirror=jaist"
   sha256 "7b8b29b18fcd5cb984aeb640ee06edf09fede4709b59c32fee4f2d86860de5b4"
   license "GPL-2.0-or-later"
 

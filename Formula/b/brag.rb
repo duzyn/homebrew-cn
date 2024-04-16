@@ -1,7 +1,7 @@
 class Brag < Formula
   desc "Download and assemble multipart binaries from newsgroups"
   homepage "https://brag.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/brag/brag/1.4.3/brag-1.4.3.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/brag/brag/1.4.3/brag-1.4.3.tar.gz?use_mirror=jaist"
   sha256 "f2c8110c38805c31ad181f4737c26e766dc8ecfa2bce158197b985be892cece6"
   license "GPL-2.0-or-later"
 

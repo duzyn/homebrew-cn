@@ -31,14 +31,14 @@ class Figlet < Formula
   resource "contrib" do
     url "http://ftp.figlet.org/pub/figlet/fonts/contributed.tar.gz"
     mirror "https://www.minix3.org/distfiles-backup/figlet-fonts-20021023/contributed.tar.gz"
-    mirror "https://downloads.sourceforge.net/project/fullauto/FIGlet%20Fonts/contributed.tar.gz?use_mirror=nchc"
+    mirror "https://downloads.sourceforge.net/project/fullauto/FIGlet%20Fonts/contributed.tar.gz?use_mirror=jaist"
     sha256 "2c569e052e638b28e4205023ae717f7b07e05695b728e4c80f4ce700354b18c8"
   end
 
   resource "intl" do
     url "http://ftp.figlet.org/pub/figlet/fonts/international.tar.gz"
     mirror "https://www.minix3.org/distfiles-backup/figlet-fonts-20021023/international.tar.gz"
-    mirror "https://downloads.sourceforge.net/project/fullauto/FIGlet%20Fonts/international.tar.gz?use_mirror=nchc"
+    mirror "https://downloads.sourceforge.net/project/fullauto/FIGlet%20Fonts/international.tar.gz?use_mirror=jaist"
     sha256 "e6493f51c96f8671c29ab879a533c50b31ade681acfb59e50bae6b765e70c65a"
   end
 

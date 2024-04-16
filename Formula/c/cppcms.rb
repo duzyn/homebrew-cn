@@ -3,7 +3,7 @@ class Cppcms < Formula
 
   desc "Free High Performance Web Development Framework"
   homepage "http://cppcms.com/wikipp/en/page/main"
-  url "https://downloads.sourceforge.net/project/cppcms/cppcms/1.2.1/cppcms-1.2.1.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/cppcms/cppcms/1.2.1/cppcms-1.2.1.tar.bz2?use_mirror=jaist"
   sha256 "10fec7710409c949a229b9019ea065e25ff5687103037551b6f05716bf6cac52"
   license "MIT"
   revision 1

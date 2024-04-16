@@ -1,7 +1,7 @@
 class Flactag < Formula
   desc "Tag single album FLAC files with MusicBrainz CUE sheets"
   homepage "https://flactag.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/flactag/v2.0.4/flactag-2.0.4.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/flactag/v2.0.4/flactag-2.0.4.tar.gz?use_mirror=jaist"
   sha256 "c96718ac3ed3a0af494a1970ff64a606bfa54ac78854c5d1c7c19586177335b2"
   license "GPL-3.0-or-later"
   revision 3

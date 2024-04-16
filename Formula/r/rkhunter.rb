@@ -1,7 +1,7 @@
 class Rkhunter < Formula
   desc "Rootkit hunter"
   homepage "https://rkhunter.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz?use_mirror=jaist"
   sha256 "f750aa3e22f839b637a073647510d7aa3adf7496e21f3c875b7a368c71d37487"
 
   bottle do

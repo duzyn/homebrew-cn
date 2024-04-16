@@ -1,7 +1,7 @@
 class Lame < Formula
   desc "High quality MPEG Audio Layer III (MP3) encoder"
   homepage "https://lame.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz?use_mirror=jaist"
   sha256 "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
   license "LGPL-2.0-or-later"
 

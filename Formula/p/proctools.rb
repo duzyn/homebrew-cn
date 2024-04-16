@@ -1,7 +1,7 @@
 class Proctools < Formula
   desc "OpenBSD and Darwin versions of pgrep, pkill, and pfind"
   homepage "https://proctools.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/proctools/proctools/0.4pre1/proctools-0.4pre1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/proctools/proctools/0.4pre1/proctools-0.4pre1.tar.gz?use_mirror=jaist"
   sha256 "4553b9c6eda959b12913bc39b6e048a8a66dad18f888f983697fece155ec5538"
 
   livecheck do

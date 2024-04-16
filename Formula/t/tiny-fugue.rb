@@ -1,7 +1,7 @@
 class TinyFugue < Formula
   desc "Programmable MUD client"
   homepage "https://tinyfugue.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/tinyfugue/tinyfugue/5.0%20beta%208/tf-50b8.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/tinyfugue/tinyfugue/5.0%20beta%208/tf-50b8.tar.gz?use_mirror=jaist"
   version "5.0b8"
   sha256 "3750a114cf947b1e3d71cecbe258cb830c39f3186c369e368d4662de9c50d989"
   license "GPL-2.0-or-later"

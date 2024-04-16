@@ -3,7 +3,7 @@ class Quex < Formula
 
   desc "Generate lexical analyzers"
   homepage "https://quex.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/quex/quex-0.71.2.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/quex/quex-0.71.2.zip?use_mirror=jaist"
   sha256 "0453227304a37497e247e11b41a1a8eb04bcd0af06a3f9d627d706b175a8a965"
   license "MIT"
   revision 1

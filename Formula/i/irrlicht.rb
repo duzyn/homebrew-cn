@@ -1,7 +1,7 @@
 class Irrlicht < Formula
   desc "Realtime 3D engine"
   homepage "https://irrlicht.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/irrlicht/Irrlicht%20SDK/1.8/1.8.5/irrlicht-1.8.5.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/irrlicht/Irrlicht%20SDK/1.8/1.8.5/irrlicht-1.8.5.zip?use_mirror=jaist"
   sha256 "effb7beed3985099ce2315a959c639b4973aac8210f61e354475a84105944f3d"
   # Irrlicht is available under alternative license terms. See
   # https://metadata.ftp-master.debian.org/changelogs//main/i/irrlicht/irrlicht_1.8.4+dfsg1-1.1_copyright

@@ -1,7 +1,7 @@
 class Lasi < Formula
   desc "C++ stream output interface for creating Postscript documents"
   homepage "https://www.unifont.org/lasi/"
-  url "https://downloads.sourceforge.net/project/lasi/lasi/1.1.3%20Source/libLASi-1.1.3.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/lasi/lasi/1.1.3%20Source/libLASi-1.1.3.tar.gz?use_mirror=jaist"
   sha256 "5e5d2306f7d5a275949fb8f15e6d79087371e2a1caa0d8f00585029d1b47ba3b"
   license "GPL-2.0-or-later"
   revision 2

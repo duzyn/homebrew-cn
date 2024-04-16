@@ -2,7 +2,7 @@ cask "sweet-home3d" do
   version "7.3"
   sha256 "5652e86f8ba6843bab415451b73a97556356ea5ec95fade23328c5ffc839de9e"
 
-  url "https://downloads.sourceforge.net/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg?use_mirror=nchc",
+  url "https://downloads.sourceforge.net/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg?use_mirror=jaist",
       verified: "sourceforge.net/sweethome3d/"
   name "Sweet Home 3D"
   desc "Interior design application"

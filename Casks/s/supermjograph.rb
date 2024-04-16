@@ -2,8 +2,8 @@ cask "supermjograph" do
   version "0.17.2"
   sha256 "1440fb7554cbd93ce55f219187be40bcc5e014b347378e6b7dd507c7e2a8d606"
 
-  url "https://downloads.sourceforge.net/mjograph/SuperMjograph/SuperMjograph-#{version}.zip?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/mjograph/SuperMjograph/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/mjograph/SuperMjograph/SuperMjograph-#{version}.zip?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/mjograph/SuperMjograph/?use_mirror=jaist"
   name "SuperMjograph"
   desc "Generate scientific graphs from data"
   homepage "https://www.mjograph.net/"

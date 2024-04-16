@@ -1,7 +1,7 @@
 class Pdfsandwich < Formula
   desc "Generate sandwich OCR PDFs from scanned file"
   homepage "http://www.tobias-elze.de/pdfsandwich/"
-  url "https://downloads.sourceforge.net/project/pdfsandwich/pdfsandwich%200.1.7/pdfsandwich-0.1.7.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/pdfsandwich/pdfsandwich%200.1.7/pdfsandwich-0.1.7.tar.bz2?use_mirror=jaist"
   sha256 "9795ffea84b9b6b501f38d49a4620cf0469ddf15aac31bac6dbdc9ec1716fa39"
   revision 4
   head "https://svn.code.sf.net/p/pdfsandwich/code/trunk/src"

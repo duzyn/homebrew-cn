@@ -1,7 +1,7 @@
 class Fizsh < Formula
   desc "Fish-like front end for ZSH"
   homepage "https://github.com/zsh-users/fizsh"
-  url "https://downloads.sourceforge.net/project/fizsh/fizsh-1.0.9.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/fizsh/fizsh-1.0.9.tar.gz?use_mirror=jaist"
   sha256 "dbbbe03101f82e62f1dfe1f8af7cde23bc043833679bc74601a0a3d58a117b07"
   license "BSD-3-Clause"
   head "https://github.com/zsh-users/fizsh.git", branch: "master"

@@ -1,7 +1,7 @@
 class BaculaFd < Formula
   desc "Network backup solution"
   homepage "https://www.bacula.org/"
-  url "https://downloads.sourceforge.net/project/bacula/bacula/15.0.2/bacula-15.0.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/bacula/bacula/15.0.2/bacula-15.0.2.tar.gz?use_mirror=jaist"
   sha256 "55515c2a66af9a86b955daea4089378b864d051b2e6e30383bef36e693acea7a"
   license "AGPL-3.0-only" => { with: "openvpn-openssl-exception" }
 

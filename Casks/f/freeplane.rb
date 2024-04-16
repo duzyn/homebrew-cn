@@ -5,8 +5,8 @@ cask "freeplane" do
   sha256 arm:   "79c3fa65afb7a83311f883155857e345f8b775071cd449da995336ab59e5efd5",
          intel: "e268a1b106b7212817dfb39be8dfa2b17fb3076f43590eb6349adbd417bc7648"
 
-  url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/freeplane/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/freeplane/?use_mirror=jaist"
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
   homepage "https://www.freeplane.org/wiki/index.php/Home"

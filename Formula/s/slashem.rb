@@ -3,7 +3,7 @@ require "etc"
 class Slashem < Formula
   desc "Fork/variant of Nethack"
   homepage "https://slashem.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/slashem/slashem-source/0.0.8E0F1/se008e0f1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/slashem/slashem-source/0.0.8E0F1/se008e0f1.tar.gz?use_mirror=jaist"
   version "0.0.8E0F1"
   sha256 "e9bd3672c866acc5a0d75e245c190c689956319f192cb5d23ea924dd77e426c3"
 

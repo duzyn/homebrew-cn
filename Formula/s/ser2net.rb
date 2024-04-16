@@ -1,7 +1,7 @@
 class Ser2net < Formula
   desc "Allow network connections to serial ports"
   homepage "https://ser2net.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.6.1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/ser2net/ser2net/ser2net-4.6.1.tar.gz?use_mirror=jaist"
   sha256 "78ffee19d9b97e93ae65b5cec072da2b7b947fc484e9ccb3f535702f36f6ed19"
   license "GPL-2.0-only"
 
@@ -24,7 +24,7 @@ class Ser2net < Formula
 
   # pin to use gensio 2.4.1 due to arm build issue with 2.6.7
   resource "gensio" do
-    url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.4.1.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/ser2net/ser2net/gensio-2.4.1.tar.gz?use_mirror=jaist"
     sha256 "949438b558bdca142555ec482db6092eca87447d23a4fb60c1836e9e16b23ead"
 
     # Fix -flat_namespace being used on Big Sur and later.

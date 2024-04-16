@@ -1,7 +1,7 @@
 class Remake < Formula
   desc "GNU Make with improved error handling, tracing, and a debugger"
   homepage "https://bashdb.sourceforge.net/remake/"
-  url "https://downloads.sourceforge.net/project/bashdb/remake/4.3%2Bdbg-1.6/remake-4.3%2Bdbg-1.6.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/bashdb/remake/4.3%2Bdbg-1.6/remake-4.3%2Bdbg-1.6.tar.gz?use_mirror=jaist"
   version "4.3-1.6"
   sha256 "f6a0c6179cd92524ad5dd04787477c0cd45afb5822d977be93d083b810647b87"
   license "GPL-3.0-only"

@@ -2,7 +2,7 @@ cask "gtkwave" do
   version "3.3.107"
   sha256 "0024fa80f4566bc053d705200263c7e7d72f2ae111bf670dc6af90403540d3c7"
 
-  url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip?use_mirror=jaist"
   name "GTKWave"
   desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.net/"

@@ -5,7 +5,7 @@ class Ctags < Formula
   revision 2
 
   stable do
-    url "https://downloads.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz?use_mirror=jaist"
     sha256 "0e44b45dcabe969e0bbbb11e30c246f81abe5d32012db37395eb57d66e9e99c7"
 
     # also fixes https://sourceforge.net/p/ctags/bugs/312/

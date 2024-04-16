@@ -1,7 +1,7 @@
 class Locateme < Formula
   desc "Find your location using Apple's geolocation services"
   homepage "https://iharder.sourceforge.net/current/macosx/locateme/"
-  url "https://downloads.sourceforge.net/project/iharder/locateme/LocateMe-v0.2.1.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/iharder/locateme/LocateMe-v0.2.1.zip?use_mirror=jaist"
   sha256 "137016e6c1a847bbe756d8ed294b40f1d26c1cb08869940e30282e933e5aeecd"
   license :public_domain
 

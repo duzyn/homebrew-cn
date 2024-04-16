@@ -6,7 +6,7 @@ class Devil < Formula
   head "https://github.com/DentonW/DevIL.git", branch: "master"
 
   stable do
-    url "https://downloads.sourceforge.net/project/openil/DevIL/1.8.0/DevIL-1.8.0.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/openil/DevIL/1.8.0/DevIL-1.8.0.tar.gz?use_mirror=jaist"
     sha256 "0075973ee7dd89f0507873e2580ac78336452d29d34a07134b208f44e2feb709"
 
     # jpeg 9 compatibility

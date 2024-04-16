@@ -2,8 +2,8 @@ cask "chessx" do
   version "1.6.0"
   sha256 "40caf7d6fa85f934a539420a6cc5844d0c5bee1667889b8c59a0caeb10002c52"
 
-  url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/chessx/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/chessx/?use_mirror=jaist"
   name "ChessX"
   desc "Chess database"
   homepage "https://chessx.sourceforge.io/"

@@ -1,7 +1,7 @@
 class Mjpegtools < Formula
   desc "Record and playback videos and perform simple edits"
   homepage "https://mjpeg.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/mjpeg/mjpegtools/2.2.1/mjpegtools-2.2.1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/mjpeg/mjpegtools/2.2.1/mjpegtools-2.2.1.tar.gz?use_mirror=jaist"
   sha256 "b180536d7d9960b05e0023a197b00dcb100929a49aab71d19d55f4a1b210f49a"
   license "GPL-2.0-or-later"
   revision 1

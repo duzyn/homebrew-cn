@@ -4,7 +4,7 @@ class Cwb3 < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://downloads.sourceforge.net/project/cwb/cwb/cwb-3.5/source/cwb-3.5.0-src.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/cwb/cwb/cwb-3.5/source/cwb-3.5.0-src.tar.gz?use_mirror=jaist"
     sha256 "20bbd00b7c830389ce384fe70124bc0f55ea7f3d70afc3a159e6530d51b24059"
     depends_on "pcre"
   end

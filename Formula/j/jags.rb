@@ -1,7 +1,7 @@
 class Jags < Formula
   desc "Just Another Gibbs Sampler for Bayesian MCMC simulation"
   homepage "https://mcmc-jags.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/mcmc-jags/JAGS/4.x/Source/JAGS-4.3.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/mcmc-jags/JAGS/4.x/Source/JAGS-4.3.2.tar.gz?use_mirror=jaist"
   sha256 "871f556af403a7c2ce6a0f02f15cf85a572763e093d26658ebac55c4ab472fc8"
   license "GPL-2.0-only"
 

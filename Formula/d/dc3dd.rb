@@ -1,7 +1,7 @@
 class Dc3dd < Formula
   desc "Patched GNU dd that is intended for forensic acquisition of data"
   homepage "https://sourceforge.net/projects/dc3dd/"
-  url "https://downloads.sourceforge.net/project/dc3dd/dc3dd/7.3.1/dc3dd-7.3.1.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/dc3dd/dc3dd/7.3.1/dc3dd-7.3.1.zip?use_mirror=jaist"
   sha256 "bd1b66d20a4020ab94b512e56d76cb5f86470d0216081586d596366927cb8d8b"
   license "GPL-3.0-or-later"
 

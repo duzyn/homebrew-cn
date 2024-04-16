@@ -5,8 +5,8 @@ cask "double-commander" do
   sha256 arm:   "4db7dafccb199b4da8dfcbdb632f22cd13f9b1b7968e3216fb2946b41a2c0dc0",
          intel: "5b88bb6960284e311e388e742acea16a128a1f794647c830e62d5723781fcab0"
 
-  url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.tr(",", "-")}.cocoa.#{arch}.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/doublecmd/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.tr(",", "-")}.cocoa.#{arch}.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/doublecmd/?use_mirror=jaist"
   name "Double Commander"
   desc "File manager with two panels"
   homepage "https://doublecmd.sourceforge.io/"

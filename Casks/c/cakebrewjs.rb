@@ -2,7 +2,7 @@ cask "cakebrewjs" do
   version "2.2.5"
   sha256 "40db452e22c63b6cfd4adb60ac92f5958000e30550eb3d30ba96e53354ee838c"
 
-  url "https://downloads.sourceforge.net/cakebrewjs/cakebrewjs-#{version}-Darwin.dmg?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/cakebrewjs/cakebrewjs-#{version}-Darwin.dmg?use_mirror=jaist"
   name "cakebrewjs"
   desc "Homebrew GUI app"
   homepage "https://sourceforge.net/projects/cakebrewjs/"

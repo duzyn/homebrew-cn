@@ -2,7 +2,7 @@ class Htmlcleaner < Formula
   desc "HTML parser written in Java"
   homepage "https://htmlcleaner.sourceforge.net/"
   # TODO: Check if we can use unversioned `openjdk` (or `openjdk@21`) at version bump.
-  url "https://downloads.sourceforge.net/project/htmlcleaner/htmlcleaner/htmlcleaner%20v2.29/htmlcleaner-src-2.29.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/htmlcleaner/htmlcleaner/htmlcleaner%20v2.29/htmlcleaner-src-2.29.zip?use_mirror=jaist"
   sha256 "9fc68d7161be6f34f781e109bf63894d260428f186d88f315b1d2e3a33495350"
   license "BSD-3-Clause"
   revision 1

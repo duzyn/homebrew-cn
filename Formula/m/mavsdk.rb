@@ -2,8 +2,8 @@ class Mavsdk < Formula
   desc "API and library for MAVLink compatible systems written in C++17"
   homepage "https://mavsdk.mavlink.io"
   url "https://github.com/mavlink/MAVSDK.git",
-      tag:      "v2.7.0",
-      revision: "324b64543d5ec1ad3d480b6d8a13d6cdc67ee68b"
+      tag:      "v2.8.0",
+      revision: "a041ea4d4e14321dcbf6074e7745663647cda1eb"
   license "BSD-3-Clause"
 
   livecheck do
@@ -12,13 +12,13 @@ class Mavsdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "2333756888663d51ed8e8cb92595a8fad26f22c4bdfad46c63fc045ed3e0b916"
-    sha256 cellar: :any,                 arm64_ventura:  "af964b4ede650ce798960761941a90b1b268f74ac282d563b3a0ed81d1e87523"
-    sha256 cellar: :any,                 arm64_monterey: "d5202b80c6e9e043be51d360b83a6afc80d631e3adf5b9e2a836ca22829d55b9"
-    sha256 cellar: :any,                 sonoma:         "bfee10df17b0eb9f1bba928d39c48ff4024d2b9f5e98b6b9fe2b38e95441c88f"
-    sha256 cellar: :any,                 ventura:        "20ec2711a6883563e4396ca23ff2169a1724f87037d5f66d4a7879588b1017e4"
-    sha256 cellar: :any,                 monterey:       "b300f90c084f70fbfca4c842ca8029020d3f1c41ff466a832fcc86c51f97d87f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5274eb8ba20111abd0c2bdcabc75144b1252eb1e3bd92f88a99dc9a5d4f7e088"
+    sha256 cellar: :any,                 arm64_sonoma:   "ad52f11e6ed7660695ac296e13ccc24e6477608a23c741b1b6c468cf65b94a9f"
+    sha256 cellar: :any,                 arm64_ventura:  "06a4e8dcfc57ecfa8fc6e3a654c5351f16705a67a1e619fa11f0b21a33ab6d8f"
+    sha256 cellar: :any,                 arm64_monterey: "790e90216ff82fcf570ab132f504e6a890f91968b9addf0144bbb7639f785566"
+    sha256 cellar: :any,                 sonoma:         "df8a0f532a02b7b37360f51d6a8fea624042c4b547c5122f4c544e1cbe983f57"
+    sha256 cellar: :any,                 ventura:        "65959935982b587a0e1caf3c6ccd2e84b66990d9f8ea1321b00cda853408155d"
+    sha256 cellar: :any,                 monterey:       "0cf4e768a91c8b8cfe1d47d019307122f137a7869e77c6600db4062b06dffed6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "da4c95e8ae3f2ee1b8cf9669dd6a61ed3e1b5755c5776f080deaee081bdc81fe"
   end
 
   depends_on "cmake" => :build

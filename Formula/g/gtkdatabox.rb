@@ -1,7 +1,7 @@
 class Gtkdatabox < Formula
   desc "Widget for live display of large amounts of changing data"
   homepage "https://sourceforge.net/projects/gtkdatabox/"
-  url "https://downloads.sourceforge.net/project/gtkdatabox/gtkdatabox-1/gtkdatabox-1.0.0.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/gtkdatabox/gtkdatabox-1/gtkdatabox-1.0.0.tar.gz?use_mirror=jaist"
   sha256 "8bee70206494a422ecfec9a88d32d914c50bb7a0c0e8fedc4512f5154aa9d3e3"
   license "LGPL-2.1-or-later"
   revision 1

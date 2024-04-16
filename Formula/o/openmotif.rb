@@ -1,7 +1,7 @@
 class Openmotif < Formula
   desc "LGPL release of the Motif toolkit"
   homepage "https://motif.ics.com/motif"
-  url "https://downloads.sourceforge.net/project/motif/Motif%202.3.8%20Source%20Code/motif-2.3.8.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/motif/Motif%202.3.8%20Source%20Code/motif-2.3.8.tar.gz?use_mirror=jaist"
   sha256 "859b723666eeac7df018209d66045c9853b50b4218cecadb794e2359619ebce7"
   license "LGPL-2.1-or-later"
   revision 2

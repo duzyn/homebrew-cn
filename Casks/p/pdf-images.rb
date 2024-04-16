@@ -2,7 +2,7 @@ cask "pdf-images" do
   version "1.1"
   sha256 "76092c2978d062e7e18d6ec538c259d2360307261c53d98512dfdca340c9e19a"
 
-  url "https://downloads.sourceforge.net/pdf-images/PDF-Images-#{version}.dmg?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/pdf-images/PDF-Images-#{version}.dmg?use_mirror=jaist"
   name "PDF-Images"
   homepage "https://sourceforge.net/projects/pdf-images/"
 

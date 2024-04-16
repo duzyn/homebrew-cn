@@ -1,7 +1,7 @@
 class Biosig < Formula
   desc "Tools for biomedical signal processing and data conversion"
   homepage "https://biosig.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-2.6.0.src.tar.xz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/biosig/BioSig%20for%20C_C%2B%2B/src/biosig-2.6.0.src.tar.xz?use_mirror=jaist"
   sha256 "c45d076c2113c8a082a9d5775a428b690bb7d972ae2cd22a88d13cda9e9ffaee"
   license "GPL-3.0-or-later"
 

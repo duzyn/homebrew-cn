@@ -1,7 +1,7 @@
 class Libmp3splt < Formula
   desc "Utility library to split mp3, ogg, and FLAC files"
   homepage "https://mp3splt.sourceforge.net/mp3splt_page/home.php"
-  url "https://downloads.sourceforge.net/project/mp3splt/libmp3splt/0.9.2/libmp3splt-0.9.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/mp3splt/libmp3splt/0.9.2/libmp3splt-0.9.2.tar.gz?use_mirror=jaist"
   sha256 "30eed64fce58cb379b7cc6a0d8e545579cb99d0f0f31eb00b9acc8aaa1b035dc"
   license "GPL-2.0-only"
   revision 6

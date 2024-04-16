@@ -1,7 +1,7 @@
 class Gpsim < Formula
   desc "Simulator for Microchip's PIC microcontrollers"
   homepage "https://gpsim.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/gpsim/gpsim/0.32.0/gpsim-0.32.1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/gpsim/gpsim/0.32.0/gpsim-0.32.1.tar.gz?use_mirror=jaist"
   sha256 "c704d923ae771fabb7f63775a564dfefd7018a79c914671c4477854420b32e69"
   license "GPL-2.0-or-later"
   head "https://svn.code.sf.net/p/gpsim/code/trunk"

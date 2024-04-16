@@ -2,7 +2,7 @@ cask "gpxsee" do
   version "13.18"
   sha256 "bffe10a7c8c8865adff624bc2c3118a1ba3ea4ad9fce41bf5c93769c2ebb65b1"
 
-  url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg?use_mirror=nchc",
+  url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg?use_mirror=jaist",
       verified: "sourceforge.net/gpxsee/Mac%20OS%20X/"
   name "GPXSee"
   desc "GPS log file viewer and analyzer"

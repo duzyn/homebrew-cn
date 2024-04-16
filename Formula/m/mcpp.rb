@@ -1,7 +1,7 @@
 class Mcpp < Formula
   desc "Alternative C/C++ preprocessor"
   homepage "https://mcpp.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/mcpp/mcpp/V.2.7.2/mcpp-2.7.2.tar.gz?use_mirror=jaist"
   sha256 "3b9b4421888519876c4fc68ade324a3bbd81ceeb7092ecdbbc2055099fcb8864"
 
   livecheck do

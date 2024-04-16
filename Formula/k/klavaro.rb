@@ -1,7 +1,7 @@
 class Klavaro < Formula
   desc "Free touch typing tutor program"
   homepage "https://klavaro.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/klavaro/klavaro-3.14.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/klavaro/klavaro-3.14.tar.bz2?use_mirror=jaist"
   sha256 "87187e49d301c510e6964098cdb612126bf030d2a875fd799eadcad3eae56dab"
   license "GPL-3.0-or-later"
   revision 1

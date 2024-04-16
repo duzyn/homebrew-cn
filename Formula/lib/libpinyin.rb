@@ -28,7 +28,7 @@ class Libpinyin < Formula
   # The language model file is independently maintained by the project owner.
   # To update this resource block, the URL can be found in data/Makefile.am.
   resource "model" do
-    url "https://downloads.sourceforge.net/libpinyin/models/model19.text.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/libpinyin/models/model19.text.tar.gz?use_mirror=jaist"
     sha256 "56422a4ee5966c2c809dd065692590ee8def934e52edbbe249b8488daaa1f50b"
   end
 

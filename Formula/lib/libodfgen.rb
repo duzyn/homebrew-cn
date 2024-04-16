@@ -2,7 +2,7 @@ class Libodfgen < Formula
   desc "ODF export library for projects using librevenge"
   homepage "https://sourceforge.net/p/libwpd/wiki/libodfgen/"
   url "https://dev-www.libreoffice.org/src/libodfgen-0.1.8.tar.xz"
-  mirror "https://downloads.sourceforge.net/project/libwpd/libodfgen/libodfgen-0.1.8/libodfgen-0.1.8.tar.xz?use_mirror=nchc"
+  mirror "https://downloads.sourceforge.net/project/libwpd/libodfgen/libodfgen-0.1.8/libodfgen-0.1.8.tar.xz?use_mirror=jaist"
   sha256 "55200027fd46623b9bdddd38d275e7452d1b0ff8aeddcad6f9ae6dc25f610625"
   license any_of: ["MPL-2.0", "LGPL-2.1-or-later"]
 

@@ -1,7 +1,7 @@
 class Ktoblzcheck < Formula
   desc "Library for German banks"
   homepage "https://ktoblzcheck.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/ktoblzcheck/ktoblzcheck-1.57.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/ktoblzcheck/ktoblzcheck-1.57.tar.gz?use_mirror=jaist"
   sha256 "4c3b782e5d8e31e219c3e2ece0c6e84a93929ae0b2f36080d4c183a644d05672"
   license "LGPL-2.1-or-later"
 

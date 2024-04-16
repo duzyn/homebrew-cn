@@ -1,7 +1,7 @@
 class XmlrpcC < Formula
   desc "Lightweight RPC library (based on XML and HTTP)"
   homepage "https://xmlrpc-c.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/xmlrpc-c/Xmlrpc-c%20Super%20Stable/1.59.03/xmlrpc-c-1.59.03.tgz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/xmlrpc-c/Xmlrpc-c%20Super%20Stable/1.59.03/xmlrpc-c-1.59.03.tgz?use_mirror=jaist"
   sha256 "bdb71db42ab0be51591555885d11682b044c1034d4a3296401bf921ec0b233fe"
   license "BSD-3-Clause"
 

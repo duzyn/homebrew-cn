@@ -1,7 +1,7 @@
 class Jnettop < Formula
   desc "View hosts/ports taking up the most network traffic"
   homepage "https://sourceforge.net/projects/jnettop/"
-  url "https://downloads.sourceforge.net/project/jnettop/jnettop/0.13/jnettop-0.13.0.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/jnettop/jnettop/0.13/jnettop-0.13.0.tar.gz?use_mirror=jaist"
   sha256 "a005d6fa775a85ff9ee91386e25505d8bdd93bc65033f1928327c98f5e099a62"
   license "GPL-2.0-or-later"
   revision 2

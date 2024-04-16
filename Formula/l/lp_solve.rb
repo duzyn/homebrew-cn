@@ -1,7 +1,7 @@
 class LpSolve < Formula
   desc "Mixed integer linear programming solver"
   homepage "https://sourceforge.net/projects/lpsolve/"
-  url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.11_source.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/lpsolve/lp_solve_5.5.2.11_source.tar.gz?use_mirror=jaist"
   sha256 "6d4abff5cc6aaa933ae8e6c17a226df0fc0b671c438f69715d41d09fe81f902f"
   license "LGPL-2.1-or-later"
 

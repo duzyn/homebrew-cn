@@ -1,7 +1,7 @@
 class Jpdfbookmarks < Formula
   desc "Create and edit bookmarks on existing PDF files"
   homepage "https://sourceforge.net/projects/jpdfbookmarks/"
-  url "https://downloads.sourceforge.net/project/jpdfbookmarks/JPdfBookmarks-2.5.2/jpdfbookmarks-2.5.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/jpdfbookmarks/JPdfBookmarks-2.5.2/jpdfbookmarks-2.5.2.tar.gz?use_mirror=jaist"
   sha256 "8ab51c20414591632e48ad3817e6c97e9c029db8aaeff23d74c219718cfe19f9"
   license "GPL-3.0-or-later"
 

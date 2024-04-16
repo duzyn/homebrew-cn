@@ -4,7 +4,7 @@ class CmuSphinxbase < Formula
   license "BSD-2-Clause"
 
   stable do
-    url "https://downloads.sourceforge.net/project/cmusphinx/sphinxbase/0.8/sphinxbase-0.8.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/cmusphinx/sphinxbase/0.8/sphinxbase-0.8.tar.gz?use_mirror=jaist"
     sha256 "55708944872bab1015b8ae07b379bf463764f469163a8fd114cbb16c5e486ca8"
 
     # Fix -flat_namespace being used on Big Sur and later.

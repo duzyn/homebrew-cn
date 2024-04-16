@@ -1,7 +1,7 @@
 class Optipng < Formula
   desc "PNG file optimizer"
   homepage "https://optipng.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.8/optipng-0.7.8.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.8/optipng-0.7.8.tar.gz?use_mirror=jaist"
   sha256 "25a3bd68481f21502ccaa0f4c13f84dcf6b20338e4c4e8c51f2cefbd8513398c"
   license "Zlib"
   head "http://hg.code.sf.net/p/optipng/mercurial", using: :hg

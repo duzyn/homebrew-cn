@@ -1,7 +1,7 @@
 class Gnuplot < Formula
   desc "Command-driven, interactive function plotting"
   homepage "http://www.gnuplot.info/"
-  url "https://downloads.sourceforge.net/project/gnuplot/gnuplot/6.0.0/gnuplot-6.0.0.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/gnuplot/gnuplot/6.0.0/gnuplot-6.0.0.tar.gz?use_mirror=jaist"
   sha256 "635a28f0993f6ab0d1179e072ad39b8139d07f51237f841d93c6c2ff4b1758ec"
   license "gnuplot"
 

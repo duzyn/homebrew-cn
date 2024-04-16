@@ -6,7 +6,7 @@ class Harbour < Formula
   head "https://github.com/harbour/core.git", branch: "master"
 
   stable do
-    url "https://downloads.sourceforge.net/project/harbour-project/source/3.0.0/harbour-3.0.0.tar.bz2?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/harbour-project/source/3.0.0/harbour-3.0.0.tar.bz2?use_mirror=jaist"
     sha256 "4e99c0c96c681b40c7e586be18523e33db24baea68eb4e394989a3b7a6b5eaad"
 
     # Missing a header that was deprecated by libcurl @ version 7.12.0 and

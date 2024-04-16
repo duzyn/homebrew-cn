@@ -1,7 +1,7 @@
 class Bbe < Formula
   desc "Sed-like editor for binary files"
   homepage "https://sourceforge.net/projects/bbe-/"
-  url "https://downloads.sourceforge.net/project/bbe-/bbe/0.2.2/bbe-0.2.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/bbe-/bbe/0.2.2/bbe-0.2.2.tar.gz?use_mirror=jaist"
   sha256 "baaeaf5775a6d9bceb594ea100c8f45a677a0a7d07529fa573ba0842226edddb"
   license "GPL-2.0"
 

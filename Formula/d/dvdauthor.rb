@@ -1,7 +1,7 @@
 class Dvdauthor < Formula
   desc "DVD-authoring toolset"
   homepage "https://dvdauthor.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/dvdauthor/dvdauthor-0.7.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/dvdauthor/dvdauthor-0.7.2.tar.gz?use_mirror=jaist"
   sha256 "3020a92de9f78eb36f48b6f22d5a001c47107826634a785a62dfcd080f612eb7"
   revision 3
 

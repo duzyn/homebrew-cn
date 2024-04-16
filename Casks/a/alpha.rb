@@ -2,8 +2,8 @@ cask "alpha" do
   version "9.2.3"
   sha256 "f3445a2ecb23cf1f12811d6003890f091e04334cc92cb4f00140065359c7e91a"
 
-  url "https://downloads.sourceforge.net/alphacocoa/Alpha_#{version}.dmg.zip?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/alphacocoa/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/alphacocoa/Alpha_#{version}.dmg.zip?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/alphacocoa/?use_mirror=jaist"
   name "Alpha"
   desc "Text editor based on Apple's Cocoa framework"
   homepage "https://alphacocoa.sourceforge.io/"

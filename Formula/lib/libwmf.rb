@@ -1,7 +1,7 @@
 class Libwmf < Formula
   desc "Library for converting WMF (Window Metafile Format) files"
   homepage "https://wvware.sourceforge.net/libwmf.html"
-  url "https://downloads.sourceforge.net/project/wvware/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/wvware/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz?use_mirror=jaist"
   sha256 "5b345c69220545d003ad52bfd035d5d6f4f075e65204114a9e875e84895a7cf8"
   license "LGPL-2.1-only" # http://wvware.sourceforge.net/libwmf.html#download
   revision 3

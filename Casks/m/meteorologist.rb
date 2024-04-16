@@ -2,8 +2,8 @@ cask "meteorologist" do
   version "4.0.4"
   sha256 "34b4abcb1c7da7c8897b6270a9258a21d030f10803d5b7ec4a6e306db8223e6d"
 
-  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/heat-meteo/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/heat-meteo/?use_mirror=jaist"
   name "Meteorologist"
   desc "Adjustable weather viewing application"
   homepage "https://heat-meteo.sourceforge.io/"

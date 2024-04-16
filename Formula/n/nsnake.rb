@@ -1,7 +1,7 @@
 class Nsnake < Formula
   desc "Classic snake game with textual interface"
   homepage "https://github.com/alexdantas/nSnake"
-  url "https://downloads.sourceforge.net/project/nsnake/GNU-Linux/nsnake-3.0.1.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/nsnake/GNU-Linux/nsnake-3.0.1.tar.gz?use_mirror=jaist"
   sha256 "e0a39e0e188a6a8502cb9fc05de3fa83dd4d61072c5b93a182136d1bccd39bb9"
   license "GPL-3.0"
   head "https://github.com/alexdantas/nSnake.git", branch: "master"

@@ -3,7 +3,7 @@ class Xz < Formula
   homepage "https://tukaani.org/xz/"
   # The archive.org mirror below needs to be manually created at `archive.org`.
   url "https://mirror.ghproxy.com/https://github.com/tukaani-project/xz/releases/download/v5.4.6/xz-5.4.6.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/lzmautils/xz-5.4.6.tar.gz?use_mirror=nchc"
+  mirror "https://downloads.sourceforge.net/project/lzmautils/xz-5.4.6.tar.gz?use_mirror=jaist"
   mirror "https://archive.org/download/xz-5.4.6/xz-5.4.6.tar.gz"
   mirror "http://archive.org/download/xz-5.4.6/xz-5.4.6.tar.gz"
   sha256 "aeba3e03bf8140ddedf62a0a367158340520f6b384f75ca6045ccc6c0d43fd5c"

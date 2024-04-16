@@ -1,7 +1,7 @@
 class Squirrel < Formula
   desc "High level, imperative, object-oriented programming language"
   homepage "http://www.squirrel-lang.org"
-  url "https://downloads.sourceforge.net/project/squirrel/squirrel3/squirrel%203.2%20stable/squirrel_3_2_stable.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/squirrel/squirrel3/squirrel%203.2%20stable/squirrel_3_2_stable.tar.gz?use_mirror=jaist"
   sha256 "211f1452f00b24b94f60ba44b50abe327fd2735600a7bacabc5b774b327c81db"
   license "MIT"
   head "https://github.com/albertodemichelis/squirrel.git", branch: "master"

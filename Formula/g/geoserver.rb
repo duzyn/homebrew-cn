@@ -1,7 +1,7 @@
 class Geoserver < Formula
   desc "Java server to share and edit geospatial data"
   homepage "https://geoserver.org/"
-  url "https://downloads.sourceforge.net/project/geoserver/GeoServer/2.25.0/geoserver-2.25.0-bin.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/geoserver/GeoServer/2.25.0/geoserver-2.25.0-bin.zip?use_mirror=jaist"
   sha256 "99a583451228e4caa36fa2b5356169966430bc9f5f2d71a77a565cb25c29e0ea"
   license "GPL-2.0-or-later"
 

@@ -1,7 +1,7 @@
 class Ufraw < Formula
   desc "Unidentified Flying RAW: RAW image processing utility"
   homepage "https://ufraw.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/ufraw/ufraw/ufraw-0.22/ufraw-0.22.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/ufraw/ufraw/ufraw-0.22/ufraw-0.22.tar.gz?use_mirror=jaist"
   sha256 "f7abd28ce587db2a74b4c54149bd8a2523a7ddc09bedf4f923246ff0ae09a25e"
   revision 5
 

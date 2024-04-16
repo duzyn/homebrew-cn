@@ -1,7 +1,7 @@
 class Srecord < Formula
   desc "Tools for manipulating EPROM load files"
   homepage "https://srecord.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/srecord/srecord/1.64/srecord-1.64.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/srecord/srecord/1.64/srecord-1.64.tar.gz?use_mirror=jaist"
   sha256 "49a4418733c508c03ad79a29e95acec9a2fbc4c7306131d2a8f5ef32012e67e2"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later"]
 

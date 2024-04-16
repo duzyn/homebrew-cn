@@ -1,7 +1,7 @@
 class Tta < Formula
   desc "Lossless audio codec"
   homepage "https://sourceforge.net/projects/tta/"
-  url "https://downloads.sourceforge.net/project/tta/tta/libtta/libtta-2.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/tta/tta/libtta/libtta-2.2.tar.gz?use_mirror=jaist"
   sha256 "1723424d75b3cda907ff68abf727bb9bc0c23982ea8f91ed1cc045804c1435c4"
   license "LGPL-3.0-only"
 

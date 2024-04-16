@@ -6,7 +6,7 @@ class Bitchx < Formula
   head "https://git.code.sf.net/p/bitchx/git.git", branch: "master"
 
   stable do
-    url "https://downloads.sourceforge.net/project/bitchx/ircii-pana/bitchx-1.2.1/bitchx-1.2.1.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/bitchx/ircii-pana/bitchx-1.2.1/bitchx-1.2.1.tar.gz?use_mirror=jaist"
     sha256 "2d270500dd42b5e2b191980d584f6587ca8a0dbda26b35ce7fadb519f53c83e2"
 
     # Apply these upstream commits to fix Linux build:

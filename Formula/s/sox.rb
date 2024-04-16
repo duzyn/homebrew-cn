@@ -1,7 +1,7 @@
 class Sox < Formula
   desc "SOund eXchange: universal sound sample translator"
   homepage "https://sox.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2.tar.gz?use_mirror=jaist"
   sha256 "b45f598643ffbd8e363ff24d61166ccec4836fea6d3888881b8df53e3bb55f6c"
   license all_of: ["LGPL-2.0-only", "GPL-2.0-only"]
   revision 5

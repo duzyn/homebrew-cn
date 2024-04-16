@@ -1,7 +1,7 @@
 class Glew < Formula
   desc "OpenGL Extension Wrangler Library"
   homepage "https://glew.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/glew/glew/2.2.0/glew-2.2.0.tgz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/glew/glew/2.2.0/glew-2.2.0.tgz?use_mirror=jaist"
   sha256 "d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1"
   license "BSD-3-Clause"
   revision 1

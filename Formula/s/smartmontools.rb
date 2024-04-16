@@ -1,7 +1,7 @@
 class Smartmontools < Formula
   desc "SMART hard drive monitoring"
   homepage "https://www.smartmontools.org/"
-  url "https://downloads.sourceforge.net/project/smartmontools/smartmontools/7.4/smartmontools-7.4.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/smartmontools/smartmontools/7.4/smartmontools-7.4.tar.gz?use_mirror=jaist"
   sha256 "e9a61f641ff96ca95319edfb17948cd297d0cd3342736b2c49c99d4716fb993d"
   license "GPL-2.0-or-later"
 

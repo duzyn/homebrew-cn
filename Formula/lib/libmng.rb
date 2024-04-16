@@ -1,7 +1,7 @@
 class Libmng < Formula
   desc "MNG/JNG reference library"
   homepage "https://sourceforge.net/projects/libmng/"
-  url "https://downloads.sourceforge.net/project/libmng/libmng-devel/2.0.3/libmng-2.0.3.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/libmng/libmng-devel/2.0.3/libmng-2.0.3.tar.gz?use_mirror=jaist"
   sha256 "cf112a1fb02f5b1c0fce5cab11ea8243852c139e669c44014125874b14b7dfaa"
   license "Zlib"
   revision 1

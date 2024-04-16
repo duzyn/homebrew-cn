@@ -1,7 +1,7 @@
 class Mp3wrap < Formula
   desc "Wrap two or more mp3 files in a single large file"
   homepage "https://mp3wrap.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/mp3wrap/mp3wrap/mp3wrap%200.5/mp3wrap-0.5-src.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/mp3wrap/mp3wrap/mp3wrap%200.5/mp3wrap-0.5-src.tar.gz?use_mirror=jaist"
   sha256 "1b4644f6b7099dcab88b08521d59d6f730fa211b5faf1f88bd03bf61fedc04e7"
 
   livecheck do

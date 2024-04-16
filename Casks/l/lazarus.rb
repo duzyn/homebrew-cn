@@ -2,7 +2,7 @@ cask "lazarus" do
   version "3.2"
   sha256 "c84a2ee58d791613a03cb3de119fb92c2dd14a2686b44cf342580376b950a5b1"
 
-  url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-macosx-x86_64.pkg?use_mirror=nchc",
+  url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-macosx-x86_64.pkg?use_mirror=jaist",
       verified: "sourceforge.net/lazarus/"
   name "Lazarus"
   desc "IDE for rapid application development"

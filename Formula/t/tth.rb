@@ -1,7 +1,7 @@
 class Tth < Formula
   desc "TeX/LaTeX to HTML converter"
   homepage "http://silas.psfc.mit.edu/tth/"
-  url "https://downloads.sourceforge.net/project/tth/tth4.16.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/tth/tth4.16.tar.gz?use_mirror=jaist"
   sha256 "b0e118d49a37e06598c1e2b524ea352ceabf064afef25acf02b556229ee43512"
   license "GPL-2.0-only"
 

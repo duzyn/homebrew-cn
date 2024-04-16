@@ -2,7 +2,7 @@ cask "qtspim" do
   version "9.1.24"
   sha256 "3842fa065851d4493e139dae500f37dd5dd33f267c69115ec75e68411985ace1"
 
-  url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip?use_mirror=jaist"
   name "QtSpim"
   desc "Simulator that runs MIPS32 assembly language programmes"
   homepage "https://spimsimulator.sourceforge.net/"

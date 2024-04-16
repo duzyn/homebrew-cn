@@ -1,7 +1,7 @@
 class Libsmf < Formula
   desc "C library for handling SMF ('*.mid') files"
   homepage "https://sourceforge.net/projects/libsmf/"
-  url "https://downloads.sourceforge.net/project/libsmf/libsmf/1.3/libsmf-1.3.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/libsmf/libsmf/1.3/libsmf-1.3.tar.gz?use_mirror=jaist"
   sha256 "d3549f15de94ac8905ad365639ac6a2689cb1b51fdfa02d77fa6640001b18099"
   license "BSD-2-Clause"
   revision 1

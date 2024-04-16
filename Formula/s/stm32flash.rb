@@ -1,7 +1,7 @@
 class Stm32flash < Formula
   desc "Open source flash program for STM32 using the ST serial bootloader"
   homepage "https://sourceforge.net/projects/stm32flash/"
-  url "https://downloads.sourceforge.net/project/stm32flash/stm32flash-0.7.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/stm32flash/stm32flash-0.7.tar.gz?use_mirror=jaist"
   sha256 "c4c9cd8bec79da63b111d15713ef5cc2cd947deca411d35d6e3065e227dc414a"
   license "GPL-2.0-or-later"
 

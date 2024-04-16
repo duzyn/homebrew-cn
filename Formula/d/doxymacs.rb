@@ -1,7 +1,7 @@
 class Doxymacs < Formula
   desc "Elisp package for using doxygen under Emacs"
   homepage "https://doxymacs.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/doxymacs/doxymacs/1.8.0/doxymacs-1.8.0.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/doxymacs/doxymacs/1.8.0/doxymacs-1.8.0.tar.gz?use_mirror=jaist"
   sha256 "a23fd833bc3c21ee5387c62597610941e987f9d4372916f996bf6249cc495afa"
   license "GPL-2.0"
 

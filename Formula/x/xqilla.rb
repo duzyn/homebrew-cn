@@ -1,7 +1,7 @@
 class Xqilla < Formula
   desc "XQuery and XPath 2 command-line interpreter"
   homepage "https://xqilla.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/xqilla/XQilla-2.3.4.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/xqilla/XQilla-2.3.4.tar.gz?use_mirror=jaist"
   sha256 "292631791631fe2e7eb9727377335063a48f12611d641d0296697e0c075902eb"
   license "Apache-2.0"
 

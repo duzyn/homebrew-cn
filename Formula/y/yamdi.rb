@@ -1,7 +1,7 @@
 class Yamdi < Formula
   desc "Add metadata to Flash video"
   homepage "https://yamdi.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/yamdi/yamdi/1.9/yamdi-1.9.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/yamdi/yamdi/1.9/yamdi-1.9.tar.gz?use_mirror=jaist"
   sha256 "4a6630f27f6c22bcd95982bf3357747d19f40bd98297a569e9c77468b756f715"
   license "BSD-3-Clause"
 

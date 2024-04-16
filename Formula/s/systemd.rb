@@ -38,7 +38,7 @@ class Systemd < Formula
   depends_on "zstd"
 
   resource "docbook" do
-    url "https://downloads.sourceforge.net/docbook/docbook-xsl/1.79.1/docbook-xsl-1.79.1.tar.bz2?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/docbook/docbook-xsl/1.79.1/docbook-xsl-1.79.1.tar.bz2?use_mirror=jaist"
     sha256 "725f452e12b296956e8bfb876ccece71eeecdd14b94f667f3ed9091761a4a968"
   end
 

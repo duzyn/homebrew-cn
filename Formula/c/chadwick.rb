@@ -1,7 +1,7 @@
 class Chadwick < Formula
   desc "Tools for parsing Retrosheet MLB play-by-play files"
   homepage "https://chadwick.sourceforge.net/doc/index.html"
-  url "https://downloads.sourceforge.net/project/chadwick/chadwick-0.7/chadwick-0.7.2/chadwick-0.7.2.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/chadwick/chadwick-0.7/chadwick-0.7.2/chadwick-0.7.2.tar.gz?use_mirror=jaist"
   sha256 "f7b3af15281106e101e2ccc4cb182a3f15dbdc3327f2bcb045bfc486a8fda46e"
   license "GPL-2.0"
 

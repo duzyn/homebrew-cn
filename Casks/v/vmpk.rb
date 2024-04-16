@@ -2,8 +2,8 @@ cask "vmpk" do
   version "0.9.0"
   sha256 "b2ce743f8f986575865dcc994cab89f43bff8da6d4e43d1380f846b2807b1bd6"
 
-  url "https://downloads.sourceforge.net/vmpk/#{version.major_minor_patch}/vmpk-#{version}-mac-x64.dmg?use_mirror=nchc",
-      verified: "downloads.sourceforge.net/vmpk/?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/vmpk/#{version.major_minor_patch}/vmpk-#{version}-mac-x64.dmg?use_mirror=jaist",
+      verified: "downloads.sourceforge.net/vmpk/?use_mirror=jaist"
   name "VMPK"
   desc "Virtual MIDI Piano Keyboard"
   homepage "https://vmpk.sourceforge.io/"

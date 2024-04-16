@@ -12,7 +12,7 @@ cask "grandperspective" do
     sha256 "660c817900a88b12c60854bcf9416832296fb6cc299440bc3332b7044e287038"
   end
 
-  url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg?use_mirror=jaist"
   name "GrandPerspective"
   desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.net/"

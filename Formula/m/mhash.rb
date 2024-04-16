@@ -1,7 +1,7 @@
 class Mhash < Formula
   desc "Uniform interface to a large number of hash algorithms"
   homepage "https://mhash.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.gz?use_mirror=jaist"
   sha256 "3dcad09a63b6f1f634e64168dd398e9feb9925560f9b671ce52283a79604d13e"
 
   livecheck do

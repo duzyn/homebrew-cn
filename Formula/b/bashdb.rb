@@ -1,7 +1,7 @@
 class Bashdb < Formula
   desc "Bash shell debugger"
   homepage "https://bashdb.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/bashdb/bashdb/5.0-1.1.2/bashdb-5.0-1.1.2.tar.bz2?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/bashdb/bashdb/5.0-1.1.2/bashdb-5.0-1.1.2.tar.bz2?use_mirror=jaist"
   version "5.0-1.1.2"
   sha256 "30176d2ad28c5b00b2e2d21c5ea1aef8fbaf40a8f9d9f723c67c60531f3b7330"
   license "GPL-2.0-or-later"

@@ -1,7 +1,7 @@
 class Armadillo < Formula
   desc "C++ linear algebra library"
   homepage "https://arma.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/arma/armadillo-12.8.2.tar.xz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/arma/armadillo-12.8.2.tar.xz?use_mirror=jaist"
   sha256 "03b62f8c09e4f5d74643b478520741b8e27b55e7e4525978fcae2f5d791ac3bf"
   license "Apache-2.0"
 

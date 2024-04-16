@@ -1,7 +1,7 @@
 class Atasm < Formula
   desc "Atari MAC/65 compatible assembler for Unix"
   homepage "https://sourceforge.net/projects/atasm/"
-  url "https://downloads.sourceforge.net/project/atasm/atasm/atasm-1.09/atasm109.zip?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/atasm/atasm/atasm-1.09/atasm109.zip?use_mirror=jaist"
   version "1.09"
   sha256 "dbab21870dabdf419920fcfa4b5adfe9d38b291a60a4bc2ba824595f7fbc3ef0"
   license "GPL-2.0-or-later"

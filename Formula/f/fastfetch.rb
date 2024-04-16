@@ -1,8 +1,8 @@
 class Fastfetch < Formula
   desc "Like neofetch, but much faster because written mostly in C"
   homepage "https://github.com/fastfetch-cli/fastfetch"
-  url "https://mirror.ghproxy.com/https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.9.1.tar.gz"
-  sha256 "f22bb197095ea80c4aa17e1d4b5e0dd6e79234f4a18f427691c7e6f93a812ac8"
+  url "https://mirror.ghproxy.com/https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.9.2.tar.gz"
+  sha256 "3ca9e48ed30c49fc50d5f64a2ce327a9f00ce4497feac01865c50086cc43e5ce"
   license "MIT"
   head "https://github.com/fastfetch-cli/fastfetch.git", branch: "dev"
 
@@ -12,13 +12,13 @@ class Fastfetch < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "cfa60d00023573bbc1c5a9cc73baba9e1e428d0e538b7762c26865c5f0b08b0a"
-    sha256 arm64_ventura:  "84fb18bf889b4f5d1339504b223eb6bbcb65069b1b7a236e1970e3e40e36d3dd"
-    sha256 arm64_monterey: "91b856bf5d3928f7b02c4a3bf2d2307773fa502c6545f2bc563e9547509c8326"
-    sha256 sonoma:         "db86e3c273dfb2987db0718e0f70e69c204da53e40c64c427b3ff1fc92a90496"
-    sha256 ventura:        "8f68d2ec7f3ab2bb93b3d353e899426dadcffbd7773bddc409a3370c3e59d11e"
-    sha256 monterey:       "66f94e3c1aa9c58e22025548694db5d22afbf6a59561a9685c1086c3fdf0e627"
-    sha256 x86_64_linux:   "f808d3848a17a97c7fa1597f5493bf17dc8c211e9132edd406cfbedfbeb14bac"
+    sha256 arm64_sonoma:   "7d4da5b81c9fef1737f3fd6bab960626f9ed241b014a14a6cb785bf5dfcb8660"
+    sha256 arm64_ventura:  "bed3da79559f7aa9f1d0bd0d0c9c7147553932a3199f6499851fd2a365624feb"
+    sha256 arm64_monterey: "dac19dcf723ec8e707bf669f67d661bb44d64f7beb8c450985325a4a39ba0093"
+    sha256 sonoma:         "f44fef7f18177473ab159a8beffa4cb59b8109540419f454874a3915ba93b9b2"
+    sha256 ventura:        "2a7a666a2b2a79c6bcca8bafa3a08fced8b95e7a5a394fa8fdfe24d09b06d70d"
+    sha256 monterey:       "3894d90e4f25b90d81f9e5c57969b79dd4d1345320b780f1790cd628344fc49a"
+    sha256 x86_64_linux:   "775f4dd673e23b85dc5d175e6a0ec35ca3006883df4db0d6102b2e501828eb5f"
   end
 
   depends_on "chafa" => :build

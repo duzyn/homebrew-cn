@@ -1,7 +1,7 @@
 class TclTk < Formula
   desc "Tool Command Language"
   homepage "https://www.tcl-lang.org"
-  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.14/tcl8.6.14-src.tar.gz?use_mirror=nchc"
+  url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.14/tcl8.6.14-src.tar.gz?use_mirror=jaist"
   mirror "https://fossies.org/linux/misc/tcl8.6.14-src.tar.gz"
   sha256 "5880225babf7954c58d4fb0f5cf6279104ce1cd6aa9b71e9a6322540e1c4de66"
   license "TCL"
@@ -40,7 +40,7 @@ class TclTk < Formula
   end
 
   resource "tcllib" do
-    url "https://downloads.sourceforge.net/project/tcllib/tcllib/1.21/tcllib-1.21.tar.xz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/tcllib/tcllib/1.21/tcllib-1.21.tar.xz?use_mirror=jaist"
     sha256 "10c7749e30fdd6092251930e8a1aa289b193a3b7f1abf17fee1d4fa89814762f"
   end
 
@@ -50,12 +50,12 @@ class TclTk < Formula
   end
 
   resource "tk" do
-    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.14/tk8.6.14-src.tar.gz?use_mirror=nchc"
+    url "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.14/tk8.6.14-src.tar.gz?use_mirror=jaist"
     mirror "https://fossies.org/linux/misc/tk8.6.14-src.tar.gz"
     sha256 "8ffdb720f47a6ca6107eac2dd877e30b0ef7fac14f3a84ebbd0b3612cee41a94"
   end
 
-  # "https://downloads.sourceforge.net/project/incrtcl/%5Bincr%20Tcl_Tk%5D-4-source/itk%204.1.0/itk4.1.0.tar.gz?use_mirror=nchc"
+  # "https://downloads.sourceforge.net/project/incrtcl/%5Bincr%20Tcl_Tk%5D-4-source/itk%204.1.0/itk4.1.0.tar.gz?use_mirror=jaist"
   # would cause `bad URI(is not URI?)` error on 12/13 builds
   resource "itk4" do
     url "https://deb.debian.org/debian/pool/main/i/itk4/itk4_4.1.0.orig.tar.gz"
