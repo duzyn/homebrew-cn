@@ -12,13 +12,14 @@ class Fastfetch < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "7d4da5b81c9fef1737f3fd6bab960626f9ed241b014a14a6cb785bf5dfcb8660"
-    sha256 arm64_ventura:  "bed3da79559f7aa9f1d0bd0d0c9c7147553932a3199f6499851fd2a365624feb"
-    sha256 arm64_monterey: "dac19dcf723ec8e707bf669f67d661bb44d64f7beb8c450985325a4a39ba0093"
-    sha256 sonoma:         "f44fef7f18177473ab159a8beffa4cb59b8109540419f454874a3915ba93b9b2"
-    sha256 ventura:        "2a7a666a2b2a79c6bcca8bafa3a08fced8b95e7a5a394fa8fdfe24d09b06d70d"
-    sha256 monterey:       "3894d90e4f25b90d81f9e5c57969b79dd4d1345320b780f1790cd628344fc49a"
-    sha256 x86_64_linux:   "775f4dd673e23b85dc5d175e6a0ec35ca3006883df4db0d6102b2e501828eb5f"
+    rebuild 1
+    sha256 arm64_sonoma:   "9910d4ebebf63f90c89b2bbaba0a77d98f3ec780263fe62a8513c28f041a672b"
+    sha256 arm64_ventura:  "078fc194cdf85cf8db0270c10fb75bab35f9b1f8771c19bb3b61b482860ac9c1"
+    sha256 arm64_monterey: "abb1b906b802e33a9c313cd1ababb10d23d5010d2764e89f0cec46cf2ba829e8"
+    sha256 sonoma:         "7183c5064513ec66c199d5e06a4249832b829ab0de8de4c8adea2f928b1c1f16"
+    sha256 ventura:        "3fe72d4be8cecd3ad9a3bdb85bc878dfcc354a03f626055feb2a873b3e616af5"
+    sha256 monterey:       "db0f4ad8e02132eae382496f5ca69a7e048b2925bf750446c605ece67fb919e2"
+    sha256 x86_64_linux:   "1100af8c51d479b62ff060d1e05255d0718f53c17ce43f7ec0bca05123706167"
   end
 
   depends_on "chafa" => :build
@@ -39,6 +40,7 @@ class Fastfetch < Formula
     depends_on "libx11" => :build
     depends_on "libxcb" => :build
     depends_on "libxrandr" => :build
+    depends_on "linux-headers@5.15" => :build
     depends_on "mesa" => :build
     depends_on "opencl-icd-loader" => :build
     depends_on "pciutils" => :build
