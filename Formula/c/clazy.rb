@@ -2,7 +2,7 @@ class Clazy < Formula
   desc "Qt oriented static code analyzer"
   homepage "https://www.kdab.com/"
   license "LGPL-2.0-or-later"
-  revision 2
+  revision 3
   head "https://invent.kde.org/sdk/clazy.git", branch: "master"
 
   stable do
@@ -35,20 +35,21 @@ class Clazy < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "7930c7e75590e2e873007960e2c568efc2213a7805e1d95b06fe905e2890975e"
-    sha256 cellar: :any,                 arm64_ventura:  "295d6651040ee1c9bdcd90eb7a5bbe3e5f7e1b9c5482f506b2323c9d1f51b34b"
-    sha256 cellar: :any,                 arm64_monterey: "a12ee1e0f5861abdaa08009fccc7614baf1f5082927c18fb240d89230b828d70"
-    sha256 cellar: :any,                 sonoma:         "4085b060be10127cb9ecfe9f3164d033c814b9831d3c2ba0d5176cddd0c81085"
-    sha256 cellar: :any,                 ventura:        "a2a34ceedf8e3bdf28f4fa83d2e97d2efb8e32478b347541d950e4e87cbb12d1"
-    sha256 cellar: :any,                 monterey:       "f45df63085bf00011a5453cb2f22b782a2df2ffa79aa14d75a3d8cda996178c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "541e5a5facd4406bd0bf5b29a854416fb99117cabf87a553ab6a470d7d128314"
+    sha256 cellar: :any,                 arm64_sonoma:   "fc1764ea6472e02a49f65ea8b84b7e804fde9e1ac93068e4ecaa899e04c0700d"
+    sha256 cellar: :any,                 arm64_ventura:  "4b099260bc2cc27fb8d2ffd6076d0b4669fdb60de681008d532165e99944b115"
+    sha256 cellar: :any,                 arm64_monterey: "718d6f9641dcf3ec83a209dae25f5ecd92bb9f457683ebe78eb6a343e764e6d9"
+    sha256 cellar: :any,                 sonoma:         "7b2be755cf6e8aece62b91278a39cd9a4a212f2cf522a0a85a8ab15ef13e376c"
+    sha256 cellar: :any,                 ventura:        "0bb9b8009089e1008f032d161ea020fb063b0bce5efc8547403c0d0bbc63ca17"
+    sha256 cellar: :any,                 monterey:       "5e579784f42382d246f33932a3a234246240b21f9aa1d4cf5a68ca0c761c3814"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e20abd041669c16180b468c6b40df869dae2d6457eddd6aa781bb645b5d66b3e"
   end
 
   depends_on "cmake"   => [:build, :test]
   depends_on "qt"      => :test
   depends_on "coreutils"
-  depends_on "llvm"
+  # TODO: Backport patch for LLVM 18 support
+  # https://github.com/KDE/clazy/commit/be6ec9a3f3e1e4cb7168845008fd4d0593877b64
+  depends_on "llvm@17"
 
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
