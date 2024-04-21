@@ -10,13 +10,14 @@ class Mvt < Formula
   head "https://github.com/mvt-project/mvt.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "78d28281c4fc3993ba89779ef6024a8bc8c9bc8c596d2f2819dd3cb70765ce8b"
-    sha256 cellar: :any,                 arm64_ventura:  "e9fdb3124e47b6a779400102ad187026e0d2ef08d3c3684452eb1031300ea607"
-    sha256 cellar: :any,                 arm64_monterey: "89dd7ce444a6e11bc88f53c5db68f6ade1163115370557408786371a6fa6f726"
-    sha256 cellar: :any,                 sonoma:         "521477dfed40166b95ab91a398a9465a028d6ba42bd57e02faf6a90b536a9a0b"
-    sha256 cellar: :any,                 ventura:        "0880ba2388f846d9f2fdcfa9224f7fb972a707b252ddeb38a15ea9e11813bdf8"
-    sha256 cellar: :any,                 monterey:       "75a298fa1789fb4d0a1a3d976e159a0907d4e8a3f8a0780b20fa80c66dbc5f19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f7af8e5dccae89f1e014c1de602fdbcfcfb3853d2ba0cf1354c1a196fd58bba"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "055044aa607eceea06dda21b31536f13eef0b64740d2919b3718382a8ec9d217"
+    sha256 cellar: :any,                 arm64_ventura:  "fea4ed1017fd9f7433540bfdb964478b0d6c6101aff45cb69ce01eb55649e110"
+    sha256 cellar: :any,                 arm64_monterey: "27f18c2e4fa7ce5333bd2a69b669eeac6857d2a6ff6238d890049488e64e3eb7"
+    sha256 cellar: :any,                 sonoma:         "8ec82f78b9d3bb9efcc9a087c255b32090eba4e48064bc1c8d80365bd7ee08d7"
+    sha256 cellar: :any,                 ventura:        "b3f7970b17930cec9897b6e96462dac2aad309bd202897e68cf551f057b51ff4"
+    sha256 cellar: :any,                 monterey:       "0820e5c6d8895a211171a6ce986e59964690f8156fa0438b52b59358fe3a6751"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66bf85f728680aa28a3c1a308d957bf039c98572e438a499b7c71089d95622b6"
   end
 
   depends_on "certifi"
@@ -119,11 +120,6 @@ class Mvt < Formula
     sha256 "e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
-  end
-
   resource "simplejson" do
     url "https://files.pythonhosted.org/packages/79/79/3ccb95bb4154952532f280f7a41979fbfb0fbbaee4d609810ecb01650afa/simplejson-3.19.2.tar.gz"
     sha256 "9eb442a2442ce417801c912df68e1f6ccfcd41577ae7274953ab3ad24ef7d82c"
@@ -140,14 +136,15 @@ class Mvt < Formula
   end
 
   def install
-    # The `iosbackup` resource requires `nskeyedunarchiver` & `pycryptodome`, so they must be installed
-    # prior to `iosbackup`. `setuptools` must also be preinstalled, otherwise pip will auto-install
-    # it, and attempt to import the same NSKeyedUnarchiver resource but via a wheel.
     venv = virtualenv_create(libexec, "python3.12")
-    venv.pip_install resource("setuptools")
-    skipped_resources = %w[setuptools iosbackup]
-    venv.pip_install resources.reject { |r| skipped_resources.include?(r.name) }
-    venv.pip_install resource("iosbackup")
+    venv.pip_install resources.reject { |r| r.name == "iosbackup" }
+
+    # iosbackup is incompatible with build isolation: https://github.com/avibrazil/iOSbackup/pull/32
+    resource("iosbackup").stage do
+      inreplace "setup.py", "from iOSbackup import __version__", "__version__ = '#{resource("iosbackup").version}'"
+      venv.pip_install Pathname.pwd
+    end
+
     venv.pip_install_and_link buildpath
 
     %w[mvt-android mvt-ios].each do |script|

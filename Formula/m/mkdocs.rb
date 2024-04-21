@@ -3,20 +3,18 @@ class Mkdocs < Formula
 
   desc "Project documentation with Markdown"
   homepage "https://www.mkdocs.org/"
-  url "https://files.pythonhosted.org/packages/ed/bb/24a22f8154cf79b07b45da070633613837d6e59c7d870076f693b7b1c556/mkdocs-1.5.3.tar.gz"
-  sha256 "eb7c99214dcb945313ba30426c2451b735992c73c2e10838f76d09e39ff4d0e2"
+  url "https://files.pythonhosted.org/packages/cc/6b/26b33cc8ad54e8bc0345cddc061c2c5c23e364de0ecd97969df23f95a673/mkdocs-1.6.0.tar.gz"
+  sha256 "a73f735824ef83a4f3bcb7a231dcab23f5a838f88b7efc54a0eef5fbdbc3c512"
   license "BSD-2-Clause"
-  revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sonoma:   "7dfb9f9b86956ae1999419e55ce50aa8636a9011b5959609aa892b470941afe9"
-    sha256 cellar: :any,                 arm64_ventura:  "0cda468fc34c74c61d71854fe797b5fd7ad6b33a98d206a8b3a7a18ba9cbff30"
-    sha256 cellar: :any,                 arm64_monterey: "8efc42e2eefdaef8a26d65e1f2cd5b856d4ac927dd49031e5358b458473f2d30"
-    sha256 cellar: :any,                 sonoma:         "31ea3f1b23c08c25f880604d5b52be7ea52d6aca005694acdc562957105cc295"
-    sha256 cellar: :any,                 ventura:        "5a6ca308f463e0f83c85ca18881df7ab549c40ceb5f628a3df5f36d157ba3215"
-    sha256 cellar: :any,                 monterey:       "ee8afabfcc69a11e5faed28133618c654a6b2154a311fb6ece1b0da329f905df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "628efcb3d54f79075f3e4756636ac67786b9c08b5c0242b997da61f38b3c70ba"
+    sha256 cellar: :any,                 arm64_sonoma:   "a190efbe93903ce9d490782ce8a9a21912cb1e73b3f1cca26758333737fa15d6"
+    sha256 cellar: :any,                 arm64_ventura:  "ff2e7fbee744df1c6611c32664cf0f86c2d636c67ff516269794a9ee37e4e26d"
+    sha256 cellar: :any,                 arm64_monterey: "1033d4398e14868dc481c813a3ba2e7438690adb40ae4f541a3841411f217012"
+    sha256 cellar: :any,                 sonoma:         "5e564ec0afb5e83020edc5eb1fec38b749951ed6f51722d30af6ac63c7a12964"
+    sha256 cellar: :any,                 ventura:        "a1afefefefbf2f48fbbb7b91cb6524ca2099363378615f11ad9cd11811d0aa10"
+    sha256 cellar: :any,                 monterey:       "898b36b0795cd020859b6fa67105b42d54c3bf58ec6ebc04bf39ed53cdb00597"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16b46b6df08599edd8438de6b67d464b655ee02dac40fcef1cb2ed14d31badf8"
   end
 
   depends_on "libyaml"
@@ -38,8 +36,8 @@ class Mkdocs < Formula
   end
 
   resource "markdown" do
-    url "https://files.pythonhosted.org/packages/11/28/c5441a6642681d92de56063fa7984df56f783d3f1eba518dc3e7a253b606/Markdown-3.5.2.tar.gz"
-    sha256 "e1ac7b3dc550ee80e602e71c1d168002f062e49f1b11e26a36264dafd4df2ef8"
+    url "https://files.pythonhosted.org/packages/22/02/4785861427848cc11e452cc62bb541006a1087cf04a1de83aedd5530b948/Markdown-3.6.tar.gz"
+    sha256 "ed4f41f6daecbeeb96e576ce414c41d2d876daa9a16cb35fa8ed8c2ddfad0224"
   end
 
   resource "markupsafe" do
@@ -52,9 +50,14 @@ class Mkdocs < Formula
     sha256 "0096d52e9dad9939c3d975a774666af186eda617e6ca84df4c94dec30004f2a8"
   end
 
+  resource "mkdocs-get-deps" do
+    url "https://files.pythonhosted.org/packages/98/f5/ed29cd50067784976f25ed0ed6fcd3c2ce9eb90650aa3b2796ddf7b6870b/mkdocs_get_deps-0.2.0.tar.gz"
+    sha256 "162b3d129c7fad9b19abfdcb9c1458a651628e4b1dea628ac68790fb3061c60c"
+  end
+
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
-    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
   end
 
   resource "pathspec" do
@@ -68,8 +71,8 @@ class Mkdocs < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
-    sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
+    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
   end
 
   resource "pyyaml" do
@@ -90,12 +93,6 @@ class Mkdocs < Formula
   resource "watchdog" do
     url "https://files.pythonhosted.org/packages/cd/3c/43eeaa9ea17a2657d639aa3827beaa77042809410f86fb76f0d0ea6a2102/watchdog-4.0.0.tar.gz"
     sha256 "e3e7065cbdabe6183ab82199d7a4f6b3ba0a438c5a512a68559846ccb76a78ec"
-  end
-
-  # Add missing setuptools dep
-  patch do
-    url "https://github.com/mkdocs/mkdocs/commit/cc76672d5591b444e425423e41a0f5c0d42de9f8.patch?full_index=1"
-    sha256 "7fdd3f760c25b9d08a4e97448fdb629a418913adc2d6222b2752719fe0ace60c"
   end
 
   def install

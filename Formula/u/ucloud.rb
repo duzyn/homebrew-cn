@@ -18,16 +18,11 @@ class Ucloud < Formula
   depends_on "go" => :build
 
   def install
-    dir = buildpath/"src/github.com/ucloud/ucloud-cli"
-    dir.install buildpath.children
-    cd dir do
-      system "go", "build", "-mod=vendor", "-o", bin/"ucloud"
-      prefix.install_metafiles
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "-mod=vendor"
   end
 
   test do
-    system "#{bin}/ucloud", "config", "--project-id", "org-test", "--profile", "default", "--active", "true"
+    system bin/"ucloud", "config", "--project-id", "org-test", "--profile", "default", "--active", "true"
     config_json = (testpath/".ucloud/config.json").read
     assert_match '"project_id":"org-test"', config_json
     assert_match version.to_s, shell_output("#{bin}/ucloud --version")

@@ -9,13 +9,14 @@ class Notifiers < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "01d3f7958518c8e9ea82b2c025953318b22360aebeb570926c317ccc85d01108"
-    sha256 cellar: :any,                 arm64_ventura:  "fa398c896d8e1994b4220bb10f246fe5d14162c61fef2dfad6d313cf98779445"
-    sha256 cellar: :any,                 arm64_monterey: "3dfb1db1100d687bcbf52a128a7b37da8648eec48cd392fab075550770db9a8e"
-    sha256 cellar: :any,                 sonoma:         "c0bab147469e80133fe6a56d37f052360bbd0eeefdbd7a3db375decb2739c100"
-    sha256 cellar: :any,                 ventura:        "075865bc259f34e509532ccdc51b11b59249a1d2202bd27b255c69e713e65808"
-    sha256 cellar: :any,                 monterey:       "c05ce91d59924718a8ccaf687c47ea9b1f5fac4daf73ca1ee6e0dd0f6c757d94"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15d61212982bb1a3de9b600e183f2d9a5d0c930ced8f41c56c3a6c4cfeb65366"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "003f9dbdcba2652ebfb4169ad245b5177109dda999bdd0ffe3780cf6a0f7bb25"
+    sha256 cellar: :any,                 arm64_ventura:  "90742964708b8f53a0a4beea336d823e6b8e8e87f38c7f0bb07d0dc58d49fb18"
+    sha256 cellar: :any,                 arm64_monterey: "56d1ca5de79367bd8f8c125656a6ba3b299b5db86c5fc45673feeeceef3665b2"
+    sha256 cellar: :any,                 sonoma:         "e627a5a082544f1054e1e97292c0c6a529fba23911e149f566fbd7ab19d9222d"
+    sha256 cellar: :any,                 ventura:        "6de8ae9209beddf6758863f9414e5afc7224bb9ab538f52e3f2f685d5132325a"
+    sha256 cellar: :any,                 monterey:       "ca77b28df9dda0e25a61462431c94c6dc17f815545b4f4d00cc6490c27178bd1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4a2b7684b19222871ed5b26c0684213f234701b8f9274add355da305c8487e0e"
   end
 
   depends_on "rust" => :build # for rpds-py
@@ -67,15 +68,13 @@ class Notifiers < Formula
     sha256 "42821446ee7a76f5d9f71f9e33a4fb2ffd724bb3e7f93386150b61a43115788d"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/7a/12/dc02a2401dac87cb2d3ea8d3b23eab30db4cd2948d5b048bf912b9fe959a/setuptools-69.4.tar.gz"
-    sha256 "659e902e587e77fab8212358f5b03977b5f0d18d4724310d4a093929fee4ca1a"
-  end
-
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
     sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
+
+  # Drop setuptools dep: https://github.com/liiight/notifiers/pull/470
+  patch :DATA
 
   def install
     virtualenv_install_with_resources
@@ -85,3 +84,25 @@ class Notifiers < Formula
     assert_match "notifiers", shell_output("#{bin}/notifiers --help")
   end
 end
+
+__END__
+diff --git a/notifiers/utils/helpers.py b/notifiers/utils/helpers.py
+index e351956..9981a0e 100644
+--- a/notifiers/utils/helpers.py
++++ b/notifiers/utils/helpers.py
+@@ -1,6 +1,5 @@
+ import logging
+ import os
+-from distutils.util import strtobool
+ from pathlib import Path
+ 
+ log = logging.getLogger("notifiers")
+@@ -13,7 +12,7 @@ def text_to_bool(value: str) -> bool:
+     :param value: Value to check
+     """
+     try:
+-        return bool(strtobool(value))
++        return value.lower() in {"y", "yes", "t", "true", "on", "1"}
+     except (ValueError, AttributeError):
+         return value is not None
+ 

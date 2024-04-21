@@ -1,12 +1,12 @@
 class Jadx < Formula
   desc "Dex to Java decompiler"
   homepage "https://github.com/skylot/jadx"
-  url "https://mirror.ghproxy.com/https://github.com/skylot/jadx/releases/download/v1.4.7/jadx-1.4.7.zip"
-  sha256 "a13d2be02ed640de54df937ead680f31ea06f4b8efd01860b9f0cf18a7d40e34"
+  url "https://mirror.ghproxy.com/https://github.com/skylot/jadx/releases/download/v1.5.0/jadx-1.5.0.zip"
+  sha256 "c5a713fa4800cbb9e6df85ced1bef95ba329040c95cb87d54465f108483e4ef9"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "035de90325e1e3b294a15302ef229b1f26cd8c255d2fa4b8ce335b59afca6c48"
+    sha256 cellar: :any_skip_relocation, all: "78db5c2318306279313ded903663c847c20630057f12096eb62bdf5e1b49299a"
   end
 
   head do

@@ -22,8 +22,7 @@ class Tunnel < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", bin/"tunnel", "./cmd/tunnel"
-    prefix.install_metafiles
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/tunnel"
   end
 
   test do
