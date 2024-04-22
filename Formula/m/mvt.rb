@@ -3,21 +3,19 @@ class Mvt < Formula
 
   desc "Mobile device forensic toolkit"
   homepage "https://docs.mvt.re/en/latest/"
-  url "https://files.pythonhosted.org/packages/89/7d/334c9003479209df74f6bdc0ea67edc1180af168cd2d99ef707555278623/mvt-2.5.0.tar.gz"
-  sha256 "d0d89eb75834a675a555f96ee1fb6f2341921df215fb0f506bf59586997cd94e"
+  url "https://files.pythonhosted.org/packages/0b/a7/e12932647247b7cd253698e6aa0d5f831700d3dd7688c366af85eb255b62/mvt-2.5.3.tar.gz"
+  sha256 "5727877815b3d5a2a98e21a6be9da51c3629eb548e424457e9e78ae183344264"
   license :cannot_represent # Adaptation of MPL-2.0
-  revision 1
   head "https://github.com/mvt-project/mvt.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "055044aa607eceea06dda21b31536f13eef0b64740d2919b3718382a8ec9d217"
-    sha256 cellar: :any,                 arm64_ventura:  "fea4ed1017fd9f7433540bfdb964478b0d6c6101aff45cb69ce01eb55649e110"
-    sha256 cellar: :any,                 arm64_monterey: "27f18c2e4fa7ce5333bd2a69b669eeac6857d2a6ff6238d890049488e64e3eb7"
-    sha256 cellar: :any,                 sonoma:         "8ec82f78b9d3bb9efcc9a087c255b32090eba4e48064bc1c8d80365bd7ee08d7"
-    sha256 cellar: :any,                 ventura:        "b3f7970b17930cec9897b6e96462dac2aad309bd202897e68cf551f057b51ff4"
-    sha256 cellar: :any,                 monterey:       "0820e5c6d8895a211171a6ce986e59964690f8156fa0438b52b59358fe3a6751"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66bf85f728680aa28a3c1a308d957bf039c98572e438a499b7c71089d95622b6"
+    sha256 cellar: :any,                 arm64_sonoma:   "bb6112b3fdab872902bae9299ea016dcba55ae7d8bfad0638c83ca7d9cae2e6d"
+    sha256 cellar: :any,                 arm64_ventura:  "9e72428eecf447a69aee4f74c51c8e3122fc1de1b10ea845ff0891266e347ffd"
+    sha256 cellar: :any,                 arm64_monterey: "e77e732d2cd130fdc5fa8974c143d9dfe46cd182b8a379205ba483328df6f0cb"
+    sha256 cellar: :any,                 sonoma:         "f2bed1b23a51aa4036daf61f32310852b0baee68f1caf40f592be7886112d00b"
+    sha256 cellar: :any,                 ventura:        "c3d7b45622b2c8bb3d0dff41578a04c976a4e293a683ca461d7a5ec3252ceac3"
+    sha256 cellar: :any,                 monterey:       "3e53745e417e7ad9ca3f95e28d9ac3e5f82fca73c71d322f39dfa2a08520102b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0538ad91630242f39bc57e2b58fa219b23e6d4db6a40b4b788f4a2a8e3a099ef"
   end
 
   depends_on "certifi"
