@@ -1,12 +1,27 @@
 class Csound < Formula
   desc "Sound and music computing system"
   homepage "https://csound.com"
-  url "https://github.com/csound/csound.git",
-      tag:      "6.18.1",
-      revision: "a1580f9cdf331c35dceb486f4231871ce0b00266"
   license "LGPL-2.1-or-later"
-  revision 6
+  revision 8
   head "https://github.com/csound/csound.git", branch: "master"
+
+  # Remove `stable` block when patches are no longer needed
+  stable do
+    url "https://github.com/csound/csound.git",
+        tag:      "6.18.1",
+        revision: "a1580f9cdf331c35dceb486f4231871ce0b00266"
+
+    # Fix build failure due to mismatched pointer types on macOS 14+
+    patch do
+      url "https://github.com/csound/csound/commit/596667daba1ed99eda048e491ff8f36200f09429.patch?full_index=1"
+      sha256 "ab6d09d1a2cede584e151b514fc4cff56b88f79008e725c3a76df64b59caf866"
+    end
+
+    patch do
+      url "https://github.com/csound/csound/commit/2a071ae8ca89bc21b5c80037f8c95a01bb670ac9.patch?full_index=1"
+      sha256 "c7026330b5c89ab399e74aff17019067705011b7e35b9c75f9ed1a5878f53b4b"
+    end
+  end
 
   livecheck do
     url :stable
@@ -14,13 +29,13 @@ class Csound < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "d1f88292fe0dd20cc95853951e4d27ac5adc9a98862d17acb35d73b6914cd2d4"
-    sha256 arm64_ventura:  "eedb8b6d2d423962e72ee82441553308ab4dd9411dca551f00020a86e34edcde"
-    sha256 arm64_monterey: "0678817eca926f66a991fdc052389e0654508906a3e9adfddab3a33c470d7eba"
-    sha256 sonoma:         "61d7120a629b1944136f5c08e9d9ba662ed3882b721c05cb10bb50b0952c3489"
-    sha256 ventura:        "ba33e66857dea3dc9755b340f5932d5a66cdea930dd2790773b53d848a71c1b6"
-    sha256 monterey:       "d03d0052525a882c6d697ecad22345352b675a588d187c70e499a1c0b083760b"
-    sha256 x86_64_linux:   "4e7afc503eb1c7b60df58129e16113b221ebf63f4239933fb64c69b60ad8424f"
+    sha256 arm64_sonoma:   "35d9b09ebe9bb72399d10faff833d2b6e2d07d61916890aeac3d9b650e426bd6"
+    sha256 arm64_ventura:  "beabe27ce94e15a94f4df63dc9c98b8d95f2b0104f756e33aa135c3b1e39ca76"
+    sha256 arm64_monterey: "f70769471f3c5ea0b0cabaeb809720b6098c1e14d50cb30196518c54cb464e27"
+    sha256 sonoma:         "33122f505bd391b6e55c6e90e812a24219e6e211cfdebbaa8d12e97acf3a7a63"
+    sha256 ventura:        "44e1c701e1a37f6a43119a96b507f4124b98f7af9ccfdda34af9b270dd9d77f1"
+    sha256 monterey:       "c59dc0df0dae84409ea08cd5f2a151f3f54f07938b41f8285b04882c4c80bb64"
+    sha256 x86_64_linux:   "14b97dadcdc37012242268e1d96233fdc5cd5594d90a62ee6868f9ce3423a241"
   end
 
   depends_on "asio" => :build
@@ -46,15 +61,12 @@ class Csound < Formula
   depends_on "portmidi"
   depends_on "python@3.12"
   depends_on "stk"
+  depends_on "wiiuse"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "curl"
   uses_from_macos "zlib"
-
-  on_macos do
-    depends_on "wiiuse"
-  end
 
   on_linux do
     depends_on "alsa-lib"
@@ -136,6 +148,7 @@ class Csound < Formula
         -DBUILD_PYTHON_OPCODES=ON
         -DBUILD_STK_OPCODES=ON
         -DBUILD_WEBSOCKET_OPCODE=ON
+        -DBUILD_WIIMOTE_OPCODES=ON
         -DGMM_INCLUDE_DIR=#{buildpath}
         -DPython3_EXECUTABLE=#{python3}
         -DUSE_FLTK=ON
@@ -143,7 +156,6 @@ class Csound < Formula
       args += if OS.mac?
         %W[
           -DBUILD_P5GLOVE_OPCODES=ON
-          -DBUILD_WIIMOTE_OPCODES=ON
           -DCSOUND_FRAMEWORK=#{frameworks}/CsoundLib64.framework
           -DCSOUND_INCLUDE_DIR=#{frameworks}/CsoundLib64.framework/Headers
           -DPLUGIN_INSTALL_DIR=#{frameworks}/CsoundLib64.framework/Resources/Opcodes64
@@ -151,7 +163,6 @@ class Csound < Formula
       else
         %w[
           -DBUILD_P5GLOVE_OPCODES=OFF
-          -DBUILD_WIIMOTE_OPCODES=OFF
         ]
       end
 
@@ -234,6 +245,7 @@ class Csound < Formula
       JackoInfo
       instr 1
           i_ websocket 8888, 0
+          i_ wiiconnect 1, 1
       endin
     EOS
     system bin/"csound", "--orc", "--syntax-check-only", "opcode-existence.orc"
@@ -242,7 +254,6 @@ class Csound < Formula
       (testpath/"mac-opcode-existence.orc").write <<~EOS
         instr 1
             p5gconnect
-            i_ wiiconnect 1, 1
         endin
       EOS
       system bin/"csound", "--orc", "--syntax-check-only", "mac-opcode-existence.orc"
