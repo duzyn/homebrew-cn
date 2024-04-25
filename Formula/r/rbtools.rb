@@ -59,15 +59,9 @@ class Rbtools < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.12")
     # Work around pydiffx needing six pre-installed
     # Upstream PR: https://github.com/beanbaginc/diffx/pull/2
-    pydiffx_resources = %w[setuptools six pydiffx]
-    pydiffx_resources.each do |r|
-      venv.pip_install(resource(r), build_isolation: false)
-    end
-    venv.pip_install resources.reject { |r| pydiffx_resources.include? r.name }
-    venv.pip_install_and_link buildpath
+    virtualenv_install_with_resources end_with: "pydiffx"
 
     bash_completion.install "rbtools/commands/conf/rbt-bash-completion" => "rbt"
     zsh_completion.install "rbtools/commands/conf/_rbt-zsh-completion" => "_rbt"
