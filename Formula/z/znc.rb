@@ -1,7 +1,10 @@
 class Znc < Formula
   desc "Advanced IRC bouncer"
-  homepage "https://wiki.znc.in/ZNC"
-  url "https://znc.in/releases/archive/znc-1.9.0.tar.gz"
+  # Temporary URLs as znc.in certificate has expired
+  # FIXME: homepage "https://wiki.znc.in/ZNC"
+  homepage "https://github.com/znc/znc"
+  url "https://deb.debian.org/debian/pool/main/z/znc/znc_1.9.0.orig.tar.gz"
+  mirror "https://znc.in/releases/archive/znc-1.9.0.tar.gz"
   sha256 "8b99c9dbb21c1309705073460be9bfacb6f7b0e83a15fe5d4b7140201b39d2a1"
   license "Apache-2.0"
   revision 2
