@@ -1,4 +1,4 @@
-cask "microsoft-openjdk11" do
+cask "microsoft-openjdk@11" do
   arch arm: "aarch64", intel: "x64"
 
   version "11.0.23"

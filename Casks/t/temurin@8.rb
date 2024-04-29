@@ -1,8 +1,8 @@
-cask "temurin8" do
+cask "temurin@8" do
   version "8,412,08"
   sha256 "d9815891463bdbc8e7489309ee3845a4f91415a8e0e5369f449474adca8b66d9"
 
-  url "https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third}.pkg",
       verified: "github.com/adoptium/temurin8-binaries/"
   name "Eclipse Temurin 8"
   desc "JDK from the Eclipse Foundation (Adoptium)"

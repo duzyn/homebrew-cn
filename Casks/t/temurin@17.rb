@@ -1,11 +1,11 @@
-cask "temurin17" do
+cask "temurin@17" do
   arch arm: "aarch64", intel: "x64"
 
   version "17.0.11,9"
   sha256 arm:   "c54555dbeb2ecb1c38f04fe079a0eeecb0b48bfb9ba038f764eb76fad399483b",
          intel: "3553524fa3c86388cfecadd3a11ed1e4b62c64bc36962792544b5a0269b7048c"
 
-  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
   name "Eclipse Temurin Java Development Kit"
   desc "JDK from the Eclipse Foundation (Adoptium)"

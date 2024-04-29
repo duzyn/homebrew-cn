@@ -1,19 +1,24 @@
-cask "temurin21" do
+cask "temurin@11" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.3,9"
-  sha256 arm:   "f0a8cfcc9612caba26f6362ec63c5c67936d9b0a1be973a6e3b629fee9507214",
-         intel: "91f0ce47ac9189901d4dd5c6e9fb59d4aeaa365ab72c8cedbe6b5d4e9f1d6f49"
+  on_arm do
+    version "11.0.23,9"
+    sha256 "aa4e2d475b62c879293d95a6093c8290d05caff60c5df385525083118b61dbe8"
+  end
+  on_intel do
+    version "11.0.23,9"
+    sha256 "daa238fe952045f54c03671c766c34498ee718aeb11c4a82b70801863abb1b62"
+  end
 
-  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
+  url "https://mirror.ghproxy.com/https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
-  name "Eclipse Temurin 21"
+  name "Eclipse Temurin 11"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"
 
   livecheck do
     url "https://api.adoptium.net/v3/assets/feature_releases/#{version.major}/ga?architecture=#{arch}&image_type=jdk&jvm_impl=hotspot&os=mac&page=0&page_size=1&project=jdk&sort_method=DEFAULT&sort_order=DESC&vendor=eclipse"
-    regex(/^jdk-(\d+(?:\.\d+)*?)\+(\d+(?:\.\d+)*)(?:-LTS)?$/i)
+    regex(/^jdk-(\d+(?:\.\d+)+)\+(\d+(?:\.\d+)*)$/i)
     strategy :json do |json, regex|
       json.map do |release|
         match = release["release_name"]&.match(regex)
