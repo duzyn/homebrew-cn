@@ -1,6 +1,6 @@
 cask "sol" do
-  version "2.1.46"
-  sha256 "b1de28f6c48e7be54ae930ae5b811b9b1a8f3908f4729bde29b2c07cc14b3ad7"
+  version "2.1.51"
+  sha256 "19adbda36d2f2ed1ea652cd0795ca00424ef1ed4a6aea40d8968e7b1129b327d"
 
   url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/main/releases/#{version}.zip",
       verified: "mirror.ghproxy.com/https://raw.githubusercontent.com/ospfranco/sol/"
