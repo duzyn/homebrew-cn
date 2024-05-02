@@ -1,4 +1,4 @@
-cask "openemu-experimental" do
+cask "openemu@experimental" do
   on_high_sierra :or_older do
     version "2.0.9.1"
     sha256 "62c44e823fef65c583cbf5e6f84faa03618d713f45610f73bc23fb34cbf64762"
@@ -12,11 +12,13 @@ cask "openemu-experimental" do
     sha256 "57b6f2b6005119efecb566e8cf611e12f1d0171dcd1f96797a0e9b4c33d3cdb4"
   end
 
-  url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}-experimental.zip",
+  url "https://mirror.ghproxy.com/https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}-experimental.zip",
       verified: "github.com/OpenEmu/OpenEmu/"
   name "OpenEmu"
   desc "Retro video game emulation"
   homepage "https://openemu.org/"
+
+  deprecate! date: "2025-05-01", because: :unsigned
 
   auto_updates true
   conflicts_with cask: "openemu"

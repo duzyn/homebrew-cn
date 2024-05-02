@@ -1,8 +1,8 @@
-cask "playcover-community-beta" do
+cask "playcover-community@beta" do
   version "3.0.0-beta.2"
-  sha256 "48a57cecc3a3c7e9af69e795706af3b9c729e46a6eea2e363eaa8628c5f12791"
+  sha256 "d20d5d50085f248143e9eaaab2c65156aae461e90bdb32e50a751b58e15b4555"
 
-  url "https://github.com/PlayCover/PlayCover/releases/download/#{version}/PlayCover_#{version}.dmg"
+  url "https://mirror.ghproxy.com/https://github.com/PlayCover/PlayCover/releases/download/#{version}/PlayCover_#{version}.dmg"
   name "PlayCover"
   desc "Sideload iOS apps and games"
   homepage "https://github.com/PlayCover/PlayCover"
@@ -11,6 +11,8 @@ cask "playcover-community-beta" do
     url :url
     regex(/(\d+(?:\.\d+)+[._-]beta(\.\d+)?)/i)
   end
+
+  deprecate! date: "2025-05-01", because: :unsigned
 
   auto_updates true
   conflicts_with cask: "playcover-community"

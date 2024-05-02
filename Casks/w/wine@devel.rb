@@ -1,13 +1,13 @@
-cask "wine-staging" do
+cask "wine@devel" do
   version "9.7"
-  sha256 "8d5231668c862f7cffa8b5ff2d19d30b550859c13967bee4e62ffc7d309ca699"
+  sha256 "f4c7fbc424fec28a6ec8791e392c2ae918c15d3e0b11034d65edc438e8014f6c"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
   # See https://www.winehq.org/pipermail/wine-devel/2021-July/191504.html
-  url "https://github.com/Gcenx/macOS_Wine_builds/releases/download/#{version.major_minor}/wine-staging-#{version}-osx64.tar.xz",
+  url "https://mirror.ghproxy.com/https://github.com/Gcenx/macOS_Wine_builds/releases/download/#{version}/wine-devel-#{version}-osx64.tar.xz",
       verified: "github.com/Gcenx/macOS_Wine_builds/"
-  name "WineHQ-staging"
+  name "WineHQ-devel"
   desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
 
@@ -19,13 +19,13 @@ cask "wine-staging" do
 
   conflicts_with cask: [
     "wine-stable",
-    "wine-devel",
+    "wine-staging",
   ]
   depends_on cask: "gstreamer-runtime"
   depends_on macos: ">= :catalina"
 
-  app "Wine Staging.app"
-  dir_path = "#{appdir}/Wine Staging.app/Contents/Resources"
+  app "Wine Devel.app"
+  dir_path = "#{appdir}/Wine Devel.app/Contents/Resources"
   binary "#{dir_path}/start/bin/appdb"
   binary "#{dir_path}/start/bin/winehelp"
   binary "#{dir_path}/wine/bin/msidb"
@@ -53,7 +53,7 @@ cask "wine-staging" do
         "~/.local/share/mime/packages/x-wine*",
         "~/.wine",
         "~/.wine32",
-        "~/Library/Saved Application State/org.winehq.wine-staging.wine.savedState",
+        "~/Library/Saved Application State/org.winehq.wine-devel.wine.savedState",
       ],
       rmdir: [
         "~/.local/share/applications",
