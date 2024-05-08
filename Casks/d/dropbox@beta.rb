@@ -1,15 +1,15 @@
 cask "dropbox@beta" do
   arch arm: "&arch=arm64"
 
-  version "198.3.7576"
-  sha256 arm:   "9a7933fc90280be1fbd31ae2ae986e84156db8acb680b651b478099c37584f8e",
-         intel: "0d91f2673958ad5bce48a01724f3f9979d0cf4e278d288b623fdfc418081a6b3"
+  version "199.3.6190"
+  sha256 arm:   "763a62e091e2e56cf1204aa94151349022caa7f7cdf9cb3c89f110b8b0d7269b",
+         intel: "bf465c1136fcbc58a67f3f07e84f378f9d3cb44112364b2ce7bca60ca1b084b7"
 
   url "https://www.dropbox.com/download?build=#{version}&plat=mac&rtoken=&type=full#{arch}",
       verified: "dropbox.com/"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
-  homepage "https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016"
+  homepage "https://www.dropboxforum.com/t5/Dropbox-desktop-client-builds/bd-p/101003016"
 
   livecheck do
     url :homepage

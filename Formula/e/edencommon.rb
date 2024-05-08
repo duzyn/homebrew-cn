@@ -1,20 +1,19 @@
 class Edencommon < Formula
   desc "Shared library for Watchman and Eden projects"
   homepage "https://github.com/facebookexperimental/edencommon"
-  url "https://mirror.ghproxy.com/https://github.com/facebookexperimental/edencommon/archive/refs/tags/v2024.04.22.00.tar.gz"
-  sha256 "6b558e3f78fb6e211e26c6e7a07b2b5a9073322b39c60afc3def21309b360053"
+  url "https://mirror.ghproxy.com/https://github.com/facebookexperimental/edencommon/archive/refs/tags/v2024.05.06.00.tar.gz"
+  sha256 "02238f2a05e46f8189bf6826057b642f7aa03bd36684a245a900f8b6dc4afb7e"
   license "MIT"
-  revision 1
   head "https://github.com/facebookexperimental/edencommon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "a87b5163959d6d4fa9083b0b0775788759caeed77cfb96340194828f7739c8eb"
-    sha256 cellar: :any,                 arm64_ventura:  "1f4da008d9d19afa58492b4c5b2dd11f060ce534929cff44be37ca6eb8639629"
-    sha256 cellar: :any,                 arm64_monterey: "8e6ee43948614fbf6c855fcde7db293644a2120c3d506735aa351e6358781696"
-    sha256 cellar: :any,                 sonoma:         "ad4a2465610abc9337107c351822fa9101d283484b9e88a611cba0e3d405b854"
-    sha256 cellar: :any,                 ventura:        "f101c96bfc7adab1e2446ec363c3c78d1625458a80313a98314b898b266b49ef"
-    sha256 cellar: :any,                 monterey:       "def2d424178794452438d9b51c75c176a525b6bdd3f11bb47efd458fdd7b83ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bea724452a93add7a69fb6f0303ad9508ac6e9785f102838b053aa3acef5c5bd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c771c585c2a1e3cb9b103d5e76a5b966f4e9853e0fe1848802045a649842675e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6ff98de9486f2b4ced0ff22462174b3c1e432ad2591131c54c2f30e1cd3fba7d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "21df80b27e291727526e56af8790c17bdb0e6014f5ab912df08b94de644c4240"
+    sha256 cellar: :any_skip_relocation, sonoma:         "31c147866ed88c9c255388df30e98bdb51fdd751f66969144bc6126875fda645"
+    sha256 cellar: :any_skip_relocation, ventura:        "9710ef8c8333c550e336534334dbbe49b8c9d97228472bb120aefb85db1eb7f8"
+    sha256 cellar: :any_skip_relocation, monterey:       "3c8024ee66630dcb24dfa3b9a4ecac76626fd27cb82aa3fd54b9c54adb0be9a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b278be62c5d7bad5192909a6af245164c6dae126a656a5bf76531ed7b097e785"
   end
 
   depends_on "cmake" => :build
@@ -29,13 +28,6 @@ class Edencommon < Formula
   depends_on "openssl@3"
   depends_on "wangle"
 
-  # Use AUR's patch from open PR to fix build with `fmt` v10.
-  # PR ref: https://github.com/facebookexperimental/edencommon/pull/17
-  patch do
-    url "https://github.com/facebookexperimental/edencommon/commit/bd46378b43aaa394094799d18f734495385c6f67.patch?full_index=1"
-    sha256 "74b47722dd7d40cb07fc504e9f14dd18fe6ee7c38b83373a4d94637fcb618ca1"
-  end
-
   def install
     # Fix "Process terminated due to timeout" by allowing a longer timeout.
     inreplace buildpath.glob("eden/common/{os,utils}/test/CMakeLists.txt"),
@@ -48,10 +40,7 @@ class Edencommon < Formula
     # Avoid having to build FBThrift py library
     inreplace "CMakeLists.txt", "COMPONENTS cpp2 py)", "COMPONENTS cpp2)"
 
-    system "cmake", "-S", ".", "-B", "_build",
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *std_cmake_args
+    system "cmake", "-S", ".", "-B", "_build", *std_cmake_args
     system "cmake", "--build", "_build"
     system "cmake", "--install", "_build"
   end
@@ -74,8 +63,8 @@ class Edencommon < Formula
 
     system ENV.cxx, "-std=c++17", "-I#{include}", "test.cc",
                     "-L#{lib}", "-L#{Formula["folly"].opt_lib}",
-                    "-L#{Formula["boost"].opt_lib}", "-L#{Formula["glog"].opt_lib}",
-                    "-ledencommon_utils", "-lfolly", "-lboost_context-mt", "-lglog", "-o", "test"
+                    "-L#{Formula["boost"].opt_lib}", "-L#{Formula["glog"].opt_lib}", "-L#{Formula["fmt"].opt_lib}",
+                    "-ledencommon_utils", "-lfolly", "-lfmt", "-lboost_context-mt", "-lglog", "-o", "test"
     assert_match "ruby", shell_output("./test #{Process.pid}")
   end
 end

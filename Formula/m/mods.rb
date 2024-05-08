@@ -1,18 +1,18 @@
 class Mods < Formula
   desc "AI on the command-line"
   homepage "https://github.com/charmbracelet/mods"
-  url "https://mirror.ghproxy.com/https://github.com/charmbracelet/mods/archive/refs/tags/v1.2.2.tar.gz"
-  sha256 "67adced6190624824636fb80b5185a8606e3ad9c821d7e8f931d6d3822da51fe"
+  url "https://mirror.ghproxy.com/https://github.com/charmbracelet/mods/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "f0eb5a941c261a55a290b1b99fd09e8f07abd3394b532bf76493376d8ce7967d"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8d24a7f73e92a010a99a2ed7e81de2060da85d54ea48cebd1c386a854f1d6dc7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d84560bc5fb265405bd3dee9f38367cb1d20129e359c7c7007f47e55d1cd2c44"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "950957152be2d9d101cab9bc0dd4f1a981495abc5e3c1aa362a2424c6e1033da"
-    sha256 cellar: :any_skip_relocation, sonoma:         "09bd029af5d892ec73ce21b23e9895f46fc03e5de9ffb0ec0455dddf91bada98"
-    sha256 cellar: :any_skip_relocation, ventura:        "40eefb81c32eb6710047f87f42b94824249e0c29e003441ad714af7e783c80d6"
-    sha256 cellar: :any_skip_relocation, monterey:       "67094fb6c89797a67b140eb0308c7e67541e051398d9c592a9b6033f061c04a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0db21ede97c7bf52a7211c378a68f7b00af2dfbc704d0e396c3c8b63a4659eb9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1da4c12df447d0b3b60bac95a0eda5687c6f403b0e9be6af727685b7df47bac8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4938a1e13494d66498a54951f8f4f0308fecd43da9584f6947394fd87924d5a2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "add7098672318bda70dd94b7d7d59738b76b93545fa23c499b4e2006b5d2525c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "be4d80dacc4bc46257a58a70c8079b164f7910d419e8a0a37b72dae2b72f4367"
+    sha256 cellar: :any_skip_relocation, ventura:        "88bb50407edaf8ddebab691fbd117009935cf9669caafb682fbbabf2908151af"
+    sha256 cellar: :any_skip_relocation, monterey:       "47f08ba1647685aff903f074cc324888c9ace645c83e3467caf083d119790fd2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "21c802d62b15ae07b2788ffc5caa1ac0a1f6786d45f1ca0ac0038938557d7040"
   end
 
   depends_on "go" => :build

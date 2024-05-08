@@ -1,6 +1,6 @@
 cask "tuist" do
-  version "4.11.0"
-  sha256 "c87bf00d0bbbcb5e04953250720b7b33765c0e56b518c5de6536739e04e09b2b"
+  version "4.12.1"
+  sha256 "f56cd6612b8edd30f868dc11db99a4e4835403fd81a451fd6ff38062f4178cc2"
 
   url "https://mirror.ghproxy.com/https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip",
       verified: "github.com/tuist/tuist/"

@@ -1,6 +1,6 @@
 cask "sabnzbd" do
-  version "4.2.3"
-  sha256 "ce1d3234a8da05971fd2ba6be5622d22be7b839c05b61f33915cba5a2793a3c8"
+  version "4.3.1"
+  sha256 "80d5a88a99e02ad73a8265eb25e8ed72aaebc662a044e8e06cb8216397e17f14"
 
   url "https://mirror.ghproxy.com/https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
       verified: "github.com/sabnzbd/sabnzbd/"

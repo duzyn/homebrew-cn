@@ -1,5 +1,5 @@
 cask "ff-works" do
-  version "4.0.6"
+  version "4.1"
   sha256 :no_check
 
   url "https://www.ffworks.net/ffWorks.dmg"
@@ -12,6 +12,7 @@ cask "ff-works" do
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "ff·Works.app"

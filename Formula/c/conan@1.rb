@@ -6,7 +6,7 @@ class ConanAT1 < Formula
   url "https://files.pythonhosted.org/packages/bd/da/a9312a0e37e78f4dd9e0812869debe51566619b59eb593cb777cba872357/conan-1.64.0.tar.gz"
   sha256 "0f9694f98d3fb9b62ca5869cd41c4cbd0434c5f5d9fb2da52e8a6f6b44300157"
   license "MIT"
-  revision 1
+  revision 3
 
   livecheck do
     url "https://github.com/conan-io/conan.git"
@@ -14,13 +14,13 @@ class ConanAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "d22b89f445ec6fb5ed177543081f211e4813d1cc74eb077616a2059ede8ccb5a"
-    sha256 cellar: :any,                 arm64_ventura:  "4b5288693b453806344b7e0eb364511fa6252ad8fa93970d43025f7ba8ed0ee5"
-    sha256 cellar: :any,                 arm64_monterey: "dd1a295beacd7dac0f93d2299b115cf8cd1616f214dc213e735da489165f1a9c"
-    sha256 cellar: :any,                 sonoma:         "ff3a14065778c495c148921139164d1fb7f85b4405ebe07a437144b316661428"
-    sha256 cellar: :any,                 ventura:        "528b52701777cae049fcfbe653ed5a39f7a6175ef4ec1aa94893551f2be12ac6"
-    sha256 cellar: :any,                 monterey:       "288980c79999b2148531e673edc2853ff2c0b08782bd861dc3f91be4beb624d4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a9a536e567b4e94d99d7572a98aac4aa6bc166e9c3952784217e03539f444e07"
+    sha256 cellar: :any,                 arm64_sonoma:   "1a6238d2ea1f05fc9eb96c7ff4cf4355c676247c798a755b6896d765024f8725"
+    sha256 cellar: :any,                 arm64_ventura:  "49321a3d22e05d330da97998a17bada4ab3616485ceb11e7cfe390080dfffa9a"
+    sha256 cellar: :any,                 arm64_monterey: "fdf67c96cc3fc1e05b00bbc0a1be7e781df87d44628105ad24deb06a69c1bc9f"
+    sha256 cellar: :any,                 sonoma:         "3df2029ec7284fe9af80831b711f1cb5037b8b60cab8a4c2127cf3ba757f9245"
+    sha256 cellar: :any,                 ventura:        "565022456a024537048d7b17afd5c4297612420330cc683408e9377b5ea217d1"
+    sha256 cellar: :any,                 monterey:       "f7b3f0f069e419bd67613fb03b4fae258ba9680069e8d8b2e6a7b245dc0c5976"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d479a708eab445d8a9f952a05ac4d9d821f7f0633d15a1a892fd889259e5022"
   end
 
   keg_only :versioned_formula
@@ -62,8 +62,8 @@ class ConanAT1 < Formula
   end
 
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
-    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+    url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
+    sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
   resource "markupsafe" do
@@ -87,8 +87,8 @@ class ConanAT1 < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "pyjwt" do
@@ -117,8 +117,8 @@ class ConanAT1 < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
-    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
+    url "https://files.pythonhosted.org/packages/5a/c0/b7599d6e13fe0844b0cda01b9aaef9a0e87dbb10b06e4ee255d3fa1c79a2/tqdm-4.66.4.tar.gz"
+    sha256 "e4d936c9de8727928f3be6079590e97d9abfe8d39a590be678eb5919ffc186bb"
   end
 
   resource "urllib3" do

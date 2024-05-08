@@ -1,19 +1,19 @@
 class Fizz < Formula
   desc "C++14 implementation of the TLS-1.3 standard"
   homepage "https://github.com/facebookincubator/fizz"
-  url "https://mirror.ghproxy.com/https://github.com/facebookincubator/fizz/releases/download/v2024.04.22.00/fizz-v2024.04.22.00.tar.gz"
-  sha256 "f69682348387a1973564b0df4330bd86632f87595b0da6a9e0e9d60e145cf3fa"
+  url "https://mirror.ghproxy.com/https://github.com/facebookincubator/fizz/releases/download/v2024.05.06.00/fizz-v2024.05.06.00.tar.gz"
+  sha256 "8392773f029f7a0a596942ad668d2f07a15e09ecd1c565ee61e58f0e65d67673"
   license "BSD-3-Clause"
   head "https://github.com/facebookincubator/fizz.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "693d86d697af19714c853cf907b09809a9b96871060fdb1de179cf1a8c9a03d1"
-    sha256 cellar: :any,                 arm64_ventura:  "854bec9901252ead0cc3471736bfae8468a3cbb1ac8b03ea70f78e1c592656ec"
-    sha256 cellar: :any,                 arm64_monterey: "3e94bc8b245de148f14cf5565894e6a8e0d450eebfccf030948736fb61db7426"
-    sha256 cellar: :any,                 sonoma:         "b058e0be20fb91ddc00073a58eb6edf2488a179a586487df5e8ac68669fde7fe"
-    sha256 cellar: :any,                 ventura:        "b5faef16897fc83f878f5d9ced41267b2a0a5bd0a7fd5a993e0172118b75cbeb"
-    sha256 cellar: :any,                 monterey:       "a617d09bef2e02443536080686ce5436a6646c78007362a7688026158a99b6b8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8e8b68005f126e3f14881700d4aa6895f4e06676c6fa5644205e514c85105ad"
+    sha256 cellar: :any,                 arm64_sonoma:   "e6db6f998e2f1a5bdd7c58f8fbcd2b5ebf6e1e2d133409fd30818eb976f7db81"
+    sha256 cellar: :any,                 arm64_ventura:  "5d27378c03b9c66f84208a2ca4724b5c37325b4255aafb0de87a3722b5615c42"
+    sha256 cellar: :any,                 arm64_monterey: "3883c03d7b4fc06e9eb0532c84f14a527da3541bb1d785494de154f4fc1883e5"
+    sha256 cellar: :any,                 sonoma:         "c76fb6ed58cb43b798c3cec20ecd1ccafbfffeefb417b8ec5e55165d13487149"
+    sha256 cellar: :any,                 ventura:        "1d2d5db1c6a6be39ab63104d5e7f01a757980e1bb72d562fe8b84fb79e26586e"
+    sha256 cellar: :any,                 monterey:       "3b746d9feb20983a36a97535aa14c37b917e5f46f1a9f7bf01595f91b7aadf03"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d19fe7b97bd0b3863c1ef6d181bc58750c839004e921bca08054b16f03c41eb3"
   end
 
   depends_on "cmake" => :build
@@ -31,6 +31,13 @@ class Fizz < Formula
   depends_on "zstd"
 
   fails_with gcc: "5"
+
+  # Fix build failure.
+  # https://github.com/facebookincubator/fizz/pull/116
+  patch do
+    url "https://github.com/facebookincubator/fizz/commit/d1757073d2695415963195aeed02443e9b94649b.patch?full_index=1"
+    sha256 "a18cf51af20b45e6a1149cd54f64f2cc3a7cb6ca703e5ed6a564c90c77ad9e96"
+  end
 
   def install
     system "cmake", "-S", "fizz", "-B", "build",

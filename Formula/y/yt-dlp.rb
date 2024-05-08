@@ -72,7 +72,7 @@ class YtDlp < Formula
   end
 
   def install
-    system "gmake", "pypi-files" if build.head?
+    system "gmake", "lazy-extractors", "pypi-files" if build.head?
     virtualenv_install_with_resources
     man1.install_symlink libexec/"share/man/man1/yt-dlp.1"
     bash_completion.install libexec/"share/bash-completion/completions/yt-dlp"

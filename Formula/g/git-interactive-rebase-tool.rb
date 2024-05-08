@@ -28,6 +28,13 @@ class GitInteractiveRebaseTool < Formula
 
   uses_from_macos "zlib"
 
+  # build patch to compile with rust 1.77.0+
+  # upstream PR ref, https://github.com/MitMaro/git-interactive-rebase-tool/pull/907
+  patch do
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/eef8b6250a14aa76c60ad013b676b1d45831ea2c/git-interactive-rebase-tool/2.3.0.patch"
+    sha256 "1c5177347a4bb036f1c2485d7eb16c1a7cdf43d77e12e38bc67751cea8aaf1f9"
+  end
+
   def install
     system "cargo", "install", *std_cargo_args
   end
