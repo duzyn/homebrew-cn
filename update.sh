@@ -22,7 +22,6 @@ cd "$SCRIPT_DIR" || exit 1
 if [[ "$TEST" == "true" ]]; then
     git clone --depth 1 https://mirror.ghproxy.com/https://github.com/Homebrew/homebrew-core
     git clone --depth 1 https://mirror.ghproxy.com/https://github.com/Homebrew/homebrew-cask
-    git clone --depth 1 https://mirror.ghproxy.com/https://github.com/Homebrew/homebrew-cask-versions
 fi
 
 rm -rf ./Formula ./Casks ./Aliases
@@ -30,8 +29,7 @@ mkdir -p ./Formula ./Casks ./Aliases
 cp -r ./homebrew-core/Formula/* ./Formula/
 cp -r ./homebrew-core/Aliases/* ./Aliases/
 cp -r ./homebrew-cask/Casks/* ./Casks/
-cp -r ./homebrew-cask-versions/Casks/* ./Casks/
-rm -rf ./homebrew-core ./homebrew-cask ./homebrew-cask-versions
+rm -rf ./homebrew-core ./homebrew-cask
 
 for file in ./Formula/**/*.rb ./Casks/**/*.rb; do
     perl -pi -e 's#(github\.com/.+/releases/download)#mirror.ghproxy.com/https://\1#g;

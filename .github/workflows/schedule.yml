@@ -23,11 +23,6 @@ jobs:
         repository: 'Homebrew/homebrew-cask'
         fetch-depth: 1
         path: 'homebrew-cask'
-    - uses: actions/checkout@v3
-      with:
-        repository: 'Homebrew/homebrew-cask-versions'
-        fetch-depth: 1
-        path: 'homebrew-cask-versions'
     - name: Update buckets
       run: |
         bash ./update.sh
