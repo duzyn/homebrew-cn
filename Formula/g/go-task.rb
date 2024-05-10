@@ -1,19 +1,19 @@
 class GoTask < Formula
   desc "Task is a task runner/build tool that aims to be simpler and easier to use"
   homepage "https://taskfile.dev/"
-  url "https://mirror.ghproxy.com/https://github.com/go-task/task/archive/refs/tags/v3.36.0.tar.gz"
-  sha256 "ba286bf87a82a284ccd8a76a828fa07269bdde377a4f6770bb5f2bea35bd8522"
+  url "https://mirror.ghproxy.com/https://github.com/go-task/task/archive/refs/tags/v3.37.1.tar.gz"
+  sha256 "5bcb053843c4ad34aa509cde67e29d97afcddfbe5bfc60f7dcb299d144f0f950"
   license "MIT"
   head "https://github.com/go-task/task.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ebd794e1f5d4560182d7b353c189d3ed5b69fdcf993fbbd3a72946aa6d29f189"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b9fb82f7dfbfbc5c82a4c099774531795cc589dc3ec977fa7a7e0004b4711650"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0c92b6efa45ff208de7cf4ab8f6026c9780ba94179edc1576fa81ebf37d83bdd"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e2780afe4461639d361b33ca5b9e0f17f77fde2dd8ef46490fe9f6950f3e60cf"
-    sha256 cellar: :any_skip_relocation, ventura:        "12f119f17aa3f527175052bd428e5208a56ac76ba6627681d7a98ad7f44c5a73"
-    sha256 cellar: :any_skip_relocation, monterey:       "1bc1d1f4314444d4f27d91b3c46fd0a89abc5a22571845e24d119d651ad98331"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75193163f4e4798e34719716d14a1bb055ae55f4162cc49d0a00e0adbdf007f6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "baaf57095a4d7f33f685294a9d8374206d09dee5555a0858f16f85a9fedcf814"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "907658246e0ba6ac4c615b3af453730bbb4cf7a78828d8d7d639af466dc6cb07"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "19d858fe45f1fffcf02cd5f8a3911c3e15ce8b220930ac39d8679ac5a684936a"
+    sha256 cellar: :any_skip_relocation, sonoma:         "57f309ab4872fae3e29ced7c8405d0fef36d78e17ceefd760927737914334c3e"
+    sha256 cellar: :any_skip_relocation, ventura:        "1ca1a0b13ac245cf46209c8ee47b0bd932f6bced2ccdfef9950308fb879da52f"
+    sha256 cellar: :any_skip_relocation, monterey:       "e2bc28942a5737946e69a200739176cd89c1d042ae12ce62acca45d38d762b43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6410b6e4a9d532f884363645be680912c5ed57baa728f1ddcd07a714319ced3e"
   end
 
   depends_on "go" => :build

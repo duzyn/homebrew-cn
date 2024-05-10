@@ -3,18 +3,18 @@ require "language/node"
 class Svgo < Formula
   desc "Nodejs-based tool for optimizing SVG vector graphics files"
   homepage "https://github.com/svg/svgo"
-  url "https://mirror.ghproxy.com/https://github.com/svg/svgo/archive/refs/tags/v3.3.0.tar.gz"
-  sha256 "fb74c2cca6171c86339581f5f77644096d4fb912cfedc89218fdd2ebb3084fee"
+  url "https://mirror.ghproxy.com/https://github.com/svg/svgo/archive/refs/tags/v3.3.2.tar.gz"
+  sha256 "bf79f18acd85764bd12ed7335f2d8fdc7d11760e7c4ed8bd0dc39f1272825671"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "97b463c725dee94559f00a56c08a73023bba0d2dc327af5b5c86ff9d1a441914"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c4bc28c7f8a98d9212521169165a10ff281386620d577dd1f9c33fada5948a9d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8be7cf626081ed2158f5ea5a437e04967b847931edd8727c5a52afb3a43fc2fb"
-    sha256 cellar: :any_skip_relocation, sonoma:         "b1face1b3016ddb6f3f40c4c57f170c1ed1bb512c2be878fe5398094504b6a53"
-    sha256 cellar: :any_skip_relocation, ventura:        "91f89cabc947223a23e1e5afbf7b0aca5af086b50d9b2f7a1123a45db868e23a"
-    sha256 cellar: :any_skip_relocation, monterey:       "f7ce0f74fbe84df5970e536c8896620d5c7014158df34d1f719e07224811d050"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9926ecf0440fd41b17e9d656483e5c7dd4c1d43110f646ebf2624141cae4bf36"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "997bdea1555ce56b4af7d5625ddef78a3653143f29a4f9f1ddc74025889a8f05"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f775ef89b2f0cc9b6ed05a0c0bbf8dae7dc012441c9f7a2fe4463aeb71de6712"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "995ef55373fa12452f5a12bcc93f1456e1dfb91925ef2ebc61444ef79480a0ac"
+    sha256 cellar: :any_skip_relocation, sonoma:         "441ee23a5c71c64a1b6cd24695cfd721c66cb1cd6076fc5a3b2677e0a04ecc69"
+    sha256 cellar: :any_skip_relocation, ventura:        "48dad74504f73b434c60fceada41d8299b1560520e4f09209a25d503f050c689"
+    sha256 cellar: :any_skip_relocation, monterey:       "07941cf1f74d0aba4723d32aba2f87b8b785efcf53bc3f1bf060371673c3bfbd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f83cba0d234e7c703b59cbc60b4e36ed3b6b072e18fc623093fac142c58305a6"
   end
 
   depends_on "node"
