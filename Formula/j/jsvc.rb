@@ -24,6 +24,9 @@ class Jsvc < Formula
     prefix.install %w[NOTICE.txt LICENSE.txt RELEASE-NOTES.txt]
 
     cd "src/native/unix" do
+      # https://github.com/Homebrew/homebrew-core/pull/168294#issuecomment-2104388230
+      ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
+
       system "./configure", "--with-java=#{Formula["openjdk"].opt_prefix}"
       system "make"
 
