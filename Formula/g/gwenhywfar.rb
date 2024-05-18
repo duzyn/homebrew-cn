@@ -22,32 +22,40 @@ class Gwenhywfar < Formula
     sha256 x86_64_linux:   "771e98641328a98fbf0a789d12c6a0bb59a1f083c7142e2b25807505f58ce7cc"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "gettext" => :build
   depends_on "cmake" => :test
-  depends_on "gettext"
   depends_on "gnutls"
   depends_on "libgcrypt"
+  depends_on "libgpg-error"
   depends_on "openssl@3"
   depends_on "pkg-config" # gwenhywfar-config needs pkg-config for execution
   depends_on "qt@5"
 
+  on_macos do
+    depends_on "gettext"
+  end
+
   fails_with gcc: "5"
+
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
 
   def install
     # Fix compile with newer Clang
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
+    if DevelopmentTools.clang_build_version >= 1500
+      ENV.append_to_cflags "-Wno-int-conversion -Wno-incompatible-function-pointer-types"
+    end
 
     inreplace "gwenhywfar-config.in.in", "@PKG_CONFIG@", "pkg-config"
-    # Fix `-flat_namespace` flag on Big Sur and later.
-    system "autoreconf", "--force", "--install", "--verbose"
     guis = ["cpp", "qt5"]
     guis << "cocoa" if OS.mac?
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--with-guis=#{guis.join(" ")}"
+    system "./configure", "--disable-silent-rules",
+                          "--with-guis=#{guis.join(" ")}",
+                          *std_configure_args
     system "make", "install"
   end
 
