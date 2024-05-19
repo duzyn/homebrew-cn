@@ -1,13 +1,13 @@
 class I2p < Formula
   desc "Anonymous overlay network - a network within a network"
   homepage "https://geti2p.net"
-  url "https://files.i2p-projekt.de/2.5.1/i2psource_2.5.1.tar.bz2"
+  url "https://mirror.ghproxy.com/https://github.com/i2p/i2p.i2p/releases/download/i2p-2.5.1/i2psource_2.5.1.tar.bz2"
   sha256 "4bc7e59ee0036389a0f76fc76b2303eeae62bf6eaaf608c9939226febf9ddeae"
   license :cannot_represent
 
   livecheck do
-    url "https://geti2p.net/en/download"
-    regex(/href=.*?i2pinstall[._-]v?(\d+(?:\.\d+)+)\.jar/i)
+    url :stable
+    regex(/^i2p[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
