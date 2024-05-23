@@ -34,7 +34,7 @@ class Actionlint < Formula
           permissions:
             attestations: write
           steps:
-            - run: actions/checkout@v2
+            - run: actions/checkout@v4
     YAML
 
     output = shell_output("#{bin}/actionlint #{testpath}/action.yaml", 1)
