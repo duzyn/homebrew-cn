@@ -5,10 +5,9 @@ class Kpcli < Formula
 
   desc "Command-line interface to KeePass database files"
   homepage "https://kpcli.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/kpcli/kpcli-4.0.pl?use_mirror=jaist"
-  sha256 "5189d7dad69ddc9834d24757e561d2b48eaeda9cadb3e4999608ff8efe28fd35"
+  url "https://downloads.sourceforge.net/project/kpcli/kpcli-4.1.pl?use_mirror=jaist"
+  sha256 "dedf0e86f44f8f7a1a9c524a45a515846945d01e04f9402571f18c22971eb7db"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
-  revision 1
 
   livecheck do
     url :stable
@@ -16,30 +15,37 @@ class Kpcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "f98cd2f6d98a766d2c37475e492624a9d5553be42139e0bdafc3c640983c5070"
-    sha256 cellar: :any,                 arm64_ventura:  "42b5c2760750cf2c6362b1cdfce067a4e3e1827b52d43149ceadafa7a3b76539"
-    sha256 cellar: :any,                 arm64_monterey: "21972f728630ae7cb65c6dd77390b21c0982acd3fb5a204e865249e83575ebe0"
-    sha256 cellar: :any,                 sonoma:         "2493eaa492127d148cbef665f11a50cf1137abdc433ae0fcd60799ceb06fc329"
-    sha256 cellar: :any,                 ventura:        "885e882245200b612ae79e5c80bfee45b213fcd85925965ed25722a62eacba3e"
-    sha256 cellar: :any,                 monterey:       "3d2d21f4d4de8c842cccba189a4e53e2097d4bec1d9e39ee9fd635f486afc855"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b79024eb825c3c57f0f7c1b55f06f78fd20f67f1e6a3cd6eb4e1b9053a549b96"
+    sha256 cellar: :any,                 arm64_sonoma:   "c7bc0ef59d9caec5c48f47b609a4d36e1305a88cac6f9ebdeb33cb20be4867c4"
+    sha256 cellar: :any,                 arm64_ventura:  "f22469e7f9b815ea840b6e9e796247728dfdbf1a5de884bcc202f285436412c9"
+    sha256 cellar: :any,                 arm64_monterey: "45723b6731c390994768c83d514d63a462e25152f596803637e37b4973718560"
+    sha256 cellar: :any,                 sonoma:         "6054435c1158b36b1845b3b563f8e3bf3d6d284166346155e0e92985f45aa28e"
+    sha256 cellar: :any,                 ventura:        "0ab43cd7b8d801b481d3d80d33ea56e4ec6e31e13eff468fe917a0fc014325e0"
+    sha256 cellar: :any,                 monterey:       "4cb0734bb1a2e7889535858462c1cb352f13de0177d0083273f982b6f0ef826f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51769e2425233df85bd8e2bf47921e1669587df47889b2419c14164d3325f576"
   end
 
   depends_on "readline"
 
+  uses_from_macos "ncurses"
   uses_from_macos "perl"
 
   resource "Mac::Pasteboard" do
     on_macos do
-      url "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.103.tar.gz"
-      sha256 "2f5e8dd2db0d6445558484ca6d42d839c5a97ee8aa1b250e694d67d5b7f6634c"
+      url "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.104.tar.gz"
+      sha256 "c55a4431188bec4873212a7c308f835fd1f0e3ba1958173037b5e2d0100fca40"
+
+      # fix incompatible pointer error, upstream pr ref, https://github.com/trwyant/perl-Mac-Pasteboard/pull/5
+      patch do
+        url "https://github.com/trwyant/perl-Mac-Pasteboard/commit/0d5537e912409429d565e9b755e9e4e9c125fc55.patch?full_index=1"
+        sha256 "feae9fd03d694440d73b0ace29bd4c18788015ac51a7aa797f97d501567d613b"
+      end
     end
   end
 
   resource "Clone" do
     on_linux do
-      url "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Clone-0.45.tar.gz"
-      sha256 "cbb6ee348afa95432e4878893b46752549e70dc68fe6d9e430d1d2e99079a9e6"
+      url "https://cpan.metacpan.org/authors/id/G/GA/GARU/Clone-0.46.tar.gz"
+      sha256 "aadeed5e4c8bd6bbdf68c0dd0066cb513e16ab9e5b4382dc4a0aafd55890697b"
     end
   end
 
@@ -86,8 +92,8 @@ class Kpcli < Formula
   end
 
   resource "Clipboard" do
-    url "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.28.tar.gz"
-    sha256 "9e8d79015194263357c25a0f5d094800fff43bdbf9f8601ec3b0ed5eb0966d26"
+    url "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.29.tar.gz"
+    sha256 "7eea786eb401ab7f6651e50dc5ea0b26431112a14353ed0fdb2307bac241aaea"
   end
 
   resource "Capture::Tiny" do
