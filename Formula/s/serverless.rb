@@ -30,9 +30,6 @@ class Serverless < Formula
       .glob("sdk-py/serverless_sdk/vendor/wrapt/_wrappers.cpython-*-linux-gnu.so")
       .map(&:unlink)
       .empty? && raise("Unable to find wrapt shared library to delete.")
-
-    # Replace universal binaries with their native slices
-    deuniversalize_machos libexec/"lib/node_modules/serverless/node_modules/fsevents/fsevents.node"
   end
 
   test do
