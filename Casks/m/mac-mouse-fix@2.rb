@@ -1,6 +1,6 @@
-cask "mac-mouse-fix" do
-  version "3.0.2"
-  sha256 "b839288d5a2bb14042dc40405d1c826c0e9efad424da37ed3e2482d87c21f21d"
+cask "mac-mouse-fix@2" do
+  version "2.2.4"
+  sha256 "3d3bdbadfc612b25bd8d306d5f4014433036ed94f6f8e15d025b1de1eacecaf2"
 
   url "https://mirror.ghproxy.com/https://github.com/noah-nuebling/mac-mouse-fix/releases/download/#{version}/MacMouseFixApp.zip",
       verified: "github.com/noah-nuebling/mac-mouse-fix/"
@@ -10,11 +10,10 @@ cask "mac-mouse-fix" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(2(?:\.\d+)+)$/i)
   end
 
-  auto_updates true
-  conflicts_with cask: "mac-mouse-fix@2"
+  conflicts_with cask: "mac-mouse-fix"
   depends_on macos: ">= :high_sierra"
 
   app "Mac Mouse Fix.app"

@@ -20,6 +20,7 @@ class ArcadeLearningEnvironment < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pybind11" => :build
   depends_on "python-setuptools" => :build
   depends_on macos: :catalina # requires std::filesystem
   depends_on "numpy"
@@ -42,6 +43,13 @@ class ArcadeLearningEnvironment < Formula
   patch do
     url "https://github.com/mgbellemare/Arcade-Learning-Environment/commit/7e3d9ffbca6d97b49f48e46c030b4236eb09019b.patch?full_index=1"
     sha256 "64cf83625fe19bc32097b34853db6752fcf835a3d42909a9ac88315dfca2b85f"
+  end
+
+  # Allow building with system pybind11
+  # https://github.com/Farama-Foundation/Arcade-Learning-Environment/pull/528
+  patch do
+    url "https://github.com/Farama-Foundation/Arcade-Learning-Environment/commit/52b326151972d7df663c6afe44d0b699a531739d.patch?full_index=1"
+    sha256 "4322db4e4578e08ae9882cee260b7bc4f3477869bcd9295f3f4f3e6c56b29026"
   end
 
   def python3
