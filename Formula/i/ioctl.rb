@@ -5,6 +5,11 @@ class Ioctl < Formula
   sha256 "7ba82d03f51f46355230c14f9d68e523130dd6706d255cda6aec81cbd73ff59e"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cd687f31cda96cf0f517a7dbf297f7e264d006358802fea5afb60c6c90bbfa15"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "ebb4eb5e93a6d7866c82f48c42ba6c985b40c89dabf87d54bc209322ccfa451c"
