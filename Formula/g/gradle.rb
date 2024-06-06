@@ -11,21 +11,24 @@ class Gradle < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a5a8957f5ade83c7b7f36fd2f8fd527b727dcbf2630d3c29138fae0ef382f392"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a5a8957f5ade83c7b7f36fd2f8fd527b727dcbf2630d3c29138fae0ef382f392"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a5a8957f5ade83c7b7f36fd2f8fd527b727dcbf2630d3c29138fae0ef382f392"
-    sha256 cellar: :any_skip_relocation, sonoma:         "a5051137a2865567d9cb07d982eac3b3ac103a8567977bc6f89010861e429ff4"
-    sha256 cellar: :any_skip_relocation, ventura:        "a5051137a2865567d9cb07d982eac3b3ac103a8567977bc6f89010861e429ff4"
-    sha256 cellar: :any_skip_relocation, monterey:       "a5051137a2865567d9cb07d982eac3b3ac103a8567977bc6f89010861e429ff4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "099b31cc0d0295866a518996aed1a83da1faf37028d40a909d473570546342bb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "efcdc5e35e4c84992247cca63dc6e4cfa9fb560e3887c2e4caafa62d7cad045c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "efcdc5e35e4c84992247cca63dc6e4cfa9fb560e3887c2e4caafa62d7cad045c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "efcdc5e35e4c84992247cca63dc6e4cfa9fb560e3887c2e4caafa62d7cad045c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "bd2537fef2d3504b1b195131abbfbf302a4d4bf2e86984249dd4e8dcc2c2d1a5"
+    sha256 cellar: :any_skip_relocation, ventura:        "bd2537fef2d3504b1b195131abbfbf302a4d4bf2e86984249dd4e8dcc2c2d1a5"
+    sha256 cellar: :any_skip_relocation, monterey:       "bd2537fef2d3504b1b195131abbfbf302a4d4bf2e86984249dd4e8dcc2c2d1a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "834067560a7903b2bbd9c686b4830e736157ddbcedeb655a19fb565e735c42de"
   end
 
-  depends_on "openjdk"
+  # no java 22 support for gradle 8.7
+  # https://github.com/gradle/gradle/blob/master/platforms/documentation/docs/src/docs/userguide/releases/compatibility.adoc
+  depends_on "openjdk@21"
 
   def install
     rm_f Dir["bin/*.bat"]
     libexec.install %w[bin docs lib src]
-    env = Language::Java.overridable_java_home_env
+    env = Language::Java.overridable_java_home_env("21")
     (bin/"gradle").write_env_script libexec/"bin/gradle", env
   end
 
