@@ -8,6 +8,9 @@ class Negfix8 < Formula
     sha256 cellar: :any_skip_relocation, all: "dc774cdde317803fe6a9f0b4d63531556e781467b1491407c94fc11509fa0997"
   end
 
+  # https://github.com/chrishunt/negfix8/pull/2#issuecomment-1956815369
+  deprecate! date: "2024-06-10", because: :unmaintained
+
   depends_on "imagemagick"
 
   def install
