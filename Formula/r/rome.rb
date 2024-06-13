@@ -1,6 +1,6 @@
 class Rome < Formula
   desc "Carthage cache for S3, Minio, Ceph, Google Storage, Artifactory and many others"
-  homepage "https://github.com/tmspzz/Rome/#readme"
+  homepage "https://github.com/tmspzz/Rome"
   url "https://mirror.ghproxy.com/https://github.com/tmspzz/Rome/archive/refs/tags/v0.24.0.65.tar.gz"
   sha256 "7aee4de208a78208559d6a9ad17788d70f62cace4ff2435b3e817a3e03efdef6"
   license "MIT"

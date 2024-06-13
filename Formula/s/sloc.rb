@@ -2,7 +2,7 @@ require "language/node"
 
 class Sloc < Formula
   desc "Simple tool to count source lines of code"
-  homepage "https://github.com/flosse/sloc#readme"
+  homepage "https://github.com/flosse/sloc"
   url "https://registry.npmjs.org/sloc/-/sloc-0.3.2.tgz"
   sha256 "25ac2a41e015a8ee0d0a890221d064ad0288be8ef742c4ec903c84a07e62b347"
   license "MIT"

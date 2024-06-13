@@ -1,6 +1,6 @@
 class ClickhouseOdbc < Formula
   desc "Official ODBC driver implementation for accessing ClickHouse as a data source"
-  homepage "https://github.com/ClickHouse/clickhouse-odbc#readme"
+  homepage "https://github.com/ClickHouse/clickhouse-odbc"
   url "https://github.com/ClickHouse/clickhouse-odbc.git",
       tag:      "v1.2.1.20220905",
       revision: "fab6efc57d671155c3a386f49884666b2a02c7b7"

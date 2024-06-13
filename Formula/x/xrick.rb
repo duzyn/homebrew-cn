@@ -8,7 +8,7 @@ class Xrick < Formula
   revision 1
 
   livecheck do
-    url "http://www.bigorno.net/xrick/download.html"
+    url "https://www.bigorno.net/xrick/download.html"
     regex(/href=.*?xrick[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 

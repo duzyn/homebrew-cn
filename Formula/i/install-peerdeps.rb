@@ -2,7 +2,7 @@ require "language/node"
 
 class InstallPeerdeps < Formula
   desc "CLI to automatically install peerDeps"
-  homepage "https://github.com/nathanhleung/install-peerdeps#readme"
+  homepage "https://github.com/nathanhleung/install-peerdeps"
   url "https://registry.npmjs.org/install-peerdeps/-/install-peerdeps-3.0.3.tgz"
   sha256 "a1f0e865f9db356aa15ccc9cb56e200c442229bef9e1e1ef8c73bcd587dfc506"
   license "MIT"

@@ -30,7 +30,7 @@ class Xidel < Formula
     resource("internettools") { url "https://github.com/benibela/internettools.git", branch: "master" }
     resource("pasdblstrutils") { url "https://github.com/BeRo1985/pasdblstrutils.git", branch: "master" }
     resource("rcmdline") { url "https://github.com/benibela/rcmdline.git", branch: "master" }
-    resource("synapse") { url "http://svn.code.sf.net/p/synalist/code/synapse/40" }
+    resource("synapse") { url "https://svn.code.sf.net/p/synalist/code/synapse/40/" }
   end
 
   depends_on "fpc" => :build
