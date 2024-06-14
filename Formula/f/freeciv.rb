@@ -1,6 +1,6 @@
 class Freeciv < Formula
   desc "Free and Open Source empire-building strategy game"
-  homepage "http://freeciv.org"
+  homepage "https://freeciv.org/"
   url "https://downloads.sourceforge.net/project/freeciv/Freeciv%203.1/3.1.1/freeciv-3.1.1.tar.xz?use_mirror=jaist"
   sha256 "b2bd00c0e2a6c81bcb52aa0dddf81f2f4543705bf7a9fcd5afac3f7b3fff5ef6"
   license "GPL-2.0-or-later"
