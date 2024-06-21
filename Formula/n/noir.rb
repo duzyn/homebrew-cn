@@ -1,7 +1,7 @@
 class Noir < Formula
   desc "Attack surface detector that identifies endpoints by static analysis"
-  homepage "https://github.com/noir-cr/noir"
-  url "https://mirror.ghproxy.com/https://github.com/noir-cr/noir/archive/refs/tags/v0.16.0.tar.gz"
+  homepage "https://github.com/owasp-noir/noir"
+  url "https://mirror.ghproxy.com/https://github.com/owasp-noir/noir/archive/refs/tags/v0.16.0.tar.gz"
   sha256 "fb523ccec493ed6cfc590e0436de6754aea4d2cbf17b64b9df8a5babd095116d"
   license "MIT"
 
@@ -33,7 +33,7 @@ class Noir < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/noir --version")
 
-    system "git", "clone", "https://github.com/noir-cr/noir.git"
+    system "git", "clone", "https://github.com/owasp-noir/noir.git"
     output = shell_output("#{bin}/noir -b noir 2>&1")
     assert_match "Generating Report.", output
   end
