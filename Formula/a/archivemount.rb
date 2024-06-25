@@ -1,7 +1,7 @@
 class Archivemount < Formula
   desc "File system for accessing archives using libarchive"
-  homepage "https://www.cybernoia.de/software/archivemount.html"
-  url "https://www.cybernoia.de/software/archivemount/archivemount-0.9.1.tar.gz"
+  homepage "https://mirror.ghproxy.com/https://github.com/cybernoid/archivemount"
+  url "https://slackware.uk/~urchlay/src/archivemount-0.9.1.tar.gz"
   sha256 "c529b981cacb19541b48ddafdafb2ede47a40fcaf16c677c1e2cd198b159c5b3"
   license "LGPL-2.0-or-later"
 
