@@ -24,10 +24,16 @@ class Solo2Cli < Formula
     depends_on "systemd"
   end
 
+  # rust 1.79.0 build patch, upstream pr ref, https://github.com/solokeys/solo2-cli/pull/122
+  patch do
+    url "https://github.com/solokeys/solo2-cli/commit/c4b3f28062860c914f3922ad58604f0bc36ead93.patch?full_index=1"
+    sha256 "1f3e08c4c6f17022e8762852ef8e2de94e1c0161d4409d60e5b04f23d72b632d"
+  end
+
   def install
     system "cargo", "install", "--all-features", *std_cargo_args
 
-    bash_completion.install "target/release/solo2.bash"
+    bash_completion.install "target/release/solo2.bash" => "solo2"
     fish_completion.install "target/release/solo2.fish"
     zsh_completion.install "target/release/_solo2"
   end
