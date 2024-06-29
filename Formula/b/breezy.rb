@@ -2,20 +2,19 @@ class Breezy < Formula
   include Language::Python::Virtualenv
 
   desc "Version control system implemented in Python with multi-format support"
-  homepage "https://www.breezy-vcs.org/"
-  url "https://files.pythonhosted.org/packages/94/15/6246755badf310cd8397cfc8b0e6cc454db6eec2a42d7a926ad2f72b4482/breezy-3.3.7.tar.gz"
-  sha256 "e70e03277ffa97e1bc27a24b30539bd3132e6d0ad9512b91db6dd499c254980d"
+  homepage "https://github.com/breezy-team/breezy"
+  url "https://files.pythonhosted.org/packages/bb/3f/f1b74d0e32c5455e53655bf095724d37e31b2f184b2dddb899cedbbb6c56/breezy-3.3.8.tar.gz"
+  sha256 "14d59bbdf86b66c17327eb79a5883b4c70cc7794ed34f3e8a0adfce64edc58bf"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "acc5e61e499526ca3dd0508fd0cca969722ce9a654825281df5f3e57770cfc76"
-    sha256 cellar: :any,                 arm64_ventura:  "9b3260a8a19c24d0165063bc210f453c689779f251a586ef78fa2cd7a952d777"
-    sha256 cellar: :any,                 arm64_monterey: "5efda26917990910f02c5d385f82c29cf9f717045ba6e99cf61cab8a578d9457"
-    sha256 cellar: :any,                 sonoma:         "2439fcb60d8cd39e7bb6ebc9a1af0cadfe2b6ff343664abfb260b0b1e80979e0"
-    sha256 cellar: :any,                 ventura:        "b69f346ef0f7b2493be6420b19db572a543e64e9c83c943906ca55233e3af935"
-    sha256 cellar: :any,                 monterey:       "0e429466f9584326d10cda03effa737f938f1a5ffe253b64b03ff2680ee1142e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5e34be5aa5b67834d84077b3a87f120018a50851cbe5c4419a32996a3fe5f72"
+    sha256 cellar: :any,                 arm64_sonoma:   "edab49633772709291400f725343ba8cfe84aa826f27e91c31fbd0db0da5c6fe"
+    sha256 cellar: :any,                 arm64_ventura:  "73f514eaba1a5cdb3484576c194333750bcb78dcd9a58b8369f193389a7f6313"
+    sha256 cellar: :any,                 arm64_monterey: "ea1db54566f6c6d7382704537bfde477d022cd55aaee391cf92f41a58852855b"
+    sha256 cellar: :any,                 sonoma:         "a7b1c719596410c2325aae139aa61cae610fbbc11051e16001e57a72e747a69f"
+    sha256 cellar: :any,                 ventura:        "8255ce072473e845096bb43e378a34af9dc01a448ac62927e5120e5e9b91fa04"
+    sha256 cellar: :any,                 monterey:       "a8ccd1ba70ac273ca529e37a920482ef03b108844fab168abf4782f38b4a39b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3535c3f987f6ed3e8824c74dd9efe6da885483db7a474890f15bde754d1c53a"
   end
 
   depends_on "gettext" => :build
@@ -54,8 +53,8 @@ class Breezy < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz"
-    sha256 "f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0"
+    url "https://files.pythonhosted.org/packages/0d/9d/c587bea18a7e40099857015baee4cece7aca32cd404af953bdeb95ac8e47/setuptools-70.1.1.tar.gz"
+    sha256 "937a48c7cdb7a21eb53cd7f9b59e525503aa8abaf3584c730dc5f7a5bec3a650"
   end
 
   resource "six" do
