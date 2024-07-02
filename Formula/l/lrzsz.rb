@@ -27,6 +27,8 @@ class Lrzsz < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f5db00a0b2cdc4920a809f4aa1f352eb6962980270d15e65dd418a99ac61ab2"
   end
 
+  conflicts_with "lrzip", because: "both install `lrz` binaries"
+
   patch :p0 do
     url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/macports/macports-ports/2319730/comms/lrzsz/files/patch-man-lsz.diff"
     sha256 "71783e1d004661c03a1cdf77d0d76a378332272ea47bf29b1eb4c58cbf050a8d"

@@ -37,6 +37,8 @@ class Geomview < Formula
   depends_on "mesa-glu"
   depends_on "openmotif"
 
+  conflicts_with "clip", because: "both install `clip` binaries"
+
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
     url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"

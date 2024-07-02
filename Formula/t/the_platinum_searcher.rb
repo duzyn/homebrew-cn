@@ -23,6 +23,8 @@ class ThePlatinumSearcher < Formula
 
   depends_on "go" => :build
 
+  conflicts_with "tcl-tk", because: "both install `pt` binaries"
+
   # Patch to remove godep dependency. Remove when this is merged into release:
   # https://github.com/monochromegane/the_platinum_searcher/pull/211
   patch do
