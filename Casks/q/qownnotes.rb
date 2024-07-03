@@ -1,6 +1,6 @@
 cask "qownnotes" do
-  version "24.6.3"
-  sha256 "c2728062c7d78dec793ba9b5973bee7d6c6377e622ca4fc8022c71f6edb2ff91"
+  version "24.7.0"
+  sha256 "f92eafdfa313b24164280835f24ba21e98a2b9cd2499588943cd909f720b27b9"
 
   url "https://mirror.ghproxy.com/https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
@@ -22,4 +22,8 @@ cask "qownnotes" do
     "~/Library/Preferences/com.pbe.QOwnNotes.plist",
     "~/Library/Saved Application State/com.PBE.QOwnNotes.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
