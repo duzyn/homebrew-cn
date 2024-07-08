@@ -1,6 +1,6 @@
 class Screen < Formula
   desc "Terminal multiplexer with VT100/ANSI terminal emulation"
-  homepage "https://www.gnu.org/software/screen"
+  homepage "https://www.gnu.org/software/screen/"
   license "GPL-3.0-or-later"
   head "https://git.savannah.gnu.org/git/screen.git", branch: "master"
 

@@ -1,19 +1,19 @@
 class Uv < Formula
   desc "Extremely fast Python package installer and resolver, written in Rust"
   homepage "https://github.com/astral-sh/uv"
-  url "https://mirror.ghproxy.com/https://github.com/astral-sh/uv/archive/refs/tags/0.2.21.tar.gz"
-  sha256 "8f84f927435bf15a877e00097ea8e6cfb6cf3cf021331bfc02de0f7fd3778d0f"
+  url "https://mirror.ghproxy.com/https://github.com/astral-sh/uv/archive/refs/tags/0.2.22.tar.gz"
+  sha256 "982373b72bf7841a5f31a5b2f19e027d70a14c201434bf427dc76a5bbfcc0d8b"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "202b9a85736a959e280478959308bfa12a99bf83e88b00f4a2d7add09eef9515"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4144eadcc32d6155e9d84be9c33c759f612ad89db0f9fbfa692491729d7a3149"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7ed4bbcc24b9e03098bfdd72cc4daf4ab0c6cbf3a6bcbbe65ac2e3c53df5bf7"
-    sha256 cellar: :any_skip_relocation, sonoma:         "5b4060af8f8bf46559b1816268f1c0cf1df1128776e853ee9106a8f0149a01f7"
-    sha256 cellar: :any_skip_relocation, ventura:        "7a965db089dc33f229494b2d751370bd2f39d5585938e0832900334dd1d1c694"
-    sha256 cellar: :any_skip_relocation, monterey:       "ea7d9b1fb44eb6dafa3835e270d421a74702338b89b8bb854c85865e254af27e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c88b0158f756de4d8db81a411dd16909783eeb2be41b8a9971a87320127c321"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "55d6aab11e026a54d52a4edd3e6a83dcaddef553cc816fb55a7acb56a24599d2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5d3601e8bc667a622e43d13d216b6586e5010910295de2022b1bd1e0f6b7dfa8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aeaffbb6f1fa5a86293cae2e0f35f4513756905555dffdeb442eef49b8568e96"
+    sha256 cellar: :any_skip_relocation, sonoma:         "73e7e21367756be03af88ea41b3ce0345c61bcc1599ef498cc94062be73fd2a5"
+    sha256 cellar: :any_skip_relocation, ventura:        "5d2393a70d3ab12b4a59c9ccd505f7dfda7011448234676189df339ac695e8b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "f4bd29c6d72403b36bc746c92e10c336d6cb0603a17a968b54bf76ef0dc8eafb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47dff1adc1ea3a07e78858a5558f881a149b5df1460c28012875203daf6accda"
   end
 
   depends_on "pkg-config" => :build
