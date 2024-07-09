@@ -1,7 +1,7 @@
 class Superfile < Formula
   desc "Modern and pretty fancy file manager for the terminal"
-  homepage "https://github.com/MHNightCat/superfile"
-  url "https://mirror.ghproxy.com/https://github.com/MHNightCat/superfile/archive/refs/tags/v1.1.3.tar.gz"
+  homepage "https://github.com/yorukot/superfile"
+  url "https://mirror.ghproxy.com/https://github.com/yorukot/superfile/archive/refs/tags/v1.1.3.tar.gz"
   sha256 "1735a2a7886b670ff392f1331b2af142416691ac86303945feccbc4a1f2c6a43"
   license "MIT"
 

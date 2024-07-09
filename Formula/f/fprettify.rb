@@ -2,11 +2,11 @@ class Fprettify < Formula
   include Language::Python::Virtualenv
 
   desc "Auto-formatter for modern fortran source code"
-  homepage "https://github.com/pseewald/fprettify/"
-  url "https://mirror.ghproxy.com/https://github.com/pseewald/fprettify/archive/refs/tags/v0.3.7.tar.gz"
+  homepage "https://github.com/fortran-lang/fprettify/"
+  url "https://mirror.ghproxy.com/https://github.com/fortran-lang/fprettify/archive/refs/tags/v0.3.7.tar.gz"
   sha256 "052da19a9080a6641d3202e10572cf3d978e6bcc0e7db29c1eb8ba724e89adc7"
   license "GPL-3.0-or-later"
-  head "https://github.com/pseewald/fprettify.git", branch: "master"
+  head "https://github.com/fortran-lang/fprettify.git", branch: "master"
 
   bottle do
     rebuild 2

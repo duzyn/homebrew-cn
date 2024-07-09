@@ -1,10 +1,10 @@
 class Spr < Formula
   desc "Submit pull requests for individual, amendable, rebaseable commits to GitHub"
-  homepage "https://github.com/getcord/spr"
-  url "https://mirror.ghproxy.com/https://github.com/getcord/spr/archive/refs/tags/v1.3.5.tar.gz"
+  homepage "https://github.com/spacedentist/spr"
+  url "https://mirror.ghproxy.com/https://github.com/spacedentist/spr/archive/refs/tags/v1.3.5.tar.gz"
   sha256 "d1f53f4222fd9916c9edc0457bfe04bac66d9ff60a7c0e7a0c4519317c3f3fb8"
   license "MIT"
-  head "https://github.com/getcord/spr.git", branch: "master"
+  head "https://github.com/spacedentist/spr.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "410664abef3b1b365b94d63b796d963b8b0f95fc7396bc1057172b53ee1ce914"

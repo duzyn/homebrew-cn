@@ -1,6 +1,6 @@
 class Libprotoident < Formula
   desc "Performs application layer protocol identification for flows"
-  homepage "https://github.com/wanduow/libprotoident"
+  homepage "https://github.com/LibtraceTeam/libprotoident"
   url "https://mirror.ghproxy.com/https://github.com/LibtraceTeam/libprotoident/archive/refs/tags/2.0.15-2.tar.gz"
   sha256 "2b43a492fe1d7ada2e7b7b164c8e35220b35bf816bd971c7f77decc74b69801e"
   license "LGPL-3.0-or-later"

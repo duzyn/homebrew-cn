@@ -2,11 +2,11 @@ class ReorderPythonImports < Formula
   include Language::Python::Virtualenv
 
   desc "Rewrites source to reorder python imports"
-  homepage "https://github.com/asottile/reorder_python_imports"
+  homepage "https://github.com/asottile/reorder-python-imports"
   url "https://files.pythonhosted.org/packages/ae/f8/63ecf759c9149d7d7a8b612ebfe74901164dde9adcb1c40975ddc713db1c/reorder_python_imports-3.13.0.tar.gz"
   sha256 "994235fe9273373af6df7290de6a362a2426eb9bb800f5197367fe54b081f4d9"
   license "MIT"
-  head "https://github.com/asottile/reorder_python_imports.git", branch: "main"
+  head "https://github.com/asottile/reorder-python-imports.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2184a6a4047d37b0c9cb152b9fc78a902928c1eb21acc76dbbeb3a3b964eafe8"
