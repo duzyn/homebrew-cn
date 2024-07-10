@@ -24,11 +24,16 @@ class Julius < Formula
 
   uses_from_macos "zlib"
 
+  conflicts_with "cmuclmtk", because: "both install `binlm2arpa` binaries"
+
   # A pull request to fix this has been submitted upstream:
   # https://github.com/julius-speech/julius/pull/184
   patch :DATA
 
   def install
+    # Workaround for Xcode 15
+    ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
+
     # https://github.com/julius-speech/julius/issues/153 fixes implicit declaration error
     inreplace "libsent/src/adin/adin_mic_darwin_coreaudio.c",
       "#include <stdio.h>", "#include <stdio.h>\n#include <sent/stddefs.h>"

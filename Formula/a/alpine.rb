@@ -29,6 +29,7 @@ class Alpine < Formula
 
   depends_on "openssl@3"
 
+  uses_from_macos "krb5"
   uses_from_macos "ncurses"
   uses_from_macos "openldap"
 
@@ -36,11 +37,17 @@ class Alpine < Formula
     depends_on "linux-pam"
   end
 
+  conflicts_with "imap-uw", because: "both install `mailutil` binaries"
   conflicts_with "macpine", because: "both install `alpine` binaries"
 
   # patch for macOS obtained from developer; see git commit
   # https://repo.or.cz/alpine.git/commitdiff/701aebc00aff0585ce6c96653714e4ba94834c9c
   patch :DATA
+  # fix `error: incompatible function pointer types`
+  patch do
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gentoo/gentoo/37cdeedd76ed2f1f9d169431ac98c9e40afe9372/mail-client/alpine/files/alpine-2.26-fix-clang16-build-no-chappa.patch"
+    sha256 "0e51e8253f9e5ff7fc9599845ec2bd3a0007a1bffb097a603dfd8d6fa6362797"
+  end
 
   def install
     ENV.deparallelize
