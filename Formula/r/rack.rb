@@ -46,7 +46,6 @@ class Rack < Formula
       ln_s "internal", "vendor"
       system "script/build", "rack"
       bin.install "rack"
-      prefix.install_metafiles
     end
   end
 

@@ -6,20 +6,22 @@ class Gitless < Formula
   url "https://files.pythonhosted.org/packages/9c/2e/457ae38c636c5947d603c84fea1cf51b7fcd0c8a5e4a9f2899b5b71534a0/gitless-0.8.8.tar.gz"
   sha256 "590d9636d2ca743fdd972d9bf1f55027c1d7bc2ab1d5e877868807c3359b78ef"
   license "MIT"
-  revision 15
+  revision 16
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_sonoma:   "5a34588024e77b81bb4159be66a1cd88ac9b1fc6cf2fe4e38304ffdc8c7e257b"
-    sha256 cellar: :any,                 arm64_ventura:  "3962cf0338bd55bd51c56105f66b9b61c13108b43741c933c0f22bee9aef1ae2"
-    sha256 cellar: :any,                 arm64_monterey: "b38610d904c03a9cc861c465667da9702f65ffb66e2e57a5110152f5c072fb71"
-    sha256 cellar: :any,                 sonoma:         "4ec25c83e7b3d13501d74c80984ff77fcc36c6b271529102eb248cccd8ea2811"
-    sha256 cellar: :any,                 ventura:        "98ce8f01cc7cf04682efb27b14cdbea6c5a02838b27136912ea4fed092be0b58"
-    sha256 cellar: :any,                 monterey:       "33cd664f810a9ef2571c2444ab85b51a828a1d71c13bbe72fb0db404a9960e63"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c245e63afd7c27ce7ce170cb89179054d81d68421f87fdba927ba0042c58ce1e"
+    sha256 cellar: :any,                 arm64_sonoma:   "69850517e41bbb09758710e5a07d557d8b1ec37f14aea0c07c384aa5e7d9f6a5"
+    sha256 cellar: :any,                 arm64_ventura:  "2a0595c10e3eff2323d62ff70d335ced3384f1ed87ef9b600e52afd49f16b215"
+    sha256 cellar: :any,                 arm64_monterey: "d1c13b796904cc0b83713ed352b8a474956074ddcf4f203fc24928c145f2b5cc"
+    sha256 cellar: :any,                 sonoma:         "ef319df5ff9b6eccd9bcb94aba23387879571dbdbae5eaf0a8d466bf52d10927"
+    sha256 cellar: :any,                 ventura:        "8f3f8871d39d0ceac4ec5da03f5498ea5d483cb175b36cf8d624ab78e34c5c47"
+    sha256 cellar: :any,                 monterey:       "9668d8dde6043374fc13d1b92d3c4b8b40aa27c94727b8d553b2eeda810f0228"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd06e1a7154b24652d81b9f2f679c18bb8286851d862ef6bf06e8ddcec0735d6"
   end
 
-  depends_on "libgit2"
+  # https://github.com/gitless-vcs/gitless/issues/248
+  deprecate! date: "2024-07-17", because: :unmaintained
+
+  depends_on "libgit2@1.7"
   depends_on "python@3.12"
 
   uses_from_macos "libffi"
