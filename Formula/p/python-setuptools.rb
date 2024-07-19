@@ -1,18 +1,18 @@
 class PythonSetuptools < Formula
   desc "Easily download, build, install, upgrade, and uninstall Python packages"
   homepage "https://setuptools.pypa.io/"
-  url "https://files.pythonhosted.org/packages/65/d8/10a70e86f6c28ae59f101a9de6d77bf70f147180fbf40c3af0f64080adc3/setuptools-70.3.0.tar.gz"
-  sha256 "f171bab1dfbc86b132997f26a119f6056a57950d058587841a0082e8830f9dc5"
+  url "https://files.pythonhosted.org/packages/0e/ae/4a643fdc3b2fe390a6accd55117d5c5af9fbe5da7d2d300c8dd52aa35555/setuptools-71.0.2.tar.gz"
+  sha256 "ca359bea0cd5c8ce267d7463239107e87f312f2e2a11b6ca6357565d82b6c0d7"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4891411677a80b8fa10903357526de1b19b7b70d373dfd16b95162b09e3ae878"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4891411677a80b8fa10903357526de1b19b7b70d373dfd16b95162b09e3ae878"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4891411677a80b8fa10903357526de1b19b7b70d373dfd16b95162b09e3ae878"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3d26ae734c39e859e1366b14bb15391740f7db02fa1d383a7f67d03b1159653f"
-    sha256 cellar: :any_skip_relocation, ventura:        "3d26ae734c39e859e1366b14bb15391740f7db02fa1d383a7f67d03b1159653f"
-    sha256 cellar: :any_skip_relocation, monterey:       "582d5089333a9dc3a33b159d6cc261e8f620cd60f657dce5e34d12365eb0535f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4891411677a80b8fa10903357526de1b19b7b70d373dfd16b95162b09e3ae878"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5a424c3ef3ef068420f461f3146c725980c0da7558ff6bba1d7bc85b9593eb24"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5a424c3ef3ef068420f461f3146c725980c0da7558ff6bba1d7bc85b9593eb24"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5a424c3ef3ef068420f461f3146c725980c0da7558ff6bba1d7bc85b9593eb24"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9599af9e777de315550a51c213311d582fcce238cb808adc96254cd5e1fc6486"
+    sha256 cellar: :any_skip_relocation, ventura:        "9599af9e777de315550a51c213311d582fcce238cb808adc96254cd5e1fc6486"
+    sha256 cellar: :any_skip_relocation, monterey:       "82fdf60a08557f2c21f324c6ad4cd6ef2a3810184e3fa0019eb7868b4348cffa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42d236d302454514a99ba7bd2c868f83620fd17b0f89fba523aed21a3c20b475"
   end
 
   depends_on "python@3.12" => [:build, :test]
