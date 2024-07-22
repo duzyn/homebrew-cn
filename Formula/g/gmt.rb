@@ -19,10 +19,16 @@ class Gmt < Formula
   end
 
   depends_on "cmake" => :build
+
   depends_on "fftw"
   depends_on "gdal"
+  depends_on "geos"
   depends_on "netcdf"
+  depends_on "openblas"
   depends_on "pcre2"
+
+  uses_from_macos "curl"
+  uses_from_macos "zlib"
 
   resource "gshhg" do
     url "https://mirror.ghproxy.com/https://github.com/GenericMappingTools/gshhg-gmt/releases/download/2.3.7/gshhg-gmt-2.3.7.tar.gz"
