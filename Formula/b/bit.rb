@@ -39,11 +39,11 @@ class Bit < Formula
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
     node_modules = libexec/"lib/node_modules/bit-bin/node_modules"
     (node_modules/"leveldown/prebuilds/linux-x64/node.napi.musl.node").unlink
-    (node_modules/"leveldown/prebuilds").each_child { |dir| dir.rmtree if dir.basename.to_s != "#{os}-#{arch}" }
+    (node_modules/"leveldown/prebuilds").each_child { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
 
     # Remove vendored pre-built binary `terminal-notifier`
     node_notifier_vendor_dir = node_modules/"node-notifier/vendor"
-    node_notifier_vendor_dir.rmtree # remove vendored pre-built binaries
+    rm_r(node_notifier_vendor_dir) # remove vendored pre-built binaries
 
     if OS.mac?
       terminal_notifier_dir = node_notifier_vendor_dir/"mac.noindex"
