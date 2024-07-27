@@ -1,13 +1,12 @@
 class OpensslAT30 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
-  homepage "https://openssl.org/"
-  url "https://www.openssl.org/source/openssl-3.0.14.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.0.14.tar.gz"
+  homepage "https://openssl-library.org"
+  url "https://mirror.ghproxy.com/https://github.com/openssl/openssl/releases/download/openssl-3.0.14/openssl-3.0.14.tar.gz"
   sha256 "eeca035d4dd4e84fc25846d952da6297484afa0650a6f84c682e39df3a4123ca"
   license "Apache-2.0"
 
   livecheck do
-    url "https://www.openssl.org/source/"
+    url "https://openssl-library.org/source/"
     regex(/href=.*?openssl[._-]v?(3\.0(?:\.\d+)+)\.t/i)
   end
 

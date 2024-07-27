@@ -42,7 +42,7 @@ class Kafka < Formula
       "dataDir=/tmp/zookeeper", "dataDir=#{data}/zookeeper"
 
     # remove Windows scripts
-    rm_rf "bin/windows"
+    rm_r("bin/windows")
 
     libexec.install "libs"
 

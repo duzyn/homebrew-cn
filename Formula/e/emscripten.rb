@@ -91,7 +91,7 @@ class Emscripten < Formula
     libexec.install buildpath.children
 
     # Remove unneeded files. See `tools/install.py`.
-    (libexec/"test/third_party").rmtree
+    rm_r(libexec/"test/third_party")
 
     # emscripten needs an llvm build with the following executables:
     # https://github.com/emscripten-core/emscripten/blob/#{version}/docs/packaging.md#dependencies
@@ -169,12 +169,11 @@ class Emscripten < Formula
 
     cd libexec do
       system "npm", "install", *Language::Node.local_npm_install_args
-      rm_f "node_modules/ws/builderror.log" # Avoid references to Homebrew shims
       # Delete native GraalVM image in incompatible platforms.
       if OS.linux?
-        rm_rf "node_modules/google-closure-compiler-linux"
+        rm_r("node_modules/google-closure-compiler-linux")
       elsif Hardware::CPU.arm?
-        rm_rf "node_modules/google-closure-compiler-osx"
+        rm_r("node_modules/google-closure-compiler-osx")
       end
     end
 
