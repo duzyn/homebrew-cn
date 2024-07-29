@@ -34,7 +34,7 @@ class I2p < Formula
 
     # Replace vendored copy of java-service-wrapper with brewed version.
     rm libexec/"lib/wrapper.jar"
-    rm_rf libexec/"lib/wrapper"
+    rm_r(libexec/"lib/wrapper")
     jsw_libexec = Formula["java-service-wrapper"].opt_libexec
     ln_s jsw_libexec/"lib/wrapper.jar", libexec/"lib"
     ln_s jsw_libexec/"lib/#{shared_library("libwrapper")}", libexec/"lib"

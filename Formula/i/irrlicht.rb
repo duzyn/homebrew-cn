@@ -54,7 +54,7 @@ class Irrlicht < Formula
   end
 
   def install
-    %w[bzip2 jpeglib libpng zlib].each { |l| (buildpath/"source/Irrlicht"/l).rmtree }
+    %w[bzip2 jpeglib libpng zlib].each { |l| rm_r(buildpath/"source/Irrlicht"/l) }
 
     if OS.mac?
       inreplace "source/Irrlicht/MacOSX/MacOSX.xcodeproj/project.pbxproj" do |s|
