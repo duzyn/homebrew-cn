@@ -36,7 +36,7 @@ class Cdxgen < Formula
 
     # remove pre-built osquery plugin for macos intel builds
     osquery_plugin = node_modules/"@cyclonedx/cdxgen-plugins-bin-darwin-amd64/plugins/osquery"
-    osquery_plugin.rmtree if OS.mac? && Hardware::CPU.intel?
+    rm_r(osquery_plugin) if OS.mac? && Hardware::CPU.intel?
   end
 
   test do

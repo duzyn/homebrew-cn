@@ -37,7 +37,7 @@ class Cortexso < Formula
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
     node_modules = libexec/"lib/node_modules/cortexso/node_modules/cpu-instructions/prebuilds"
     node_modules.each_child do |dir|
-      dir.rmtree if dir.basename.to_s != "#{os}-#{arch}"
+      rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}"
     end
   end
 

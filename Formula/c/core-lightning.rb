@@ -39,7 +39,7 @@ class CoreLightning < Formula
   uses_from_macos "zlib"
 
   def install
-    (buildpath/"external/lowdown").rmtree
+    rm_r(buildpath/"external/lowdown")
     system "poetry", "install", "--only=main"
     system "./configure", "--prefix=#{prefix}"
     system "poetry", "run", "make", "install"

@@ -32,7 +32,7 @@ class Cdktf < Formula
     node_modules = libexec/"lib/node_modules/cdktf-cli/node_modules"
     node_pty_prebuilds = node_modules/"@cdktf/node-pty-prebuilt-multiarch/prebuilds"
     (node_pty_prebuilds/"linux-x64").glob("node.abi*.musl.node").map(&:unlink)
-    node_pty_prebuilds.each_child { |dir| dir.rmtree if dir.basename.to_s != "#{os}-#{arch}" }
+    node_pty_prebuilds.each_child { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
 
     generate_completions_from_executable(libexec/"bin/cdktf", "completion",
                                          shells: [:bash, :zsh], shell_parameter_format: :none)
