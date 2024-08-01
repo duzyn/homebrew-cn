@@ -76,7 +76,7 @@ class Minetest < Formula
     inreplace "src/CMakeLists.txt", "fixup_bundle(", "# \\0"
 
     # Remove bundled libraries to prevent fallback
-    %w[lua gmp jsoncpp].each { |lib| (buildpath/"lib"/lib).rmtree }
+    %w[lua gmp jsoncpp].each { |lib| rm_r(buildpath/"lib"/lib) }
 
     (buildpath/"games/minetest_game").install resource("minetest_game")
     (buildpath/"lib/irrlichtmt").install resource("irrlichtmt")

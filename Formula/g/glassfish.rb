@@ -29,7 +29,7 @@ class Glassfish < Formula
 
   def install
     # Remove all windows files
-    rm_rf Dir["bin/*.bat", "glassfish/bin/*.bat"]
+    rm_r(Dir["bin/*.bat", "glassfish/bin/*.bat"])
 
     libexec.install Dir["*"]
     bin.install Dir["#{libexec}/bin/*"]

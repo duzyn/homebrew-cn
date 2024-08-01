@@ -23,7 +23,7 @@ class DitaOt < Formula
   depends_on "openjdk"
 
   def install
-    rm_f Dir["bin/*.bat", "config/env.bat", "startcmd.*"]
+    rm(Dir["bin/*.bat", "config/env.bat", "startcmd.*"])
     libexec.install Dir["*"]
     (bin/"dita").write_env_script libexec/"bin/dita", JAVA_HOME: Formula["openjdk"].opt_prefix
   end

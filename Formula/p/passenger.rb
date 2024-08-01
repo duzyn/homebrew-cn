@@ -59,9 +59,9 @@ class Passenger < Formula
     (libexec/"download_cache").mkpath
 
     # Fixes https://github.com/phusion/passenger/issues/1288
-    rm_rf "buildout/libev"
-    rm_rf "buildout/libuv"
-    rm_rf "buildout/cache"
+    rm_r("buildout/libev")
+    rm_r("buildout/libuv")
+    rm_r("buildout/cache")
 
     necessary_files = %w[configure Rakefile README.md CONTRIBUTORS
                          CONTRIBUTING.md LICENSE CHANGELOG package.json

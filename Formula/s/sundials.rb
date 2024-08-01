@@ -47,7 +47,7 @@ class Sundials < Formula
     # Only keep one example for testing purposes
     (pkgshare/"examples").install Dir[prefix/"examples/nvector/serial/*"] \
                                   - Dir[prefix/"examples/nvector/serial/{CMake*,Makefile}"]
-    (prefix/"examples").rmtree
+    rm_r(prefix/"examples")
   end
 
   test do

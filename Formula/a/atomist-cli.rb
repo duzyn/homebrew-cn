@@ -33,7 +33,7 @@ class AtomistCli < Formula
     bash_completion.install libexec/"lib/node_modules/@atomist/cli/assets/bash_completion/atomist"
 
     term_size_vendor_dir = libexec/"lib/node_modules/@atomist/cli/node_modules/term-size/vendor"
-    term_size_vendor_dir.rmtree # remove pre-built binaries
+    rm_r(term_size_vendor_dir) # remove pre-built binaries
 
     if OS.mac?
       macos_dir = term_size_vendor_dir/"macos"

@@ -20,7 +20,7 @@ class H2 < Formula
 
   def install
     # Remove windows files
-    rm_f Dir["bin/*.bat"]
+    rm(Dir["bin/*.bat"])
 
     # Fix the permissions on the script
     # upstream issue, https://github.com/h2database/h2database/issues/3254

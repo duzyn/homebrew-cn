@@ -23,7 +23,7 @@ class Liquibase < Formula
   depends_on "openjdk"
 
   def install
-    rm_f Dir["*.bat"]
+    rm(Dir["*.bat"])
 
     chmod 0755, "liquibase"
     libexec.install Dir["*"]

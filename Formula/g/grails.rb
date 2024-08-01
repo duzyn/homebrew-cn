@@ -33,7 +33,7 @@ class Grails < Formula
     libexec.install Dir["*"]
 
     resource("cli").stage do
-      rm_f "bin/grails.bat"
+      rm("bin/grails.bat")
       (libexec/"lib").install Dir["lib/*.jar"]
       bin.install "bin/grails"
       bash_completion.install "bin/grails_completion" => "grails"

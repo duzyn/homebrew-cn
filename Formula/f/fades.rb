@@ -40,7 +40,7 @@ class Fades < Formula
     (bin/"fades").write_env_script(libexec/"bin/fades", PYTHONPATH: ENV["PYTHONPATH"])
 
     man1.install buildpath/"man/fades.1"
-    rm_f libexec/"bin/fades.cmd" # remove windows cmd file
+    rm(libexec/"bin/fades.cmd") # remove windows cmd file
   end
 
   test do

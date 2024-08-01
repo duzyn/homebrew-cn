@@ -538,7 +538,7 @@ class Jupyterlab < Formula
     end
 
     # remove bundled kernel
-    (libexec/"share/jupyter/kernels").rmtree
+    rm_r(libexec/"share/jupyter/kernels")
 
     # install completion
     resource("jupyter-core").stage do

@@ -70,7 +70,7 @@ class ArgyllCms < Formula
     end
 
     # Remove bundled libraries to prevent fallback
-    %w[jpeg png tiff zlib].each { |l| (buildpath/l).rmtree }
+    %w[jpeg png tiff zlib].each { |l| rm_r(buildpath/l) }
 
     inreplace "Jamtop" do |s|
       openssl = Formula["openssl@3"]

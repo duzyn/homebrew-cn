@@ -262,7 +262,7 @@ class Snakemake < Formula
 
   def install
     venv = virtualenv_install_with_resources
-    (venv.site_packages/"pulp/solverdir/cbc").rmtree
+    rm_r(venv.site_packages/"pulp/solverdir/cbc")
   end
 
   test do

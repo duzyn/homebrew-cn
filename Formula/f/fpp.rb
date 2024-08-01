@@ -13,7 +13,7 @@ class Fpp < Formula
   uses_from_macos "python", since: :catalina
 
   def install
-    (buildpath/"src/tests").rmtree
+    rm_r(buildpath/"src/tests")
     # we need to copy the bash file and source python files
     libexec.install "fpp", "src"
     # and then symlink the bash file

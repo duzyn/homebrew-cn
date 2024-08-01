@@ -160,7 +160,7 @@ class Git < Formula
     # purged by Homebrew's post-install cleaner because that doesn't check
     # "Library" directories. It is however pointless to keep around as it
     # only contains the perllocal.pod installation file.
-    rm_rf prefix/"Library/Perl"
+    rm_r(prefix/"Library/Perl")
 
     # Set the macOS keychain credential helper by default
     # (as Apple's CLT's git also does this).

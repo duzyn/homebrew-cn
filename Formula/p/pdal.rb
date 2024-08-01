@@ -78,7 +78,7 @@ class Pdal < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    rm_rf "test/unit"
+    rm_r("test/unit")
     doc.install "examples", "test"
   end
 

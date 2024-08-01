@@ -400,9 +400,9 @@ class Texlive < Formula
     end
 
     # Clean unused files
-    rm_rf share/"texmf-dist/doc"
-    rm_rf share/"tlpkg/installer/wget"
-    rm_rf share/"tlpkg/installer/xz"
+    rm_r(share/"texmf-dist/doc")
+    rm_r(share/"tlpkg/installer/wget")
+    rm_r(share/"tlpkg/installer/xz")
 
     # Set up config files to use the correct path for the TeXLive root
     inreplace buildpath/"texk/kpathsea/texmf.cnf",

@@ -42,7 +42,7 @@ class OcamlFindlib < Formula
                               "OCAML_CORE_STDLIB=#{lib}/ocaml"
 
     # Avoid conflict with ocaml-num package
-    rm_rf Dir[lib/"ocaml/num", lib/"ocaml/num-top"]
+    rm_r(Dir[lib/"ocaml/num", lib/"ocaml/num-top"])
 
     # Save extra findlib.conf to work around https://github.com/Homebrew/homebrew-test-bot/issues/805
     libexec.mkpath
