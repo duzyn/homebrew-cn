@@ -34,7 +34,7 @@ class Rnr < Formula
     mkdir "one"
     touch "one/foo.doc"
 
-    system "#{bin}/rnr", "-f", "doc", "txt", "foo.doc", "one/foo.doc"
+    system bin/"rnr", "-f", "doc", "txt", "foo.doc", "one/foo.doc"
     refute_predicate testpath/"foo.doc", :exist?
     assert_predicate testpath/"foo.txt", :exist?
   end

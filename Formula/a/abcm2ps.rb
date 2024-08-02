@@ -44,7 +44,7 @@ class Abcm2ps < Formula
       "Trompette"z3|z3 |z3 |z3 |:Mc>BA|PGA/G/F|PE>EF|PEF/E/D|C>CPB,|A,G,F,-|
     EOS
 
-    system "#{bin}/abcm2ps", testpath/"voices"
+    system bin/"abcm2ps", testpath/"voices"
     assert_predicate testpath/"Out.ps", :exist?
   end
 end

@@ -38,7 +38,7 @@ class Verapdf < Formula
   end
 
   test do
-    with_env(VERAPDF: "#{bin}/verapdf", NO_CD: "1") do
+    with_env(VERAPDF: bin/"verapdf", NO_CD: "1") do
       system prefix/"tests/exit-status.sh"
     end
   end

@@ -42,6 +42,6 @@ class Calabash < Formula
   test do
     # This small XML pipeline (*.xpl) that comes with Calabash
     # is basically its equivalent "Hello World" program.
-    system "#{bin}/calabash", "#{libexec}/xpl/pipe.xpl"
+    system bin/"calabash", "#{libexec}/xpl/pipe.xpl"
   end
 end

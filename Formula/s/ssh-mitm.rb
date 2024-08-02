@@ -118,6 +118,10 @@ class SshMitm < Formula
   end
 
   test do
+    # supress CryptographyDeprecationWarning warning,
+    # upstream bug report https://github.com/ssh-mitm/ssh-mitm/issues/177
+    ENV["PYTHONWARNINGS"] = "ignore"
+
     require "pty"
     port = free_port
 

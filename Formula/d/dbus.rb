@@ -76,7 +76,7 @@ class Dbus < Formula
 
   def post_install
     # Generate D-Bus's UUID for this machine
-    system "#{bin}/dbus-uuidgen", "--ensure=#{var}/lib/dbus/machine-id"
+    system bin/"dbus-uuidgen", "--ensure=#{var}/lib/dbus/machine-id"
   end
 
   service do
@@ -84,6 +84,6 @@ class Dbus < Formula
   end
 
   test do
-    system "#{bin}/dbus-daemon", "--version"
+    system bin/"dbus-daemon", "--version"
   end
 end

@@ -256,10 +256,10 @@ class QtAT5 < Formula
   end
 
   def install
-    (buildpath/"qtwebengine").rmtree
+    rm_r(buildpath/"qtwebengine")
     (buildpath/"qtwebengine").install resource("qtwebengine")
 
-    (buildpath/"qtwebengine/src/3rdparty/chromium/third_party/catapult").rmtree
+    rm_r(buildpath/"qtwebengine/src/3rdparty/chromium/third_party/catapult")
     (buildpath/"qtwebengine/src/3rdparty/chromium/third_party/catapult").install resource("catapult")
 
     # FIXME: GN requires clang in clangBasePath/bin
