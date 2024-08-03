@@ -96,7 +96,7 @@ class Nethack < Formula
   end
 
   test do
-    system "#{bin}/nethack", "-s"
+    system bin/"nethack", "-s"
     assert_match (HOMEBREW_PREFIX/"share/nethack").to_s,
                  shell_output("#{bin}/nethack --showpaths")
   end

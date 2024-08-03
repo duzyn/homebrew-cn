@@ -23,6 +23,6 @@ class BootClj < Formula
   end
 
   test do
-    system "#{bin}/boot", "repl", "-e", "(System/exit 0)"
+    system bin/"boot", "repl", "-e", "(System/exit 0)"
   end
 end

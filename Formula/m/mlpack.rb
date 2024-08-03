@@ -67,7 +67,7 @@ class Mlpack < Formula
   end
 
   test do
-    system "#{bin}/mlpack_knn",
+    system bin/"mlpack_knn",
       "-r", "#{pkgshare}/tests/data/GroupLensSmall.csv",
       "-n", "neighbors.csv",
       "-d", "distances.csv",

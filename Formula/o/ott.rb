@@ -40,7 +40,7 @@ class Ott < Formula
   end
 
   test do
-    system "#{bin}/ott", "-i", pkgshare/"examples/peterson_caml.ott",
+    system bin/"ott", "-i", pkgshare/"examples/peterson_caml.ott",
       "-o", "peterson_caml.tex", "-o", "peterson_caml.v"
   end
 end

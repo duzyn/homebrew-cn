@@ -14,6 +14,6 @@ class Ipcalc < Formula
   end
 
   test do
-    system "#{bin}/ipcalc", "--nobinary", "192.168.0.1/24"
+    system bin/"ipcalc", "--nobinary", "192.168.0.1/24"
   end
 end

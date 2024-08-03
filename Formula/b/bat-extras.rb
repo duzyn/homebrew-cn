@@ -29,7 +29,7 @@ class BatExtras < Formula
   end
 
   test do
-    system "#{bin}/prettybat < /dev/null"
+    system bin/"prettybat < /dev/null"
     system bin/"batgrep", "/usr/bin/env", bin
   end
 end

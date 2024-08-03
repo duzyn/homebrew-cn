@@ -1,5 +1,3 @@
-require "language/node"
-
 class AskCli < Formula
   desc "CLI tool for Alexa Skill Kit"
   homepage "https://github.com/alexa/ask-cli"
@@ -20,7 +18,7 @@ class AskCli < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.write_exec_script libexec/"bin/ask"
 
     # Replace universal binaries with native slices

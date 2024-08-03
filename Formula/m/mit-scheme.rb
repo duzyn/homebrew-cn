@@ -72,7 +72,7 @@ class MitScheme < Formula
     end
 
     inreplace "edwin/compile.sh" do |s|
-      s.gsub! "mit-scheme", "#{bin}/mit-scheme"
+      s.gsub! "mit-scheme", bin/"mit-scheme"
     end
 
     ENV.prepend_path "PATH", buildpath/"staging/bin"

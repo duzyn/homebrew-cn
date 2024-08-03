@@ -31,7 +31,7 @@ class LandoCli < Formula
     # We have to replace the shebang in the main executable from "/usr/bin/env node"
     rewrite_shebang detected_node_shebang, libexec/"lib/node_modules/@lando/cli/bin/lando"
     bin.install_symlink Dir["#{libexec}/bin/*"]
-    system "#{bin}/lando", "config", "--channel=none"
+    system bin/"lando", "config", "--channel=none"
   end
 
   def caveats

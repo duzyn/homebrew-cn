@@ -43,6 +43,6 @@ class OneMl < Formula
   end
 
   test do
-    system "#{bin}/1ml", "#{pkgshare}/stdlib/prelude.1ml", "#{pkgshare}/stdlib/paper.1ml"
+    system bin/"1ml", pkgshare/"stdlib/prelude.1ml", pkgshare/"stdlib/paper.1ml"
   end
 end

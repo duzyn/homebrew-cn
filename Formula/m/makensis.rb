@@ -50,7 +50,7 @@ class Makensis < Formula
       ENV["LC_#{lc_var}"] = "en_GB.UTF-8"
     end
 
-    system "#{bin}/makensis", "-VERSION"
-    system "#{bin}/makensis", "#{share}/nsis/Examples/bigtest.nsi", "-XOutfile /dev/null"
+    system bin/"makensis", "-VERSION"
+    system bin/"makensis", "#{share}/nsis/Examples/bigtest.nsi", "-XOutfile /dev/null"
   end
 end

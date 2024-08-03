@@ -112,8 +112,8 @@ class Kafka < Formula
       system "#{bin}/kafka-topics --bootstrap-server localhost:#{kafka_port} --delete --topic test " \
              ">> #{testpath}/kafka/demo.out 2>/dev/null"
     ensure
-      system "#{bin}/kafka-server-stop"
-      system "#{bin}/zookeeper-server-stop"
+      system bin/"kafka-server-stop"
+      system bin/"zookeeper-server-stop"
       sleep 10
     end
 

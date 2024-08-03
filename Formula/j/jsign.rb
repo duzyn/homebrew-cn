@@ -47,15 +47,15 @@ class Jsign < Formula
     stable.stage testpath
     res = "jsign-core/src/test/resources"
 
-    system "#{bin}/jsign", "--keystore", "#{res}/keystores/keystore.p12",
+    system bin/"jsign", "--keystore", "#{res}/keystores/keystore.p12",
                            "--storepass", "password",
                            "#{res}/wineyes.exe"
 
-    system "#{bin}/jsign", "--keystore", "#{res}/keystores/keystore.jks",
+    system bin/"jsign", "--keystore", "#{res}/keystores/keystore.jks",
                            "--storepass", "password",
                            "#{res}/minimal.msi"
 
-    system "#{bin}/jsign", "--keyfile", "#{res}/keystores/privatekey.pvk",
+    system bin/"jsign", "--keyfile", "#{res}/keystores/privatekey.pvk",
                            "--certfile", "#{res}/keystores/jsign-test-certificate-full-chain.spc",
                            "--storepass", "password",
                            "#{res}/hello-world.vbs"

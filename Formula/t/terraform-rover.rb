@@ -1,4 +1,3 @@
-require "language/node"
 class TerraformRover < Formula
   desc "Terraform Visualizer"
   homepage "https://github.com/im2nguyen/rover"
@@ -40,9 +39,8 @@ class TerraformRover < Formula
   end
 
   def install
-    Language::Node.setup_npm_environment
     cd "ui" do
-      system "npm", "install", *Language::Node.local_npm_install_args
+      system "npm", "install", *std_npm_args(prefix: false)
       system "npm", "run", "build"
     end
     system "go", "build", *std_go_args(ldflags: "-s -w")

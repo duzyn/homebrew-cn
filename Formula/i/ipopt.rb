@@ -95,6 +95,6 @@ class Ipopt < Formula
     pkg_config_flags = `pkg-config --cflags --libs ipopt`.chomp.split
     system ENV.cxx, "examples/hs071_cpp/hs071_main.cpp", "examples/hs071_cpp/hs071_nlp.cpp", *pkg_config_flags
     system "./a.out"
-    system "#{bin}/ipopt", "#{Formula["ampl-mp"].opt_pkgshare}/example/wb"
+    system bin/"ipopt", "#{Formula["ampl-mp"].opt_pkgshare}/example/wb"
   end
 end

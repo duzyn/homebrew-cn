@@ -99,13 +99,15 @@ class Todoman < Formula
 
   test do
     ENV["LC_ALL"] = "en_US.UTF-8"
+
     (testpath/".config/todoman/config.py").write <<~EOS
       path = "#{testpath}/.calendar/*"
       date_format = "%Y-%m-%d"
       default_list = "Personal"
     EOS
+
     (testpath/".calendar/Personal").mkpath
-    system "#{bin}/todo", "new", "newtodo"
+    system bin/"todo", "new", "newtodo"
     assert_match "newtodo", shell_output("#{bin}/todo list")
   end
 end

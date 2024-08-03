@@ -66,7 +66,7 @@ class Luarocks < Formula
       ENV["LUA_PATH"] = "#{testpath}/share/lua/#{luaversion}/?.lua"
       ENV["LUA_CPATH"] = "#{testpath}/lib/lua/#{luaversion}/?.so"
 
-      system "#{bin}/luarocks", "install",
+      system bin/"luarocks", "install",
                                 "luafilesystem",
                                 "--tree=#{testpath}",
                                 "--lua-dir=#{lua.opt_prefix}"

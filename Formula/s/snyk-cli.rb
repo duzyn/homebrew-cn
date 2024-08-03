@@ -1,5 +1,3 @@
-require "language/node"
-
 class SnykCli < Formula
   desc "Scans and monitors projects for security vulnerabilities"
   homepage "https://snyk.io"
@@ -8,19 +6,20 @@ class SnykCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b6cf30c1686fe3d44ee88ff22d0e88c7f801ace13f2e3130920e4298a0d0ffb6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b6cf30c1686fe3d44ee88ff22d0e88c7f801ace13f2e3130920e4298a0d0ffb6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b6cf30c1686fe3d44ee88ff22d0e88c7f801ace13f2e3130920e4298a0d0ffb6"
-    sha256 cellar: :any_skip_relocation, sonoma:         "d1488d4558b7b82026a84b1682516af131d92ba532a3189429112c97d14d2155"
-    sha256 cellar: :any_skip_relocation, ventura:        "d1488d4558b7b82026a84b1682516af131d92ba532a3189429112c97d14d2155"
-    sha256 cellar: :any_skip_relocation, monterey:       "d1488d4558b7b82026a84b1682516af131d92ba532a3189429112c97d14d2155"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0737efcbe65cfbdf2b2cb6f756856d352451f6fd94849783983dd79495bdaff4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "738ac8c80466b7d07ce4763ab29513707f2c011fba3607df92c5de622aeca1bd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "738ac8c80466b7d07ce4763ab29513707f2c011fba3607df92c5de622aeca1bd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "738ac8c80466b7d07ce4763ab29513707f2c011fba3607df92c5de622aeca1bd"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a6d1ce2ac05c0be496a5b9af332b9f139c2dc1184f544264e728411a67676523"
+    sha256 cellar: :any_skip_relocation, ventura:        "a6d1ce2ac05c0be496a5b9af332b9f139c2dc1184f544264e728411a67676523"
+    sha256 cellar: :any_skip_relocation, monterey:       "a6d1ce2ac05c0be496a5b9af332b9f139c2dc1184f544264e728411a67676523"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69ece7d30d77bdc8f6f1f47341eb455645bfe8316710b059e8f36687fe1dde5b"
   end
 
   depends_on "node"
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 

@@ -42,9 +42,10 @@ class Fizmo < Formula
 
   test do
     system bin/"fizmo-console", "--help"
+
     # Unable to test headless ncursew client
     # https://github.com/Homebrew/homebrew-games/pull/366
-    # system "#{bin}/fizmo-ncursesw", "--help"
+    # system bin/"fizmo-ncursesw", "--help"
     system bin/"fizmo-sdl2", "--help"
   end
 end
