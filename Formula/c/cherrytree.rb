@@ -4,6 +4,7 @@ class Cherrytree < Formula
   url "https://www.giuspen.com/software/cherrytree_1.1.4.tar.xz"
   sha256 "46cb974efe050584c2ec7bcc36eb6bb52b1360288c9da1b00746762e3bc823d8"
   license "GPL-3.0-or-later"
+  head "https://github.com/giuspen/cherrytree.git", branch: "master"
 
   livecheck do
     url :homepage
@@ -21,13 +22,25 @@ class Cherrytree < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "ninja" => :build
+  depends_on "gettext" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
+  depends_on "atkmm@2.28"
+  depends_on "cairo"
+  depends_on "cairomm@1.14"
   depends_on "fmt"
+  depends_on "fribidi"
+  depends_on "glib"
+  depends_on "glibmm@2.66"
   depends_on "gspell"
+  depends_on "gtk+3"
+  depends_on "gtkmm3"
+  depends_on "gtksourceview3"
   depends_on "gtksourceviewmm3"
+  depends_on "libsigc++@2"
   depends_on "libxml++"
+  depends_on "pango"
+  depends_on "pangomm@2.46"
   depends_on "spdlog"
   depends_on "sqlite" # try to change to uses_from_macos after python is not a dependency
   depends_on "uchardet"
@@ -35,13 +48,22 @@ class Cherrytree < Formula
 
   uses_from_macos "python" => :build
   uses_from_macos "curl"
+  uses_from_macos "libxml2"
+
+  on_macos do
+    depends_on "at-spi2-core"
+    depends_on "enchant"
+    depends_on "gdk-pixbuf"
+    depends_on "gettext"
+    depends_on "harfbuzz"
+  end
 
   fails_with gcc: "5" # Needs std::optional
 
   def install
-    system "cmake", ".", "-DBUILD_TESTING=''", "-GNinja", *std_cmake_args
-    system "ninja"
-    system "ninja", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do

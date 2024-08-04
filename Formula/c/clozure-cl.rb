@@ -41,34 +41,31 @@ class ClozureCl < Formula
   end
 
   def install
-    tmpdir = Pathname.new(Dir.mktmpdir)
-    tmpdir.install resource("bootstrap")
-
-    if OS.mac?
-      buildpath.install tmpdir/"dx86cl64.image"
-      buildpath.install tmpdir/"darwin-x86-headers64"
-      cd "lisp-kernel/darwinx8664" do
-        system "make"
+    resource("bootstrap").stage do
+      if OS.mac?
+        buildpath.install "dx86cl64.image"
+        buildpath.install "darwin-x86-headers64"
+      else
+        buildpath.install "lx86cl64"
+        buildpath.install "lx86cl64.image"
+        buildpath.install "x86-headers64"
       end
-    else
-      buildpath.install tmpdir/"lx86cl64"
-      buildpath.install tmpdir/"lx86cl64.image"
-      buildpath.install tmpdir/"x86-headers64"
     end
 
     ENV["CCL_DEFAULT_DIRECTORY"] = buildpath
 
     if OS.mac?
+      system "make", "-C", "lisp-kernel/darwinx8664"
       system "./dx86cl64", "-n", "-l", "lib/x8664env.lisp",
-            "-e", "(ccl:xload-level-0)",
-            "-e", "(ccl:compile-ccl)",
-            "-e", "(quit)"
+                           "-e", "(ccl:xload-level-0)",
+                           "-e", "(ccl:compile-ccl)",
+                           "-e", "(quit)"
       (buildpath/"image").write('(ccl:save-application "dx86cl64.image")\n(quit)\n')
       system "cat image | ./dx86cl64 -n --image-name x86-boot64.image"
     else
       system "./lx86cl64", "-n", "-l", "lib/x8664env.lisp",
-            "-e", "(ccl:rebuild-ccl :full t)",
-            "-e", "(quit)"
+                           "-e", "(ccl:rebuild-ccl :full t)",
+                           "-e", "(quit)"
       (buildpath/"image").write('(ccl:save-application "lx86cl64.image")\n(quit)\n')
       system "cat image | ./lx86cl64 -n --image-name x86-boot64"
     end
@@ -76,7 +73,7 @@ class ClozureCl < Formula
     prefix.install "doc/README"
     doc.install Dir["doc/*"]
     libexec.install Dir["*"]
-    bin.install Dir["#{libexec}/scripts/ccl64"]
+    bin.install libexec/"scripts/ccl64"
     bin.env_script_all_files(libexec/"bin", CCL_DEFAULT_DIRECTORY: libexec)
   end
 

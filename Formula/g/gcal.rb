@@ -22,7 +22,7 @@ class Gcal < Formula
   # Does not build on macOS Ventura
   # https://lists.gnu.org/archive/html/bug-gcal/2022-11/msg00000.html
   # https://github.com/Homebrew/homebrew-core/pull/129779
-  deprecate! date: "2023-07-27", because: :unmaintained
+  disable! date: "2024-08-03", because: :unmaintained
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "texinfo" => :build

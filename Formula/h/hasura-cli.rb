@@ -1,11 +1,10 @@
-require "language/node"
-
 class HasuraCli < Formula
   desc "Command-Line Interface for Hasura GraphQL Engine"
   homepage "https://hasura.io"
   url "https://mirror.ghproxy.com/https://github.com/hasura/graphql-engine/archive/refs/tags/v2.41.0.tar.gz"
   sha256 "4f32574148b344e4dd59c9708dc959f29a1fa050c5e7790e82523eb51ef0ae22"
   license "Apache-2.0"
+  head "https://github.com/hasura/graphql-engine.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
   # corresponding release is created, so we check the "latest" release instead
@@ -30,32 +29,29 @@ class HasuraCli < Formula
   depends_on "node@18" => :build
 
   def install
-    Language::Node.setup_npm_environment
+    arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
+    os = OS.kernel_name.downcase
+
+    # Based on `make build-cli-ext`, but only build a single host-specific binary
+    cd "cli-ext" do
+      # TODO: Remove `npm add pkg` when https://github.com/hasura/graphql-engine/issues/9440 is resolved.
+      system "npm", "add", "pkg@5.8.1"
+      system "npm", "install", *std_npm_args(prefix: false)
+      system "npm", "run", "prebuild"
+      dest = "./cli/internal/cliext/static-bin/#{os}/#{arch}/cli-ext"
+      system "npx", "pkg", "./build/command.js", "--output", dest, "-t", "host"
+    end
 
     ldflags = %W[
       -s -w
       -X github.com/hasura/graphql-engine/cli/v2/version.BuildVersion=#{version}
       -X github.com/hasura/graphql-engine/cli/v2/plugins.IndexBranchRef=master
     ]
-
-    # Based on `make build-cli-ext`, but only build a single host-specific binary
-    cd "cli-ext" do
-      # TODO: Remove `npm update pkg` when https://github.com/hasura/graphql-engine/issues/9440 is resolved.
-      system "npm", "update", "pkg"
-      system "npm", "install", *std_npm_args(prefix: false)
-      system "npm", "run", "prebuild"
-      system "./node_modules/.bin/pkg", "./build/command.js", "--output", "./bin/cli-ext-hasura", "-t", "host"
-    end
-
     cd "cli" do
-      arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
-      os = OS.kernel_name.downcase
-
-      cp "../cli-ext/bin/cli-ext-hasura", "./internal/cliext/static-bin/#{os}/#{arch}/cli-ext"
       system "go", "build", *std_go_args(output: bin/"hasura", ldflags:), "./cmd/hasura/"
-
-      generate_completions_from_executable(bin/"hasura", "completion", base_name: "hasura", shells: [:bash, :zsh])
     end
+
+    generate_completions_from_executable(bin/"hasura", "completion", base_name: "hasura", shells: [:bash, :zsh])
   end
 
   test do
