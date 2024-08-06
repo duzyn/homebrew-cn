@@ -1,10 +1,19 @@
 class PinboardNotesBackup < Formula
   desc "Efficiently back up the notes you've saved to Pinboard"
   homepage "https://github.com/bdesham/pinboard-notes-backup"
-  url "https://mirror.ghproxy.com/https://github.com/bdesham/pinboard-notes-backup/archive/refs/tags/v1.0.5.7.tar.gz"
-  sha256 "12940372b976bbc9491e20810992396426f3ee482416a42e6379bdad9999a07c"
   license "GPL-3.0-or-later"
   head "https://github.com/bdesham/pinboard-notes-backup.git", branch: "main"
+
+  stable do
+    url "https://mirror.ghproxy.com/https://github.com/bdesham/pinboard-notes-backup/archive/refs/tags/v1.0.5.7.tar.gz"
+    sha256 "12940372b976bbc9491e20810992396426f3ee482416a42e6379bdad9999a07c"
+
+    # Backport some higher upper bounds for dependencies
+    patch do
+      url "https://github.com/bdesham/pinboard-notes-backup/commit/8be2ac9107b312657f0ae68633164ac2ea85ee9e.patch?full_index=1"
+      sha256 "c9f9fb43b3166035cf2c8cc11a5172f6a12444fd96d93827d6fff7cb4dca51b8"
+    end
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "63e685a5471c77c535f67b05195429f4d71c3e9f655b0d3faf591025c7a1f36f"
@@ -17,13 +26,15 @@ class PinboardNotesBackup < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.4" => :build
+  depends_on "ghc" => :build
 
   uses_from_macos "zlib"
 
   def install
     system "cabal", "v2-update"
-    system "cabal", "v2-install", *std_cabal_v2_args
+    # Upper bound `tls` to work around "peer does not support Extended Main Secret" HandshakeFailure
+    # Ref: https://github.com/bdesham/pinboard-notes-backup/issues/1
+    system "cabal", "v2-install", *std_cabal_v2_args, "--constraint=tls<2"
     man1.install "man/pnbackup.1"
   end
 
