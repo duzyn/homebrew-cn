@@ -1,12 +1,19 @@
 class Graphviz < Formula
   desc "Graph visualization software from AT&T and Bell Labs"
   homepage "https://graphviz.org/"
-  url "https://gitlab.com/graphviz/graphviz.git",
-      tag:      "12.0.0",
-      revision: "a2902960366a3df263186bf099a7bfe2334fd1fe"
   license "EPL-1.0"
   version_scheme 1
-  head "https://gitlab.com/graphviz/graphviz.git", branch: "main"
+
+  stable do
+    url "https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/12.0.0/graphviz-12.0.0.tar.xz"
+    sha256 "720d5392ccab391d50ac2131048705285fbd3fe8948cdb27c7e7b56160d11a9f"
+
+    # Fix -flat_namespace being used on Big Sur and later.
+    patch do
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
+      sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+    end
+  end
 
   bottle do
     sha256 arm64_sonoma:   "c790fb58a57e9a2f14aa39a9f4800f18a1b525f875ad43a3c40394ad999e025a"
@@ -18,30 +25,41 @@ class Graphviz < Formula
     sha256 x86_64_linux:   "e3fba2a4b9202b094602c4d4edb887a0cece286f595057682512fc613185359b"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  head do
+    url "https://gitlab.com/graphviz/graphviz.git", branch: "main"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+  end
+
   depends_on "bison" => :build
   depends_on "pkg-config" => :build
+  depends_on "cairo"
   depends_on "gd"
+  depends_on "glib"
   depends_on "gts"
   depends_on "libpng"
   depends_on "librsvg"
   depends_on "libtool"
   depends_on "pango"
+  depends_on "webp"
 
   uses_from_macos "flex" => :build
   uses_from_macos "python" => :build
+  uses_from_macos "expat"
+  uses_from_macos "zlib"
 
-  on_linux do
-    depends_on "byacc" => :build
-    depends_on "ghostscript" => :build
+  on_macos do
+    depends_on "fontconfig"
+    depends_on "freetype"
+    depends_on "gdk-pixbuf"
+    depends_on "gettext"
+    depends_on "harfbuzz"
   end
 
   def install
-    args = %W[
-      --disable-debug
-      --disable-dependency-tracking
-      --prefix=#{prefix}
+    args = %w[
+      --disable-silent-rules
       --disable-php
       --disable-swig
       --disable-tcl
@@ -56,8 +74,8 @@ class Graphviz < Formula
       --with-gts
     ]
 
-    system "./autogen.sh"
-    system "./configure", *args
+    system "./autogen.sh" if build.head?
+    system "./configure", *args, *std_configure_args
     system "make"
     system "make", "install"
   end
