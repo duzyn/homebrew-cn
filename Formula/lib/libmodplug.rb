@@ -3,6 +3,7 @@ class Libmodplug < Formula
   homepage "https://modplug-xmms.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/modplug-xmms/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz?use_mirror=jaist"
   sha256 "457ca5a6c179656d66c01505c0d95fafaead4329b9dbaa0f997d00a3508ad9de"
+  license :public_domain
 
   livecheck do
     url :stable

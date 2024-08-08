@@ -3,6 +3,7 @@ class Ddate < Formula
   homepage "https://github.com/bo0ts/ddate"
   url "https://mirror.ghproxy.com/https://github.com/bo0ts/ddate/archive/refs/tags/v0.2.2.tar.gz"
   sha256 "d53c3f0af845045f39d6d633d295fd4efbe2a792fd0d04d25d44725d11c678ad"
+  license :public_domain
 
   bottle do
     rebuild 1

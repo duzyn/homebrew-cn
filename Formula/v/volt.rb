@@ -4,6 +4,7 @@ class Volt < Formula
   url "https://github.com/vim-volt/volt.git",
       tag:      "v0.3.7",
       revision: "e604467d8b440c89793b2e113cd241915e431bf9"
+  license "MIT"
   head "https://github.com/vim-volt/volt.git", branch: "master"
 
   bottle do

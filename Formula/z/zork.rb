@@ -3,6 +3,7 @@ class Zork < Formula
   homepage "https://github.com/devshane/zork"
   url "https://mirror.ghproxy.com/https://github.com/devshane/zork/archive/refs/tags/v1.0.3.tar.gz"
   sha256 "929871abae9be902d4fb592f2e76e52b58b386d208f127c826ae1d7b7bade9ef"
+  license :public_domain
   head "https://github.com/devshane/zork.git", branch: "master"
 
   bottle do

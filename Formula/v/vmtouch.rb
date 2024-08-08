@@ -3,6 +3,7 @@ class Vmtouch < Formula
   homepage "https://hoytech.com/vmtouch/"
   url "https://mirror.ghproxy.com/https://github.com/hoytech/vmtouch/archive/refs/tags/v1.3.1.tar.gz"
   sha256 "d57b7b3ae1146c4516429ab7d6db6f2122401db814ddd9cdaad10980e9c8428c"
+  license "BSD-3-Clause"
   head "https://github.com/hoytech/vmtouch.git", branch: "master"
 
   bottle do
