@@ -3,6 +3,7 @@ class John < Formula
   homepage "https://www.openwall.com/john/"
   url "https://www.openwall.com/john/k/john-1.9.0.tar.xz"
   sha256 "0b266adcfef8c11eed690187e71494baea539efbd632fe221181063ba09508df"
+  license "GPL-2.0-or-later"
   revision 1
 
   livecheck do
