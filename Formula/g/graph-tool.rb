@@ -4,8 +4,8 @@ class GraphTool < Formula
   desc "Efficient network analysis for Python 3"
   homepage "https://graph-tool.skewed.de/"
   # TODO: Update build for matplotlib>=3.9.0 to use `--config-settings=setup-args=...` for system dependencies
-  url "https://downloads.skewed.de/graph-tool/graph-tool-2.74.tar.bz2"
-  sha256 "ed19a45c050663d342e0b28fcc985d513908ea573d86c940a7907900d3e02a6e"
+  url "https://downloads.skewed.de/graph-tool/graph-tool-2.77.tar.bz2"
+  sha256 "9aeffaaf5528f37e994f1b882f751db0abee533f87d45658f58dd96c404ad0b4"
   license "LGPL-3.0-or-later"
 
   livecheck do
@@ -14,13 +14,13 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "39255e3dfdcb7a449be42706a54016202a7f9ce65bc2e9922c7f01ebd5de202d"
-    sha256                               arm64_ventura:  "9d3214d60e3eacd4c4b765e9cfc80fefbf845bf32faf593739d7ec80859ef0e0"
-    sha256                               arm64_monterey: "8a30bd0547ced08c954d2af2091bb38bf04b8958bf60c07cdbde679edaece09d"
-    sha256                               sonoma:         "537011ce353b49d1d36c91a41df62f3d42b6a1329258570998b01137804c7fc5"
-    sha256                               ventura:        "c17a7da0694610c7c42114637e4e77db57974f9413e2d1f0572ade10a916c4b8"
-    sha256                               monterey:       "3d8f57ae240eb5297b9308ca34ae18578b9134ffd149803173973fb181685b13"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0993ceee1db71fe47a1416a1a9026c288f473370ff17af904e91eec643c782e9"
+    sha256                               arm64_sonoma:   "9b94020c5aea71386762346936cfc081f4f1ab92d7e2b72a06824a53edb99e2b"
+    sha256                               arm64_ventura:  "0ffa9c0320abc91feea7bfa82757f0f3c6ed89123f09378699f96afc3e7193d0"
+    sha256                               arm64_monterey: "b0663ed6c0665f27b0ce63be23f32fe9fb8a9f6859cdb32d708365a130dcaa75"
+    sha256                               sonoma:         "08dd14a6cbba16c2e79d299bfbb2caab39e6105c77b7b136897eefb4b8af147c"
+    sha256                               ventura:        "9bdd2c96040ce5d53086ab4193e2cff27e92c7493490c19ddb6ba42918e6d435"
+    sha256                               monterey:       "494b56994fad808f5d54b53b0a344a95c1787b2d2a45236376cff590018f2da8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "032340137cc1f0a61707d8858df59abc0ab3ac1517651b2ae879b4dad8a0732f"
   end
 
   depends_on "ninja" => :build
@@ -75,8 +75,8 @@ class GraphTool < Formula
   end
 
   resource "matplotlib" do
-    url "https://files.pythonhosted.org/packages/22/06/9e8ba6ec8b716a215404a5d1938b61f5a28001be493cf35344dda9a4072a/matplotlib-3.9.1.tar.gz"
-    sha256 "de06b19b8db95dd33d0dc17c926c7c9ebed9f572074b6fac4f65068a6814d010"
+    url "https://files.pythonhosted.org/packages/27/c3/b4dbf9ed2a024a5514fa8a2606867a3716c9adfd457d138865145a940a65/matplotlib-3.9.1.post1.tar.gz"
+    sha256 "c91e585c65092c975a44dc9d4239ba8c594ba3c193d7c478b6d178c4ef61f406"
   end
 
   resource "packaging" do
@@ -95,8 +95,8 @@ class GraphTool < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/32/c0/5b8013b5a812701c72e3b1e2b378edaa6514d06bee6704a5ab0d7fa52931/setuptools-71.1.0.tar.gz"
-    sha256 "032d42ee9fb536e33087fb66cac5f840eb9391ed05637b3f2a76a7c8fb477936"
+    url "https://files.pythonhosted.org/packages/5e/11/487b18cc768e2ae25a919f230417983c8d5afa1b6ee0abd8b6db0b89fa1d/setuptools-72.1.0.tar.gz"
+    sha256 "8d243eff56d095e5817f796ede6ae32941278f542e0f941867cc05ae52b162ec"
   end
 
   resource "six" do
