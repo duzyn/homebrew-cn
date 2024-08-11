@@ -25,8 +25,19 @@ class Gabedit < Formula
   end
 
   depends_on "pkg-config" => :build
+
+  depends_on "cairo"
+  depends_on "gdk-pixbuf"
+  depends_on "glib"
   depends_on "gtk+"
   depends_on "gtkglext"
+  depends_on "pango"
+
+  on_macos do
+    depends_on "at-spi2-core"
+    depends_on "gettext"
+    depends_on "harfbuzz"
+  end
 
   on_linux do
     depends_on "autoconf" => :build
@@ -46,6 +57,7 @@ class Gabedit < Formula
     (buildpath/"brew_include").install_symlink opengl_headers => "GL"
 
     inreplace "CONFIG" do |s|
+      s.gsub! "CC = gcc", "CC = #{ENV.cc}"
       if OS.mac?
         s.gsub! "-lX11", ""
         s.gsub! "-lpangox-1.0", ""
@@ -58,9 +70,11 @@ class Gabedit < Formula
       s.gsub! "GTKCFLAGS =", "GTKCFLAGS = -I#{buildpath}/brew_include"
 
       # Work around build failures
+      # incompatible integer to pointer conversion bug report, https://github.com/allouchear/gabedit/issues/2
       if DevelopmentTools.clang_build_version >= 1403
         s.gsub! " -Wall ",
-                " -Wall -Wno-implicit-function-declaration "
+                " -Wall -Wno-implicit-function-declaration " \
+                "-Wno-incompatible-function-pointer-types -Wno-int-conversion "
       end
     end
 
