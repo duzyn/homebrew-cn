@@ -22,7 +22,7 @@ class Xcproj < Formula
 
   # upstream issue tracker for license
   # https://github.com/0xced/xcproj/issues/6
-  disable! date: "2023-09-25", because: "no license for the project"
+  disable! date: "2023-09-25", because: :no_license
 
   depends_on :macos
   depends_on :xcode
