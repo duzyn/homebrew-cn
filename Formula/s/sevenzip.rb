@@ -23,13 +23,6 @@ class Sevenzip < Formula
   end
 
   def install
-    # See https://sourceforge.net/p/sevenzip/discussion/45797/thread/9c2d9061ce/#01e7
-    if OS.mac?
-      inreplace ["Common/FileStreams.cpp", "UI/Common/UpdateCallback.cpp"].map { |d| buildpath/"CPP/7zip"/d },
-                "sysmacros.h",
-                "types.h"
-    end
-
     cd "CPP/7zip/Bundles/Alone2" do
       mac_suffix = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch
       mk_suffix, directory = if OS.mac?
