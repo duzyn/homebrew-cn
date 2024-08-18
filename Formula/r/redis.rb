@@ -5,7 +5,13 @@ class Redis < Formula
   # https://github.com/redis/redis/pull/13157
   url "https://download.redis.io/releases/redis-7.2.5.tar.gz"
   sha256 "5981179706f8391f03be91d951acafaeda91af7fac56beffb2701963103e423d"
-  license "BSD-3-Clause"
+  license all_of: [
+    "BSD-3-Clause",
+    "BSD-2-Clause", # deps/jemalloc, deps/linenoise, src/lzf*
+    "BSL-1.0", # deps/fpconv
+    "MIT", # deps/lua
+    any_of: ["CC0-1.0", "BSD-2-Clause"], # deps/hdr_histogram
+  ]
   head "https://github.com/redis/redis.git", branch: "unstable"
 
   livecheck do

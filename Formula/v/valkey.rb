@@ -3,7 +3,13 @@ class Valkey < Formula
   homepage "https://valkey.io"
   url "https://mirror.ghproxy.com/https://github.com/valkey-io/valkey/archive/refs/tags/7.2.6.tar.gz"
   sha256 "5272f244deecd5655d805aabc71c84a7c7699bc4fa009dd7fc550806a042d512"
-  license "BSD-3-Clause"
+  license all_of: [
+    "BSD-3-Clause",
+    "BSD-2-Clause", # deps/jemalloc, deps/linenoise, src/lzf*
+    "BSL-1.0", # deps/fpconv
+    "MIT", # deps/lua
+    any_of: ["CC0-1.0", "BSD-2-Clause"], # deps/hdr_histogram
+  ]
   head "https://github.com/valkey-io/valkey.git", branch: "unstable"
 
   bottle do
