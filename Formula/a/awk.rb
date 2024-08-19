@@ -3,8 +3,7 @@ class Awk < Formula
   homepage "https://www.cs.princeton.edu/~bwk/btl.mirror/"
   url "https://mirror.ghproxy.com/https://github.com/onetrueawk/awk/archive/refs/tags/20240728.tar.gz"
   sha256 "2d479817f95d5997fc4348ecebb1d8a1b25c81cebedb46ca4f59434247e08543"
-  # https://fedoraproject.org/wiki/Licensing:MIT?rd=Licensing/MIT#Standard_ML_of_New_Jersey_Variant
-  license "MIT"
+  license "SMLNJ"
   head "https://github.com/onetrueawk/awk.git", branch: "master"
 
   bottle do

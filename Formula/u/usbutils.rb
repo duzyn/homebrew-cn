@@ -27,7 +27,7 @@ class Usbutils < Formula
   depends_on "pkg-config" => :build
   depends_on "libusb"
 
-  conflicts_with "lsusb", because: "both provide an `lsusb` binary"
+  conflicts_with "lsusb", "lsusb-laniksj", because: "both provide an `lsusb` binary"
 
   patch do
     url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/12f3d34/usbutils/portable.patch"

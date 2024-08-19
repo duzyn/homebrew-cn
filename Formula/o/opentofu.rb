@@ -18,7 +18,7 @@ class Opentofu < Formula
 
   depends_on "go" => :build
 
-  conflicts_with "tenv", because: "both install tofu binary"
+  conflicts_with "tenv", "tofuenv", because: "both install tofu binary"
 
   # Needs libraries at runtime:
   # /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by node)

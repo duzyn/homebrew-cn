@@ -22,6 +22,10 @@ class BerkeleyDbAT4 < Formula
 
   keg_only :versioned_formula
 
+  # This formula is less likely to get security patches than `berkeley-db@5`,
+  # which is the version shipped & patched by major Linux distros.
+  deprecate! date: "2024-08-17", because: :unmaintained
+
   # Fix build with recent clang
   patch do
     url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/4c55b1/berkeley-db%404/clang.diff"

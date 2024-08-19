@@ -1,8 +1,8 @@
 class Mise < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://mise.jdx.dev/"
-  url "https://mirror.ghproxy.com/https://github.com/jdx/mise/archive/refs/tags/v2024.8.8.tar.gz"
-  sha256 "41dea6aeb96b9d6f24eb8cd5f256743980022857c5ecd3be7a8c4dd627365da4"
+  url "https://mirror.ghproxy.com/https://github.com/jdx/mise/archive/refs/tags/v2024.8.9.tar.gz"
+  sha256 "6566437dac9630d89d5401c0c2b87ee54b7cf7fc9f83d89f01a8ed292b8bc3fb"
   license "MIT"
   head "https://github.com/jdx/mise.git", branch: "main"
 
@@ -12,19 +12,26 @@ class Mise < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "607e539cd803fd020664c2d2d055f99f287af419238c263473920c0b1f0c9cfa"
-    sha256 cellar: :any,                 arm64_ventura:  "dbe9395729ba535835184b6aacfa3de5eefad40fb70f2003813b0faaa7fda791"
-    sha256 cellar: :any,                 arm64_monterey: "85df0c5ee12df692a66191ee9a8a64e676686bb47d17b5b5e4baf18be73b3304"
-    sha256 cellar: :any,                 sonoma:         "3a584465a950633bcde968b94059e536794327a7508493369fc4ff6bfe0fde94"
-    sha256 cellar: :any,                 ventura:        "1770624f8f04296214e5e95a06ef1c9881d5de195587154914e6821cbe1a5209"
-    sha256 cellar: :any,                 monterey:       "fcb1a4d559336d163904197f4b6f0afab387bd614272f1a2e31e7ea13ef794a7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "45387733420669b8ce8a01834915a7332ba10f20fe975bce902013e5840e9648"
+    sha256 cellar: :any,                 arm64_sonoma:   "7a6821a0f92b2afcc0341d2844710feac6cf9f2cfa14673ce82b3478cbf59e53"
+    sha256 cellar: :any,                 arm64_ventura:  "395c0b8ea3be55e7bcce60672acac969cd449847d2e49c66b1ccddc4171e8b7e"
+    sha256 cellar: :any,                 arm64_monterey: "fa5625b717c55aab2b353a42a41e42adb1a547d7e2658ae792727d5036aa8bff"
+    sha256 cellar: :any,                 sonoma:         "faee057b282d2e6d1cdbcf753c1ad504a3e7d468603881729995efd623c178a9"
+    sha256 cellar: :any,                 ventura:        "c302fe9a277e507be1c59a1f6b71e694b4f6d7be0db10a9e270c87bafdecbcb2"
+    sha256 cellar: :any,                 monterey:       "f54b4dec3ee07e6d0314131e969ffbb31e8f8d7d01f75e1b996261a91bba64c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "af59c9db6eed40defa77217311e238e72f4f9dee5988c2fc3c82e3c9ea0ed449"
   end
 
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
+
   depends_on "libgit2"
   depends_on "openssl@3"
+
+  uses_from_macos "bzip2"
+
+  on_linux do
+    depends_on "xz" # for liblzma
+  end
 
   def install
     ENV["LIBGIT2_NO_VENDOR"] = "1"
