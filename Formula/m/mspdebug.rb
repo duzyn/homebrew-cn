@@ -3,8 +3,8 @@ class Mspdebug < Formula
   homepage "https://dlbeer.co.nz/mspdebug/"
   url "https://mirror.ghproxy.com/https://github.com/dlbeer/mspdebug/archive/refs/tags/v0.25.tar.gz"
   sha256 "347b5ae5d0ab0cddb54363b72abe482f9f5d6aedb8f230048de0ded28b7d1503"
-  license "GPL-2.0"
-  head "https://github.com/dlbeer/mspdebug.git"
+  license "GPL-2.0-or-later"
+  head "https://github.com/dlbeer/mspdebug.git", branch: "master"
 
   bottle do
     sha256                               arm64_sonoma:   "b2afc19ddfc781ba82c0a1ec660cd0484285f4341bef4123f56c19b8e99c66c7"
@@ -25,6 +25,10 @@ class Mspdebug < Formula
 
   depends_on "hidapi"
   depends_on "libusb-compat"
+
+  on_linux do
+    depends_on "readline"
+  end
 
   def install
     ENV.append_to_cflags "-I#{Formula["hidapi"].opt_include}/hidapi"
