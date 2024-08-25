@@ -22,7 +22,7 @@ class Configen < Formula
   depends_on :macos
 
   def install
-    xcodebuild "-arch", Hardware::CPU.arch, "SYMROOT=build"
+    xcodebuild "-arch", Hardware::CPU.arch, "SYMROOT=build", "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
     bin.install "build/Release/configen"
   end
 
