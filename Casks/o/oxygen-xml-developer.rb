@@ -1,11 +1,11 @@
-cask "oxygen-xml-editor" do
+cask "oxygen-xml-developer" do
   version "26.1,2024073008"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://archives.oxygenxml.com/Oxygen/Editor/InstData#{version.csv.first}/MacOSX/VM/oxygen-openjdk.dmg"
-  name "oXygen XML Editor"
-  desc "Tools for XML editing, including Oxygen XML Developer and Author"
-  homepage "https://www.oxygenxml.com/xml_editor.html"
+  url "https://archives.oxygenxml.com/Oxygen/Developer/InstData#{version.csv.first}/MacOSX/VM/oxygenDeveloper-openjdk.dmg"
+  name "oXygen XML Developer"
+  desc "Tools for XML editing"
+  homepage "https://www.oxygenxml.com/xml_developer.html"
 
   livecheck do
     url "https://www.oxygenxml.com/rssBuildID.xml"
@@ -20,9 +20,9 @@ cask "oxygen-xml-editor" do
 
   depends_on macos: ">= :sierra"
 
-  suite "Oxygen XML Editor"
+  suite "Oxygen XML Developer"
 
-  zap trash: "~/Library/Preferences/com.oxygenxml"
+  zap trash: "~/Library/Preferences/com.oxygenxml.developer"
 
   caveats do
     license "https://www.oxygenxml.com/eula.html"
