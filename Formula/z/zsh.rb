@@ -1,7 +1,12 @@
 class Zsh < Formula
   desc "UNIX shell (command interpreter)"
   homepage "https://www.zsh.org/"
-  license "MIT-Modern-Variant"
+  license all_of: [
+    "MIT-Modern-Variant",
+    "GPL-2.0-only", # Completion/Linux/Command/_qdbus, Completion/openSUSE/Command/{_osc,_zypper}
+    "GPL-2.0-or-later", # Completion/Unix/Command/_darcs
+    "ISC", # Src/openssh_bsd_setres_id.c
+  ]
 
   # TODO: Switch to `pcre2` on next release and remove stable block
   stable do

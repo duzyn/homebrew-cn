@@ -1,22 +1,23 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
-  url "https://mirror.ghproxy.com/https://github.com/facebook/folly/archive/refs/tags/v2024.08.19.00.tar.gz"
-  sha256 "efb4f800edea731771bdf27f4ecba5762cde81b7a2948568f19a4ed0a8c95db6"
+  url "https://mirror.ghproxy.com/https://github.com/facebook/folly/archive/refs/tags/v2024.08.26.00.tar.gz"
+  sha256 "7f08016988ca146c77ced2fafd2ae6b39159ab7f99e7eb0c3e8eeed8dc09c03d"
   license "Apache-2.0"
   head "https://github.com/facebook/folly.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "3bb865c63c137757fddd1621e6d1022c75c13f256a00a14b1acb3eeca5115689"
-    sha256 cellar: :any,                 arm64_ventura:  "e13f809e34d49d403e7876bc02648d21e996eb5e324c74de53603914c2f52a74"
-    sha256 cellar: :any,                 arm64_monterey: "599d319a39f47956749f30355951077c65cb2001f16963657730d661d44c33bf"
-    sha256 cellar: :any,                 sonoma:         "e7aba875ccb440a56ad4a2b5a0475ee8865ffe19584a6103f6c25f81ff5954c8"
-    sha256 cellar: :any,                 ventura:        "659cadfb18868a0e8985c5210348faa933d84d0a974d414e7ca7dfc711c2c158"
-    sha256 cellar: :any,                 monterey:       "f141e86d1eb573eae34e4901fadf481cf2df723f0ec877abeda9aee58ff904e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec364aa6ead1ed4c093464a26ded31b2401037143d4605a2a60ece04442b008f"
+    sha256 cellar: :any,                 arm64_sonoma:   "8bdfca6eb4d7d6c09cb0f4dc0366ff2ca22bd0a2260e390c270b6da5c496034e"
+    sha256 cellar: :any,                 arm64_ventura:  "fc77c5fadc869e86e418c8733273b39e8c045e01930dfd9a5b9b017155b2501c"
+    sha256 cellar: :any,                 arm64_monterey: "607ee322f30742093f1ea75485a0af5fd4dd2ea2aff21342babc36f375edb659"
+    sha256 cellar: :any,                 sonoma:         "3c6aabbdeb46ffc0610040bb0a5143abf1eb72534fd1e6f1cb23e14326e41d40"
+    sha256 cellar: :any,                 ventura:        "06c66316854ce30a988ae076f0ac7a844f2eccee612a3f1750b9dd3ac4539d6a"
+    sha256 cellar: :any,                 monterey:       "c0724009eccf419fb0e521b2216bf9ba4d1fc439013a9c1952e92ceef9f4cee0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f4d82de443f07bcadac3681feff0acfc2e17acdb6ae2a9ea9ed687341efc78a"
   end
 
   depends_on "cmake" => :build
+  depends_on "fast_float" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "double-conversion"

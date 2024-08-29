@@ -1,19 +1,19 @@
 class Watchman < Formula
   desc "Watch files and take action when they change"
   homepage "https://github.com/facebook/watchman"
-  url "https://mirror.ghproxy.com/https://github.com/facebook/watchman/archive/refs/tags/v2024.08.19.00.tar.gz"
-  sha256 "ba6bdb8c565ac72036ec4eed940d3907c9138c7c329bf6035bfbc0202c335008"
+  url "https://mirror.ghproxy.com/https://github.com/facebook/watchman/archive/refs/tags/v2024.08.26.00.tar.gz"
+  sha256 "c5989f5f0f64956ab80e09f8ef32de1a022e59b5dbee89985e626d3c1ad6ea79"
   license "MIT"
   head "https://github.com/facebook/watchman.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "8dcc99d9d52921eb7134451058c0d3839f8e50f8f0dd5fe3b88618812214c037"
-    sha256 cellar: :any,                 arm64_ventura:  "91cc98b27e3024a9a7239e09b12b4a2c466ddba55dec9884d611599f8287280c"
-    sha256 cellar: :any,                 arm64_monterey: "c1350186ebb1a92d6554673ddec0d64037d68bd28e6e9c31a2ac2c0f6b65434c"
-    sha256 cellar: :any,                 sonoma:         "0f30c88943db4b76841d0d445b5ecd0741abd7f71327478af85f409a325efee4"
-    sha256 cellar: :any,                 ventura:        "8ae25d0663f337529452690386ece271baa06d615c7e06c49b6a9dbbd370a1fa"
-    sha256 cellar: :any,                 monterey:       "06db9d1379052053e51722aee935e694b0e8769ae04402e7ca3fe02fcfb4c117"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df770d4b48e433b697452ea483888cbd2ee102dcfc2a68ae05e1418b6dae476b"
+    sha256 cellar: :any,                 arm64_sonoma:   "519869ebc5be636f42ff2591d08572821eba872c1516de2b90d431fd135fb2ac"
+    sha256 cellar: :any,                 arm64_ventura:  "0d04b0ea08d0c21bef79ef79cbb0aa4d52462040082e6ba2ba45baa44efa035f"
+    sha256 cellar: :any,                 arm64_monterey: "7491713673cb2ab01e78597e6165f9282d065f318b124df2f2df1ddb2aebb93d"
+    sha256 cellar: :any,                 sonoma:         "3abad9aa284cad39d0eacd9b05cc4dc879f26e55bb574ebbbdfc88377bcd110f"
+    sha256 cellar: :any,                 ventura:        "56633f080d4aeb3fcb4555a556655259dad4eaf857a1239e240edcb5c5c7003b"
+    sha256 cellar: :any,                 monterey:       "11179f0d6c91b9062f313fd3c9af42207b338870ea68ed9b2a18b3789239857f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea12a5fe08c24905ddba884aa32de5e2e787563b829f3b58490894e0694cba8d"
   end
 
   depends_on "cmake" => :build

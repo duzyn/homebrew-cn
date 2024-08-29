@@ -2,19 +2,20 @@ class Mapproxy < Formula
   include Language::Python::Virtualenv
 
   desc "Accelerating web map proxy"
-  homepage "https://mapproxy.org/"
-  url "https://files.pythonhosted.org/packages/3b/fd/c479dcd60e2afc4683b72efde5ec97f073ac2cc01f62d3b1f1f2b357d394/MapProxy-3.0.0.tar.gz"
-  sha256 "72c9fa6b71eea6cf33d5857b24d5b543c5eb95aadd4c9201964afb4a22d8cad0"
+  # `mapproxy.org` is 404, upstream bug report, https://github.com/mapproxy/mapproxy/issues/983
+  homepage "https://github.com/mapproxy/mapproxy"
+  url "https://files.pythonhosted.org/packages/bd/23/7051a8b1226e026df32669c059e3a63a9fd9dbe93ffd2af190f3e6d80825/MapProxy-3.0.1.tar.gz"
+  sha256 "d92a347b954359d7b7ddb364b1d87375a88ea785e41dcc942de0627d5e4eb4a3"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "bcd63a62b32f9f443cdd1854107ef8f19bd6d8bbc824230a0747b96cc061da1d"
-    sha256 cellar: :any,                 arm64_ventura:  "839c29bc45be462742b7405c51fe303fbe4cfa07693bf40c43cc8707b10f34e3"
-    sha256 cellar: :any,                 arm64_monterey: "1b1a8df9a6cb8af9de93e9ef9df428c96cb27c9b840729a1d967f521fe46001d"
-    sha256 cellar: :any,                 sonoma:         "d7c1dc5c2171f3c25446161a8f2f1ee5ca9fae8a034a8d9708db430d5a65731e"
-    sha256 cellar: :any,                 ventura:        "14d4e676dd7d609e957fe97e58eb20515d0c9ce7984e6347550408305a75f906"
-    sha256 cellar: :any,                 monterey:       "5af307fe27fb2f11ffd28df3570084a9f39c681a10f8f71cc07d9953c2586d8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20f93d9711058fe2dfb4143838997b4638b9cd6233d0286738c3a5a647104058"
+    sha256 cellar: :any,                 arm64_sonoma:   "b2a4db9ae55eed18dcc9b5f992265cd507f63157f5bd258441ccee863103ca1e"
+    sha256 cellar: :any,                 arm64_ventura:  "e18f5c2d8ca001c1fbb5c285329e010edf1a15fc487c260260be7a956f5295a8"
+    sha256 cellar: :any,                 arm64_monterey: "729aa9b82b21f60f20ddb80a25f6d2c6831ba4efa682412bc46b0bb6a7636090"
+    sha256 cellar: :any,                 sonoma:         "c6584ba3540b951e3f47862fcbd72bad173e2f67a6b07f580cdfc1d2f177b950"
+    sha256 cellar: :any,                 ventura:        "213edfb1399fa044ae5ba2db68a9d24da0d12ac433634bcf61373337014f7935"
+    sha256 cellar: :any,                 monterey:       "f875f123cc9d8ae6c0a06fb741dc2d4ddbfa4894318377a72d64f20b9739b185"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a27250ca0044ab0bc0fb85ddaac7bbc7605c9b3e37d51f1cf200bdee41e1be34"
   end
 
   depends_on "rust" => :build # for rpds-py

@@ -4,16 +4,17 @@ class VowpalWabbit < Formula
   url "https://mirror.ghproxy.com/https://github.com/VowpalWabbit/vowpal_wabbit/archive/refs/tags/9.10.0.tar.gz"
   sha256 "9f4ec5cddf67af2c7aa9b380b23fe22c4b11e2109f2cbaa1314bdf3570749a4d"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/VowpalWabbit/vowpal_wabbit.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "6a7692ef1057b6f78faac779a4c424c13db9759cc345a698620e48bc12bb0b05"
-    sha256 cellar: :any,                 arm64_ventura:  "655f2cf5baef11abe4cfbe242e24542bb5ecf368bce0da00369833be44f521f6"
-    sha256 cellar: :any,                 arm64_monterey: "6cc2a1a0b319760bf21a663f2bcf59ba4a3307c7196c5d5093043e096b783905"
-    sha256 cellar: :any,                 sonoma:         "f03f3596466eb1996e334c192605056c5dcf5f321434e514c199fc80cbe13a32"
-    sha256 cellar: :any,                 ventura:        "a603bec1c4b0554ec743682e47d2a3adc8f99a500311bddbf0399cc7856235d5"
-    sha256 cellar: :any,                 monterey:       "d72e37aa7a76258c3eb740b43ef04cfab6bd59f1ee7eb30fd06fe6c2858dfcf0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3e591b131b3f75a1009d185c18cc7084a1cb9db1b75f8826264248ef617af8b3"
+    sha256 cellar: :any,                 arm64_sonoma:   "073c2e2a642481bde881c5af08b53ce124d29213ee4dab14758c06dc7860b998"
+    sha256 cellar: :any,                 arm64_ventura:  "fe719b69d82bd1ca7000eea32ffa7c3a0123d4dbdba0e0e22289fb24f05e2250"
+    sha256 cellar: :any,                 arm64_monterey: "da19bcacdc1135ef3eb98109f473d22bd7753fc850d1e4e3da0eb95023b6b2ca"
+    sha256 cellar: :any,                 sonoma:         "37bd232f15d467da97b3345a617a6dbc797bc6ad8ebf872551b27fb54c5a72cd"
+    sha256 cellar: :any,                 ventura:        "3215db836a8d52db6278ffe3e3522295e16a2d55336770210f1c4eb8f9ceb1a9"
+    sha256 cellar: :any,                 monterey:       "876c07dabe88389bf4524b3686b05f20a17c4982e1ff13918bc9221e2e3c8829"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "24bc424f2e333c4995e596f13ce7b4bda399467dc711098d4fb399fc954bf6bf"
   end
 
   depends_on "cmake" => :build
@@ -136,3 +137,154 @@ index f078d9c..ede5e06 100644
  #endif
  
  #include <algorithm>
+diff --git a/vowpalwabbit/config/src/cli_help_formatter.cc b/vowpalwabbit/config/src/cli_help_formatter.cc
+index 8cc6dfe..530d200 100644
+--- a/vowpalwabbit/config/src/cli_help_formatter.cc
++++ b/vowpalwabbit/config/src/cli_help_formatter.cc
+@@ -8,6 +8,7 @@
+ #include "vw/config/options.h"
+ 
+ #include <fmt/format.h>
++#include <fmt/ranges.h>
+ 
+ #include <sstream>
+ #include <string>
+@@ -191,4 +192,4 @@ std::string cli_help_formatter::format_help(const std::vector<option_group_defin
+   }
+ 
+   return overall_ss.str();
+-}
+\ No newline at end of file
++}
+diff --git a/vowpalwabbit/config/src/options_cli.cc b/vowpalwabbit/config/src/options_cli.cc
+index e9b09a5..55e2aee 100644
+--- a/vowpalwabbit/config/src/options_cli.cc
++++ b/vowpalwabbit/config/src/options_cli.cc
+@@ -10,6 +10,7 @@
+ #include "vw/config/option.h"
+ 
+ #include <fmt/format.h>
++#include <fmt/ranges.h>
+ 
+ #include <algorithm>
+ #include <cassert>
+diff --git a/vowpalwabbit/core/include/vw/core/vw_string_view_fmt.h b/vowpalwabbit/core/include/vw/core/vw_string_view_fmt.h
+index 0d42ac7..6f3cdff 100644
+--- a/vowpalwabbit/core/include/vw/core/vw_string_view_fmt.h
++++ b/vowpalwabbit/core/include/vw/core/vw_string_view_fmt.h
+@@ -13,6 +13,7 @@
+ 
+ #include <fmt/core.h>
+ #include <fmt/format.h>
++#include <fmt/ranges.h>
+ 
+ namespace fmt
+ {
+diff --git a/vowpalwabbit/core/src/merge.cc b/vowpalwabbit/core/src/merge.cc
+index 7425dee..46e2b16 100644
+--- a/vowpalwabbit/core/src/merge.cc
++++ b/vowpalwabbit/core/src/merge.cc
+@@ -16,6 +16,8 @@
+ #include "vw/core/vw_math.h"
+ #include "vw/io/io_adapter.h"
+ 
++#include <fmt/ranges.h>
++
+ #include <algorithm>
+ #include <limits>
+ 
+diff --git a/vowpalwabbit/core/src/no_label.cc b/vowpalwabbit/core/src/no_label.cc
+index c09f65f..b973442 100644
+--- a/vowpalwabbit/core/src/no_label.cc
++++ b/vowpalwabbit/core/src/no_label.cc
+@@ -11,6 +11,8 @@
+ #include "vw/core/vw.h"
+ #include "vw/io/logger.h"
+ 
++#include <fmt/ranges.h>
++
+ namespace
+ {
+ void parse_no_label(const std::vector<VW::string_view>& words, VW::io::logger& logger)
+diff --git a/vowpalwabbit/core/src/parse_args.cc b/vowpalwabbit/core/src/parse_args.cc
+index 3d33bde..7feaccc 100644
+--- a/vowpalwabbit/core/src/parse_args.cc
++++ b/vowpalwabbit/core/src/parse_args.cc
+@@ -44,6 +44,8 @@
+ #include "vw/io/owning_stream.h"
+ #include "vw/text_parser/parse_example_text.h"
+ 
++#include <fmt/ranges.h>
++
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
+diff --git a/vowpalwabbit/core/src/vw.cc b/vowpalwabbit/core/src/vw.cc
+index c8af91a..1b739a1 100644
+--- a/vowpalwabbit/core/src/vw.cc
++++ b/vowpalwabbit/core/src/vw.cc
+@@ -23,6 +23,7 @@
+ #include "vw/core/unique_sort.h"
+ #include "vw/text_parser/parse_example_text.h"
+ 
++#include <fmt/ranges.h>
+ #include <iostream>
+ 
+ namespace
+diff --git a/vowpalwabbit/core/include/vw/core/automl_impl.h b/vowpalwabbit/core/include/vw/core/automl_impl.h
+index 4a44666..0d1b35d 100644
+--- a/vowpalwabbit/core/include/vw/core/automl_impl.h
++++ b/vowpalwabbit/core/include/vw/core/automl_impl.h
+@@ -334,7 +334,7 @@ template <>
+ class formatter<VW::reductions::automl::automl_state> : public formatter<std::string>
+ {
+ public:
+-  auto format(VW::reductions::automl::automl_state c, format_context& ctx) -> decltype(ctx.out())
++  auto format(VW::reductions::automl::automl_state c, format_context& ctx) const -> decltype(ctx.out())
+   {
+     return formatter<std::string>::format(std::string{VW::to_string(c)}, ctx);
+   }
+@@ -344,7 +344,7 @@ template <>
+ class formatter<VW::reductions::automl::config_state> : public formatter<std::string>
+ {
+ public:
+-  auto format(VW::reductions::automl::config_state c, format_context& ctx) -> decltype(ctx.out())
++  auto format(VW::reductions::automl::config_state c, format_context& ctx) const -> decltype(ctx.out())
+   {
+     return formatter<std::string>::format(std::string{VW::to_string(c)}, ctx);
+   }
+@@ -354,7 +354,7 @@ template <>
+ class formatter<VW::reductions::automl::config_type> : public formatter<std::string>
+ {
+ public:
+-  auto format(VW::reductions::automl::config_type c, format_context& ctx) -> decltype(ctx.out())
++  auto format(VW::reductions::automl::config_type c, format_context& ctx) const -> decltype(ctx.out())
+   {
+     return formatter<std::string>::format(std::string{VW::to_string(c)}, ctx);
+   }
+diff --git a/vowpalwabbit/core/include/vw/core/ccb_label.h b/vowpalwabbit/core/include/vw/core/ccb_label.h
+index 2e7e985..9dd9158 100644
+--- a/vowpalwabbit/core/include/vw/core/ccb_label.h
++++ b/vowpalwabbit/core/include/vw/core/ccb_label.h
+@@ -81,7 +81,7 @@ template <>
+ class formatter<VW::ccb_example_type> : public formatter<std::string>
+ {
+ public:
+-  auto format(VW::ccb_example_type c, format_context& ctx) -> decltype(ctx.out())
++  auto format(VW::ccb_example_type c, format_context& ctx) const -> decltype(ctx.out())
+   {
+     return formatter<std::string>::format(std::string{VW::to_string(c)}, ctx);
+   }
+diff --git a/vowpalwabbit/core/include/vw/core/slates_label.h b/vowpalwabbit/core/include/vw/core/slates_label.h
+index 0cd089c..d226893 100644
+--- a/vowpalwabbit/core/include/vw/core/slates_label.h
++++ b/vowpalwabbit/core/include/vw/core/slates_label.h
+@@ -81,7 +81,7 @@ template <>
+ class formatter<VW::slates::example_type> : public formatter<std::string>
+ {
+ public:
+-  auto format(VW::slates::example_type c, format_context& ctx) -> decltype(ctx.out())
++  auto format(VW::slates::example_type c, format_context& ctx) const -> decltype(ctx.out())
+   {
+     return formatter<std::string>::format(std::string{VW::to_string(c)}, ctx);
+   }
