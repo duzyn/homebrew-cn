@@ -33,8 +33,6 @@ class Felinks < Formula
   uses_from_macos "expat"
   uses_from_macos "zlib"
 
-  conflicts_with "elinks", because: "both install the same binaries"
-
   def install
     # https://github.com/rkd77/elinks/issues/47#issuecomment-1190547847 parallelization issue.
     ENV.deparallelize
