@@ -4,6 +4,7 @@ class Utf8proc < Formula
   url "https://mirror.ghproxy.com/https://github.com/JuliaStrings/utf8proc/archive/refs/tags/v2.9.0.tar.gz"
   sha256 "18c1626e9fc5a2e192311e36b3010bfc698078f692888940f1fa150547abb0c1"
   license all_of: ["MIT", "Unicode-DFS-2015"]
+  head "https://github.com/JuliaStrings/utf8proc.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "cde8cdd879129b6e34ced18440c8149e180175ef74c42c560d8139382971aeb9"

@@ -37,6 +37,10 @@ class Bigloo < Formula
   end
 
   def install
+    # Remove when included in a release:
+    # https://github.com/manuel-serrano/bigloo/commit/8b2a912c7c668a2a0bfa2ec30bc68bfdd05d2d7f
+    ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
+
     # Force bigloo not to use vendored libraries
     inreplace "configure", /(^\s+custom\w+)=yes$/, "\\1=no"
 
