@@ -21,16 +21,22 @@ class Libchaos < Formula
 
   depends_on "cmake" => :build
 
+  # Support for Xcode 15+ (LLVM 16+)
+  patch :DATA
+
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DLIBCHAOS_ENABLE_TESTING=OFF",
-           "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
+    args = %w[
+      -DLIBCHAOS_ENABLE_TESTING=OFF
+      -DSKIP_CCACHE=ON
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    system "cmake", "-S", ".", "-B", "build", "-DLIBCHAOS_ENABLE_TESTING=OFF",
-           "-DBUILD_SHARED_LIBS=OFF", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=OFF", *args, *std_cmake_args
     system "cmake", "--build", "build"
-    lib.install buildpath/"build/libchaos.a"
+    lib.install "build/libchaos.a"
   end
 
   test do
@@ -54,3 +60,30 @@ class Libchaos < Formula
     system "./test"
   end
 end
+
+__END__
+diff --git a/include/chaos/analysis.hh b/include/chaos/analysis.hh
+index 2b24d01..57423d1 100755
+--- a/include/chaos/analysis.hh
++++ b/include/chaos/analysis.hh
+@@ -37,15 +37,17 @@ class basic_adapter {
+ 	AP adapter;
+
+ public:
++	using result_type = uint32_t;
++
+ 	void connect(AP func) { adapter = func; }
+ 	constexpr static size_t max(void) {
+-		return std::numeric_limits<uint32_t>::max();
++		return std::numeric_limits<result_type>::max();
+ 	}
+ 	constexpr static size_t min(void) {
+-		return std::numeric_limits<uint32_t>::lowest();
++		return std::numeric_limits<result_type>::lowest();
+ 	}
+-	uint32_t operator()(void) noexcept {
+-		return (uint32_t)(adapter() * (double)UINT32_MAX);
++	result_type operator()(void) noexcept {
++		return (result_type)(adapter() * (double)max());
+ 	}
+ };

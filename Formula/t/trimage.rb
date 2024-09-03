@@ -19,7 +19,7 @@ class Trimage < Formula
   end
 
   # https://github.com/Kilian/Trimage/issues/89
-  deprecate! date: "2023-08-30", because: :unmaintained
+  disable! date: "2023-08-30", because: :unmaintained
 
   depends_on "advancecomp"
   depends_on "jpegoptim"

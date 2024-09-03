@@ -50,7 +50,7 @@ class Xinit < Formula
       (share/"fonts/X11").install share/"fonts/TTF"
 
       (prefix.glob "**/*").each do |f|
-        inreplace f, "/opt/X11", HOMEBREW_PREFIX, false if f.file?
+        inreplace f, "/opt/X11", HOMEBREW_PREFIX, audit_result: false if f.file?
       end
 
       inreplace bin/"font_cache" do |s|

@@ -23,12 +23,12 @@ class Vnstat < Formula
   def install
     inreplace %w[src/cfg.c src/common.h man/vnstat.1 man/vnstatd.8 man/vnstati.1
                  man/vnstat.conf.5].each do |s|
-      s.gsub! "/etc/vnstat.conf", "#{etc}/vnstat.conf", false
-      s.gsub! "/var/", "#{var}/", false
-      s.gsub! "var/lib", "var/db", false
+      s.gsub! "/etc/vnstat.conf", "#{etc}/vnstat.conf", audit_result: false
+      s.gsub! "/var/", "#{var}/", audit_result: false
+      s.gsub! "var/lib", "var/db", audit_result: false
       # https://github.com/Homebrew/homebrew-core/pull/84695#issuecomment-913043888
       # network interface difference between macos and linux
-      s.gsub! "\"eth0\"", "\"en0\"", false if OS.mac?
+      s.gsub! "\"eth0\"", "\"en0\"", audit_result: false if OS.mac?
     end
 
     system "./configure", "--disable-dependency-tracking",
