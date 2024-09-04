@@ -1,7 +1,7 @@
 class Httperf < Formula
   desc "Tool for measuring webserver performance"
   homepage "https://github.com/httperf/httperf"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
   revision 2
 
   stable do

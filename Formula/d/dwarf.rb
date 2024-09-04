@@ -3,7 +3,7 @@ class Dwarf < Formula
   homepage "https://github.com/elboza/dwarf-ng/"
   url "https://mirror.ghproxy.com/https://github.com/elboza/dwarf-ng/archive/refs/tags/dwarf-0.4.0.tar.gz"
   sha256 "a64656f53ded5166041ae25cc4b1ad9ab5046a5c4d4c05b727447e73c0d83da0"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
   revision 1
 
   bottle do

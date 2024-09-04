@@ -3,7 +3,7 @@ class GitOctopus < Formula
   homepage "https://github.com/lesfurets/git-octopus"
   url "https://mirror.ghproxy.com/https://github.com/lesfurets/git-octopus/archive/refs/tags/v1.4.tar.gz"
   sha256 "e2800eea829c6fc74da0d3f3fcb3f7d328d1ac8fbb7b2eca8c651c0c903a50c3"
-  license "LGPL-3.0"
+  license "LGPL-3.0-only"
 
   bottle do
     rebuild 2

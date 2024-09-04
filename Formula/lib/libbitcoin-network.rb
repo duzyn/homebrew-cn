@@ -3,7 +3,7 @@ class LibbitcoinNetwork < Formula
   homepage "https://github.com/libbitcoin/libbitcoin-network"
   url "https://mirror.ghproxy.com/https://github.com/libbitcoin/libbitcoin-network/archive/refs/tags/v3.8.0.tar.gz"
   sha256 "d317582bc6d00cba99a0ef01903a542c326c2a4262ef78a4aa682d3826fd14ad"
-  license "AGPL-3.0"
+  license "AGPL-3.0-or-later"
   revision 1
 
   bottle do

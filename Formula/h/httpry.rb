@@ -3,7 +3,7 @@ class Httpry < Formula
   homepage "https://github.com/jbittel/httpry"
   url "https://mirror.ghproxy.com/https://github.com/jbittel/httpry/archive/refs/tags/httpry-0.1.8.tar.gz"
   sha256 "b3bcbec3fc6b72342022e940de184729d9cdecb30aa754a2c994073447468cf0"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
   head "https://github.com/jbittel/httpry.git", branch: "master"
 
   bottle do

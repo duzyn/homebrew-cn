@@ -3,7 +3,7 @@ class RipgrepAll < Formula
   homepage "https://github.com/phiresky/ripgrep-all"
   url "https://mirror.ghproxy.com/https://github.com/phiresky/ripgrep-all/archive/refs/tags/v0.10.6.tar.gz"
   sha256 "06cd619ad6638be206266a77fdf11034dc2dc15d97b3a057b0d6280a17334680"
-  license "AGPL-3.0"
+  license "AGPL-3.0-or-later"
   head "https://github.com/phiresky/ripgrep-all.git", branch: "master"
 
   bottle do

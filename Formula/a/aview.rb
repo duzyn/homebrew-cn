@@ -3,7 +3,7 @@ class Aview < Formula
   homepage "https://aa-project.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/aa-project/aview/1.3.0rc1/aview-1.3.0rc1.tar.gz?use_mirror=jaist"
   sha256 "42d61c4194e8b9b69a881fdde698c83cb27d7eda59e08b300e73aaa34474ec99"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
 
   livecheck do
     url :stable

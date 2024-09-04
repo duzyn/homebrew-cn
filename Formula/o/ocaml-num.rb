@@ -3,7 +3,7 @@ class OcamlNum < Formula
   homepage "https://github.com/ocaml/num"
   url "https://mirror.ghproxy.com/https://github.com/ocaml/num/archive/refs/tags/v1.5.tar.gz"
   sha256 "7ae07c8f5601e2dfc5008a62dcaf2719912ae596a19365c5d7bdf2230515959a"
-  license "LGPL-2.1"
+  license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
   revision 1
 
   bottle do

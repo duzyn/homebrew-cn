@@ -3,7 +3,7 @@ class Huexpress < Formula
   homepage "https://github.com/kallisti5/huexpress"
   url "https://mirror.ghproxy.com/https://github.com/kallisti5/huexpress/archive/refs/tags/3.0.4.tar.gz"
   sha256 "76589f02d1640fc5063d48a47f017077c6b7557431221defe9e38679d86d4db8"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
   revision 2
   head "https://github.com/kallisti5/huexpress.git", branch: "master"
 

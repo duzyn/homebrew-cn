@@ -3,7 +3,7 @@ class Logrotate < Formula
   homepage "https://github.com/logrotate/logrotate"
   url "https://mirror.ghproxy.com/https://github.com/logrotate/logrotate/releases/download/3.22.0/logrotate-3.22.0.tar.xz"
   sha256 "42b4080ee99c9fb6a7d12d8e787637d057a635194e25971997eebbe8d5e57618"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "cc989a616df04d37c0644ee673313f9a0b978c122000bccfa9fdbf3cce7e55dd"

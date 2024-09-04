@@ -3,7 +3,7 @@ class Log4cpp < Formula
   homepage "https://log4cpp.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/log4cpp/log4cpp-1.1.x%20%28new%29/log4cpp-1.1/log4cpp-1.1.4.tar.gz?use_mirror=jaist"
   sha256 "696113659e426540625274a8b251052cc04306d8ee5c42a0c7639f39ca90c9d6"
-  license "LGPL-2.1"
+  license "LGPL-2.1-or-later"
 
   livecheck do
     url :stable

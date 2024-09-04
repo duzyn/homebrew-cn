@@ -3,8 +3,7 @@ class Docbook2x < Formula
   homepage "https://docbook2x.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/docbook2x/docbook2x/0.8.8/docbook2X-0.8.8.tar.gz?use_mirror=jaist"
   sha256 "4077757d367a9d1b1427e8d5dfc3c49d993e90deabc6df23d05cfe9cd2fcdc45"
-  # TODO: Change `:cannot_represent` to "DocBook-XML" after https://github.com/spdx/license-list-XML/pull/2542
-  license all_of: ["MIT", :cannot_represent]
+  license all_of: ["MIT", "DocBook-XML"]
 
   livecheck do
     url :stable

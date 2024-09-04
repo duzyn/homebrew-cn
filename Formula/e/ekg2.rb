@@ -1,7 +1,7 @@
 class Ekg2 < Formula
   desc "Multiplatform, multiprotocol, plugin-based instant messenger"
   homepage "https://github.com/ekg2/ekg2"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
   revision 4
 
   stable do

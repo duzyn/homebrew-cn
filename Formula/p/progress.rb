@@ -3,7 +3,7 @@ class Progress < Formula
   homepage "https://github.com/Xfennec/progress"
   url "https://mirror.ghproxy.com/https://github.com/Xfennec/progress/archive/refs/tags/v0.17.tar.gz"
   sha256 "ee9538fce98895dcf0d108087d3ee2e13f5c08ed94c983f0218a7a3d153b725d"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
   head "https://github.com/Xfennec/progress.git", branch: "master"
 
   bottle do

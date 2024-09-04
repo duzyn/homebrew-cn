@@ -3,7 +3,7 @@ class Primer3 < Formula
   homepage "https://primer3.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/primer3/primer3/2.4.0/primer3-2.4.0.tar.gz?use_mirror=jaist"
   sha256 "6d537640c86e2b4656ae77f75b6ad4478fd0ca43985a56cce531fb9fc0431c47"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :stable

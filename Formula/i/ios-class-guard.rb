@@ -3,7 +3,7 @@ class IosClassGuard < Formula
   homepage "https://github.com/Polidea/ios-class-guard/"
   url "https://mirror.ghproxy.com/https://github.com/Polidea/ios-class-guard/archive/refs/tags/0.8.tar.gz"
   sha256 "4446993378f1e84ce1d1b3cbace0375661e3fe2fa1a63b9bf2c5e9370a6058ff"
-  license "GPL-2.0"
+  license "GPL-2.0-or-later"
   head "https://github.com/Polidea/ios-class-guard.git", branch: "master"
 
   # The latest version tags in the Git repository are `0.8` (2015-10-14) and

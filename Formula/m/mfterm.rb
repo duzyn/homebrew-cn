@@ -3,7 +3,7 @@ class Mfterm < Formula
   homepage "https://github.com/4ZM/mfterm"
   url "https://mirror.ghproxy.com/https://github.com/4ZM/mfterm/releases/download/v1.0.7/mfterm-1.0.7.tar.gz"
   sha256 "b6bb74a7ec1f12314dee42973eb5f458055b66b1b41316ae0c5380292b86b248"
-  license "GPL-3.0"
+  license "GPL-3.0-or-later"
   revision 3
 
   bottle do

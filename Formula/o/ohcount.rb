@@ -3,7 +3,7 @@ class Ohcount < Formula
   homepage "https://github.com/blackducksoftware/ohcount"
   url "https://mirror.ghproxy.com/https://github.com/blackducksoftware/ohcount/archive/refs/tags/4.0.0.tar.gz"
   sha256 "d71f69fd025f5bae58040988108f0d8d84f7204edda1247013cae555bfdae1b9"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
   head "https://github.com/blackducksoftware/ohcount.git", branch: "master"
 
   bottle do
