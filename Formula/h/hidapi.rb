@@ -3,10 +3,7 @@ class Hidapi < Formula
   homepage "https://github.com/libusb/hidapi"
   url "https://mirror.ghproxy.com/https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.14.0.tar.gz"
   sha256 "a5714234abe6e1f53647dd8cba7d69f65f71c558b7896ed218864ffcf405bcbd"
-  # TODO: Replace `:cannot_represent` with "HIDAPI" on next SPDX License List release
-  # Ref: https://github.com/spdx/license-list-XML/issues/2471
-  # Ref: https://spdx.github.io/license-list-data/HIDAPI.html
-  license any_of: ["GPL-3.0-only", "BSD-3-Clause", :cannot_represent]
+  license any_of: ["GPL-3.0-only", "BSD-3-Clause", "HIDAPI"]
   head "https://github.com/libusb/hidapi.git", branch: "master"
 
   bottle do
