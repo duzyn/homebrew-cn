@@ -25,11 +25,9 @@ class Multimarkdown < Formula
   conflicts_with "discount", because: "both install `markdown` binaries"
 
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make"
-      bin.install "multimarkdown"
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    bin.install "build/multimarkdown"
 
     bin.install Dir["scripts/*"].reject { |f| f.end_with?(".bat") }
   end

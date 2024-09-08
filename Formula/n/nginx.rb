@@ -6,7 +6,7 @@ class Nginx < Formula
   url "https://nginx.org/download/nginx-1.27.1.tar.gz"
   sha256 "bd7ba68a6ce1ea3768b771c7e2ab4955a59fb1b1ae8d554fedb6c2304104bdfc"
   license "BSD-2-Clause"
-  head "https://hg.nginx.org/nginx/", using: :hg
+  head "https://github.com/nginx/nginx", branch: "master"
 
   livecheck do
     url :homepage
