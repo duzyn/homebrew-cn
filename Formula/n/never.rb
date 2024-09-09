@@ -32,12 +32,10 @@ class Never < Formula
   def install
     ENV.append_to_cflags "-I#{MacOS.sdk_path_if_needed}/usr/include/ffi" if OS.mac?
 
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make"
-      bin.install "never"
-      lib.install "libnev.a"
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    bin.install "build/never"
+    lib.install "build/libnev.a"
     prefix.install "include"
   end
 

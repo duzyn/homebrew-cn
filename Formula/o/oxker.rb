@@ -1,19 +1,19 @@
 class Oxker < Formula
   desc "Terminal User Interface (TUI) to view & control docker containers"
   homepage "https://github.com/mrjackwills/oxker"
-  url "https://mirror.ghproxy.com/https://github.com/mrjackwills/oxker/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "082c152e31fb0c0f0adfa60780480d756c4589649963b6616599ab696b7989b4"
+  url "https://mirror.ghproxy.com/https://github.com/mrjackwills/oxker/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "b3c716a8dc5348d2cab3bb5c1779996847d70dd8b8628d57afdd5b1b24bd27d9"
   license "MIT"
   head "https://github.com/mrjackwills/oxker.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a8e66922361ebe2580351259add23543f0fbd9e43e901910b839e2bae11cc4df"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a81e79246f1f1686193ed3cc24a0ff30531622111b4a077c596b81a6aa4d4063"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3b20db9ccb3096eb005b38606038de02530959da9fdcfceaffbbb9f5668ef96"
-    sha256 cellar: :any_skip_relocation, sonoma:         "fccb5a408e1ca6546326af3190197ce7d656445c060e93ab6ab630061378039a"
-    sha256 cellar: :any_skip_relocation, ventura:        "b8015560ed07f3f1b2415ac1cf91b6a8d8002d7e8e28dd87a997e4e0b772ff1f"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae0daf2edeb3a7d50c66faa9beeeb69f1ffcd96566ddf23db5fc246e6f237eaa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c221292a1826594e214cea97c6471d9a41f39489181cd359c29af4361c40eb3d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "76af28cdbb61c74c04a4b6444b473a5779fb32fd2ab42b68604857ddd1a6d266"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "918f6815f787e6c9547ec4ea513d5aaf9def2e5e56b3f51cc0202610b7e2a6f3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "13e6386ea5a7e4a9f15ec9acfe195adaa7b6ecacc30293af77107fd92e06f8d2"
+    sha256 cellar: :any_skip_relocation, sonoma:         "d89668c6210270a01a6880f5b40b734d0e94bf106c823b9a31b666cffd531922"
+    sha256 cellar: :any_skip_relocation, ventura:        "ca76bb96dfedcd5726ba9895b2f57b14e05c249b1a0b9875fc0663cf6d049194"
+    sha256 cellar: :any_skip_relocation, monterey:       "1138c56c773e9682481a79d010d5ef50ba32a403861bf88668bd954d98f7411f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3897be408100166892e57405ed2473e062d6f37274c122e2f370584b14991525"
   end
 
   depends_on "rust" => :build

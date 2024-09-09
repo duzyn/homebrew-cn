@@ -5,8 +5,8 @@ class Kpcli < Formula
 
   desc "Command-line interface to KeePass database files"
   homepage "https://kpcli.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/kpcli/kpcli-4.1.pl?use_mirror=jaist"
-  sha256 "dedf0e86f44f8f7a1a9c524a45a515846945d01e04f9402571f18c22971eb7db"
+  url "https://downloads.sourceforge.net/project/kpcli/kpcli-4.1.1.pl?use_mirror=jaist"
+  sha256 "cb218a556a33718d8eae4eb6595f5e0bdb0d63226964f89fd4beded87e0d2ff4"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
 
   livecheck do
@@ -15,13 +15,13 @@ class Kpcli < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "c7bc0ef59d9caec5c48f47b609a4d36e1305a88cac6f9ebdeb33cb20be4867c4"
-    sha256 cellar: :any,                 arm64_ventura:  "f22469e7f9b815ea840b6e9e796247728dfdbf1a5de884bcc202f285436412c9"
-    sha256 cellar: :any,                 arm64_monterey: "45723b6731c390994768c83d514d63a462e25152f596803637e37b4973718560"
-    sha256 cellar: :any,                 sonoma:         "6054435c1158b36b1845b3b563f8e3bf3d6d284166346155e0e92985f45aa28e"
-    sha256 cellar: :any,                 ventura:        "0ab43cd7b8d801b481d3d80d33ea56e4ec6e31e13eff468fe917a0fc014325e0"
-    sha256 cellar: :any,                 monterey:       "4cb0734bb1a2e7889535858462c1cb352f13de0177d0083273f982b6f0ef826f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51769e2425233df85bd8e2bf47921e1669587df47889b2419c14164d3325f576"
+    sha256 cellar: :any,                 arm64_sonoma:   "33155666c3fc8c92e77ea6316d876dd754981323b2857fc2c2369db55d3008dc"
+    sha256 cellar: :any,                 arm64_ventura:  "68be8cc575bf50b400d97b0c7189f2d3bc2c898103fe1268c28f7b3369d40b7e"
+    sha256 cellar: :any,                 arm64_monterey: "aa479794a77120fa441d92eb97d78b65920d0e814a81a6b7fa704b6973285d9d"
+    sha256 cellar: :any,                 sonoma:         "fd8c07ee426c94f22065a1c59b607fb66bd5235c8bc172a5924febee27b7152c"
+    sha256 cellar: :any,                 ventura:        "b05a8fb6ef004a8195da91fa5ec51f97f85fc7d0eeff83530bda74ef24c2b41b"
+    sha256 cellar: :any,                 monterey:       "b484dcf196bde0a0b7ee91a78f55a4bc2c97333696da10b0dd455d9f92398a0f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89a57ade5394124b9730282133177b2576533a53eca63ee9555caa7c781f6f4e"
   end
 
   depends_on "readline"
@@ -31,25 +31,19 @@ class Kpcli < Formula
 
   resource "Mac::Pasteboard" do
     on_macos do
-      url "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.104.tar.gz"
-      sha256 "c55a4431188bec4873212a7c308f835fd1f0e3ba1958173037b5e2d0100fca40"
-
-      # fix incompatible pointer error, upstream pr ref, https://github.com/trwyant/perl-Mac-Pasteboard/pull/5
-      patch do
-        url "https://github.com/trwyant/perl-Mac-Pasteboard/commit/0d5537e912409429d565e9b755e9e4e9c125fc55.patch?full_index=1"
-        sha256 "feae9fd03d694440d73b0ace29bd4c18788015ac51a7aa797f97d501567d613b"
-      end
+      url "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.105.tar.gz"
+      sha256 "2d5592abb1f015273eaa6d832edd922f8695368bc69fea8f413b826bb1e68633"
     end
   end
 
   resource "Clone" do
     on_linux do
-      url "https://cpan.metacpan.org/authors/id/G/GA/GARU/Clone-0.46.tar.gz"
-      sha256 "aadeed5e4c8bd6bbdf68c0dd0066cb513e16ab9e5b4382dc4a0aafd55890697b"
+      url "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Clone-0.47.tar.gz"
+      sha256 "4c2c0cb9a483efbf970cb1a75b2ca75b0e18cb84bcb5c09624f86e26b09c211d"
     end
   end
 
-  resource "TermReadKey" do
+  resource "Term::ReadKey" do
     on_linux do
       url "https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz"
       sha256 "5a645878dc570ac33661581fbb090ff24ebce17d43ea53fd22e105a856a47290"
@@ -92,8 +86,8 @@ class Kpcli < Formula
   end
 
   resource "Clipboard" do
-    url "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.29.tar.gz"
-    sha256 "7eea786eb401ab7f6651e50dc5ea0b26431112a14353ed0fdb2307bac241aaea"
+    url "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.30.tar.gz"
+    sha256 "d7b3dd7b9ebaac546ec9d4862b1fa413b0279833917901d0b672fd1804384195"
   end
 
   resource "Capture::Tiny" do
