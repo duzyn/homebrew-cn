@@ -3,7 +3,11 @@ class Mtr < Formula
   homepage "https://www.bitwizard.nl/mtr/"
   url "https://mirror.ghproxy.com/https://github.com/traviscross/mtr/archive/refs/tags/v0.95.tar.gz"
   sha256 "12490fb660ba5fb34df8c06a0f62b4f9cbd11a584fc3f6eceda0a99124e8596f"
-  license "GPL-2.0-only"
+  # Main license is GPL-2.0-only but some compatibility code is under other licenses:
+  # 1. portability/queue.h is BSD-3-Clause
+  # 2. portability/error.* is LGPL-2.0-only (only used on macOS)
+  # 3. portability/getopt.* is omitted as unused
+  license all_of: ["GPL-2.0-only", "BSD-3-Clause", "LGPL-2.0-only"]
   head "https://github.com/traviscross/mtr.git", branch: "master"
 
   bottle do

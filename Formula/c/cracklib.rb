@@ -28,9 +28,11 @@ class Cracklib < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on "gettext"
-
   uses_from_macos "zlib"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   resource "cracklib-words" do
     url "https://mirror.ghproxy.com/https://github.com/cracklib/cracklib/releases/download/v2.10.2/cracklib-words-2.10.2.bz2"
@@ -41,11 +43,11 @@ class Cracklib < Formula
     buildpath.install (buildpath/"src").children if build.head?
     system "autoreconf", "--force", "--install", "--verbose" if build.head?
 
-    system "./configure", *std_configure_args,
-                          "--disable-silent-rules",
+    system "./configure", "--disable-silent-rules",
                           "--sbindir=#{bin}",
                           "--without-python",
-                          "--with-default-dict=#{var}/cracklib/cracklib-words"
+                          "--with-default-dict=#{var}/cracklib/cracklib-words",
+                          *std_configure_args
     system "make", "install"
 
     share.install resource("cracklib-words")
