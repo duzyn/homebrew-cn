@@ -1,5 +1,5 @@
 class Dra < Formula
-  desc "Tool to download release assets from GitHub"
+  desc "Command-line tool to download release assets from GitHub"
   homepage "https://github.com/devmatteini/dra"
   url "https://mirror.ghproxy.com/https://github.com/devmatteini/dra/archive/refs/tags/0.6.2.tar.gz"
   sha256 "e94be0967864593b44870cb39c2473fccc91d42d37fa500006646385ce2e4194"

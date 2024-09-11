@@ -1,8 +1,8 @@
 class Webkitgtk < Formula
   desc "GTK interface to WebKit"
   homepage "https://webkitgtk.org"
-  url "https://webkitgtk.org/releases/webkitgtk-2.44.3.tar.xz"
-  sha256 "dc82d042ecaca981a4852357c06e5235743319cf10a94cd36ad41b97883a0b54"
+  url "https://webkitgtk.org/releases/webkitgtk-2.44.4.tar.xz"
+  sha256 "2ce4ec1b78413035037aba8326b31ed72696626b7bea7bace5e46ac0d8cbe796"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -11,10 +11,11 @@ class Webkitgtk < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "05b04683c47fdb271742630657b1ce895ad718b0f5b9abdd363a109766ffd6ac"
+    sha256 x86_64_linux: "edf342c24f3a26b2d84b57250a5294e52eed4fca20d240a43b9f313c2203b6e3"
   end
 
   depends_on "cmake" => :build
+  depends_on "gettext" => :build
   depends_on "gobject-introspection" => :build
   depends_on "gperf" => :build
   depends_on "perl" => :build
@@ -22,10 +23,12 @@ class Webkitgtk < Formula
   depends_on "python@3.12" => :build
   depends_on "ruby" => :build
   depends_on "unifdef" => :build
+  depends_on "at-spi2-core"
   depends_on "cairo"
   depends_on "enchant"
   depends_on "fontconfig"
   depends_on "freetype"
+  depends_on "gdk-pixbuf"
   depends_on "glib"
   depends_on "gstreamer"
   depends_on "gtk+3"
@@ -34,12 +37,16 @@ class Webkitgtk < Formula
   depends_on "jpeg-turbo"
   depends_on "jpeg-xl"
   depends_on "libavif"
+  depends_on "libdrm"
+  depends_on "libepoxy"
   depends_on "libgcrypt"
   depends_on "libnotify"
   depends_on "libpng"
   depends_on "libsecret"
   depends_on "libsoup"
+  depends_on "libtasn1"
   depends_on "libwpe"
+  depends_on "libx11"
   depends_on "libxcomposite"
   depends_on "libxml2"
   depends_on "libxslt"
@@ -48,23 +55,14 @@ class Webkitgtk < Formula
   depends_on "little-cms2"
   depends_on "mesa"
   depends_on "openjpeg"
+  depends_on "pango"
   depends_on "sqlite"
   depends_on "systemd"
+  depends_on "wayland"
   depends_on "webp"
   depends_on "woff2"
   depends_on "wpebackend-fdo"
   depends_on "zlib"
-
-  on_linux do
-    depends_on "at-spi2-core"
-    depends_on "gdk-pixbuf"
-    depends_on "libdrm"
-    depends_on "libepoxy"
-    depends_on "libtasn1"
-    depends_on "libx11"
-    depends_on "pango"
-    depends_on "wayland"
-  end
 
   fails_with gcc: "5"
 
