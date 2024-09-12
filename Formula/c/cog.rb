@@ -7,6 +7,7 @@ class Cog < Formula
   head "https://github.com/replicate/cog.git", branch: "main"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "14b85c0de9d3fb0c042c74e644846431f61e6ff81140b3d314001a1be341d40f"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14b85c0de9d3fb0c042c74e644846431f61e6ff81140b3d314001a1be341d40f"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "14b85c0de9d3fb0c042c74e644846431f61e6ff81140b3d314001a1be341d40f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "14b85c0de9d3fb0c042c74e644846431f61e6ff81140b3d314001a1be341d40f"

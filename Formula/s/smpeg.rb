@@ -39,6 +39,9 @@ class Smpeg < Formula
   patch :DATA
 
   def install
+    # Workaround for newer Clang
+    ENV.append_to_cflags "-Wno-c++11-narrowing" if DevelopmentTools.clang_build_version >= 1400
+
     args = %W[
       --prefix=#{prefix}
       --with-sdl-prefix=#{Formula["sdl12-compat"].opt_prefix}

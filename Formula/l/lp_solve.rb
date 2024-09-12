@@ -28,6 +28,13 @@ class LpSolve < Formula
       "ux64"
     end
 
+    # Workaround for newer Clang
+    if DevelopmentTools.clang_build_version >= 1403
+      inreplace %W[lpsolve55/ccc#{target} lp_solve/ccc#{target}],
+                /^c=cc$/,
+                'c="cc -Wno-implicit-int"'
+    end
+
     cd "lpsolve55" do
       system "sh", "ccc#{target}"
       lib.install "bin/#{subdir}/liblpsolve55.a"

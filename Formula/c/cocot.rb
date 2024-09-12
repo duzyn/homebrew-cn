@@ -24,7 +24,10 @@ class Cocot < Formula
   end
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    # Workaround for newer Clang
+    ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
+
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 end
