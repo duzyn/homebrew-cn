@@ -1,6 +1,6 @@
 cask "dockdoor" do
-  version "1.2.6"
-  sha256 "9314ececb062a8d427bf3d7e4b391c4118b7ae20b20686bc9dd6ef0739eddb75"
+  version "1.2.8"
+  sha256 "dcdad5742ee446d56b95cbab1f09fa7ebc994c6bf9f9f2e49467890b52721050"
 
   url "https://mirror.ghproxy.com/https://github.com/ejbills/DockDoor/releases/download/v#{version}/DockDoor.dmg"
   name "DockDoor"
