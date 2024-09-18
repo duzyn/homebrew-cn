@@ -9,6 +9,7 @@ class PythonSetuptools < Formula
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "6dc19deb18ad122f26f6201aa5191acfdc95da06bf1b02d1fbd530e7497d5102"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6dc19deb18ad122f26f6201aa5191acfdc95da06bf1b02d1fbd530e7497d5102"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "6dc19deb18ad122f26f6201aa5191acfdc95da06bf1b02d1fbd530e7497d5102"
+    sha256 cellar: :any_skip_relocation, sequoia:       "4a828685a6098a2045e6ea0de9ac03d335f9cde04ec3650c1d3cddb01de59a9b"
     sha256 cellar: :any_skip_relocation, sonoma:        "4a828685a6098a2045e6ea0de9ac03d335f9cde04ec3650c1d3cddb01de59a9b"
     sha256 cellar: :any_skip_relocation, ventura:       "4a828685a6098a2045e6ea0de9ac03d335f9cde04ec3650c1d3cddb01de59a9b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "354fb7eb8b83f3a4e8f2ccf215e429d08b0945acf108676cf371b3779a3d59f6"
