@@ -1,18 +1,18 @@
 class Ox < Formula
   desc "Independent Rust text editor that runs in your terminal"
   homepage "https://github.com/curlpipe/ox"
-  url "https://mirror.ghproxy.com/https://github.com/curlpipe/ox/archive/refs/tags/0.6.0.tar.gz"
-  sha256 "63f947bc22c660a651f0ac9c1cec512b9b771a8f60e11e4772c0e5220372d5bb"
+  url "https://mirror.ghproxy.com/https://github.com/curlpipe/ox/archive/refs/tags/0.6.1.tar.gz"
+  sha256 "99135a0825f0fd604bd060699856dc0a4b79179807c6345ccf85ad33cdbd7db6"
   license "GPL-2.0-only"
   head "https://github.com/curlpipe/ox.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "077181f94e60ecf0ca25b0e03a0ed9607c4609eb72875d42794f9f608c3ec5e3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "40fcb197e484126a4652372f8c3e1c9484e896eee3a2dfa914253a31f8fb02b1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "3bfaec95f335014b1353f47eff31a3b53a0d6e13938807ac6d082ba06e8934ac"
-    sha256 cellar: :any_skip_relocation, sonoma:        "71b8a44f691ea75f07e3cd217e996066ba3d0deb2cd1aa3b0e249df80f01e23f"
-    sha256 cellar: :any_skip_relocation, ventura:       "06bbeb095594fb9b9fcb552e39220e2c8a9cd67cf9dda71b20e5cf35728cc012"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a528b690ac1105e14c74f75ac6bbe7b0613239de652f1323c9338bba2095a33a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3691df38ac0456cb8cdb8f35904b0a53fcd6f0e5ab09beca0c0cc25ac53c40dd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4c58193b7dc59c5553e139a6ee90947fdd286bc871cc685c996e9998ca9a1143"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "dfc6a4f5a16726a530e40bc3df6cac24f739d8c228ee12c1dc0908ccdde96441"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9852248586759587a4c6e9db2bd6378ee349e4e09498d05ceebf6e818a4a5058"
+    sha256 cellar: :any_skip_relocation, ventura:       "3165b9ab51b529f8021b629944edf410ffa5c57b7ccc8961568391ecec5904c6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f67c3b29cdabf5be2fed47696ba3144702fa0ae358964ea36b1d26149ecad27"
   end
 
   depends_on "rust" => :build

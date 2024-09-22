@@ -53,11 +53,6 @@ class Envoy < Formula
       --host_action_env=PATH=#{env_path}
     ]
 
-    # Work around build issue with Xcode 15.3 / LLVM 16+
-    # https://github.com/envoyproxy/envoy/issues/33225
-    # https://gitlab.freedesktop.org/pkg-config/pkg-config/-/issues/81
-    args << "--host_action_env=CFLAGS=-Wno-int-conversion"
-
     # GCC/ld.gold had some issues while building envoy so use clang/lld instead
     args << "--config=clang" if OS.linux?
 

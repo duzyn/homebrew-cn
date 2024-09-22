@@ -24,11 +24,6 @@ class MitScheme < Formula
     sha256 x86_64_linux:   "0e910ffb8aff109164099832f8d465f54e9e0c731a0580cb0c794970e3f6ce11"
   end
 
-  # Has a hardcoded compile check for /Applications/Xcode.app
-  # Dies on "configure: error: SIZEOF_CHAR is not 1" without Xcode.
-  # https://github.com/Homebrew/homebrew-x11/issues/103#issuecomment-125014423
-  depends_on xcode: :build
-
   uses_from_macos "m4" => :build
   uses_from_macos "ncurses"
 

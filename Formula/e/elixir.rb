@@ -30,6 +30,6 @@ class Elixir < Formula
   end
 
   test do
-    assert_match(%r{(compiled with Erlang/OTP 26)}, shell_output("#{bin}/elixir -v"))
+    assert_match(%r{(compiled with Erlang/OTP \d+)}, shell_output("#{bin}/elixir -v"))
   end
 end
