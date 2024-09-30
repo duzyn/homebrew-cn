@@ -1,18 +1,18 @@
 class Usage < Formula
   desc "Tool for working with usage-spec CLIs"
   homepage "https://usage.jdx.dev/"
-  url "https://mirror.ghproxy.com/https://github.com/jdx/usage/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "0d80734b4b6952e2b79bc09b3f63a58781443fa824b389d16d87251662d79c6e"
+  url "https://mirror.ghproxy.com/https://github.com/jdx/usage/archive/refs/tags/v0.8.4.tar.gz"
+  sha256 "7f1a0fa1442bd6e09c4e471e0f62c129cbabcdf6050e3e69c0ad3780e6b93aca"
   license "MIT"
   head "https://github.com/jdx/usage.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bf3ec0d72b07989829579f73de932b2f0eec63fdfcd628ed9c0fb698944b25a3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3e064aef83925a11e35ddab217c8b7fe4be5ad422a84aa8ea415c73aaf97c63f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "53ee4fdb68586dd3879598c08424f9ab0e976c7d14aff9b9b712c82f7a1a55e0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1d77b2eeba71d2c3c8d31ca6f6a7b57a7e272bf475c2376491a441596cef23e9"
-    sha256 cellar: :any_skip_relocation, ventura:       "01d6026ce853ef4f728041d66ea99dbb8e1accdbd0bce32c66651ecb7aafbbac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9fa4a30b151fc72365d3d2b2adae363e740cdbdefee88d63d56cfdf1a8fe7eed"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8cbafe56f4c76327b2e746d7ef8246f5c7d44d0b5ef67d3402c1960255479fb8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5b35c295f8daf4fa29581f2db2abc150852904dc40ff86c04b89fb64d3d39097"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "efd823995d97dac25d582ac7817ff8692eec7845c202fcff3601374faf00b554"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1ed192b30d2c756bcba2199c646b8e5c32beb00ecfb10c824584d051bd54755f"
+    sha256 cellar: :any_skip_relocation, ventura:       "318589cb743138493a9ddc96ced68ac11a10f9510b3c0501f943489a001d6467"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c10ac4f297776fad2e03a82e61b42cee76ad8a508aa02fffae89d3a4468081e5"
   end
 
   depends_on "rust" => :build
