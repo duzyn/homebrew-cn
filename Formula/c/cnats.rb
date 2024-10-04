@@ -1,17 +1,17 @@
 class Cnats < Formula
   desc "C client for the NATS messaging system"
   homepage "https://github.com/nats-io/nats.c"
-  url "https://mirror.ghproxy.com/https://github.com/nats-io/nats.c/archive/refs/tags/v3.9.0.tar.gz"
-  sha256 "82fd3cdc732f091859f5840c968ba489bc5c91b94454040b8011c1d61fd973a8"
+  url "https://mirror.ghproxy.com/https://github.com/nats-io/nats.c/archive/refs/tags/v3.9.1.tar.gz"
+  sha256 "56836bb30a2da93eaa6df0dfa27e796e6be0933b5b3d4d83b5c76d3b80304290"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "a14732dbe1970ee79a82bf82284fe48a36593d9f4524bd165555575b2e86d737"
-    sha256 cellar: :any,                 arm64_sonoma:  "46bdd45de7cebfbf7fee0efa4f25a8e75ff1259b4eeeab1fd2b83499125614c8"
-    sha256 cellar: :any,                 arm64_ventura: "99eccf1867487b76254b99869d48f04e76ff1487abc73df1a061d3cd0ce27128"
-    sha256 cellar: :any,                 sonoma:        "d9d34eb8f6e01a652fdb5995210d39dfaa179103534e54f6c470e0579d2607f5"
-    sha256 cellar: :any,                 ventura:       "7d21fc311bed3729fe965047ce7d2d6f8a083623bdd42a065d2a475a21417ab6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bdee6d48ec5d0cd2a128a4072947881d4df68516830c33a3445531403fdbc466"
+    sha256 cellar: :any,                 arm64_sequoia: "4048aab049238b3973504ecca6c09eee64097e344a5c233a8ed6c13b89cdde15"
+    sha256 cellar: :any,                 arm64_sonoma:  "c9ecd9f8bd0e02961699b17bd1fcdc3dd561ff0e98612b7859560836e539194d"
+    sha256 cellar: :any,                 arm64_ventura: "4c8191751fedea59c00d3f4411e501bc4da323ee55f23031a201cf6f8154fee2"
+    sha256 cellar: :any,                 sonoma:        "a1c6d852e068568d59be12ce391306d8445fc8e26edd686851791102d2d970ec"
+    sha256 cellar: :any,                 ventura:       "f1f0aede9202ebf802dd168400e81234cf68c01d03e955c3f8d6286fd4a9a547"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01d69e37e34e3d3bf1abd1b198069042c424542a65d126256407e4198d1856b7"
   end
 
   depends_on "cmake" => :build
@@ -19,9 +19,6 @@ class Cnats < Formula
   depends_on "libuv"
   depends_on "openssl@3"
   depends_on "protobuf-c"
-
-  # patch the version suffix for release builds, upstream build patch, https://github.com/nats-io/nats.c/pull/810
-  patch :DATA
 
   def install
     args = %W[
@@ -47,31 +44,3 @@ class Cnats < Formula
     assert_equal version, shell_output("./test").strip
   end
 end
-
-__END__
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 7b87592..4a725bf 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -254,7 +254,7 @@ endif(NATS_BUILD_WITH_TLS)
- set(NATS_VERSION_MAJOR  3)
- set(NATS_VERSION_MINOR  9)
- set(NATS_VERSION_PATCH  0)
--set(NATS_VERSION_SUFFIX "-beta")
-+set(NATS_VERSION_SUFFIX "")
- 
- set(NATS_VERSION_REQUIRED_NUMBER 0x030900)
- 
-diff --git a/src/version.h b/src/version.h
-index e06ea35..7ece7b8 100644
---- a/src/version.h
-+++ b/src/version.h
-@@ -25,7 +25,7 @@ extern "C" {
- #define NATS_VERSION_MINOR  9
- #define NATS_VERSION_PATCH  0
- 
--#define NATS_VERSION_STRING "3.9.0-beta"
-+#define NATS_VERSION_STRING "3.9.0"
- 			 				  
- #define NATS_VERSION_NUMBER ((NATS_VERSION_MAJOR << 16) | \
-                              (NATS_VERSION_MINOR <<  8) | \

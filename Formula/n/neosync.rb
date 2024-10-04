@@ -1,18 +1,18 @@
 class Neosync < Formula
   desc "CLI for interfacing with Neosync"
   homepage "https://www.neosync.dev/"
-  url "https://mirror.ghproxy.com/https://github.com/nucleuscloud/neosync/archive/refs/tags/v0.4.72.tar.gz"
-  sha256 "19f1879e75ede4afac8e6eb7ba735299d568369e2ec7fbd151ac56a1b2a99a5e"
+  url "https://mirror.ghproxy.com/https://github.com/nucleuscloud/neosync/archive/refs/tags/v0.4.74.tar.gz"
+  sha256 "3b2cb088c629a912ed48cc311c0a465b6385598a27209d23cbe1305eaa004408"
   license "MIT"
   head "https://github.com/nucleuscloud/neosync.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "612e5bb9ec66532df6cd4f5dba3db1fb1b3e13efb38e6978fe174f8365602b0e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3fa295ee5d243912f2fc7c77459ce92dcf716035f9e51c33c458fa017236cb86"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "da83fa51b2ab3ff8330de5c81f219d9ab42994e546118b98e73df8c624e60c58"
-    sha256 cellar: :any_skip_relocation, sonoma:        "830b348566a8673c7abee65438d82044ed22c2628b339031ccf4756948221973"
-    sha256 cellar: :any_skip_relocation, ventura:       "22f549fae8af74517557ce9b959a1f7adeb329d1283e0df008f8bb8b79a0cc6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b69b61b8984401febf35ae6f1f422a7aade760393b25d4fccae043ae2aa9eef1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "be32d14b66b44f95f1be6d89ab016cbd6f3b72a9823debd09e618b084c245425"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e133d26c32a71cb93c23f8d5288bc728ffd4eea6a375b12115c3843a42b87f96"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "75ffd3c4c17eabfdb065a3b5233049ea423a9d102d57246cff96a98327f52fe4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a0c6bf1f2924bda790c8fe682b29005bc8993aead00c8977fd2a06166d402b24"
+    sha256 cellar: :any_skip_relocation, ventura:       "2caabff69571dae5cf9ec285456d0b96853f5676533b5986dc7134d36db3df49"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "77ba70a7e5ba29081589aa9ba150369b9a1b1c7af6dafa9ffd610001fb508a2c"
   end
 
   depends_on "go" => :build
