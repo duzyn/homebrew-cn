@@ -6,20 +6,13 @@ class Restview < Formula
   url "https://files.pythonhosted.org/packages/10/93/20516dada3c64de14305fd8137251cd4accaa7eba15b44deb1f2419aa9ff/restview-3.0.1.tar.gz"
   sha256 "8c1a171c159d46d15d5569f77021828883a121d6f9baf758d641fc1e54b05ae5"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "b92b6c05f86bfd05a290f69fa8e8c996ada1aa2f7d43801f88bf36042e6d043f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c921d83c49cd1c6169d42e7eece6d4c2a1bbd690f6def296261d07d927fd6306"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e18712cf12f3363279f64be710918eaa98e791219264cf2ca21c8274740e5986"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e964791ab8f477e1f267b6e8f6612de2ceb0b9b65f8b48408ecf5ffde68db689"
-    sha256 cellar: :any_skip_relocation, sonoma:         "899782b5fa0e36b02995a9b2bd6781b373feb0cc45444e9238ff08950e4cba6e"
-    sha256 cellar: :any_skip_relocation, ventura:        "9467d70467a0619c96bbfcfbd687cfe1c1aca86ef864f4ad04ae36381f6d97c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "da343b1572747013a65397c6aa4e57477076162ea5b5fc28331260d416ef134b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0d58dcd202f9c066cc1480dc052c1b1844b07e9246b0ddc530dfe1d8724b660"
+    sha256 cellar: :any_skip_relocation, all: "44cf50d67efc998fd820cbf40dfb0e748073fba236af658e717e01109acc1e36"
   end
 
-  depends_on "python@3.12"
+  depends_on "python@3.13"
 
   resource "bleach" do
     url "https://files.pythonhosted.org/packages/6d/10/77f32b088738f40d4f5be801daa5f327879eadd4562f36a2b5ab975ae571/bleach-6.1.0.tar.gz"

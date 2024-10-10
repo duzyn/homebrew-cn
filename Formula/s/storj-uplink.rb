@@ -1,8 +1,8 @@
 class StorjUplink < Formula
   desc "Uplink CLI for the Storj network"
   homepage "https://storj.io"
-  url "https://mirror.ghproxy.com/https://github.com/storj/storj/archive/refs/tags/v1.114.5.tar.gz"
-  sha256 "cd5027d948958e39dc9d638156b2fb5c7d0e70a8f94703de565bc17eb9596e60"
+  url "https://mirror.ghproxy.com/https://github.com/storj/storj/archive/refs/tags/v1.114.6.tar.gz"
+  sha256 "faea05c931a251719a762cabf62383761a06e79f6f51f3cd3ea550dc73d5d772"
   license "AGPL-3.0-only"
 
   # Upstream creates stable releases and marks them as "pre-release" before
@@ -18,12 +18,12 @@ class StorjUplink < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fdfe84d8936311de09b0e85a03ffde2abb63cf16ab19dba256c539dc38216fde"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fdfe84d8936311de09b0e85a03ffde2abb63cf16ab19dba256c539dc38216fde"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "fdfe84d8936311de09b0e85a03ffde2abb63cf16ab19dba256c539dc38216fde"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c2e50c12367f4fc729cc4395922fe7afa383fb88b39d3af9646a5a04eff9b4e0"
-    sha256 cellar: :any_skip_relocation, ventura:       "c2e50c12367f4fc729cc4395922fe7afa383fb88b39d3af9646a5a04eff9b4e0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "683ee85f6d8d9a81153f70fb4503a37ddcc1dd8144b26f0bf54d62bdbf679221"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1f7d138dd734b175a28d0367d64da8d075c734fb7e7ddb1e8535e35b838cfe2f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1f7d138dd734b175a28d0367d64da8d075c734fb7e7ddb1e8535e35b838cfe2f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "1f7d138dd734b175a28d0367d64da8d075c734fb7e7ddb1e8535e35b838cfe2f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "84dc7e9fd2fd04cc02c850fb9a114456969690cc2b4aa34a2bfced1d871b1b0c"
+    sha256 cellar: :any_skip_relocation, ventura:       "84dc7e9fd2fd04cc02c850fb9a114456969690cc2b4aa34a2bfced1d871b1b0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "46cfbe225bf413753373d2fabc2a82a09a1ae6bdf728b54336fc1201f033ba27"
   end
 
   depends_on "go" => :build
