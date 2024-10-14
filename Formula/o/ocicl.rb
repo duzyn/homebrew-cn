@@ -1,21 +1,19 @@
 class Ocicl < Formula
   desc "OCI-based ASDF system distribution and management tool for Common Lisp"
   homepage "https://github.com/ocicl/ocicl"
-  url "https://mirror.ghproxy.com/https://github.com/ocicl/ocicl/archive/refs/tags/v2.4.3.tar.gz"
-  sha256 "722ffe7bc0d2559d758f6ebdc803357c53d0fd47612cc498047aea74ca1a481b"
+  url "https://mirror.ghproxy.com/https://github.com/ocicl/ocicl/archive/refs/tags/v2.5.7.tar.gz"
+  sha256 "86858146849bc2f945477459a83f1e1564e124460f4a72bb5a5ca702838dea8d"
   license "MIT"
-  revision 2
 
   bottle do
-    sha256 arm64_sequoia: "27c1ae029808d59116becded1c5c3e56ebdc97a59f28efd57990d794ed4eb0d5"
-    sha256 arm64_sonoma:  "969a90358f1c49235109791fc1645d33d1ab113abc7db1626adaf12005b2f2a8"
-    sha256 arm64_ventura: "7205ddadc8ab378df3f74c0b8f8bd91d21604099b5d271f538241c87aa0016c4"
-    sha256 sonoma:        "3ab63218d709395cfaa24be250f14528634899ed22ea3f5c06e6021a18fd1b8b"
-    sha256 ventura:       "5f9479b5afde6f52623906571685976be1e516d4a3a456e7e370b4a35e1e231b"
-    sha256 x86_64_linux:  "4f159f7d9c71da851b6140934ed0422739aba71ddfa60b65b69808ba3daa1906"
+    sha256 arm64_sequoia: "8aa3f6b2f8ade905abc0f449af36bf220cf06a6f6078436620e023e56e85b13d"
+    sha256 arm64_sonoma:  "cebd4d085aa61628bc26f3bf74cd225213a5aa76ea9235c711e0930e30d311c5"
+    sha256 arm64_ventura: "fe5f3fbc658c0519927988c0c8c1af858ba3512727f47ebca5087844d96238d7"
+    sha256 sonoma:        "60f556664fc4ec4ea4379578931d0a321ba0e5bfc46b0d17705cfecc2591eb4f"
+    sha256 ventura:       "dd6ba192eebe4bffd3c509e3a6f4e28cd99c29fc612aa772428c64d99b9b60c8"
+    sha256 x86_64_linux:  "de0387d107d3aea81f11cf8844d96b47bbe19b47526dd561d2766e9258433036"
   end
 
-  depends_on "oras"
   depends_on "sbcl"
   depends_on "zstd"
 
@@ -28,11 +26,14 @@ class Ocicl < Formula
     # such a way that the sbcl part of the binary can't find the image
     # cores.  For this reason, we are generating our own image core as
     # a separate file and loading it at runtime.
-    system "sbcl", "--dynamic-space-size", "3072", "--no-userinit", "--eval",
-           "(require 'asdf)", "--eval", <<~LISP
+    system "sbcl", "--dynamic-space-size", "3072", "--no-userinit",
+           "--eval", "(load \"runtime/asdf.lisp\")", "--eval", <<~LISP
              (progn
-               (push (uiop:getcwd) asdf:*central-registry*)
+               (asdf:initialize-source-registry
+                 (list :source-registry
+                       :inherit-configuration (list :tree (uiop:getcwd))))
                (asdf:load-system :ocicl)
+               (asdf:clear-source-registry)
                (sb-ext:save-lisp-and-die "#{libexec}/ocicl.core"))
            LISP
 
@@ -41,12 +42,6 @@ class Ocicl < Formula
       #!/usr/bin/env -S sbcl --core #{libexec}/ocicl.core --script
       (uiop:restore-image)
       (ocicl:main)
-    EOS
-
-    # Write a shell script to wrap oras
-    (bin/"ocicl-oras").write <<~EOS
-      #!/bin/sh
-      oras "$@"
     EOS
   end
 
