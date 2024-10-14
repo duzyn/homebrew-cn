@@ -1,17 +1,17 @@
 class Lmod < Formula
   desc "Lua-based environment modules system to modify PATH variable"
   homepage "https://lmod.readthedocs.io"
-  url "https://mirror.ghproxy.com/https://github.com/TACC/Lmod/archive/refs/tags/8.7.51.tar.gz"
-  sha256 "0038fe841806787e3049bf8bfd177b952f3ff93874c56b5537c784aacfeec3cb"
+  url "https://mirror.ghproxy.com/https://github.com/TACC/Lmod/archive/refs/tags/8.7.53.tar.gz"
+  sha256 "5e7ed1a5acfee76abfd96f2ffa3af69d49052b9e88a04ab18d87d18a538c4834"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a1c8a3af3e972decbb347067d3a7ef5f267d9907514460df38543ca409068ec0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0edb840ce371306bb6ca79d5fa60fe5ebc404ce3452a84828234063541d8a370"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "1b26483124ea82eb8a5bb542fb992cf7054b4653f511d3181e600f3d567c95ba"
-    sha256 cellar: :any_skip_relocation, sonoma:        "424e6756617d625ce2b0b58e656a655cb7528a6e82acde3d3e56921bc33a7719"
-    sha256 cellar: :any_skip_relocation, ventura:       "4b4e05dc2bcd33d9f903293cf01994c7208efbdb498ea54381d0e4b418e07b04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f15536913239b0a402d05931ea14738fc7a80818d290886aefbac15b1725d3dc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a7f89cc87742f2d1196bc0fad3dacc43be40d21136723189cbf23ece89f3a24d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a56018bcbee0602a805a6dc109b157ed8768dfd15d846d3102a29095c8e84e03"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "20d6dd789dd3ba4c8f0f24d170340c4348a524881caf0f5802dd128497db5b18"
+    sha256 cellar: :any_skip_relocation, sonoma:        "80620eaa145726e23265a8b7a6d77180f6b4235f5fbd0661aeeccaa32233e668"
+    sha256 cellar: :any_skip_relocation, ventura:       "6042f267182adca68fe69f98ee9e6bb56968912d815b480b95bae74b09a54abd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "343f599971e406ede650a5196da07f20c1b1f09ee597ab7a2ca9a89a64f31e56"
   end
 
   depends_on "luarocks" => :build

@@ -3,19 +3,18 @@ class Gcovr < Formula
 
   desc "Reports from gcov test coverage program"
   homepage "https://gcovr.com/"
-  url "https://files.pythonhosted.org/packages/42/19/8a72c830ab7aed71927606c6432f7edded6cd214639dc07f610e8e22496a/gcovr-8.0.tar.gz"
-  sha256 "3d91ef6df6c465bab91a5b12c82c481b0fbe841d64630dcbf76a0faac7e994e8"
+  url "https://files.pythonhosted.org/packages/32/21/7f9967a2d5a37d8f77e793ba4c173d0e1e59195028c997a9947b73b652f4/gcovr-8.2.tar.gz"
+  sha256 "9a1dddd4585d13ec77555db5d6b6a31ee81587ea6fc604ff9fcd232cb0782df5"
   license "BSD-3-Clause"
   head "https://github.com/gcovr/gcovr.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "41649757986ac29778dae491b0bd88443228043cec84a4a682dda80de7b673f7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "09c9bb5d0fbff3ca778759453d182471a65170f155cf2e1c36d1dc7d51360164"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e0a1ebccb2e60920ed4868fa40f0f2d8d580a21bc746d4776fb02e861fe0e4cd"
-    sha256 cellar: :any_skip_relocation, sonoma:        "69da6b03075d8610694fc229768d823a921b614991fa501646904d910f5bca47"
-    sha256 cellar: :any_skip_relocation, ventura:       "8d0e9ed49b4b276aa68cc5d82a52f78806762814d504a5c7b67d06300a6f4c18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8338d43f214b48f4321af78183d163fe2ebfad7850d6f8d60d86597f717fc6b2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2f7f77441e25db28d5cc139e25d0da7ea0b9b2b0c7bbb58993940ab5657fde4b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "06781eb1ecbc23c17eea3c2afae02943ab7426a182a624e7c4646cb5567de0ea"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "2a25c3ff943643010a69b455916cd4013d3cdf8cc8f3d5feffd3268fed8acba1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "899ad67d226162abaa2605d48206670ca0fae72cebeb6723296b3040ce510c35"
+    sha256 cellar: :any_skip_relocation, ventura:       "8d862a1fbff7976bcd5b23216d3967b5689a3af5d667fa5b9b2b6fa06481370c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fdae1740841ad220dbbe6daff2479e5e3f0a3988d0777e61d2dbb5eee557d766"
   end
 
   depends_on "python@3.13"
