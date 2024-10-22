@@ -80,14 +80,14 @@ class Icecream < Formula
   end
 
   test do
-    (testpath/"hello-c.c").write <<~EOS
+    (testpath/"hello-c.c").write <<~C
       #include <stdio.h>
       int main()
       {
         puts("Hello, world!");
         return 0;
       }
-    EOS
+    C
     system opt_libexec/"icecc/bin/gcc", "-o", "hello-c", "hello-c.c"
     assert_equal "Hello, world!\n", shell_output("./hello-c")
 
@@ -102,14 +102,14 @@ class Icecream < Formula
     system opt_libexec/"icecc/bin/g++", "-o", "hello-cc", "hello-cc.cc"
     assert_equal "Hello, world!\n", shell_output("./hello-cc")
 
-    (testpath/"hello-clang.c").write <<~EOS
+    (testpath/"hello-clang.c").write <<~C
       #include <stdio.h>
       int main()
       {
         puts("Hello, world!");
         return 0;
       }
-    EOS
+    C
     system opt_libexec/"icecc/bin/clang", "-o", "hello-clang", "hello-clang.c"
     assert_equal "Hello, world!\n", shell_output("./hello-clang")
 
