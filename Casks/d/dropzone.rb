@@ -1,6 +1,6 @@
 cask "dropzone" do
-  version "4.80.23"
-  sha256 "9256c4397daa2dc4159089811d2e653ac734941bc1e5b6b299352a339027188c"
+  version "4.80.25"
+  sha256 "4aee63aa7447ecb1fe839778a142adf5f690126568b80dbcea3cb05c3c8c8e93"
 
   url "https://aptonic.com/releases/Dropzone-#{version}.zip"
   name "Dropzone"
