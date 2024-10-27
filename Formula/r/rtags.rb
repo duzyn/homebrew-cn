@@ -73,14 +73,14 @@ class Rtags < Formula
 
   test do
     mkpath testpath/"src"
-    (testpath/"src/foo.c").write <<~EOS
+    (testpath/"src/foo.c").write <<~C
       void zaphod() {
       }
 
       void beeblebrox() {
         zaphod();
       }
-    EOS
+    C
     (testpath/"src/README").write <<~EOS
       42
     EOS

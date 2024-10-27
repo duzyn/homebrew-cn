@@ -3,18 +3,17 @@ class Fastapi < Formula
 
   desc "CLI for FastAPI framework"
   homepage "https://fastapi.tiangolo.com/"
-  url "https://files.pythonhosted.org/packages/22/fa/19e3c7c9b31ac291987c82e959f36f88840bea183fa3dc3bb654669f19c1/fastapi-0.115.2.tar.gz"
-  sha256 "3995739e0b09fa12f984bce8fa9ae197b35d433750d3d312422d846e283697ee"
+  url "https://files.pythonhosted.org/packages/a9/ce/b64ce344d7b13c0768dc5b131a69d52f57202eb85839408a7637ca0dd7e2/fastapi-0.115.3.tar.gz"
+  sha256 "c091c6a35599c036d676fa24bd4a6e19fa30058d93d950216cdc672881f6f7db"
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sequoia: "43b17fb983028a89a6945fdc733d4d1018c47a339ceeb3fccdebdf35b9a615ac"
-    sha256 cellar: :any,                 arm64_sonoma:  "3cb10364005fca1e01f325832a2098753b6caedf1a7724b942db813d1ce2fcdf"
-    sha256 cellar: :any,                 arm64_ventura: "211f3987ac76f596ae49ee0df44ab0789ac5f384b9ee2e6b02ea4dc35016811d"
-    sha256 cellar: :any,                 sonoma:        "567c110f5b4d754b556193e1f674251db92e659a60815431d1a62d0536621282"
-    sha256 cellar: :any,                 ventura:       "21a6cafdd08eee1550743281a709db41ea856bb22ccbc86a19b00e2a53ee99e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c4cc6b4b1882b5c9a38b8a5510c93dac2ea851cd29f4a6af00d010239a5383a4"
+    sha256 cellar: :any,                 arm64_sequoia: "0f00a68d1a191b9fe971b8f502478b06df616740842973cd53aff14790f35fe4"
+    sha256 cellar: :any,                 arm64_sonoma:  "5d6d47fc4a3eed74c08e4fe8f7dffc0b01ad3ac6a3745e85203bf135fe4ed720"
+    sha256 cellar: :any,                 arm64_ventura: "0927c26204dada7e1740f6f329c342df59c6303d859ad9cc7ca1db074eb5555a"
+    sha256 cellar: :any,                 sonoma:        "60eb6ba3a8b10d5de0b967300aafa81c48162104512b36037ae2f21ecfe7363d"
+    sha256 cellar: :any,                 ventura:       "62b4ce32f65c65071dacf6a36a8faa40fe02814417009a188690ed088e0947e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c6a44d98597dc97847daf5bf160b400790e6aa923c137779654c9960cf80d315"
   end
 
   depends_on "rust" => :build # for pydantic
@@ -32,8 +31,8 @@ class Fastapi < Formula
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/78/49/f3f17ec11c4a91fe79275c426658e509b07547f874b14c1a526d86a83fc8/anyio-4.6.0.tar.gz"
-    sha256 "137b4559cbb034c477165047febb6ff83f390fc3b20bf181c1fc0a728cb8beeb"
+    url "https://files.pythonhosted.org/packages/9f/09/45b9b7a6d4e45c6bcb5bf61d19e3ab87df68e0601fa8c5293de3542546cc/anyio-4.6.2.post1.tar.gz"
+    sha256 "4c8bc31ccdb51c7f7bd251f51c609e038d63e34219b44aa86e47576389880b4c"
   end
 
   resource "click" do
@@ -67,11 +66,8 @@ class Fastapi < Formula
   end
 
   resource "httptools" do
-    url "https://files.pythonhosted.org/packages/67/1d/d77686502fced061b3ead1c35a2d70f6b281b5f723c4eff7a2277c04e4a2/httptools-0.6.1.tar.gz"
-    sha256 "c6e26c30455600b95d94b1b836085138e82f177351454ee841c148f93a9bad5a"
-
-    # relax cython version constraint, upstream pr ref, https://github.com/MagicStack/httptools/pull/101
-    patch :DATA
+    url "https://files.pythonhosted.org/packages/a7/9a/ce5e1f7e131522e6d3426e8e7a490b3a01f39a6696602e1c4f33f9e94277/httptools-0.6.4.tar.gz"
+    sha256 "4e93eee4add6493b59a5c514da98c939b244fce4a0d8879cd3f466562f4b7d5c"
   end
 
   resource "httpx" do
@@ -95,8 +91,8 @@ class Fastapi < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/b4/d2/38ff920762f2247c3af5cbbbbc40756f575d9692d381d7c520f45deb9b8f/markupsafe-3.0.1.tar.gz"
-    sha256 "3e683ee4f5d0fa2dde4db77ed8dd8a876686e3fc417655c2ece9a90576905344"
+    url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
+    sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
   end
 
   resource "mdurl" do
@@ -135,8 +131,8 @@ class Fastapi < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/aa/9e/1784d15b057b0075e5136445aaea92d23955aad2c93eaede673718a40d95/rich-13.9.2.tar.gz"
-    sha256 "51a2c62057461aaf7152b4d611168f93a9fc73068f8ded2790f29fe2b5366d0c"
+    url "https://files.pythonhosted.org/packages/d9/e9/cf9ef5245d835065e6673781dbd4b8911d352fb770d56cf0879cf11b7ee1/rich-13.9.3.tar.gz"
+    sha256 "bc1e01b899537598cf02579d2b9f4a415104d3fc439313a7a2c165d76557a08e"
   end
 
   resource "shellingham" do
@@ -150,8 +146,8 @@ class Fastapi < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/02/0a/62fbd5697f6174041f9b4e2e377b6f383f9189b77dbb7d73d24624caca1d/starlette-0.39.2.tar.gz"
-    sha256 "caaa3b87ef8518ef913dac4f073dea44e85f73343ad2bdc17941931835b2a26a"
+    url "https://files.pythonhosted.org/packages/78/53/c3a36690a923706e7ac841f649c64f5108889ab1ec44218dac45771f252a/starlette-0.41.0.tar.gz"
+    sha256 "39cbd8768b107d68bfe1ff1672b38a2c38b49777de46d2a592841d58e3bf7c2a"
   end
 
   resource "typer" do
@@ -165,13 +161,13 @@ class Fastapi < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/76/87/a886eda9ed495a3a4506d5a125cd07c54524280718c4969bde88f075fe98/uvicorn-0.31.1.tar.gz"
-    sha256 "f5167919867b161b7bcaf32646c6a94cdbd4c3aa2eb5c17d36bb9aa5cfd8c493"
+    url "https://files.pythonhosted.org/packages/e0/fc/1d785078eefd6945f3e5bab5c076e4230698046231eb0f3747bc5c8fa992/uvicorn-0.32.0.tar.gz"
+    sha256 "f78b36b143c16f54ccdb8190d0a26b5f1901fe5a3c777e1ab29f26391af8551e"
   end
 
   resource "uvloop" do
-    url "https://files.pythonhosted.org/packages/cf/3d/a150e044b5bc69961168b024c531d21b63acd9948b7d681b03e551be01e1/uvloop-0.21.0b1.tar.gz"
-    sha256 "5e12901bd67c5ba374741fc497adc44de14854895c416cd0672b2e5b676ca23c"
+    url "https://files.pythonhosted.org/packages/af/c0/854216d09d33c543f12a44b393c402e89a920b1a0a7dc634c42de91b9cf6/uvloop-0.21.0.tar.gz"
+    sha256 "3bf12b0fda68447806a7ad847bfa591613177275d35b6724b1ee573faa3704e3"
   end
 
   resource "watchfiles" do
@@ -214,62 +210,3 @@ class Fastapi < Formula
     Process.wait(pid)
   end
 end
-
-__END__
-diff --git a/httptools/parser/parser.c b/httptools/parser/parser.c
-index 1b64e55..4a59122 100644
---- a/httptools/parser/parser.c
-+++ b/httptools/parser/parser.c
-@@ -9937,7 +9937,7 @@ static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
-                 unsigned char *bytes = (unsigned char *)&val;
-                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
-                                               bytes, sizeof(val),
--                                              is_little, !is_unsigned);
-+                                              is_little, !is_unsigned, 0);
-                 Py_DECREF(v);
-                 if (likely(!ret))
-                     return val;
-@@ -10133,7 +10133,7 @@ static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {
-                 unsigned char *bytes = (unsigned char *)&val;
-                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
-                                               bytes, sizeof(val),
--                                              is_little, !is_unsigned);
-+                                              is_little, !is_unsigned, 0);
-                 Py_DECREF(v);
-                 if (likely(!ret))
-                     return val;
-diff --git a/httptools/parser/url_parser.c b/httptools/parser/url_parser.c
-index c9e646a..e9a5f01 100644
---- a/httptools/parser/url_parser.c
-+++ b/httptools/parser/url_parser.c
-@@ -5547,7 +5547,7 @@ static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
-                 unsigned char *bytes = (unsigned char *)&val;
-                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
-                                               bytes, sizeof(val),
--                                              is_little, !is_unsigned);
-+                                              is_little, !is_unsigned, 0);
-                 Py_DECREF(v);
-                 if (likely(!ret))
-                     return val;
-@@ -5743,7 +5743,7 @@ static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {
-                 unsigned char *bytes = (unsigned char *)&val;
-                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
-                                               bytes, sizeof(val),
--                                              is_little, !is_unsigned);
-+                                              is_little, !is_unsigned, 0);
-                 Py_DECREF(v);
-                 if (likely(!ret))
-                     return val;
-diff --git a/setup.py b/setup.py
-index 200e6f6..adca1f8 100644
---- a/setup.py
-+++ b/setup.py
-@@ -15,7 +15,7 @@ CFLAGS = ['-O2']
-
- ROOT = pathlib.Path(__file__).parent
-
--CYTHON_DEPENDENCY = 'Cython(>=0.29.24,<0.30.0)'
-+CYTHON_DEPENDENCY = 'Cython>=0.29.24'
-
-
- class httptools_build_ext(build_ext):

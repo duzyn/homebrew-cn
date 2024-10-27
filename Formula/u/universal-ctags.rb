@@ -42,7 +42,7 @@ class UniversalCtags < Formula
   end
 
   test do
-    (testpath/"test.c").write <<~EOS
+    (testpath/"test.c").write <<~C
       #include <stdio.h>
       #include <stdlib.h>
 
@@ -56,7 +56,7 @@ class UniversalCtags < Formula
         func();
         return 0;
       }
-    EOS
+    C
     system bin/"ctags", "-R", "."
     assert_match(/func.*test\.c/, File.read("tags"))
   end

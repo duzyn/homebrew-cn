@@ -53,7 +53,7 @@ class PbcSig < Formula
   end
 
   test do
-    (testpath/"test.c").write <<~EOS
+    (testpath/"test.c").write <<~C
       #include <pbc/pbc.h>
       #include <pbc/pbc_sig.h>
 
@@ -69,7 +69,7 @@ class PbcSig < Formula
         pairing_clear(pairing);
         return 0;
       }
-    EOS
+    C
     system ENV.cc, "test.c", "-o", "test", "-L#{Formula["pbc"].lib}",
                    "-L#{lib}", "-lpbc", "-lpbc_sig"
     system "./test"

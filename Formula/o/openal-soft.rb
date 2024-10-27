@@ -46,7 +46,7 @@ class OpenalSoft < Formula
   end
 
   test do
-    (testpath/"test.c").write <<~EOS
+    (testpath/"test.c").write <<~C
       #include "AL/al.h"
       #include "AL/alc.h"
       int main() {
@@ -55,7 +55,7 @@ class OpenalSoft < Formula
         alcCloseDevice(device);
         return 0;
       }
-    EOS
+    C
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lopenal"
   end
 end

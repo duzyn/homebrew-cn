@@ -326,7 +326,7 @@ class Swift < Formula
     end
 
     # Paired with llbuild patch
-    inreplace workspace/"llbuild/Package.swift", "@@HOMEBREW_PREFIX@@", HOMEBREW_PREFIX
+    inreplace workspace/"llbuild/Package.swift", "@@HOMEBREW_PREFIX@@", HOMEBREW_PREFIX, audit_result: false
 
     extra_cmake_options = if OS.mac?
       %W[
