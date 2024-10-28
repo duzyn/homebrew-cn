@@ -33,7 +33,7 @@ class Curlpp < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <curlpp/cURLpp.hpp>
       #include <curlpp/Easy.hpp>
       #include <curlpp/Options.hpp>
@@ -55,7 +55,7 @@ class Curlpp < Formula
 
         return 0;
       }
-    EOS
+    CPP
     system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", "-I#{include}",
                     "-L#{lib}", "-lcurlpp", "-lcurl"
     system "./test"

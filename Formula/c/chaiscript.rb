@@ -32,7 +32,7 @@ class Chaiscript < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <chaiscript/chaiscript.hpp>
       #include <chaiscript/chaiscript_stdlib.hpp>
       #include <cassert>
@@ -40,7 +40,7 @@ class Chaiscript < Formula
         chaiscript::ChaiScript chai;
         assert(chai.eval<int>("123") == 123);
       }
-    EOS
+    CPP
 
     system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-ldl", "-lpthread", "-std=c++14", "-o", "test"
     system "./test"

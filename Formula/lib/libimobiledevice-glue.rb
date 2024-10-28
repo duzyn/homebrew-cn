@@ -31,14 +31,14 @@ class LibimobiledeviceGlue < Formula
   end
 
   test do
-    (testpath/"test.c").write <<~EOS
+    (testpath/"test.c").write <<~C
       #include "libimobiledevice-glue/utils.h"
 
       int main(int argc, char* argv[]) {
         char *uuid = generate_uuid();
         return 0;
       }
-    EOS
+    C
     system ENV.cc, "test.c", "-L#{lib}", "-limobiledevice-glue-1.0", "-o", "test"
     system "./test"
   end

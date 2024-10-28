@@ -18,7 +18,7 @@ class Cli11 < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include "CLI/App.hpp"
       #include "CLI/Formatter.hpp"
       #include "CLI/Config.hpp"
@@ -33,7 +33,7 @@ class Cli11 < Formula
           std::cout << filename << std::endl;
           return 0;
       }
-    EOS
+    CPP
     system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", "-I#{include}"
     assert_equal "foo\n", shell_output("./test -r foo")
   end

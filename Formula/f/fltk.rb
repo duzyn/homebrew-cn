@@ -68,7 +68,7 @@ class Fltk < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <FL/Fl.H>
       #include <FL/Fl_Window.H>
       #include <FL/Fl_Box.H>
@@ -82,7 +82,7 @@ class Fltk < Formula
         window->end();
         return 0;
       }
-    EOS
+    CPP
     system ENV.cxx, "test.cpp", "-L#{lib}", "-lfltk", "-o", "test"
     system "./test"
   end
