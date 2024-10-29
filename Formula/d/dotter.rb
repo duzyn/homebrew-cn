@@ -25,13 +25,13 @@ class Dotter < Formula
 
   test do
     (testpath/"xxx.conf").write("12345678")
-    (testpath/".dotter/local.toml").write <<~EOS
+    (testpath/".dotter/local.toml").write <<~TOML
       packages = ["xxx"]
-    EOS
-    (testpath/".dotter/global.toml").write <<~EOS
+    TOML
+    (testpath/".dotter/global.toml").write <<~TOML
       [xxx.files]
       "xxx.conf" = "yyy.conf"
-    EOS
+    TOML
 
     system bin/"dotter", "deploy"
     assert_match "12345678", File.read("yyy.conf")

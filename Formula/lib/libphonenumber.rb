@@ -39,7 +39,7 @@ class Libphonenumber < Formula
   end
 
   test do
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <phonenumbers/phonenumberutil.h>
       #include <phonenumbers/phonenumber.pb.h>
       #include <iostream>
@@ -60,7 +60,7 @@ class Libphonenumber < Formula
           return 1;
         }
       }
-    EOS
+    CPP
     system ENV.cxx, "-std=c++17", "test.cpp",
                                 "-I#{Formula["protobuf"].opt_include}",
                                 "-L#{lib}", "-lphonenumber", "-o", "test"
