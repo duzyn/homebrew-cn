@@ -35,6 +35,7 @@ class Libvncserver < Formula
                     "-DJPEG_INCLUDE_DIR=#{Formula["jpeg-turbo"].opt_include}",
                     "-DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib/shared_library("libjpeg")}",
                     "-DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}",
+                    "-DWITH_EXAMPLES=OFF",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "ctest", "--test-dir", "build", "--verbose"

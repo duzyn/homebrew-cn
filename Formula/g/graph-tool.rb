@@ -3,7 +3,6 @@ class GraphTool < Formula
 
   desc "Efficient network analysis for Python 3"
   homepage "https://graph-tool.skewed.de/"
-  # TODO: Update build for matplotlib>=3.9.0 to use `--config-settings=setup-args=...` for system dependencies
   url "https://downloads.skewed.de/graph-tool/graph-tool-2.79.tar.bz2"
   sha256 "52a254942e75ed3070dea70e692ae101877bbef1009e43ec62fe1806a8de0154"
   license "LGPL-3.0-or-later"
@@ -14,12 +13,13 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256                               arm64_sequoia: "1c5f0441c6fcb2bed7f598eb3a395fbe1147464f0dbf4ccefefdceb66a8c40ee"
-    sha256                               arm64_sonoma:  "bf69664aba8fd00d9bba649ed2791e7c52e7a668d868c6cf268c36dbf1388bda"
-    sha256                               arm64_ventura: "98d395866c408c29c3f2c0cb61849c5859fca98016a06d5672ec8279ea620faa"
-    sha256                               sonoma:        "2e948f5b247f856f97d8c8c4ce385bafe9d8fd3c743f43141e16cde4a460aca3"
-    sha256                               ventura:       "1006d3491d1f20b9f5901380e3daf4107da10e11d95341a467f1deb9d1dcbfba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f75b68e77f43c0f0e14144f139164b72ad3acd7511285673a30193817ecadd2"
+    rebuild 1
+    sha256                               arm64_sequoia: "4b9ebfea60e076eccd963da33a8d3f1fc77cf92a126c38ac53cd6d6195fcf1bc"
+    sha256                               arm64_sonoma:  "c1cc89698b066ba392faac276c3594a9f912ec0aa33e4ee57672b7cbb9ec3ba8"
+    sha256                               arm64_ventura: "ac50c767078808217e6cd8ec58d090585851a7dc048db970853fabbe9443cd66"
+    sha256                               sonoma:        "7cd95c5ca3ad75b3765409764892577579f277b58619b6fa94df2b7d9755e248"
+    sha256                               ventura:       "ad558633c9fc556d3e979a9b89148b689afdcb40ff069bd115093afb58442e60"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9dd968dfe02c6d0f124652348ec33f4e42f3a7f1f4cd622751b4a4bcda28974b"
   end
 
   depends_on "ninja" => :build
@@ -94,8 +94,8 @@ class GraphTool < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/07/37/b31be7e4b9f13b59cde9dcaeff112d401d49e0dc5b37ed4a9fc8fb12f409/setuptools-75.2.0.tar.gz"
-    sha256 "753bb6ebf1f465a1912e19ed1d41f403a79173a9acf66a42e7e6aec45c3c16ec"
+    url "https://files.pythonhosted.org/packages/ed/22/a438e0caa4576f8c383fa4d35f1cc01655a46c75be358960d815bfbb12bd/setuptools-75.3.0.tar.gz"
+    sha256 "fba5dd4d766e97be1b1681d98712680ae8f2f26d7881245f2ce9e40714f1a686"
   end
 
   resource "six" do
@@ -113,28 +113,29 @@ class GraphTool < Formula
   end
 
   def install
-    # https://github.com/matplotlib/matplotlib/blob/v3.8.3/doc/users/installing/dependencies.rst
-    ENV["MPLSETUPCFG"] = buildpath/"mplsetup.cfg"
-    (buildpath/"mplsetup.cfg").write <<~EOS
-      [libs]
-      system_freetype = true
-      system_qhull = true
-    EOS
-
     site_packages = Language::Python.site_packages(python3)
     xy = Language::Python.major_minor_version(python3)
+    skipped = ["matplotlib", "zstandard"]
     venv = virtualenv_create(libexec, python3)
-    venv.pip_install resources.reject { |r| r.name == "zstandard" }
+    venv.pip_install resources.reject { |r| skipped.include? r.name }
+    python = venv.root/"bin/python"
+
+    resource("matplotlib").stage do
+      system python, "-m", "pip", "install", "--config-settings=setup-args=-Dsystem-freetype=true",
+                                             "--config-settings=setup-args=-Dsystem-qhull=true",
+                                             *std_pip_args(prefix: false, build_isolation: true), "."
+    end
+
     resource("zstandard").stage do
-      system_zstd_arg = "--config-settings=--build-option=--system-zstd"
-      system venv.root/"bin/python3", "-m", "pip", "install", system_zstd_arg, *std_pip_args, "."
+      system python, "-m", "pip", "install", "--config-settings=--build-option=--system-zstd",
+                                             *std_pip_args(prefix: false), "."
     end
 
     # Linux build is not thread-safe.
     ENV.deparallelize unless OS.mac?
 
     args = %W[
-      PYTHON=#{venv.root}/bin/python
+      PYTHON=#{python}
       --with-python-module-path=#{prefix/site_packages}
       --with-boost-python=boost_python#{xy.to_s.delete(".")}-mt
       --with-boost-libdir=#{Formula["boost"].opt_lib}
