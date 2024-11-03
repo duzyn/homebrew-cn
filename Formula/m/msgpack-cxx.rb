@@ -1,8 +1,8 @@
 class MsgpackCxx < Formula
   desc "MessagePack implementation for C++ / msgpack.org[C++]"
   homepage "https://msgpack.org/"
-  url "https://mirror.ghproxy.com/https://github.com/msgpack/msgpack-c/releases/download/cpp-6.1.1/msgpack-cxx-6.1.1.tar.gz"
-  sha256 "5fd555742e37bbd58d166199e669f01f743c7b3c6177191dd7b31fb0c37fa191"
+  url "https://mirror.ghproxy.com/https://github.com/msgpack/msgpack-c/releases/download/cpp-7.0.0/msgpack-cxx-7.0.0.tar.gz"
+  sha256 "7504b7af7e7b9002ce529d4f941e1b7fb1fb435768780ce7da4abaac79bb156f"
   license "BSL-1.0"
   head "https://github.com/msgpack/msgpack-c.git", branch: "cpp_master"
 
@@ -12,7 +12,7 @@ class MsgpackCxx < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d57131d53cd03e4a0c434c5e80c2f4026a41dc4697b53bdda1b765fa7b8495b7"
+    sha256 cellar: :any_skip_relocation, all: "a5f83dd35fe0b8f343a0db873809f53cc000bcd33f2d87dd56785d2619b39716"
   end
 
   depends_on "cmake" => :build

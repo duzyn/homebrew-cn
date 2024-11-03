@@ -5,8 +5,8 @@ class S3ql < Formula
   homepage "https://github.com/s3ql/s3ql"
   # TODO: Try to remove `cython` and corresponding build_cython in the next release.
   # check if `python3 setup.py build_cython` is still needed in https://github.com/s3ql/s3ql/blob/master/.github/workflows/pr-ci.yml#L34
-  url "https://mirror.ghproxy.com/https://github.com/s3ql/s3ql/releases/download/s3ql-5.2.2/s3ql-5.2.2.tar.gz"
-  sha256 "51e94109690d435adf6bbd5d16592722ad8c10839a197b898b9ee34a0ce3a2c6"
+  url "https://mirror.ghproxy.com/https://github.com/s3ql/s3ql/releases/download/s3ql-5.2.3/s3ql-5.2.3.tar.gz"
+  sha256 "892acf8a479fc837256100d820408bc5e2c27c0ba9ee2b5f8aa114d593b5af87"
   license "GPL-3.0-only"
 
   livecheck do
@@ -15,8 +15,7 @@ class S3ql < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba6b7b212edf9dfc28292ebd0e0c0a02cd37f0c3e3216dee660153232bb8ef9c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a611f35febf5059569c6592bb87c772cecc93204f0dec4c5759283d19cc8faf2"
   end
 
   depends_on "cython" => :build
@@ -30,8 +29,8 @@ class S3ql < Formula
   depends_on "python@3.13"
 
   resource "apsw" do
-    url "https://files.pythonhosted.org/packages/24/fe/b473223765e356e7b2977fe46af650020412b099acd8650402c6f8881b6b/apsw-3.46.0.1.tar.gz"
-    sha256 "a36d1e80180d1dc9c079f766dead8204dfeb1c80707676f9b75c1705800fe7d0"
+    url "https://files.pythonhosted.org/packages/2e/9f/29be0326b2178cfe10d6d45de83163c70cd0b4985502f398fe32791943e2/apsw-3.46.1.0.tar.gz"
+    sha256 "96e3dfad1fd0cc77a778aa6b27468292041a8e9cb1f2dcf06bd773762c9b0c0c"
   end
 
   resource "async-generator" do
