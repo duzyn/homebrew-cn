@@ -18,7 +18,7 @@ class Cherrybomb < Formula
   end
 
   # https://github.com/blst-security/cherrybomb/issues/156
-  disable! date: "2024-09-16", because: "service is no longer available"
+  disable! date: "2024-09-16", because: "needs a service that is no longer available"
 
   depends_on "rust" => :build
 

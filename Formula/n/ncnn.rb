@@ -71,7 +71,7 @@ class Ncnn < Formula
       vulkan = 0
     end
 
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <cassert>
       #include <ncnn/gpu.h>
       #include <ncnn/mat.h>
@@ -91,7 +91,7 @@ class Ncnn < Formula
 
           return 0;
       }
-    EOS
+    CPP
 
     system ENV.cxx, "test.cpp", "-std=c++11",
                     "-I#{include}", "-L#{lib}", "-lncnn",

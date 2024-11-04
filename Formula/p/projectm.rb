@@ -44,7 +44,7 @@ class Projectm < Formula
     assert_predicate prefix/"share/projectM/config.inp", :exist?
     assert_predicate prefix/"share/projectM/presets", :exist?
 
-    (testpath/"test.cpp").write <<~EOS
+    (testpath/"test.cpp").write <<~CPP
       #include <libprojectM/projectM.hpp>
       #include <SDL2/SDL.h>
       #include <stdlib.h>
@@ -70,7 +70,7 @@ class Projectm < Formula
         // if we get this far without crashing we're in good shape
         return 0;
       }
-    EOS
+    CPP
     flags = shell_output("pkg-config libprojectM sdl2 --cflags --libs").split
     system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", *flags
 
