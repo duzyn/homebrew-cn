@@ -1,6 +1,6 @@
 cask "dockside" do
-  version "1.6.8"
-  sha256 "9903c2aa8720b140ef3e1e0294148f743d001dd6e9e47bdf5e96e9bdc68bf0d2"
+  version "1.7.1"
+  sha256 "3f6b2ff4104a3778bbc906b26e8660e15c25f5f2277efb36a1de33c8c70ff404"
 
   url "https://mirror.ghproxy.com/https://github.com/PrajwalSD/Dockside/releases/download/v#{version}/Dockside.dmg",
       verified: "github.com/PrajwalSD/Dockside/"

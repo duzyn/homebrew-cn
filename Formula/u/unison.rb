@@ -1,8 +1,8 @@
 class Unison < Formula
   desc "File synchronization tool"
   homepage "https://www.cis.upenn.edu/~bcpierce/unison/"
-  url "https://mirror.ghproxy.com/https://github.com/bcpierce00/unison/archive/refs/tags/v2.53.5.tar.gz"
-  sha256 "330418ad130d93d0e13da7e7e30f9b829bd7c0e859355114bd4644c35fe08d23"
+  url "https://mirror.ghproxy.com/https://github.com/bcpierce00/unison/archive/refs/tags/v2.53.7.tar.gz"
+  sha256 "a259537cef465c4806d6c1638c382620db2dd395ae42a0dd2efa3ba92712bed5"
   license "GPL-3.0-or-later"
   head "https://github.com/bcpierce00/unison.git", branch: "master"
 
@@ -14,14 +14,12 @@ class Unison < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "c47981d38850764fd73f81c80979b47ed66c25972e023cea0bf23ecdd8ca7616"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1bc7beb7c68255b1a96833771159b02a442420f5319ccc00e410769b3811cebc"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "491b323c7ab54cbfa9869735318b6c50996088ca1be9baa21a3bccd4958d2d3b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "574e9f2b018206c744996507e5d9f28bfabdbd0eed6d24a4554620e48074ed42"
-    sha256 cellar: :any_skip_relocation, sonoma:         "46c5b9bcf7d54254432ae5ae38a93ddbf0d6fbe13b2ecca1de754105e1d25399"
-    sha256 cellar: :any_skip_relocation, ventura:        "97bee1f54eb7abcdd2815bcaf8dd529e8fa296e558c83ebd5415b507e0c79ed0"
-    sha256 cellar: :any_skip_relocation, monterey:       "f2cfd8c07ec3d379ecba5a204dfc0bd7802191dedb2adda5ac8d8ab3dbccc75a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d27fcce8ad972cb3d8c678e3410d1ec41f0605504e7da5385f385b02015c05aa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6a438d9f6ebf8318b89efb5a90a75a1f868cc97a6d7cb946fc4ccc8e6e2eba8c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1b4395fbbe4b611bdc416c5259d92dede2513075efc54aa2dd45cfdf7684bb44"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "3cdc258a6195ed8bf7d6cf8b133514b9095d78ac2959e6046d799f21c5b0e060"
+    sha256 cellar: :any_skip_relocation, sonoma:        "31775a533d0d7564451e30b2e733b1cafacba867c350a39419299831b7c56bb8"
+    sha256 cellar: :any_skip_relocation, ventura:       "44fde2dbd196dafa390ced91ad35cea7c22e65ea2a32462bd626459b80bd1af3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "791845dc0fad058e50afecf62cd4ce75c65bde67cf3c2d3b28743d46ba86c8b2"
   end
 
   depends_on "ocaml" => :build
