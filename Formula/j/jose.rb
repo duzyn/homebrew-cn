@@ -23,6 +23,13 @@ class Jose < Formula
 
   uses_from_macos "zlib"
 
+  # Apply upstream PR to fix build on macOS to use `-exported_symbol`
+  # PR ref: https://github.com/latchset/jose/pull/163
+  patch do
+    url "https://github.com/latchset/jose/commit/228d6782235238ed0d03eb2443caf530b377ffd5.patch?full_index=1"
+    sha256 "14e147b1541a915badefa46535999c17fe3f04d2ba4754775b928e4d5e97ce1a"
+  end
+
   def install
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"

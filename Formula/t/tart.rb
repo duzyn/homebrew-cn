@@ -16,6 +16,7 @@ class Tart < Formula
   # https://tart.run/blog/2023/02/11/changing-tart-license/
   deprecate! date: "2024-09-16", because: "switched to a DFSG-incompatible license"
 
+  depends_on maximum_macos: [:sonoma, :build]
   depends_on "rust" => :build
   depends_on xcode: ["14.1", :build]
   depends_on arch: :arm64
