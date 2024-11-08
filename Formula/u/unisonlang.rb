@@ -99,14 +99,14 @@ class Unisonlang < Formula
         helloTo "Homebrew"
     EOS
 
-    (testpath/"hello.md").write <<~EOS
+    (testpath/"hello.md").write <<~MARKDOWN
       ```ucm
       scratch/main> project.create test
       test/main> load hello.u
       test/main> add
       test/main> run hello
       ```
-    EOS
+    MARKDOWN
 
     assert_match "Hello Homebrew", shell_output("#{bin}/ucm --codebase-create ./ transcript.fork hello.md")
   end

@@ -36,11 +36,11 @@ class Libwbxml < Formula
   end
 
   test do
-    (testpath/"input.xml").write <<~EOS
+    (testpath/"input.xml").write <<~XML
       <?xml version="1.0"?>
       <!DOCTYPE sl PUBLIC "-//WAPFORUM//DTD SL 1.0//EN" "http://www.wapforum.org/DTD/sl.dtd">
       <sl href="http://www.xyz.com/ppaid/123/abc.wml"></sl>
-    EOS
+    XML
 
     system bin/"xml2wbxml", "-o", "output.wbxml", "input.xml"
     assert_predicate testpath/"output.wbxml", :exist?

@@ -33,12 +33,12 @@ class Zola < Formula
 
   test do
     system "yes '' | #{bin}/zola init mysite"
-    (testpath/"mysite/content/blog/_index.md").write <<~EOS
+    (testpath/"mysite/content/blog/_index.md").write <<~MARKDOWN
       +++
       +++
 
       Hi I'm Homebrew.
-    EOS
+    MARKDOWN
     (testpath/"mysite/templates/section.html").write <<~EOS
       {{ section.content | safe }}
     EOS
