@@ -20,7 +20,7 @@ class Phpmd < Formula
   end
 
   test do
-    (testpath/"src/HelloWorld/Greetings.php").write <<~EOS
+    (testpath/"src/HelloWorld/Greetings.php").write <<~PHP
       <?php
       namespace HelloWorld;
       class Greetings {
@@ -28,7 +28,7 @@ class Phpmd < Formula
           return 'HelloHomebrew';
         }
       }
-    EOS
+    PHP
 
     assert_match "Avoid unused parameters such as '$name'.",
       shell_output("#{bin}/phpmd --ignore-violations-on-exit src/HelloWorld/Greetings.php text unusedcode")
