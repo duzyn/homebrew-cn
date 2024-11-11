@@ -28,19 +28,19 @@ class Tfsec < Formula
   end
 
   test do
-    (testpath/"good/brew-validate.tf").write <<~EOS
+    (testpath/"good/brew-validate.tf").write <<~HCL
       resource "aws_alb_listener" "my-alb-listener" {
         port     = "443"
         protocol = "HTTPS"
       }
-    EOS
-    (testpath/"bad/brew-validate.tf").write <<~EOS
+    HCL
+    (testpath/"bad/brew-validate.tf").write <<~HCL
       resource "aws_security_group_rule" "world" {
         description = "A security group triggering tfsec AWS006."
         type        = "ingress"
         cidr_blocks = ["0.0.0.0/0"]
       }
-    EOS
+    HCL
 
     good_output = shell_output("#{bin}/tfsec #{testpath}/good")
     assert_match "No problems detected!", good_output
