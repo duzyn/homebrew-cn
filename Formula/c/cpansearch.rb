@@ -22,7 +22,7 @@ class Cpansearch < Formula
   # upstream missing license report, https://github.com/c9s/cpansearch/issues/5
   disable! date: "2024-08-10", because: :no_license
 
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
 
   depends_on "glib"
   depends_on "ncurses"
