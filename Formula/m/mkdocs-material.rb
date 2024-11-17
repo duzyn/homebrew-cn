@@ -2,28 +2,23 @@ class MkdocsMaterial < Formula
   include Language::Python::Virtualenv
   desc "Material Design theme for MkDocs"
   homepage "https://squidfunk.github.io/mkdocs-material/"
-  url "https://mirror.ghproxy.com/https://github.com/squidfunk/mkdocs-material/archive/refs/tags/9.5.41.tar.gz"
-  sha256 "c15129c3f46e60da0651206ce7934c2972b45933d1828583f36ca1fdced7a1a2"
+  url "https://files.pythonhosted.org/packages/f7/56/182d8121db9ab553cdf9bc58d5972b89833f60b63272f693c1f2b849b640/mkdocs_material-9.5.44.tar.gz"
+  sha256 "f3a6c968e524166b3f3ed1fb97d3ed3e0091183b0545cedf7156a2a6804c56c0"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "3be6f33ed9b354579c1f65cf08d9f84c2743f606c8288314b22558553fd70911"
-    sha256 cellar: :any,                 arm64_sonoma:  "98e65593b22fb106c761957e812ff0070d24fa23e6a4186ee615dea35a212b83"
-    sha256 cellar: :any,                 arm64_ventura: "3f18cfc94e115d310764bd4113bd2667d59dd8a00424e28286a10ce20a6a3259"
-    sha256 cellar: :any,                 sonoma:        "bd4eeb53d6c8a417d2f10ea7ad28ccc88e8ba573ae91ef801e4c0c5caae98ba7"
-    sha256 cellar: :any,                 ventura:       "2cd091cea092041124553616077a7c753b54cdb74c25b58dcdd07a51d07915ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd2a0528d808a77645f6127c4850d81f27ee99d092a880e22868502d9fae2933"
+    sha256 cellar: :any,                 arm64_sequoia: "813e9258d30df196abcc65926d158559ba961cef1e5429206c15b30f50747d32"
+    sha256 cellar: :any,                 arm64_sonoma:  "3f9f27d09c6389389c7f5f4345eba79f5c6ebc3204ab3f5c005f875403a84a6b"
+    sha256 cellar: :any,                 arm64_ventura: "f83b69ceddbf0d870c6b56e254ef9d14a9d9a0978eaae5104448a818674be4c1"
+    sha256 cellar: :any,                 sonoma:        "af27a918590b1f84b9eea63437b6e7cebccb89b549e5955a8b68108475ee6375"
+    sha256 cellar: :any,                 ventura:       "9ee5a4867a9cb54068a46c990c5d3a1b4fe6866474ff51064d8bf93197ea8d9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2c0c8e72573215dd2d52cdf29f5f75cc88f0622fb1a45f39e4d1d95a7523d32"
   end
 
   depends_on "libyaml"
   depends_on "python@3.13"
 
   conflicts_with "mkdocs", because: "both install `mkdocs` binaries"
-
-  resource "mkdocs" do
-    url "https://files.pythonhosted.org/packages/bc/c6/bbd4f061bd16b378247f12953ffcb04786a618ce5e904b8c5a01a0309061/mkdocs-1.6.1.tar.gz"
-    sha256 "7b432f01d928c084353ab39c57282f29f92136665bdd6abf7c1ec8d822ef86f2"
-  end
 
   resource "babel" do
     url "https://files.pythonhosted.org/packages/2a/74/f1bc80f23eeba13393b7222b11d95ca3af2c1e28edca18af487137eefed9/babel-2.16.0.tar.gz"
@@ -60,24 +55,29 @@ class MkdocsMaterial < Formula
     sha256 "12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"
   end
 
-  resource "Jinja2" do
+  resource "jinja2" do
     url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
     sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
-  resource "Markdown" do
+  resource "markdown" do
     url "https://files.pythonhosted.org/packages/54/28/3af612670f82f4c056911fbbbb42760255801b3068c48de792d354ff4472/markdown-3.7.tar.gz"
     sha256 "2ae2471477cfd02dbbf038d5d9bc226d40def84b4fe2986e49b59b6b472bbed2"
   end
 
-  resource "MarkupSafe" do
-    url "https://files.pythonhosted.org/packages/b4/d2/38ff920762f2247c3af5cbbbbc40756f575d9692d381d7c520f45deb9b8f/markupsafe-3.0.1.tar.gz"
-    sha256 "3e683ee4f5d0fa2dde4db77ed8dd8a876686e3fc417655c2ece9a90576905344"
+  resource "markupsafe" do
+    url "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz"
+    sha256 "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0"
   end
 
   resource "mergedeep" do
     url "https://files.pythonhosted.org/packages/3a/41/580bb4006e3ed0361b8151a01d324fb03f420815446c7def45d02f74c270/mergedeep-1.3.4.tar.gz"
     sha256 "0096d52e9dad9939c3d975a774666af186eda617e6ca84df4c94dec30004f2a8"
+  end
+
+  resource "mkdocs" do
+    url "https://files.pythonhosted.org/packages/bc/c6/bbd4f061bd16b378247f12953ffcb04786a618ce5e904b8c5a01a0309061/mkdocs-1.6.1.tar.gz"
+    sha256 "7b432f01d928c084353ab39c57282f29f92136665bdd6abf7c1ec8d822ef86f2"
   end
 
   resource "mkdocs-get-deps" do
@@ -91,8 +91,8 @@ class MkdocsMaterial < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz"
-    sha256 "026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"
+    url "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz"
+    sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
   end
 
   resource "paginate" do
@@ -110,14 +110,14 @@ class MkdocsMaterial < Formula
     sha256 "357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"
   end
 
-  resource "Pygments" do
+  resource "pygments" do
     url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
     sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "pymdown-extensions" do
-    url "https://files.pythonhosted.org/packages/f4/71/2730a20e9e3752393d78998347f8b1085ef9c417646ea9befbeef221e3c4/pymdown_extensions-10.11.2.tar.gz"
-    sha256 "bc8847ecc9e784a098efd35e20cba772bc5a1b529dfcef9dc1972db9021a1049"
+    url "https://files.pythonhosted.org/packages/d8/0b/32f05854cfd432e9286bb41a870e0d1a926b72df5f5cdb6dec962b2e369e/pymdown_extensions-10.12.tar.gz"
+    sha256 "b0ee1e0b2bef1071a47891ab17003bfe5bf824a398e13f49f8ed653b699369a7"
   end
 
   resource "python-dateutil" do
@@ -125,7 +125,7 @@ class MkdocsMaterial < Formula
     sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
   end
 
-  resource "PyYAML" do
+  resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
     sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
   end
@@ -136,8 +136,8 @@ class MkdocsMaterial < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/f9/38/148df33b4dbca3bd069b963acab5e0fa1a9dbd6820f8c322d0dd6faeff96/regex-2024.9.11.tar.gz"
-    sha256 "6c188c307e8433bcb63dc1915022deb553b4203a70722fc542c363bf120a01fd"
+    url "https://files.pythonhosted.org/packages/8e/5f/bd69653fbfb76cf8604468d3b4ec4c403197144c7bfe0e6a5fc9e02a07cb/regex-2024.11.6.tar.gz"
+    sha256 "7ab159b063c52a0333c884e4679f8d7a85112ee3078fe3d9004b2dd875585519"
   end
 
   resource "requests" do
@@ -156,8 +156,8 @@ class MkdocsMaterial < Formula
   end
 
   resource "watchdog" do
-    url "https://files.pythonhosted.org/packages/a2/48/a86139aaeab2db0a2482676f64798d8ac4d2dbb457523f50ab37bf02ce2c/watchdog-5.0.3.tar.gz"
-    sha256 "108f42a7f0345042a854d4d0ad0834b741d421330d5f575b81cb27b883500176"
+    url "https://files.pythonhosted.org/packages/db/7d/7f3d619e951c88ed75c6037b246ddcf2d322812ee8ea189be89511721d54/watchdog-6.0.0.tar.gz"
+    sha256 "9ddf7c82fda3ae8e24decda1338ede66e1c99883db93711d8fb941eaa2d8c282"
   end
 
   def install
