@@ -1,5 +1,5 @@
 class Boring < Formula
-  desc "`boring` SSH tunnel manager"
+  desc "Simple command-line SSH tunnel manager that just works"
   homepage "https://github.com/alebeck/boring"
   url "https://mirror.ghproxy.com/https://github.com/alebeck/boring/archive/refs/tags/0.8.0.tar.gz"
   sha256 "378f6bb1becb6d5a90a086306ba22a3bafa12f7f796f94e739d873d2cce41601"
