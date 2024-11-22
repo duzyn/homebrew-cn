@@ -35,6 +35,7 @@ class Lilypond < Formula
     mirror "https://git.savannah.gnu.org/git/lilypond.git"
 
     depends_on "autoconf" => :build
+    depends_on "make" => :build # make >= 4.2 is required
   end
 
   depends_on "bison" => :build # bison >= 2.4.1 is required
@@ -86,7 +87,7 @@ class Lilypond < Formula
 
     elisp.install share.glob("emacs/site-lisp/*.el")
 
-    fonts = pkgshare/version/"fonts/otf"
+    fonts = pkgshare/(build.head? ? File.read("out/VERSION").chomp : version)/"fonts/otf"
 
     resource("font-urw-base35").stage do
       ["C059", "NimbusMonoPS", "NimbusSans"].each do |name|

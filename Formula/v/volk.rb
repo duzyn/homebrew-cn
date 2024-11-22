@@ -18,12 +18,10 @@ class Volk < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
   depends_on "cpu_features"
   depends_on "orc"
   depends_on "python@3.13"
-
-  fails_with gcc: "5" # https://github.com/gnuradio/volk/issues/375
 
   resource "mako" do
     url "https://files.pythonhosted.org/packages/67/03/fb5ba97ff65ce64f6d35b582aacffc26b693a98053fa831ab43a437cbddb/Mako-1.3.5.tar.gz"
