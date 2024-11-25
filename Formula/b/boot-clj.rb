@@ -15,12 +15,12 @@ class BootClj < Formula
 
   def install
     libexec.install "boot.jar"
-    (bin/"boot").write <<~EOS
+    (bin/"boot").write <<~SHELL
       #!/bin/bash
       export JAVA_HOME="${JAVA_HOME:-#{Formula["openjdk"].opt_prefix}}"
       declare -a "options=($BOOT_JVM_OPTIONS)"
       exec "${JAVA_HOME}/bin/java" "${options[@]}" -Dboot.app.path="#{bin}/boot" -jar "#{libexec}/boot.jar" "$@"
-    EOS
+    SHELL
   end
 
   test do

@@ -26,11 +26,12 @@ class Antidote < Formula
   end
 
   test do
-    (testpath/".zshrc").write <<~EOS
+    (testpath/".zshrc").write <<~SHELL
       export GIT_TERMINAL_PROMPT=0
       export ANTIDOTE_HOME=~/.zplugins
       source #{pkgshare}/antidote.zsh
-    EOS
+    SHELL
+
     system "zsh", "--login", "-i", "-c", "antidote install rupa/z"
     assert_equal (testpath/".zsh_plugins.txt").read, "rupa/z\n"
     assert_predicate testpath/".zplugins/https-COLON--SLASH--SLASH-github.com-SLASH-rupa-SLASH-z/z.sh", :exist?

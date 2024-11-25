@@ -91,11 +91,11 @@ class Bazel < Formula
     # Verify that `bazel` invokes Bazel's wrapper script, which delegates to
     # project-specific `tools/bazel` if present. Invoking `bazel-VERSION`
     # bypasses this behavior.
-    (testpath/"tools"/"bazel").write <<~EOS
+    (testpath/"tools/bazel").write <<~SHELL
       #!/bin/bash
       echo "stub-wrapper"
       exit 1
-    EOS
+    SHELL
     (testpath/"tools/bazel").chmod 0755
 
     assert_equal "stub-wrapper\n", shell_output("#{bin}/bazel --version", 1)
