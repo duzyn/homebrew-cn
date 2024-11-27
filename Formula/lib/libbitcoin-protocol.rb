@@ -24,7 +24,7 @@ class LibbitcoinProtocol < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
   # https://github.com/libbitcoin/libbitcoin-system/issues/1234
   depends_on "boost@1.76"
   depends_on "libbitcoin-system"
