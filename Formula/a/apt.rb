@@ -40,8 +40,6 @@ class Apt < Formula
   depends_on "zlib"
   depends_on "zstd"
 
-  fails_with gcc: "5"
-
   # List this first as the modules below require it.
   resource "Module::Build" do
     url "https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz"

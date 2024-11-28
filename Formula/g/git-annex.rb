@@ -18,14 +18,16 @@ class GitAnnex < Formula
 
   depends_on "cabal-install" => :build
   depends_on "ghc@9.8" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
   depends_on "libmagic"
 
   uses_from_macos "zlib"
 
   def install
     system "cabal", "v2-update"
-    system "cabal", "v2-install", *std_cabal_v2_args, "--flags=+S3"
+    # Work around https://github.com/yesodweb/yesod/issues/1854 with constraint
+    # TODO: Remove once fixed upstream
+    system "cabal", "v2-install", *std_cabal_v2_args, "--flags=+S3", "--constraint=wai-extra<3.1.17"
     bin.install_symlink "git-annex" => "git-annex-shell"
   end
 
@@ -40,15 +42,15 @@ class GitAnnex < Formula
     system "git", "init"
     system "git", "annex", "init"
     (testpath/"Hello.txt").write "Hello!"
-    assert !File.symlink?("Hello.txt")
+    refute_predicate (testpath/"Hello.txt"), :symlink?
     assert_match(/^add Hello.txt.*ok.*\(recording state in git\.\.\.\)/m, shell_output("git annex add ."))
     system "git", "commit", "-a", "-m", "Initial Commit"
-    assert File.symlink?("Hello.txt")
+    assert_predicate (testpath/"Hello.txt"), :symlink?
 
     # make sure the various remotes were built
-    assert_match shell_output("git annex version | grep 'remote types:'").chomp,
-                 "remote types: git gcrypt p2p S3 bup directory rsync web bittorrent " \
-                 "webdav adb tahoe glacier ddar git-lfs httpalso borg rclone hook external"
+    assert_match "remote types: git gcrypt p2p S3 bup directory rsync web bittorrent " \
+                 "webdav adb tahoe glacier ddar git-lfs httpalso borg rclone hook external",
+                 shell_output("git annex version | grep 'remote types:'").chomp
 
     # The steps below are necessary to ensure the directory cleanly deletes.
     # git-annex guards files in a way that isn't entirely friendly of automatically

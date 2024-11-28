@@ -37,8 +37,6 @@ class Klee < Formula
     depends_on "minisat"
   end
 
-  fails_with gcc: "5"
-
   # klee needs a version of libc++ compiled with wllvm
   resource "libcxx" do
     url "https://mirror.ghproxy.com/https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.6/llvm-project-16.0.6.src.tar.xz"
