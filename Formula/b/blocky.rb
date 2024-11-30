@@ -1,6 +1,6 @@
 class Blocky < Formula
   desc "Fast and lightweight DNS proxy as ad-blocker for local network"
-  homepage "https://0xerr0r.github.io/blocky"
+  homepage "https://0xerr0r.github.io/blocky/"
   url "https://mirror.ghproxy.com/https://github.com/0xerr0r/blocky/archive/refs/tags/v0.24.tar.gz"
   sha256 "bacbe2877d03ee627c2dc2011c4dcccdb82d19637c995091cb7216295d020a4a"
   license "Apache-2.0"

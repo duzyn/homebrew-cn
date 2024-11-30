@@ -1,6 +1,6 @@
 class BoomCompletion < Formula
   desc "Bash and Zsh completion for Boom"
-  homepage "https://zachholman.com/boom"
+  homepage "https://zachholman.com/boom/"
   url "https://mirror.ghproxy.com/https://github.com/holman/boom/archive/refs/tags/v0.5.0.tar.gz"
   sha256 "d107accf1fb84d9c245bb25383486179605d3b397c439c2f4690341283b0b2dd"
   license "MIT"
