@@ -1,13 +1,13 @@
 class Cowsay < Formula
   desc "Apjanke's fork of the classic cowsay project"
   homepage "https://cowsay.diamonds"
-  url "https://mirror.ghproxy.com/https://github.com/cowsay-org/cowsay/archive/refs/tags/v3.8.3.tar.gz"
-  sha256 "3bcb1f644a85792bc2ee8601971f16f8f1e7ca0013d6062cf35b4fd6d8fa29ea"
+  url "https://mirror.ghproxy.com/https://github.com/cowsay-org/cowsay/archive/refs/tags/v3.8.4.tar.gz"
+  sha256 "c15bc10712835d3a9bcda780dc9453362567bf48d1185905dc7ef2334d79aadd"
   license "GPL-3.0-only"
   head "https://github.com/cowsay-org/cowsay.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "549d525741c960a333379336876748b9bd139df0a2dcf6d51331ca48c5fb1242"
+    sha256 cellar: :any_skip_relocation, all: "345e99255a69e9cb188a5a8e6bd8e6f50c334830c8a72877fc6b504c95e5cbd1"
   end
 
   def install
