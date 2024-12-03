@@ -36,8 +36,6 @@ class Standardese < Formula
   depends_on "cmark-gfm"
   depends_on "llvm" # must be Homebrew LLVM, not system, because of `llvm-config`
 
-  fails_with gcc: "5" # LLVM is built with Homebrew GCC
-
   # https://github.com/standardese/cppast/blob/main/external/external.cmake#L12
   resource "type_safe" do
     url "https://mirror.ghproxy.com/https://github.com/foonathan/type_safe/archive/refs/tags/v0.2.4.tar.gz"

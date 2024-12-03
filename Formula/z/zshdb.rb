@@ -1,6 +1,6 @@
 class Zshdb < Formula
   desc "Debugger for zsh"
-  homepage "https://github.com/rocky/zshdb"
+  homepage "https://github.com/Trepan-Debuggers/zshdb"
   url "https://downloads.sourceforge.net/project/bashdb/zshdb/1.1.4/zshdb-1.1.4.tar.gz?use_mirror=jaist"
   sha256 "83749450ffe030c28e7b7d1d8b06aea63232504ff61f31f9becc5a5717e69638"
   license all_of: [
@@ -41,13 +41,10 @@ class Zshdb < Formula
 
   test do
     require "open3"
-    Open3.popen3("#{bin}/zshdb -c 'echo test'") do |stdin, stdout, _|
-      stdin.write "exit\n"
-      assert_match <<~EOS, stdout.read
-        echo test
-        test
-        Debugged program terminated normally.
-      EOS
-    end
+    assert_match <<~EOS, pipe_output("#{bin}/zshdb -c 'echo test'", "exit\n")
+      echo test
+      test
+      Debugged program terminated normally.
+    EOS
   end
 end

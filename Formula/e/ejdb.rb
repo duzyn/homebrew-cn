@@ -27,7 +27,7 @@ class Ejdb < Formula
 
   fails_with :gcc do
     version "7"
-    cause <<-EOS
+    cause <<~EOS
       build/src/extern_iwnet/src/iwnet.c: error: initializer element is not constant
       Fixed in GCC 8.1, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=69960
     EOS

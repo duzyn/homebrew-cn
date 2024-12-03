@@ -126,7 +126,7 @@ class Vdirsyncer < Formula
 
   test do
     ENV["LC_ALL"] = "en_US.UTF-8"
-    (testpath/".config/vdirsyncer/config").write <<~EOS
+    (testpath/".config/vdirsyncer/config").write <<~INI
       [general]
       status_path = "#{testpath}/.vdirsyncer/status/"
       [pair contacts]
@@ -141,7 +141,7 @@ class Vdirsyncer < Formula
       type = "filesystem"
       path = "~/.contacts/b/"
       fileext = ".vcf"
-    EOS
+    INI
     (testpath/".contacts/a/foo/092a1e3b55.vcf").write <<~EOS
       BEGIN:VCARD
       VERSION:3.0

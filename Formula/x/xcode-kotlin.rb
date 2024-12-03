@@ -1,9 +1,8 @@
 class XcodeKotlin < Formula
   desc "Kotlin Native Xcode Plugin"
   homepage "https://github.com/touchlab/xcode-kotlin"
-  url "https://github.com/touchlab/xcode-kotlin.git",
-    tag:      "2.1.0",
-    revision: "44cf2646b847b03965b42a457dc638f10eb54d2a"
+  url "https://mirror.ghproxy.com/https://github.com/touchlab/xcode-kotlin/archive/refs/tags/2.1.0.tar.gz"
+  sha256 "840fb10e05e0f5e9a75620bc3f05a1a6fc16025db8da58c34a053f4d97c3b14f"
   license "Apache-2.0"
   head "https://github.com/touchlab/xcode-kotlin.git", branch: "main"
 
@@ -20,7 +19,7 @@ class XcodeKotlin < Formula
   depends_on :macos
 
   def install
-    suffix = (Hardware::CPU.arch == :x86_64) ? "X64" : "Arm64"
+    suffix = Hardware::CPU.intel? ? "X64" : "Arm64"
     system "gradle", "--no-daemon", "linkReleaseExecutableMacos#{suffix}", "preparePlugin"
     bin.install "build/bin/macos#{suffix}/releaseExecutable/xcode-kotlin.kexe" => "xcode-kotlin"
     share.install Dir["build/share/*"]

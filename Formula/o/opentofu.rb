@@ -19,10 +19,6 @@ class Opentofu < Formula
 
   conflicts_with "tenv", "tofuenv", because: "both install tofu binary"
 
-  # Needs libraries at runtime:
-  # /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by node)
-  fails_with gcc: "5"
-
   def install
     ldflags = "-s -w -X github.com/opentofu/opentofu/version.dev=no"
     system "go", "build", *std_go_args(output: bin/"tofu", ldflags:), "./cmd/tofu"

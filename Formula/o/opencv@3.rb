@@ -39,8 +39,6 @@ class OpencvAT3 < Formula
   depends_on "tbb"
   depends_on "webp"
 
-  fails_with gcc: "5" # ffmpeg is compiled with GCC
-
   resource "contrib" do
     url "https://mirror.ghproxy.com/https://github.com/opencv/opencv_contrib/archive/refs/tags/3.4.20.tar.gz"
     sha256 "b0bb3fa7ae4ac00926b83d4d95c6500c2f7af542f8ec78d0f01b2961a690d5dc"

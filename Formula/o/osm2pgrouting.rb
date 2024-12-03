@@ -25,8 +25,6 @@ class Osm2pgrouting < Formula
   depends_on "pgrouting"
   depends_on "postgis"
 
-  fails_with gcc: "5"
-
   # Fix build failure due to missing include
   # src/osm_elements/osm_tag.cpp:34:18: error: 'transform' is not a member of 'std'
   patch :DATA

@@ -29,10 +29,6 @@ class Terraform < Formula
   conflicts_with "tenv", because: "both install terraform binary"
   conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
 
-  # Needs libraries at runtime:
-  # /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by node)
-  fails_with gcc: "5"
-
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
   end
