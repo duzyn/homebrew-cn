@@ -58,7 +58,7 @@ class Opentsdb < Formula
     etc.install pkgshare/"etc/opentsdb"
     (pkgshare/"plugins/.keep").write ""
 
-    (bin/"start-tsdb.sh").write <<~EOS
+    (bin/"start-tsdb.sh").write <<~SH
       #!/bin/sh
       exec "#{opt_bin}/tsdb" tsd \\
         --config="#{etc}/opentsdb/opentsdb.conf" \\
@@ -69,7 +69,7 @@ class Opentsdb < Formula
         --zkbasedir=/hbase \\
         --auto-metric \\
         "$@"
-    EOS
+    SH
     (bin/"start-tsdb.sh").chmod 0755
 
     libexec.mkpath

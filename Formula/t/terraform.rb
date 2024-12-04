@@ -45,7 +45,7 @@ class Terraform < Formula
 
   test do
     minimal = testpath/"minimal.tf"
-    minimal.write <<~EOS
+    minimal.write <<~HCL
       variable "aws_region" {
         default = "us-west-2"
       }
@@ -71,7 +71,7 @@ class Terraform < Formula
         ami           = var.aws_amis[var.aws_region]
         count         = 4
       }
-    EOS
+    HCL
     system bin/"terraform", "init"
     system bin/"terraform", "graph"
   end

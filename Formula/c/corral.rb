@@ -24,11 +24,11 @@ class Corral < Formula
   end
 
   test do
-    (testpath/"test/main.pony").write <<~EOS
+    (testpath/"test/main.pony").write <<~PONY
       actor Main
         new create(env: Env) =>
           env.out.print("Hello World!")
-    EOS
+    PONY
     system bin/"corral", "run", "--", "ponyc", "test"
     assert_equal "Hello World!", shell_output("./test1").chomp
   end

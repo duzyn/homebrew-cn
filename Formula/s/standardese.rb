@@ -71,7 +71,7 @@ class Standardese < Formula
   end
 
   test do
-    (testpath/"test.hpp").write <<~EOS
+    (testpath/"test.hpp").write <<~CPP
       #pragma once
 
       #include <string>
@@ -97,7 +97,7 @@ class Standardese < Formula
           /// \\notes Some stuff at the end.
           using Baz = Test;
       };
-    EOS
+    CPP
     system bin/"standardese", "--compilation.standard", "c++17",
                               "--output.format", "xml",
                               testpath/"test.hpp"

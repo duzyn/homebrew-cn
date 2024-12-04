@@ -45,10 +45,10 @@ class Nco < Formula
       (buildpath/"include").install "lib/cpp/antlr"
       (buildpath/"lib").install "lib/cpp/src/libantlr.a"
 
-      (buildpath/"bin/antlr").write <<~EOS
+      (buildpath/"bin/antlr").write <<~SH
         #!/bin/sh
         exec "#{Formula["openjdk"].opt_bin}/java" -classpath "#{buildpath}/libexec/antlr.jar" antlr.Tool "$@"
-      EOS
+      SH
 
       chmod 0755, buildpath/"bin/antlr"
     end

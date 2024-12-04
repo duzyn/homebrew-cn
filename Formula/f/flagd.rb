@@ -34,22 +34,19 @@ class Flagd < Formula
 
   test do
     port = free_port
+    json_url = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/open-feature/flagd/main/config/samples/example_flags.json"
+    resolve_boolean_command = <<~BASH
+      curl \
+      --request POST \
+      --data '{"flagKey":"myBoolFlag","context":{}}' \
+      --header "Content-Type: application/json" \
+      localhost:#{port}/schema.v1.Service/ResolveBoolean
+    BASH
 
+    pid = spawn bin/"flagd", "start", "-f", json_url, "-p", port.to_s
     begin
-      pid = fork do
-        exec bin/"flagd", "start", "-f",
-            "https://mirror.ghproxy.com/https://raw.githubusercontent.com/open-feature/flagd/main/config/samples/example_flags.json",
-            "-p", port.to_s
-      end
       sleep 3
-
-      resolve_boolean_command = <<-BASH
-        curl -X POST "localhost:#{port}/schema.v1.Service/ResolveBoolean" -d '{"flagKey":"myBoolFlag","context":{}}' -H "Content-Type: application/json"
-      BASH
-
-      expected_output = /true/
-
-      assert_match expected_output, shell_output(resolve_boolean_command)
+      assert_match(/true/, shell_output(resolve_boolean_command))
     ensure
       Process.kill("TERM", pid)
       Process.wait(pid)
