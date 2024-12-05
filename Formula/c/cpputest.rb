@@ -1,6 +1,6 @@
 class Cpputest < Formula
   desc "C /C++ based unit xUnit test framework"
-  homepage "https://www.cpputest.org/"
+  homepage "https://cpputest.github.io/"
   url "https://mirror.ghproxy.com/https://github.com/cpputest/cpputest/releases/download/v4.0/cpputest-4.0.tar.gz"
   sha256 "21c692105db15299b5529af81a11a7ad80397f92c122bd7bf1e4a4b0e85654f7"
   license "BSD-3-Clause"
