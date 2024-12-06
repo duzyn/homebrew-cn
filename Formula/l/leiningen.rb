@@ -44,27 +44,27 @@ class Leiningen < Formula
   end
 
   test do
-    (testpath/"project.clj").write <<~EOS
+    (testpath/"project.clj").write <<~CLOJURE
       (defproject brew-test "1.0"
         :dependencies [[org.clojure/clojure "1.10.3"]])
-    EOS
+    CLOJURE
 
-    (testpath/"src/brew_test/core.clj").write <<~EOS
+    (testpath/"src/brew_test/core.clj").write <<~CLOJURE
       (ns brew-test.core)
       (defn adds-two
         "I add two to a number"
         [x]
         (+ x 2))
-    EOS
+    CLOJURE
 
-    (testpath/"test/brew_test/core_test.clj").write <<~EOS
+    (testpath/"test/brew_test/core_test.clj").write <<~CLOJURE
       (ns brew-test.core-test
         (:require [clojure.test :refer :all]
                   [brew-test.core :as t]))
       (deftest canary-test
         (testing "adds-two yields 4 for input of 2"
           (is (= 4 (t/adds-two 2)))))
-    EOS
+    CLOJURE
 
     system bin/"lein", "test"
   end
