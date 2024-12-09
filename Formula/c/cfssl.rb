@@ -23,9 +23,9 @@ class Cfssl < Formula
   def install
     ldflags = "-s -w -X github.com/cloudflare/cfssl/cli/version.version=#{version}"
 
-    system "go", "build", *std_go_args(output: bin/"cfssl", ldflags:), "cmd/cfssl/cfssl.go"
-    system "go", "build", *std_go_args(output: bin/"cfssljson", ldflags:), "cmd/cfssljson/cfssljson.go"
-    system "go", "build", "-o", "#{bin}/cfsslmkbundle", "cmd/mkbundle/mkbundle.go"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"cfssl"), "./cmd/cfssl"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"cfssljson"), "./cmd/cfssljson"
+    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"mkbundle"), "./cmd/mkbundle"
   end
 
   def caveats
@@ -36,6 +36,9 @@ class Cfssl < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/cfssl version")
+    assert_match version.to_s, shell_output("#{bin}/cfssljson --version")
+
     (testpath/"request.json").write <<~JSON
       {
         "CN" : "Your Certificate Authority",
@@ -61,7 +64,5 @@ class Cfssl < Formula
     assert_match(/.*-----END CERTIFICATE-----$/, response["cert"])
     assert_match(/^-----BEGIN RSA PRIVATE KEY-----.*/, response["key"])
     assert_match(/.*-----END RSA PRIVATE KEY-----$/, response["key"])
-
-    assert_match(/^Version:\s+#{version}/, shell_output("#{bin}/cfssl version"))
   end
 end
