@@ -16,6 +16,7 @@ class Terramaid < Formula
   end
 
   depends_on "go" => [:build, :test]
+  depends_on "opentofu" => :test
 
   def install
     ldflags = "-s -w -X github.com/RoseSecurity/terramaid/cmd.Version=#{version}"
@@ -25,19 +26,7 @@ class Terramaid < Formula
   end
 
   test do
-    resource "terraform" do
-      # https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license
-      # Do not update terraform, it switched to the BUSL license
-      # Waiting for https://github.com/runatlantis/atlantis/issues/3741
-      url "https://mirror.ghproxy.com/https://github.com/hashicorp/terraform/archive/refs/tags/v1.5.7.tar.gz"
-      sha256 "6742fc87cba5e064455393cda12f0e0241c85a7cb2a3558d13289380bb5f26f5"
-    end
-
-    resource("terraform").stage do
-      system "go", "build", *std_go_args(ldflags: "-s -w", output: testpath/"terraform")
-    end
-
-    ENV.prepend_path "PATH", testpath
+    ENV["TERRAMAID_TF_BINARY"] = "tofu"
 
     (testpath/"main.tf").write <<~HCL
       resource "aws_instance" "example" {

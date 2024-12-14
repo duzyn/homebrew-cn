@@ -1,17 +1,17 @@
 class Terragrunt < Formula
   desc "Thin wrapper for Terraform e.g. for locking state"
   homepage "https://terragrunt.gruntwork.io/"
-  url "https://mirror.ghproxy.com/https://github.com/gruntwork-io/terragrunt/archive/refs/tags/v0.69.11.tar.gz"
-  sha256 "8cd8d5d67e0280b58e45b9e8717a2317098c5d6b61ce928f4ae1d81db7b4c016"
+  url "https://mirror.ghproxy.com/https://github.com/gruntwork-io/terragrunt/archive/refs/tags/v0.69.13.tar.gz"
+  sha256 "106c37ac50b8fc0ae0344fcf318c856c57b787fb98f81be9ef43bebd45ac72f7"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "663b5f47e75947a9f84f73cd9d153fe90e66fbd6958b0dea07d6b3823cd8f5b0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "663b5f47e75947a9f84f73cd9d153fe90e66fbd6958b0dea07d6b3823cd8f5b0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "663b5f47e75947a9f84f73cd9d153fe90e66fbd6958b0dea07d6b3823cd8f5b0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1ba162c19d0e49feb755057c7c907adc89eb2ff5959db9d29f02afd83143d692"
-    sha256 cellar: :any_skip_relocation, ventura:       "1ba162c19d0e49feb755057c7c907adc89eb2ff5959db9d29f02afd83143d692"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a8641ad5af3f2b530f8d5acf3cae7f3ea5ce2f75764340e84de55ae68e6ebdd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ccfe164f12faf8c71d97b49b2296920201478613f73de17b148095ad47a15a80"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ccfe164f12faf8c71d97b49b2296920201478613f73de17b148095ad47a15a80"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "ccfe164f12faf8c71d97b49b2296920201478613f73de17b148095ad47a15a80"
+    sha256 cellar: :any_skip_relocation, sonoma:        "80ec160c4757b0507467e463fe70f1de00e24e8ed6840532e38bfa20e912cc7c"
+    sha256 cellar: :any_skip_relocation, ventura:       "80ec160c4757b0507467e463fe70f1de00e24e8ed6840532e38bfa20e912cc7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f1c3c7883f6b5f1d9a832a70e1e0eda223afecd3ab7d8559ebe9a315ee4e343c"
   end
 
   depends_on "go" => :build
