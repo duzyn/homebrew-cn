@@ -29,7 +29,7 @@ class Kubesess < Formula
   end
 
   test do
-    (testpath/".kube/config").write <<~EOS
+    (testpath/".kube/config").write <<~YAML
       kind: Config
       apiVersion: v1
       current-context: docker-desktop
@@ -47,7 +47,7 @@ class Kubesess < Formula
       users:
       - user:
         name: docker-desktop
-    EOS
+    YAML
 
     output = shell_output("#{bin}/kubesess -v docker-desktop context 2>&1")
     assert_match "docker-desktop", output

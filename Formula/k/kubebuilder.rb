@@ -45,14 +45,14 @@ class Kubebuilder < Formula
                  "--skip-go-version-check"
     end
 
-    assert_match <<~EOS, (testpath/"test/PROJECT").read
+    assert_match <<~YAML, (testpath/"test/PROJECT").read
       domain: my.domain
       layout:
       - go.kubebuilder.io/v4
       projectName: test
       repo: example.com
       version: "3"
-    EOS
+    YAML
 
     assert_match version.to_s, shell_output("#{bin}/kubebuilder version")
   end
