@@ -25,16 +25,19 @@ class Timewarrior < Formula
   end
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
     (testpath/".timewarrior/data").mkpath
     (testpath/".timewarrior/extensions").mkpath
     touch testpath/".timewarrior/timewarrior.cfg"
+
     man = OS.mac? ? "man" : "gman"
     system man, "-P", "cat", "timew-summary"
+
     assert_match "Tracking foo", shell_output("#{bin}/timew start foo")
   end
 end
