@@ -26,10 +26,9 @@ class Apib < Formula
   depends_on "openssl@3"
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make", "apib", "apibmon"
-
-    bin.install "apib/apib", "apib/apibmon"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build", "--target", "apib", "apibmon"
+    bin.install "build/apib/apib", "build/apib/apibmon"
   end
 
   test do

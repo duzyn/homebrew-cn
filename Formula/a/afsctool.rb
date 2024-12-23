@@ -29,10 +29,9 @@ class Afsctool < Formula
 
   def install
     (buildpath/"src/private/lzfse").install resource("lzfse")
-    system "cmake", ".", *std_cmake_args
-    system "cmake", "--build", "."
-    bin.install "afsctool"
-    bin.install "zfsctool"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    bin.install "build/afsctool", "build/zfsctool"
   end
 
   test do
