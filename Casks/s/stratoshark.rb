@@ -1,9 +1,9 @@
 cask "stratoshark" do
   arch arm: "Arm", intel: "Intel"
 
-  version "0.9.0rc0,1359,63c3f33b28ad"
-  sha256 arm:   "8409dddb49cfc0ad54704c54337875778e34fb679e09669074aadc8aa86a23fc",
-         intel: "f9e06d928bcea603446de9a3bc1edec0249667c0d639bd97675ee25e6c2a1da0"
+  version "0.9.0rc0,1367,21348c01708e"
+  sha256 arm:   "1265100c95d8d4b7960a99bd9a9f767de24af6362cee87f10e9167d2e6b75aa5",
+         intel: "7c6a40e740aec49123bc11d304e67778b04693660a1935cd801a8b18af33a1b4"
 
   url "https://mirror.nju.edu.cn/wireshark//automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}%20#{arch}%2064.dmg"
   name "Stratoshark"
@@ -24,6 +24,8 @@ cask "stratoshark" do
   app "Stratoshark.app"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/falcodump"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/sshdig"
+  manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/falcodump.1"
+  manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/sshdig.1"
 
   uninstall quit: "org.wireshark.Stratoshark"
 

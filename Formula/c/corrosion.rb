@@ -29,8 +29,10 @@ class Corrosion < Formula
   test do
     cp_r pkgshare/"test/rust2cpp/rust2cpp/.", testpath
     inreplace "CMakeLists.txt", "include(../../test_header.cmake)", "find_package(Corrosion REQUIRED)"
-    system "cmake", "."
-    system "cmake", "--build", "."
-    assert_match "Hello, Cpp! I'm Rust!", shell_output("./cpp-exe")
+
+    system "cmake", "-S", ".", "-B", "build"
+    system "cmake", "--build", "build"
+
+    assert_match "Hello, Cpp! I'm Rust!", shell_output("./build/cpp-exe")
   end
 end

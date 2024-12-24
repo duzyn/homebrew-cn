@@ -27,18 +27,18 @@ class Mkvalidator < Formula
 
   depends_on "cmake" => :build
 
-  resource "tests" do
-    url "https://mirror.ghproxy.com/https://github.com/dunn/garbage/raw/c0e682836e5237eef42a000e7d00dcd4b6dcebdb/test.mka"
-    sha256 "6d7cc62177ec3f88c908614ad54b86dde469dbd2b348761f6512d6fc655ec90c"
-  end
-
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make", "-C", "mkvalidator"
-    bin.install "mkvalidator/mkvalidator"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    bin.install "build/mkvalidator/mkvalidator"
   end
 
   test do
+    resource "tests" do
+      url "https://mirror.ghproxy.com/https://github.com/dunn/garbage/raw/c0e682836e5237eef42a000e7d00dcd4b6dcebdb/test.mka"
+      sha256 "6d7cc62177ec3f88c908614ad54b86dde469dbd2b348761f6512d6fc655ec90c"
+    end
+
     resource("tests").stage do
       system bin/"mkvalidator", "test.mka"
     end

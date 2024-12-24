@@ -22,8 +22,13 @@ class Csfml < Formula
   depends_on "sfml"
 
   def install
-    system "cmake", ".", "-DCMAKE_MODULE_PATH=#{Formula["sfml"].share}/SFML/cmake/Modules/", *std_cmake_args
-    system "make", "install"
+    args = %W[
+      -DCMAKE_MODULE_PATH=#{Formula["sfml"].share}/SFML/cmake/Modules/
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
