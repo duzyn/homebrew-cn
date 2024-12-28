@@ -8,7 +8,7 @@ class Duck < Formula
 
   livecheck do
     url "https://dist.duck.sh/"
-    regex(/href=.*?duck-src[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/href=.*?duck(?:-src)?[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do

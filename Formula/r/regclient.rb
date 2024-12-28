@@ -22,7 +22,7 @@ class Regclient < Formula
     ["regbot", "regctl", "regsync"].each do |f|
       system "go", "build", *std_go_args(ldflags:, output: bin/f), "./cmd/#{f}"
 
-      generate_completions_from_executable(bin/f, "completion", base_name: f)
+      generate_completions_from_executable(bin/f, "completion")
     end
   end
 

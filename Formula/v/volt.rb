@@ -43,9 +43,8 @@ class Volt < Formula
   end
 
   test do
-    mkdir_p testpath/"volt/repos/localhost/foo/bar/plugin"
-    File.write(testpath/"volt/repos/localhost/foo/bar/plugin/baz.vim", "qux")
+    (testpath/"volt/repos/localhost/foo/bar/plugin/baz.vim").write "qux"
     system bin/"volt", "get", "localhost/foo/bar"
-    assert_equal File.read(testpath/".vim/pack/volt/opt/localhost_foo_bar/plugin/baz.vim"), "qux"
+    assert_equal "qux", (testpath/".vim/pack/volt/opt/localhost_foo_bar/plugin/baz.vim").read
   end
 end

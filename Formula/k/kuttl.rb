@@ -28,7 +28,7 @@ class Kuttl < Formula
     ]
 
     system "go", "build", *std_go_args(output: bin/"kubectl-kuttl", ldflags:), "./cmd/kubectl-kuttl"
-    generate_completions_from_executable(bin/"kubectl-kuttl", "completion", base_name: "kubectl-kuttl")
+    generate_completions_from_executable(bin/"kubectl-kuttl", "completion")
   end
 
   test do
