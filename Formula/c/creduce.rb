@@ -66,7 +66,7 @@ class Creduce < Formula
   end
 
   depends_on "astyle"
-  depends_on "llvm@18"
+  depends_on "llvm@18" # LLVM 19 issue: https://github.com/csmith-project/creduce/issues/276
 
   uses_from_macos "flex" => :build
   uses_from_macos "perl"
