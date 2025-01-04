@@ -1,7 +1,7 @@
 class Jj < Formula
   desc "Git-compatible distributed version control system"
-  homepage "https://github.com/martinvonz/jj"
-  url "https://mirror.ghproxy.com/https://github.com/martinvonz/jj/archive/refs/tags/v0.25.0.tar.gz"
+  homepage "https://github.com/jj-vcs/jj"
+  url "https://mirror.ghproxy.com/https://github.com/jj-vcs/jj/archive/refs/tags/v0.25.0.tar.gz"
   sha256 "3a99528539e414a3373f24eb46a0f153d4e52f7035bb06df47bd317a19912ea3"
   license "Apache-2.0"
   revision 1

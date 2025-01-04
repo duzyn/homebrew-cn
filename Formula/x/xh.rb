@@ -7,12 +7,13 @@ class Xh < Formula
   head "https://github.com/ducaale/xh.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3701110007afd28ac6623dab0ddd121af704ca4cbf12dcac2ee5a5df8c112247"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e13c6f73d7eec083c51c16846aa013f921dcc9e1902bfed1c53d4dd07fb934f0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "bebe7b9416c66728a7174c6eaf3dbb093da30e6747d7b4600527c1d66edb84a5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1a1b001fa8574400fb7d1c1c732524498bd9173a0338ab8d9d5ebc35d0c02be2"
-    sha256 cellar: :any_skip_relocation, ventura:       "da6bb99294255abaa59c5c2b09a9dd2478fe7d13af3c09f1253f4f20b91ad6da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30a6d87170d1b259226474c8667ea6ec9e7cdfcf9e6deab3e5d25e5fb0928ea5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cf026bfa5cbc26343dc02123476e897362491bb86c77d2d82d92ccfef4f288fa"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d9120640e68c2d6c4259413a2b6be5bfceb05e6477de159bc9f751aa4b978644"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "abe934355399d3360301f432adb9fceb41d933e0cb85d0aa45a12b386e60f8a4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d804da80a06c3fa1f0702aacabb85468a0d5b3065ed749e56ecc9e869b856f4d"
+    sha256 cellar: :any_skip_relocation, ventura:       "b41325090cf596f0d66c6344abeeee23cec0fa3dc197154a2526eb59e49cf100"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "427b3200809c3c8a198031d1f65354d921eb16c020560b1a862fd17c0ca43bb6"
   end
 
   depends_on "rust" => :build
@@ -22,7 +23,7 @@ class Xh < Formula
     bin.install_symlink bin/"xh" => "xhs"
 
     man1.install "doc/xh.1"
-    bash_completion.install "completions/xh.bash"
+    bash_completion.install "completions/xh.bash" => "xh"
     fish_completion.install "completions/xh.fish"
     zsh_completion.install "completions/_xh"
   end

@@ -20,7 +20,7 @@ class Vectorscan < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
-  depends_on "pcre" => :build
+  depends_on "pcre" => :build # PCRE2 issue: https://github.com/VectorCamp/vectorscan/issues/320
   depends_on "pkgconf" => :build
   depends_on "ragel" => :build
 
