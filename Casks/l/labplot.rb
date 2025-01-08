@@ -12,7 +12,7 @@ cask "labplot" do
 
   livecheck do
     url "https://mirrors.ustc.edu.cn/kde/stable/labplot/"
-    regex(/href=.*?labplot[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}.dmg/i)
+    regex(/href=.*?labplot[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :sonoma"
