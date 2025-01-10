@@ -2,17 +2,22 @@ class Prr < Formula
   desc "Mailing list style code reviews for github"
   homepage "https://github.com/danobi/prr"
   license "GPL-2.0-only"
-  revision 2
+  revision 3
   head "https://github.com/danobi/prr.git", branch: "master"
 
   stable do
     url "https://mirror.ghproxy.com/https://github.com/danobi/prr/archive/refs/tags/v0.19.0.tar.gz"
     sha256 "76d101fefe42456d0c18a64e6f57b9d3a84baaecaf1e3a5e94b93657a6773c11"
 
-    # support libgit2 1.8, upstream pr ref, https://github.com/MitMaro/git-interactive-rebase-tool/pull/948
+    # support libgit2 1.8, upstream pr ref, https://github.com/danobi/prr/pull/67
     patch do
       url "https://github.com/danobi/prr/commit/c860f3d29c3607b10885e6526bea4cfd242815b5.patch?full_index=1"
       sha256 "208bbbdf4358f98c01b567146d0da2d1717caa53e4d2e5ea55ae29f5adaaaae2"
+    end
+    # support libgit2 1.9, upstream pr ref, https://github.com/danobi/prr/pull/69
+    patch do
+      url "https://github.com/danobi/prr/commit/84c0d0c324fb5a1334b72dc1fdf65c8e81c2cd01.patch?full_index=1"
+      sha256 "e695229e73e83f5d06c9b9ac9714c053088f6862d6db699e1d3101413b2d06d4"
     end
 
     # completion and manpage support, upstream pr ref, https://github.com/danobi/prr/pull/68
@@ -23,17 +28,17 @@ class Prr < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "55088b52450bbe27b38177e4c0dbac2480defc15dc48e66aaf03c834178803b0"
-    sha256 cellar: :any,                 arm64_sonoma:  "bd278e9e68140e02e6841496f7d84c6092f06390c7a525b4a5dbb8b5a1377fdc"
-    sha256 cellar: :any,                 arm64_ventura: "c9e7b1a6479fd33c34d1be401fb6fc4145e36a642884bfeedb1574b323f4c1d6"
-    sha256 cellar: :any,                 sonoma:        "a40a5696842f03b31a694ace93ce5775c42b747e42915a901031d487e2319580"
-    sha256 cellar: :any,                 ventura:       "c79aa8de4e7ea6477ca584cca5261dcb7a955b3e845ea5321d1afa33c0344859"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5a878aed66f84e1e1be4885647859eaef4676cab25dae269aea0855203f10874"
+    sha256 cellar: :any,                 arm64_sequoia: "1935f2644eed1aea55ec06e5169cf4768f4add80d324be5bb986ba6e6b4cf416"
+    sha256 cellar: :any,                 arm64_sonoma:  "5eb5d8287cde7049ce2ffc0dac1e5bb46a8d8d112f69cefac3fd2b0af95ba0cc"
+    sha256 cellar: :any,                 arm64_ventura: "a6ca2fcec336fe4248924d153b101e878575a5f64156be4ef656d9ee25e79c0d"
+    sha256 cellar: :any,                 sonoma:        "ae3767c62caefd53b2eac176b08cf87e3ea21396eb75861b710e4d328d7a19da"
+    sha256 cellar: :any,                 ventura:       "9312b31f0f636a53a15ac44e63495421d6c94836bd13e346914cce9da3a6845f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4e577e866ec76b2a49589a6d10cbdaad14cbce93fefa69eb899fae6fb9e6424"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "libgit2@1.8" # needs https://github.com/rust-lang/git2-rs/issues/1109 to support libgit2 1.9
+  depends_on "libgit2"
   depends_on "openssl@3"
 
   uses_from_macos "zlib"
@@ -68,7 +73,7 @@ class Prr < Formula
     assert_match "Failed to read config", shell_output("#{bin}/prr get Homebrew/homebrew-core/6 2>&1", 1)
 
     [
-      Formula["libgit2@1.8"].opt_lib/shared_library("libgit2"),
+      Formula["libgit2"].opt_lib/shared_library("libgit2"),
       Formula["openssl@3"].opt_lib/shared_library("libssl"),
       Formula["openssl@3"].opt_lib/shared_library("libcrypto"),
     ].each do |library|
