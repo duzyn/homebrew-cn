@@ -8,9 +8,10 @@ cask "ripme" do
   homepage "https://github.com/RipMeApp/ripme"
 
   livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+(?:-\d+-\h+)?)/i)
-    strategy :github_latest
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/RipMeApp/ripme/refs/heads/main/ripme.json"
+    strategy :json do |json|
+      json["latestVersion"]
+    end
   end
 
   auto_updates true

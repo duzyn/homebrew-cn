@@ -9,12 +9,13 @@ class Rawdog < Formula
   revision 11
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "d2d0e456ffabc9a732cc8a9bd609821fd193ee24fa2a951a63e07b6450336d81"
-    sha256 cellar: :any,                 arm64_sonoma:  "fb3c8bf6f0a2320b963a233fff80a8cda7aa283efe10945c4a30d67960f9b628"
-    sha256 cellar: :any,                 arm64_ventura: "5c0d52563ccea70c24f871943fdd57a5ed5a93b3d3d41846532f06e3d6accf3f"
-    sha256 cellar: :any,                 sonoma:        "c69e50865b6bd80ecc3e2f744f6e02a0d4cf39c5af37e3da18925741306a9ad4"
-    sha256 cellar: :any,                 ventura:       "bf59faba3073f619ec7c48a60de1320a0a18b4a1c41008a7541a07a025af9885"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d378064d34e6abb676c3f0646cb7f24b9bca861b81e6e734e17d516cf0ed1bf7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "db425c8ccf431bbc198ebeef417d89708f87de01e71c3a92fe8aacc51e61c247"
+    sha256 cellar: :any,                 arm64_sonoma:  "6d34bbc7ace2088808cb5e6531c51d1fa9f49766a819eb08e817b26aaa6e296b"
+    sha256 cellar: :any,                 arm64_ventura: "9d36138da00b3b964e13e9d1098fd16aff1adf02c326770b9632dedc8719b556"
+    sha256 cellar: :any,                 sonoma:        "2b1fa63695e46dbe908c0f334ecc56fd953af6cc433c61700a79d82e636df23c"
+    sha256 cellar: :any,                 ventura:       "654f1d1b77b5f8943460443273d2c79172067ea2aae6fec111d47e472de8bebe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "336b14fb97bc9d8707cdbb2e7e957ac0a1abb730d1345089021402f84d4dff9d"
   end
 
   depends_on "rust" => :build
@@ -43,8 +44,8 @@ class Rawdog < Formula
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/f6/40/318e58f669b1a9e00f5c4453910682e2d9dd594334539c7b7817dabb765f/anyio-4.7.0.tar.gz"
-    sha256 "2f834749c602966b7d456a7567cafcb309f96482b5081d14ac93ccd457f9dd48"
+    url "https://files.pythonhosted.org/packages/a3/73/199a98fc2dae33535d6b8e8e6ec01f8c1d76c9adb096c6b7d64823038cde/anyio-4.8.0.tar.gz"
+    sha256 "1d9fe889df5212298c0c0723fa20479d1b94883a2df44bd3897aa91083316f7a"
   end
 
   resource "attrs" do
@@ -53,8 +54,8 @@ class Rawdog < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/f2/4f/e1808dc01273379acc506d18f1504eb2d299bd4131743b9fc54d7be4df1e/charset_normalizer-3.4.0.tar.gz"
-    sha256 "223217c3d4f82c3ac5e29032b3f1c2eb0fb591b72161f86d93f5719079dae93e"
+    url "https://files.pythonhosted.org/packages/16/b0/572805e227f01586461c80e0fd25d65a2115599cc9dad142fee4b747c357/charset_normalizer-3.4.1.tar.gz"
+    sha256 "44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3"
   end
 
   resource "click" do
@@ -98,8 +99,8 @@ class Rawdog < Formula
   end
 
   resource "huggingface-hub" do
-    url "https://files.pythonhosted.org/packages/36/c6/e3709b61de8e7832dbe19f0d9637e81356cede733d99359fbce125423774/huggingface_hub-0.27.0.tar.gz"
-    sha256 "902cce1a1be5739f5589e560198a65a8edcfd3b830b1666f36e4b961f0454fac"
+    url "https://files.pythonhosted.org/packages/e1/d2/d6976de7542792fc077b498d64af64882b6d8bb40679284ec0bff77d5929/huggingface_hub-0.27.1.tar.gz"
+    sha256 "c004463ca870283909d715d20f066ebd6968c2207dae9393fdffb3c1d4d8f98b"
   end
 
   resource "idna" do
@@ -133,8 +134,8 @@ class Rawdog < Formula
   end
 
   resource "litellm" do
-    url "https://files.pythonhosted.org/packages/37/9e/73038697461aa0c5b4933ddc3e5240121c0ba72fab2b772bb59133c66d2a/litellm-1.55.10.tar.gz"
-    sha256 "e346f89244d4c9dd79524ab4b6e5fff3ada8488a25382a299aeb9dc6d535fa15"
+    url "https://files.pythonhosted.org/packages/54/b3/636fe74190e68450df6a87a1694f280f0c1258919d8a7acdd0962feaebf1/litellm-1.57.5.tar.gz"
+    sha256 "981461d67dc851ee4dd204c238e9528cbeffb3001a7e9cf2d5c32982373335af"
   end
 
   resource "markupsafe" do
@@ -148,8 +149,8 @@ class Rawdog < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/27/3c/b1ecce430ed56fa3ac1b0676966d3250aab9c70a408232b71e419ea62148/openai-1.58.1.tar.gz"
-    sha256 "f5a035fd01e141fc743f4b0e02c41ca49be8fab0866d3b67f5f29b4f4d3c0973"
+    url "https://files.pythonhosted.org/packages/2e/7a/07fbe7bdabffd0a5be1bfe5903a02c4fff232e9acbae894014752a8e4def/openai-1.59.6.tar.gz"
+    sha256 "c7670727c2f1e4473f62fea6fa51475c8bc098c9ffb47bfb9eef5be23c747934"
   end
 
   resource "packaging" do
@@ -163,8 +164,8 @@ class Rawdog < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/70/7e/fb60e6fee04d0ef8f15e4e01ff187a196fa976eb0f0ab524af4599e5754c/pydantic-2.10.4.tar.gz"
-    sha256 "82f12e9723da6de4fe2ba888b5971157b3be7ad914267dea8f05f82b28254f06"
+    url "https://files.pythonhosted.org/packages/6a/c7/ca334c2ef6f2e046b1144fe4bb2a5da8a4c574e7f2ebf7e16b34a6a2fa92/pydantic-2.10.5.tar.gz"
+    sha256 "278b38dbbaec562011d659ee05f63346951b3a248a6f3642e1bc68894ea2b4ff"
   end
 
   resource "pydantic-core" do
@@ -232,6 +233,11 @@ class Rawdog < Formula
     sha256 "f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d"
   end
 
+  resource "uvloop" do
+    url "https://files.pythonhosted.org/packages/af/c0/854216d09d33c543f12a44b393c402e89a920b1a0a7dc634c42de91b9cf6/uvloop-0.21.0.tar.gz"
+    sha256 "3bf12b0fda68447806a7ad847bfa591613177275d35b6724b1ee573faa3704e3"
+  end
+
   resource "yarl" do
     url "https://files.pythonhosted.org/packages/b7/9d/4b94a8e6d2b51b599516a5cb88e5bc99b4d8d4583e468057eaa29d5f0918/yarl-1.18.3.tar.gz"
     sha256 "ac1801c45cbf77b6c99242eeff4fffb5e4e73a800b5c4ad4fc0be5def634d2e1"
@@ -240,6 +246,12 @@ class Rawdog < Formula
   resource "zipp" do
     url "https://files.pythonhosted.org/packages/3f/50/bad581df71744867e9468ebd0bcd6505de3b275e06f202c2cb016e3ff56f/zipp-3.21.0.tar.gz"
     sha256 "2c9958f6430a2040341a52eb608ed6dd93ef4392e02ffe219417c1b28b5dd1f4"
+  end
+
+  # poetry 2.0 build patch, upstream pr ref, https://mirror.ghproxy.com/https://github.com/AbanteAI/rawdog/pull/94
+  patch do
+    url "https://mirror.ghproxy.com/https://github.com/AbanteAI/rawdog/commit/a3e6dc1a16ad02a53521ea2128760dadc73f8c1d.patch?full_index=1"
+    sha256 "77a88a315e228c86f36ae876323c140b30916d4e4107f7174e7d6c70f000b853"
   end
 
   def install
