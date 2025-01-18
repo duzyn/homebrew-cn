@@ -11,6 +11,10 @@ class Unisonlang < Formula
     resource "local-ui" do
       url "https://mirror.ghproxy.com/https://github.com/unisonweb/unison-local-ui/archive/refs/tags/release/0.5.32.tar.gz"
       sha256 "69ed790cba455677e864467446791650271cf163fd7a2246e4c45eddb317dd13"
+
+      livecheck do
+        formula :parent
+      end
     end
   end
 

@@ -176,7 +176,7 @@ class Ruby < Formula
   end
 
   def rubygems_config(api_version)
-    <<~EOS
+    <<~RUBY
       module Gem
         class << self
           alias :old_default_dir :default_dir
@@ -245,7 +245,7 @@ class Ruby < Formula
           File.join(Gem.old_default_dir, "specifications", "default")
         end
       end
-    EOS
+    RUBY
   end
 
   def caveats
@@ -272,6 +272,6 @@ class Ruby < Formula
     EOS
     system bin/"bundle", "exec", "ls" # https://github.com/Homebrew/homebrew-core/issues/53247
     system bin/"bundle", "install", "--binstubs=#{testpath}/bin"
-    assert_predicate testpath/"bin/github-markup", :exist?, "github-markup is not installed in #{testpath}/bin"
+    assert_path_exists testpath/"bin/github-markup", "github-markup is not installed in #{testpath}/bin"
   end
 end

@@ -12,6 +12,10 @@ class Dotnet < Formula
     resource "release.json" do
       url "https://mirror.ghproxy.com/https://github.com/dotnet/dotnet/releases/download/v9.0.101/release.json"
       sha256 "02c7435a19fefd8646c641dcf43072b79c0e868ec80a1a12ced108b2b6639819"
+
+      livecheck do
+        formula :parent
+      end
     end
   end
 

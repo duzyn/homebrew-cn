@@ -10,6 +10,10 @@ class Dmd < Formula
     resource "phobos" do
       url "https://mirror.ghproxy.com/https://github.com/dlang/phobos/archive/refs/tags/v2.109.1.tar.gz"
       sha256 "28974debe14d18eb58591db0dad3ddd4139e8f34783c3648c86619b67d7ba6f2"
+
+      livecheck do
+        formula :parent
+      end
     end
   end
 

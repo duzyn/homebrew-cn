@@ -37,6 +37,10 @@ class ErlangAT25 < Formula
   resource "html" do
     url "https://mirror.ghproxy.com/https://github.com/erlang/otp/releases/download/OTP-25.3.2.16/otp_doc_html_25.3.2.16.tar.gz"
     sha256 "bdedfbb6702f47252965684caeb8aa750ecd4a56128aa8ab981c5992b455a23b"
+
+    livecheck do
+      formula :parent
+    end
   end
 
   def install

@@ -45,6 +45,10 @@ class DotnetAT8 < Formula
   resource "release.json" do
     url "https://mirror.ghproxy.com/https://github.com/dotnet/dotnet/releases/download/v8.0.12/release.json"
     sha256 "fb24cb8e32d591acce3feed93a6ae23847bbb40cb64f58c258a4522be8fd1a6f"
+
+    livecheck do
+      formula :parent
+    end
   end
 
   # Backport fix to build with Xcode 16

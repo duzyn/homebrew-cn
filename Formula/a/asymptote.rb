@@ -41,6 +41,10 @@ class Asymptote < Formula
   resource "manual" do
     url "https://downloads.sourceforge.net/project/asymptote/2.95/asymptote.pdf?use_mirror=jaist"
     sha256 "6fa4428a78c6af413ed82173056dd6330a496c5f7e930883b16c5cbfc01394cf"
+
+    livecheck do
+      formula :parent
+    end
   end
 
   def install

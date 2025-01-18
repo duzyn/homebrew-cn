@@ -10,6 +10,10 @@ class Picotool < Formula
     resource "pico-sdk" do
       url "https://mirror.ghproxy.com/https://github.com/raspberrypi/pico-sdk/archive/refs/tags/2.1.0.tar.gz"
       sha256 "5e3abc511955dd2179809d0c33f05fe6f94544d8d0ca436842e6638bb655d4d2"
+
+      livecheck do
+        formula :parent
+      end
     end
   end
 

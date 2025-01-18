@@ -44,6 +44,10 @@ class Erlang < Formula
     url "https://mirror.ghproxy.com/https://github.com/erlang/otp/releases/download/OTP-27.2/otp_doc_html_27.2.tar.gz"
     mirror "https://fossies.org/linux/misc/otp_doc_html_27.2.tar.gz"
     sha256 "b403ba1fb75ea7769242b00cd2480919c46d7fc9a5ebab14a553d86cb00d3f07"
+
+    livecheck do
+      formula :parent
+    end
   end
 
   # https://github.com/erlang/otp/blob/#{version}/make/ex_doc_link

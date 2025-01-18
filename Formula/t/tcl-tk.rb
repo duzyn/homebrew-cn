@@ -62,6 +62,10 @@ class TclTk < Formula
     url "https://downloads.sourceforge.net/project/tcl/Tcl/9.0.1/tk9.0.1-src.tar.gz?use_mirror=jaist"
     mirror "https://fossies.org/linux/misc/tk9.0.1-src.tar.gz"
     sha256 "d6f01a4d598bfc6398be9584e1bab828c907b0758db4bbb351a1429106aec527"
+
+    livecheck do
+      formula :parent
+    end
   end
 
   # "https://downloads.sourceforge.net/project/incrtcl/%5Bincr%20Tcl_Tk%5D-4-source/itk%204.1.0/itk4.1.0.tar.gz?use_mirror=jaist"
