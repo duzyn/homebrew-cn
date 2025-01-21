@@ -35,14 +35,11 @@ class Bat < Formula
     ENV["RUSTONIG_DYNAMIC_LIBONIG"] = "1"
     ENV["RUSTONIG_SYSTEM_LIBONIG"] = "1"
 
-    ENV["SHELL_COMPLETIONS_DIR"] = buildpath
     system "cargo", "install", *std_cargo_args
 
-    assets_dir = Dir["target/release/build/bat-*/out/assets"].first
-    man1.install "#{assets_dir}/manual/bat.1"
-    bash_completion.install "#{assets_dir}/completions/bat.bash" => "bat"
-    fish_completion.install "#{assets_dir}/completions/bat.fish"
-    zsh_completion.install "#{assets_dir}/completions/bat.zsh" => "_bat"
+    assets = buildpath.glob("target/release/build/bat-*/out/assets").first
+    man1.install assets/"manual/bat.1"
+    generate_completions_from_executable(bin/"bat", "--completion")
   end
 
   def check_binary_linkage(binary, library)
