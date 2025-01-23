@@ -1,26 +1,20 @@
 class Sshs < Formula
   desc "Graphical command-line client for SSH"
   homepage "https://github.com/quantumsheep/sshs"
-  url "https://mirror.ghproxy.com/https://github.com/quantumsheep/sshs/archive/refs/tags/4.6.0.tar.gz"
-  sha256 "58e104dac3a1515f79421b46b22079cc443261c15ca5b97fb025a00775d600ff"
+  url "https://mirror.ghproxy.com/https://github.com/quantumsheep/sshs/archive/refs/tags/4.6.1.tar.gz"
+  sha256 "4a8d96ca607f3d20e641341b82e5d6118fcf5c8fbbab74f114dd9ad4eef6e1c0"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "deb83c528f4fbdfeaafa1a01110b65e82945eeac90fedf09e15294560091969d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1afde78a9e24931382df136f06b637179a9d304415c6239b57fb7ce5e4f7349c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "a47ef5cb4c8c2b0f25859e52b4f48a62909fe81386f8e1529fe279f6296c0f4a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2d8ec24a929a1be1d22460ba0bb7cc45d21ad6cab0ded1391df9587d646a9a7a"
-    sha256 cellar: :any_skip_relocation, ventura:       "cf31ca58164c499dac8e7813a3048cf39d18de65ba7a2dea1a9ca53c1a6dc1b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7d657c8b83244e0d4d2fc88ab1c3ca7372cf9ffdee43496d60c61f3c7b8627c2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2cbb5d4b3b81679d4b2cc0029f1a722a21b9ec32b33eca81cbdc451ed2f1f413"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9b845cd9ad8c40b3c5abb7fafbae386484da548970b5c106e48c7514379eb2d0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c388573ae4a0d16297b83c523a4b98c14a621a1047570d0d3678371afab08eb6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "471b43a830adf962bac98836cfa0c5cea36a5850745b718ab899bf60d782f017"
+    sha256 cellar: :any_skip_relocation, ventura:       "79e97b90b867548e0d93411a6201e78a5453bcb29d0e5274f075f252d28d18be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "359f65870724e6d085668f438c77b529bfa82fe04b302cd372a9ac1251811de2"
   end
 
   depends_on "rust" => :build
-
-  # version patch, upstream pr ref, https://github.com/quantumsheep/sshs/pull/115
-  patch do
-    url "https://github.com/quantumsheep/sshs/commit/de24632c4a83beb82ca041f4cfaa5e1c534993b3.patch?full_index=1"
-    sha256 "40c0e71b5fd3edc06250f1e4775395c49607dca7c3da6c36065e0c084a8e2b9f"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args
