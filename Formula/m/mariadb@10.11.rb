@@ -59,6 +59,12 @@ class MariadbAT1011 < Formula
     depends_on "readline" # uses libedit on macOS
   end
 
+  # system libfmt patch, upstream pr ref, https://github.com/MariaDB/server/pull/3786
+  patch do
+    url "https://github.com/MariaDB/server/commit/b6a924b8478d2fab5d51245ff6719b365d7db7f4.patch?full_index=1"
+    sha256 "77b65b35cf0166b8bb576254ac289845db5a8e64e03b41f1bf4b2045ac1cd2d1"
+  end
+
   def install
     ENV.cxx11
 

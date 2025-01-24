@@ -1,7 +1,6 @@
 class MariadbAT114 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  # TODO: Build with `-DWITH_LIBFMT=system` when fmt >= 11
   url "https://archive.mariadb.org/mariadb-11.4.4/source/mariadb-11.4.4.tar.gz"
   sha256 "96fbd2e6e93fb7e8b373eea75d85b6fea57c0e111a02090cbbefed52599dc77b"
   license "GPL-2.0-only"
@@ -61,6 +60,12 @@ class MariadbAT114 < Formula
     depends_on "linux-pam"
   end
 
+  # system libfmt patch, upstream pr ref, https://github.com/MariaDB/server/pull/3786
+  patch do
+    url "https://github.com/MariaDB/server/commit/b6a924b8478d2fab5d51245ff6719b365d7db7f4.patch?full_index=1"
+    sha256 "77b65b35cf0166b8bb576254ac289845db5a8e64e03b41f1bf4b2045ac1cd2d1"
+  end
+
   def install
     # Set basedir and ldata so that mysql_install_db can find the server
     # without needing an explicit path to be set. This can still
@@ -83,6 +88,7 @@ class MariadbAT114 < Formula
       -DINSTALL_DOCDIR=share/doc/#{name}
       -DINSTALL_INFODIR=share/info
       -DINSTALL_MYSQLSHAREDIR=share/mysql
+      -DWITH_LIBFMT=system
       -DWITH_PCRE=system
       -DWITH_SSL=system
       -DWITH_ZLIB=system
