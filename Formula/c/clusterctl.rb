@@ -30,14 +30,16 @@ class Clusterctl < Formula
   def install
     ldflags = %W[
       -s -w
-      -X sigs.k8s.io/cluster-api/version.gitVersion=#{version}
-      -X sigs.k8s.io/cluster-api/version.gitCommit=brew
+      -X sigs.k8s.io/cluster-api/version.gitMajor=#{version.major}
+      -X sigs.k8s.io/cluster-api/version.gitMinor=#{version.minor}
+      -X sigs.k8s.io/cluster-api/version.gitVersion=v#{version}
+      -X sigs.k8s.io/cluster-api/version.gitCommit=#{tap.user}
       -X sigs.k8s.io/cluster-api/version.gitTreeState=clean
       -X sigs.k8s.io/cluster-api/version.buildDate=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/clusterctl"
 
-    generate_completions_from_executable(bin/"clusterctl", "completion", shells: [:bash, :zsh, :fish])
+    generate_completions_from_executable(bin/"clusterctl", "completion")
   end
 
   test do
