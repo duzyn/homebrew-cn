@@ -4,9 +4,13 @@ class Tailwindcss < Formula
   url "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.0.0.tgz"
   sha256 "72309ed7264bb66a0e4ed4171a064f9f4ea3b92906afe67b8afedbd8f9e78b28"
   license "MIT"
+  head "https://github.com/tailwindlabs/tailwindcss.git", branch: "next"
 
+  # There can be a notable gap between when a version is added to npm and the
+  # GitHub release is created, so we check the "latest" release on GitHub
+  # instead of the default `Npm` check for the `stable` URL.
   livecheck do
-    url "https://github.com/tailwindlabs/tailwindcss"
+    url :head
     strategy :github_latest
   end
 
