@@ -1,9 +1,8 @@
 class Tanka < Formula
   desc "Flexible, reusable and concise configuration for Kubernetes using Jsonnet"
   homepage "https://tanka.dev"
-  url "https://github.com/grafana/tanka.git",
-      tag:      "v0.31.2",
-      revision: "6de85c304c5f3f416d07a6b007cb6c8797b0da13"
+  url "https://mirror.ghproxy.com/https://github.com/grafana/tanka/archive/refs/tags/v0.31.2.tar.gz"
+  sha256 "82ae2a379313c25d60f4a44a55af35de065c85e249b4e9c936f1173fca0a5908"
   license "Apache-2.0"
   head "https://github.com/grafana/tanka.git", branch: "main"
 
