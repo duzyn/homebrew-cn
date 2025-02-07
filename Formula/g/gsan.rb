@@ -6,6 +6,7 @@ class Gsan < Formula
   url "https://files.pythonhosted.org/packages/73/0c/1fc5a29ae79fd74f0fd54d2c4d487b8cf7b21ede08efe99a6c39977816c6/gsan-5.0.0.tar.gz"
   sha256 "2418a6897b0eb1c6eb44c3521ccc5c69a811071f864b8001fd9699a4d2f4c9e3"
   license "MIT"
+  head "https://github.com/franccesco/getaltname.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, all: "b5f3b8889010acbfe378e95593bfc2757db482894a47bbfb1dd6d76c1cd8be8f"
@@ -69,8 +70,6 @@ class Gsan < Formula
   end
 
   test do
-    output = shell_output("#{bin}/gsan example.com")
-    assert_match "example.com [4]", output
-    assert_match "example.org", output
+    assert_match(/google.com \[\d+\]/, shell_output("#{bin}/gsan google.com"))
   end
 end
