@@ -1,9 +1,9 @@
 cask "wasabi-wallet" do
   arch arm: "-arm64"
 
-  version "2.4.0"
-  sha256 arm:   "932188909e7ed9bd97acd28fbb32b38995d223f6aebdcb81f4756e8e3616914e",
-         intel: "3f4f50790154d845e14dc9299aa5bb7033bd7f483507d64ff7de05933881794c"
+  version "2.5.1"
+  sha256 arm:   "31943d8dc1d00045d7cafb8cc448f7213549b6d1a8dc5a1291f3ce3ba9995fd9",
+         intel: "ea0a9db9b556dc4e3d915f900c6b48c3ede9eeb491c595785dda0182c2c0d42a"
 
   url "https://mirror.ghproxy.com/https://github.com/zkSNACKs/WalletWasabi/releases/download/v#{version}/Wasabi-#{version}#{arch}.dmg"
   name "Wasabi Wallet"
