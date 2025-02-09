@@ -6,6 +6,7 @@ class Restview < Formula
   url "https://files.pythonhosted.org/packages/3d/d4/36ed06051e9702d3dae5f7bb0296b79b18621ff5a1bf43247509cbfeff8d/restview-3.0.2.tar.gz"
   sha256 "8b4d75a0bed76b67b456ef7011f4eb6c98a556c9f837642df2202c7312fccc1a"
   license "GPL-3.0-or-later"
+  head "https://github.com/mgedmin/restview.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, all: "5207c409839c90c9be97716a6349e1f988af6a3ad9a74eabab636ac3f91c4c88"
@@ -61,10 +62,8 @@ class Restview < Formula
 
     port = free_port
     begin
-      pid = fork do
-        exec bin/"restview", "--listen=#{port}", "--no-browser", "sample.rst"
-      end
-      sleep 3
+      pid = spawn bin/"restview", "--listen=#{port}", "--no-browser", "sample.rst"
+      sleep 5
       output = shell_output("curl -s 127.0.0.1:#{port}")
       assert_match "<p>Here we have a numbered list</p>", output
       assert_match "<li>Four</li>", output
