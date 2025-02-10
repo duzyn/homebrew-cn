@@ -52,6 +52,10 @@ class Podman < Formula
     depends_on "systemd"
   end
 
+  # Bump these resources versions to match those in the corresponding version-tagged Makefile
+  # at https://github.com/containers/podman/blob/#{version}/contrib/pkginstaller/Makefile
+  #
+  # More context: https://github.com/Homebrew/homebrew-core/pull/205303
   resource "gvproxy" do
     on_macos do
       url "https://mirror.ghproxy.com/https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.8.1.tar.gz"
