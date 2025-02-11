@@ -3,23 +3,12 @@ class EyeD3 < Formula
 
   desc "Work with ID3 metadata in .mp3 files"
   homepage "https://eyed3.nicfit.net/"
-  url "https://eyed3.nicfit.net/releases/eyeD3-0.9.6.tar.gz"
-  mirror "https://files.pythonhosted.org/packages/fb/f2/27b42a10b5668df27ce87aa22407e5115af7fce9b1d68f09a6d26c3874ec/eyeD3-0.9.6.tar.gz"
-  sha256 "4b5064ec0fb3999294cca0020d4a27ffe4f29149e8292fdf7b2de9b9cabb7518"
+  url "https://files.pythonhosted.org/packages/75/a5/263664ef1f1be58f72c8bc66ef128781af0a8110aeb591428d5c3a67b356/eyeD3-0.9.7.tar.gz"
+  sha256 "93b18e9393376a45114f9409d7cca119fb6f4f9a37d4b697b500af48b4c5cf0f"
   license "GPL-3.0-or-later"
-  revision 1
-
-  # The upstream documentation links to https://eyed3.nicfit.net/releases/ as
-  # the release archive but it returns a 403 (Forbidden) response, so we check
-  # the "latest" release on GitHub as a workaround.
-  livecheck do
-    url "https://github.com/nicfit/eyeD3.git"
-    strategy :github_latest
-  end
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any_skip_relocation, all: "8faeb282de11f645e221dc739a28c1ba308ab14f26cd19da5378179eb040217e"
+    sha256 cellar: :any_skip_relocation, all: "7c6a2d09381919f40cc7b2a78c63ff8b65b303091159632c27888b16e0c1e1bb"
   end
 
   depends_on "python@3.13"
@@ -40,8 +29,8 @@ class EyeD3 < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz"
-    sha256 "026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"
+    url "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz"
+    sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
   end
 
   resource "toml" do
@@ -58,11 +47,13 @@ class EyeD3 < Formula
 
   def install
     virtualenv_install_with_resources
-    share.install Dir["docs/*"]
+    doc.install Dir["docs/*"]
   end
 
   test do
-    touch "temp.mp3"
-    system bin/"eyeD3", "-a", "HomebrewYo", "-n", "37", "temp.mp3"
+    cp test_fixtures("test.mp3"), testpath
+    assert_match "No ID3 v1.x/v2.x tag found", shell_output("#{bin}/eyeD3 test.mp3 2>&1")
+    system bin/"eyeD3", "--artist", "HomebrewYo", "--track", "37", "test.mp3"
+    assert_match "artist: HomebrewYo", shell_output("#{bin}/eyeD3 test.mp3 2>&1")
   end
 end

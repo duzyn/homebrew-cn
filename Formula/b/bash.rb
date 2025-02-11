@@ -98,14 +98,18 @@ class Bash < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_sequoia: "bbfa520d0ddc11d3230c85d3a542f1665d52e461dad651adca3e372939d80763"
-    sha256 arm64_sonoma:  "6f41bcb71005164c1c72f4117d2635d63bbfa4a8e01a599ad776e68b5dd7b3fa"
-    sha256 arm64_ventura: "93bf8f67f2a81606400d36057373d40ba8e78e13f6df52d0d03d99e811c8b965"
-    sha256 sonoma:        "2889699aab77b51ad10ebceb566b2e35368b1bf8e423e40452cca0482e06da85"
-    sha256 ventura:       "8edad046fe3f173f229ad667aa97c819a7491bbf716d19caf2924b0892412994"
-    sha256 x86_64_linux:  "cf656843709a32e900c8e4e971cf0d0c3c0c568215ded674b1fccf5b7154f97f"
+    rebuild 2
+    sha256 arm64_sequoia: "e77d408d550e8e9f6669abf16759e35d0b867fe2126121eaa1ff39a94921cd86"
+    sha256 arm64_sonoma:  "c447b3c18e307ab9e3e6a5c28ebb09c1e76a51a505ab89948ade6abe8f859bf0"
+    sha256 arm64_ventura: "60bd00499cc9a01361143f2ffe15fcc0aa274db1de4b298dedd10fa2533d7e69"
+    sha256 sonoma:        "1f0af2a4eb5fddcecdd1d02a841e285dc8302a029f975571fddd4100af79ad67"
+    sha256 ventura:       "05a18ddf9001e3fe63f8c972aa24b73df39f6517eb0b5b913ccaf3478c6fa914"
+    sha256 x86_64_linux:  "0f188fcf662add592183d2b4647ea94bdd1fc001ed9a06920ab4bbc2b62bb9f9"
   end
+
+  # System ncurses lacks functionality
+  # https://github.com/Homebrew/homebrew-core/issues/158667
+  depends_on "ncurses"
 
   def install
     # When built with SSH_SOURCE_BASHRC, bash will source ~/.bashrc when
@@ -121,7 +125,7 @@ class Bash < Formula
     # FIXME: Setting `-rpath` flags don't seem to work on Linux.
     ENV.prepend_path "HOMEBREW_RPATH_PATHS", rpath(target: lib/"bash") if OS.linux?
 
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--with-curses"
     system "make", "install"
 
     (include/"bash/builtins").install lib/"bash/loadables.h"
