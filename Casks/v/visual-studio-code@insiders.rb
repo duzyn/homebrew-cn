@@ -1,9 +1,9 @@
 cask "visual-studio-code@insiders" do
   arch arm: "-arm64"
 
-  version "1.98.0-insider,1739278900398,b1bce46d27c96db4ad9e1a7968606118feff9abb"
-  sha256 arm:   "9ebdf67c9563159c66c450c9819ddfaeea5b05c6c1448c084aa4a00e0718c145",
-         intel: "8d8086bd208d07b20f93c4d1d8a47c9b1246ffbd707547755ea8c9099a3ef326"
+  version "1.98.0-insider,1739377095540,29ad3d06bde55ac2ed93599d63ae955778485cdb"
+  sha256 arm:   "c80f287f8684f46ffd57a954ca4f5b75347ecf376505e5dfd69b5a826e2b5b56",
+         intel: "2436eebbaa4fd8832f453680112a278c514470973b038f0e4bf2b0c6d7c84244"
 
   url "https://vscode.download.prss.microsoft.com/dbazure/download/insider/#{version.csv.third}/VSCode-darwin#{arch}.zip",
       verified: "vscode.download.prss.microsoft.com/"
