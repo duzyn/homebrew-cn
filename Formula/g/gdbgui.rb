@@ -16,7 +16,7 @@ class Gdbgui < Formula
   end
 
   depends_on "gdb"
-  depends_on "python@3.12"
+  depends_on "python@3.12" # Python 3.13 issue: https://github.com/cs01/gdbgui/issues/494
 
   on_macos do
     depends_on arch: :x86_64 # gdb is not supported on macOS ARM
