@@ -11,18 +11,24 @@ class Pari < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "6e3bac204e73cba93b99b3d205087289920a4ae794ff6b31fa2ba3d2cc241570"
-    sha256 cellar: :any,                 arm64_sonoma:  "c016de97580e7f01abb72116b86614dd19dbe5bdbf50e98fe068f256154f706d"
-    sha256 cellar: :any,                 arm64_ventura: "c97015a09844c87b71755498682442dae77a57650b33d59adeb8d64611dc9574"
-    sha256 cellar: :any,                 sonoma:        "5c662e25dedb14ac7d151269de9ff0f08af2c0b022e850ad41db0b67b2964d6e"
-    sha256 cellar: :any,                 ventura:       "306066cceb3bdb2ed7fb5d36d2e0fcd0f3c3543e6ae65e62405c223884eabbe0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d59d53d361ef5babd2582a39ea6a909832fd0b794db1132ca820fed4c0a0394f"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "5d60799a5a3fe3f5b610669487587e5d341645cf4c245b8fe7522e8749dbf51c"
+    sha256 cellar: :any,                 arm64_sonoma:  "d2391b33541e3f214238fd4da4fb98be3c55c065c851e9d17a61572505fe792e"
+    sha256 cellar: :any,                 arm64_ventura: "f58bc25546277fb6993b81518243d50db1c8903d1e18c8d2b3919e0e8c0d4018"
+    sha256 cellar: :any,                 sonoma:        "2f948ff9f4bca45282200bfd756bcea0e5cbe811962a255ef9ed61f39c54358a"
+    sha256 cellar: :any,                 ventura:       "9a60e13d8c13559ef68a75add3000375ec0dddc160878b4546d5df873aa00804"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7eb4ac08a4b34cc4eda8cc2daff5378545447afb4c954e0c2929a4b34c93d580"
   end
 
   depends_on "gmp"
   depends_on "readline"
 
   def install
+    # Work around for optimization bug causing corrupted last_tmp_file
+    # Ref: https://github.com/Homebrew/homebrew-core/issues/207722
+    # Ref: https://pari.math.u-bordeaux.fr/cgi-bin/bugreport.cgi?bug=2608
+    ENV.O1 if ENV.compiler == :clang
+
     readline = Formula["readline"].opt_prefix
     gmp = Formula["gmp"].opt_prefix
     system "./Configure", "--prefix=#{prefix}",
@@ -54,5 +60,13 @@ class Pari < Formula
   test do
     (testpath/"math.tex").write "$k_{n+1} = n^2 + k_n^2 - k_{n-1}$"
     system bin/"tex2mail", testpath/"math.tex"
+
+    (testpath/"test.gp").write <<~GP
+      default(parisize,"1G");
+      default(realprecision,10);
+      dist(a,b) = sqrt(a^2+b^2);
+      print(dist(1,2));
+    GP
+    assert_equal "2.236067977\n", pipe_output("#{bin}/gp --quiet test.gp", "", 0)
   end
 end

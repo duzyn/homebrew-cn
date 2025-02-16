@@ -25,7 +25,6 @@ class Mapserver < Formula
   depends_on "cairo"
   depends_on "fcgi"
   depends_on "freetype"
-  depends_on "gd"
   depends_on "gdal"
   depends_on "geos"
   depends_on "giflib"
@@ -33,6 +32,7 @@ class Mapserver < Formula
   depends_on "libpng"
   depends_on "libpq"
   depends_on "libxml2"
+  depends_on "pcre2"
   depends_on "proj"
   depends_on "protobuf-c"
   depends_on "python@3.13"
@@ -44,14 +44,6 @@ class Mapserver < Formula
   end
 
   def install
-    # Workaround for: Built-in generator --c_out specifies a maximum edition
-    # PROTO3 which is not the protoc maximum 2023.
-    # Remove when fixed in `protobuf-c`:
-    # https://github.com/protobuf-c/protobuf-c/pull/711
-    inreplace "CMakeLists.txt",
-              "COMMAND ${PROTOBUFC_COMPILER}",
-              "COMMAND #{Formula["protobuf"].opt_bin}/protoc"
-
     if OS.mac?
       mapscript_rpath = rpath(source: prefix/Language::Python.site_packages(python3)/"mapscript")
       # Install within our sandbox and add missing RPATH due to _mapscript.so not using CMake install()
