@@ -44,14 +44,9 @@ class Kapacitor < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e963db4b37cde0cba4449f211213422a9ebba18f121a77e2cacfc90e6eb2fc5"
   end
 
-  # Go 1.23 results in panic: failed to parse CA certificate.
-  # TODO: Switch to `go` when `kapacitor` updates gosnowflake
-  depends_on "go@1.22" => :build
+  depends_on "go" => :build
+  depends_on "pkgconf" => :build # for `pkg-config-wrapper`
   depends_on "rust" => :build
-
-  on_linux do
-    depends_on "pkgconf" => :build # for `pkg-config-wrapper`
-  end
 
   # NOTE: The version here is specified in the go.mod of kapacitor.
   # If you're upgrading to a newer kapacitor version, check to see if this needs upgraded too.
@@ -62,22 +57,17 @@ class Kapacitor < Formula
 
   def install
     if build.stable?
-      # Check if newer `go` can be used
-      go_mod = (buildpath/"go.mod").read
-      gosnowflake_version = go_mod[%r{/influxdata/gosnowflake v(\d+(?:\.\d+)+)}, 1]
-      odie "Check if `go` can be used!" if gosnowflake_version.blank? || Version.new(gosnowflake_version) > "1.6.9"
-
       # Workaround to skip dead_code lint. RUSTFLAGS workarounds didn't work.
       flux_module = "github.com/influxdata/flux"
-      flux_version = go_mod[/#{flux_module} v(\d+(?:\.\d+)+)/, 1]
+      flux_version = File.read("go.mod")[/#{flux_module} v(\d+(?:\.\d+)+)/, 1]
       odie "Check if `flux` resource can be removed!" if flux_version.blank? || Version.new(flux_version) >= "0.195"
       (buildpath/"vendored_flux").install resource("flux")
       inreplace "vendored_flux/libflux/flux-core/src/lib.rs", "#![allow(\n", "\\0    dead_code,\n"
-      (buildpath/"go.work").write <<~EOS
+      (buildpath/"go.work").write <<~GOWORK
         go 1.22
         use .
         replace #{flux_module} => ./vendored_flux
-      EOS
+      GOWORK
     end
 
     resource("pkg-config-wrapper").stage do
@@ -91,15 +81,15 @@ class Kapacitor < Formula
       -X main.commit=#{Utils.git_head}
     ]
 
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "./cmd/kapacitor"
-    system "go", "build", *std_go_args(ldflags: ldflags.join(" ")), "-o", bin/"kapacitord", "./cmd/kapacitord"
+    system "go", "build", *std_go_args(ldflags:), "./cmd/kapacitor"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"kapacitord"), "./cmd/kapacitord"
 
     inreplace "etc/kapacitor/kapacitor.conf" do |s|
       s.gsub! "/var/lib/kapacitor", "#{var}/kapacitor"
       s.gsub! "/var/log/kapacitor", "#{var}/log"
     end
 
-    etc.install "etc/kapacitor/kapacitor.conf" => "kapacitor.conf"
+    etc.install "etc/kapacitor/kapacitor.conf"
   end
 
   def post_install
@@ -133,9 +123,7 @@ class Kapacitor < Formula
     ENV["KAPACITOR_REPORTING_ENABLED"] = "false"
 
     begin
-      pid = fork do
-        exec "#{bin}/kapacitord -config #{testpath}/config.toml"
-      end
+      pid = spawn "#{bin}/kapacitord -config #{testpath}/config.toml"
       sleep 20
       shell_output("#{bin}/kapacitor list tasks")
     ensure

@@ -20,8 +20,7 @@ class Ethereum < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7be5bb99bf32fa47b483de3da2b1e268ce72b0f9112debcda9ff6cf9bbde3bc"
   end
 
-  # Use "go" again when https://github.com/ethereum/go-ethereum/issues/31072 is fixed and released
-  depends_on "go@1.23" => :build
+  depends_on "go" => :build
 
   conflicts_with "erigon", because: "both install `evm` binaries"
 
@@ -32,7 +31,7 @@ class Ethereum < Formula
     ENV.O0 if OS.linux?
 
     system "make", "all"
-    bin.install Dir["build/bin/*"]
+    bin.install buildpath.glob("build/bin/*")
   end
 
   test do
@@ -54,8 +53,8 @@ class Ethereum < Formula
     JSON
 
     system bin/"geth", "--datadir", "testchain", "init", "genesis.json"
-    assert_predicate testpath/"testchain/geth/chaindata/000002.log", :exist?
-    assert_predicate testpath/"testchain/geth/nodekey", :exist?
-    assert_predicate testpath/"testchain/geth/LOCK", :exist?
+    assert_path_exists testpath/"testchain/geth/chaindata/000002.log"
+    assert_path_exists testpath/"testchain/geth/nodekey"
+    assert_path_exists testpath/"testchain/geth/LOCK"
   end
 end

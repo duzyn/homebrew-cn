@@ -9,12 +9,13 @@ class Sceptre < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "24def53cb44dbe4a0432400069514d1a7e91881f1b9d3dc9c4e3152761d3f6f0"
-    sha256 cellar: :any,                 arm64_sonoma:  "dada1653dbc743c6a2e47e4660a4aec866b4daabc2362bf9db2034336e0c2012"
-    sha256 cellar: :any,                 arm64_ventura: "940d1f1a57fe7737e7a46de69f7cd5ab4b6c5076e88577e79395e2ae9cc38b69"
-    sha256 cellar: :any,                 sonoma:        "42ad9caef476d9d3c7d4431e2972c392e215a23214740a82b2b0f9b9a72fb68b"
-    sha256 cellar: :any,                 ventura:       "df4afa7904205277d9a0f90a22c25c46b8381c76926adb8b36fa736baaa281f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "545ea12be7d29f8970009a2c8ddd2048e6eafb7524c2fb574dbcc08eba7abea7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "2edb02a7734aef9892ba3b1655d708e24aa4a88bbfc280c556dd027fc5e52676"
+    sha256 cellar: :any,                 arm64_sonoma:  "c1068fbec2c46ab335cd679dc8f2eaa54b26bf0f292b0459fbad92a1006b2169"
+    sha256 cellar: :any,                 arm64_ventura: "0c5845fe6069655c2ac5fd031f5d02c13ced8b7013440bb1d7551fdb052abd35"
+    sha256 cellar: :any,                 sonoma:        "49d2efe44b7b15b5ffea88c344ce477340554a4646bf798f94d410793c459d7d"
+    sha256 cellar: :any,                 ventura:       "d4dabe2c06401741b0125be95f79ae8d8b58e6d61f246be4cdcf1b3afc78bcb4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75ecc13b740f8de7a28dda6d67b5273cfa1471838141b063f2b0b8c933140b6a"
   end
 
   depends_on "certifi"
@@ -157,7 +158,8 @@ class Sceptre < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    # Avoid issue if `numpy` is installed, https://github.com/Sceptre/sceptre/issues/1541
+    virtualenv_install_with_resources(system_site_packages: false)
 
     generate_completions_from_executable(bin/"sceptre", shells: [:fish, :zsh], shell_parameter_format: :click)
   end
