@@ -1,6 +1,6 @@
 class Globjects < Formula
   desc "C++ library strictly wrapping OpenGL objects"
-  homepage "https://github.com/cginternals/globjects"
+  homepage "https://globjects.org/"
   license "MIT"
   revision 1
 

@@ -1,6 +1,6 @@
 class Imposm3 < Formula
   desc "Imports OpenStreetMap data into PostgreSQL/PostGIS databases"
-  homepage "https://imposm.org"
+  homepage "https://imposm.org/docs/imposm3/latest/"
   url "https://mirror.ghproxy.com/https://github.com/omniscale/imposm3/archive/refs/tags/v0.14.0.tar.gz"
   sha256 "d6b012497eff1b8faa25d125ce0becb97f68c95a68dd2c35cf65a0bf3c34b833"
   license "Apache-2.0"
@@ -64,9 +64,9 @@ class Imposm3 < Formula
     system bin/"imposm", "import", "-read", testpath/"sample.osm.pbf", "-mapping", testpath/"mapping.yml",
             "-cachedir", testpath/"cache"
 
-    assert_predicate testpath/"cache/coords/LOG", :exist?
-    assert_predicate testpath/"cache/nodes/LOG", :exist?
-    assert_predicate testpath/"cache/relations/LOG", :exist?
-    assert_predicate testpath/"cache/ways/LOG", :exist?
+    assert_path_exists testpath/"cache/coords/LOG"
+    assert_path_exists testpath/"cache/nodes/LOG"
+    assert_path_exists testpath/"cache/relations/LOG"
+    assert_path_exists testpath/"cache/ways/LOG"
   end
 end

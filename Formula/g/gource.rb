@@ -1,6 +1,6 @@
 class Gource < Formula
   desc "Version Control Visualization Tool"
-  homepage "https://github.com/acaudwell/Gource"
+  homepage "https://gource.io/"
   url "https://mirror.ghproxy.com/https://github.com/acaudwell/Gource/releases/download/gource-0.55/gource-0.55.tar.gz"
   sha256 "c8239212d28b07508d9e477619976802681628fc25eb3e04f6671177013c0142"
   license "GPL-3.0-or-later"

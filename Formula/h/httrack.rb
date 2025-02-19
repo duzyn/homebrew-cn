@@ -49,6 +49,6 @@ class Httrack < Formula
   test do
     download = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/homebrew/65c59dedea31/.yardopts"
     system bin/"httrack", download, "-O", testpath
-    assert_predicate testpath/"mirror.ghproxy.com/https://raw.githubusercontent.com", :exist?
+    assert_path_exists testpath/"mirror.ghproxy.com/https://raw.githubusercontent.com"
   end
 end

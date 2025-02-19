@@ -1,6 +1,6 @@
 class Tcptunnel < Formula
   desc "TCP port forwarder"
-  homepage "https://github.com/vakuum/tcptunnel"
+  homepage "https://vakuumverpackt.de/tcptunnel/"
   url "https://mirror.ghproxy.com/https://github.com/vakuum/tcptunnel/archive/refs/tags/v0.8.tar.gz"
   sha256 "1926e2636d26570035a5a0292c8d7766c4a9af939881121660df0d0d4513ade4"
   license "GPL-2.0-or-later"

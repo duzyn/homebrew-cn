@@ -1,6 +1,6 @@
 class Tetra < Formula
   desc "Tetragon CLI to observe, manage and troubleshoot Tetragon instances"
-  homepage "https://github.com/cilium/tetragon"
+  homepage "https://tetragon.io/"
   url "https://mirror.ghproxy.com/https://github.com/cilium/tetragon/archive/refs/tags/v1.3.0.tar.gz"
   sha256 "1ca223e92895403600739ab1404dbff8d3a875307060c507ea4e5bc270470d01"
   license "Apache-2.0"

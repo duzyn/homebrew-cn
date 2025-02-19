@@ -1,7 +1,6 @@
 class TtyShare < Formula
   desc "Terminal sharing over the Internet"
-  # too many redirects issue with the homepage, https://github.com/elisescu/tty-share/issues/83
-  homepage "https://github.com/elisescu/tty-share"
+  homepage "https://tty-share.com/"
   url "https://mirror.ghproxy.com/https://github.com/elisescu/tty-share/archive/refs/tags/v2.4.1.tar.gz"
   sha256 "abc186307a95f55f1750592a38871d4839d2ff26365880110bdf107675ea264a"
   license "MIT"

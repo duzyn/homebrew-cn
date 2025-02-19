@@ -1,6 +1,6 @@
 class Ipfs < Formula
   desc "Peer-to-peer hypermedia protocol"
-  homepage "https://ipfs.tech/"
+  homepage "https://docs.ipfs.tech/how-to/command-line-quick-start/"
   url "https://mirror.ghproxy.com/https://github.com/ipfs/kubo/archive/refs/tags/v0.33.2.tar.gz"
   sha256 "0dcab7d932a7c613fe0421ba1a5a0c71138709c151610f57666a15d163c982b2"
   license all_of: [

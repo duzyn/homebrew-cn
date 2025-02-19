@@ -1,6 +1,6 @@
 class Gssh < Formula
   desc "SSH automation tool based on Groovy DSL"
-  homepage "https://github.com/int128/groovy-ssh"
+  homepage "https://gradle-ssh-plugin.github.io/"
   url "https://mirror.ghproxy.com/https://github.com/int128/groovy-ssh/archive/refs/tags/2.11.2.tar.gz"
   sha256 "0e078b37fe1ba1a9ca7191e706818e3b423588cac55484dda82dbbd1cdfe0b24"
   license "Apache-2.0"

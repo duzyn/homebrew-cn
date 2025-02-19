@@ -1,6 +1,6 @@
 class NagaCli < Formula
   desc "Shader translation command-line tool"
-  homepage "https://github.com/gfx-rs/wgpu/tree/trunk/naga"
+  homepage "https://wgpu.rs/"
   url "https://mirror.ghproxy.com/https://github.com/gfx-rs/wgpu/archive/refs/tags/naga-cli-v23.0.0.tar.gz"
   sha256 "bf1ff22de43699835524862a2f1908fcf1888ab8d252af19b32c0f545b9a18b7"
   license any_of: ["Apache-2.0", "MIT"]

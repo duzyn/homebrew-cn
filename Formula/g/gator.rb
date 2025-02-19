@@ -1,6 +1,6 @@
 class Gator < Formula
   desc "CLI Utility for Open Policy Agent Gatekeeper"
-  homepage "https://open-policy-agent.github.io/gatekeeper/website/docs/gator"
+  homepage "https://open-policy-agent.github.io/gatekeeper/"
   url "https://mirror.ghproxy.com/https://github.com/open-policy-agent/gatekeeper/archive/refs/tags/v3.18.2.tar.gz"
   sha256 "a69607832b6662aff8f67cbceb5a94a243a02ba085e5ee462e9a2a4c2eb762cf"
   license "Apache-2.0"
