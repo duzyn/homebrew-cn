@@ -1,15 +1,15 @@
 class Opusfile < Formula
   desc "API for decoding and seeking in .opus files"
   homepage "https://www.opus-codec.org/"
-  url "https://downloads.xiph.org/releases/opus/opusfile-0.12.tar.gz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/opus/opusfile-0.12.tar.gz"
+  url "https://ftp.osuosl.org/pub/xiph/releases/opus/opusfile-0.12.tar.gz"
+  mirror "https://mirror.ghproxy.com/https://github.com/xiph/opusfile/releases/download/v0.12/opusfile-0.12.tar.gz"
   sha256 "118d8601c12dd6a44f52423e68ca9083cc9f2bfe72da7a8c1acb22a80ae3550b"
   license "BSD-3-Clause"
   revision 1
 
   livecheck do
-    url "https://www.opus-codec.org/downloads/"
-    regex(/href=.*?opusfile[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://ftp.osuosl.org/pub/xiph/releases/opus/"
+    regex(%r{href=(?:["']?|.*?/)opusfile[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do

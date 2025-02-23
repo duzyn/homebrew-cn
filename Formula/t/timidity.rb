@@ -4,7 +4,7 @@ class Timidity < Formula
   url "https://downloads.sourceforge.net/project/timidity/TiMidity++/TiMidity++-2.15.0/TiMidity++-2.15.0.tar.bz2?use_mirror=jaist"
   sha256 "161fc0395af16b51f7117ad007c3e434c825a308fa29ad44b626ee8f9bb1c8f5"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url :stable
@@ -12,15 +12,12 @@ class Timidity < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_sequoia:  "192d64a9d4bd9425e399baacb67512c94fc60f52ee81016ed71afd9482ea5c47"
-    sha256 arm64_sonoma:   "4c35935f5ab6bef4f133601dcee29c8f992dc4ceaa35541d4a881dd414b128fd"
-    sha256 arm64_ventura:  "733c42a66bbbef0581bfffd17818184d7739f7388284f8aa8474d590e2fb023e"
-    sha256 arm64_monterey: "d471c899e61b20c831429a9e98b9e2980c182438c2ebd4eb4b5e6c4760fe725b"
-    sha256 sonoma:         "4d3ffe2f9725898d435fec7e619d0f396cfa3b053801d7f9f16a5e7eafce3051"
-    sha256 ventura:        "eaefc53812370a3675964745649ecc49e524d37a8c576d3331c857b52148572a"
-    sha256 monterey:       "b94b23e9e855b931f7ae2604e2e8030e10d049af93c101a7aa9d39d1208ec553"
-    sha256 x86_64_linux:   "eb933705b211fb7f7f2caa7e514f7055bde34c9d911aba8a35e43b63fe1579d8"
+    sha256 arm64_sequoia: "8e504bb7f36e5feae11358a05aaa0b9651b84cc60664d4d8199c6c72c07d13c4"
+    sha256 arm64_sonoma:  "faa51ccbf4324d22f47660879db054f204dd19fd7d18361a4e8bc207b261ae10"
+    sha256 arm64_ventura: "ae1cb080608f21a9265afd6faa3ce8a045a69ef72347306661580adad6da2d4a"
+    sha256 sonoma:        "e64e294d42736c8781c217604b149e2bbc03754312416f92b3bae9a6e2ecde54"
+    sha256 ventura:       "8547254f49bc780399c907f8a23916843840065a06ebdfce850b0a3280429b2d"
+    sha256 x86_64_linux:  "641143b8f2f77b6d9c41cf16994b389cfd2523ec4f97d6bd1acabca4a5f376d1"
   end
 
   depends_on "autoconf" => :build
@@ -34,8 +31,8 @@ class Timidity < Formula
   depends_on "speex"
 
   resource "freepats" do
-    url "https://freepats.zenvoid.org/freepats-20060219.zip"
-    sha256 "532048a5777aea717effabf19a35551d3fcc23b1ad6edd92f5de1d64600acd48"
+    url "https://mirror.ghproxy.com/https://github.com/feross/freepats/archive/refs/tags/v1.0.3.tar.gz"
+    sha256 "d79fa8719500880627b1b65286fde6ddb06274540a3eba21178d2058d525007e"
   end
 
   def install
@@ -55,7 +52,7 @@ class Timidity < Formula
                           "--enable-audio=#{audio_options.join(",")}"
     system "make", "install"
 
-    # Freepats instrument patches from https://freepats.zenvoid.org/
+    # Freepats instrument patches from https://github.com/feross/freepats
     (share/"freepats").install resource("freepats")
     pkgshare.install_symlink share/"freepats/Tone_000",
                              share/"freepats/Drum_000",
