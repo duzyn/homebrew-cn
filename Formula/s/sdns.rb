@@ -1,6 +1,6 @@
 class Sdns < Formula
   desc "Privacy important, fast, recursive dns resolver server with dnssec support"
-  homepage "https://sdns.dev"
+  homepage "https://sdns.dev/"
   url "https://mirror.ghproxy.com/https://github.com/semihalev/sdns/archive/refs/tags/v1.4.0.tar.gz"
   sha256 "0ab9d6a7ad3ae13688a10bae0b0738ca0089c81c1c7af9febcb3335f9d0aeadc"
   license "MIT"

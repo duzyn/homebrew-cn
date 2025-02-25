@@ -2,9 +2,15 @@ class Libogg < Formula
   desc "Ogg Bitstream Library"
   homepage "https://www.xiph.org/ogg/"
   url "https://ftp.osuosl.org/pub/xiph/releases/ogg/libogg-1.3.5.tar.gz"
+  mirror "https://mirror.ghproxy.com/https://github.com/xiph/ogg/releases/download/v1.3.5/libogg-1.3.5.tar.gz"
   sha256 "0eb4b4b9420a0f51db142ba3f9c64b333f826532dc0f48c6410ae51f4799b664"
   license "BSD-3-Clause"
   head "https://gitlab.xiph.org/xiph/ogg.git", branch: "master"
+
+  livecheck do
+    url "https://ftp.osuosl.org/pub/xiph/releases/ogg/?C=M&O=D"
+    regex(%r{href=(?:["']?|.*?/)libogg[._-]v?(\d+(?:\.\d+)+)\.t}i)
+  end
 
   bottle do
     rebuild 2

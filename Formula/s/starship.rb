@@ -1,6 +1,6 @@
 class Starship < Formula
   desc "Cross-shell prompt for astronauts"
-  homepage "https://starship.rs"
+  homepage "https://starship.rs/"
   url "https://mirror.ghproxy.com/https://github.com/starship/starship/archive/refs/tags/v1.22.1.tar.gz"
   sha256 "5434a3d1ca16987a1dd30146c36aaa4371dbe1c7f1a7995c0cf12ab3eb9326d7"
   license "ISC"

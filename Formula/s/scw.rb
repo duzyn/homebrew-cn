@@ -1,6 +1,6 @@
 class Scw < Formula
   desc "Command-line Interface for Scaleway"
-  homepage "https://github.com/scaleway/scaleway-cli"
+  homepage "https://www.scaleway.com/en/cli/"
   url "https://mirror.ghproxy.com/https://github.com/scaleway/scaleway-cli/archive/refs/tags/v2.36.0.tar.gz"
   sha256 "9e68d54d9280b30bf05bdb8bedab8c8f594d9a0d3a4cacd02ee4d88aaf3e46d4"
   license "Apache-2.0"

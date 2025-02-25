@@ -1,6 +1,6 @@
 class Sextractor < Formula
   desc "Extract catalogs of sources from astronomical images"
-  homepage "https://github.com/astromatic/sextractor"
+  homepage "https://www.astromatic.net/software/sextractor/"
   url "https://mirror.ghproxy.com/https://github.com/astromatic/sextractor/archive/refs/tags/2.28.2.tar.gz"
   sha256 "d92c5214ea75b8a70214d7d7f6824207fc53861ec923ceb2cc574f2ec9effa94"
   license "GPL-3.0-or-later"

@@ -1,14 +1,14 @@
 class Ezstream < Formula
   desc "Client for Icecast streaming servers"
   homepage "https://icecast.org/ezstream/"
-  url "https://downloads.xiph.org/releases/ezstream/ezstream-1.0.2.tar.gz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/ezstream/ezstream-1.0.2.tar.gz"
+  url "https://ftp.osuosl.org/pub/xiph/releases/ezstream/ezstream-1.0.2.tar.gz"
+  mirror "https://mirror.csclub.uwaterloo.ca/xiph/releases/ezstream/ezstream-1.0.2.tar.gz"
   sha256 "11de897f455a95ba58546bdcd40a95d3bda69866ec5f7879a83b024126c54c2a"
   license "GPL-2.0-only"
 
   livecheck do
     url "https://ftp.osuosl.org/pub/xiph/releases/ezstream/?C=M&O=D"
-    regex(/href=.*?ezstream[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(%r{href=(?:["']?|.*?/)ezstream[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do

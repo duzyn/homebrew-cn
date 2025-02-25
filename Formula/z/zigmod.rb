@@ -30,15 +30,17 @@ class Zigmod < Formula
     else Hardware.oldest_cpu
     end
 
+    # do not use std_zig_args
+    # https://github.com/nektro/zigmod/pull/109
     args = %W[
       --prefix #{prefix}
       -Dtag=#{version}
       -Dmode=ReleaseSafe
       -Dstrip=true
+      -fno-rosetta
     ]
 
     args << "-Dcpu=#{cpu}" if build.bottle?
-
     system "zig", "build", *args
   end
 

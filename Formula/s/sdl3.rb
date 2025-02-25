@@ -1,6 +1,6 @@
 class Sdl3 < Formula
   desc "Low-level access to audio, keyboard, mouse, joystick, and graphics"
-  homepage "https://www.libsdl.org/"
+  homepage "https://libsdl.org/"
   url "https://mirror.ghproxy.com/https://github.com/libsdl-org/SDL/releases/download/release-3.2.4/SDL3-3.2.4.tar.gz"
   sha256 "2938328317301dfbe30176d79c251733aa5e7ec5c436c800b99ed4da7adcb0f0"
   license "Zlib"

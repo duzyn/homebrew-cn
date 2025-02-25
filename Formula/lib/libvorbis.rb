@@ -1,14 +1,14 @@
 class Libvorbis < Formula
-  desc "Vorbis General Audio Compression Codec"
+  desc "Vorbis general audio compression codec"
   homepage "https://xiph.org/vorbis/"
-  url "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/vorbis/libvorbis-1.3.7.tar.xz"
+  url "https://ftp.osuosl.org/pub/xiph/releases/vorbis/libvorbis-1.3.7.tar.xz"
+  mirror "https://mirror.ghproxy.com/https://github.com/xiph/vorbis/releases/download/v1.3.7/libvorbis-1.3.7.tar.xz"
   sha256 "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
   license "BSD-3-Clause"
 
   livecheck do
     url "https://ftp.osuosl.org/pub/xiph/releases/vorbis/?C=M&O=D"
-    regex(/href=.*?libvorbis[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(%r{href=(?:["']?|.*?/)libvorbis[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do

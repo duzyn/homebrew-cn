@@ -1,14 +1,14 @@
 class Oggz < Formula
   desc "Command-line tool for manipulating Ogg files"
   homepage "https://www.xiph.org/oggz/"
-  url "https://downloads.xiph.org/releases/liboggz/liboggz-1.1.2.tar.gz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/liboggz/liboggz-1.1.2.tar.gz"
+  url "https://ftp.osuosl.org/pub/xiph/releases/liboggz/liboggz-1.1.2.tar.gz"
+  mirror "https://ftp-chi.osuosl.org/pub/xiph/releases/liboggz/liboggz-1.1.2.tar.gz"
   sha256 "c97e4fba7954a9faf79ddcf406992c6f7bb0214e96d4957a07a2fda0265e5ab2"
   license "BSD-3-Clause"
 
   livecheck do
     url "https://ftp.osuosl.org/pub/xiph/releases/liboggz/?C=M&O=D"
-    regex(/href=.*?liboggz[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(%r{href=(?:["']?|.*?/)liboggz[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do

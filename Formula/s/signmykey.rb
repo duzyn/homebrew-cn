@@ -1,6 +1,6 @@
 class Signmykey < Formula
   desc "Automated SSH Certificate Authority"
-  homepage "https://signmykey.io"
+  homepage "https://signmykey.io/"
   url "https://mirror.ghproxy.com/https://github.com/signmykeyio/signmykey/archive/refs/tags/v0.8.8.tar.gz"
   sha256 "3d08c9b0fbe6c6bcd8240ff0a65121ace0413f30abdd40068930509abc84e4ba"
   license "MIT"

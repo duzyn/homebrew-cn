@@ -1,8 +1,8 @@
 class Flac < Formula
   desc "Free lossless audio codec"
   homepage "https://xiph.org/flac/"
-  url "https://downloads.xiph.org/releases/flac/flac-1.5.0.tar.xz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.5.0.tar.xz"
+  url "https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.5.0.tar.xz"
+  mirror "https://mirror.ghproxy.com/https://github.com/xiph/flac/releases/download/1.5.0/flac-1.5.0.tar.xz"
   sha256 "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920"
   license all_of: [
     "BSD-3-Clause",
@@ -16,7 +16,7 @@ class Flac < Formula
 
   livecheck do
     url "https://ftp.osuosl.org/pub/xiph/releases/flac/?C=M&O=D"
-    regex(/href=.*?flac[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(%r{href=(?:["']?|.*?/)flac[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do
@@ -29,7 +29,7 @@ class Flac < Formula
   end
 
   head do
-    url "https://gitlab.xiph.org/xiph/flac.git"
+    url "https://gitlab.xiph.org/xiph/flac.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build

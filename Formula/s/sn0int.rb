@@ -1,6 +1,6 @@
 class Sn0int < Formula
   desc "Semi-automatic OSINT framework and package manager"
-  homepage "https://github.com/kpcyrd/sn0int"
+  homepage "https://sn0int.readthedocs.io/en/stable/"
   url "https://mirror.ghproxy.com/https://github.com/kpcyrd/sn0int/archive/refs/tags/v0.26.1.tar.gz"
   sha256 "cf10bff93098586ba7dd885bf56af489ce0177bd1889a13b004fc38f026e71ea"
   license "GPL-3.0-or-later"

@@ -2,7 +2,7 @@ class Spades < Formula
   include Language::Python::Shebang
 
   desc "De novo genome sequence assembly"
-  homepage "https://github.com/ablab/spades"
+  homepage "https://ablab.github.io/spades/"
   url "https://mirror.ghproxy.com/https://github.com/ablab/spades/releases/download/v4.1.0/SPAdes-4.1.0.tar.gz"
   sha256 "997b066e157efd079f8c63229df85a9c7b81c3f626059a68669283049ab175f9"
   license "GPL-2.0-only"

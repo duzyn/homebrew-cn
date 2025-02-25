@@ -1,6 +1,6 @@
 class TarsnapGui < Formula
   desc "Cross-platform GUI for the Tarsnap command-line client"
-  homepage "https://github.com/Tarsnap/tarsnap-gui/wiki"
+  homepage "https://www.tarsnap.com/"
   url "https://mirror.ghproxy.com/https://github.com/Tarsnap/tarsnap-gui/archive/refs/tags/v1.0.2.tar.gz"
   sha256 "3b271f474abc0bbeb3d5d62ee76b82785c7d64145e6e8b51fa7907b724c83eae"
   license "BSD-2-Clause"
@@ -53,7 +53,7 @@ index 9954fc5c..560621b1 100644
 --- a/Tarsnap.pro
 +++ b/Tarsnap.pro
 @@ -131,5 +131,8 @@ osx {
- 
+
      # Add VERSION to the app bundle.  (Why doesn't qmake do this?)
      INFO_PLIST_PATH = $$shell_quote($${OUT_PWD}/$${TARGET}.app/Contents/Info.plist)
 -    QMAKE_POST_LINK += /usr/libexec/PlistBuddy -c \"Set :CFBundleGetInfoString $${VERSION}\" $${INFO_PLIST_PATH} ;

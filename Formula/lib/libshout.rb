@@ -1,15 +1,15 @@
 class Libshout < Formula
-  desc "Data and connectivity library for the icecast server"
+  desc "Data and connectivity library for the Icecast server"
   homepage "https://icecast.org/"
-  url "https://downloads.xiph.org/releases/libshout/libshout-2.4.6.tar.gz", using: :homebrew_curl
-  mirror "https://ftp.osuosl.org/pub/xiph/releases/libshout/libshout-2.4.6.tar.gz"
+  url "https://ftp.osuosl.org/pub/xiph/releases/libshout/libshout-2.4.6.tar.gz"
+  mirror "https://mirror.csclub.uwaterloo.ca/xiph/releases/libshout/libshout-2.4.6.tar.gz"
   sha256 "39cbd4f0efdfddc9755d88217e47f8f2d7108fa767f9d58a2ba26a16d8f7c910"
   license "LGPL-2.0-or-later"
   revision 1
 
   livecheck do
     url "https://ftp.osuosl.org/pub/xiph/releases/libshout/?C=M&O=D"
-    regex(/href=.*?libshout[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(%r{href=(?:["']?|.*?/)libshout[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   bottle do

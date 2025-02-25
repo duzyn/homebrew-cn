@@ -1,6 +1,6 @@
 class StripeCli < Formula
   desc "Command-line tool for Stripe"
-  homepage "https://stripe.com/docs/stripe-cli"
+  homepage "https://docs.stripe.com/stripe-cli"
   url "https://mirror.ghproxy.com/https://github.com/stripe/stripe-cli/archive/refs/tags/v1.24.0.tar.gz"
   sha256 "5d1d2957b378ba354b3477923a753250ec4f27339e358bdf7e8a2b1e09bd785e"
   license "Apache-2.0"
