@@ -8,7 +8,7 @@ class Nmap < Formula
   head "https://svn.nmap.org/nmap/"
 
   livecheck do
-    url "https://nmap.org/dist/"
+    url "https://nmap.org/download"
     regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
