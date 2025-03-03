@@ -8,22 +8,29 @@ class Gdb < Formula
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   bottle do
-    sha256 sonoma:       "288a80fea7800fb02aad14aebcb279908bafee81681ef7f4e4a3264f96a3a797"
-    sha256 ventura:      "2cc9545f2062e0a7fa3217c8c5a4055191cf6c916461ca76df68fe65f19b201f"
-    sha256 x86_64_linux: "83d95128b74c3d1bba64a44fdbf934d603cd86d93548a03f1ea6acab99c5db76"
+    rebuild 1
+    sha256 sonoma:       "c595592e4c42917f8eba3065e18362bf7fec8ef3b1840ae73a112f1404c82697"
+    sha256 ventura:      "5a62c5a00665a7967495420c857bb9f40af5b2bcdd73d213b36cc7d6ce6d51e3"
+    sha256 x86_64_linux: "fd1842ea508afcb72be94f466259cc0e355be3834bb440f5e9acde27cb7734d5"
   end
 
   depends_on "gmp"
   depends_on "mpfr"
-  depends_on "python@3.12"
+  depends_on "python@3.13"
   depends_on "xz" # required for lzma support
 
-  uses_from_macos "expat"
-  uses_from_macos "libxcrypt"
+  uses_from_macos "expat", since: :sequoia # minimum macOS due to python
   uses_from_macos "ncurses"
 
   on_macos do
     depends_on arch: :x86_64 # gdb is not supported on macOS ARM
+  end
+
+  # Workaround for https://github.com/Homebrew/brew/issues/19315
+  on_sequoia :or_newer do
+    on_intel do
+      depends_on "expat"
+    end
   end
 
   on_system :linux, macos: :ventura_or_newer do
@@ -51,7 +58,7 @@ class Gdb < Formula
     args = %W[
       --enable-targets=all
       --with-lzma
-      --with-python=#{Formula["python@3.12"].opt_bin}/python3.12
+      --with-python=#{which("python3.13")}
       --disable-binutils
     ]
 

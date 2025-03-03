@@ -29,9 +29,16 @@ class Aarch64ElfGdb < Formula
   depends_on "xz" # required for lzma support
   depends_on "zstd"
 
-  uses_from_macos "expat"
+  uses_from_macos "expat", since: :sequoia # minimum macOS due to python
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
+
+  # Workaround for https://github.com/Homebrew/brew/issues/19315
+  on_sequoia :or_newer do
+    on_intel do
+      depends_on "expat"
+    end
+  end
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "texinfo" => :build
