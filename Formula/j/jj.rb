@@ -1,10 +1,19 @@
 class Jj < Formula
   desc "Git-compatible distributed version control system"
   homepage "https://github.com/jj-vcs/jj"
-  url "https://mirror.ghproxy.com/https://github.com/jj-vcs/jj/archive/refs/tags/v0.27.0.tar.gz"
-  sha256 "a9d2ab04698f971a215ae2510082d0bc00540188deb90d48e12e86a6d6a023af"
   license "Apache-2.0"
   head "https://github.com/jj-vcs/jj.git", branch: "main"
+
+  stable do
+    url "https://mirror.ghproxy.com/https://github.com/jj-vcs/jj/archive/refs/tags/v0.27.0.tar.gz"
+    sha256 "a9d2ab04698f971a215ae2510082d0bc00540188deb90d48e12e86a6d6a023af"
+
+    # libgit2 1.9 patch, upstream pr ref, https://github.com/jj-vcs/jj/pull/5938
+    patch do
+      url "https://github.com/jj-vcs/jj/commit/596738a30389852466b6d3767e860ad111ff49e2.patch?full_index=1"
+      sha256 "894a43f7bc23b110049893331e1e21451c8a96cb43eda7520fbce4b832d434f2"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "6d0634c7e5d2d58395b669e17fd6216cd1b479d053c6939758944b5773cb4379"
@@ -23,12 +32,6 @@ class Jj < Formula
   depends_on "openssl@3"
 
   uses_from_macos "zlib"
-
-  # patch to use libgit2 1.9, upstream pr ref, https://github.com/jj-vcs/jj/pull/5315
-  patch do
-    url "https://github.com/jj-vcs/jj/commit/b4f936ac302ee835aa274e4dd186b436781d5d2f.patch?full_index=1"
-    sha256 "7b2f84de2c6bbdce9934384af2f7f2d0b7f7116c4726aeef87581010cdf1564e"
-  end
 
   def install
     ENV["LIBGIT2_NO_VENDOR"] = "1"

@@ -1,6 +1,6 @@
-cask "cloudflare-warp" do
-  version "2025.1.861.0"
-  sha256 "6ecdd09f2cb0b36f16be8272bf77db487dfbce98243b5445491b6fd96e35914d"
+cask "cloudflare-warp@beta" do
+  version "2025.1.634.1"
+  sha256 "62b6cbf50d8b8b6292c492f343b1a8f400cf6b87e7777181a9bc7e1ca1e88f86"
 
   url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
       verified: "downloads.cloudflareclient.com/v1/download/macos/"
@@ -9,12 +9,12 @@ cask "cloudflare-warp" do
   homepage "https://cloudflarewarp.com/"
 
   livecheck do
-    url "https://downloads.cloudflareclient.com/v1/update/sparkle/macos/ga"
+    url "https://downloads.cloudflareclient.com/v1/update/sparkle/macos/beta"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  conflicts_with cask: "cloudflare-warp@beta"
+  conflicts_with cask: "cloudflare-warp"
   depends_on macos: ">= :catalina"
 
   pkg "Cloudflare_WARP_#{version}.pkg"
