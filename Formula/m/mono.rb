@@ -1,24 +1,23 @@
 class Mono < Formula
   desc "Cross platform, open source .NET development framework"
   homepage "https://www.mono-project.com/"
-  url "https://github.com/mono/mono.git",
-      tag:      "mono-6.12.0.206",
-      revision: "0cbf0e290c31adb476f9de0fa44b1d8829affa40"
-  license "MIT"
+  url "https://dl.winehq.org/mono/sources/mono/mono-6.14.0.tar.xz"
+  sha256 "6dd64b3900f5e5d5f55016d89ccf7635c8739cbb33cdb81c1c3b61622e91d510"
+  license "Apache-2.0"
+  head "https://gitlab.winehq.org/mono/mono.git", branch: "main"
 
   livecheck do
-    url "https://www.mono-project.com/download/stable/"
-    regex(/href=.*?(\d+(?:\.\d+)+)[._-]macos/i)
+    url :head
+    regex(/^mono[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_sequoia: "ed25bcec51134d7a3c6cf04635d1b378fdb06f7127dd4705e3bf525373700c8c"
-    sha256 arm64_sonoma:  "e69f64033ac83adbf465fdc284e5d145f18b0759b0c866177fd65975ccaf58f7"
-    sha256 arm64_ventura: "e1b8fc0bfbdc638a220abed1d2fa5b48a7790a5b1668bafb3252b8539b14965d"
-    sha256 sonoma:        "bb0d701d0120bffedba03081a169a5cd6b679c5d437163daec0e2d2bf6e61652"
-    sha256 ventura:       "749ada5c5fb3013cae9ba9e862655ca2cd397f0c558be85b7f65ebeb9191598e"
-    sha256 x86_64_linux:  "7aea7983b72286cf2ce2e6438d2b846908359e6b577d76ad36ce32f8ac9691d7"
+    sha256 arm64_sequoia: "6dcc659b8e846bf23593467a53dba803b4bc9c6d6ba6c7a829189b4f88fce1ec"
+    sha256 arm64_sonoma:  "3cf381c1a2caf6b4fbdb2c8368581154b7963a7b983dee2cddb0d3ea2b3a308b"
+    sha256 arm64_ventura: "7bfdf436e04babe67322882e1b1d46b9a09a5cadcf5a112dd2aa48ed033e5405"
+    sha256 sonoma:        "e77d236bbebc33d8f87eada3fc1262fc371a3bfa0095941dd58189ffae156bf1"
+    sha256 ventura:       "c4f2bdfaefd9082b2d259cf1bc69d88bbc1a47533fee125db9ebd1ae858add27"
+    sha256 x86_64_linux:  "12bf3847064f958e41be8d6c2ee6b7853bbb9fc7d2c0526bc4dfcb494389eb77"
   end
 
   depends_on "autoconf" => :build
@@ -78,10 +77,6 @@ class Mono < Formula
       man/mozroots.1
     ]
     inreplace inreplace_files, %r{/usr/share(?=[/"])}, pkgshare
-
-    # Remove use of -flat_namespace. Upstreamed at
-    # https://github.com/mono/mono/pull/21257
-    inreplace "mono/profiler/Makefile.am", "-Wl,suppress -Wl,-flat_namespace", "-Wl,dynamic_lookup"
 
     system "./autogen.sh", "--disable-nls",
                            "--disable-silent-rules",
