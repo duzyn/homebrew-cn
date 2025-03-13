@@ -31,7 +31,9 @@ class Cp2k < Formula
   depends_on "openblas"
   depends_on "scalapack"
 
-  fails_with :clang # needs OpenMP support
+  fails_with :clang do
+    cause "needs OpenMP support for C/C++ and Fortran"
+  end
 
   resource "libint" do
     url "https://mirror.ghproxy.com/https://github.com/cp2k/libint-cp2k/releases/download/v2.6.0/libint-v2.6.0-cp2k-lmax-5.tgz"
