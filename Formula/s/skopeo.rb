@@ -28,12 +28,12 @@ class Skopeo < Formula
     ENV.append "CGO_FLAGS", ENV.cppflags
     ENV.append "CGO_FLAGS", Utils.safe_popen_read(Formula["gpgme"].opt_bin/"gpgme-config", "--cflags")
 
-    buildtags = [
+    tags = [
       "containers_image_ostree_stub",
       Utils.safe_popen_read("hack/btrfs_tag.sh").chomp,
       Utils.safe_popen_read("hack/btrfs_installed_tag.sh").chomp,
       Utils.safe_popen_read("hack/libsubid_tag.sh").chomp,
-    ].uniq.join(" ")
+    ].uniq
 
     ldflag_prefix = "github.com/containers/image/v5"
     ldflags = %W[
@@ -44,7 +44,7 @@ class Skopeo < Formula
       -X #{ldflag_prefix}/pkg/sysregistriesv2.systemRegistriesConfPath=#{etc}/containers/registries.conf
     ]
 
-    system "go", "build", "-tags", buildtags, *std_go_args(ldflags:), "./cmd/skopeo"
+    system "go", "build", *std_go_args(ldflags:, tags:), "./cmd/skopeo"
     system "make", "PREFIX=#{prefix}", "GOMD2MAN=go-md2man", "install-docs"
 
     (etc/"containers").install "default-policy.json" => "policy.json"

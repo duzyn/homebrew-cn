@@ -34,7 +34,7 @@ class GoSizeAnalyzer < Formula
       -X github.com/Zxilly/go-size-analyzer.dirtyBuild=false
     ]
 
-    system "go", "build", *std_go_args(ldflags:, output: bin/"gsa"), "-tags", "embed", "./cmd/gsa"
+    system "go", "build", *std_go_args(ldflags:, tags: "embed", output: bin/"gsa"), "./cmd/gsa"
   end
 
   test do

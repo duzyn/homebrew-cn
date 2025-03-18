@@ -23,7 +23,7 @@ class Roadrunner < Formula
       -X github.com/roadrunner-server/roadrunner/v#{version.major}/internal/meta.version=#{version}
       -X github.com/roadrunner-server/roadrunner/v#{version.major}/internal/meta.buildTime=#{time.iso8601}
     ]
-    system "go", "build", "-tags", "aws", *std_go_args(ldflags:, output: bin/"rr"), "./cmd/rr"
+    system "go", "build", *std_go_args(ldflags:, tags: "aws", output: bin/"rr"), "./cmd/rr"
 
     generate_completions_from_executable(bin/"rr", "completion")
   end

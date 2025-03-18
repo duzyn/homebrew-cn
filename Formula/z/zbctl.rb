@@ -20,7 +20,7 @@ class Zbctl < Formula
   def install
     project = "github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands"
     ldflags = "-s -w -X #{project}.Version=#{version} -X #{project}.Commit=#{tap.user}"
-    system "go", "build", "-tags", "netgo", *std_go_args(ldflags:), "./cmd/zbctl"
+    system "go", "build", *std_go_args(ldflags:, tags: "netgo"), "./cmd/zbctl"
 
     generate_completions_from_executable(bin/"zbctl", "completion")
   end

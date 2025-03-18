@@ -5,9 +5,11 @@ class Qd < Formula
   sha256 "ad6738e8330928308e10346ff7fd357ed17386408f8fb7a23704cd6f5d52a6c8"
   license "BSD-3-Clause-LBNL"
 
+  # The homepage no longer links to a QD tarball and instead directs users to
+  # the GitHub repository, so we check the Git tags.
   livecheck do
-    url :homepage
-    regex(/href=.*?qd[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://github.com/BL-highprecision/QD.git"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do

@@ -45,9 +45,9 @@ class TrojanGo < Formula
       -s -w
       -X github.com/p4gefau1t/trojan-go/constant.Version=v#{version}
       -X github.com/p4gefau1t/trojan-go/constant.Commit=#{Utils.git_head}
-    ].join(" ")
+    ]
 
-    system "go", "build", *std_go_args(ldflags:), "-o", execpath, "-tags=full"
+    system "go", "build", *std_go_args(ldflags:, tags: "full"), "-o", execpath
     (bin/"trojan-go").write_env_script execpath,
       TROJAN_GO_LOCATION_ASSET: "${TROJAN_GO_LOCATION_ASSET:-#{pkgshare}}"
 

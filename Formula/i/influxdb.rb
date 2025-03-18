@@ -85,9 +85,13 @@ class Influxdb < Formula
       -X main.commit=#{Utils.git_short_head(length: 10)}
       -X main.date=#{time.iso8601}
     ]
+    tags = %w[
+      assets
+      sqlite_foreign_keys
+      sqlite_json
+    ]
 
-    system "go", "build", *std_go_args(output: bin/"influxd", ldflags:),
-           "-tags", "assets,sqlite_foreign_keys,sqlite_json", "./cmd/influxd"
+    system "go", "build", *std_go_args(output: bin/"influxd", ldflags:, tags:), "./cmd/influxd"
 
     data = var/"lib/influxdb2"
     data.mkpath

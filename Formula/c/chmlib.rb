@@ -2,7 +2,6 @@ class Chmlib < Formula
   desc "Library for dealing with Microsoft ITSS/CHM files"
   homepage "http://www.jedrea.com/chmlib/"
   url "http://www.jedrea.com/chmlib/chmlib-0.40.tar.gz"
-  mirror "https://download.tuxfamily.org/slitaz/sources/packages/c/chmlib-0.40.tar.gz"
   sha256 "512148ed1ca86dea051ebcf62e6debbb00edfdd9720cde28f6ed98071d3a9617"
   license "LGPL-2.1-or-later"
 

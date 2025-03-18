@@ -19,7 +19,7 @@ class Frpc < Formula
 
   def install
     ENV["CGO_ENABLED"] = "0"
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "-tags=frpc", "./cmd/frpc"
+    system "go", "build", *std_go_args(ldflags: "-s -w", tags: "frpc"), "./cmd/frpc"
     (etc/"frp").install "conf/frpc.toml"
   end
 

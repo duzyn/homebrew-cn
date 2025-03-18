@@ -7,10 +7,6 @@ class AescryptPacketizer < Formula
   sha256 "e2e192d0b45eab9748efe59e97b656cc55f1faeb595a2f77ab84d44b0ec084d2"
   license "GPL-2.0-or-later"
 
-  livecheck do
-    skip "v4 is under a commercial license"
-  end
-
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "1039232a96b3efc3d8c4a1da6d48d8d37cc2991e8275dc467d0b8b16229ead5c"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d840ff8d10cb48274d58dac6bc26126ceba767c36e56b2e9e24f2b591dccca0d"
@@ -25,13 +21,9 @@ class AescryptPacketizer < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3eddb8372fd630b7f93288f2fb19c3ec96a061b1de150918bee53d0a7a1d55ee"
   end
 
-  head do
-    url "https://github.com/paulej/AESCrypt.git", branch: "master"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
+  # v3 source code has been unavailable since at least 2024-09-01.
+  # v4 requires purchase of license (https://www.aescrypt.com/license.html)
+  deprecate! date: "2025-03-17", because: "switched to a commercial license in v4"
 
   def install
     if build.head?

@@ -23,8 +23,12 @@ class Sftpgo < Formula
       -X github.com/drakkan/sftpgo/v2/internal/util.additionalSharedDataSearchPath=#{opt_pkgshare}
       -X github.com/drakkan/sftpgo/v2/internal/version.commit=#{git_sha}
       -X github.com/drakkan/sftpgo/v2/internal/version.date=#{time.iso8601}
-    ].join(" ")
-    system "go", "build", *std_go_args(ldflags:), "-tags", "nopgxregisterdefaulttypes,disable_grpc_modules"
+    ]
+    tags = %w[
+      nopgxregisterdefaulttypes
+      disable_grpc_modules
+    ]
+    system "go", "build", *std_go_args(ldflags:, tags:)
     system bin/"sftpgo", "gen", "man", "-d", man1
 
     generate_completions_from_executable(bin/"sftpgo", "gen", "completion")

@@ -22,7 +22,7 @@ class Mihomo < Formula
       -X "github.com/metacubex/mihomo/constant.Version=#{version}"
       -X "github.com/metacubex/mihomo/constant.BuildTime=#{time.iso8601}"
     ]
-    system "go", "build", "-tags", "with_gvisor", *std_go_args(ldflags:)
+    system "go", "build", *std_go_args(ldflags:, tags: "with_gvisor")
 
     (buildpath/"config.yaml").write <<~YAML
       # Document: https://wiki.metacubex.one/config/

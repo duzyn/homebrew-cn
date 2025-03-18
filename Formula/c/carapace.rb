@@ -19,7 +19,11 @@ class Carapace < Formula
 
   def install
     system "go", "generate", "./..."
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}"), "-tags", "release", "./cmd/carapace"
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+    ]
+    system "go", "build", *std_go_args(ldflags:, tags: "release"), "./cmd/carapace"
 
     generate_completions_from_executable(bin/"carapace", "_carapace")
   end

@@ -33,11 +33,10 @@ class Ehco < Formula
       -X github.com/Ehco1996/ehco/internal/constant.GitRevision=#{tap.user}
       -X github.com/Ehco1996/ehco/internal/constant.BuildTime=#{time.iso8601}
     ]
-
     # -tags added here are via upstream's Makefile/CI builds
-    system "go", "build",
-            "-tags", "nofibrechannel,nomountstats",
-            *std_go_args(ldflags:), "cmd/ehco/main.go"
+    tags = "nofibrechannel,nomountstats"
+
+    system "go", "build", *std_go_args(ldflags:, tags:), "cmd/ehco/main.go"
   end
 
   test do
