@@ -23,7 +23,7 @@ class Kconf < Formula
     ldflags = %W[
       -s -w
       -X github.com/particledecay/kconf/build.Version=#{version}
-      -X github.com/particledecay/kconf/build.Commit=Homebrew
+      -X github.com/particledecay/kconf/build.Commit=#{tap.user}
       -X github.com/particledecay/kconf/build.Date=#{time.iso8601}"
     ]
 

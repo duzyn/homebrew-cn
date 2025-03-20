@@ -23,7 +23,7 @@ class Notation < Formula
       -s -w
       -X #{project}/internal/version.Version=v#{version}
       -X #{project}/internal/version.GitCommit=
-      -X #{project}/internal/version.BuildMetadata=Homebrew
+      -X #{project}/internal/version.BuildMetadata=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/notation"
 

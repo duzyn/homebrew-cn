@@ -20,7 +20,7 @@ class Oras < Formula
     ldflags = %W[
       -s -w
       -X oras.land/oras/internal/version.Version=#{version}
-      -X oras.land/oras/internal/version.BuildMetadata=Homebrew
+      -X oras.land/oras/internal/version.BuildMetadata=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/oras"
 

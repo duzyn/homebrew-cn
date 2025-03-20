@@ -1,14 +1,13 @@
 class Datatype99 < Formula
   desc "Algebraic data types for C99"
   homepage "https://github.com/Hirrolot/datatype99"
-  url "https://mirror.ghproxy.com/https://github.com/Hirrolot/datatype99/archive/refs/tags/v1.6.4.tar.gz"
-  sha256 "f8488decc7ab035e3af77ee62e64fc678d5cb57831457f7270efe003e63d6f09"
+  url "https://mirror.ghproxy.com/https://github.com/Hirrolot/datatype99/archive/refs/tags/v1.6.5.tar.gz"
+  sha256 "f38c077afdb91b7d754321be5d3c4a43ed5420c1ad51514d1de20023960f9a8e"
   license "MIT"
   head "https://github.com/Hirrolot/datatype99.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "76ee79a51c6ce2bda9aa261d0e6ef6d6883946b5b390224b2b70708eb0765234"
+    sha256 cellar: :any_skip_relocation, all: "de27c538560d8993175a1c972437f30e9de4d719154b3a4851f154610cb577b1"
   end
 
   depends_on "metalang99"

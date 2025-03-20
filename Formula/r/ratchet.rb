@@ -22,7 +22,7 @@ class Ratchet < Formula
       -s
       -w
       -X=github.com/sethvargo/ratchet/internal/version.version=#{version}
-      -X=github.com/sethvargo/ratchet/internal/version.commit=homebrew
+      -X=github.com/sethvargo/ratchet/internal/version.commit=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:)
 

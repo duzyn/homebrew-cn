@@ -27,7 +27,7 @@ class Logcli < Formula
       -s -w
       -X github.com/grafana/loki/pkg/util/build.Branch=main
       -X github.com/grafana/loki/pkg/util/build.Version=#{version}
-      -X github.com/grafana/loki/pkg/util/build.BuildUser=homebrew
+      -X github.com/grafana/loki/pkg/util/build.BuildUser=#{tap.user}
       -X github.com/grafana/loki/pkg/util/build.BuildDate=#{time.iso8601}
     ]
 
