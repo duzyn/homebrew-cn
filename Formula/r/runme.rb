@@ -1,18 +1,18 @@
 class Runme < Formula
   desc "Execute commands inside your runbooks, docs, and READMEs"
   homepage "https://runme.dev/"
-  url "https://mirror.ghproxy.com/https://github.com/runmedev/runme/archive/refs/tags/v3.12.7.tar.gz"
-  sha256 "26fa831b2848d75de42f9f48cfbe3c15ee6624336dc747cd3c52763bb76d3f35"
+  url "https://mirror.ghproxy.com/https://github.com/runmedev/runme/archive/refs/tags/v3.12.8.tar.gz"
+  sha256 "9f5bf889dcbbe05d113e005cf91fcc2f6a716c44136737ed1edfec5484f1b31f"
   license "Apache-2.0"
-  head "https://github.com/stateful/runme.git", branch: "main"
+  head "https://github.com/runmedev/runme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d9077a299edd0efa813c60bc0828d6040f79ab4517c35445b96cff919e5f8bcf"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d9077a299edd0efa813c60bc0828d6040f79ab4517c35445b96cff919e5f8bcf"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d9077a299edd0efa813c60bc0828d6040f79ab4517c35445b96cff919e5f8bcf"
-    sha256 cellar: :any_skip_relocation, sonoma:        "85d78447f39d4715ef2687e0240d99fbe12495532afc94e3ddb8f8a3ed4f2768"
-    sha256 cellar: :any_skip_relocation, ventura:       "85d78447f39d4715ef2687e0240d99fbe12495532afc94e3ddb8f8a3ed4f2768"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "65684ce59bb44cf7a74ac1097f8e5ae90681ecb2789538a6db7bd2996548bdd5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7a72ef0a56d3392f2f90e0483430edb1a9d7eb04d1fa4dd470a53f6ce4472f69"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7a72ef0a56d3392f2f90e0483430edb1a9d7eb04d1fa4dd470a53f6ce4472f69"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "7a72ef0a56d3392f2f90e0483430edb1a9d7eb04d1fa4dd470a53f6ce4472f69"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f979eaa87aafe34bf823f0a604d53337326c81464ca80ffc63023b94768d3e7d"
+    sha256 cellar: :any_skip_relocation, ventura:       "f979eaa87aafe34bf823f0a604d53337326c81464ca80ffc63023b94768d3e7d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "24bec3f86eee8297fdb4b2f2817f03f2547d244df253dd544f629108d69d77c3"
   end
 
   depends_on "go" => :build
@@ -20,9 +20,9 @@ class Runme < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/stateful/runme/v3/internal/version.BuildDate=#{time.iso8601}
-      -X github.com/stateful/runme/v3/internal/version.BuildVersion=#{version}
-      -X github.com/stateful/runme/v3/internal/version.Commit=#{tap.user}
+      -X github.com/runmedev/runme/v3/internal/version.BuildDate=#{time.iso8601}
+      -X github.com/runmedev/runme/v3/internal/version.BuildVersion=#{version}
+      -X github.com/runmedev/runme/v3/internal/version.Commit=#{tap.user}
     ]
 
     system "go", "build", *std_go_args(ldflags:)
@@ -30,7 +30,7 @@ class Runme < Formula
   end
 
   test do
-    system bin/"runme", "--version"
+    assert_match version.to_s, shell_output("#{bin}/runme --version")
     markdown = (testpath/"README.md")
     markdown.write <<~MARKDOWN
       # Some Markdown
