@@ -1,6 +1,6 @@
 cask "agent-tars" do
-  version "1.0.0-alpha.3"
-  sha256 "93af5e685d83acce17ddb429babb09f71ba6f1f33d0cfa4d42bd1ad703d4327f"
+  version "1.0.0-alpha.5"
+  sha256 "d74c511e18b76ca970f18e1943d69f0ba7249ba4ef717db1311b4db65ee4981b"
 
   url "https://mirror.ghproxy.com/https://github.com/bytedance/UI-TARS-desktop/releases/download/Agent-TARS-v#{version}/Agent.TARS-#{version}-universal.dmg"
   name "Agent TARS"
