@@ -22,6 +22,12 @@ class Pipgrip < Formula
   resource "anytree" do
     url "https://files.pythonhosted.org/packages/f9/44/2dd9c5d0c3befe899738b930aa056e003b1441bfbf34aab8fce90b2b7dea/anytree-2.12.1.tar.gz"
     sha256 "244def434ccf31b668ed282954e5d315b4e066c4940b94aff4a7962d85947830"
+
+    # poetry build patch, upstream pr ref, https://github.com/c0fec0de/anytree/pull/271
+    patch do
+      url "https://github.com/c0fec0de/anytree/commit/aa20d31631403f9650f3b4090d5c8579f9abaf5b.patch?full_index=1"
+      sha256 "05b9b5ecf80986fcecb195d798e1277c9e7c69ed5fd44fea9898e20a44828587"
+    end
   end
 
   resource "click" do

@@ -26,9 +26,11 @@ class Hexcurse < Formula
   uses_from_macos "ncurses"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--mandir=#{man}"
+    # Work around failure from GCC 10+ using default of `-fno-common`
+    # multiple definition of `fpIN'; file.o:(.bss+0x0): first defined here
+    ENV.append_to_cflags "-fcommon" if OS.linux?
+
+    system "./configure", "--mandir=#{man}", *std_configure_args
     system "make", "install"
   end
 

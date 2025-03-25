@@ -38,8 +38,9 @@ class Minidjvu < Formula
     inreplace "Makefile.in", "/usr/bin/gzip", Formula["gzip"].opt_bin/"gzip" unless OS.mac?
 
     ENV.deparallelize
-    # force detection of BSD mkdir
-    system "autoreconf", "--force", "--install", "--verbose" if OS.mac?
+    # force detection of BSD mkdir (macos)
+    # outdated configure scripts fail to detect the correct build type (linux arm)
+    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", *std_configure_args
     system "make"
     system "make", "install"
