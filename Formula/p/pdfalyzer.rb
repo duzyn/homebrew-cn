@@ -14,6 +14,7 @@ class Pdfalyzer < Formula
     sha256 cellar: :any,                 arm64_ventura: "5361a33d1fe1f885075108905620352027aae864fd7b893fdc896dd9333d00ce"
     sha256 cellar: :any,                 sonoma:        "667add8cd26e9cdc19c9175f7da5c90bbf3afd4d9427882b952b020d7f7b05b5"
     sha256 cellar: :any,                 ventura:       "48efa4ee33cfe1011ad23591fbbbcb9cfbd4b94536238200bf1d97e1b7e309d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7303e0c0d12775502629ad71741439fda209dae5ea76dd85bd62cd88d97cd9e2"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bd8f55ccc9165e438fcf522f0232091719d1dd571ebd4e3049af1d5bad718b35"
   end
 

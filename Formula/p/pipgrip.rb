@@ -14,6 +14,7 @@ class Pipgrip < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "8200545764bb23a787a49b0fc005dde71dcf392ea6768e4b35882928be00c753"
     sha256 cellar: :any_skip_relocation, sonoma:        "6765b9fc84ef8911ea27ca8b1d4585cda50a6c582ac32bce062e7fe5a813d2ea"
     sha256 cellar: :any_skip_relocation, ventura:       "6765b9fc84ef8911ea27ca8b1d4585cda50a6c582ac32bce062e7fe5a813d2ea"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a9845a02f039857039cd822de651efab04a91e70fe02cc07699a8dacbb0cdcdf"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ccdc85fb3e71bcbd61b7c62fe7f213f8cdc11461b440792c881a155ab03e582"
   end
 
