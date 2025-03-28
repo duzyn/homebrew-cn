@@ -2,19 +2,20 @@ class Breezy < Formula
   include Language::Python::Virtualenv
 
   desc "Version control system implemented in Python with multi-format support"
-  homepage "https://www.breezy-vcs.org/"
-  url "https://files.pythonhosted.org/packages/c4/32/1e95fdf00568790cf6316eb729a99c7754bbcb1773384c46da959eddfef8/breezy-3.3.9.tar.gz"
-  sha256 "c2588bf217c8a4056987ecf6599f0ad9fb8484285953b2e61905141f43c3d5d8"
+  # homepage "https://www.breezy-vcs.org/" # https://bugs.launchpad.net/brz/+bug/2102204
+  homepage "https://github.com/breezy-team/breezy"
+  url "https://files.pythonhosted.org/packages/15/b1/4d7fe9b01f072bd18bf4c6c4bf546b9f18ad4c3890f3f11fbb4d20f5bdbf/breezy-3.3.10.tar.gz"
+  sha256 "8e61aeb4800048d6f8fe43f701e510b571255387e64a999624caf46227b58cf7"
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "632597502c8193a468b86edc1e926415e17945a044c55bc6eef0785cdafa025e"
-    sha256 cellar: :any,                 arm64_sonoma:  "32162b4e48bed6abd9223423de11fd10f3e512cb8076aa4b6d60788db4d4c0c4"
-    sha256 cellar: :any,                 arm64_ventura: "a7922bc0194274a0699ebaf107d4124b0ba660da338d178bff2c0ae4db7c7d53"
-    sha256 cellar: :any,                 sonoma:        "05fe3857ce2ab38a93f2697405bbbeced3d528c0f34a98cc3eedcda458e18d74"
-    sha256 cellar: :any,                 ventura:       "09cd865c9142a653f13c9eca3c7a070537a8d4af4fa9c3384067f75cd7ad1e2b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d8b7301157505024f7d9c83b85f938aad2ffef80d034dc9e01a69fa1968cf6f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e2e0d12ce6916e0db46a858a6a91d3f9a676ca7f5d078f2305fd83ffde43368"
+    sha256 cellar: :any,                 arm64_sequoia: "953f2c4518d03c78707d4d40798f2a55c4e0d0a63dd2803d5ebcb314441a3959"
+    sha256 cellar: :any,                 arm64_sonoma:  "8f32fda16f6689a564a25e036047c418595c3a06cdcf04e0b51074571e26f147"
+    sha256 cellar: :any,                 arm64_ventura: "ad0652299906d2bc0bd95b1acae8c3ca9e2b76d3746545f21c73ad9992931b99"
+    sha256 cellar: :any,                 sonoma:        "9e54ebb52a8576b7983f42d7f3ae27bbb430bb4e5b881e8bd3ba689b6ae01777"
+    sha256 cellar: :any,                 ventura:       "67d191b07ab1963849658db4d4c3f6a757b3ddf6522b1aae449e4ba89905e9d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "955b1346b70d2ad83c1ce2ad175d5dea82fbaa6efbb434949318c8dcc41aafe4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be768800e32cba68921581984289cbbf3d247036196caa888fb994ff6bf9f312"
   end
 
   depends_on "gettext" => :build
@@ -28,8 +29,8 @@ class Breezy < Formula
   end
 
   resource "dulwich" do
-    url "https://files.pythonhosted.org/packages/da/47/c8bf38f8874829730775fbe5510b54087ff8529dbb9612bd144b76376ea7/dulwich-0.22.3.tar.gz"
-    sha256 "7968c7b8a877b614c46b5ee7c1b28411772123004d7cf6357e763ad2cbeb8254"
+    url "https://files.pythonhosted.org/packages/d4/8b/0f2de00c0c0d5881dc39be147ec2918725fb3628deeeb1f27d1c6cf6d9f4/dulwich-0.22.8.tar.gz"
+    sha256 "701547310415de300269331abe29cb5717aa1ea377af826bf513d0adfb1c209b"
   end
 
   resource "fastbencode" do
@@ -52,14 +53,17 @@ class Breezy < Formula
     sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
   end
 
-  resource "tzlocal" do
-    url "https://files.pythonhosted.org/packages/04/d3/c19d65ae67636fe63953b20c2e4a8ced4497ea232c43ff8d01db16de8dc0/tzlocal-5.2.tar.gz"
-    sha256 "8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e"
+  resource "urllib3" do
+    url "https://files.pythonhosted.org/packages/aa/63/e53da845320b757bf29ef6a9062f5c669fe997973f966045cb019c3f4b66/urllib3-2.3.0.tar.gz"
+    sha256 "f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d"
   end
 
-  resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/ed/63/22ba4ebfe7430b76388e7cd448d5478814d3032121827c12a2cc287e2260/urllib3-2.2.3.tar.gz"
-    sha256 "e7d814a81dad81e6caf2ec9fdedb284ecc9c73076b62654547cc64ccdcae26e9"
+  # Apply Ubuntu patch for timezone bug introduced from switching tzlocal to zoneinfo
+  # Issue ref: https://bugs.launchpad.net/brz/+bug/2103478
+  patch do
+    url "http://archive.ubuntu.com/ubuntu/pool/universe/b/breezy/breezy_3.3.10-1ubuntu1.debian.tar.xz"
+    sha256 "8ef13e6117dbcc0ad4022a3456306c043223d3380f47db62c8754d904bee99d2"
+    apply "patches/20_fix_timezone_retrieval"
   end
 
   def install
