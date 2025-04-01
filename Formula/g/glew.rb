@@ -31,6 +31,9 @@ class Glew < Formula
     depends_on "mesa-glu"
   end
 
+  # cmake 4.0 build patch, upstream bug report, https://github.com/nigels-com/glew/issues/432
+  patch :DATA
+
   def install
     system "cmake", "-S", "./build/cmake", "-B", "_build",
                     "-DCMAKE_INSTALL_RPATH=#{rpath}",
@@ -42,6 +45,7 @@ class Glew < Formula
 
   test do
     (testpath/"CMakeLists.txt").write <<~CMAKE
+      cmake_minimum_required(VERSION 4.0)
       project(test_glew)
 
       set(CMAKE_CXX_STANDARD 11)
@@ -97,3 +101,17 @@ class Glew < Formula
     system "./test"
   end
 end
+
+__END__
+diff --git a/build/cmake/CMakeLists.txt b/build/cmake/CMakeLists.txt
+index 419c243..8c66ae2 100644
+--- a/build/cmake/CMakeLists.txt
++++ b/build/cmake/CMakeLists.txt
+@@ -4,7 +4,7 @@ endif ()
+
+ project (glew C)
+
+-cmake_minimum_required (VERSION 2.8.12)
++cmake_minimum_required (VERSION 3.5)
+
+ include(GNUInstallDirs)

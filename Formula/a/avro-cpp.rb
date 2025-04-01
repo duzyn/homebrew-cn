@@ -1,12 +1,8 @@
 class AvroCpp < Formula
   desc "Data serialization system"
   homepage "https://avro.apache.org/"
-  # Upstreams tar.gz can't be opened by bsdtar on macOS
-  # https://github.com/Homebrew/homebrew-core/pull/146296#issuecomment-1737945877
-  # https://apple.stackexchange.com/questions/197839/why-is-extracting-this-tgz-throwing-an-error-on-my-mac-but-not-on-linux
-  url "https://github.com/apache/avro.git",
-      tag:      "release-1.11.3",
-      revision: "35ff8b997738e4d983871902d47bfb67b3250734"
+  url "https://www.apache.org/dyn/closer.lua?path=avro/avro-1.11.3/cpp/avro-cpp-1.11.3.tar.gz"
+  sha256 "fba242aef77ec819d07561fcba93751721956de8d0cae8e1f2f300b54b331bae"
   license "Apache-2.0"
   revision 5
 
@@ -24,8 +20,14 @@ class AvroCpp < Formula
   depends_on "pkgconf" => :build
   depends_on "boost"
 
+  # Backport cmake_minimum_required update
+  patch :p3 do
+    url "https://github.com/apache/avro/commit/3aec6f413e3c47536b33631af5c18e685df0b608.patch?full_index=1"
+    sha256 "c3f7ec1915e63c0ad08f277cf3392217e31eb11b6b2822f3a21d241901f461c7"
+  end
+
   def install
-    system "cmake", "-S", "lang/c++", "-B", "build", "-DCMAKE_CXX_STANDARD=14", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_CXX_STANDARD=14", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -52,7 +54,7 @@ class AvroCpp < Formula
     CPP
 
     system bin/"avrogencpp", "-i", "cpx.json", "-o", "cpx.hh", "-n", "cpx"
-    system ENV.cxx, "test.cpp", "-std=c++11", "-o", "test"
+    system ENV.cxx, "test.cpp", "-std=c++14", "-o", "test"
     system "./test"
   end
 end
