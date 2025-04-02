@@ -4,6 +4,7 @@ class Esbuild < Formula
   url "https://mirror.ghproxy.com/https://github.com/evanw/esbuild/archive/refs/tags/v0.25.2.tar.gz"
   sha256 "01a6c0a5949e5c2d53e19be52aec152b3186f8bbcf98df6996a20a972a78c330"
   license "MIT"
+  head "https://github.com/evanw/esbuild.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "fa954cd31cbdf0a86ef49421374c322ac7b156f8878bd655a4a5cdf4cb3a95a3"
