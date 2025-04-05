@@ -23,11 +23,24 @@ class Txr < Formula
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "libffi", since: :catalina
+  uses_from_macos "libxcrypt"
+  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "gcc" => :build
+  end
+
+  fails_with :gcc do
+    version "11"
+    cause "Segmentation faults running TXR"
+  end
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--inline=static inline"
+    system "./configure", "--prefix=#{prefix}"
     system "make"
+    system "make", "tests" # run tests as upstream has gotten reports of broken TXR in Homebrew
     system "make", "install"
+    (share/"vim/vimfiles/syntax").install Dir["*.vim"]
   end
 
   test do
