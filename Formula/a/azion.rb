@@ -4,6 +4,7 @@ class Azion < Formula
   url "https://mirror.ghproxy.com/https://github.com/aziontech/azion/archive/refs/tags/2.7.0.tar.gz"
   sha256 "7a0aabce00f54b6bbc1f8f725f8b18d69c510e4d026d21d4fc1b8773584ad85e"
   license "MIT"
+  head "https://github.com/aziontech/azion.git", branch: "dev"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "de6f901f3c0381531b10997b8779c07e10557222533fce354501f8559944c4dd"

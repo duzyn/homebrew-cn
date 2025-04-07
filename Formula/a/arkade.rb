@@ -4,6 +4,7 @@ class Arkade < Formula
   url "https://mirror.ghproxy.com/https://github.com/alexellis/arkade/archive/refs/tags/0.11.38.tar.gz"
   sha256 "92ba8fb2553c7e822935d1a12c2a0fda35440c061838a42bcd400b820ef2336e"
   license "MIT"
+  head "https://github.com/alexellis/arkade.git", branch: "master"
 
   livecheck do
     url :stable

@@ -4,6 +4,7 @@ class CfnFormat < Formula
   url "https://mirror.ghproxy.com/https://github.com/aws-cloudformation/rain/archive/refs/tags/v1.22.0.tar.gz"
   sha256 "0f563154c49a6bc09164551463daee01cdbd5e2a9ff7bbc54854276d1608128e"
   license "Apache-2.0"
+  head "https://github.com/aws-cloudformation/rain.git", branch: "main"
 
   livecheck do
     formula "rain"

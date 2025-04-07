@@ -27,6 +27,11 @@ class Ibex < Formula
 
   uses_from_macos "zlib"
 
+  on_linux do
+    # https://github.com/ibex-team/ibex-lib/blob/master/interval_lib_wrapper/gaol/3rd/mathlib-2.1.1/CMakeLists.txt
+    depends_on arch: :x86_64
+  end
+
   # Workaround for Intel macOS processor detection
   # Issue ref: https://github.com/ibex-team/ibex-lib/issues/567
   patch :DATA

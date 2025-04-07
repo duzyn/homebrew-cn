@@ -1,10 +1,12 @@
 class Azqr < Formula
   desc "Azure Quick Review"
   homepage "https://azure.github.io/azqr/"
+  # pull from git tag to get submodules
   url "https://github.com/Azure/azqr.git",
       tag:      "v.2.4.4",
       revision: "7db9e2901d9dfa071cb981c843e88dde9451aaab"
   license "MIT"
+  head "https://github.com/Azure/azqr.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "3c0d8009a733259f27ed2d17769b5b10e051157963610b826f3b97ebd69acc03"

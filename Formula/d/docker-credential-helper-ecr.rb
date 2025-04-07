@@ -4,6 +4,7 @@ class DockerCredentialHelperEcr < Formula
   url "https://mirror.ghproxy.com/https://github.com/awslabs/amazon-ecr-credential-helper/archive/refs/tags/v0.9.1.tar.gz"
   sha256 "0f186c04c4f90fde02add338cf85f7136a2b7aa52bf2f6ae2130244ce1132393"
   license "Apache-2.0"
+  head "https://github.com/awslabs/amazon-ecr-credential-helper.git", branch: "main"
 
   livecheck do
     url :stable

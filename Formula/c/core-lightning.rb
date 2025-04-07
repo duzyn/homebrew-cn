@@ -30,7 +30,6 @@ class CoreLightning < Formula
   depends_on "lowdown" => :build
   depends_on "pkgconf" => :build
   depends_on "protobuf" => :build
-  depends_on "python-setuptools" => :build
   depends_on "python@3.13" => :build
   depends_on "rust" => :build
   depends_on "bitcoin"

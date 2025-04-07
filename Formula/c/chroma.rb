@@ -4,6 +4,7 @@ class Chroma < Formula
   url "https://mirror.ghproxy.com/https://github.com/alecthomas/chroma/archive/refs/tags/v2.16.0.tar.gz"
   sha256 "78b6a312adcbadadf221d5ffa566545b0b30e74dee79f7e2eddcd36abde24923"
   license "MIT"
+  head "https://github.com/alecthomas/chroma.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd52a28167315b28b632f59b792a19815ebc39af57d5e70a43de7f74351d52b8"
