@@ -4,6 +4,7 @@ class KamalProxy < Formula
   url "https://mirror.ghproxy.com/https://github.com/basecamp/kamal-proxy/archive/refs/tags/v0.8.7.tar.gz"
   sha256 "cb53b4f73ec9fd8ab6fa888e4994223fa09a6095b8dd40d9ada58815c991d658"
   license "MIT"
+  head "https://github.com/basecamp/kamal-proxy.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "17e3e81860a5da7b0c9fdc43487edea33cf65862782a38b4609e479846318b67"

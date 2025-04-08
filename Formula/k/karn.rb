@@ -4,6 +4,7 @@ class Karn < Formula
   url "https://mirror.ghproxy.com/https://github.com/prydonius/karn/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "96f10ff263468b9f91244edf16d8ea548c9d281cba9b2597eaf5270f9e6127e3"
   license "MIT"
+  head "https://github.com/prydonius/karn.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "56a2e364302364891e18fb7856a51e2d9bc3143ad3b98d59367b07e632ddd817"

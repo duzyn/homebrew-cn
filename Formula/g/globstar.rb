@@ -4,6 +4,7 @@ class Globstar < Formula
   url "https://mirror.ghproxy.com/https://github.com/DeepSourceCorp/globstar/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "d2723d485d3a0baa4e707bfcebdd60960ae6a8928277acf5c0602aac1f050286"
   license "MIT"
+  head "https://github.com/DeepSourceCorp/globstar.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "e6d2490f2fc348c713c7b2b0fff5da014ead85e06b899686e87bba07fb25a085"

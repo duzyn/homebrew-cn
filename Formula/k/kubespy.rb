@@ -4,6 +4,7 @@ class Kubespy < Formula
   url "https://mirror.ghproxy.com/https://github.com/pulumi/kubespy/archive/refs/tags/v0.6.3.tar.gz"
   sha256 "1975bf0a0aeb03e69c42ac626c16cd404610226cc5f50fab96d611d9eb6a6d29"
   license "Apache-2.0"
+  head "https://github.com/pulumi/kubespy.git", branch: "master"
 
   bottle do
     rebuild 1

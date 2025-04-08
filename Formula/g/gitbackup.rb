@@ -4,6 +4,7 @@ class Gitbackup < Formula
   url "https://mirror.ghproxy.com/https://github.com/amitsaha/gitbackup/archive/refs/tags/v0.9.0.tar.gz"
   sha256 "dc25680b498995ea4c52b1cb2c756aee200f163fc7dbfa695f0d0fd4cc10c28c"
   license "MIT"
+  head "https://github.com/amitsaha/gitbackup.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "5dfd46e58a735957a243ca725303b5747345e3499f4eae339acf78e8dbb4d6c0"

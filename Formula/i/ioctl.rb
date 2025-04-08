@@ -4,6 +4,7 @@ class Ioctl < Formula
   url "https://mirror.ghproxy.com/https://github.com/iotexproject/iotex-core/archive/refs/tags/v2.1.2.tar.gz"
   sha256 "797fba127a4b9e85829d95176f23109506b87adaf1e7b04c0c9845b3a0631554"
   license "Apache-2.0"
+  head "https://github.com/iotexproject/iotex-core.git", branch: "master"
 
   livecheck do
     url :stable

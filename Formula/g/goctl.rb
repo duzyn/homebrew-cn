@@ -4,6 +4,7 @@ class Goctl < Formula
   url "https://mirror.ghproxy.com/https://github.com/zeromicro/go-zero/archive/refs/tags/tools/goctl/v1.8.2.tar.gz"
   sha256 "806ba8ddec6228c3b55ad1012ea6721eeb2f22d3e0e847b2b0cf5a51d8f6b9fb"
   license "MIT"
+  head "https://github.com/zeromicro/go-zero.git", branch: "master"
 
   livecheck do
     url :stable

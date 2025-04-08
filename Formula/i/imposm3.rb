@@ -4,6 +4,7 @@ class Imposm3 < Formula
   url "https://mirror.ghproxy.com/https://github.com/omniscale/imposm3/archive/refs/tags/v0.14.1.tar.gz"
   sha256 "aec2a5e95929891afa5cb68cfa9f6b1bf326c949a002d36f3171ed194f99fc0a"
   license "Apache-2.0"
+  head "https://github.com/omniscale/imposm3.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "0b981fc39b89a99f0d613371f665d06c0ef397a0d669b175e4df290a2b641e28"

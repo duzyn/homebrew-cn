@@ -4,6 +4,7 @@ class K6 < Formula
   url "https://mirror.ghproxy.com/https://github.com/grafana/k6/archive/refs/tags/v0.58.0.tar.gz"
   sha256 "013c5deb43264afc2f17a2f059fa27a706464abb235af401acfda26bb45fd8e7"
   license "AGPL-3.0-or-later"
+  head "https://github.com/grafana/k6.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "dcaea34679b7343fb069bce382835e6137d39c786490ebf2004738560617856b"
