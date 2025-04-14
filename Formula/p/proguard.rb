@@ -16,6 +16,8 @@ class Proguard < Formula
 
   depends_on "openjdk"
 
+  conflicts_with cask: "android-commandlinetools", because: "both install `retrace` binaries"
+
   def install
     libexec.install "lib/proguard.jar"
     libexec.install "lib/proguardgui.jar"

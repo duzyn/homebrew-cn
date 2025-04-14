@@ -4,15 +4,15 @@ class Vineyard < Formula
   url "https://mirror.ghproxy.com/https://github.com/v6d-io/v6d/releases/download/v0.24.2/v6d-0.24.2.tar.gz"
   sha256 "a3acf9a9332bf5cce99712f9fd00a271b4330add302a5a8bbfd388e696a795c8"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   bottle do
-    sha256                               arm64_sequoia: "561165ad084f00d50a006cbc129d2f680d09fc0ad125d2f3984a95bcbcc72321"
-    sha256                               arm64_sonoma:  "1a7a921549ba270da4d7d328e3473f110c67ffddd96204e3d65baedf198e8da8"
-    sha256                               arm64_ventura: "f1480e5c08cd4bbaed23bb7ac94129c39197f16b3b42fa2a2324ccd4aad2224c"
-    sha256                               sonoma:        "a8c536a70c4aa56fb7e47c3a2d730908e091f20c37ecd46fb1fb468aab9012a8"
-    sha256                               ventura:       "e4d5f00c8254923e4808411e904e5b57466cdb6959f5dee7b27d9fcea4e79245"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "033e633eb759b964d7881b6d3354e43517058fa3fff32a8a75235b931332a474"
+    sha256                               arm64_sequoia: "e5fefb6b4cf166c97d1fbe080cc238b2eb3ca965be76f6da9f89ffcb68e09239"
+    sha256                               arm64_sonoma:  "c89b4be50ae6ebeaa028a1747ad0b41dd89a9dabf6e1aa818f720099ddcc895b"
+    sha256                               arm64_ventura: "d5b9f9c75e05e2ad226205c8039ebb59bc422820be50f4af1b4bd9c4158b5a3e"
+    sha256                               sonoma:        "4dbc7c6a1185063c18dafe402cc953e97f465c3ca4d71c765122583fe9d961eb"
+    sha256                               ventura:       "34d272fa2442ea030f0063a9b196986190f3d6a7e4ed83621fbd09faa044c138"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "872e8fa3f8756f576120bf817cc87bf4999fb788dc38626d99171ee97db99ad4"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -49,6 +49,23 @@ class Vineyard < Formula
     inreplace boost_asio_post_files, /^(\s*)(\S+)\.post\(/, "\\1boost::asio::post(\\2,"
     inreplace "src/server/services/etcd_meta_service.cc", "backoff_timer_->cancel(ec);", "backoff_timer_->cancel();"
 
+    # Workaround to support Boost 1.88.0+
+    # TODO: Try upstreaming fix along with above
+    boost_process_files = %w[
+      src/server/util/etcd_launcher.cc
+      src/server/util/etcd_member.cc
+      src/server/util/kubectl.cc
+      src/server/util/proc.cc
+      src/server/util/proc.h
+      src/server/util/redis_launcher.h
+    ]
+    inreplace boost_process_files, '#include "boost/process.hpp"', ""
+    inreplace "src/server/util/etcd_launcher.h", '#include "boost/process/child.hpp"', ""
+    ENV.append "CXXFLAGS", "-std=c++17"
+    ENV.append "CXXFLAGS", "-DBOOST_PROCESS_VERSION=1"
+    headers = %w[args async child env environment io search_path]
+    headers.each { |header| ENV.append "CXXFLAGS", "-include boost/process/v1/#{header}.hpp" }
+
     python3 = "python3.13"
     # LLVM is keg-only.
     llvm = deps.map(&:to_formula).find { |f| f.name.match?(/^llvm(@\d+)?$/) }
@@ -60,6 +77,7 @@ class Vineyard < Formula
       "-DCMAKE_CXX_STANDARD=17",
       "-DCMAKE_CXX_STANDARD_REQUIRED=TRUE",
       "-DCMAKE_FIND_PACKAGE_PREFER_CONFIG=ON", # for newer protobuf
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
       "-DLIBGRAPELITE_INCLUDE_DIRS=#{Formula["libgrape-lite"].opt_include}",
       "-DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}",
       "-DPYTHON_EXECUTABLE=#{which(python3)}",
