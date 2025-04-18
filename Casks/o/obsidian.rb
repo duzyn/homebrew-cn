@@ -9,8 +9,10 @@ cask "obsidian" do
   homepage "https://obsidian.md/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/desktop-releases.json"
+    strategy :json do |json|
+      json["latestVersion"]
+    end
   end
 
   auto_updates true
