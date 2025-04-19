@@ -1,13 +1,13 @@
 class Nanobind < Formula
   desc "Tiny and efficient C++/Python bindings"
   homepage "https://github.com/wjakob/nanobind"
-  url "https://mirror.ghproxy.com/https://github.com/wjakob/nanobind/archive/refs/tags/v2.6.1.tar.gz"
-  sha256 "519c6dd56581ad6db9aab814105c2666a0491096487cb384dd20216f80d1a291"
+  url "https://mirror.ghproxy.com/https://github.com/wjakob/nanobind/archive/refs/tags/v2.7.0.tar.gz"
+  sha256 "6c8c6bf0435b9d8da9312801686affcf34b6dbba142db60feec8d8e220830499"
   license "BSD-3-Clause"
   head "https://github.com/wjakob/nanobind.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d918fd9290dbb6ff6b8edb03cdc78e06e368ea8d392f7e320cb36c3670be8a8c"
+    sha256 cellar: :any_skip_relocation, all: "27262487a8a0bb8435e7652f543f2058057b1c7f5d3d71f36fd3c2cf1f34bcba"
   end
 
   depends_on "cmake" => [:build, :test]
