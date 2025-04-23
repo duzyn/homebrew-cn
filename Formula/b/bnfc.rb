@@ -27,6 +27,9 @@ class Bnfc < Formula
   depends_on "bison" => :test
   depends_on "flex" => :test
   depends_on "openjdk" => :test
+  depends_on "gmp"
+
+  uses_from_macos "libffi"
 
   def install
     system "cabal", "v2-update"
