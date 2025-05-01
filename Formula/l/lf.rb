@@ -4,6 +4,7 @@ class Lf < Formula
   url "https://mirror.ghproxy.com/https://github.com/gokcehan/lf/archive/refs/tags/r35.tar.gz"
   sha256 "bf2ecd63eb75ceeb88f42977d49515bbd755b7f3d4db651a097c6ba47fd2d989"
   license "MIT"
+  head "https://github.com/gokcehan/lf.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "bb2fd1277994cd58d26058b7b79b560563b1733f86ef7b1931afb091ea5f8929"
