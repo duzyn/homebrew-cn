@@ -17,7 +17,7 @@ fi
 SCRIPT_DIR="$(dirname "$(readlink -f "${0}")")"
 
 # 安装 Homebrew
-/bin/bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sed -e 's|https://github.com|https://ghproxy.com/https://github.com|g')"
+/bin/bash -c "$(curl -fsSL https://ghproxy.cc/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sed -e 's|https://github.com|https://ghproxy.cc/https://github.com|g')"
 
 # 关闭从 API 安装，使用 Homebrew v4.0 之前默认的行为
 export HOMEBREW_NO_INSTALL_FROM_API=True
@@ -27,7 +27,7 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 export HOMEBREW_PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 
 # 添加本应用库
-brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.com/https://github.com/duzyn/homebrew-cn
+brew tap --custom-remote --force-auto-update duzyn/cn https://ghproxy.cc/https://github.com/duzyn/homebrew-cn
 
 # 保存配置到 `.zshrc` 或 `.bash_profile`
 tee "$SCRIPT_DIR/config" &>/dev/null <<"EOF"
