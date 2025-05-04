@@ -5,7 +5,7 @@
 ## 安装 Homebrew
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/duzyn/homebrew-cn/main/install.sh)"
+/bin/bash -c "$(curl -fsSL https://ghproxy.cc/https://raw.githubusercontent.com/duzyn/homebrew-cn/main/install.sh)"
 ```
 
 ## 安装应用
@@ -17,7 +17,7 @@ brew install duzyn/cn/APPNAME
 ## 卸载 Homebrew
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh | sed -e 's|https://github.com|https://ghproxy.com/https://github.com|g')"
+/bin/bash -c "$(curl -fsSL https://ghproxy.cc/https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh | sed -e 's|https://github.com|https://ghproxy.cc/https://github.com|g')"
 ```
 
 ## 类似项目
