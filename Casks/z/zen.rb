@@ -1,15 +1,15 @@
-cask "zen-browser@twilight" do
-  version "1.12.2t"
-  sha256 :no_check
+cask "zen" do
+  version "1.12.3b"
+  sha256 "2d85375888827aa09eccb9844b9a8f1d60f6d1d910941bf35d28bcd1115680f5"
 
-  url "https://mirror.ghproxy.com/https://github.com/zen-browser/desktop/releases/download/twilight/zen.macos-universal.dmg",
+  url "https://mirror.ghproxy.com/https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-universal.dmg",
       verified: "github.com/zen-browser/desktop/"
-  name "Zen Twilight"
+  name "Zen Browser"
   desc "Gecko based web browser"
   homepage "https://zen-browser.app/"
 
   livecheck do
-    url "https://updates.zen-browser.app/updates/browser/Darwin_aarch64-gcc3/twilight/update.xml"
+    url "https://updates.zen-browser.app/updates/browser/Darwin_aarch64-gcc3/release/update.xml"
     strategy :xml do |xml|
       xml.get_elements("//update").map { |item| item.attributes["appVersion"] }
     end
@@ -18,12 +18,13 @@ cask "zen-browser@twilight" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "Twilight.app"
+  app "Zen.app"
+  binary "#{appdir}/Zen.app/Contents/MacOS/zen"
 
   zap trash: [
         "~/Library/Application Support/Zen",
-        "~/Library/Caches/Mozilla/updates/Applications/Twilight",
-        "~/Library/Caches/Mozilla/updates/Applications/Zen Twilight",
+        "~/Library/Caches/Mozilla/updates/Applications/Zen Browser",
+        "~/Library/Caches/Mozilla/updates/Applications/Zen",
         "~/Library/Caches/Zen",
         "~/Library/Preferences/app.zen-browser.zen.plist",
         "~/Library/Preferences/org.mozilla.com.zen.browser.plist",
