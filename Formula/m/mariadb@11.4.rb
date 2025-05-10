@@ -1,8 +1,8 @@
 class MariadbAT114 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://archive.mariadb.org/mariadb-11.4.5/source/mariadb-11.4.5.tar.gz"
-  sha256 "ff6595f8c482f9921e39b97fa1122377a69f0dcbd92553c6b9032cbf0e9b5354"
+  url "https://archive.mariadb.org/mariadb-11.4.6/source/mariadb-11.4.6.tar.gz"
+  sha256 "1b26c0bb2d025dbfac3b9852d2b7eafda56a171b67ac2e27831ec0414fb7df07"
   license "GPL-2.0-only"
 
   livecheck do
@@ -18,13 +18,13 @@ class MariadbAT114 < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "87a845829263889cd366220894d2dde7434e01c5c511210706f921a661d705d2"
-    sha256 arm64_sonoma:  "9b97d5578b40a74af45a00cd630c387c191ebca5adfb2e8a0c27040b2136942b"
-    sha256 arm64_ventura: "c8a51147722430cb5aa0cce6d30119812cc0d99ac46fe5acebaf8228a19820e7"
-    sha256 sonoma:        "f166a658a618d12aa5e6c32f30bb1436bb08a96481e1f6bb31d818d1ca275f37"
-    sha256 ventura:       "d69e4631108cb221d28f9209f0055e27949ed5c96e67ac9cbf5277eb3a407f64"
-    sha256 arm64_linux:   "9fdd60711b2f3adbbaad53d0c9d4608aff3fc417fc952b3e29f317275fdbe54b"
-    sha256 x86_64_linux:  "398d364ac0b0698a7efb9b0bcb4503895d51e48616a7e0d3ed21cf198b47f61f"
+    sha256 arm64_sequoia: "69c66775aaf4416a552e06026e7830dd6d9ed516fd482b39d078e75ea4a1f35a"
+    sha256 arm64_sonoma:  "b46c4fdd9bbb04c8e692855bea7eba13751e5fa36686674a036fa52d1491f6e0"
+    sha256 arm64_ventura: "7a6c80e7d28e49822f1a417308f5826f97a6a11cf934af3f64c40c0c378fff60"
+    sha256 sonoma:        "25a5671345926af66ed688162d1af6ec714715ed0c59169299c36618eab65dbb"
+    sha256 ventura:       "001bd3c1d200bda85099131acac703803b9dd1f43fe13555a15e68a86d73d21e"
+    sha256 arm64_linux:   "902fbdaf9b7a501a7d4496f501fac13151c63b9f88590277047e66e71e4b0806"
+    sha256 x86_64_linux:  "fbdd67efee538d64a9fb5ae707eb2f8307be19e25615ef5a1c2652fa626ab232"
   end
 
   keg_only :versioned_formula
@@ -61,25 +61,8 @@ class MariadbAT114 < Formula
     depends_on "linux-pam"
   end
 
-  # system libfmt patch, upstream pr ref, https://github.com/MariaDB/server/pull/3786
-  patch do
-    url "https://github.com/MariaDB/server/commit/b6a924b8478d2fab5d51245ff6719b365d7db7f4.patch?full_index=1"
-    sha256 "77b65b35cf0166b8bb576254ac289845db5a8e64e03b41f1bf4b2045ac1cd2d1"
-  end
-
-  # Backport fix for CMake 4.0
-  patch do
-    url "https://github.com/codership/wsrep-lib/commit/324b01e4315623ce026688dd9da1a5f921ce7084.patch?full_index=1"
-    sha256 "eaa0c3b648b712b3dbab3d37dfca7fef8a072908dc28f2ed383fbe8d217be421"
-    directory "wsrep-lib"
-  end
-
   def install
     ENV.runtime_cpu_detection
-
-    # Backport fix for CMake 4.0
-    # https://github.com/MariaDB/server/commit/cacaaebf01939d387645fb850ceeec5392496171
-    inreplace "storage/mroonga/CMakeLists.txt", "cmake_minimum_required(VERSION 2.8.12)", ""
 
     # Set basedir and ldata so that mysql_install_db can find the server
     # without needing an explicit path to be set. This can still
