@@ -16,11 +16,16 @@ cask "keepassxc" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "keepassxc@beta"
+  conflicts_with cask: [
+    "keepassxc@beta",
+    "keepassxc@snapshot",
+  ]
   depends_on macos: ">= :high_sierra"
 
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
+  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc.1"
+  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc-cli.1"
 
   uninstall quit: "org.keepassxc.keepassxc"
 

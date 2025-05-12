@@ -21,6 +21,7 @@ class PiecesCli < Formula
     sha256 cellar: :any,                 arm64_ventura: "093dff983a32c3a28d2d5602396222f2a373aa195fe647f281822f8b76c73c21"
     sha256 cellar: :any,                 sonoma:        "4a7f8b42c8f1cd1c9dbc5478aec25d9daeec2527a42f0a6def51805a49fd4655"
     sha256 cellar: :any,                 ventura:       "1d751ae27246eeacc08b539951dffb077c72f9eabbd8476139bb475ede98ebf5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e95c04f61413041db78d96bb5420d465119792587fcd625d7a3882755b45e32e"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ee24ddbabab556682a2c0068b146f156ef3b7d25ad67946bcc5fb2ce0780f4d"
   end
 

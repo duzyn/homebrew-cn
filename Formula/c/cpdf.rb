@@ -11,6 +11,7 @@ class Cpdf < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "91772514307f75224ff0558fcc18999cf76cb7603851a5f94258e272bfb3a5a0"
     sha256 cellar: :any_skip_relocation, sonoma:        "5e63b9e7612e18c9c577aa502c7be73ee534e46650c51911372ab8ec032e0b8c"
     sha256 cellar: :any_skip_relocation, ventura:       "ede4654c045aea5a2aff498c6bd77f3ff8d284df6c7dfc5c5ed0bd491c96d188"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b190429b65b7f9dec51957e6f876901572d403a056db2bb37939b64b50d2df0f"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4bcaa237cb5ad235f05cab8067bac39d4a57aa49195462872f409195a744b4aa"
   end
 
