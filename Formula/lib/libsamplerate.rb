@@ -19,6 +19,19 @@ class Libsamplerate < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
+  # Fix CMake deprecation warning CMP0091 (prereq for cmake 4 compatibility fix below)
+  # PR ref: https://github.com/libsndfile/libsamplerate/pull/180
+  patch do
+    url "https://github.com/libsndfile/libsamplerate/commit/e4a0ab46887029e0f65f145ba3987cc592f18200.patch?full_index=1"
+    sha256 "0826fb59d733188645f3dc207c938580970700381b9bc87058b137723cb30bba"
+  end
+  # Fix to cmake 4 compatibility
+  # PR ref: https://github.com/libsndfile/libsamplerate/pull/225
+  patch do
+    url "https://github.com/libsndfile/libsamplerate/commit/1abc639420b2df8b9ff2e0bdcc28cf6613c7c0d0.patch?full_index=1"
+    sha256 "b6fb61c763a0f072ef2ebb3a311037d2429a5e294141f6d5e552ccd25efabdc0"
+  end
+
   def install
     args = ["-DLIBSAMPLERATE_EXAMPLES=OFF"]
 
