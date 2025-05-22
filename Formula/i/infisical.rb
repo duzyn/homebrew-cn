@@ -1,8 +1,8 @@
 class Infisical < Formula
   desc "CLI for Infisical"
   homepage "https://infisical.com/docs/cli/overview"
-  url "https://mirror.ghproxy.com/https://github.com/Infisical/infisical/archive/refs/tags/infisical-cli/v0.41.3.tar.gz"
-  sha256 "534eb0da0636d289b373e3f8545a88b05089c64e8bd5671513a0c9c79d8dbf28"
+  url "https://mirror.ghproxy.com/https://github.com/Infisical/infisical/archive/refs/tags/infisical-cli/v0.41.4.tar.gz"
+  sha256 "c1feb571d7bc552be7773c69eb5ca50ef836e83b3315bc7b5305b43bce58aa5e"
   license "MIT"
   head "https://github.com/Infisical/infisical.git", branch: "main"
 
@@ -12,12 +12,12 @@ class Infisical < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "44297783607d0c66519fbcf057b7bc51047232d92808ee6c84b61957d23d5eed"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "44297783607d0c66519fbcf057b7bc51047232d92808ee6c84b61957d23d5eed"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "44297783607d0c66519fbcf057b7bc51047232d92808ee6c84b61957d23d5eed"
-    sha256 cellar: :any_skip_relocation, sonoma:        "da984eccbcd05002910b1345d806002ed7923b1da467c84c8c0832ae9c98de8b"
-    sha256 cellar: :any_skip_relocation, ventura:       "da984eccbcd05002910b1345d806002ed7923b1da467c84c8c0832ae9c98de8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26f69cba18de8dc7194ccf608df520ed4e0b1a5d242af09c45f9f150941c9daa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2b05ceb87bfd5a3d0cf6bdbc381a2c78f3d5f382ff5be6974825093d0df6f542"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2b05ceb87bfd5a3d0cf6bdbc381a2c78f3d5f382ff5be6974825093d0df6f542"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "2b05ceb87bfd5a3d0cf6bdbc381a2c78f3d5f382ff5be6974825093d0df6f542"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9bb232e0c304647c237abac6e202ccad1d0109915a837a3a20586dedfefbdbea"
+    sha256 cellar: :any_skip_relocation, ventura:       "9bb232e0c304647c237abac6e202ccad1d0109915a837a3a20586dedfefbdbea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "91f65d44bf5b2c1edb6d209b83ecee996675188e03dd0844fe2beb7c82fbfce7"
   end
 
   depends_on "go" => :build
