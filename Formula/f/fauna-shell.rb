@@ -4,7 +4,6 @@ class FaunaShell < Formula
   url "https://registry.npmjs.org/fauna-shell/-/fauna-shell-4.0.0.tgz"
   sha256 "6dd5c853c1a62e72d6101741a498b3b9fe4db21e68ec2e024541b488b858c77f"
   license "MPL-2.0"
-  head "https://github.com/fauna/fauna-shell.git", branch: "main"
 
   bottle do
     sha256                               arm64_sequoia: "3a775fa6fad091d1c382d58c49d484e416261ce2073c36ed6271364a34fc4821"

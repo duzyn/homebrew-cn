@@ -4,7 +4,6 @@ class NetlifyCli < Formula
   url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-21.5.0.tgz"
   sha256 "79d55a6b8633f0dc9da32ada9a0d48db6582b7805fa5a38d002fac3e05300033"
   license "MIT"
-  head "https://github.com/netlify/cli.git", branch: "main"
 
   bottle do
     sha256                               arm64_sequoia: "5c67212c679b47a3109000a7b41ed61159a0485cf6dc17486da0fe3b04028c3e"

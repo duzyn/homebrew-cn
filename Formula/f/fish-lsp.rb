@@ -4,7 +4,6 @@ class FishLsp < Formula
   url "https://registry.npmjs.org/fish-lsp/-/fish-lsp-1.0.9-1.tgz"
   sha256 "c28799ee8b7e3a17b7892aa3f9d80ebe638313b9bce772ac364faee3ced5d43a"
   license "MIT"
-  head "https://github.com/ndonfris/fish-lsp.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "fd0aa44217f04dce7a0016c07e1f232552092de2958a862b3dbba59ff98e5d4e"

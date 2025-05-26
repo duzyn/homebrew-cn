@@ -4,7 +4,6 @@ class RedoclyCli < Formula
   url "https://registry.npmjs.org/@redocly/cli/-/cli-1.34.3.tgz"
   sha256 "36e2e9f66eaeebbc69c0528ce7498c3c00854458265e2ce1d64271e788996927"
   license "MIT"
-  head "https://github.com/redocly/redocly-cli.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "2db136099fa6e416ab4a89bac19d34f732b7365262aad71a9ff93c58856d48db"

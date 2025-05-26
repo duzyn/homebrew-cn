@@ -4,7 +4,6 @@ class GraphqlInspector < Formula
   url "https://registry.npmjs.org/@graphql-inspector/cli/-/cli-5.0.8.tgz"
   sha256 "738d81999b8c2851ce264112d2a773b225794f21aee3c555f9bdb0f78bc79aab"
   license "MIT"
-  head "https://github.com/kamilkisiela/graphql-inspector.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd9a9963b98f89373fa2a37db49e9012f9ca0d1a1485ad554038f5d45e7f9125"
