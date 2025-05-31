@@ -3,19 +3,19 @@ class MagicWormhole < Formula
 
   desc "Securely transfers data between computers"
   homepage "https://github.com/magic-wormhole/magic-wormhole"
-  url "https://files.pythonhosted.org/packages/30/45/af319226523f023e380fe1d5f0076dd1b80a5b1f3313327d934da901affa/magic_wormhole-0.19.0.tar.gz"
-  sha256 "861378db76b376434b1a2d39be2fb4307da29b294322638cc2cd4a1ebecc37cb"
+  url "https://files.pythonhosted.org/packages/e0/5b/4aff155b8e8ead4bc7c6aa3d1c19dc75aac2315e0c9b12f4e2f246b40141/magic_wormhole-0.19.2.tar.gz"
+  sha256 "b2b4a78acf09ff4cfc503a238f674394a5e735fa08dcd54519243ffc67f97c71"
   license "MIT"
   head "https://github.com/magic-wormhole/magic-wormhole.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "c4cebceec1b5d40b08d4e49b9c554721c8686f1868894b2eaf16ec416d3bdd0c"
-    sha256 cellar: :any,                 arm64_sonoma:  "7c1e13dfca82531c864a23fcfbc125a1e5955442828f40a8ba7f1ec6d86cce06"
-    sha256 cellar: :any,                 arm64_ventura: "746a43e82e394554a86b7984ce10e220fcb370622e76a28bb381b49aa1822ce4"
-    sha256 cellar: :any,                 sonoma:        "0d3aae615bb4fe3bda09fab71d4a97bd689dcd0682b3b3be1b17872117ed130b"
-    sha256 cellar: :any,                 ventura:       "089ff27a6ce46e1eb86df3f271f1e9c3cd24d17cf0d86f3f5a14e15bbbce16b1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "45c76e25bb596ded6064794c40eec2491c5b87075fef8abcdf8627cfd6e62036"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0638525e55ef9370abb978e9b4d4cd9991b949dfdac8a951346cdb1fd6c801be"
+    sha256 cellar: :any,                 arm64_sequoia: "4ca17928ca53efcb89ea97cc17c9690ae50450a4aedec412b1230ae2241b03ab"
+    sha256 cellar: :any,                 arm64_sonoma:  "26c4d67dd7d86467616706e985fbb585d13a99df79090eecf537d5f7ecc6217d"
+    sha256 cellar: :any,                 arm64_ventura: "f107a8515b4a8eb528046cb583a0153e7ec4c222041787308a3c5c2b9887e8b4"
+    sha256 cellar: :any,                 sonoma:        "1a5d1f7f5c29879d15e39d12391e22d41a54673abee55259c579ffa31c6b9896"
+    sha256 cellar: :any,                 ventura:       "2a3bb6d91f7b2d28d0cb66987cbf38f402c2ff99adcdbba256a731bf396cdded"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ec44fddacc00c2f8adff140007312a22ba56a47d1753d13133cee64ba4c7bd15"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5dade9c7f089bf1be59356286fbed3f874b26e299857d2edcfd81562086d75a3"
   end
 
   depends_on "cryptography"
