@@ -8,7 +8,7 @@ class Mongocli < Formula
 
   livecheck do
     url :stable
-    regex(%r{^mongocli/v?(\d+(?:\.\d+)+)$}i)
+    strategy :github_latest
   end
 
   bottle do
