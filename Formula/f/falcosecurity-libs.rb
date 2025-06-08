@@ -15,6 +15,8 @@ class FalcosecurityLibs < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "12242b5955f63f5bb1d63da1e7d6aff53dcd8e46c7ee1d45f0f5c97188b52bd9"
     sha256 cellar: :any,                 arm64_sonoma:  "5f0b5bbeace6d97d2d4d530efb6ceb31bb832254ba53da7603ff49cbd3cec29c"

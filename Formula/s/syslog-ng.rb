@@ -6,6 +6,7 @@ class SyslogNg < Formula
   url "https://mirror.ghproxy.com/https://github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-4.8.3/syslog-ng-4.8.3.tar.gz"
   sha256 "f82732a8e639373037d2b69c0e6d5d6594290f0350350f7a146af4cd8ab9e2c7"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
   head "https://github.com/syslog-ng/syslog-ng.git", branch: "master"
 
   livecheck do
@@ -14,13 +15,13 @@ class SyslogNg < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "d4928f166e61b8e99acde9033b17fd21ba1a186efdd66b9b438e835f34841147"
-    sha256 arm64_sonoma:  "3895718155b1fe46f7d633743a92fcd905964f15511122f6aa2116a22395c4d8"
-    sha256 arm64_ventura: "d76a08e02019b4f2fdcee8354ba3f71b76ee86c845435f0d1229c7ce505bfb5a"
-    sha256 sonoma:        "7919187646e85fdd98bdfc35f31758aa691aa14a496866144298a611f3bedb02"
-    sha256 ventura:       "48329beb4bb819a945ec944a98e30f55b92a8fc998cfdfd41d2207fd3f0f5986"
-    sha256 arm64_linux:   "7cce32122d34f262711e915d5e9c7b2cf05cf05e43038fc168aafa69ac8825f9"
-    sha256 x86_64_linux:  "9f1c1f8fe88a3187fe4fc0ea32c95648f7e4452d9b03809ef584759c71ff55a3"
+    sha256 arm64_sequoia: "094485d26ff9599881e5b0c0d4e984695979116fc1f5228688d9c4e9520fde5e"
+    sha256 arm64_sonoma:  "98a0f77fb50272f195223c1b089e15b3c929a2577bda4e75d1dbda92fc7fc1b2"
+    sha256 arm64_ventura: "381076b590c3df58a7bfcfa6e2eed2a9ad8165258ad3b2284a793e81ea7b3193"
+    sha256 sonoma:        "6393121980490edeaaf60931d484233c7290c98421627703723deda5e5d4ea32"
+    sha256 ventura:       "d6204352ea92e05f90fcafe91354b73310adf6d4565bcc77780526346ab7f5f4"
+    sha256 arm64_linux:   "d2bbd7f1a3464f0eeb3286d540e5ec56c4aa8fcbd2ce1b148bf3e6e699ec2e9b"
+    sha256 x86_64_linux:  "82e4c9098823597427bc2e259e0f28f4db17fa68524aca60d2677881b2e7237c"
   end
 
   depends_on "pkgconf" => :build
@@ -36,7 +37,7 @@ class SyslogNg < Formula
   depends_on "libnet"
   depends_on "libpaho-mqtt"
   depends_on "librdkafka"
-  depends_on "mongo-c-driver"
+  depends_on "mongo-c-driver@1"
   depends_on "net-snmp"
   depends_on "openssl@3"
   depends_on "pcre2"
