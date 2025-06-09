@@ -14,6 +14,7 @@ class Btcli < Formula
     sha256 cellar: :any,                 arm64_ventura: "0214e0965c5a73c0a508de13cb78fbcc4a18a32aa6caf0dff9143842cb0290d9"
     sha256 cellar: :any,                 sonoma:        "ad029162ac1ea3e900fb1bebbeacfc8c26f262ee3c3c69b1721248ef8f65f8d2"
     sha256 cellar: :any,                 ventura:       "a7dce35b9024c524878b4f6d6b5ab5acc1d29981ec749cc60825051a5fb97986"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3c6c32de0ae4b40519a0ea01ce150c1a967e24b4d059a4d56b68184f31972fce"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f416d8e8cbbc73c83e1aff30889af6b994ea07913c2e191dca544d2f0cb41ca"
   end
 
