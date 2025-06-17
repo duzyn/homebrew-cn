@@ -18,6 +18,12 @@ class ActionValidator < Formula
       url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/ffcaead14f73c08531313dcb7c300918db576c3b/action-validator/0.6.0-completion-manpage.patch"
       sha256 "91b0f5170e52537f78e4b196e3b3dd580e3e56e6479f14ba59cdfcff556f4680"
     end
+
+    # rust 1.87.0 patch
+    patch do
+      url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/9bc980d441be50bce28156456113fa52af0d0ff3/action-validator/0.6.0-rust-1.87.patch"
+      sha256 "5748743bb855cdb2eae732a6dca354a27dcf57ebbead3dbc645775b7029a97a9"
+    end
   end
 
   bottle do
