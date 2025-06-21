@@ -1,7 +1,7 @@
 class GitQuickStats < Formula
   desc "Simple and efficient way to access statistics in git"
   homepage "https://git-quick-stats.sh/"
-  url "https://mirror.ghproxy.com/https://github.com/arzzen/git-quick-stats/archive/refs/tags/2.6.2.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/git-quick-stats/git-quick-stats/archive/refs/tags/2.6.2.tar.gz"
   sha256 "00d3989241de7efec1f5bcc4459467548e33f5c4a582b0e35c16ec14fb636bda"
   license "MIT"
 

@@ -1,10 +1,10 @@
 class Gitoxide < Formula
   desc "Idiomatic, lean, fast & safe pure Rust implementation of Git"
-  homepage "https://github.com/Byron/gitoxide"
-  url "https://mirror.ghproxy.com/https://github.com/Byron/gitoxide/archive/refs/tags/v0.44.0.tar.gz"
+  homepage "https://github.com/GitoxideLabs/gitoxide"
+  url "https://mirror.ghproxy.com/https://github.com/GitoxideLabs/gitoxide/archive/refs/tags/v0.44.0.tar.gz"
   sha256 "1166627cd41daf68eb4e97591cd5daaccf94aa75bb454f657b93766a9bf70da9"
   license "Apache-2.0"
-  head "https://github.com/Byron/gitoxide.git", branch: "main"
+  head "https://github.com/GitoxideLabs/gitoxide.git", branch: "main"
 
   livecheck do
     url :stable
@@ -29,7 +29,7 @@ class Gitoxide < Formula
   def install
     # Avoid requiring CMake or building a vendored zlib-ng.
     # Feature array corresponds to the default config (max) sans vendored zlib-ng.
-    # See: https://github.com/Byron/gitoxide/blob/b8db2072bb6a5625f37debe9e58d08461ece67dd/Cargo.toml#L88-L89
+    # See: https://github.com/GitoxideLabs/gitoxide/blob/b8db2072bb6a5625f37debe9e58d08461ece67dd/Cargo.toml#L88-L89
     features = %w[max-control gix-features/zlib-stock gitoxide-core-blocking-client http-client-curl]
     system "cargo", "install", "--no-default-features", "--features=#{features.join(",")}", *std_cargo_args
     generate_completions_from_executable(bin/"gix", "completions", "-s")

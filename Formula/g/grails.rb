@@ -1,7 +1,7 @@
 class Grails < Formula
   desc "Web application framework for the Groovy language"
   homepage "https://grails.org"
-  url "https://mirror.ghproxy.com/https://github.com/grails/grails-core/releases/download/v6.2.3/grails-6.2.3.zip"
+  url "https://mirror.ghproxy.com/https://github.com/apache/grails-core/releases/download/v6.2.3/grails-6.2.3.zip"
   sha256 "b41e95efad66e2b93b4e26664f746a409ea70d43548e6c011e9695874a710b09"
   license "Apache-2.0"
 
@@ -24,7 +24,7 @@ class Grails < Formula
   depends_on "openjdk@17"
 
   resource "cli" do
-    url "https://mirror.ghproxy.com/https://github.com/grails/grails-forge/releases/download/v6.2.3/grails-cli-6.2.3.zip"
+    url "https://mirror.ghproxy.com/https://github.com/apache/grails-forge/releases/download/v6.2.3/grails-cli-6.2.3.zip"
     sha256 "ef78a48238629a89d64996367d0424bc872978caf6c23c3cdae92b106e2b1731"
 
     livecheck do
