@@ -24,6 +24,7 @@ class Textract < Formula
 
   # https://github.com/deanmalmgren/textract/issues/498
   deprecate! date: "2024-06-18", because: :unmaintained
+  disable! date: "2025-06-21", because: :unmaintained
 
   depends_on "antiword"
   depends_on "flac"

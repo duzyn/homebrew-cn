@@ -6,15 +6,16 @@ class SnowflakeCli < Formula
   url "https://files.pythonhosted.org/packages/02/3f/6b0f9d91e465a13b2226457a3f29f96dfeeaa4adb1fd264168e232d498a2/snowflake_cli-3.9.1.tar.gz"
   sha256 "e56b59fde8ae82d460b40e83dee3151e09172406e5fe2f2d7d1a3e811bd75c17"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "c25fa399c44b5f67a1f1a8ea4b8669e95553cd8c8c5f070605e71d1bae4b1f04"
-    sha256 cellar: :any,                 arm64_sonoma:  "dea9f58a70f9c54929bbfc9da491a3c7a57f2b06ab9681a9af89f0d6949aff40"
-    sha256 cellar: :any,                 arm64_ventura: "c5d2d49c6fb016387ac406367ed97ad38c01dfbc4b8541577fef50630c4cd2fa"
-    sha256 cellar: :any,                 sonoma:        "85feeb53361d3d1e5e028f64dd1cf1cf5a098eba3adab7a84b36c31ad1d6ed1c"
-    sha256 cellar: :any,                 ventura:       "89f3d5fa20ccc71fd67047aa3d8a669eb38e6b230472a07cf0f2d9fe5dcf9e1d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "03e0c002f3aa7024397168abc55395519eb037dba944fe9a91b2d6c4a75288fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18241d6586999572493693ca21806ab6d6c6baab3ef80ffb8176043b307def4a"
+    sha256 cellar: :any,                 arm64_sequoia: "d31965dda149883884fb7ba085e8b6c1249cf42dd756238934bfbcaebb1e1833"
+    sha256 cellar: :any,                 arm64_sonoma:  "e71a6ee1ac765d93e11ec3d7d5de86c07673ebbc430ae03259ebc9356688cd9b"
+    sha256 cellar: :any,                 arm64_ventura: "70e04121aa00e406bad7c28a36d8e19254289fabf785507cb387ad0173b59480"
+    sha256 cellar: :any,                 sonoma:        "29a11bb5edb96d8e2f93964109edc96dd8fa9f2f830b8e0e05aac5ae56301aec"
+    sha256 cellar: :any,                 ventura:       "04e5db1bfef58d48e0951d0fd1bd184e041ad79278375f0f0876117b0ccfa5d0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7595f170dc66745206473ab345abe04931fe60082d18c3e92d24de62f812109a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9362a3c398803da5e2274f7110dfdbdbccfa8f37adf20c600180d4efdaac732"
   end
 
   depends_on "rust" => :build # for pydantic-core
@@ -36,13 +37,13 @@ class SnowflakeCli < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/c8/85/abba429fe0fc0b87db20b7b311deec062c613c5e74cfcaab2ad34e864bbf/boto3-1.38.32.tar.gz"
-    sha256 "3faa2c328a61745f3215a63039606a6fcf55d9afe1cc76e3a5e27b9db58cdbf6"
+    url "https://files.pythonhosted.org/packages/2f/3b/f421b30e32c33ce63f0de3b32ea12954039a4595c693db4ea4900babe742/boto3-1.38.41.tar.gz"
+    sha256 "c6710fc533c8e1f5d1f025c74ffe1222c3659094cd51c076ec50c201a54c8f22"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/9b/c2/c4c23c7ad746aba6edfa93ec9e6e14195efcf786425486f6a1b442734a8d/botocore-1.38.32.tar.gz"
-    sha256 "0899a090e352cb5eeaae2c7bb52a987b469d23912c7ece86664dfb5c2e074978"
+    url "https://files.pythonhosted.org/packages/98/46/cb33f5a0b00086a97c4eebbc4e0211fe85d66d45e53a9545b33805f25b31/botocore-1.38.41.tar.gz"
+    sha256 "98e3fed636ebb519320c4b2d078db6fa6099b052b4bb9b5c66632a5a7fe72507"
   end
 
   resource "charset-normalizer" do
@@ -88,11 +89,6 @@ class SnowflakeCli < Formula
   resource "jaraco-functools" do
     url "https://files.pythonhosted.org/packages/ab/23/9894b3df5d0a6eb44611c36aec777823fc2e07740dabbd0b810e19594013/jaraco_functools-4.1.0.tar.gz"
     sha256 "70f7e0e2ae076498e212562325e805204fc092d7b4c17e0e86c959e249701a9d"
-  end
-
-  resource "jeepney" do
-    url "https://files.pythonhosted.org/packages/7b/6f/357efd7602486741aa73ffc0617fb310a29b588ed0fd69c2399acbb85b0c/jeepney-0.9.0.tar.gz"
-    sha256 "cf0e9e845622b81e4a28df94c40345400256ec608d0e55bb8a3feaa9163f5732"
   end
 
   resource "jinja2" do
@@ -161,8 +157,8 @@ class SnowflakeCli < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "pyjwt" do
@@ -208,11 +204,6 @@ class SnowflakeCli < Formula
   resource "s3transfer" do
     url "https://files.pythonhosted.org/packages/ed/5d/9dcc100abc6711e8247af5aa561fc07c4a046f72f659c3adea9a449e191a/s3transfer-0.13.0.tar.gz"
     sha256 "f5e6db74eb7776a37208001113ea7aa97695368242b364d73e91c981ac522177"
-  end
-
-  resource "secretstorage" do
-    url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
-    sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
   end
 
   resource "setuptools" do
@@ -276,14 +267,31 @@ class SnowflakeCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
+    url "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz"
+    sha256 "3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"
   end
 
   resource "wcwidth" do
     url "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz"
     sha256 "72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"
   end
+
+  resource "jeepney" do
+    on_linux do
+      url "https://files.pythonhosted.org/packages/7b/6f/357efd7602486741aa73ffc0617fb310a29b588ed0fd69c2399acbb85b0c/jeepney-0.9.0.tar.gz"
+      sha256 "cf0e9e845622b81e4a28df94c40345400256ec608d0e55bb8a3feaa9163f5732"
+    end
+  end
+
+  resource "secretstorage" do
+    on_linux do
+      url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
+      sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
+    end
+  end
+
+  # update urllib3 constraint, upstream pr ref, https://github.com/snowflakedb/snowflake-cli/pull/2439
+  patch :DATA
 
   def install
     # `shellingham` auto-detection doesn't work in Homebrew CI build environment so
@@ -300,3 +308,18 @@ class SnowflakeCli < Formula
     assert_match "No data", shell_output("#{bin}/snow connection list")
   end
 end
+
+__END__
+diff --git a/pyproject.toml b/pyproject.toml
+index da13a13..71683db 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -43,7 +43,7 @@ dependencies = [
+   "snowflake.core==1.4.0",
+   "tomlkit==0.13.2",
+   "typer==0.15.2",
+-  "urllib3>=1.24.3,<2.5",
++  "urllib3>=1.24.3,<2.6",
+ ]
+ classifiers = [
+   "Development Status :: 5 - Production/Stable",
