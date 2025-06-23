@@ -1,7 +1,7 @@
 class Lla < Formula
   desc "High-performance, extensible alternative to ls"
-  homepage "https://github.com/triyanox/lla"
-  url "https://mirror.ghproxy.com/https://github.com/triyanox/lla/archive/refs/tags/v0.3.11.tar.gz"
+  homepage "https://github.com/chaqchase/lla"
+  url "https://mirror.ghproxy.com/https://github.com/chaqchase/lla/archive/refs/tags/v0.3.11.tar.gz"
   sha256 "dde64fa4acd90f4ae86ed485576cdfe42aab0de2cb674c88712e471968f8ae0a"
   license "MIT"
 

@@ -1,10 +1,10 @@
 class Edbrowse < Formula
   desc "Command-line editor and web browser"
   homepage "https://edbrowse.org"
-  url "https://mirror.ghproxy.com/https://github.com/CMB/edbrowse/archive/refs/tags/v3.8.12.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/edbrowse/edbrowse/archive/refs/tags/v3.8.12.tar.gz"
   sha256 "b5125c7d13c2ed4491dc0d5a31116b244db62ae1c417ba5d29910311d1194632"
   license "GPL-2.0-or-later"
-  head "https://github.com/cmb/edbrowse.git", branch: "master"
+  head "https://github.com/edbrowse/edbrowse.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "1059c249fdc4473bb94aecdb88165610ce77bb5ac7ef3b0f305de0547b9f95e2"
