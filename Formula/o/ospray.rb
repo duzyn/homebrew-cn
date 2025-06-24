@@ -1,10 +1,10 @@
 class Ospray < Formula
   desc "Ray-tracing-based rendering engine for high-fidelity visualization"
   homepage "https://www.ospray.org/"
-  url "https://mirror.ghproxy.com/https://github.com/ospray/ospray/archive/refs/tags/v3.2.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/RenderKit/ospray/archive/refs/tags/v3.2.0.tar.gz"
   sha256 "2c8108df2950bc5d1bc2a62f74629233dbe4f36e3f6a8ea032907d4a3fdc6750"
   license "Apache-2.0"
-  head "https://github.com/ospray/ospray.git", branch: "master"
+  head "https://github.com/RenderKit/ospray.git", branch: "master"
 
   livecheck do
     url :stable
@@ -28,12 +28,12 @@ class Ospray < Formula
   depends_on "tbb"
 
   resource "rkcommon" do
-    url "https://mirror.ghproxy.com/https://github.com/ospray/rkcommon/archive/refs/tags/v1.14.0.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/RenderKit/rkcommon/archive/refs/tags/v1.14.0.tar.gz"
     sha256 "5aef75afc8d4fccf9e70df4cbdf29a1b28b39ee51b5588b94b83a14c6a166d83"
   end
 
   resource "openvkl" do
-    url "https://mirror.ghproxy.com/https://github.com/openvkl/openvkl/archive/refs/tags/v2.0.1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/RenderKit/openvkl/archive/refs/tags/v2.0.1.tar.gz"
     sha256 "0c7faa9582a93e93767afdb15a6c9c9ba154af7ee83a6b553705797be5f8af62"
   end
 

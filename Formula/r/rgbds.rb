@@ -45,7 +45,7 @@ class Rgbds < Formula
   end
 
   test do
-    # Based on https://github.com/rednex/rgbds/blob/HEAD/test/asm/assert-const.asm
+    # Based on https://github.com/gbdev/rgbds/blob/HEAD/test/asm/assert-const.asm
     (testpath/"source.asm").write <<~ASM
       SECTION "rgbasm passing asserts", ROM0[0]
       Label:

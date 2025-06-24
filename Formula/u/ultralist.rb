@@ -1,7 +1,7 @@
 class Ultralist < Formula
   desc "Simple GTD-style task management for the command-line"
   homepage "https://ultralist.io"
-  url "https://mirror.ghproxy.com/https://github.com/ultralist/ultralist/archive/refs/tags/1.7.0.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/gammons/ultralist/archive/refs/tags/1.7.0.tar.gz"
   sha256 "d4a524c94c1ea4a748711a1187246ed1fd00eaaafd5b8153ad23b42d36485f79"
   license "MIT"
 

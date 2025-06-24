@@ -23,9 +23,9 @@ class GiDocgen < Formula
   depends_on "python@3.13"
 
   # Source for latest version is not available on PyPI, so using GitHub tarball instead.
-  # Issue ref: https://github.com/leohemsted/smartypants.py/issues/8
+  # Issue ref: https://github.com/justinmayer/smartypants.py/issues/8
   resource "smartypants" do
-    url "https://mirror.ghproxy.com/https://github.com/leohemsted/smartypants.py/archive/refs/tags/v2.0.1.tar.gz"
+    url "https://mirror.ghproxy.com/https://github.com/justinmayer/smartypants.py/archive/refs/tags/v2.0.1.tar.gz"
     sha256 "b98191911ff3b4144ef8ad53e776a2d0ad24bd508a905c6ce523597c40022773"
   end
 

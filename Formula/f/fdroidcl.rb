@@ -1,10 +1,10 @@
 class Fdroidcl < Formula
   desc "F-Droid desktop client"
-  homepage "https://github.com/mvdan/fdroidcl"
-  url "https://mirror.ghproxy.com/https://github.com/mvdan/fdroidcl/archive/refs/tags/v0.8.0.tar.gz"
+  homepage "https://github.com/Hoverth/fdroidcl"
+  url "https://mirror.ghproxy.com/https://github.com/Hoverth/fdroidcl/archive/refs/tags/v0.8.0.tar.gz"
   sha256 "917bd9e33ec895ef7de5e82e08d36a36bdf82dc9fd810520cc657be2d8d44106"
   license "BSD-3-Clause"
-  head "https://github.com/mvdan/fdroidcl.git", branch: "master"
+  head "https://github.com/Hoverth/fdroidcl.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "43a2344ed4ad381157a0af5757f64b57f888184fa3c30aa44cf009bf00e0567d"

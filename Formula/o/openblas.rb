@@ -52,7 +52,7 @@ class Openblas < Formula
     end
 
     # Apple Silicon does not support SVE
-    # https://github.com/xianyi/OpenBLAS/issues/4212
+    # https://github.com/OpenMathLib/OpenBLAS/issues/4212
     ENV["NO_SVE"] = "1" if Hardware::CPU.arm?
 
     # Must call in two steps

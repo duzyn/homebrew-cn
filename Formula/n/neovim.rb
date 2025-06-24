@@ -37,7 +37,7 @@ class Neovim < Formula
     end
 
     resource "tree-sitter-query" do
-      url "https://mirror.ghproxy.com/https://github.com/nvim-treesitter/tree-sitter-query/archive/refs/tags/v0.5.1.tar.gz"
+      url "https://mirror.ghproxy.com/https://github.com/tree-sitter-grammars/tree-sitter-query/archive/refs/tags/v0.5.1.tar.gz"
       sha256 "fe8c712880a529d454347cd4c58336ac2db22243bae5055bdb5844fb3ea56192"
     end
 

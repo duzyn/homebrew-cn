@@ -1,10 +1,10 @@
 class Coq < Formula
   desc "Proof assistant for higher-order logic"
   homepage "https://coq.inria.fr/"
-  url "https://mirror.ghproxy.com/https://github.com/coq/coq/releases/download/V8.20.1/coq-8.20.1.tar.gz"
+  url "https://mirror.ghproxy.com/https://github.com/rocq-prover/rocq/releases/download/V8.20.1/coq-8.20.1.tar.gz"
   sha256 "09ad238cc7930d59564b032be2a8a1fd10d6ef845364d739072d04090a6d3cc2"
   license "LGPL-2.1-only"
-  head "https://github.com/coq/coq.git", branch: "master"
+  head "https://github.com/rocq-prover/rocq.git", branch: "master"
 
   livecheck do
     url :stable
