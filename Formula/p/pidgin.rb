@@ -58,7 +58,7 @@ class Pidgin < Formula
   end
 
   head do
-    url "https://keep.imfreedom.org/pidgin/pidgin/", branch: "default", using: :hg
+    url "https://keep.imfreedom.org/pidgin/pidgin/", using: :hg
 
     depends_on "gobject-introspection" => :build
     depends_on "gstreamer" => :build

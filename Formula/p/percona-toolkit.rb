@@ -4,7 +4,7 @@ class PerconaToolkit < Formula
   url "https://downloads.percona.com/downloads/percona-toolkit/3.7.0-2/source/tarball/percona-toolkit-3.7.0.tar.gz"
   sha256 "192c899dcfa26eca1b9e8692b7b687d143154902b6089afb03c14ea1b93e432d"
   license any_of: ["GPL-2.0-only", "Artistic-1.0-Perl"]
-  head "lp:percona-toolkit", using: :bzr
+  head "https://github.com/percona/percona-toolkit.git", branch: "3.x"
 
   livecheck do
     url "https://www.percona.com/products-api.php", post_form: {

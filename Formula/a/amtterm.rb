@@ -4,7 +4,7 @@ class Amtterm < Formula
   url "https://www.kraxel.org/releases/amtterm/amtterm-1.7.tar.gz"
   sha256 "8c58b76b3237504d751bf3588fef25117248a0569523f0d86deaf696d14294d4"
   license "GPL-2.0-or-later"
-  head "https://git.kraxel.org/git/amtterm/", branch: "master", using: :git
+  head "https://github.com/kraxel/amtterm.git", branch: "master"
 
   livecheck do
     url "https://www.kraxel.org/releases/amtterm/"
