@@ -2,7 +2,7 @@ class HuggingfaceCli < Formula
   include Language::Python::Virtualenv
 
   desc "Client library for huggingface.co hub"
-  homepage "https://huggingface.co/docs/huggingface_hub/index"
+  homepage "https://huggingface.co/docs/huggingface_hub/guides/cli"
   url "https://files.pythonhosted.org/packages/a4/01/bfe0534a63ce7a2285e90dbb33e8a5b815ff096d8f7743b135c256916589/huggingface_hub-0.33.1.tar.gz"
   sha256 "589b634f979da3ea4b8bdb3d79f97f547840dc83715918daf0b64209c0844c7b"
   license "Apache-2.0"
@@ -16,9 +16,8 @@ class HuggingfaceCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "89b2a4e7d764e215f3c3d71a08b5a63cc532d94a1eee37b1a5553c983d16aba1"
   end
 
-  depends_on "maturin" => :build # for `hf-xet`
   depends_on "pkgconf" => :build
-  depends_on "rust" => :build # upstream bug report, https://github.com/PyO3/maturin/issues/2642
+  depends_on "rust" => :build # for `hf-xet`
 
   depends_on "certifi"
   depends_on "git-lfs"
