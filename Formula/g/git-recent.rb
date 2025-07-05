@@ -1,12 +1,12 @@
 class GitRecent < Formula
   desc "Browse your latest git branches, formatted real fancy"
   homepage "https://github.com/paulirish/git-recent"
-  url "https://mirror.ghproxy.com/https://github.com/paulirish/git-recent/archive/refs/tags/v2.0.2.tar.gz"
-  sha256 "44c117f04f2ed2ac2c9146b0f11b3140cd7f1d82845eca43ed6f7155e929b052"
+  url "https://mirror.ghproxy.com/https://github.com/paulirish/git-recent/archive/refs/tags/v2.0.4.tar.gz"
+  sha256 "af1c3181e1f4bd7818c8500870d8383085797b5fa76c4a15f250b408873990c2"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f57a03f6950455f989457135a7a7106c7a2c8cd108872ada2f0fd6a2fdebebe6"
+    sha256 cellar: :any_skip_relocation, all: "8fbe7777822d4dbc6d8b32207b921922570ea15aa8b3504204d21824fb8d922e"
   end
 
   depends_on "fzf"

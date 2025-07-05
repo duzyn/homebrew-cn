@@ -6,6 +6,7 @@ class Prowler < Formula
   url "https://files.pythonhosted.org/packages/67/8d/d492969080126217bb08eb3ae271d4889d33ac7cb89adfecdf752c7d40cc/prowler-5.8.0.tar.gz"
   sha256 "1c91620baf60adc053c1489e975a0fe387dd667e0546373875949f96f80f0069"
   license "Apache-2.0"
+  head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "619e00d0f84494dc4caf8c92449d10e87413ddfcaac7d947dc7554de0629680e"
@@ -20,13 +21,14 @@ class Prowler < Formula
   depends_on "cmake" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "certifi"
   depends_on "cryptography"
   depends_on "libsodium" # for pynacl
   depends_on "libyaml"
   depends_on "numpy"
-  depends_on "python@3.12" # https://github.com/prowler-cloud/prowler/blob/master/pyproject.toml#L68
+  depends_on "python@3.12" # https://github.com/prowler-cloud/prowler/issues/6737
 
   on_linux do
     depends_on "patchelf" => :build
@@ -1016,9 +1018,7 @@ class Prowler < Formula
     # The source doesn't have a valid SOURCE_DATE_EPOCH, so here we set default.
     ENV["SOURCE_DATE_EPOCH"] = "1451574000"
 
-    # Multiple resources require `setuptools`, so it must be installed first
-    venv = virtualenv_install_with_resources without: "plotly", start_with: "setuptools"
-    venv.pip_install resource("plotly"), build_isolation: false
+    virtualenv_install_with_resources
   end
 
   test do

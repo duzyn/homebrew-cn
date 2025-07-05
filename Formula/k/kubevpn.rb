@@ -1,19 +1,19 @@
 class Kubevpn < Formula
   desc "Offers a Cloud-Native Dev Environment that connects to your K8s cluster network"
   homepage "https://www.kubevpn.dev"
-  url "https://mirror.ghproxy.com/https://github.com/kubenetworks/kubevpn/archive/refs/tags/v2.7.20.tar.gz"
-  sha256 "359c30835c702453ee890b690991be9adba4fafc2808219e2ca7da216ba43f0d"
+  url "https://mirror.ghproxy.com/https://github.com/kubenetworks/kubevpn/archive/refs/tags/v2.7.21.tar.gz"
+  sha256 "49e0d9a9c92eae31dbf25c155e181e6306afe6d46ebb95770d5f4a50b16db114"
   license "MIT"
   head "https://github.com/kubenetworks/kubevpn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a3e97799441d2d17ede216e0fb3aab111e39187c6a8a9c8e7afbaa121f04a932"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "92a423df2b431ead75242ded8f8bebb31bfcc9178bb26e189924a6c8973dc7ce"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "36c71505488142a0a802498bba952d779a9a80b106331af188ca11e358c7fcea"
-    sha256 cellar: :any_skip_relocation, sonoma:        "faae1d2af1b483936991b1d89098836a25a43186a84165a07b2bea697b988547"
-    sha256 cellar: :any_skip_relocation, ventura:       "821232195fba43dee07ab58efbfed9bcbd41659eff5df08b4a15ca8f66c62e7a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b502aa67f12c04adba6065dd9dec905c0150ce0e1df7fb32f73f80ae5cc8b3eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fb179966fa71ae3bf46016e3429b89702eefdbcf8b448999125fad853d3eea0f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b28dcfc4f19974c991c7c0e739cb5500a6596f92bcdd78bfa39d8a1779d20cdd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a394b41eac790de6edd127b20fe7c59603b38f14413235a31ce21dca3bc3f9d6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c3504e33e8eab9bc384543cd06c212c0a7d5407d364db6bfc5807f16ab4b6057"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5ce28a12992cb6ade823f2c95ab2c0baf87522d06207fddfdd5794ddfb550d0c"
+    sha256 cellar: :any_skip_relocation, ventura:       "7d4203eaf217da1dcc61718d098037f009123abb4498bd47834e4238d23f53ab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ff603a6fb983f10e15bd5c2dafbfafca8c898fa5f5e9abe64935d9d15db138f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fbaac881e156a29661f385b50402aff0f6af917b52ec33dfa8c7cba8fa6aa8d3"
   end
 
   depends_on "go" => :build

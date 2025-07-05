@@ -3,15 +3,12 @@ class RichCli < Formula
 
   desc "Command-line toolbox for fancy output in the terminal"
   homepage "https://github.com/textualize/rich-cli"
-  url "https://files.pythonhosted.org/packages/ca/55/e35962573948a148a4f63416d95d25fe75feb06d9ae2f9bb35adc416f894/rich-cli-1.8.0.tar.gz"
-  sha256 "7f99ed213fb18c25999b644335f74d2be621a3a68593359e7fc62e95fe7e9a8a"
+  url "https://files.pythonhosted.org/packages/57/7b/70878722e04b8eb8dba4d00429bce31cd012a6a4caf09dbf012bbf007104/rich_cli-1.8.1.tar.gz"
+  sha256 "16992bcbd454974dc53671ba1a12e189148566164aaa7370bdf6648c8b1438c3"
   license "MIT"
-  revision 8
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "28895eff8f7b7900e8a29d58013b9c376f510f173e80713b3448b9d8157eebca"
+    sha256 cellar: :any_skip_relocation, all: "2d0c36a7038eb309239e8b32ded419bfd9045a5e5d2f50cf573694e96b0bf5ba"
   end
 
   depends_on "certifi"
@@ -43,8 +40,8 @@ class RichCli < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
-    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
+    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
   end
 
   resource "requests" do
@@ -73,6 +70,9 @@ class RichCli < Formula
   end
 
   def install
+    # `ValueError: ZIP does not support timestamps before 1980` when building wheel for pygments
+    ENV["SOURCE_DATE_EPOCH"] = Time.now.to_i.to_s
+
     virtualenv_install_with_resources
 
     generate_completions_from_executable(bin/"rich", shells: [:fish, :zsh], shell_parameter_format: :click)
