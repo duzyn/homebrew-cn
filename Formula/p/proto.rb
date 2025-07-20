@@ -1,8 +1,8 @@
 class Proto < Formula
   desc "Pluggable multi-language version manager"
   homepage "https://moonrepo.dev/proto"
-  url "https://mirror.ghproxy.com/https://github.com/moonrepo/proto/archive/refs/tags/v0.51.1.tar.gz"
-  sha256 "9981deb6cdd43491710bbf2efb6cc33985b55b10609afe647c52cc5f214c0e79"
+  url "https://mirror.ghproxy.com/https://github.com/moonrepo/proto/archive/refs/tags/v0.51.2.tar.gz"
+  sha256 "c23dc2b8b20ea268220d03827f34434a80d620b98974d316a446af1254ae7baf"
   license "MIT"
   head "https://github.com/moonrepo/proto.git", branch: "master"
 
@@ -12,13 +12,13 @@ class Proto < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8a800ae2335c0569c981e507a0bc8c432bef80cdb82f807bc53b31ccf1845229"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7bc2d05e363087f38c880d938415ac05d62aa84d19ac98f7e89c6742ee4cb9e5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "bad5bcc350e00bcaab60aede8d573d0ffb5eb072397052f303766a5b4f736b6a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7fb7fe40115983797c3b15710f605f9a053872056ca6621732d85e6ec8ff58c9"
-    sha256 cellar: :any_skip_relocation, ventura:       "fd393f1d2cbf58b1a3436b2f175e9217c5782b204b37362952c3de8aa23772e7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7281a43b99164031dd0cddf52659413bcbe86111cb9ee5c191b42fe1ea8c3e29"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a69accafb2ac02efe6c3ca346f781d8f0b63e451a0b36b97234b8b4678170871"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e103b445057fb784e4e6d025bb18a50a36ca924a6e0b37362dbd34c7cf608709"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "92747553aa24817d6799450f0f2ac66bac1d12b79bf47cc42783bdbac8f2b9cd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "cc7a3fd9887ce8cf70932fd52dc5637a4aed1d24f1352328b76bad93d43012a8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1b40c0b21586c36ec39ee672f6aec8e8f03da9bbc2bd376d25461d84cdbab425"
+    sha256 cellar: :any_skip_relocation, ventura:       "98365aa30e0504b454a38c582f2c1d40715ff54fa855df1481a7519cfb1bc5d0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c376301f53367e147d8cdc0807440afc444567781457af7250c4630ebda90fe5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba1a57ff4bf1cc9de3af06c5a016c75c28a077826efc583f98e94594703cb2c2"
   end
 
   depends_on "pkgconf" => :build
