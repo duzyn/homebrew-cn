@@ -3,19 +3,19 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://mirror.ghproxy.com/https://github.com/aws/aws-cli/archive/refs/tags/2.27.60.tar.gz"
-  sha256 "7a3f2e80b706b2fd462c2deb4ab8f8d49a684e36803ceadec50e9852de4fc98f"
+  url "https://mirror.ghproxy.com/https://github.com/aws/aws-cli/archive/refs/tags/2.27.61.tar.gz"
+  sha256 "e436c8c974479fe94f6eef6ed791fac0620b89882df3f34c4dfa48e9e21d5052"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "5891d4ba53104e462cb70d611445626229938e83fdf3e1cf02170c9103b8018b"
-    sha256 cellar: :any,                 arm64_sonoma:  "ac29a41fd8ec548a69f50bd54ccd732036a278ca6e472cbc30e95fec3188d4f4"
-    sha256 cellar: :any,                 arm64_ventura: "f9a033a2eb5e544b3be9ad977bcf768f69e27276fcf7a892f1376e429a5d6477"
-    sha256 cellar: :any,                 sonoma:        "60e194490909ce8e83978acc9d30fad6cab6f25ac21f28d0e94e1c6f9e6723c8"
-    sha256 cellar: :any,                 ventura:       "d1eb924b0a6613d2dda78614e4cb92f05586ab51f4e53268ae6d51d45a2fc2da"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a31ac182b6ab0b722c490e109361bc8552cd00a54dea5ac114a80dfc173270b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df931362fa55bbd9c21f9a909827a88826b92322d478467367fd67dea3ec9e65"
+    sha256 cellar: :any,                 arm64_sequoia: "7d2dbeba05edb1e72258bf63283f302ef07ad7333e95df13329efd27c83d794e"
+    sha256 cellar: :any,                 arm64_sonoma:  "a05aeeff87b868b7926fdcac5ab56a0f0a6b72742b67e062f6b7bdcd685103c4"
+    sha256 cellar: :any,                 arm64_ventura: "341632bbc9211535fa123a5e3046804cf59763dd29a9c7e214fbac94d41b45d1"
+    sha256 cellar: :any,                 sonoma:        "66fe99dcfed83c63ab51b6a3768800e823b539a8e2e3a1f0eba2a56b410d445e"
+    sha256 cellar: :any,                 ventura:       "0ed1cf0b88e0dcdfbef76c3bf731c981dd0d7dcd6101dd60b5366dba1ebbe091"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "da8ff5a0f3204a57c4efbeaf4610155052edee7a873fc6cc298df6485b8f6d13"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bd54422b6d975352b1a0935b433d78231aaad7036240f89623a1477458e220e"
   end
 
   depends_on "cmake" => :build
