@@ -12,6 +12,7 @@ class Aiken < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "f5727f30a905dd47e0dc2d665fface04471345491b3a78641b8490d7475ff775"
     sha256 cellar: :any_skip_relocation, sonoma:        "bbd79525e346edd3aa8e612b258f53cc1c06c7ab377c0f011444a8d9d39aa70a"
     sha256 cellar: :any_skip_relocation, ventura:       "eff97c253040ee3e4350eaeb56ea8549a2b0085a8ad48adfe4a5958261e0b1b7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d792aa271c65084f44a87748a48641336208efbf50621c326fed14b3a39edd88"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "04816c293fb1ff27d65e1502884b5ae67752453c1ad5b46d07c12d57d7fb5c43"
   end
 
