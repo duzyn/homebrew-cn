@@ -12,7 +12,7 @@ class LlamaCpp < Formula
   # Having multiple updates in one day is not very convenient
   # Update formula only after 10 new tags (1 update per ≈2 days)
   #
-  # `trottle 10` doesn't work
+  # `throttle 10` doesn't work
   livecheck do
     url :stable
     regex(/^v?b(\d+(?:\.\d+)*0)$/i)
