@@ -5,6 +5,11 @@ class ApachePolaris < Formula
   sha256 "4ed1a13aae04c8bf25982bc059e12d3490cb70ddf3b175dc97a227b46a566e10"
   license "Apache-2.0"
 
+  livecheck do
+    url "https://polaris.apache.org/downloads/"
+    regex(/href=.*?apache-polaris-(\d+(?:\.\d+)+)-incubating\.t/i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "651193a8f10b0c26dab239210f54945b941bcc8b32ff36ca4a711a25ea171c28"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1723a5e2227e1fc846448527ed63bf01fbd2d54408e63430b39bbd2f6f2aea98"
