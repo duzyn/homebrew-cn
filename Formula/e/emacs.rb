@@ -1,8 +1,8 @@
 class Emacs < Formula
   desc "GNU Emacs text editor"
   homepage "https://www.gnu.org/software/emacs/"
-  url "https://ftp.gnu.org/gnu/emacs/emacs-30.1.tar.xz"
-  mirror "https://ftpmirror.gnu.org/emacs/emacs-30.1.tar.xz"
+  url "https://ftpmirror.gnu.org/gnu/emacs/emacs-30.1.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/emacs/emacs-30.1.tar.xz"
   sha256 "6ccac1ae76e6af93c6de1df175e8eb406767c23da3dd2a16aa67e3124a6f138f"
   license "GPL-3.0-or-later"
 

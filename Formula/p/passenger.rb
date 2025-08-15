@@ -5,7 +5,7 @@ class Passenger < Formula
   sha256 "82c830aee98feece09e84309c2d0c6bb3f7b22a3c8e33cfe93b5e0d498615d0f"
   license "MIT"
   revision 2
-  head "https://github.com/phusion/passenger.git", branch: "stable-6.0"
+  head "https://github.com/phusion/passenger.git", branch: "stable-6.1"
 
   bottle do
     sha256 cellar: :any,                 arm64_sequoia: "7d587933f9606519d026d7221ea089397f2ec9fbfbd36c69df5f861d4e318562"

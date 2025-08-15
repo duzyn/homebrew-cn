@@ -11,6 +11,7 @@ class Nessie < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "622b2c514c1041795f53919c8b0e518f74cafaa98f1d8371449d1aad9343e557"
     sha256 cellar: :any_skip_relocation, sonoma:        "d2b523fc4c44cd2fd0e00523aaa76fb190dea1061cda44ddf81c4edde8fa0cef"
     sha256 cellar: :any_skip_relocation, ventura:       "2e3dd41f11bac0f494b2cf3714bfbf61d2f8fbfc8acdd8f709bec1c0a573a377"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3e5c9aa4c841234dbb71121fe7377499583faee57c68edd4e14202c47ecc28ae"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1cc8d5a1f0457913f58a48da28015d8447a66f113472ca85e39e1595a8175d23"
   end
 
