@@ -7,16 +7,17 @@ class VideoCompare < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sequoia: "33adefe6d8a184a4e2a9d985f92e2be51076831a3cb47f6f5fb1934b5e905004"
-    sha256 cellar: :any,                 arm64_sonoma:  "dfd34316f3a0060af4aa4c53164b798f18c47a1eb07e1792fc781c5b35cc307a"
-    sha256 cellar: :any,                 arm64_ventura: "2b090576c3cc30daf9fb32cfd813950f9993ad730c86a95f70f581c3727bb638"
-    sha256 cellar: :any,                 sonoma:        "f7ff8301373e8f37dd869760b0da68c481c52da67890a762fd00f4b173f32635"
-    sha256 cellar: :any,                 ventura:       "6295e84674c901031b1585e376aadaa90f207068d317b19e5566719437f628df"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6eab779c5bfe285e28b6e21d5a13576ffb6264ff2b95be769765628fa95dfe50"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "caff00ea46afbbf7c2c5da0bf3d8e9f92ffd0f2cf0fb04ba5d4396a20f13fcb1"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sequoia: "ce07c35e3d8dd6401d458157701d901bdc545ee5d7cb214314591ea35810f0e6"
+    sha256 cellar: :any,                 arm64_sonoma:  "3950652501dd07d382dded70a2a4853724e7747d55a95a743ade99ea4a2c3ad6"
+    sha256 cellar: :any,                 arm64_ventura: "73f1a4a6ba9db4c25d1206f82b5a488eb297c9d6965fa59dfb0178cddc1fd96c"
+    sha256 cellar: :any,                 sonoma:        "6e70856bb5f1adc6e3220b0b685f776bd59777c43eadb516d68a3211da8fe5be"
+    sha256 cellar: :any,                 ventura:       "a01ce2449b88546908c836e357a719b477025be30e039b15f6a4cf71e59cdd0c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4f4dcbdd16466a70b96bce702fe5ba90818ee256ea09aeb4f5748696432963f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8a3070d182a9c8bc52e00e603a6c62493bbbecba6b1028660523b05abb8e963"
   end
 
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "sdl2"
   depends_on "sdl2_ttf"
 
