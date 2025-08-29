@@ -12,6 +12,7 @@ class Alive2 < Formula
     sha256 cellar: :any,                 arm64_sequoia: "2b50bddff87ab541451702d2c7d004412b8b10ae2b946a2efba614943cbfef58"
     sha256 cellar: :any,                 arm64_sonoma:  "c36cbe7db0301802dbaed9106d464e15979f24d842d73ea3d092ee6a74740317"
     sha256 cellar: :any,                 arm64_ventura: "b414bdbfb3e39fade927d5241a03c78bc05346359d14d72d222819fa79b2b01d"
+    sha256 cellar: :any,                 sonoma:        "44f20bc496219036254e1e751090e6d1cd5349ad97635ab1d3c26bffa184f0a0"
     sha256 cellar: :any,                 ventura:       "e7c67408e23dd90ca063cb508dea9060a5f380bbfcb3927481908784872560fd"
     sha256 cellar: :any_skip_relocation, arm64_linux:   "a5c21492b9c865c0b252c360129e047c6d0260180d8d2fe9dc36dfa57aab6c55"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9fe289bc8cd5bd27db7c60c76084b6b9b72ffe6a1fa5dae9f43ede9367fb4d9"
