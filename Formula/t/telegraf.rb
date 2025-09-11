@@ -4,6 +4,7 @@ class Telegraf < Formula
   url "https://mirror.ghproxy.com/https://github.com/influxdata/telegraf/archive/refs/tags/v1.36.1.tar.gz"
   sha256 "2478f4c9543300ed44cc0a3329e5a4c6095d9a6eae86aa2deab4ff9d19c1fdd5"
   license "MIT"
+  revision 1
   head "https://github.com/influxdata/telegraf.git", branch: "master"
 
   livecheck do
@@ -12,12 +13,12 @@ class Telegraf < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1b2d949668587cc97f75110f0aef9ac7781acf9e5dfce5143ed536eddbb615a9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b8093266be210755d05e755c87ce2b48ec5691c51dfbf63232eb0ac6514f4e20"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5c81df43a6ead06dd0b5491d3cd5711f564af7bf950f9a98b685275fb80793f3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3408b33d406a520c72f98eecc375af561b16414d5c7d7330a68433c6cda552fb"
-    sha256 cellar: :any_skip_relocation, ventura:       "83582771b37e6690fe36b08dc25f849d6c697aabdb7e84cc450ddc8d7f4b47b6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "48c246dbe0394ac69f2ab6e3fe6a23fa814e6e74d58aa26d0d907d1da679b1cd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "17806893a70f7a01b06da23929dd73699aedb2a061a6d30783edb2e6797c506e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bbb1f8c8d8214729f30cccebce6bacbcf964d7512557c01ad65e59c0ee077a78"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "fc259488b9582bf528370a57eb3bee5688b3c6ff788e92f39186e6ea223f2367"
+    sha256 cellar: :any_skip_relocation, sonoma:        "12629bde117747d88418cee4d6123fb39ba95828905196d6e96bfa6827ffa448"
+    sha256 cellar: :any_skip_relocation, ventura:       "d3b6348b243a63376fe8e0b884b208be9a000d49abd808316e446ec1623d8870"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0bb234f6bd0f8b8de4d424dc96c9fda63caa81c1efd79935aa2f563f86a5840d"
   end
 
   depends_on "go" => :build
@@ -38,6 +39,7 @@ class Telegraf < Formula
     working_dir var
     log_path var/"log/telegraf.log"
     error_log_path var/"log/telegraf.log"
+    environment_variables HOME: HOMEBREW_PREFIX
   end
 
   test do

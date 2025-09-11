@@ -6,6 +6,7 @@ class AwsCIo < Formula
   license "Apache-2.0"
 
   bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "927fd9363c15cad97efca368b6ccaa5ac0163846ed84013b293be298daabdcee"
     sha256 cellar: :any,                 arm64_sequoia: "39d42385044128e5ee9dc91099cf633fbcefe56f9ff048092737e6fdce82fcb8"
     sha256 cellar: :any,                 arm64_sonoma:  "5e92f3c45fa70213881e0700e99077feca48142e8a9c4d57ce732b4d4e4211b5"
     sha256 cellar: :any,                 arm64_ventura: "81e945a1e0911496b9fd21cbbdbe10f45851a91a1c3dc9eeeb0b23ebd28032ec"
