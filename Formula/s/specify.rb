@@ -3,12 +3,12 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://mirror.ghproxy.com/https://github.com/github/spec-kit/archive/refs/tags/v0.0.22.tar.gz"
-  sha256 "32f2af6ee9a3ce687cae67706477492953f3a485431867e2cf75317ba9ba9aff"
+  url "https://mirror.ghproxy.com/https://github.com/github/spec-kit/archive/refs/tags/v0.0.30.tar.gz"
+  sha256 "213e45382e602335f5c77172be19d0b0128831a881432cd42fbd19a38016ceae"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "beb4a2529021eb3bfffb21e0d57805e88170f1b88b72ef53734b26d346f73939"
+    sha256 cellar: :any_skip_relocation, all: "ca6e4e68b0f9816c7afc4587bdd01b6dd8a120f1eb86d35c32ea00f9869f02a2"
   end
 
   depends_on "certifi"
@@ -104,7 +104,9 @@ class Specify < Formula
   end
 
   test do
-    system bin/"specify", "init", "test-project", "--ai", "copilot", "--ignore-agent-tools"
+    system bin/"specify", "init", "test-project", "--ai", "copilot", "--script", "sh", "--ignore-agent-tools"
     assert_path_exists testpath/"test-project/.specify/memory/constitution.md"
+
+    assert_match "Specify CLI is ready to use", shell_output("#{bin}/specify check")
   end
 end
