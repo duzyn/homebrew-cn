@@ -18,6 +18,7 @@ class Yq < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "2d56545a2e89ca64ff477691be19098f246b7f8b733c8b332a28a5562cf701b5"
     sha256 cellar: :any_skip_relocation, sonoma:        "4c26fa72ff3bc32190c499cd753c95973a8409a28a3f10b11f32346980072a2a"
     sha256 cellar: :any_skip_relocation, ventura:       "4c26fa72ff3bc32190c499cd753c95973a8409a28a3f10b11f32346980072a2a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ac3695a93a6bf57b3aa093c73947497583aae5f48ddbb4d51bddbea73201ca9d"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "e808fd97c9a3d1c6b3e4feb99c43d1ab967751d56ab102a89aa8f0da3d9cfc3e"
   end
 
