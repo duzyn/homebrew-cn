@@ -7,6 +7,7 @@ class Osm2pgsql < Formula
   head "https://github.com/osm2pgsql-dev/osm2pgsql.git", branch: "master"
 
   bottle do
+    sha256 arm64_tahoe:   "fd3082e7739405fcff36b97163cb9693908cb6160930f79e07b49e9920dfe828"
     sha256 arm64_sequoia: "ae6732f4577555118510370adccaeefe194a43638f3edf8c6fa7d74883b70daa"
     sha256 arm64_sonoma:  "602428b81887e949678e2f9782e11ab3896374620192652e7ddb6f5454ea5151"
     sha256 arm64_ventura: "fdfaabdf6101e1536d70b8e21b37c5a1cecaf347e191dd957b032a853be0d09e"
@@ -23,6 +24,7 @@ class Osm2pgsql < Formula
   depends_on "libosmium" => :build
   depends_on "lua" => :build
   depends_on "nlohmann-json" => :build
+  depends_on "protozero" => :build
 
   depends_on "libpq"
   depends_on "luajit"
@@ -42,12 +44,11 @@ class Osm2pgsql < Formula
     # Remove bundled libraries
     rm_r("contrib")
 
-    args = %W[
+    args = %w[
       -DEXTERNAL_CLI11=ON
       -DEXTERNAL_FMT=ON
       -DEXTERNAL_LIBOSMIUM=ON
       -DEXTERNAL_PROTOZERO=ON
-      -DPROTOZERO_INCLUDE_DIR=#{Formula["libosmium"].opt_libexec}/include
       -DWITH_LUAJIT=ON
     ]
 

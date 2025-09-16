@@ -23,10 +23,6 @@ class Sc68 < Formula
     sha256 monterey:       "958f47e1b57574ba4ea608fa26a50af67feef92bba51d7e9b598ef0567fb4feb"
     sha256 big_sur:        "d5ac6383a3b1f82707b9a981ca02ce6dee57cdc096adb16dbf044ef5c5a051c9"
     sha256 catalina:       "1d06595617862cdb67d49f8bc8389e7e6cb4bd6f6ac81adf20969c68bbe80434"
-    sha256 mojave:         "45e1df25bd1394d7e1985b5fdd96a1090ff82d245f3b26bdc5055ec6c80807dd"
-    sha256 high_sierra:    "b3e4809754847ca52468463ed60293032efeecf42f24acd3026bb03d369a91d9"
-    sha256 sierra:         "0b5a0931d6f72700ca691436ed69d467cc043aea9b3454d628050886ccd12141"
-    sha256 el_capitan:     "d5ac5c810d4f3505230f2cdb9bc3f9f8c14394e1663f30f8d601fe4a559f99c8"
     sha256 arm64_linux:    "ce25e34fecfd668e1f6fa0ef0d924b96df389c43c5428e386b54a5411c7f0d24"
     sha256 x86_64_linux:   "1876d7c98fac9c5a36824c13141354e0cbce33508f155741d8430182d7fd6104"
   end

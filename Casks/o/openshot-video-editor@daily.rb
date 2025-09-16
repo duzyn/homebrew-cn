@@ -1,6 +1,6 @@
 cask "openshot-video-editor@daily" do
-  version "3.4.0,14640-3723fbd9-0b018e34,release-candidate"
-  sha256 "9b6670e1789d32f8658c28b75a9c82e7026db721de5a98164dcdbb84ba9b7870"
+  version "3.4.0,14654-3723fbd9-0b018e34,release-candidate"
+  sha256 "5896af24beafcc280a9285a98974636bc49d30e2cc4ddd69cbca0fcf474a644d"
 
   url "https://mirror.ghproxy.com/https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
@@ -22,7 +22,6 @@ cask "openshot-video-editor@daily" do
   end
 
   conflicts_with cask: "openshot-video-editor"
-  depends_on macos: ">= :catalina"
 
   app "OpenShot Video Editor.app"
 

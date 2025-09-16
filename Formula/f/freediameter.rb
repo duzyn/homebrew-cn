@@ -28,6 +28,7 @@ class Freediameter < Formula
 
   bottle do
     rebuild 2
+    sha256                               arm64_tahoe:   "5eafa2b1cff32588e446f38812e5d28bdbbdc3efca9c5d04d3d8c75aadc63c1a"
     sha256                               arm64_sequoia: "3a0fdc3ba68de137c1c7565a2bf1952cf239c35717276e185ef2c57d8f042a0f"
     sha256                               arm64_sonoma:  "77cce28c5fae584b97aefe1d124bf14da292e5f40f62a4bfccb4b545feecf9f8"
     sha256                               arm64_ventura: "a0a2bb922fe5286a90703eaf346ab465702d3bb43040b11f4c49f2b4296ec768"

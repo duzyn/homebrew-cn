@@ -1,6 +1,6 @@
 cask "utm" do
-  version "4.6.5"
-  sha256 "0b35607e01e2efa04f45f176d875b4a38613878071ee5536d2a9cc3b64a3c28d"
+  version "4.7.4"
+  sha256 "e259e81fd142acbdc4596369980118cfe5c2c4f491ed96bf5bc606c405d79ace"
 
   url "https://mirror.ghproxy.com/https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
