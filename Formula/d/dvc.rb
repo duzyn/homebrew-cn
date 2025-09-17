@@ -840,12 +840,6 @@ class Dvc < Formula
   end
 
   def install
-    if DevelopmentTools.clang_build_version >= 1500
-      # Work around an Xcode 15 linker issue which causes linkage against LLVM's
-      # libunwind due to it being present in a library search path.
-      ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
-    end
-
     # dvc-hdfs uses fsspec.implementations.arrow.HadoopFileSystem which is
     # a wrapper on top of pyarrow.fs.HadoopFileSystem.
     ENV["PYARROW_WITH_HDFS"] = "1"

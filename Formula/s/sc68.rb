@@ -13,6 +13,7 @@ class Sc68 < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 arm64_tahoe:    "4bd1deeac4b3f633c76cc844a611217c4bd96ed9a9e1ae2376cd280f0a11842c"
     sha256 arm64_sequoia:  "530da22ced84ec1181ddf6887028d6a4e9fa955446a492c039e5c807d6f2ec82"
     sha256 arm64_sonoma:   "f6c0c19ce245cb76ed53a1e9d017eb6b598ac1834f5c7ff215978147498be18e"
     sha256 arm64_ventura:  "f30cf9999c9d98d9e0c2ecee6b0af0f5f550391ecfbfa51d8f5139dce0aaa0c6"

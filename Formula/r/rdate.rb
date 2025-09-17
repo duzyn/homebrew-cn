@@ -14,6 +14,7 @@ class Rdate < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "a83472ff648a0aab17ffdf054be07f4d486506c3b17391d656527b492a6d26d6"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "bbf44b1f5bca7ad76c78766af7c76e1897e391a40841c1f373d4172e0fa88dea"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "896cdf111b9e81a2c1fb3d1c17bce92ac51a4a8af14d0b02979543013353acc7"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "a0bd69ad7d1cf67af981ff2b0ea4d6bda4f7860a8568de2dca05f5b2bb96e222"

@@ -13,6 +13,7 @@ class Rzip < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "122e356a47499a7c1b8e7d4b4b86fe1f8ff2f32223165464ba2a1c9c68cdf1a6"
     sha256 cellar: :any_skip_relocation, arm64_sequoia:  "e831e4f90ea7d39b9e846ab0d18048bca802d65a6ecd3b61bfe1e55bbe831345"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2632e94c5b807679406f19003c336b49ff755acd982d507ab3c2098e1fe91afb"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "419e465f3f605dff8d3eda647491f8d3651ed51a8b14eb5c524b507517c6c422"
