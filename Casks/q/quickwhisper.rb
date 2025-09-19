@@ -1,6 +1,6 @@
 cask "quickwhisper" do
-  version "1.12.113"
-  sha256 "b311e5b49ea853a841d23e266174f84ffb5d22dbfa5f49b4d57c3955c8dcaf9b"
+  version "1.13.136"
+  sha256 "a6bc169d236b7084b56e452f73520b6b60532e0efb9aea55d9937e0e9a1f3946"
 
   url "https://quickwhisperapp.s3.us-west-002.backblazeb2.com/QuickWhisper_#{version}.zip",
       verified: "quickwhisperapp.s3.us-west-002.backblazeb2.com/"
@@ -17,7 +17,7 @@ cask "quickwhisper" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "QuickWhisper.app"
 
