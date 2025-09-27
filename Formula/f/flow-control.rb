@@ -28,6 +28,7 @@ class FlowControl < Formula
     # https://github.com/Homebrew/homebrew-core/issues/92282
     cpu = case Hardware.oldest_cpu
     when :arm_vortex_tempest then "apple_m1" # See `zig targets`.
+    when :armv8 then "xgene1" # Closest to `-march=armv8-a`
     else Hardware.oldest_cpu
     end
 
