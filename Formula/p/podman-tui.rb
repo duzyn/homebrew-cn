@@ -4,6 +4,7 @@ class PodmanTui < Formula
   url "https://mirror.ghproxy.com/https://github.com/containers/podman-tui/archive/refs/tags/v1.9.0.tar.gz"
   sha256 "7a0e89d71a18527f01be061c8d449823770cff768b6d716cef96b979f3672de7"
   license "Apache-2.0"
+  head "https://github.com/containers/podman-tui.git", branch: "main"
 
   no_autobump! because: :bumped_by_upstream
 
@@ -19,13 +20,9 @@ class PodmanTui < Formula
   depends_on "go" => :build
 
   def install
-    if OS.mac?
-      system "make", "binary-darwin"
-      bin.install "bin/darwin/podman-tui" => "podman-tui"
-    else
-      system "make", "binary"
-      bin.install "bin/podman-tui" => "podman-tui"
-    end
+    ENV["CGO_ENABLED"] = "0"
+    tags = "exclude_graphdriver_btrfs containers_image_openpgp remote"
+    system "go", "build", *std_go_args(ldflags: "-s -w", tags:)
   end
 
   test do

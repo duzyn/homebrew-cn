@@ -10,6 +10,7 @@ class ChromeDevtoolsMcp < Formula
     sha256 cellar: :any,                 arm64_sequoia: "893fbbd23c6bb5504b08bb6623b2ffd89584c6663f2a0856fc208f0a623fb3d6"
     sha256 cellar: :any,                 arm64_sonoma:  "893fbbd23c6bb5504b08bb6623b2ffd89584c6663f2a0856fc208f0a623fb3d6"
     sha256 cellar: :any,                 sonoma:        "dab866e9d85b119f75836cb17276d9e6f95c2951ae6532707371b4a6bba4d017"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1c23372292d3f5ad3246b1c538b7b9f5a772360290a4b5c184a859f5a3f8d266"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "eeee5e1d7af1fbc1c5974252f1c1319df1f83f43277c2b3156e668e6bc222a49"
   end
 

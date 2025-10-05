@@ -12,6 +12,7 @@ class McpGoogleSheets < Formula
     sha256 cellar: :any,                 arm64_sequoia: "8a41bdd921e8c8c1b6cbb853f6b00461ad14beca89ab8b0d329935ac137806e1"
     sha256 cellar: :any,                 arm64_sonoma:  "321c21e1a7a1702f5d04e4f5bf12f5f85389286353538d1798d4d5d8160f475d"
     sha256 cellar: :any,                 sonoma:        "7c57342adddb46387d57757c53236812cc841cb00c0996a0ae71b4d77bae3477"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b7973d2eb193624f03e61c20a13db76cad75e792ae7422bcb435d6fbcc090934"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a57ad528fb47c616d78944b77f2982d67861748f4659094ff3525b86f85ec76b"
   end
 
