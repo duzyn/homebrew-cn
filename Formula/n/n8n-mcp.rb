@@ -1,17 +1,17 @@
 class N8nMcp < Formula
   desc "MCP for Claude Desktop, Claude Code, Windsurf, Cursor to build n8n workflows"
   homepage "https://www.n8n-mcp.com/"
-  url "https://registry.npmjs.org/n8n-mcp/-/n8n-mcp-2.15.6.tgz"
-  sha256 "fb188fcf94c7edd72201f7323493ace693202ae2cd61265e9410e896096996dc"
+  url "https://registry.npmjs.org/n8n-mcp/-/n8n-mcp-2.17.5.tgz"
+  sha256 "f6475ac20e01ff7ce4c62b54c07f44574413f9268d560abe30629de3253caf3f"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "065171c9c8adba817d6e1f6e99814d030e354255a426ad0c614c664fca65e794"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "279a5b78961cbe7ad3f32b3aa2a0b4decc57dd7d7bea7824284466655a1e6892"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00130919f10394807824253473c79824bb7d31ed7b04962efac4f6380923e457"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ab08891065a46fcb9de46309d010cad86b51639cfcf5a92fc383c7d40239da0c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "06cbc54cfadf932371dc08325b6599f8df4b720ac91c2ce177fa1e494f02fe49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e158fc2f8faf4eb6696bdff1515ba4778d5fa2ac04d43906026fe6ffe1da804"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "382b92206b4725dcbfea62d4363d9cf19288edb4f780705915ba1d48a46c272a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5dcf09423669946a03cb3dda930770e62b2ab8ffc221fd95986c9f4056509456"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0861c5809e79c07dc8b66c3046ed503ddcf14d05ef61e40fd5851ae4823c399c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4ffcdeec9a667d4d3877e0d020ce80d239634f9208fd0ef2143f0db425c5c1c4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "78451b8a8046e66eb542ee48d359b83931cdcd7ab849eb0093eaed9c5362d3bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "11d2380ec7efe96a9aac9277b032d1a89cdea022429db8c19626f3987315fc6d"
   end
 
   depends_on "node"
@@ -28,7 +28,8 @@ class N8nMcp < Formula
     output_log = testpath/"output.log"
     pid = spawn bin/"n8n-mcp", testpath, [:out, :err] => output_log.to_s
     sleep 10
-    assert_match "n8n Documentation MCP Server running on stdio transpor", output_log.read
+    sleep 5 if OS.mac? && Hardware::CPU.intel?
+    assert_match "n8n Documentation MCP Server running on stdio transport", output_log.read
   ensure
     Process.kill("TERM", pid)
     Process.wait(pid)
