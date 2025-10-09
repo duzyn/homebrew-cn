@@ -25,11 +25,14 @@ class Gammaray < Formula
   depends_on "qtscxml"
   depends_on "qtsvg"
   depends_on "qttools"
-  depends_on "qtwebengine"
 
   on_macos do
     depends_on "qtlocation"
     depends_on "qtwebchannel"
+  end
+
+  on_system :linux, macos: :sonoma_or_newer do
+    depends_on "qtwebengine"
   end
 
   on_linux do

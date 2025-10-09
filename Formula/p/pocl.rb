@@ -2,11 +2,10 @@ class Pocl < Formula
   desc "Portable Computing Language"
   homepage "https://portablecl.org/"
   license "MIT"
-  revision 1
 
   stable do
-    url "https://mirror.ghproxy.com/https://github.com/pocl/pocl/archive/refs/tags/v7.0.tar.gz"
-    sha256 "f55caba8c3ce12bec7b683ce55104c7555e19457fc2ac72c6f035201e362be08"
+    url "https://mirror.ghproxy.com/https://github.com/pocl/pocl/archive/refs/tags/v7.1.tar.gz"
+    sha256 "1110057cb0736c74819ad65238655a03f7b93403a0ca60cdd8849082f515ca25"
     depends_on "llvm@20" # TODO: use `llvm` next release, https://github.com/pocl/pocl/pull/1982
   end
 
@@ -16,15 +15,12 @@ class Pocl < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "e39e3235300c89de9d68523fb5d25eab669f664ae0713760fa3f4bf94ee3c45c"
-    sha256 arm64_sequoia: "ce20bf8e55006a7e27ee297c9ade37a0f1d764eca612addd932083eb05653379"
-    sha256 arm64_sonoma:  "ad257d6295b26845ee36310ce3bd75a2dbc51d68c5f74fbea83e04715cf2a6ac"
-    sha256 arm64_ventura: "99dd1eb71561ce4ab0877ea116f71b7fe6c1ff0d192c9e01220ca891dc584ba9"
-    sha256 sonoma:        "c69a5c293303eb4674ae6e6a108bcf68b5a274e1d6a28c021dc6f781ea65bf7f"
-    sha256 ventura:       "84be53db65680a555f1c1d2f4def745ed949c6c5dd8b4510680ccecaa1ce98b5"
-    sha256 arm64_linux:   "4c2330ef849806b7ba65683d396f6cdd0bfae24c80ae2019b5f297d0ed19b8b4"
-    sha256 x86_64_linux:  "6e31505d8843897ac4f6ad07cb75c3c67ff7d2d8617defdca9fc4015a41ca222"
+    sha256 arm64_tahoe:   "7b0c3f27e0c8baf1ec7d4ba9ccc9fa1212e7be869f30e278a15a56b005f22943"
+    sha256 arm64_sequoia: "fd7951bdc3932512d48d8ad4b8802cdecdfb87d42ecf760280619012a2fb5a8c"
+    sha256 arm64_sonoma:  "3f3b045f08c3142ca2ade8be8b14b64c6cae133196697cdb919df5baf26df642"
+    sha256 sonoma:        "5e807e89316b1d8c166bc4e03aa94de4b0ee920397662c1c352b6d00647a2928"
+    sha256 arm64_linux:   "059617e6e826814a699a313e60fda741bdf35350dba135ac26bc41421e66a01b"
+    sha256 x86_64_linux:  "d39dc69fdfb552e6fa14b896d06c2c00ed65b40fea7711fec5d5895701b78287"
   end
 
   head do
