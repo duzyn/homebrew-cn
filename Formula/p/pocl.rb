@@ -1,13 +1,10 @@
 class Pocl < Formula
   desc "Portable Computing Language"
   homepage "https://portablecl.org/"
+  url "https://mirror.ghproxy.com/https://github.com/pocl/pocl/archive/refs/tags/v7.1.tar.gz"
+  sha256 "1110057cb0736c74819ad65238655a03f7b93403a0ca60cdd8849082f515ca25"
   license "MIT"
-
-  stable do
-    url "https://mirror.ghproxy.com/https://github.com/pocl/pocl/archive/refs/tags/v7.1.tar.gz"
-    sha256 "1110057cb0736c74819ad65238655a03f7b93403a0ca60cdd8849082f515ca25"
-    depends_on "llvm@20" # TODO: use `llvm` next release, https://github.com/pocl/pocl/pull/1982
-  end
+  head "https://github.com/pocl/pocl.git", branch: "main"
 
   livecheck do
     url :stable
@@ -15,23 +12,20 @@ class Pocl < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "7b0c3f27e0c8baf1ec7d4ba9ccc9fa1212e7be869f30e278a15a56b005f22943"
-    sha256 arm64_sequoia: "fd7951bdc3932512d48d8ad4b8802cdecdfb87d42ecf760280619012a2fb5a8c"
-    sha256 arm64_sonoma:  "3f3b045f08c3142ca2ade8be8b14b64c6cae133196697cdb919df5baf26df642"
-    sha256 sonoma:        "5e807e89316b1d8c166bc4e03aa94de4b0ee920397662c1c352b6d00647a2928"
-    sha256 arm64_linux:   "059617e6e826814a699a313e60fda741bdf35350dba135ac26bc41421e66a01b"
-    sha256 x86_64_linux:  "d39dc69fdfb552e6fa14b896d06c2c00ed65b40fea7711fec5d5895701b78287"
-  end
-
-  head do
-    url "https://github.com/pocl/pocl.git", branch: "main"
-    depends_on "llvm"
+    rebuild 1
+    sha256 arm64_tahoe:   "cc45a16ddaf37efac69ad995690efe2979143b304c20c30179581b04161cf6b4"
+    sha256 arm64_sequoia: "03a539344b6f557b050cbda86913e9936cf7dfa3d157ee90e438b40eab16610d"
+    sha256 arm64_sonoma:  "c1492bebca73399ccdbe9db343f5c9999f58ec2dab464cf9249b4b8f07b287d6"
+    sha256 sonoma:        "ac55a8d49c48770e574446ff3ab95e023370059c0e954fe674103a7751fa9b27"
+    sha256 arm64_linux:   "4c88564ba6f258b924e62ea47306847a1a2ed9356f6723de2273d4235dc959a2"
+    sha256 x86_64_linux:  "b3fb64a5cd37f39d1e70240495f41a1d3e3b267911e50ed4a912b1da4edf162d"
   end
 
   depends_on "cmake" => :build
   depends_on "opencl-headers" => :build
   depends_on "pkgconf" => :build
   depends_on "hwloc"
+  depends_on "llvm"
   depends_on "opencl-icd-loader"
   uses_from_macos "python" => :build
 
