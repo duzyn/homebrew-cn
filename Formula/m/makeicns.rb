@@ -24,7 +24,7 @@ class Makeicns < Formula
   depends_on :macos
 
   patch :p0 do
-    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/formula-patches/e59da9d/makeicns/patch-IconFamily.m.diff"
+    url "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/makeicns/patch-IconFamily.m.diff"
     sha256 "f5ddbf6a688d6f153cf6fc2e15e75309adaf61677ab423cb67351e4fbb26066e"
   end
 
