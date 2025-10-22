@@ -1,6 +1,6 @@
 cask "openshot-video-editor@daily" do
-  version "3.4.0,14728-0932af2c-0b018e34,release-candidate"
-  sha256 "f3271885b9c686786fd50627e77979a7a302908c4436d687b6486e2c7f18a944"
+  version "3.4.0,14734-0932af2c-0b018e34,release-candidate"
+  sha256 "37e866cabe462c35243a01eeb30c248e3126b7e58fdb0537a657b9a443d66101"
 
   url "https://mirror.ghproxy.com/https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
