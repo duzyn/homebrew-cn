@@ -1,6 +1,6 @@
 cask "thedesk" do
-  version "25.0.15"
-  sha256 "6acd958ea4a1ea496bd1b7069a231170c8be5ded50964b712d715dd548bf82b4"
+  version "25.1.1"
+  sha256 "e0b209f418291b0a3c0e7ae9f763bd405233cc107b733da63ec43b26f2175e3d"
 
   url "https://mirror.ghproxy.com/https://github.com/cutls/thedesk-next/releases/download/v#{version}/TheDesk-#{version}-universal.dmg",
       verified: "github.com/cutls/thedesk-next/"
@@ -12,6 +12,8 @@ cask "thedesk" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "TheDesk.app"
 
