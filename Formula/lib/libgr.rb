@@ -12,6 +12,7 @@ class Libgr < Formula
     sha256 arm64_sequoia: "6e72a7cf25de633dd8b2bedd6093e3b30d46fc546d2e0a9bcab3779654f5801c"
     sha256 arm64_sonoma:  "4ebac584fca59929884fe517b5adfa363e21d82d527b0f345d77f5fc6510471c"
     sha256 sonoma:        "d471b8b3d4f3b1acba6f0d9f2f9ef80a71ba00fd645cb8371838895d8d25308a"
+    sha256 arm64_linux:   "de47454028332641b07160f75edb27e6ffdc2c14986e53744db8c03110877121"
     sha256 x86_64_linux:  "ebec641dff0e1f8389ea8cc04a1b1585c50da5f2b4bdbce63efc6ea738ee9c91"
   end
 

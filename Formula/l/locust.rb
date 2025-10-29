@@ -22,6 +22,8 @@ class Locust < Formula
   depends_on "python@3.14"
   depends_on "zeromq"
 
+  pypi_packages exclude_packages: "certifi"
+
   resource "bidict" do
     url "https://files.pythonhosted.org/packages/9a/6e/026678aa5a830e07cd9498a05d3e7e650a4f56a42f267a53d22bcda1bdc9/bidict-0.23.1.tar.gz"
     sha256 "03069d763bc387bbd20e7d49914e75fc4132a41937fa3405417e1a5a2d006d71"

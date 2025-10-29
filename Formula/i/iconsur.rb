@@ -3,7 +3,7 @@ class Iconsur < Formula
 
   desc "macOS Big Sur Adaptive Icon Generator"
   homepage "https://github.com/rikumi/iconsur"
-  # Keep extra_packages in pypi_formula_mappings.json aligned with
+  # Keep extra `pypi_packages` aligned with
   # https://github.com/rikumi/iconsur/blob/#{version}/src/fileicon.sh#L230
   url "https://registry.npmjs.org/iconsur/-/iconsur-1.7.0.tgz"
   sha256 "d732df6bbcaf1418c6f46f9148002cbc1243814692c1c0e5c0cebfcff001c4a1"
@@ -28,6 +28,9 @@ class Iconsur < Formula
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1699
     depends_on "python@3.14"
   end
+
+  pypi_packages package_name:   "",
+                extra_packages: ["pyobjc-core", "pyobjc-framework-cocoa"]
 
   resource "pyobjc-core" do
     url "https://files.pythonhosted.org/packages/e8/e9/0b85c81e2b441267bca707b5d89f56c2f02578ef8f3eafddf0e0c0b8848c/pyobjc_core-11.1.tar.gz"
