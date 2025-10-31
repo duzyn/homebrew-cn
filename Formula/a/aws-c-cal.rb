@@ -1,17 +1,17 @@
 class AwsCCal < Formula
   desc "AWS Crypto Abstraction Layer"
   homepage "https://github.com/awslabs/aws-c-cal"
-  url "https://mirror.ghproxy.com/https://github.com/awslabs/aws-c-cal/archive/refs/tags/v0.9.6.tar.gz"
-  sha256 "4bb8a55a9e542ee191317f15ad88392fc145443fe1aa71c9f1b6f3c40c4f38f8"
+  url "https://mirror.ghproxy.com/https://github.com/awslabs/aws-c-cal/archive/refs/tags/v0.9.7.tar.gz"
+  sha256 "39d1b2967a109b3927ebc185a21aa8fdee64db6380799ddc51d21b96d2b90bdb"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "70223ca654f92dc737a6189e65fd9bf33a8386648292cb2fceb48db368486567"
-    sha256 cellar: :any,                 arm64_sequoia: "fa6e0a775703d209fabbd978b9c37dc4126eb3ea7ea50ffa2876fb0f135fb4e9"
-    sha256 cellar: :any,                 arm64_sonoma:  "15499ee6c8944ba514c4b33b080614ba5c13044d74bdc87856438c5b20c8aad9"
-    sha256 cellar: :any,                 sonoma:        "9e3caecd829c62685e401faac431cf894266b3b9c354d7aec641656faa7c76e5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "aa2085c9dcb5116e365ce68ed5322dc5f399e6b9778b739fa77b10c387aa6c6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dad1a8d7f4d09e034b1c9f161d2645c634c0896160d54edc54df853ef97a8866"
+    sha256 cellar: :any,                 arm64_tahoe:   "cae0bc629a9da0f2abf80d893febab164b57470beed23cc7ed33424da0f1ea08"
+    sha256 cellar: :any,                 arm64_sequoia: "8d603ad4f967ce4d55e79f04e3dd4aaa90b7472dff3d5900c318bdd4778438a3"
+    sha256 cellar: :any,                 arm64_sonoma:  "6d274450caefc547b34c124afe1f0c8001af948dc01cea8d272d31740ceb046f"
+    sha256 cellar: :any,                 sonoma:        "b13ddb83ebedaf4b5690fb3f2513f6c5d59bb3f9cc5c07c222597b554f349807"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fed14bca4ae0bd8cae1ba784725b83e59422bcd7ae14881fa828bfe3025f29b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f37bf4936b737489488efac0350cd8102577c06460d8c7a4220f768e587c1ab8"
   end
 
   depends_on "cmake" => :build
