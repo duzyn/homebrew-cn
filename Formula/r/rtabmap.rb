@@ -4,7 +4,7 @@ class Rtabmap < Formula
   url "https://mirror.ghproxy.com/https://github.com/introlab/rtabmap/archive/refs/tags/0.22.1.tar.gz"
   sha256 "3988ad84c409e39048a6b23317076d4ee1a0123e94a5ad6574db93647d7a80c0"
   license "BSD-3-Clause"
-  revision 4
+  revision 5
   head "https://github.com/introlab/rtabmap.git", branch: "master"
 
   # Upstream doesn't create releases for all tagged versions, so we use the
@@ -17,13 +17,12 @@ class Rtabmap < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256                               arm64_tahoe:   "20a17805711d80ce4832d47579ed9364f7eab4efced20430b9f7ac71d0e86b6b"
-    sha256                               arm64_sequoia: "13d8848d802e0ce6afc36dc7b55c7fd758d841fde7865dd740c402af42b36818"
-    sha256                               arm64_sonoma:  "d8a8239c5d894d57f613789e70e27f9907dd05d0b2fe04d69407c714568cec78"
-    sha256                               sonoma:        "f765722a4937ee9af13ce4f84bc6a0d5152059eb88a66062d2b89318ad2ef6ff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fc9a8078f57e7cb5ab7a44a23a1ab03a0aaa93eaf6d575ebda6168795ebed23f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8db1652a2e0c0d1c6006fee21f2d2ea89e10a57996957c86838f3ade9cb09e95"
+    sha256                               arm64_tahoe:   "5ab791a5f38d7ad76eaba90c0abc16d8fc50d95618c4f3fa485c70f99d5094ca"
+    sha256                               arm64_sequoia: "f8fb6e3aa1a67d7cef01dda6f785f6dd15af1a9f54a967dcc9b49e8af4bdbe7c"
+    sha256                               arm64_sonoma:  "906cd0c764ddce8ad29e910dd28c10a1d1d7521e8a94d91f84b40835de10eb67"
+    sha256                               sonoma:        "354e88753335c1ec096ca6a6c10c9e915885ee559a1afa55b7ec6aad798017e4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "28b477d18a34e7df7f12fa3f01d1bcd93e7a50b798464b3101bcd4d536bd9c00"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9aa54a4462c4b890af182cef4321af20d943ccf35b835b272df6d8554b787c47"
   end
 
   depends_on "cmake" => [:build, :test]
@@ -53,6 +52,9 @@ class Rtabmap < Formula
   end
 
   def install
+    # Use eigen's cmake configuration to support eigen 5.0.0
+    rm "cmake_modules/FindEigen3.cmake"
+
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_RPATH=#{rpath}", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
