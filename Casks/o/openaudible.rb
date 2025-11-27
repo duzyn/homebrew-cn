@@ -1,6 +1,6 @@
 cask "openaudible" do
-  version "4.6.3"
-  sha256 "075de0c1fc8b8b8275e98b0302662e5b28ca2feb9f6c5c4259a2d21775d8d749"
+  version "4.6.6"
+  sha256 "d5ca295094227bc2e9793b8a82195d704a26978567a7ca3cf23e0a21104a81c9"
 
   url "https://mirror.ghproxy.com/https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}.dmg",
       verified: "github.com/openaudible/openaudible/"
