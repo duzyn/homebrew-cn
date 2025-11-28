@@ -1,6 +1,6 @@
 cask "quakenotch" do
-  version "2.0"
-  sha256 "1ea024afb67078f907a87445dac4d08d7fe1aead801d014d6e612b51b0227829"
+  version "2.0.2"
+  sha256 "050dd5ea773ff849c7c63c5e23a2563f17ad8e52d4b831e2aec23540d909422e"
 
   url "https://mirror.ghproxy.com/https://github.com/rohanrhu/QuakeNotch/releases/download/v#{version}/QuakeNotch.zip",
       verified: "github.com/rohanrhu/QuakeNotch/"
