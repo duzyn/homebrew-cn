@@ -3,27 +3,31 @@ class MlxLm < Formula
 
   desc "Run LLMs with MLX"
   homepage "https://github.com/ml-explore/mlx-lm"
-  url "https://mirror.ghproxy.com/https://github.com/ml-explore/mlx-lm/archive/refs/tags/v0.28.3.tar.gz"
-  sha256 "0308bec3bf74ae015473809fe425ee09aa9bdd6a239c718d480a7df23d249f0d"
+  url "https://mirror.ghproxy.com/https://github.com/ml-explore/mlx-lm/archive/refs/tags/v0.28.4.tar.gz"
+  sha256 "0183f62ac7caa0abd3da2a8e57694d1e2b87d61da056850695c6cde3ef61d301"
   license "MIT"
   head "https://github.com/ml-explore/mlx-lm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "bbda44fcf1cb39d23a284f2f1e54a0c896e6877d0b75fb9d05cdd1b02dac3871"
-    sha256 cellar: :any, arm64_sequoia: "8598022707f6c51dc045a3097356363ecc6838700c3b0e178f32dc4cf18574db"
-    sha256 cellar: :any, arm64_sonoma:  "8bed0dcf8fad74fb19e9c6d6f8dece71d3faa5f7d7c7605afb0c7b4cc996fe6b"
-    sha256 cellar: :any, sonoma:        "36b3098736954b3de66458f006c6be8d4ead8532444d791af7702496d8ebcbc2"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "7a36e27a8350113180be35f99194240bf58bf845d050e09792ed572bad431e59"
+    sha256 cellar: :any, arm64_sequoia: "5a029f3083a8bf6675c2b7ed0f60845ff67459398353c748efda798aab064fcf"
+    sha256 cellar: :any, arm64_sonoma:  "76c124083ab2d8c933f1ff347b161d9ef7cdbe10ac7f2c43d90ea2d544e570cc"
   end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "certifi"
+  depends_on "certifi" => :no_linkage
   depends_on "libyaml"
   depends_on :macos
   depends_on macos: :ventura
   depends_on "mlx"
   depends_on "numpy"
+  depends_on "protobuf"
   depends_on "python@3.14"
+  depends_on "sentencepiece"
+
+  pypi_packages exclude_packages: %w[certifi mlx numpy]
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz"
@@ -36,18 +40,18 @@ class MlxLm < Formula
   end
 
   resource "fsspec" do
-    url "https://files.pythonhosted.org/packages/de/e0/bab50af11c2d75c9c4a2a26a5254573c0bd97cea152254401510950486fa/fsspec-2025.9.0.tar.gz"
-    sha256 "19fd429483d25d28b65ec68f9f4adc16c17ea2c7c7bf54ec61360d478fb19c19"
+    url "https://files.pythonhosted.org/packages/b6/27/954057b0d1f53f086f681755207dda6de6c660ce133c829158e8e8fe7895/fsspec-2025.12.0.tar.gz"
+    sha256 "c505de011584597b1060ff778bb664c1bc022e87921b0e4f10cc9c44f9635973"
   end
 
   resource "hf-xet" do
-    url "https://files.pythonhosted.org/packages/74/31/feeddfce1748c4a233ec1aa5b7396161c07ae1aa9b7bdbc9a72c3c7dd768/hf_xet-1.1.10.tar.gz"
-    sha256 "408aef343800a2102374a883f283ff29068055c111f003ff840733d3b715bb97"
+    url "https://files.pythonhosted.org/packages/5e/6e/0f11bacf08a67f7fb5ee09740f2ca54163863b07b70d579356e9222ce5d8/hf_xet-1.2.0.tar.gz"
+    sha256 "a8c27070ca547293b6890c4bf389f713f80e8c478631432962bb7f4bc0bd7d7f"
   end
 
   resource "huggingface-hub" do
-    url "https://files.pythonhosted.org/packages/10/7e/a0a97de7c73671863ca6b3f61fa12518caf35db37825e43d63a70956738c/huggingface_hub-0.35.3.tar.gz"
-    sha256 "350932eaa5cc6a4747efae85126ee220e4ef1b54e29d31c3b45c5612ddf0b32a"
+    url "https://files.pythonhosted.org/packages/98/63/4910c5fa9128fdadf6a9c5ac138e8b1b6cee4ca44bf7915bbfbce4e355ee/huggingface_hub-0.36.0.tar.gz"
+    sha256 "47b3f0e2539c39bf5cde015d63b72ec49baff67b6931c3d97f3f84532e2b8d25"
   end
 
   resource "idna" do
@@ -71,8 +75,8 @@ class MlxLm < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/19/ff/64a6c8f420818bb873713988ca5492cba3a7946be57e027ac63495157d97/protobuf-6.33.0.tar.gz"
-    sha256 "140303d5c8d2037730c548f8c7b93b20bb1dc301be280c378b82b8894589c954"
+    url "https://files.pythonhosted.org/packages/0a/03/a1440979a3f74f16cab3b75b0da1a1a7f922d56a8ddea96092391998edc0/protobuf-6.33.1.tar.gz"
+    sha256 "97f65757e8d09870de6fd973aeddb92f85435607235d20b2dfed93405d00c85b"
   end
 
   resource "pyyaml" do
@@ -81,8 +85,8 @@ class MlxLm < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/49/d3/eaa0d28aba6ad1827ad1e716d9a93e1ba963ada61887498297d3da715133/regex-2025.9.18.tar.gz"
-    sha256 "c5ba23274c61c6fef447ba6a39333297d0c247f53059dba0bca415cac511edc4"
+    url "https://files.pythonhosted.org/packages/cc/a9/546676f25e573a4cf00fe8e119b78a37b6a8fe2dc95cda877b30889c9c45/regex-2025.11.3.tar.gz"
+    sha256 "1fedc720f9bb2494ce31a58a1631f9c82df6a09b49c19517ea5cc280b4541e01"
   end
 
   resource "requests" do
@@ -91,8 +95,13 @@ class MlxLm < Formula
   end
 
   resource "safetensors" do
-    url "https://files.pythonhosted.org/packages/ac/cc/738f3011628920e027a11754d9cae9abec1aed00f7ae860abbf843755233/safetensors-0.6.2.tar.gz"
-    sha256 "43ff2aa0e6fa2dc3ea5524ac7ad93a9839256b8703761e76e2d0b2a3fa4f15d9"
+    url "https://files.pythonhosted.org/packages/29/9c/6e74567782559a63bd040a236edca26fd71bc7ba88de2ef35d75df3bca5e/safetensors-0.7.0.tar.gz"
+    sha256 "07663963b67e8bd9f0b8ad15bb9163606cd27cc5a1b96235a50d8369803b96b0"
+  end
+
+  resource "sentencepiece" do
+    url "https://files.pythonhosted.org/packages/15/15/2e7a025fc62d764b151ae6d0f2a92f8081755ebe8d4a64099accc6f77ba6/sentencepiece-0.2.1.tar.gz"
+    sha256 "8138cec27c2f2282f4a34d9a016e3374cd40e5c6e9cb335063db66a0a3b71fad"
   end
 
   resource "tokenizers" do
@@ -106,8 +115,8 @@ class MlxLm < Formula
   end
 
   resource "transformers" do
-    url "https://files.pythonhosted.org/packages/d6/68/a39307bcc4116a30b2106f2e689130a48de8bd8a1e635b5e1030e46fcd9e/transformers-4.57.1.tar.gz"
-    sha256 "f06c837959196c75039809636cd964b959f6604b75b8eeec6fdfc0440b89cc55"
+    url "https://files.pythonhosted.org/packages/dd/70/d42a739e8dfde3d92bb2fff5819cbf331fe9657323221e79415cd5eb65ee/transformers-4.57.3.tar.gz"
+    sha256 "df4945029aaddd7c09eec5cad851f30662f8bd1746721b34cc031d70c65afebc"
   end
 
   resource "typing-extensions" do
