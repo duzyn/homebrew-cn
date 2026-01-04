@@ -1,6 +1,6 @@
 cask "boss" do
-  version "8.14.7"
-  sha256 "07919014a61bec1ae5c13d3b4beae26338f1e80d96c0d764737325084c90e537"
+  version "8.14.9"
+  sha256 "4989440c1b9bdfc487f7d4b8cbc7dc67c31caf927f1deaaa35338ea0d856f91d"
 
   url "https://mirror.ghproxy.com/https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg",
       verified: "github.com/risa-labs-inc/BOSS-Releases/"
