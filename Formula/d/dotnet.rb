@@ -18,6 +18,13 @@ class Dotnet < Formula
         formula :parent
       end
     end
+
+    # Backport fix for https://github.com/dotnet/dotnet/issues/4037
+    patch do
+      url "https://github.com/dotnet/source-build-reference-packages/commit/1f538e55a45f4672186a68a08639160d5a4d3ce6.patch?full_index=1"
+      sha256 "3ae2156ee50e9351295a71551e8fc4a096b3bfa61a14a40b5266629afc6ae1bd"
+      directory "src/source-build-reference-packages"
+    end
   end
 
   bottle do
@@ -82,12 +89,6 @@ class Dotnet < Formula
               "= ::ContinuationContextHandling::None;"
     end
 
-    # Work around https://github.com/dotnet/dotnet/issues/4037 using the last
-    # valid version (2025-12-31 => 61231). Remove when upstream issue is fixed.
-    f = "src/source-build-reference-packages/src/externalPackages/src" \
-        "/azure-activedirectory-identitymodel-extensions-for-dotnet/build/common.props"
-    inreplace f, '.$([System.DateTime]::Now.AddYears(-2019).Year)$([System.DateTime]::Now.ToString("MMdd"))', ".61231"
-
     if OS.mac?
       # Need GNU grep (Perl regexp support) to use release manifest rather than git repo
       ENV.prepend_path "PATH", Formula["grep"].libexec/"gnubin"
@@ -98,20 +99,20 @@ class Dotnet < Formula
 
       # Skip installer build on macOS - prevents CreatePkg target errors
       # See: https://github.com/dotnet/runtime/issues/122832
-      inreplace "src/runtime/Directory.Build.props" do |s|
-        s.gsub! "</Project>",
+      inreplace ["src/aspnetcore/Directory.Build.props", "src/runtime/Directory.Build.props"],
+                "</Project>",
                 "<PropertyGroup>\n    <SkipInstallerBuild>true</SkipInstallerBuild>\n  </PropertyGroup>\n</Project>"
-      end
-      inreplace "src/aspnetcore/Directory.Build.props" do |s|
-        s.gsub! "</Project>",
-                "<PropertyGroup>\n    <SkipInstallerBuild>true</SkipInstallerBuild>\n  </PropertyGroup>\n</Project>"
-      end
     else
       icu4c_dep = deps.find { |dep| dep.name.match?(/^icu4c(@\d+)?$/) }
       ENV.append_path "LD_LIBRARY_PATH", icu4c_dep.to_formula.opt_lib
     end
-    args = ["--clean-while-building", "--source-build", "--branding", "rtm",
-            "--with-system-libs", "brotli+libunwind+rapidjson+zlib"]
+
+    args = %w[
+      --branding rtm
+      --clean-while-building
+      --source-build
+      --with-system-libs all
+    ]
     if build.stable?
       args += ["--release-manifest", "release.json"]
       odie "Update release.json resource!" if resource("release.json").version != version
@@ -179,16 +180,13 @@ class Dotnet < Formula
 
     system bin/"dotnet", "build", "--framework", target_framework, "--output", testpath, testpath/"test.csproj"
     output = shell_output("#{bin}/dotnet run --framework #{target_framework} #{testpath}/test.dll a b c")
-    # We switched to `assert_match` due to progress status ANSI codes in output.
-    # TODO: Switch back to `assert_equal` once fixed in release.
-    # Issue ref: https://github.com/dotnet/sdk/issues/44610
-    assert_match "#{testpath}/test.dll,a,b,c\n", output
+    assert_equal "#{testpath}/test.dll,a,b,c\n", output
 
     # Test to avoid uploading broken Intel Sonoma bottle which has stack overflow on restore.
     # See https://github.com/Homebrew/homebrew-core/issues/197546
     resource "docfx" do
-      url "https://mirror.ghproxy.com/https://github.com/dotnet/docfx/archive/refs/tags/v2.78.3.tar.gz"
-      sha256 "d97142ff71bd84e200e6d121f09f57d28379a0c9d12cb58f23badad22cc5c1b7"
+      url "https://mirror.ghproxy.com/https://github.com/dotnet/docfx/archive/refs/tags/v2.78.4.tar.gz"
+      sha256 "255f71f4a6fc7b9ffd0c598d0eba11630dc01262f1fa45ec4f1794508f7033cf"
     end
     resource("docfx").stage do
       system bin/"dotnet", "restore", "src/docfx", "--disable-build-servers", "--no-cache"
