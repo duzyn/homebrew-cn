@@ -1,6 +1,6 @@
 cask "notepadexe" do
-  version "1.4.1698"
-  sha256 "c61b0c8812a405cef33e1d662c3bf8b9417082ae038f3569637f7fd10e5bec7e"
+  version "1.4.1717"
+  sha256 "5fd9e57cd8b04bdf522118c09c2ffeca0cfe3ce9e6d15cf8faa5cecfd9b13e33"
 
   url "https://mirror.ghproxy.com/https://github.com/notepadhq/notepadexe-public/releases/download/#{version}/Notepad.zip",
       verified: "mirror.ghproxy.com/https://github.com/notepadhq/notepadexe-public/releases/download/"
