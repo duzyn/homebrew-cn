@@ -20,8 +20,8 @@ cask "commandpost" do
     end
   end
   on_ventura :or_newer do
-    version "2.0.2"
-    sha256 "edd3e6b7b183b856c885b1480d4e05d1fda775915a9026f2cddc81e479c0d9ab"
+    version "2.0.4"
+    sha256 "57f7ede59817206c7e57b16e4e1f06483e99ba638160502b3fe7ef129d832f0f"
   end
 
   url "https://mirror.ghproxy.com/https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
