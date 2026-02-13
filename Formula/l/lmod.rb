@@ -1,17 +1,17 @@
 class Lmod < Formula
   desc "Lua-based environment modules system to modify PATH variable"
   homepage "https://lmod.readthedocs.io"
-  url "https://mirror.ghproxy.com/https://github.com/TACC/Lmod/archive/refs/tags/9.0.7.tar.gz"
-  sha256 "c6152286e9fae08d2f327365d7bfa5bbdc8b4a6b0344ec5f1dafe21fac238155"
+  url "https://mirror.ghproxy.com/https://github.com/TACC/Lmod/archive/refs/tags/9.1.1.tar.gz"
+  sha256 "3e92e7d96ce333fab646bd8d571031310c1fb69f0637ba0dd406e5134705f315"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "7d3bac1252da253f0f4dfbb662958d2c564f7931d56eb797593715f32d5e2045"
-    sha256 cellar: :any,                 arm64_sequoia: "d87abe6aacb2fbd5c02171f43ddd5cfc549cc9865a6f0bf161c266c38ba932fa"
-    sha256 cellar: :any,                 arm64_sonoma:  "9122067a2aceeb670bf7eabab58e61631d88abf82fcbd671e481827ff4b334a3"
-    sha256 cellar: :any,                 sonoma:        "3109a5bfe9a8ff8d509b0d4b78493cadefb6f4602bf9580a593e9d9b25f89111"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5dd097c92169da46e0410278486599ab4aa9b1c088fc949e9bb66c9e68307d8f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5dd8d63d3d5dd10a15b27c4725fdb9a0d38f925112c2e28a7e468dfd54781ccc"
+    sha256 cellar: :any,                 arm64_tahoe:   "b5c91c9013838c2c3b332f386c020da86f5dd869c21a3a4aa68b79d99da227f2"
+    sha256 cellar: :any,                 arm64_sequoia: "f3bde66f62e40a1857cb03eb710810d287154c7bd33a5c783a6d11e4a0417e5c"
+    sha256 cellar: :any,                 arm64_sonoma:  "71ed09c6bc9aa76c23b488dfe930497afe1f8513b1dfd76fed789c0f8f20f6fd"
+    sha256 cellar: :any,                 sonoma:        "b7755c5c46e4e6a7ffd944daf171ce89590247050fd184915e1e6cd3e2649478"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4878c94ec91bd57fd9f5c0a690cd66f59a8f3e5ba446287ae0b3399b36c28f25"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d644c4ad21eb0b3263084f45aa005ca93266c832114b9f7f759a8e832b4819af"
   end
 
   depends_on "luarocks" => :build
