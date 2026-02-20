@@ -3,17 +3,17 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://mirror.ghproxy.com/https://github.com/github/spec-kit/archive/refs/tags/v0.0.96.tar.gz"
-  sha256 "374baf8754fef6d25e4d8c76e3abb46b8c6ed42482440de978b71161f2292c7b"
+  url "https://mirror.ghproxy.com/https://github.com/github/spec-kit/archive/refs/tags/v0.0.101.tar.gz"
+  sha256 "0463631c1fb47b4125a6a63b700848737e46f38deb4bbf37da4cd6171ec24648"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "746e2a7bc59c24cb12adbab9c3a89076ec51d7b9466c276f34c3b5b10f23334a"
-    sha256 cellar: :any,                 arm64_sequoia: "0aacd4ece08bb9cb14c8d2e428812a0be9dd7246f86b71b9a43d3cf09d547384"
-    sha256 cellar: :any,                 arm64_sonoma:  "7c00ad487bd65286ee0a380407732b6946f2e847b45ceb0f88d5db4d598976a1"
-    sha256 cellar: :any,                 sonoma:        "f7b2e16b61035131f8c7b72e0b29cdc574e029f2b410f52cb6f5e4b98e801fa3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "eeb1e15d87cc4c25cef7de453b06e0815e536646e5a9f324a5b5cbe58ef53d32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f3542e7bae2e1a094a7119ee06164bfd8833f6bc0057d5c407eab33b587083c5"
+    sha256 cellar: :any,                 arm64_tahoe:   "f7b268eaeeff061867846e946a2df55f83d8f7aa8b8f6677ea84d88d20641139"
+    sha256 cellar: :any,                 arm64_sequoia: "da51e194c68c247e0dcc445c8e0931dc7d902be77b0c43b0ae0d55168c419a2f"
+    sha256 cellar: :any,                 arm64_sonoma:  "3c39554ba03a84c485172495fc32f5dfa83e554f1630921565b460f91b14f222"
+    sha256 cellar: :any,                 sonoma:        "6515d07d25835f4628a1f518d4cff6f9150b595b46e81123ea8092f40c920f7c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "859218b88fae796d525b88d0c616baf628b8f807df8f6b0f191f8c342034d084"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ec700ddc3390c6de5694f73ee7e79968d246ee80836c53e732aa0bba168eb1e"
   end
 
   depends_on "certifi" => :no_linkage
@@ -93,8 +93,8 @@ class Specify < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/74/99/a4cab2acbb884f80e558b0771e97e21e939c5dfb460f488d19df485e8298/rich-14.3.2.tar.gz"
-    sha256 "e712f11c1a562a11843306f5ed999475f09ac31ffb64281f73ab29ffdda8b3b8"
+    url "https://files.pythonhosted.org/packages/b3/c6/f3b320c27991c46f43ee9d856302c70dc2d0fb2dba4842ff739d5f46b393/rich-14.3.3.tar.gz"
+    sha256 "b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b"
   end
 
   resource "shellingham" do
