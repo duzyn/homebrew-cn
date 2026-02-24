@@ -44,6 +44,14 @@ class V8 < Formula
     depends_on "glib"
   end
 
+  fails_with :clang do
+    cause "Apple Clang frequently breaks as upstream often uses features from newer Clang"
+  end
+
+  fails_with :gcc do
+    cause "requires Clang"
+  end
+
   # Look up the correct resource revisions in the DEP file of the specific releases tag
   # e.g. for CIPD dependency gn: https://chromium.googlesource.com/v8/v8.git/+/refs/tags/<version>/DEPS#74
   resource "gn" do
@@ -245,7 +253,6 @@ class V8 < Formula
     }
 
     # workaround to use shim to compile v8
-    ENV.llvm_clang
     llvm = Formula["llvm"]
     clang_base_path = buildpath/"clang"
     clang_base_path.install_symlink (llvm.opt_prefix.children - [llvm.opt_bin])
