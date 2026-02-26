@@ -3,17 +3,17 @@ class Gamdl < Formula
 
   desc "Python CLI app for downloading Apple Music songs, music videos and post videos"
   homepage "https://github.com/glomatico/gamdl"
-  url "https://files.pythonhosted.org/packages/17/53/8fb9dd15cc34feca4e15a0fe46356d4da440778c8b857d1f05bb705858cd/gamdl-2.8.5.tar.gz"
-  sha256 "f8be7f60f07cef2dabc9758a1e9e6996482d466f408f493b3bc7967be25be807"
+  url "https://files.pythonhosted.org/packages/cf/cd/e674fc6d3f9ce5c298b86f31989e49a0acf44d39dbbe04a3ef436f62910a/gamdl-2.9.tar.gz"
+  sha256 "68bbdf7f992efb15cd08a93394c0eff8117a71014cc4986fcc463da25e207480"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "6c87bccd9d16b32a145a1243ac0558e79b94d66113b4e9d740d14cba93a4db22"
-    sha256 cellar: :any,                 arm64_sequoia: "91131f3f82660457237ff513d68d07580e32b2670d766724381f0d77e965fcb6"
-    sha256 cellar: :any,                 arm64_sonoma:  "376a5a8def5aa291d00ac1c7e67a3a53354ddbf2a6de4e62f85659f4e6ef0cda"
-    sha256 cellar: :any,                 sonoma:        "b6f5126b25412bf38770fc3ea3df98ce0eaa291d43382f55599a47608d940e22"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "19e328fc359de1f9dc796a5adea19006da28af319ce1023c5a98d57b789c4adc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a120cdc02582437fbf9cf6767119fe11151d62c7ca0e8039c2c2dcb68cfcb2c"
+    sha256 cellar: :any,                 arm64_tahoe:   "3b4cc6dea031e7b6bd501f62d52c3fac85c25192f1c32a34bc9eae869f5e2927"
+    sha256 cellar: :any,                 arm64_sequoia: "6e238faf43c7dd21b5a39902862601aaef1218f5981fc6719e88535c885f2611"
+    sha256 cellar: :any,                 arm64_sonoma:  "6a3d1b7305c1158e36af0a9e7dc03284a1aa960f437f3084e4c0ac39ab99673b"
+    sha256 cellar: :any,                 sonoma:        "208dfe4abdfe0f38b5e4532f3eb8721eeed389d251bb2a0bb2325f0058b2c863"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "480d5b87a5ef5383a4e834a67f13854d2bfa0137aa9ecaab8ac8e2a1e9b41346"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "86e5f1aab11928e98b6b9b6b095d146d303cc032d98d1e65ffb6aa9390424838"
   end
 
   depends_on "certifi" => :no_linkage
