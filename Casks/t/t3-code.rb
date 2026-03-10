@@ -1,9 +1,9 @@
 cask "t3-code" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.4"
-  sha256 arm:   "14ab774434354b02dfe9f3adb4ae5f2029ddf1965612f209a825ada8da9dff99",
-         intel: "9c7d7bd2a71bc5213599b98e96180cfe1677afde823617218e18c75bec3cb84b"
+  version "0.0.9"
+  sha256 arm:   "88c36790d728f6b26eeaf0c76cc942f0bd931e9c5ce6f97d2cf9b874f906344d",
+         intel: "635666da054b3c9b45a372b15ed307dbef108e835e6b562d739f512dbeefd726"
 
   url "https://mirror.ghproxy.com/https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg",
       verified: "github.com/pingdotgg/t3code/"
