@@ -5,11 +5,15 @@ class Gnupg < Formula
   sha256 "dd17ab2e9a04fd79d39d853f599cbc852062ddb9ab52a4ddeb4176fd8b302964"
   license "GPL-3.0-or-later"
 
-  # GnuPG appears to indicate stable releases with an even-numbered minor
-  # (https://gnupg.org/download/#end-of-life).
+  # GnuPG usually indicates stable releases with an even-numbered minor but
+  # can declare an odd-numbered minor stable. e.g. 2.5 was stable since 2.5.16,
+  # see https://lists.gnupg.org/pipermail/gnupg-announce/2025q4/000500.html.
+  # The livecheck scrapes the version from the templated homepage which is
+  # manually updated by upstream when a new release series is stable, e.g.
+  # https://dev.gnupg.org/rD18a889b403c7a5934d5080be140a4d79e1c83332
   livecheck do
-    url "https://gnupg.org/ftp/gcrypt/gnupg/"
-    regex(/href=.*?gnupg[._-]v?(\d+\.\d*[02468](?:\.\d+)*)\.t/i)
+    url :homepage
+    regex(/The current version of GnuPG is v?(\d+(?:\.\d+)+)\. /i)
   end
 
   bottle do
