@@ -1,9 +1,9 @@
 cask "session" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.17.12"
-  sha256 arm:   "013fdca44274b1db1f47ff254abd6c1263658786b0ff070360c2294b5f476a16",
-         intel: "480f1309fb0be03b6206f2151bb67d57719cf290995cd42c1aa90ee25912feec"
+  version "1.17.14"
+  sha256 arm:   "5f02b0bd8ba2ef941717614271348c36e1b1c1886dbb0e8f9204f89987a531b5",
+         intel: "020db9068c174d52f3e9d63d62485a09b57f2afc3ee228e91a68957b60abb84d"
 
   url "https://mirror.ghproxy.com/https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-#{arch}-#{version}.dmg",
       verified: "github.com/session-foundation/session-desktop/"
