@@ -4,6 +4,7 @@ class Libudfread < Formula
   url "https://mirrors.aliyun.com/videolan/videolan/libudfread/libudfread-1.2.0.tar.xz"
   sha256 "bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f"
   license "LGPL-2.1-or-later"
+  compatibility_version 1
 
   livecheck do
     url "https://mirrors.aliyun.com/videolan/pub/videolan/libudfread/"
