@@ -1,6 +1,6 @@
 cask "whichspace" do
-  version "0.17.2"
-  sha256 "ae8496c399c7b7263b638b5c73bb21d140d9a162a9a18bfd9d6359de35b40c91"
+  version "0.17.6"
+  sha256 "b8604ccaac5c59f7184ebbdbb3c4e5ef66b7809f03f58f1816779013f97ac8b8"
 
   url "https://mirror.ghproxy.com/https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
   name "WhichSpace"
